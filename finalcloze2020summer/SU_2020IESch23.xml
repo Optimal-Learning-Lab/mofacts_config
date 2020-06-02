@@ -298,13 +298,15 @@ Our MoFaCTS system has chosen some of the most important sentences from your tex
             }), probs)
           }
 
-          if((p.stimSuccessCount+p.stimFailureCount)<2 && p.syllables>2) {
+          p.hintsylls = [];
+if((p.stimSuccessCount+p.stimFailureCount)<2 && p.syllables>2) {
             var numHintSylls = getRandomInt(3);
-            p.hintsylls = [];
+            
             for(var index=0;index<numHintSylls;index++){
               p.hintsylls.push(index);
             }
           }
+var intercept;
 if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length=1) {intercept=0.19647} else {intercept=0.45817}
 
                     p.y = intercept    +
