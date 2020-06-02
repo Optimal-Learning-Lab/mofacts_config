@@ -310,10 +310,10 @@ if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length=1) {
                     p.y = intercept    +
                     0.79747 * logitdec(
                         p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length-60,1),
-                        p.overallOutcomeHistory.length), .931) +
-                    0.32897 * logitdec(p.responseOutcomeHistory, .945) +
-                    14.64335 * recency(p.stimSecsSinceLastShown, .560) +
-                    1.42676 *  recency(p.responseSecsSinceLastShown, .0926) +
+                        p.overallOutcomeHistory.length), .936) +
+                    0.32897 * logitdec(p.responseOutcomeHistory, .830) +
+                    14.64335 * recency(p.stimSecsSinceLastShown, .541) +
+                    1.42676 *  recency(p.responseSecsSinceLastShown, .108) +
                     1.35734  * linediffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +
                     -1.35734 * quaddiffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +
                     0.73430 * linediffincor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities)+
