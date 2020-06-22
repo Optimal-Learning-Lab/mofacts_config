@@ -299,7 +299,7 @@ Our MoFaCTS system has chosen some of the most important sentences from your tex
           }
 
           p.hintsylls = [];
-if((p.stimSuccessCount+p.stimFailureCount)<2 && p.syllables>2) {
+if((p.stimSuccessCount+p.stimFailureCount)<3 && p.syllables>2) {
             var numHintSylls = getRandomInt(3);
             
             for(var index=0;index<numHintSylls;index++){
@@ -307,7 +307,7 @@ if((p.stimSuccessCount+p.stimFailureCount)<2 && p.syllables>2) {
             }
           }
 var intercept;
-if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length=1) {intercept=0.19647} else {intercept=0.45817}
+if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length==1) {intercept=0.19647} else {intercept=0.45817}
 
                     p.y = intercept    +
                     0.79747 * logitdec(
@@ -322,7 +322,7 @@ if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length=1) {
                     -0.73430 * quaddiffincor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) ;
                     p.probability = 1.0 / (1.0 + Math.exp(-p.y));
 
-                  // console.log(p.overallOutcomeHistory+" - "+p.responseOutcomeHistory +" - "+p.stimSecsSinceLastShown+" - "+p.stimOutcomeHistory+" - "+p.stimPreviousCalculatedProbabilities);
+                  // console.log(p.overallOutcomeHistory+\" - \"+p.responseOutcomeHistory +\" - \"+p.stimSecsSinceLastShown+\" - \"+p.stimOutcomeHistory+\" - \"+p.stimPreviousCalculatedProbabilities);
                     return p
                        ]]></calculateProbability>
                    </learningsession>
