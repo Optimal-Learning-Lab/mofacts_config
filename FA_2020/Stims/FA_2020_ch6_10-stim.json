@@ -1,0 +1,1971 @@
+{
+    "fileName": "FA_2020_ch6_10-stim.json",
+    "stimuli": {
+        "setspec": {
+            "clusters": [
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "basement membrane"
+                            },
+                            "display": {
+                                "clozeText": "A __________ __________ anchored to the dermis by short fibrils separates the two skin layers."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Two membranes separate the __________ __________, which is attached to the dermis by short fibers.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 13,
+                                "clozeProbability": 0.00000517368184211515,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Two membranes separate the __________ __________, which is attached to the dermis by short fibers."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "short fibrils"
+                            },
+                            "display": {
+                                "clozeText": "A basement membrane anchored to the dermis by __________ __________ separates the two skin layers."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 13,
+                                "clozeProbability": 0.00000608192839360935,
+                                "semanticRole": "ARGM-MNR",
+                                "rootDistance": 5,
+                                "startDistance": 7
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "A basement membrane anchored to the __________ by short fibrils separates the two skin layers."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Two membranes separate the basement membrane, which is attached to the __________ by short fibers.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 13,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 13,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 12,
+                                "rootDistance": 5,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Two membranes separate the basement membrane, which is attached to the __________ by short fibers."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "skin layers"
+                            },
+                            "display": {
+                                "clozeText": "A basement membrane anchored to the dermis by short fibrils separates the two __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 13,
+                                "clozeProbability": 0.000006742179232986,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 11
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "tissues"
+                            },
+                            "display": {
+                                "clozeText": "Beneath the dermis, masses of areolar and adipose __________ bind the skin to underlying organs."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 9
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Beneath the __________, masses of areolar and adipose tissues bind the skin to underlying organs."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Under the __________, masses of areolar and adipose tissue bind to underlying organs.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 12,
+                                "rootDistance": 3,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Under the __________, masses of areolar and adipose tissue bind to underlying organs."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "organs"
+                            },
+                            "display": {
+                                "clozeText": "Beneath the dermis, masses of areolar and adipose tissues bind the skin to underlying __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Under the dermis, masses of areolar and adipose tissue bind to underlying __________.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 12,
+                                "rootDistance": 3,
+                                "startDistance": 14
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Under the dermis, masses of areolar and adipose tissue bind to underlying __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "masses"
+                            },
+                            "display": {
+                                "clozeText": "Beneath the dermis, __________ of areolar and adipose tissues bind the skin to underlying organs."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Under the dermis, __________ of areolar and adipose tissue bind to underlying organs.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.000006742179232986,
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Under the dermis, __________ of areolar and adipose tissue bind to underlying organs."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "subcutaneous layer"
+                            },
+                            "display": {
+                                "clozeText": "The collagen and elastic fibers of the __________ __________ are continuous with those of the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Collagen and elastic fibers of the __________ __________ are continuous with the fibers of the dermis.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000301500014386427,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 22,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 16,
+                                "rootDistance": 5,
+                                "startDistance": 6
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Collagen and elastic fibers of the __________ __________ are continuous with the fibers of the dermis."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "collagen"
+                            },
+                            "display": {
+                                "clozeText": "The __________ and elastic fibers of the subcutaneous layer are continuous with those of the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 22,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 16,
+                                "rootDistance": 5,
+                                "startDistance": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "subcutaneous layer"
+                            },
+                            "display": {
+                                "clozeText": "Branches of the major blood vessels that supply the skin form a network between the dermis and the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "The branches of these vessels form a network between the dermis and the __________ __________.",
+                                "clozeCorefTransformation": "Branches of the major blood vessels that supply the skin form a network between the dermis and the __________ __________.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 12,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 5,
+                                "startDistance": 11,
+                                "originalItem": "Branches of these vessels form a network between the dermis and the __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The branches of these vessels form a network between the dermis and the __________ __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Branches of the major blood vessels that supply the skin form a network between the __________ and the subcutaneous layer."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "The branches of these vessels form a network between the __________ and the subcutaneous layer.",
+                                "clozeCorefTransformation": "Branches of the major blood vessels that supply the skin form a network between the __________ and the subcutaneous layer.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 12,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 5,
+                                "startDistance": 8,
+                                "originalItem": "Branches of these vessels form a network between the __________ and the subcutaneous layer."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The branches of these vessels form a network between the __________ and the subcutaneous layer."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epidermis"
+                            },
+                            "display": {
+                                "clozeText": "The drug then diffuses into the __________ and enters the blood vessels of the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Then it penetrates the __________ and enters the blood vessels of the dermis.",
+                                "clozeCorefTransformation": "The drug then diffuses into the __________ and enters the blood vessels of the dermis.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 7,
+                                "corefClusterForwardWeight": 6,
+                                "rootDistance": 3,
+                                "startDistance": 4,
+                                "originalItem": "It then diffuses into the __________ and enters the blood vessels of the dermis."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Then it penetrates the __________ and enters the blood vessels of the dermis."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "The drug then diffuses into the epidermis and enters the blood vessels of the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "Then it penetrates the epidermis and enters the blood vessels of the __________.",
+                                "clozeCorefTransformation": "The drug then diffuses into the epidermis and enters the blood vessels of the __________.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 7,
+                                "corefClusterForwardWeight": 6,
+                                "rootDistance": 5,
+                                "startDistance": 12,
+                                "originalItem": "It then diffuses into the epidermis and enters the blood vessels of the __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Then it penetrates the epidermis and enters the blood vessels of the __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epidermal cells"
+                            },
+                            "display": {
+                                "clozeText": "As the cells of this layer divide and grow, the older __________ __________ are pushed away from the dermis toward the skin surface."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "As cells in this layer divide and grow, older __________ __________ are pushed from the dermis to the surface of the skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 18,
+                                "corefClusterBackwardWeight": 11,
+                                "corefClusterForwardWeight": 5,
+                                "rootDistance": 2,
+                                "startDistance": 10
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "As cells in this layer divide and grow, older __________ __________ are pushed from the dermis to the surface of the skin."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "As the cells of this layer divide and grow, the older epidermal cells are pushed away from the __________ toward the skin surface."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "As cells in this layer divide and grow, older epidermal cells are pushed from the __________ to the surface of the skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 18,
+                                "corefClusterBackwardWeight": 11,
+                                "corefClusterForwardWeight": 5,
+                                "rootDistance": 3,
+                                "startDistance": 18
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "As cells in this layer divide and grow, older epidermal cells are pushed from the __________ to the surface of the skin."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "divide"
+                            },
+                            "display": {
+                                "clozeText": "As the cells of this layer __________ and grow, the older epidermal cells are pushed away from the dermis toward the skin surface."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "As cells in this layer __________ and grow, older epidermal cells are pushed from the dermis to the surface of the skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.000006742179232986,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 6
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "As cells in this layer __________ and grow, older epidermal cells are pushed from the dermis to the surface of the skin."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "melanocytes"
+                            },
+                            "display": {
+                                "clozeText": "These factors rapidly darken existing melanin, and they stimulate __________ to produce more pigment and transfer it to nearby epidermal cells within a few days."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "These factors quickly darken existing melanin and stimulate __________ to produce more pigment and transfer it to nearby epidermal cells over a period of several days.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000314628279863165,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 2,
+                                "startDistance": 10
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These factors quickly darken existing melanin and stimulate __________ to produce more pigment and transfer it to nearby epidermal cells over a period of several days."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "nearby epidermal cells"
+                            },
+                            "display": {
+                                "clozeText": "These factors rapidly darken existing melanin, and they stimulate melanocytes to produce more pigment and transfer it to __________ __________ __________ within a few days."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "These factors quickly darken existing melanin and stimulate melanocytes to produce more pigment and transfer it to __________ __________ __________ over a period of several days.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 6,
+                                "startDistance": 18
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These factors quickly darken existing melanin and stimulate melanocytes to produce more pigment and transfer it to __________ __________ __________ over a period of several days."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "pigment"
+                            },
+                            "display": {
+                                "clozeText": "These factors rapidly darken existing melanin, and they stimulate melanocytes to produce more __________ and transfer it to nearby epidermal cells within a few days."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "These factors quickly darken existing melanin and stimulate melanocytes to produce more __________ and transfer it to nearby epidermal cells over a period of several days.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 4,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 4,
+                                "startDistance": 13
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These factors quickly darken existing melanin and stimulate melanocytes to produce more __________ and transfer it to nearby epidermal cells over a period of several days."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "melanin"
+                            },
+                            "display": {
+                                "clozeText": "These factors rapidly darken existing __________, and they stimulate melanocytes to produce more pigment and transfer it to nearby epidermal cells within a few days."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "These factors quickly darken existing __________ and stimulate melanocytes to produce more pigment and transfer it to nearby epidermal cells over a period of several days.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These factors quickly darken existing __________ and stimulate melanocytes to produce more pigment and transfer it to nearby epidermal cells over a period of several days."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "dilated"
+                            },
+                            "display": {
+                                "clozeText": "If the vessels are __________, more blood enters the dermis, reddening the skin of a light- complexioned person."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "When the blood vessels are __________, more blood enters the dermis, reddening human skin with complex light.",
+                                "clozeCorefTransformation": "If the vessels are __________, more blood enters the dermis, reddening the skin of a light- complexioned person.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 4,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 1,
+                                "startDistance": 4,
+                                "originalItem": "If the vessels are __________, more blood enters the dermis, reddening the skin of a light- complexioned person."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When the blood vessels are __________, more blood enters the dermis, reddening human skin with complex light."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "If the vessels are dilated, more blood enters the __________, reddening the skin of a light- complexioned person."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "When the blood vessels are dilated, more blood enters the __________, reddening human skin with complex light.",
+                                "clozeCorefTransformation": "If the vessels are dilated, more blood enters the __________, reddening the skin of a light- complexioned person.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 4,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 2,
+                                "startDistance": 9,
+                                "originalItem": "If the vessels are dilated, more blood enters the __________, reddening the skin of a light- complexioned person."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When the blood vessels are dilated, more blood enters the __________, reddening human skin with complex light."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "normal pigmentation"
+                            },
+                            "display": {
+                                "clozeText": "When taking An observant British hospital nurse tiny charges out in the sun, An observant British hospital nurse noticed that a child whose skin had a yellow pallor developed __________ __________ when he lay in sunlight."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "When she pulled her little charges out into the sun, she noticed that the baby, whose skin was yellow, developed __________ __________ when he lay in the sun.",
+                                "clozeCorefTransformation": "When taking An observant British hospital nurse tiny charges out in the sun, An observant British hospital nurse noticed that a child whose skin had a yellow pallor developed __________ __________ when he lay in sunlight.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 22,
+                                "originalItem": "When taking her tiny charges out in the sun, she noticed that a child whose skin had a yellow pallor developed __________ __________ when he lay in sunlight."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When she pulled her little charges out into the sun, she noticed that the baby, whose skin was yellow, developed __________ __________ when he lay in the sun."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "yellow pallor"
+                            },
+                            "display": {
+                                "clozeText": "When taking An observant British hospital nurse tiny charges out in the sun, An observant British hospital nurse noticed that a child whose skin had a __________ __________ developed normal pigmentation when he lay in sunlight."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeCorefTransformation": "When taking An observant British hospital nurse tiny charges out in the sun, An observant British hospital nurse noticed that a child whose skin had a __________ __________ developed normal pigmentation when he lay in sunlight.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 18,
+                                "originalItem": "When taking her tiny charges out in the sun, she noticed that a child whose skin had a __________ __________ developed normal pigmentation when he lay in sunlight."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "bilirubin"
+                            },
+                            "display": {
+                                "clozeText": "Further investigation showed that sunlight enables the body to break down __________, the liver substance that accumulates in the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Further research showed that sunlight allows the body to break down __________, a substance in the liver that accumulates in the skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 6,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 3,
+                                "startDistance": 11
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Further research showed that sunlight allows the body to break down __________, a substance in the liver that accumulates in the skin."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "liver substance"
+                            },
+                            "display": {
+                                "clozeText": "Further investigation showed that sunlight enables the body to break down bilirubin, the __________ __________ that accumulates in the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 13
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "sunlight"
+                            },
+                            "display": {
+                                "clozeText": "Further investigation showed that __________ enables the body to break down bilirubin, the liver substance that accumulates in the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Further research showed that __________ allows the body to break down bilirubin, a substance in the liver that accumulates in the skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 6,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 2,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Further research showed that __________ allows the body to break down bilirubin, a substance in the liver that accumulates in the skin."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Dermal papillae"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ are found in the skin all over the body, but they are most abundant in the hands and feet."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 17,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "abundant"
+                            },
+                            "display": {
+                                "clozeText": "Dermal papillae are found in the skin all over the body, but they are most __________ in the hands and feet."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.00000517368184211515,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 15
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "fingerprint"
+                            },
+                            "display": {
+                                "clozeText": "The ridges formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "The ridges created by the dermal papilla leave an exemplary impression when the finger is pressed against the surface - this is a __________.",
+                                "clozeCorefTransformation": "The ridges formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a __________.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 22,
+                                "originalItem": "The ridges formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The ridges created by the dermal papilla leave an exemplary impression when the finger is pressed against the surface - this is a __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "patterned impression"
+                            },
+                            "display": {
+                                "clozeText": "The ridges formed by the dermal papillae leave a __________ __________ when a finger is pressed against a surface-- this is a fingerprint."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "The ridges formed by the dermal papillae leave a __________ __________ when a finger is pressed against a surface-- this is a fingerprint.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 8,
+                                "originalItem": "The ridges formed by the dermal papillae leave a __________ __________ when a finger is pressed against a surface-- this is a fingerprint."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermal papillae"
+                            },
+                            "display": {
+                                "clozeText": "The ridges formed by the __________ __________ leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeCorefTransformation": "The ridges formed by the __________ __________ leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 2,
+                                "corefClusterForwardWeight": 16,
+                                "rootDistance": 5,
+                                "startDistance": 4,
+                                "originalItem": "The ridges formed by the __________ __________ leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "ridges"
+                            },
+                            "display": {
+                                "clozeText": "The __________ formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "The __________ created by the dermal papilla leave an exemplary impression when the finger is pressed against the surface - this is a fingerprint.",
+                                "clozeCorefTransformation": "The __________ formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint.",
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 1,
+                                "originalItem": "The __________ formed by the dermal papillae leave a patterned impression when a finger is pressed against a surface-- this is a fingerprint."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ created by the dermal papilla leave an exemplary impression when the finger is pressed against the surface - this is a fingerprint."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "finger"
+                            },
+                            "display": {
+                                "clozeText": "The ridges formed by the dermal papillae leave a patterned impression when a __________ is pressed against a surface-- this is a fingerprint."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "The ridges created by the dermal papilla leave an exemplary impression when the __________ is pressed against the surface - this is a fingerprint.",
+                                "clozeCorefTransformation": "The ridges formed by the dermal papillae leave a patterned impression when a __________ is pressed against a surface-- this is a fingerprint.",
+                                "syntacticRole": "nsubjpass",
+                                "rootDistance": 2,
+                                "startDistance": 13,
+                                "originalItem": "The ridges formed by the dermal papillae leave a patterned impression when a __________ is pressed against a surface-- this is a fingerprint."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The ridges created by the dermal papilla leave an exemplary impression when the __________ is pressed against the surface - this is a fingerprint."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "underlying tissues"
+                            },
+                            "display": {
+                                "clozeText": "The dermis binds the epidermis to the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 5
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "epidermis"
+                            },
+                            "display": {
+                                "clozeText": "The dermis binds the __________ to the underlying tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The dermis connects the __________ to the underlying tissue.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 14,
+                                "rootDistance": 2,
+                                "startDistance": 3
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The dermis connects the __________ to the underlying tissue."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "The __________ binds the epidermis to the underlying tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The __________ connects the epidermis to the underlying tissue.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 14,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ connects the epidermis to the underlying tissue."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Although no distinct boundary is visible, the __________ has two layers."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Although no clear boundary is visible, the __________ has two layers.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 13,
+                                "rootDistance": 2,
+                                "startDistance": 7
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Although no clear boundary is visible, the __________ has two layers."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "layers"
+                            },
+                            "display": {
+                                "clozeText": "Although no distinct boundary is visible, the dermis has two __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Although no clear boundary is visible, the dermis has two __________.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 11
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Although no clear boundary is visible, the dermis has two __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "eyelids"
+                            },
+                            "display": {
+                                "clozeText": "On average, the dermis is 1.0- 2.0 mm thick; however, the dermis may be as thin as 0.5 mm or less, such as on the __________, or as thick as 3.0 mm, such as on the soles of the feet."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "Average dermis thickness is 1.0 - 2.0 mm; however, it can be up to 0.5 mm thick or less, like on the __________, or up to 3.0 mm thick, like on the legs.",
+                                "clozeCorefTransformation": "On average, the dermis is 1.0- 2.0 mm thick; however, the dermis may be as thin as 0.5 mm or less, such as on the __________, or as thick as 3.0 mm, such as on the soles of the feet.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 6,
+                                "startDistance": 29,
+                                "originalItem": "On average, the dermis is 1.0- 2.0 mm thick; however, it may be as thin as 0.5 mm or less, such as on the __________, or as thick as 3.0 mm, such as on the soles of the feet."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Average dermis thickness is 1.0 - 2.0 mm; however, it can be up to 0.5 mm thick or less, like on the __________, or up to 3.0 mm thick, like on the legs."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "On average, the __________ is 1.0- 2.0 mm thick; however, the __________ may be as thin as 0.5 mm or less, such as on the eyelids, or as thick as 3.0 mm, such as on the soles of the feet."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "Average __________ thickness is 1.0 - 2.0 mm; however, it can be up to 0.5 mm thick or less, like on the eyelids, or up to 3.0 mm thick, like on the legs.",
+                                "clozeCorefTransformation": "On average, the __________ is 1.0- 2.0 mm thick; however, the __________ may be as thin as 0.5 mm or less, such as on the eyelids, or as thick as 3.0 mm, such as on the soles of the feet.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 2,
+                                "startDistance": 3,
+                                "originalItem": "On average, the __________ is 1.0- 2.0 mm thick; however, it may be as thin as 0.5 mm or less, such as on the eyelids, or as thick as 3.0 mm, such as on the soles of the feet."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Average __________ thickness is 1.0 - 2.0 mm; however, it can be up to 0.5 mm thick or less, like on the eyelids, or up to 3.0 mm thick, like on the legs."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Tattoos"
+                            },
+                            "display": {
+                                "clozeText": "__________ are made by using needles to inject inks into the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 8,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 1,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "needles"
+                            },
+                            "display": {
+                                "clozeText": "Tattoos are made by using __________ to inject inks into the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The tattoos are made using __________ to inject ink into the dermis.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 3,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The tattoos are made using __________ to inject ink into the dermis."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Tattoos are made by using needles to inject inks into the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The tattoos are made using needles to inject ink into the __________.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 8,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 6,
+                                "startDistance": 10
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The tattoos are made using needles to inject ink into the __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epidermis"
+                            },
+                            "display": {
+                                "clozeText": "The color is permanent, because dermal cells are not shed, unlike cells of the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 9,
+                                "corefClusterForwardWeight": 9,
+                                "rootDistance": 6,
+                                "startDistance": 15
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "dermal cells"
+                            },
+                            "display": {
+                                "clozeText": "The color is permanent, because __________ __________ are not shed, unlike cells of the epidermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The color is stable, because __________ __________, unlike epidermal ones, do not stand out.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "semanticRole": "ARGM-CAU",
+                                "rootDistance": 6,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The color is stable, because __________ __________, unlike epidermal ones, do not stand out."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "The __________ also contains muscle fibers."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 10,
+                                "corefClusterForwardWeight": 8,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "muscle fibers"
+                            },
+                            "display": {
+                                "clozeText": "The dermis also contains __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.000006742179232986,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "testes"
+                            },
+                            "display": {
+                                "clozeText": "Some regions, such as the skin that encloses the __________, contain many smooth muscle cells that can wrinkle the skin when they contract."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeCorefTransformation": "Some regions, such as the skin that encloses the __________, contain many smooth muscle cells that can wrinkle the skin when they contract.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 11,
+                                "corefClusterForwardWeight": 7,
+                                "rootDistance": 6,
+                                "startDistance": 9,
+                                "originalItem": "Some regions, such as the skin that encloses the __________, contain many smooth muscle cells that can wrinkle the skin when they contract."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "accessorystructures"
+                            },
+                            "display": {
+                                "clozeText": "Other smooth muscle in the dermis is associated with __________ such as hair follicles and glands."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 7.0619983686944e-7,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 9
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "follicles"
+                            },
+                            "display": {
+                                "clozeText": "Other smooth muscle in the dermis is associated with accessorystructures such as hair __________ and glands."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Additional smooth muscle in the dermis is associated with supporting structures such as hair __________ and glands.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 13
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Additional smooth muscle in the dermis is associated with supporting structures such as hair __________ and glands."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Many skeletal muscle fibers are anchored to the __________ in the skin of the face."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Many skeletal muscle fibers are attached to the __________ of the facial skin.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 13,
+                                "corefClusterForwardWeight": 5,
+                                "rootDistance": 3,
+                                "startDistance": 7
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Many skeletal muscle fibers are attached to the __________ of the facial skin."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "dermis"
+                            },
+                            "display": {
+                                "clozeText": "Nerve cell processes are scattered throughout the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 21,
+                                "clozeProbability": 0.000006742179232986,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 21,
+                                "corefClusterBackwardWeight": 15,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 3,
+                                "startDistance": 6
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "receptors"
+                            },
+                            "display": {
+                                "clozeText": "The dermis contains different types of sensory __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "The dermis contains various types of sensory __________.",
+                                "clozeCorefTransformation": "The dermis contains different types of sensory __________.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 7,
+                                "originalItem": "The dermis contains different types of sensory __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The dermis contains various types of sensory __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epidermis"
+                            },
+                            "display": {
+                                "clozeText": "Still other receptors extend into the __________ and respond to temperature changes or to factors that can damage tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Other receptors spread to the __________ and respond to temperature changes or factors that can damage tissue.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 19,
+                                "corefClusterBackwardWeight": 16,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 3,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Other receptors spread to the __________ and respond to temperature changes or factors that can damage tissue."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "other receptors"
+                            },
+                            "display": {
+                                "clozeText": "Still __________ __________ extend into the epidermis and respond to temperature changes or to factors that can damage tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "tissues"
+                            },
+                            "display": {
+                                "clozeText": "Still other receptors extend into the epidermis and respond to temperature changes or to factors that can damage __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 6,
+                                "startDistance": 18
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "accessory structures"
+                            },
+                            "display": {
+                                "clozeText": "The dermis also contains __________ __________, including hair follicles, sebaceous glands, and sweat glands."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 4
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "hair follicles"
+                            },
+                            "display": {
+                                "clozeText": "The dermis also contains accessory structures, including __________ __________, sebaceous glands, and sweat glands."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "The dermis also contains support structures, including __________ __________, sebaceous glands, and sweat glands.",
+                                "orderGroup": 1,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 8
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The dermis also contains support structures, including __________ __________, sebaceous glands, and sweat glands."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "scales"
+                            },
+                            "display": {
+                                "clozeText": "This gives rise to tiny, keratinized __________ that become part of the nail plate, pushing a nail plate forward over the nail bed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "This leads to the formation of small keratinized __________ that become part of the nail plate and push it forward over the nail bed.",
+                                "clozeCorefTransformation": "This gives rise to tiny, keratinized __________ that become part of the nail plate, pushing a nail plate forward over the nail bed.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 7,
+                                "originalItem": "This gives rise to tiny, keratinized __________ that become part of the nail plate, pushing it forward over the nail bed."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "This leads to the formation of small keratinized __________ that become part of the nail plate and push it forward over the nail bed."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "keratin"
+                            },
+                            "display": {
+                                "clozeText": "The __________ of nails is stronger than that produced by the stratum corneum."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Keratin for nails is stronger than __________ produced by the stratum corneum.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 19,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Keratin for nails is stronger than __________ produced by the stratum corneum."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "follicle"
+                            },
+                            "display": {
+                                "clozeText": "Later, a new hair begins to grow from the base of the __________, pushing the old hair outward until it drops off."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "Later, new hair begins to grow from the bottom of the __________, pushing the old hair out until it falls out.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 4,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 6,
+                                "startDistance": 12
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Later, new hair begins to grow from the bottom of the __________, pushing the old hair out until it falls out."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "outward"
+                            },
+                            "display": {
+                                "clozeText": "Later, a new hair begins to grow from the base of the follicle, pushing the old hair __________ until it drops off."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 19
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "holocrine glands"
+                            },
+                            "display": {
+                                "clozeText": "Contain groups of specialized epithelial cells are __________ __________, and contain groups of specialized epithelial cells produce globules of a fatty material that accumulate, swelling and bursting the cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These are __________ __________, and their cells produce fatty deposits that accumulate, swell and rupture.",
+                                "clozeCorefTransformation": "Contain groups of specialized epithelial cells are __________ __________, and contain groups of specialized epithelial cells produce globules of a fatty material that accumulate, swelling and bursting the cells.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 1,
+                                "startDistance": 2,
+                                "originalItem": "They are __________ __________, and their cells produce globules of a fatty material that accumulate, swelling and bursting the cells."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These are __________ __________, and their cells produce fatty deposits that accumulate, swell and rupture."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "globules"
+                            },
+                            "display": {
+                                "clozeText": "Contain groups of specialized epithelial cells are holocrine glands, and contain groups of specialized epithelial cells produce __________ of a fatty material that accumulate, swelling and bursting the cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeCorefTransformation": "Contain groups of specialized epithelial cells are holocrine glands, and contain groups of specialized epithelial cells produce __________ of a fatty material that accumulate, swelling and bursting the cells.",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 2,
+                                "startDistance": 9,
+                                "originalItem": "They are holocrine glands, and their cells produce __________ of a fatty material that accumulate, swelling and bursting the cells."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epithelial cells"
+                            },
+                            "display": {
+                                "clozeText": "The coiled portion of the gland is closed at its deep end and is lined with sweat- secreting __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "The spiral gland is closed at its deep end and lined with __________ __________ that secrete sweat.",
+                                "clozeCorefTransformation": "The coiled portion of the gland is closed at its deep end and is lined with sweat- secreting __________ __________.",
+                                "semanticRole": "ARG0",
+                                "rootDistance": 4,
+                                "startDistance": 19,
+                                "originalItem": "The coiled portion of the gland is closed at its deep end and is lined with sweat- secreting __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The spiral gland is closed at its deep end and lined with __________ __________ that secrete sweat."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "difficulty"
+                            },
+                            "display": {
+                                "clozeText": "The very young with undeveloped nervous systems have __________ regulating their body temperature, which makes them more susceptible to hypothermia."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "Very young people with underdeveloped nervous systems have __________ regulating body temperature, which makes them more prone to hypothermia.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00002351279602017,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 8
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Very young people with underdeveloped nervous systems have __________ regulating body temperature, which makes them more prone to hypothermia."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Hypothermia"
+                            },
+                            "display": {
+                                "clozeText": "__________ for surgery is accomplished by packing the patient in ice or by removing blood, cooling it, and returning it to the patient."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "__________ for surgery is achieved by wrapping the patient in ice or drawing blood, cooling it and returning it to the patient.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000314628279863165,
+                                "syntacticRole": "nsubjpass",
+                                "rootDistance": 1,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ for surgery is achieved by wrapping the patient in ice or drawing blood, cooling it and returning it to the patient."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "subcutaneous layer"
+                            },
+                            "display": {
+                                "clozeText": "If an injury extends into the dermis or __________ __________, blood vessels break and the released blood forms a clot in the wound."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "If the wound spreads to the dermis or __________ __________, the blood vessels break down and the released blood forms a clot in the wound.",
+                                "orderGroup": 4,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000301500014386427,
+                                "semanticRole": "ARG4",
+                                "rootDistance": 5,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "If the wound spreads to the dermis or __________ __________, the blood vessels break down and the released blood forms a clot in the wound."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "injury"
+                            },
+                            "display": {
+                                "clozeText": "They survive the __________ because although they are derived from the epidermis, they extend into the dermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 4,
+                                "sentenceWeight": 7,
+                                "clozeProbability": 0.0000689906633658911,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "new epidermis"
+                            },
+                            "display": {
+                                "clozeText": "During healing, the stem cells divide, and their daughter cells grow out onto the surface of the exposed dermis, spread over it, and differentiate as __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "During healing, stem cells divide, and their daughter cells grow on the surface of the exposed dermis, spread over them and differentiate as a __________ __________.",
+                                "orderGroup": 4,
+                                "sentenceWeight": 7,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 5,
+                                "startDistance": 28
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "During healing, stem cells divide, and their daughter cells grow on the surface of the exposed dermis, spread over them and differentiate as a __________ __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "healing"
+                            },
+                            "display": {
+                                "clozeText": "During __________, the stem cells divide, and their daughter cells grow out onto the surface of the exposed dermis, spread over it, and differentiate as new epidermis."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "During __________, stem cells divide, and their daughter cells grow on the surface of the exposed dermis, spread over them and differentiate as a new epidermis.",
+                                "orderGroup": 4,
+                                "sentenceWeight": 7,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "During __________, stem cells divide, and their daughter cells grow on the surface of the exposed dermis, spread over them and differentiate as a new epidermis."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "unburned region"
+                            },
+                            "display": {
+                                "clozeText": "If the injured area is extensive, treatment may require removing a thin layer ofskin from an __________ __________ of the body and transplanting it to the injured area."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 4,
+                                "sentenceWeight": 10,
+                                "clozeProbability": 0.00000517368184211515,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 6,
+                                "startDistance": 15
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "aging"
+                            },
+                            "display": {
+                                "clozeText": "We are more aware of __________- related changes in skin than in other organ systems, because we can easily see skin or skin substitutes."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 5,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.0000100844498681708,
+                                "clozeParaphraseTransformation": "We are more aware of the changes associated with skin __________ than in other organ systems because we can easily see them.",
+                                "clozeCorefTransformation": "We are more aware of __________- related changes in skin than in other organ systems, because we can easily see skin or skin substitutes.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 5,
+                                "originalItem": "We are more aware of __________- related changes in skin than in other organ systems, because we can easily see them."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "We are more aware of the changes associated with skin __________ than in other organ systems because we can easily see them."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "diminished blood supply"
+                            },
+                            "display": {
+                                "clozeText": "A __________ __________ __________ to the nail beds impairs their growth, dulling and hardening them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 5,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000392415387705948,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 3,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 4,
+                                "startDistance": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "owner": "fill me in",
+    "source": "content_generation"
+}

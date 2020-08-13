@@ -1,0 +1,1143 @@
+{
+    "fileName": "FA_2020_ch3_05-stim.json",
+    "stimuli": {
+        "setspec": {
+            "clusters": [
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "outpouchings"
+                            },
+                            "display": {
+                                "clozeText": "The intricate features of a cell membrane, with its many __________ and infoldings, greatly increase the surface area of the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000301500014386427,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 11
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "intricate features"
+                            },
+                            "display": {
+                                "clozeText": "The __________ __________ of a cell membrane, with its many outpouchings and infoldings, greatly increase the surface area of the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The __________ __________ of the cell membrane with many payments and composition greatly increase the cell surface area.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG0",
+                                "rootDistance": 4,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ __________ of the cell membrane with many payments and composition greatly increase the cell surface area."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cell membrane"
+                            },
+                            "display": {
+                                "clozeText": "The intricate features of a __________ __________, with its many outpouchings and infoldings, greatly increase the surface area of the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "The intricate features of the __________ __________ with many payments and composition greatly increase the cell surface area.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 26,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 22,
+                                "rootDistance": 4,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The intricate features of the __________ __________ with many payments and composition greatly increase the cell surface area."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cell membrane"
+                            },
+                            "display": {
+                                "clozeText": "The __________ __________ is crucial because the __________ __________ is a conduit between the cell and the extracellular fluids in the body's internal environment."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "The __________ __________ is critical because it is the conduction between the cell and extracellular fluids in the internal environment of the body.",
+                                "clozeCorefTransformation": "The __________ __________ is crucial because the __________ __________ is a conduit between the cell and the extracellular fluids in the body's internal environment.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 26,
+                                "corefClusterBackwardWeight": 8,
+                                "corefClusterForwardWeight": 14,
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "The __________ __________ is crucial because it is a conduit between the cell and the extracellular fluids in the body's internal environment."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ __________ is critical because it is the conduction between the cell and extracellular fluids in the internal environment of the body."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "extracellular surfaces"
+                            },
+                            "display": {
+                                "clozeText": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and __________ __________ of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 30,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeCorefTransformation": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and __________ __________ of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 8,
+                                "startDistance": 37,
+                                "originalItem": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and __________ __________ of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "phospholipid molecules"
+                            },
+                            "display": {
+                                "clozeText": "The basic framework of the cell membrane is a double layer, or bilayer, of __________ __________ that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 30,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "The main skeleton of the cell membrane is a double layer or bilayer of __________ __________, which are assembled so that their \"water-soluble\" heads \"containing phosphate groups form intracellular and extracellular membrane surfaces, and their water-middle part of the membrane forms insoluble residues formed by fatty chains acid.",
+                                "clozeCorefTransformation": "The basic framework of the cell membrane is a double layer, or bilayer, of __________ __________ that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 3,
+                                "startDistance": 16,
+                                "originalItem": "The basic framework of the cell membrane is a double layer, or bilayer, of __________ __________ that self- assemble so that their water- soluble\" heads,\" containing phosphate groups, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The main skeleton of the cell membrane is a double layer or bilayer of __________ __________, which are assembled so that their \"water-soluble\" heads \"containing phosphate groups form intracellular and extracellular membrane surfaces, and their water-middle part of the membrane forms insoluble residues formed by fatty chains acid."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "phosphate groups"
+                            },
+                            "display": {
+                                "clozeText": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing __________ __________, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 30,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "The main skeleton of the cell membrane is a double layer or bilayer of phospholipid molecules, which are assembled so that their \"water-soluble\" heads \"containing __________ __________ form intracellular and extracellular membrane surfaces, and their water-middle part of the membrane forms insoluble residues formed by fatty chains acid.",
+                                "clozeCorefTransformation": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing __________ __________, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 8,
+                                "startDistance": 33,
+                                "originalItem": "The basic framework of the cell membrane is a double layer, or bilayer, of phospholipid molecules that self- assemble so that their water- soluble\" heads,\" containing __________ __________, form the intracellular and extracellular surfaces of the membrane, and their water- insoluble\" tails,\" consisting of fatty acid chains, make up the middle portion of the membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The main skeleton of the cell membrane is a double layer or bilayer of phospholipid molecules, which are assembled so that their \"water-soluble\" heads \"containing __________ __________ form intracellular and extracellular membrane surfaces, and their water-middle part of the membrane forms insoluble residues formed by fatty chains acid."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "phospholipid molecules"
+                            },
+                            "display": {
+                                "clozeText": "The middle portion of the cell membrane consists largely of the fatty acid components of the __________ __________, which make the membrane oily."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 28,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "The middle part of the cell membrane consists mainly of the fatty acid components of __________ __________, which make it fatty.",
+                                "clozeCorefTransformation": "The middle portion of the cell membrane consists largely of the fatty acid components of the __________ __________, which make the membrane oily.",
+                                "semanticRole": "ARG0",
+                                "rootDistance": 5,
+                                "startDistance": 15,
+                                "originalItem": "The middle portion of the cell membrane consists largely of the fatty acid components of the __________ __________, which make it oily."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The middle part of the cell membrane consists mainly of the fatty acid components of __________ __________, which make it fatty."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "bloodstream"
+                            },
+                            "display": {
+                                "clozeText": "Once near the splinter, the white blood cell must slow down in the turbulence of the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000314628279863165,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 15,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 5,
+                                "startDistance": 16
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "turbulence"
+                            },
+                            "display": {
+                                "clozeText": "Once near the splinter, the white blood cell must slow down in the __________ of the bloodstream."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 14
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "capillary cell membrane"
+                            },
+                            "display": {
+                                "clozeText": "The integrin then pushes up through the __________ __________ __________, grabbing the passing slowed white blood cell and directing it between the tilelike cells of the capillary wall."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "The integrin is then pushed through the __________ __________ __________, traps the slowed-down leukocytes that pass and directs them between the plate-like cells of the capillary wall.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 15,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 3,
+                                "startDistance": 6
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The integrin is then pushed through the __________ __________ __________, traps the slowed-down leukocytes that pass and directs them between the plate-like cells of the capillary wall."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "capillary wall"
+                            },
+                            "display": {
+                                "clozeText": "The integrin then pushes up through the capillary cell membrane, grabbing the passing slowed white blood cell and directing it between the tilelike cells of the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "The integrin is then pushed through the capillary cell membrane, traps the slowed-down leukocytes that pass and directs them between the plate-like cells of the __________ __________.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 15,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 7,
+                                "startDistance": 26
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The integrin is then pushed through the capillary cell membrane, traps the slowed-down leukocytes that pass and directs them between the plate-like cells of the __________ __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "compartment"
+                            },
+                            "display": {
+                                "clozeText": "Osmosis is the movement of water across a selectively permeable membrane into a __________ containing solute that can not cross that membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 32,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "Osmosis is the movement of water through a selectively permeable membrane into a __________ containing a solute that cannot pass through the membrane.",
+                                "clozeCorefTransformation": "Osmosis is the movement of water across a selectively permeable membrane into a __________ containing solute that can not cross that membrane.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 13,
+                                "originalItem": "Osmosis is the movement of water across a selectively permeable membrane into a __________ containing solute that can not cross that membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Osmosis is the movement of water through a selectively permeable membrane into a __________ containing a solute that cannot pass through the membrane."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "permeable membrane"
+                            },
+                            "display": {
+                                "clozeText": "Osmosis is the movement of water across a selectively __________ __________ into a compartment containing solute that can not cross that membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 32,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Osmosis is the movement of water through a selectively __________ __________ into a compartment containing a solute that cannot pass through the membrane.",
+                                "clozeCorefTransformation": "Osmosis is the movement of water across a selectively __________ __________ into a compartment containing solute that can not cross that membrane.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 32,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 23,
+                                "rootDistance": 4,
+                                "startDistance": 7,
+                                "originalItem": "Osmosis is the movement of water across a selectively __________ __________ into a compartment containing solute that can not cross that membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Osmosis is the movement of water through a selectively __________ __________ into a compartment containing a solute that cannot pass through the membrane."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "surroundings"
+                            },
+                            "display": {
+                                "clozeText": "In pinocytosis, cells take in tiny droplets of liquid from their __________, as a small portion of cell membrane indents."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeCorefTransformation": "In pinocytosis, cells take in tiny droplets of liquid from their __________, as a small portion of cell membrane indents.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 12,
+                                "originalItem": "In pinocytosis, cells take in tiny droplets of liquid from their __________, as a small portion of cell membrane indents."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "pinocytosis"
+                            },
+                            "display": {
+                                "clozeText": "In __________, cells take in tiny droplets of liquid from their surroundings, as a small portion of cell membrane indents."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "In __________, cells withdraw small droplets of fluid from the environment as a small fraction of the displacement of the cell membrane.",
+                                "clozeCorefTransformation": "In __________, cells take in tiny droplets of liquid from their surroundings, as a small portion of cell membrane indents.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 26,
+                                "corefClusterBackwardWeight": 21,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 2,
+                                "startDistance": 1,
+                                "originalItem": "In __________, cells take in tiny droplets of liquid from their surroundings, as a small portion of cell membrane indents."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In __________, cells withdraw small droplets of fluid from the environment as a small fraction of the displacement of the cell membrane."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "vesicular membrane"
+                            },
+                            "display": {
+                                "clozeText": "For a time, the __________ __________ separates the cell membrane contents from the rest of the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "The __________ __________ temporarily separates its contents from the rest of the cell.",
+                                "clozeCorefTransformation": "For a time, the __________ __________ separates the cell membrane contents from the rest of the cell.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 15,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 7,
+                                "rootDistance": 2,
+                                "startDistance": 4,
+                                "originalItem": "For a time, the __________ __________ separates its contents from the rest of the cell."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ __________ temporarily separates its contents from the rest of the cell."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "decomposition"
+                            },
+                            "display": {
+                                "clozeText": "The products of this __________ may then diffuse out of the phagolysosome and into the cytoplasm, where they may be used as raw materials in metabolic processes."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000252392652134176,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 2,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 4,
+                                "startDistance": 3
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "phagolysosome"
+                            },
+                            "display": {
+                                "clozeText": "The products of a lysosome may then diffuse out of the __________ and into the cytoplasm, where The lysosomal digestive enzymes may be used as raw materials in metabolic processes."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeParaphraseTransformation": "The products of this degradation can then diffuse from the __________ into the cytoplasm, where they can be used as raw materials in metabolic processes.",
+                                "clozeCorefTransformation": "The products of a lysosome may then diffuse out of the __________ and into the cytoplasm, where The lysosomal digestive enzymes may be used as raw materials in metabolic processes.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 2,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 4,
+                                "startDistance": 10,
+                                "originalItem": "The products of this decomposition may then diffuse out of the __________ and into the cytoplasm, where they may be used as raw materials in metabolic processes."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The products of this degradation can then diffuse from the __________ into the cytoplasm, where they can be used as raw materials in metabolic processes."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cytoplasm"
+                            },
+                            "display": {
+                                "clozeText": "The products of a lysosome may then diffuse out of the phagolysosome and into the __________, where The lysosomal digestive enzymes may be used as raw materials in metabolic processes."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "The products of this degradation can then diffuse from the phagolysosome into the __________, where they can be used as raw materials in metabolic processes.",
+                                "clozeCorefTransformation": "The products of a lysosome may then diffuse out of the phagolysosome and into the __________, where The lysosomal digestive enzymes may be used as raw materials in metabolic processes.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 15,
+                                "originalItem": "The products of this decomposition may then diffuse out of the phagolysosome and into the __________, where they may be used as raw materials in metabolic processes."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The products of this degradation can then diffuse from the phagolysosome into the __________, where they can be used as raw materials in metabolic processes."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Pinocytosis"
+                            },
+                            "display": {
+                                "clozeText": "__________ and phagocytosis engulf particles nonspecifically-- that is, Phagocytosis engulf any molecules near the cell membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 29,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "__________ and phagocytosis absorb particles nonspecifically - that is, they absorb any molecules near the cell membrane.",
+                                "clozeCorefTransformation": "__________ and phagocytosis engulf particles nonspecifically-- that is, Phagocytosis engulf any molecules near the cell membrane.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 29,
+                                "corefClusterBackwardWeight": 13,
+                                "corefClusterForwardWeight": 13,
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "__________ and phagocytosis engulf particles nonspecifically-- that is, they engulf any molecules near the cell membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ and phagocytosis absorb particles nonspecifically - that is, they absorb any molecules near the cell membrane."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "particles"
+                            },
+                            "display": {
+                                "clozeText": "Pinocytosis and phagocytosis engulf __________ nonspecifically-- that is, Phagocytosis engulf any molecules near the cell membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 29,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Pinocytosis and phagocytosis absorb __________ nonspecifically - that is, they absorb any molecules near the cell membrane.",
+                                "clozeCorefTransformation": "Pinocytosis and phagocytosis engulf __________ nonspecifically-- that is, Phagocytosis engulf any molecules near the cell membrane.",
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 4,
+                                "originalItem": "Pinocytosis and phagocytosis engulf __________ nonspecifically-- that is, they engulf any molecules near the cell membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Pinocytosis and phagocytosis absorb __________ nonspecifically - that is, they absorb any molecules near the cell membrane."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "molecules"
+                            },
+                            "display": {
+                                "clozeText": "Pinocytosis and phagocytosis engulf particles nonspecifically-- that is, Phagocytosis engulf any __________ near the cell membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 29,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Pinocytosis and phagocytosis absorb particles nonspecifically - that is, they absorb any __________ near the cell membrane.",
+                                "clozeCorefTransformation": "Pinocytosis and phagocytosis engulf particles nonspecifically-- that is, Phagocytosis engulf any __________ near the cell membrane.",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 13,
+                                "originalItem": "Pinocytosis and phagocytosis engulf particles nonspecifically-- that is, they engulf any __________ near the cell membrane."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Pinocytosis and phagocytosis absorb particles nonspecifically - that is, they absorb any __________ near the cell membrane."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "selectively"
+                            },
+                            "display": {
+                                "clozeText": "The cell membrane are receptors to which only specific molecules from the fluids surrounding the cell can bind and __________ enter the cell, while other types of molecules are left outside."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "These proteins are receptors with which only specific molecules from the fluids surrounding the cell can bind and __________ enter the cell, while other types of molecules remain outside.",
+                                "clozeCorefTransformation": "The cell membrane are receptors to which only specific molecules from the fluids surrounding the cell can bind and __________ enter the cell, while other types of molecules are left outside.",
+                                "semanticRole": "ARGM-MNR",
+                                "rootDistance": 3,
+                                "startDistance": 18,
+                                "originalItem": "These proteins are receptors to which only specific molecules from the fluids surrounding the cell can bind and __________ enter the cell, while other types of molecules are left outside."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These proteins are receptors with which only specific molecules from the fluids surrounding the cell can bind and __________ enter the cell, while other types of molecules remain outside."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "receptors"
+                            },
+                            "display": {
+                                "clozeText": "The cell membrane are __________ to which only specific molecules from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These proteins are __________ with which only specific molecules from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules remain outside.",
+                                "clozeCorefTransformation": "The cell membrane are __________ to which only specific molecules from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside.",
+                                "syntacticRole": "root",
+                                "rootDistance": 0,
+                                "startDistance": 3,
+                                "originalItem": "These proteins are __________ to which only specific molecules from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These proteins are __________ with which only specific molecules from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules remain outside."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "molecules"
+                            },
+                            "display": {
+                                "clozeText": "The cell membrane are receptors to which only specific __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of __________ are left outside."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These proteins are receptors with which only specific __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of __________ remain outside.",
+                                "clozeCorefTransformation": "The cell membrane are receptors to which only specific __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of __________ are left outside.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 5,
+                                "startDistance": 27,
+                                "originalItem": "These proteins are receptors to which only specific __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of __________ are left outside."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These proteins are receptors with which only specific __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of __________ remain outside."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "specific molecules"
+                            },
+                            "display": {
+                                "clozeText": "The cell membrane are receptors to which only __________ __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These proteins are receptors with which only __________ __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules remain outside.",
+                                "clozeCorefTransformation": "The cell membrane are receptors to which only __________ __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside.",
+                                "semanticRole": "ARG0",
+                                "rootDistance": 7,
+                                "startDistance": 6,
+                                "originalItem": "These proteins are receptors to which only __________ __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules are left outside."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These proteins are receptors with which only __________ __________ from the fluids surrounding the cell can bind and selectively enter the cell, while other types of molecules remain outside."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cell membrane"
+                            },
+                            "display": {
+                                "clozeText": "Formation of the receptor- ligand combination stimulates the __________ __________ to indent and form a vesicle around the LDL particle."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 35,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "The formation of a receptor-ligand combination stimulates the __________ __________ to settle and form a vesicle around the LDL particle.",
+                                "clozeCorefTransformation": "Formation of the receptor- ligand combination stimulates the __________ __________ to indent and form a vesicle around the LDL particle.",
+                                "corefClusters": 4,
+                                "corefClusterTotalWeight": 35,
+                                "corefClusterBackwardWeight": 22,
+                                "corefClusterForwardWeight": 8,
+                                "rootDistance": 2,
+                                "startDistance": 8,
+                                "originalItem": "Formation of the receptor- ligand combination stimulates the __________ __________ to indent and form a vesicle around the LDL particle."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The formation of a receptor-ligand combination stimulates the __________ __________ to settle and form a vesicle around the LDL particle."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cholesterol molecules"
+                            },
+                            "display": {
+                                "clozeText": "The vesicle then transports the LDL particle to a lysosome, where enzymes digest the LDL particle and release the __________ __________ for cellular use."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "The vesicle then transports the LDL particle into the lysosome, where it is cleaved by enzymes, releasing __________ __________ for use in cells.",
+                                "clozeCorefTransformation": "The vesicle then transports the LDL particle to a lysosome, where enzymes digest the LDL particle and release the __________ __________ for cellular use.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 6,
+                                "startDistance": 17,
+                                "originalItem": "The vesicle then transports the LDL particle to a lysosome, where enzymes digest it and release the __________ __________ for cellular use."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The vesicle then transports the LDL particle into the lysosome, where it is cleaved by enzymes, releasing __________ __________ for use in cells."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "packaging substances"
+                            },
+                            "display": {
+                                "clozeText": "However, the overall result is the opposite: __________ __________ made in the cell into vesicles that fuse with the cell membrane and are released outside the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 26,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "C-ARG1",
+                                "rootDistance": 9,
+                                "startDistance": 9
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "G phases"
+                            },
+                            "display": {
+                                "clozeText": "DNA is replicated during S phase and is bracketed by two __________ __________, G1G1 and G2G2."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 4,
+                                "sentenceWeight": 27,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeCorefTransformation": "DNA is replicated during S phase and is bracketed by two __________ __________, G1G1 and G2G2.",
+                                "corefClusters": 4,
+                                "corefClusterTotalWeight": 27,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 17,
+                                "rootDistance": 4,
+                                "startDistance": 10,
+                                "originalItem": "DNA is replicated during S phase and is bracketed by two __________ __________, G1G1 and G2G2."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Cytoplasmic division"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ begins during anaphase when the cell membrane starts to constrict around the middle of the cell."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "__________ __________ begins during anaphase, when the cell membrane begins to contract around the center of the cell.",
+                                "orderGroup": 4,
+                                "sentenceWeight": 33,
+                                "clozeProbability": 0.00000314628279863165,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ begins during anaphase, when the cell membrane begins to contract around the center of the cell."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "microfilaments"
+                            },
+                            "display": {
+                                "clozeText": "The __________ assemble in the cytoplasm and attach to the inner surface of the cell membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 4,
+                                "sentenceWeight": 37,
+                                "clozeProbability": 0.00000201737241657513,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 37,
+                                "corefClusterBackwardWeight": 23,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cytoplasm"
+                            },
+                            "display": {
+                                "clozeText": "The microfilaments assemble in the __________ and attach to the inner surface of the cell membrane."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Microfibers accumulate in the __________ and attach to the inner surface of the cell membrane.",
+                                "orderGroup": 4,
+                                "sentenceWeight": 37,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 37,
+                                "corefClusterBackwardWeight": 23,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 3,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Microfibers accumulate in the __________ and attach to the inner surface of the cell membrane."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "chromosome tips"
+                            },
+                            "display": {
+                                "clozeText": "When the __________ __________ shorten to a certain point, this signals the cell to cease dividing."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 5,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 3,
+                                "startDistance": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "readiness"
+                            },
+                            "display": {
+                                "clozeText": "Another internal influence on __________ for cell division is the ratio between the surface area of the cell membrane and the cell volume the cell contains; that is, cell size."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 5,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Another intrinsic influence on the __________ for cell division is the ratio between the surface area of the cell membrane and the volume of the cells that it contains; that is, the cell size.",
+                                "clozeCorefTransformation": "Another internal influence on __________ for cell division is the ratio between the surface area of the cell membrane and the cell volume the cell contains; that is, cell size.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 4,
+                                "originalItem": "Another internal influence on __________ for cell division is the ratio between the surface area of the cell membrane and the cell volume it contains; that is, cell size."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Another intrinsic influence on the __________ for cell division is the ratio between the surface area of the cell membrane and the volume of the cells that it contains; that is, the cell size."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "certain phospholipids"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport __________ __________ from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeParaphraseTransformation": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport __________ __________ from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris.",
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport __________ __________ from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 12,
+                                "startDistance": 71,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport __________ __________ from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport __________ __________ from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "mitochondria"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture __________, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the __________ of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris.",
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture __________, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 7,
+                                "startDistance": 37,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture __________, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the __________ of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cytoskeletal threads"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the __________ __________ that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the __________ __________ that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 12,
+                                "startDistance": 21,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the __________ __________ that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "other organelles"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy __________ __________ abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying __________ __________ disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris.",
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy __________ __________ abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris",
+                                "corefClusters": 4,
+                                "corefClusterTotalWeight": 18,
+                                "corefClusterBackwardWeight": 10,
+                                "corefClusterForwardWeight": 2,
+                                "rootDistance": 9,
+                                "startDistance": 58,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy __________ __________ abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying __________ __________ disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "phagocytes"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract __________ that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract __________, which destroy debris.",
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract __________ that break down debris",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 18,
+                                "startDistance": 88,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release molecules that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract __________ that break down debris"
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing molecules that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract __________, which destroy debris."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "molecules"
+                            },
+                            "display": {
+                                "clozeText": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release __________ that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 7,
+                                "sentenceWeight": 18,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing __________ that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris.",
+                                "clozeCorefTransformation": "Enzymes called caspases: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release __________ that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 9,
+                                "startDistance": 41,
+                                "originalItem": "These enzymes: destroy enzymes that replicate and repair DNA activate enzymes that cut DNA into similar- size pieces dismantle the cytoskeletal threads that support the nucleus, which collapses, condensing the DNA within fracture mitochondria, which release __________ that trigger further caspase activity, cut off the cell's energy supply, and destroy other organelles abolish the cell's ability to adhere to other cells transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes that break down debris"
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These enzymes: destroy enzymes that replicate and repair DNA, activate enzymes that split DNA into pieces of the same size, disassemble cytoskeletal fibers that support the nucleus, which are destroyed, condense DNA in the mitochondria of fractures, releasing __________ that trigger further caspase activity. Turning off the cell's energy and destroying other organelles disrupts the cell's ability to adhere to other cells in order to transport certain phospholipids from the inner surface of the cell membrane to the outside, where they attract phagocytes, which destroy debris."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "owner": "fill me in",
+    "source": "content_generation"
+}

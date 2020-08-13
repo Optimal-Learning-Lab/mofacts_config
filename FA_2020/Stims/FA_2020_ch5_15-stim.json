@@ -1,0 +1,2507 @@
+{
+    "fileName": "FA_2020_ch5_15-stim.json",
+    "stimuli": {
+        "setspec": {
+            "clusters": [
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "fusion"
+                            },
+                            "display": {
+                                "clozeText": "The area of __________ surrounds the cell like a belt, and the junction closes the space between the cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.000006742179232986,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cytoplasm"
+                            },
+                            "display": {
+                                "clozeText": "The cell membranes of certain other cells link the __________ of adjacent cells and allow ions, nutrients, and other small molecules to move between them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 1,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "These channels connect the __________ of neighboring cells and allow ions, nutrients and other small molecules to move between them.",
+                                "clozeCorefTransformation": "The cell membranes of certain other cells link the __________ of adjacent cells and allow ions, nutrients, and other small molecules to move between them.",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 4,
+                                "originalItem": "These channels link the __________ of adjacent cells and allow ions, nutrients, and other small molecules to move between them."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These channels connect the __________ of neighboring cells and allow ions, nutrients and other small molecules to move between them."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "tubules"
+                            },
+                            "display": {
+                                "clozeText": "In these __________ and ducts, the free surface faces the hollow channel or lumen."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "In these __________ and ducts, the free surface faces the hollow channel or lumen.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 12,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 3,
+                                "startDistance": 1,
+                                "originalItem": "In these __________ and ducts, the free surface faces the hollow channel or lumen."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "hollow channel"
+                            },
+                            "display": {
+                                "clozeText": "In these tubules and ducts, the free surface faces the __________ __________ or lumen."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "In these pipes, the free surface faces a __________ __________ or lumen.",
+                                "clozeCorefTransformation": "In these tubules and ducts, the free surface faces the __________ __________ or lumen.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 10,
+                                "originalItem": "In these tubules and ducts, the free surface faces the __________ __________ or lumen."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In these pipes, the free surface faces a __________ __________ or lumen."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "glandular products"
+                            },
+                            "display": {
+                                "clozeText": "In the kidneys, this tissue functions in the formation of urine; in glands, it secretes __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "In the kidneys, this tissue produces urine; in the glands secretes __________ __________.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 3,
+                                "startDistance": 18
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In the kidneys, this tissue produces urine; in the glands secretes __________ __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "kidneys"
+                            },
+                            "display": {
+                                "clozeText": "In the __________, this tissue functions in the formation of urine; in glands, it secretes glandular products."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "In the __________, this tissue produces urine; in the glands secretes glandular products.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 16,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 16,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 11,
+                                "rootDistance": 4,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In the __________, this tissue produces urine; in the glands secretes glandular products."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "uterine tube"
+                            },
+                            "display": {
+                                "clozeText": "In the female, motile cilia aid in moving the oocyte through the __________ __________ to the uterus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000608192839360935,
+                                "semanticRole": "ARGM-DIR",
+                                "rootDistance": 5,
+                                "startDistance": 11
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Microvilli"
+                            },
+                            "display": {
+                                "clozeText": "__________ are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where a single layer of thin, flattened cells is exposed to substances being absorbed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "__________ are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where a single layer of thin, flattened cells is exposed to substances being absorbed.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 9,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "__________ are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where it is exposed to substances being absorbed."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "substances"
+                            },
+                            "display": {
+                                "clozeText": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where a single layer of thin, flattened cells is exposed to __________ being absorbed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "Microvillas are 0.5 to 1.0 μm long and increase the surface area of the cell membrane where they are exposed to absorbed __________.",
+                                "clozeCorefTransformation": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where a single layer of thin, flattened cells is exposed to __________ being absorbed.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 6,
+                                "startDistance": 23,
+                                "originalItem": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the cell membrane where it is exposed to __________ being absorbed."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Microvillas are 0.5 to 1.0 μm long and increase the surface area of the cell membrane where they are exposed to absorbed __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cell membrane"
+                            },
+                            "display": {
+                                "clozeText": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the __________ __________ where a single layer of thin, flattened cells is exposed to substances being absorbed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "Microvillas are 0.5 to 1.0 μm long and increase the surface area of the __________ __________ where they are exposed to absorbed substances.",
+                                "clozeCorefTransformation": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the __________ __________ where a single layer of thin, flattened cells is exposed to substances being absorbed.",
+                                "semanticRole": "ARGM-LOC",
+                                "rootDistance": 6,
+                                "startDistance": 15,
+                                "originalItem": "Microvilli are 0.5 to 1.0 um long, and they increase the surface area of the __________ __________ where it is exposed to substances being absorbed."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Microvillas are 0.5 to 1.0 μm long and increase the surface area of the __________ __________ where they are exposed to absorbed substances."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epithelium"
+                            },
+                            "display": {
+                                "clozeText": "Specialized flask- shaped glandular cells are scattered among the columnar cells of simple columnar __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "Specialized glandular cells in the form of flasks are scattered among the columnar cells of one columnar __________.",
+                                "clozeCorefTransformation": "Specialized flask- shaped glandular cells are scattered among the columnar cells of simple columnar __________.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 15,
+                                "originalItem": "Specialized flask- shaped glandular cells are scattered among the columnar cells of simple columnar __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Specialized glandular cells in the form of flasks are scattered among the columnar cells of one columnar __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "glandular cells"
+                            },
+                            "display": {
+                                "clozeText": "Specialized flask- shaped __________ __________ are scattered among the columnar cells of simple columnar epithelium."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Specialized __________ __________ in the form of flasks are scattered among the columnar cells of one columnar epithelium.",
+                                "clozeCorefTransformation": "Specialized flask- shaped __________ __________ are scattered among the columnar cells of simple columnar epithelium.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 4,
+                                "startDistance": 4,
+                                "originalItem": "Specialized flask- shaped __________ __________ are scattered among the columnar cells of simple columnar epithelium."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Specialized __________ __________ in the form of flasks are scattered among the columnar cells of one columnar epithelium."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "columnar cells"
+                            },
+                            "display": {
+                                "clozeText": "Specialized flask- shaped glandular cells are scattered among the __________ __________ of simple columnar epithelium."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "Specialized glandular cells in the form of flasks are scattered among the __________ __________ of one columnar epithelium.",
+                                "clozeCorefTransformation": "Specialized flask- shaped glandular cells are scattered among the __________ __________ of simple columnar epithelium.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 20,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 13,
+                                "rootDistance": 5,
+                                "startDistance": 9,
+                                "originalItem": "Specialized flask- shaped glandular cells are scattered among the __________ __________ of simple columnar epithelium."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Specialized glandular cells in the form of flasks are scattered among the __________ __________ of one columnar epithelium."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "protective fluid"
+                            },
+                            "display": {
+                                "clozeText": "Specialized flask- shaped glandular cells, secrete a __________ __________, called mucus, onto the free surface of the tissue."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "These cells, called goblets, secrete a __________ __________ called mucus onto the free surface of the tissue.",
+                                "clozeCorefTransformation": "Specialized flask- shaped glandular cells, secrete a __________ __________, called mucus, onto the free surface of the tissue.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 3,
+                                "startDistance": 8,
+                                "originalItem": "These cells, called goblet cells, secrete a __________ __________, called mucus, onto the free surface of the tissue."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "These cells, called goblets, secrete a __________ __________ called mucus onto the free surface of the tissue."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "columnar epithelium"
+                            },
+                            "display": {
+                                "clozeText": "The cells of pseudostratified __________ __________ appear stratified or layered, but the columnar cells of simple __________ __________ are not."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "The cells of pseudostratified __________ __________ appear stratified or layered, but the columnar cells of simple __________ __________ are not.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 4,
+                                "startDistance": 4,
+                                "originalItem": "The cells of pseudostratified __________ __________ appear stratified or layered, but they are not."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "stratified or layered"
+                            },
+                            "display": {
+                                "clozeText": "The cells of pseudostratified columnar epithelium appear __________ __________ __________, but the columnar cells of simple columnar epithelium are not."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "The cells of pseudostratified columnar epithelium appear __________ __________ __________, but the columnar cells of simple columnar epithelium are not.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 1,
+                                "startDistance": 7,
+                                "originalItem": "The cells of pseudostratified columnar epithelium appear __________ __________ __________, but they are not."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "basement membrane"
+                            },
+                            "display": {
+                                "clozeText": "However, the cells, which vary in shape, all reach the __________ __________, even though some of Specialized flask- shaped glandular cells may not contact the free surface."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "However, cells that differ in shape reach the __________ __________, although some of them may not touch the free surface.",
+                                "clozeCorefTransformation": "However, the cells, which vary in shape, all reach the __________ __________, even though some of Specialized flask- shaped glandular cells may not contact the free surface.",
+                                "semanticRole": "ARGM-ADV",
+                                "rootDistance": 4,
+                                "startDistance": 10,
+                                "originalItem": "However, the cells, which vary in shape, all reach the __________ __________, even though some of them may not contact the free surface."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "However, cells that differ in shape reach the __________ __________, although some of them may not touch the free surface."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "tissue secrete mucus"
+                            },
+                            "display": {
+                                "clozeText": "Goblet cells scattered throughout this __________ __________ __________, which the cilia sweep away."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "Goblet cells scattered throughout this __________ __________ __________, which sweeps up the cilia.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 8,
+                                "corefClusterBackwardWeight": 5,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 3,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Goblet cells scattered throughout this __________ __________ __________, which sweeps up the cilia."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "linings"
+                            },
+                            "display": {
+                                "clozeText": "Here, the mucous- covered __________ are sticky and trap dust and microorganisms that enter with the air."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "Here, the mucous- covered __________ are sticky and trap dust and microorganisms that enter with the air.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 12,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 3,
+                                "startDistance": 2,
+                                "originalItem": "Here, the mucous- covered __________ are sticky and trap dust and microorganisms that enter with the air."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "particles"
+                            },
+                            "display": {
+                                "clozeText": "The cilia move the mucus and the mucous- covered linings captured __________ upward and out of the airways."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "The cilium moves mucus and its entrained __________ up and out of the airways.",
+                                "clozeCorefTransformation": "The cilia move the mucus and the mucous- covered linings captured __________ upward and out of the airways.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 8,
+                                "originalItem": "The cilia move the mucus and its captured __________ upward and out of the airways."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The cilium moves mucus and its entrained __________ up and out of the airways."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "airways"
+                            },
+                            "display": {
+                                "clozeText": "The cilia move the mucus and the mucous- covered linings captured particles upward and out of the __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 2,
+                                "sentenceWeight": 12,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "The cilium moves mucus and its entrained particles up and out of the __________.",
+                                "clozeCorefTransformation": "The cilia move the mucus and the mucous- covered linings captured particles upward and out of the __________.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 12,
+                                "corefClusterBackwardWeight": 7,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 5,
+                                "startDistance": 13,
+                                "originalItem": "The cilia move the mucus and its captured particles upward and out of the __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The cilium moves mucus and its entrained particles up and out of the __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "where they flatten"
+                            },
+                            "display": {
+                                "clozeText": "As the newer cells grow, older ones are pushed farther and farther outward, __________ __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "As new cells grow, older cells are pushed further and further outward, __________ __________ __________ out.",
+                                "clozeCorefTransformation": "As the newer cells grow, older ones are pushed farther and farther outward, __________ __________ __________.",
+                                "semanticRole": "ARGM-LOC",
+                                "rootDistance": 3,
+                                "startDistance": 15,
+                                "originalItem": "As the newer cells grow, older ones are pushed farther and farther outward, __________ __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "As new cells grow, older cells are pushed further and further outward, __________ __________ __________ out."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "keratinization"
+                            },
+                            "display": {
+                                "clozeText": "This\" __________\" produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying tissues and blocks chemicals and microorganisms from entering."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000201737241657513,
+                                "clozeParaphraseTransformation": "This \"__________\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying tissues and blocks the entry of chemicals and microorganisms.",
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 8,
+                                "corefClusterBackwardWeight": 7,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "This \"__________\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying tissues and blocks the entry of chemicals and microorganisms."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "protective material"
+                            },
+                            "display": {
+                                "clozeText": "The cilia produces a covering of dry, tough, __________ __________ that prevents water and other substances from escaping from underlying tissues and blocks chemicals and microorganisms from entering."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "This \"keratinization\" forms a coating of dry, durable __________ __________ that prevents water and other substances from escaping from underlying tissues and blocks the entry of chemicals and microorganisms.",
+                                "clozeCorefTransformation": "The cilia produces a covering of dry, tough, __________ __________ that prevents water and other substances from escaping from underlying tissues and blocks chemicals and microorganisms from entering.",
+                                "semanticRole": "ARG0",
+                                "rootDistance": 4,
+                                "startDistance": 8,
+                                "originalItem": "This\" keratinization\" produces a covering of dry, tough, __________ __________ that prevents water and other substances from escaping from underlying tissues and blocks chemicals and microorganisms from entering."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "This \"keratinization\" forms a coating of dry, durable __________ __________ that prevents water and other substances from escaping from underlying tissues and blocks the entry of chemicals and microorganisms."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "chemicals"
+                            },
+                            "display": {
+                                "clozeText": "The cilia produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying tissues and blocks __________ and microorganisms from entering."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "This \"keratinization\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying tissues and blocks the entry of __________ and microorganisms.",
+                                "clozeCorefTransformation": "The cilia produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying tissues and blocks __________ and microorganisms from entering.",
+                                "semanticRole": "ARG0",
+                                "rootDistance": 10,
+                                "startDistance": 27,
+                                "originalItem": "This\" keratinization\" produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying tissues and blocks __________ and microorganisms from entering."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "This \"keratinization\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying tissues and blocks the entry of __________ and microorganisms."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "tissues"
+                            },
+                            "display": {
+                                "clozeText": "The cilia produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying __________ and blocks chemicals and microorganisms from entering."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "This \"keratinization\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying __________ and blocks the entry of chemicals and microorganisms.",
+                                "clozeCorefTransformation": "The cilia produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying __________ and blocks chemicals and microorganisms from entering.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 8,
+                                "startDistance": 24,
+                                "originalItem": "This\" keratinization\" produces a covering of dry, tough, protective material that prevents water and other substances from escaping from underlying __________ and blocks chemicals and microorganisms from entering."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "This \"keratinization\" forms a coating of dry, durable protective material that prevents water and other substances from escaping from underlying __________ and blocks the entry of chemicals and microorganisms."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "surfaces"
+                            },
+                            "display": {
+                                "clozeText": "In these parts, the tissue is not keratinized; it stays soft and moist, and the cells on its free __________ remain alive."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "In these parts, the tissue is not keratinized; it stays soft and moist, and cells on free __________ stay alive.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000517368184211515,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 22
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In these parts, the tissue is not keratinized; it stays soft and moist, and cells on free __________ stay alive."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "layering"
+                            },
+                            "display": {
+                                "clozeText": "The __________ of the cells provides more protection than the single layer affords."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000517368184211515,
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 8,
+                                "corefClusterBackwardWeight": 4,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 4,
+                                "startDistance": 0
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "affords"
+                            },
+                            "display": {
+                                "clozeText": "The layering of the cells provides more protection than the single layer __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 2,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 12
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "urinary bladder"
+                            },
+                            "display": {
+                                "clozeText": "Transitional epithelium forms the inner lining of the __________ __________ and lines the ureters and the superior urethra."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "Transitional epithelium forms the inner lining of the __________ __________ and lines the ureters and the superior urethra.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 20,
+                                "corefClusterBackwardWeight": 13,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 4,
+                                "startDistance": 6,
+                                "originalItem": "It forms the inner lining of the __________ __________ and lines the ureters and the superior urethra."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "ureters"
+                            },
+                            "display": {
+                                "clozeText": "Transitional epithelium forms the inner lining of the urinary bladder and lines the __________ and the superior urethra."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 2,
+                                "sentenceWeight": 20,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "Transitional epithelium forms the inner lining of the urinary bladder and lines the __________ and the superior urethra.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 20,
+                                "corefClusterBackwardWeight": 13,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 3,
+                                "startDistance": 11,
+                                "originalItem": "It forms the inner lining of the urinary bladder and lines the __________ and the superior urethra."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "exocrine secretory cells"
+                            },
+                            "display": {
+                                "clozeText": "Most __________ __________ __________ are merocrine, and they can be subclassified based on their secretion of serous fluid or mucus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "Most __________ __________ __________ are merocrine cells and can be classified based on the secretion of serous fluid or mucus.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 3,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Most __________ __________ __________ are merocrine cells and can be classified based on the secretion of serous fluid or mucus."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "merocrine"
+                            },
+                            "display": {
+                                "clozeText": "Most exocrine secretory cells are __________, and they can be subclassified based on their secretion of serous fluid or mucus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "Most exocrine secretory cells are __________ cells and can be classified based on the secretion of serous fluid or mucus.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000433606687724915,
+                                "syntacticRole": "root",
+                                "rootDistance": 0,
+                                "startDistance": 5
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Most exocrine secretory cells are __________ cells and can be classified based on the secretion of serous fluid or mucus."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "secretion"
+                            },
+                            "display": {
+                                "clozeText": "Most exocrine secretory cells are merocrine, and they can be subclassified based on their __________ of serous fluid or mucus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 3,
+                                "clozeParaphraseTransformation": "Most exocrine secretory cells are merocrine cells and can be classified based on the __________ of serous fluid or mucus.",
+                                "orderGroup": 2,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000433606687724915,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 15
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Most exocrine secretory cells are merocrine cells and can be classified based on the __________ of serous fluid or mucus."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "abundant extracellular matrix"
+                            },
+                            "display": {
+                                "clozeText": "Connective tissue cells are farther apart than epithelial cells, and Connective tissues have __________ __________ __________ between them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 11,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeParaphraseTransformation": "Connective tissue cells are farther apart than epithelial cells, and there is an __________ __________ __________ between them.",
+                                "clozeCorefTransformation": "Connective tissue cells are farther apart than epithelial cells, and Connective tissues have __________ __________ __________ between them.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 11,
+                                "corefClusterBackwardWeight": 2,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 3,
+                                "startDistance": 13,
+                                "originalItem": "Connective tissue cells are farther apart than epithelial cells, and they have __________ __________ __________ between them."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Connective tissue cells are farther apart than epithelial cells, and there is an __________ __________ __________ between them."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "epithelial cells"
+                            },
+                            "display": {
+                                "clozeText": "Connective tissue cells are farther apart than __________ __________, and Connective tissues have abundant extracellular matrix between them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 11,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "Connective tissue cells are farther apart than __________ __________, and there is an abundant extracellular matrix between them.",
+                                "clozeCorefTransformation": "Connective tissue cells are farther apart than __________ __________, and Connective tissues have abundant extracellular matrix between them.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 11,
+                                "corefClusterBackwardWeight": 2,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 4,
+                                "startDistance": 7,
+                                "originalItem": "Connective tissue cells are farther apart than __________ __________, and they have abundant extracellular matrix between them."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Connective tissue cells are farther apart than __________ __________, and there is an abundant extracellular matrix between them."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Connective tissue cells"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ __________ are farther apart than epithelial cells, and Connective tissues have abundant extracellular matrix between them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 11,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "__________ __________ __________ are farther apart than epithelial cells, and there is an abundant extracellular matrix between them.",
+                                "clozeCorefTransformation": "__________ __________ __________ are farther apart than epithelial cells, and Connective tissues have abundant extracellular matrix between them.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "__________ __________ __________ are farther apart than epithelial cells, and they have abundant extracellular matrix between them."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ __________ are farther apart than epithelial cells, and there is an abundant extracellular matrix between them."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cells"
+                            },
+                            "display": {
+                                "clozeText": "Some of Connective tissues are called fixed __________ because they reside in the specific connective tissue type for an extended period."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.0000700002104089039,
+                                "clozeParaphraseTransformation": "Some of these are called fixed __________ because they have been in a certain type of connective tissue for a long time.",
+                                "clozeCorefTransformation": "Some of Connective tissues are called fixed __________ because they reside in the specific connective tissue type for an extended period.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 5,
+                                "originalItem": "Some of them are called fixed __________ because they reside in the specific connective tissue type for an extended period."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Some of these are called fixed __________ because they have been in a certain type of connective tissue for a long time."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "collagen fibers"
+                            },
+                            "display": {
+                                "clozeText": "Elastic fibers are weaker than __________ __________, but they are easily stretched or deformed and will resume their original lengths and shapes when the force acting upon them is removed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "Elastic fibers are weaker than __________ __________, but they easily stretch or deform and, after elimination of the force acting on them, restore their original length and shape.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000517368184211515,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 3
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Elastic fibers are weaker than __________ __________, but they easily stretch or deform and, after elimination of the force acting on them, restore their original length and shape."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Elastic fibers"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ are weaker than collagen fibers, but they are easily stretched or deformed and will resume their original lengths and shapes when the force acting upon them is removed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "__________ __________ are weaker than collagen fibers, but they easily stretch or deform and, after elimination of the force acting on them, restore their original length and shape.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 4,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ are weaker than collagen fibers, but they easily stretch or deform and, after elimination of the force acting on them, restore their original length and shape."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "original lengths"
+                            },
+                            "display": {
+                                "clozeText": "Elastic fibers are weaker than collagen fibers, but they are easily stretched or deformed and will resume their __________ __________ and shapes when the force acting upon them is removed."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 4,
+                                "startDistance": 18
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "epithelium"
+                            },
+                            "display": {
+                                "clozeText": "Areolar connective tissue lies beneath most layers of __________, where its many blood vessels nourish nearby epithelial cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "It lies under most layers of the __________, where many of its blood vessels feed nearby epithelial cells.",
+                                "clozeCorefTransformation": "Areolar connective tissue lies beneath most layers of __________, where its many blood vessels nourish nearby epithelial cells.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 6,
+                                "originalItem": "It lies beneath most layers of __________, where its many blood vessels nourish nearby epithelial cells."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "It lies under most layers of the __________, where many of its blood vessels feed nearby epithelial cells."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "nearby epithelial cells"
+                            },
+                            "display": {
+                                "clozeText": "Areolar connective tissue lies beneath most layers of epithelium, where its many blood vessels nourish __________ __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "It lies under most layers of the epithelium, where many of its blood vessels feed __________ __________ __________.",
+                                "clozeCorefTransformation": "Areolar connective tissue lies beneath most layers of epithelium, where its many blood vessels nourish __________ __________ __________.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 14,
+                                "originalItem": "It lies beneath most layers of epithelium, where its many blood vessels nourish __________ __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "It lies under most layers of the epithelium, where many of its blood vessels feed __________ __________ __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "fibroblasts"
+                            },
+                            "display": {
+                                "clozeText": "At first, these cells resemble __________, but as they accumulate fat, they enlarge, and their nuclei are pushed to one side."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 6,
+                                "clozeProbability": 0.00000314628279863165,
+                                "clozeParaphraseTransformation": "Initially, these cells resemble __________, but, as fat accumulates, they enlarge and their nuclei are repelled in one direction.",
+                                "clozeCorefTransformation": "At first, these cells resemble __________, but as they accumulate fat, they enlarge, and their nuclei are pushed to one side.",
+                                "syntacticRole": "root",
+                                "rootDistance": 0,
+                                "startDistance": 6,
+                                "originalItem": "At first, these cells resemble __________, but as they accumulate fat, they enlarge, and their nuclei are pushed to one side."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Initially, these cells resemble __________, but, as fat accumulates, they enlarge and their nuclei are repelled in one direction."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "adipocytes"
+                            },
+                            "display": {
+                                "clozeText": "When __________ become so abundant that they crowd out other cell types, they form adipose tissue."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 3,
+                                "clozeParaphraseTransformation": "When __________ become so numerous that they crowd out other types of cells, they form adipose tissue.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000392415387705948,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 3,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 2,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When __________ become so numerous that they crowd out other types of cells, they form adipose tissue."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "adipose tissue"
+                            },
+                            "display": {
+                                "clozeText": "When adipocytes become so abundant that they crowd out other cell types, they form __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 3,
+                                "clozeParaphraseTransformation": "When adipocytes become so numerous that they crowd out other types of cells, they form __________ __________.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000608192839360935,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 15
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When adipocytes become so numerous that they crowd out other types of cells, they form __________ __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Infants"
+                            },
+                            "display": {
+                                "clozeText": "__________ have brown fat mostly on their backs to warm them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 3,
+                                "orderGroup": 3,
+                                "sentenceWeight": 3,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 3,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 1,
+                                "startDistance": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "Reticular connective tissue"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ __________ is composed of thin, reticular fibers in a three- dimensional network."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "__________ __________ __________ consists of thin reticular fibers in a three-dimensional network.",
+                                "clozeCorefTransformation": "__________ __________ __________ is composed of thin, reticular fibers in a three- dimensional network.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "__________ __________ __________ is composed of thin, reticular fibers in a three- dimensional network."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ __________ consists of thin reticular fibers in a three-dimensional network."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "reticular fibers"
+                            },
+                            "display": {
+                                "clozeText": "Reticular connective tissue is composed of thin, __________ __________ in a three- dimensional network."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Reticular connective tissue consists of thin __________ __________ in a three-dimensional network.",
+                                "clozeCorefTransformation": "Reticular connective tissue is composed of thin, __________ __________ in a three- dimensional network.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 4,
+                                "startDistance": 5,
+                                "originalItem": "Reticular connective tissue is composed of thin, __________ __________ in a three- dimensional network."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Reticular connective tissue consists of thin __________ __________ in a three-dimensional network."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "collagen molecules"
+                            },
+                            "display": {
+                                "clozeText": "However, collagen applied as a cream to the skin does not combat wrinkles because __________ __________ are far too large to penetrate the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "However, collagen applied as a cream to the skin does not prevent the appearance of wrinkles because the __________ __________ are too large to penetrate the skin.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 5,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 1,
+                                "rootDistance": 4,
+                                "startDistance": 15
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "However, collagen applied as a cream to the skin does not prevent the appearance of wrinkles because the __________ __________ are too large to penetrate the skin."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "collagen"
+                            },
+                            "display": {
+                                "clozeText": "However, __________ applied as a cream to the skin does not combat wrinkles because __________ molecules are far too large to penetrate the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "However, __________ applied as a cream to the skin does not prevent the appearance of wrinkles because the __________ molecules are too large to penetrate the skin.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000517368184211515,
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 2
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "However, __________ applied as a cream to the skin does not prevent the appearance of wrinkles because the __________ molecules are too large to penetrate the skin."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "wrinkles"
+                            },
+                            "display": {
+                                "clozeText": "However, collagen applied as a cream to the skin does not combat __________ because collagen molecules are far too large to penetrate the skin."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "However, collagen applied as a cream to the skin does not prevent the appearance of __________ because the collagen molecules are too large to penetrate the skin.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000517368184211515,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 2,
+                                "startDistance": 13
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "However, collagen applied as a cream to the skin does not prevent the appearance of __________ because the collagen molecules are too large to penetrate the skin."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "rigid connective tissue"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage is a __________ __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 1,
+                                "startDistance": 2
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Cartilage"
+                            },
+                            "display": {
+                                "clozeText": "__________ is a rigid connective tissue."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "__________ is a tough connective tissue.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "corefClusters": 1,
+                                "corefClusterTotalWeight": 15,
+                                "corefClusterBackwardWeight": 1,
+                                "corefClusterForwardWeight": 12,
+                                "rootDistance": 1,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ is a tough connective tissue."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "tissues"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage provides support, frameworks, and attachments; protects underlying __________; and forms structural models for many developing bones."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "Provides support, framework and applications; protects the underlying __________; and to form structural models for many developing bones.",
+                                "clozeCorefTransformation": "Cartilage provides support, frameworks, and attachments; protects underlying __________; and forms structural models for many developing bones.",
+                                "syntacticRole": "dobj",
+                                "rootDistance": 2,
+                                "startDistance": 11,
+                                "originalItem": "It provides support, frameworks, and attachments; protects underlying __________; and forms structural models for many developing bones."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Provides support, framework and applications; protects the underlying __________; and to form structural models for many developing bones."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "extracellular matrix"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage __________ __________ is abundant and is largely composed of collagen fibers embedded in a gel- like ground substance."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeParaphraseTransformation": "The __________ __________ of the cartilage is abundant and mainly consists of collagen fibers embedded in the gel mass.",
+                                "clozeCorefTransformation": "Cartilage __________ __________ is abundant and is largely composed of collagen fibers embedded in a gel- like ground substance.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 9,
+                                "corefClusterBackwardWeight": 0,
+                                "corefClusterForwardWeight": 6,
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "Cartilage __________ __________ is abundant and is largely composed of collagen fibers embedded in a gel- like ground substance."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ __________ of the cartilage is abundant and mainly consists of collagen fibers embedded in the gel mass."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "abundant"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage extracellular matrix is __________ and is largely composed of collagen fibers embedded in a gel- like ground substance."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "The extracellular matrix of the cartilage is __________ and mainly consists of collagen fibers embedded in the gel mass.",
+                                "clozeCorefTransformation": "Cartilage extracellular matrix is __________ and is largely composed of collagen fibers embedded in a gel- like ground substance.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 1,
+                                "startDistance": 4,
+                                "originalItem": "Cartilage extracellular matrix is __________ and is largely composed of collagen fibers embedded in a gel- like ground substance."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The extracellular matrix of the cartilage is __________ and mainly consists of collagen fibers embedded in the gel mass."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "collagen fibers"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage extracellular matrix is abundant and is largely composed of __________ __________ embedded in a gel- like ground substance."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 3,
+                                "sentenceWeight": 9,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "The extracellular matrix of the cartilage is abundant and mainly consists of __________ __________ embedded in the gel mass.",
+                                "clozeCorefTransformation": "Cartilage extracellular matrix is abundant and is largely composed of __________ __________ embedded in a gel- like ground substance.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 9,
+                                "startDistance": 7,
+                                "originalItem": "Cartilage extracellular matrix is abundant and is largely composed of __________ __________ embedded in a gel- like ground substance."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The extracellular matrix of the cartilage is abundant and mainly consists of __________ __________ embedded in the gel mass."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "extracellular matrix"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells, called chondrocytes, occupy small chambers called lacunae and lie completely within the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000252392652134176,
+                                "clozeParaphraseTransformation": "Cartilage cells, called chondrocytes, occupy small chambers called lacunae and lie entirely in the __________ __________.",
+                                "clozeCorefTransformation": "Cartilage cells, called chondrocytes, occupy small chambers called lacunae and lie completely within the __________ __________.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 22,
+                                "corefClusterBackwardWeight": 4,
+                                "corefClusterForwardWeight": 16,
+                                "rootDistance": 4,
+                                "startDistance": 15,
+                                "originalItem": "Cartilage cells, called chondrocytes, occupy small chambers called lacunae and lie completely within the __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells, called chondrocytes, occupy small chambers called lacunae and lie entirely in the __________ __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "chondrocytes"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells, called __________, occupy small chambers called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000301500014386427,
+                                "clozeParaphraseTransformation": "Cartilage cells, called __________, occupy small chambers called lacunae and lie entirely in the extracellular matrix.",
+                                "clozeCorefTransformation": "Cartilage cells, called __________, occupy small chambers called lacunae and lie completely within the extracellular matrix.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 4,
+                                "originalItem": "Cartilage cells, called __________, occupy small chambers called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells, called __________, occupy small chambers called lacunae and lie entirely in the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Cartilage cells"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________, called chondrocytes, occupy small chambers called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "__________ __________, called chondrocytes, occupy small chambers called lacunae and lie entirely in the extracellular matrix.",
+                                "clozeCorefTransformation": "__________ __________, called chondrocytes, occupy small chambers called lacunae and lie completely within the extracellular matrix.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 2,
+                                "startDistance": 0,
+                                "originalItem": "__________ __________, called chondrocytes, occupy small chambers called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________, called chondrocytes, occupy small chambers called lacunae and lie entirely in the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "small chambers"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells, called chondrocytes, occupy __________ __________ called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "Cartilage cells, called chondrocytes, occupy __________ __________ called lacunae and lie entirely in the extracellular matrix.",
+                                "clozeCorefTransformation": "Cartilage cells, called chondrocytes, occupy __________ __________ called lacunae and lie completely within the extracellular matrix.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 3,
+                                "startDistance": 7,
+                                "originalItem": "Cartilage cells, called chondrocytes, occupy __________ __________ called lacunae and lie completely within the extracellular matrix."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells, called chondrocytes, occupy __________ __________ called lacunae and lie entirely in the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "lacunae"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells, called chondrocytes, occupy small chambers called __________ and lie completely within the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "Cartilage cells, called chondrocytes, occupy small chambers called __________ and lie entirely in the extracellular matrix.",
+                                "clozeCorefTransformation": "Cartilage cells, called chondrocytes, occupy small chambers called __________ and lie completely within the extracellular matrix.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 10,
+                                "originalItem": "Cartilage cells, called chondrocytes, occupy small chambers called __________ and lie completely within the extracellular matrix."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells, called chondrocytes, occupy small chambers called __________ and lie entirely in the extracellular matrix."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "extracellular matrix"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells near the perichondrium obtain nutrients from these vessels by diffusion, aided by the water in the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Cartilage cells near the perichondrium receive the diffusion of water-supported nutrients from these vessels into the __________ __________.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000252392652134176,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 22,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 14,
+                                "rootDistance": 4,
+                                "startDistance": 18
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells near the perichondrium receive the diffusion of water-supported nutrients from these vessels into the __________ __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "perichondrium"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells near the __________ obtain nutrients from these vessels by diffusion, aided by the water in the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Cartilage cells near the __________ receive the diffusion of water-supported nutrients from these vessels into the extracellular matrix.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000252392652134176,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 4
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells near the __________ receive the diffusion of water-supported nutrients from these vessels into the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "nutrients"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells near the perichondrium obtain __________ from these vessels by diffusion, aided by the water in the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Cartilage cells near the perichondrium receive the diffusion of water-supported __________ from these vessels into the extracellular matrix.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000433606687724915,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 1,
+                                "startDistance": 6
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells near the perichondrium receive the diffusion of water-supported __________ from these vessels into the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "diffusion"
+                            },
+                            "display": {
+                                "clozeText": "Cartilage cells near the perichondrium obtain nutrients from these vessels by __________, aided by the water in the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Cartilage cells near the perichondrium receive the __________ of water-supported nutrients from these vessels into the extracellular matrix.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000433606687724915,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 11
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Cartilage cells near the perichondrium receive the __________ of water-supported nutrients from these vessels into the extracellular matrix."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Cartilage cells"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ near the perichondrium obtain nutrients from these vessels by diffusion, aided by the water in the extracellular matrix."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "__________ __________ near the perichondrium receive the diffusion of water-supported nutrients from these vessels into the extracellular matrix.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 22,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG0",
+                                "rootDistance": 4,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ near the perichondrium receive the diffusion of water-supported nutrients from these vessels into the extracellular matrix."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "fibrocartilage"
+                            },
+                            "display": {
+                                "clozeText": "For example, __________ forms pads between the individual bones of the spinal column."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "For example, __________ forms spacers between the individual bones of the spine.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 17,
+                                "clozeProbability": 0.00000201737241657513,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 17,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 8,
+                                "rootDistance": 2,
+                                "startDistance": 3
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "For example, __________ forms spacers between the individual bones of the spine."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "pelvic girdle"
+                            },
+                            "display": {
+                                "clozeText": "Fibrocartilage also cushions bones in the knees and in the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 17,
+                                "clozeProbability": 0.000006742179232986,
+                                "clozeParaphraseTransformation": "Also bone cushions in the knees and __________ __________.",
+                                "clozeCorefTransformation": "Fibrocartilage also cushions bones in the knees and in the __________ __________.",
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 17,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 8,
+                                "rootDistance": 4,
+                                "startDistance": 9,
+                                "originalItem": "It also cushions bones in the knees and in the __________ __________."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Also bone cushions in the knees and __________ __________."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "rigid connective tissue"
+                            },
+                            "display": {
+                                "clozeText": "Bone is the most __________ __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "phosphate"
+                            },
+                            "display": {
+                                "clozeText": "Bone hardness is largely due to mineral salts, such as calcium __________ and calcium carbonate, between cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "Its hardness is largely due to mineral salts such as calcium __________ and calcium carbonate between cells.",
+                                "clozeCorefTransformation": "Bone hardness is largely due to mineral salts, such as calcium __________ and calcium carbonate, between cells.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 12,
+                                "originalItem": "Its hardness is largely due to mineral salts, such as calcium __________ and calcium carbonate, between cells."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Its hardness is largely due to mineral salts such as calcium __________ and calcium carbonate between cells."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "hardness"
+                            },
+                            "display": {
+                                "clozeText": "Bone __________ is largely due to mineral salts, such as calcium phosphate and calcium carbonate, between cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "Its __________ is largely due to mineral salts such as calcium phosphate and calcium carbonate between cells.",
+                                "clozeCorefTransformation": "Bone __________ is largely due to mineral salts, such as calcium phosphate and calcium carbonate, between cells.",
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 1,
+                                "originalItem": "Its __________ is largely due to mineral salts, such as calcium phosphate and calcium carbonate, between cells."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Its __________ is largely due to mineral salts such as calcium phosphate and calcium carbonate between cells."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "mineral salts"
+                            },
+                            "display": {
+                                "clozeText": "Bone hardness is largely due to __________ __________, such as calcium phosphate and calcium carbonate, between cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeParaphraseTransformation": "Its hardness is largely due to __________ __________ such as calcium phosphate and calcium carbonate between cells.",
+                                "clozeCorefTransformation": "Bone hardness is largely due to __________ __________, such as calcium phosphate and calcium carbonate, between cells.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 6,
+                                "startDistance": 3,
+                                "originalItem": "Its hardness is largely due to __________ __________, such as calcium phosphate and calcium carbonate, between cells."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Its hardness is largely due to __________ __________ such as calcium phosphate and calcium carbonate between cells."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "internally"
+                            },
+                            "display": {
+                                "clozeText": "Bone __________ supports body structures."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "clozeParaphraseTransformation": "Bones __________ support the structures of the body.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARGM-MNR",
+                                "rootDistance": 1,
+                                "startDistance": 1
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Bones __________ support the structures of the body."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "attachment"
+                            },
+                            "display": {
+                                "clozeText": "Bone protects vital structures in the cranial and thoracic cavities and is an __________ for muscles."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 0,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "Bone protects vital structures in the cranial and thoracic cavities and is an __________ for muscles.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 3,
+                                "startDistance": 12,
+                                "originalItem": "It protects vital structures in the cranial and thoracic cavities and is an __________ for muscles."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cavities"
+                            },
+                            "display": {
+                                "clozeText": "Bone protects vital structures in the cranial and thoracic __________ and is an attachment for muscles."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "It protects vital structures in the cranial and chest __________ and is a muscle supplement.",
+                                "clozeCorefTransformation": "Bone protects vital structures in the cranial and thoracic __________ and is an attachment for muscles.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 2,
+                                "startDistance": 9,
+                                "originalItem": "It protects vital structures in the cranial and thoracic __________ and is an attachment for muscles."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "It protects vital structures in the cranial and chest __________ and is a muscle supplement."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "muscles"
+                            },
+                            "display": {
+                                "clozeText": "Bone protects vital structures in the cranial and thoracic cavities and is an attachment for __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "Bone protects vital structures in the cranial and thoracic cavities and is an attachment for __________.",
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 15,
+                                "originalItem": "It protects vital structures in the cranial and thoracic cavities and is an attachment for __________."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "red marrow"
+                            },
+                            "display": {
+                                "clozeText": "Bone also contains __________ __________, which forms blood cells."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.000006742179232986,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 4,
+                                "startDistance": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "inorganic chemicals"
+                            },
+                            "display": {
+                                "clozeText": "Bone stores and releases __________ __________ such as calcium and phosphorus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeCorefTransformation": "Bone stores and releases __________ __________ such as calcium and phosphorus.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 4,
+                                "originalItem": "It stores and releases __________ __________ such as calcium and phosphorus."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "calcium"
+                            },
+                            "display": {
+                                "clozeText": "Bone stores and releases inorganic chemicals such as __________ and phosphorus."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeCorefTransformation": "Bone stores and releases inorganic chemicals such as __________ and phosphorus.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 4,
+                                "startDistance": 8,
+                                "originalItem": "It stores and releases inorganic chemicals such as __________ and phosphorus."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "concentrically"
+                            },
+                            "display": {
+                                "clozeText": "The osteocytes and layers of extracellular matrix, which are __________ clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000201737241657513,
+                                "clozeParaphraseTransformation": "Osteocytes and extracellular matrix layers, which are __________ grouped around a central canal, form a cylindrical unit called an osteon, also known as the Havers system.",
+                                "clozeCorefTransformation": "The osteocytes and layers of extracellular matrix, which are __________ clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system.",
+                                "semanticRole": "ARGM-MNR",
+                                "rootDistance": 5,
+                                "startDistance": 10,
+                                "originalItem": "The osteocytes and layers of extracellular matrix, which are __________ clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Osteocytes and extracellular matrix layers, which are __________ grouped around a central canal, form a cylindrical unit called an osteon, also known as the Havers system."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "osteocytes"
+                            },
+                            "display": {
+                                "clozeText": "The __________ and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeCorefTransformation": "The __________ and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system.",
+                                "syntacticRole": "nsubj",
+                                "rootDistance": 1,
+                                "startDistance": 1,
+                                "originalItem": "The __________ and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a Haversian system."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Haversian system"
+                            },
+                            "display": {
+                                "clozeText": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeCorefTransformation": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a __________ __________.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 5,
+                                "startDistance": 29,
+                                "originalItem": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a cylinder- shaped unit called an osteon, also known as a __________ __________."
+                            }
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "cylinder"
+                            },
+                            "display": {
+                                "clozeText": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a __________- shaped unit called an osteon, also known as a Haversian system."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 3,
+                                "sentenceWeight": 15,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeCorefTransformation": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a __________- shaped unit called an osteon, also known as a Haversian system.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 2,
+                                "startDistance": 19,
+                                "originalItem": "The osteocytes and layers of extracellular matrix, which are concentrically clustered around a central canal, form a __________- shaped unit called an osteon, also known as a Haversian system."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "osteocytes"
+                            },
+                            "display": {
+                                "clozeText": "The interior portion of a bone is composed of spongy bone in which bone matrix is deposited around __________, forming bony plates with spaces between them."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "The inner part of the bone consists of cancellous bone, in which the bone matrix is located around the __________ and forms bony plates with gaps between them.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 5,
+                                "clozeProbability": 0.00000392415387705948,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 5,
+                                "startDistance": 18
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The inner part of the bone consists of cancellous bone, in which the bone matrix is located around the __________ and forms bony plates with gaps between them."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "tissues"
+                            },
+                            "display": {
+                                "clozeText": "In contrast, white blood cells typically migrate from the blood through capillary walls to connective __________, where they carry on their major activities until they die."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "clozeParaphraseTransformation": "In contrast, leukocytes tend to migrate from the blood through the walls of the capillaries into the connective __________, where they perform their main activity until death.",
+                                "orderGroup": 3,
+                                "sentenceWeight": 4,
+                                "clozeProbability": 0.00000608192839360935,
+                                "syntacticRole": "dobj",
+                                "rootDistance": 2,
+                                "startDistance": 16
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "In contrast, leukocytes tend to migrate from the blood through the walls of the capillaries into the connective __________, where they perform their main activity until death."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "connective tissues"
+                            },
+                            "display": {
+                                "clozeText": "After discussing epithelial and __________ __________, sheets of cells called membranes are better understood because they can include both of the __________ __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 4,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000392415387705948,
+                                "clozeParaphraseTransformation": "After discussing epithelial and __________ __________, the leaves of cells, called membranes, become more understandable since they can include both of these types of tissues.",
+                                "clozeCorefTransformation": "After discussing epithelial and __________ __________, sheets of cells called membranes are better understood because they can include both of the __________ __________.",
+                                "semanticRole": "ARG1",
+                                "rootDistance": 5,
+                                "startDistance": 2,
+                                "originalItem": "After discussing epithelial and __________ __________, sheets of cells called membranes are better understood because they can include both of these tissue types."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "After discussing epithelial and __________ __________, the leaves of cells, called membranes, become more understandable since they can include both of these types of tissues."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "membranes"
+                            },
+                            "display": {
+                                "clozeText": "After discussing epithelial and connective tissues, sheets of cells called __________ are better understood because they can include both of the connective tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 2,
+                                "orderGroup": 4,
+                                "sentenceWeight": 8,
+                                "clozeProbability": 0.00000433606687724915,
+                                "clozeParaphraseTransformation": "After discussing epithelial and connective tissues, the leaves of cells, called __________, become more understandable since they can include both of these types of tissues.",
+                                "clozeCorefTransformation": "After discussing epithelial and connective tissues, sheets of cells called __________ are better understood because they can include both of the connective tissues.",
+                                "semanticRole": "ARG2",
+                                "rootDistance": 5,
+                                "startDistance": 11,
+                                "originalItem": "After discussing epithelial and connective tissues, sheets of cells called __________ are better understood because they can include both of these tissue types."
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "After discussing epithelial and connective tissues, the leaves of cells, called __________, become more understandable since they can include both of these types of tissues."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "cavities"
+                            },
+                            "display": {
+                                "clozeText": "They form the inner linings of the thorax and abdomen, and they cover the organs in these __________."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 4,
+                                "sentenceWeight": 11,
+                                "clozeProbability": 0.00000517368184211515,
+                                "clozeParaphraseTransformation": "They form the inner lining of the chest and abdomen and cover the organs in these __________.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 11,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 4,
+                                "startDistance": 17
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "They form the inner lining of the chest and abdomen and cover the organs in these __________."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "inner linings"
+                            },
+                            "display": {
+                                "clozeText": "The three major types of epithelial membranes form the __________ __________ of the thorax and abdomen, and The three major types of epithelial membranes cover the organs in the connective tissues."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "orderGroup": 4,
+                                "sentenceWeight": 11,
+                                "clozeProbability": 0.00000608192839360935,
+                                "clozeCorefTransformation": "The three major types of epithelial membranes form the __________ __________ of the thorax and abdomen, and The three major types of epithelial membranes cover the organs in the connective tissues.",
+                                "corefClusters": 3,
+                                "corefClusterTotalWeight": 11,
+                                "corefClusterBackwardWeight": 3,
+                                "corefClusterForwardWeight": 4,
+                                "rootDistance": 4,
+                                "startDistance": 2,
+                                "originalItem": "They form the __________ __________ of the thorax and abdomen, and they cover the organs in these cavities."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "stims": [
+                        {
+                            "response": {
+                                "correctResponse": "phagocytosis"
+                            },
+                            "display": {
+                                "clozeText": "Neuroglial cells support and bind the components of nervous tissue, carry on __________, and help supply growth factors and nutrients to neurons by connecting them to blood vessels."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Neuroglial cells support and bind components of nerve tissue, perform __________, and help supply neurons with growth factors and nutrients by connecting them to blood vessels.",
+                                "orderGroup": 6,
+                                "sentenceWeight": 10,
+                                "clozeProbability": 0.00000301500014386427,
+                                "syntacticRole": "pobj",
+                                "rootDistance": 3,
+                                "startDistance": 13
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Neuroglial cells support and bind components of nerve tissue, perform __________, and help supply neurons with growth factors and nutrients by connecting them to blood vessels."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "Neuroglial cells"
+                            },
+                            "display": {
+                                "clozeText": "__________ __________ support and bind the components of nervous tissue, carry on phagocytosis, and help supply growth factors and nutrients to neurons by connecting them to blood vessels."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "__________ __________ support and bind components of nerve tissue, perform phagocytosis, and help supply neurons with growth factors and nutrients by connecting them to blood vessels.",
+                                "orderGroup": 6,
+                                "sentenceWeight": 10,
+                                "clozeProbability": 0.00000392415387705948,
+                                "semanticRole": "ARG0",
+                                "rootDistance": 2,
+                                "startDistance": 0
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "__________ __________ support and bind components of nerve tissue, perform phagocytosis, and help supply neurons with growth factors and nutrients by connecting them to blood vessels."
+                                }
+                            ]
+                        },
+                        {
+                            "response": {
+                                "correctResponse": "neurons"
+                            },
+                            "display": {
+                                "clozeText": "Neuroglial cells support and bind the components of nervous tissue, carry on phagocytosis, and help supply growth factors and nutrients to __________ by connecting them to blood vessels."
+                            },
+                            "parameter": "0,.7",
+                            "tags": {
+                                "weightGroup": 1,
+                                "clozeParaphraseTransformation": "Neuroglial cells support and bind components of nerve tissue, perform phagocytosis, and help supply __________ with growth factors and nutrients by connecting them to blood vessels.",
+                                "orderGroup": 6,
+                                "sentenceWeight": 10,
+                                "clozeProbability": 0.00000608192839360935,
+                                "corefClusters": 2,
+                                "corefClusterTotalWeight": 10,
+                                "corefClusterBackwardWeight": 6,
+                                "corefClusterForwardWeight": 0,
+                                "rootDistance": 5,
+                                "startDistance": 23
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "Neuroglial cells support and bind components of nerve tissue, perform phagocytosis, and help supply __________ with growth factors and nutrients by connecting them to blood vessels."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "owner": "fill me in",
+    "source": "content_generation"
+}
