@@ -20,18 +20,14 @@
                                 "clozeProbability": 0.00000314628279863165,
                                 "clozeParaphraseTransformation": "After about fifteen days, the mature antral follicle has a diameter of about 20 __________, and its fluid-filled cavity bulges outward on the surface of the ovaries like a bubble.",
                                 "clozeCorefTransformation": "After about fifteen days, the mature antral follicle is about 20 __________ in diameter, and an antral follicle fluid- filled cavity bulges outward on the surface of the ovary, like a blister.",
+                                "correctResponseCorefTransformation": "millimeters",
                                 "syntacticRole": "root",
                                 "rootDistance": 0,
                                 "startDistance": 12,
                                 "itemId": 571866419,
                                 "clozeId": -1238388743,
                                 "originalItem": "After about fifteen days, the mature antral follicle is about 20 __________ in diameter, and its fluid- filled cavity bulges outward on the surface of the ovary, like a blister."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "After about fifteen days, the mature antral follicle has a diameter of about 20 __________, and its fluid-filled cavity bulges outward on the surface of the ovaries like a bubble."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -48,6 +44,7 @@
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "After about fifteen days, the __________ __________ __________ has a diameter of about 20 millimeters, and its fluid-filled cavity bulges outward on the surface of the ovaries like a bubble.",
                                 "clozeCorefTransformation": "After about fifteen days, the __________ __________ __________ is about 20 millimeters in diameter, and an antral follicle fluid- filled cavity bulges outward on the surface of the ovary, like a blister.",
+                                "correctResponseCorefTransformation": "mature antral follicle",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 236,
                                 "corefClusterBackwardWeight": 75,
@@ -57,12 +54,7 @@
                                 "itemId": 571866419,
                                 "clozeId": 797290456,
                                 "originalItem": "After about fifteen days, the __________ __________ __________ is about 20 millimeters in diameter, and its fluid- filled cavity bulges outward on the surface of the ovary, like a blister."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "After about fifteen days, the __________ __________ __________ has a diameter of about 20 millimeters, and its fluid-filled cavity bulges outward on the surface of the ovaries like a bubble."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -78,6 +70,7 @@
                                 "sentenceWeight": 236,
                                 "clozeProbability": 0.00000608192839360935,
                                 "clozeCorefTransformation": "After about fifteen days, the mature antral follicle is about 20 millimeters in diameter, and an antral follicle fluid- filled cavity bulges outward on the surface of the ovary, like a __________.",
+                                "correctResponseCorefTransformation": "blister",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 3,
                                 "startDistance": 33,
@@ -164,6 +157,7 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "After __________, secondary oocytes and one or two layers of follicular cells that surround it usually force the adjacent fallopian tube to open.",
                                 "clozeCorefTransformation": "After __________, the secondary oocyte and one or two layers of follicular cells surrounding the ovary's are normally propelled to the opening of a nearby uterine tube.",
+                                "correctResponseCorefTransformation": "ovulation",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 173,
                                 "corefClusterBackwardWeight": 7,
@@ -173,12 +167,7 @@
                                 "itemId": -931889975,
                                 "clozeId": -624259587,
                                 "originalItem": "After __________, the secondary oocyte and one or two layers of follicular cells surrounding it are normally propelled to the opening of a nearby uterine tube."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "After __________, secondary oocytes and one or two layers of follicular cells that surround it usually force the adjacent fallopian tube to open."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -198,6 +187,7 @@
                                 "sentenceWeight": 173,
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeCorefTransformation": "Compared to the overall size of the ovary, the mature antral follicle is so large that no matter where the secondary oocyte is released from the ovary ovulation will contact the __________ __________ of the associated uterine tube.",
+                                "correctResponseCorefTransformation": "branched extensions",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 5,
                                 "startDistance": 31,
@@ -221,6 +211,7 @@
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "Compared to the overall size of the ovaries, the __________ __________ __________ is so large that no matter where the secondary oocyte is released from the ovary, it will contact the branched dilations of the associated fallopian tube.",
                                 "clozeCorefTransformation": "Compared to the overall size of the ovary, the __________ __________ __________ is so large that no matter where the secondary oocyte is released from the ovary ovulation will contact the branched extensions of the associated uterine tube.",
+                                "correctResponseCorefTransformation": "mature antral follicle",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 173,
                                 "corefClusterBackwardWeight": 11,
@@ -230,12 +221,7 @@
                                 "itemId": -2135044071,
                                 "clozeId": 615410119,
                                 "originalItem": "Compared to the overall size of the ovary, the __________ __________ __________ is so large that no matter where the secondary oocyte is released from the ovary it will contact the branched extensions of the associated uterine tube."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Compared to the overall size of the ovaries, the __________ __________ __________ is so large that no matter where the secondary oocyte is released from the ovary, it will contact the branched dilations of the associated fallopian tube."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -418,6 +404,7 @@
                                 "sentenceWeight": 177,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeCorefTransformation": "The cervix surrounds the opening called the __________ __________, through which the uterus opens to the vagina.",
+                                "correctResponseCorefTransformation": "cervical orifice",
                                 "semanticRole": "ARG2",
                                 "rootDistance": 4,
                                 "startDistance": 6,
@@ -475,18 +462,14 @@
                                 "clozeProbability": 0.00000252392652134176,
                                 "clozeParaphraseTransformation": "The vagina is a __________ __________ about 9 centimeters long that extends from the uterus to the outside of the body.",
                                 "clozeCorefTransformation": "The vagina is a __________ __________, about 9 centimeters long, extending from the uterus to the outside of the body.",
+                                "correctResponseCorefTransformation": "fibromuscular tube",
                                 "semanticRole": "ARG2",
                                 "rootDistance": 6,
                                 "startDistance": 3,
                                 "itemId": -520815551,
                                 "clozeId": 1673293698,
                                 "originalItem": "The vagina is a __________ __________, about 9 centimeters long, extending from the uterus to the outside of the body."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "The vagina is a __________ __________ about 9 centimeters long that extends from the uterus to the outside of the body."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -507,6 +490,7 @@
                                 "clozeProbability": 0.000006742179232986,
                                 "clozeParaphraseTransformation": "The upper quarter of the __________ is separated from the rectum by a membrane.",
                                 "clozeCorefTransformation": "The upper one- fourth of the __________ is separated from the rectum by a pouch.",
+                                "correctResponseCorefTransformation": "vagina",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 174,
                                 "corefClusterBackwardWeight": 44,
@@ -516,12 +500,7 @@
                                 "itemId": -1906150116,
                                 "clozeId": -16294580,
                                 "originalItem": "The upper one- fourth of the __________ is separated from the rectum by a pouch."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "The upper quarter of the __________ is separated from the rectum by a membrane."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -541,6 +520,7 @@
                                 "sentenceWeight": 177,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeCorefTransformation": "The tubular vagina also surrounds the end of the cervix, and the __________ between the vaginal wall and the cervix are termed fornices.",
+                                "correctResponseCorefTransformation": "recesses",
                                 "syntacticRole": "nsubjpass",
                                 "rootDistance": 2,
                                 "startDistance": 13,
@@ -563,6 +543,7 @@
                                 "sentenceWeight": 177,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeCorefTransformation": "The tubular vagina also surrounds the end of the cervix, and the recesses between the vaginal wall and the cervix are termed __________.",
+                                "correctResponseCorefTransformation": "fornices",
                                 "semanticRole": "ARG2",
                                 "rootDistance": 2,
                                 "startDistance": 23,
@@ -590,18 +571,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "This strip helps to close the vaginal opening; however, another __________ __________ is primarily responsible for closing this opening.",
                                 "clozeCorefTransformation": "A thin band of striated muscle helps close the vaginal opening; however, another __________ __________ is primarily responsible for closing the vagina.",
+                                "correctResponseCorefTransformation": "voluntary muscle",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 3,
                                 "startDistance": 10,
                                 "itemId": -1570700506,
                                 "clozeId": -1758988693,
                                 "originalItem": "This band helps close the vaginal opening; however, another __________ __________ is primarily responsible for closing this orifice."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "This strip helps to close the vaginal opening; however, another __________ __________ is primarily responsible for closing this opening."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -1140,6 +1117,7 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "__________ released during subsequent menstrual cycles continue to develop and maintain these properties.",
                                 "clozeCorefTransformation": "__________ secreted during subsequent menstrual cycles continue development of various secondary sex characteristics and maintain various secondary sex characteristics.",
+                                "correctResponseCorefTransformation": "Estrogens",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 163,
                                 "corefClusterBackwardWeight": 121,
@@ -1149,12 +1127,7 @@
                                 "itemId": 1160202392,
                                 "clozeId": -1878779611,
                                 "originalItem": "__________ secreted during subsequent menstrual cycles continue development of these traits and maintain them."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "__________ released during subsequent menstrual cycles continue to develop and maintain these properties."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -1171,18 +1144,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "Estrogens released during __________ __________ __________ continue to develop and maintain these properties.",
                                 "clozeCorefTransformation": "Estrogens secreted during __________ __________ __________ continue development of various secondary sex characteristics and maintain various secondary sex characteristics.",
+                                "correctResponseCorefTransformation": "subsequent menstrual cycles",
                                 "semanticRole": "ARGM-TMP",
                                 "rootDistance": 5,
                                 "startDistance": 2,
                                 "itemId": 1160202392,
                                 "clozeId": 568233380,
                                 "originalItem": "Estrogens secreted during __________ __________ __________ continue development of these traits and maintain them."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Estrogens released during __________ __________ __________ continue to develop and maintain these properties."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -1447,18 +1416,14 @@
                                 "clozeProbability": 0.00000301500014386427,
                                 "clozeParaphraseTransformation": "Since pituitary secretion of FSH and LH is no longer inhibited, these hormones can be released __________ over a period of time.",
                                 "clozeCorefTransformation": "Because the pituitary secretions of FSH and LH are no longer inhibited, FSH and LH may be __________ released for some time.",
+                                "correctResponseCorefTransformation": "continuously",
                                 "semanticRole": "ARGM-MNR",
                                 "rootDistance": 1,
                                 "startDistance": 17,
                                 "itemId": 1182693428,
                                 "clozeId": 830998710,
                                 "originalItem": "Because the pituitary secretions of FSH and LH are no longer inhibited, these hormones may be __________ released for some time."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Since pituitary secretion of FSH and LH is no longer inhibited, these hormones can be released __________ over a period of time."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -1474,6 +1439,7 @@
                                 "sentenceWeight": 168,
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeCorefTransformation": "Because the __________ __________ of FSH and LH are no longer inhibited, FSH and LH may be continuously released for some time.",
+                                "correctResponseCorefTransformation": "pituitary secretions",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 168,
                                 "corefClusterBackwardWeight": 154,
@@ -1532,6 +1498,7 @@
                                 "sentenceWeight": 171,
                                 "clozeProbability": 0.00000201737241657513,
                                 "clozeCorefTransformation": "The pituitary secretions of FSH and LH may result from changes in the rhythmic secretion of GnRH by the hypothalamus in response to declining __________ of sex hormones.",
+                                "correctResponseCorefTransformation": "concentrations",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 6,
                                 "startDistance": 20,
@@ -1555,6 +1522,7 @@
                                 "clozeProbability": 0.00000301500014386427,
                                 "clozeParaphraseTransformation": "These vasomotor symptoms may be associated with changes in the rhythmic secretion of GnRH by the __________ in response to decreased levels of sex hormones.",
                                 "clozeCorefTransformation": "The pituitary secretions of FSH and LH may result from changes in the rhythmic secretion of GnRH by the __________ in response to declining concentrations of sex hormones.",
+                                "correctResponseCorefTransformation": "hypothalamus",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 171,
                                 "corefClusterBackwardWeight": 156,
@@ -1564,12 +1532,7 @@
                                 "itemId": 139086552,
                                 "clozeId": 1681291861,
                                 "originalItem": "These vasomotor symptoms may result from changes in the rhythmic secretion of GnRH by the __________ in response to declining concentrations of sex hormones."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "These vasomotor symptoms may be associated with changes in the rhythmic secretion of GnRH by the __________ in response to decreased levels of sex hormones."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -1615,6 +1578,7 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "These vasomotor symptoms may be associated with changes in the __________ __________ of GnRH by the hypothalamus in response to decreased levels of sex hormones.",
                                 "clozeCorefTransformation": "The pituitary secretions of FSH and LH may result from changes in the __________ __________ of GnRH by the hypothalamus in response to declining concentrations of sex hormones.",
+                                "correctResponseCorefTransformation": "rhythmic secretion",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 171,
                                 "corefClusterBackwardWeight": 156,
@@ -1624,12 +1588,7 @@
                                 "itemId": 139086552,
                                 "clozeId": 529547878,
                                 "originalItem": "These vasomotor symptoms may result from changes in the __________ __________ of GnRH by the hypothalamus in response to declining concentrations of sex hormones."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "These vasomotor symptoms may be associated with changes in the __________ __________ of GnRH by the hypothalamus in response to decreased levels of sex hormones."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -1646,18 +1605,14 @@
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "These vasomotor symptoms may be associated with changes in the rhythmic secretion of GnRH by the hypothalamus in response to decreased levels of sex __________.",
                                 "clozeCorefTransformation": "The pituitary secretions of FSH and LH may result from changes in the rhythmic secretion of GnRH by the hypothalamus in response to declining concentrations of sex __________.",
+                                "correctResponseCorefTransformation": "hormones",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 8,
                                 "startDistance": 23,
                                 "itemId": 139086552,
                                 "clozeId": 1109985903,
                                 "originalItem": "These vasomotor symptoms may result from changes in the rhythmic secretion of GnRH by the hypothalamus in response to declining concentrations of sex __________."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "These vasomotor symptoms may be associated with changes in the rhythmic secretion of GnRH by the hypothalamus in response to decreased levels of sex __________."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -1677,6 +1632,7 @@
                                 "sentenceWeight": 166,
                                 "clozeProbability": 0.00000314628279863165,
                                 "clozeCorefTransformation": "Body temperature typically rises only about 0.6degF immediately following ovulation, so A woman has to use a special, extra- __________ __________.",
+                                "correctResponseCorefTransformation": "sensitive thermometer",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 4,
                                 "startDistance": 16,
@@ -1700,18 +1656,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "Body temperature usually only rises 0.6 ° F immediately after __________, so he must use a special supersensitive thermometer.",
                                 "clozeCorefTransformation": "Body temperature typically rises only about 0.6degF immediately following __________, so A woman has to use a special, extra- sensitive thermometer.",
+                                "correctResponseCorefTransformation": "ovulation",
                                 "syntacticRole": "dobj",
                                 "rootDistance": 2,
                                 "startDistance": 9,
                                 "itemId": -2010073642,
                                 "clozeId": 199338523,
                                 "originalItem": "Body temperature typically rises only about 0.6degF immediately following __________, so she has to use a special, extra- sensitive thermometer."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Body temperature usually only rises 0.6 ° F immediately after __________, so he must use a special supersensitive thermometer."
-                                }
-                            ]
+                            }
                         }
                     ]
                 }

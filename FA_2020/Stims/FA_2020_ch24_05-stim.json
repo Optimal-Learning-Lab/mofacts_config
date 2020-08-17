@@ -79,6 +79,7 @@
                                 "clozeProbability": 0.000036719622568155,
                                 "clozeParaphraseTransformation": "It is encoded in __________ and expressed in RNA and protein; affects cells and tissues; affects people; and also passed on to the next generation.",
                                 "clozeCorefTransformation": "Genetic is encoded in __________ and expressed in RNA and protein; affects cells and tissues; affects the individual; and is also passed to the next generation.",
+                                "correctResponseCorefTransformation": "DNA",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 15,
                                 "corefClusterBackwardWeight": 6,
@@ -88,12 +89,7 @@
                                 "itemId": -1436552978,
                                 "clozeId": 653597387,
                                 "originalItem": "It is encoded in __________ and expressed in RNA and protein; affects cells and tissues; affects the individual; and is also passed to the next generation."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "It is encoded in __________ and expressed in RNA and protein; affects cells and tissues; affects people; and also passed on to the next generation."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -114,18 +110,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "The environment affects how genes are expressed - under what conditions they are transcribed into mRNA, and those __________ __________ are translated into protein.",
                                 "clozeCorefTransformation": "The environment influences how genes are expressed-- under which circumstances they are transcribed into mRNA and those __________ __________ translated into protein.",
+                                "correctResponseCorefTransformation": "mRNA molecules",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 6,
                                 "startDistance": 17,
                                 "itemId": 1988396730,
                                 "clozeId": -1168492867,
                                 "originalItem": "The environment influences how genes are expressed-- under which circumstances they are transcribed into mRNA and those __________ __________ translated into protein."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "The environment affects how genes are expressed - under what conditions they are transcribed into mRNA, and those __________ __________ are translated into protein."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -145,6 +137,7 @@
                                 "sentenceWeight": 10,
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeCorefTransformation": "A person who has an __________ __________ __________ has parents who are carriers-- they do not have the illness.",
+                                "correctResponseCorefTransformation": "autosomal recessive illness",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 10,
                                 "corefClusterBackwardWeight": 0,
@@ -171,18 +164,14 @@
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "A person with an autosomal recessive disease has parents who are __________ - they do not have this disease.",
                                 "clozeCorefTransformation": "A person who has an autosomal recessive illness has parents who are __________-- they do not have the illness.",
+                                "correctResponseCorefTransformation": "carriers",
                                 "semanticRole": "ARG2",
                                 "rootDistance": 2,
                                 "startDistance": 12,
                                 "itemId": 1407408057,
                                 "clozeId": -1681572276,
                                 "originalItem": "A person who has an autosomal recessive illness has parents who are __________-- they do not have the illness."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "A person with an autosomal recessive disease has parents who are __________ - they do not have this disease."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -321,18 +310,14 @@
                                 "clozeProbability": 4.51455153639651e-7,
                                 "clozeParaphraseTransformation": "For example, in __________ __________, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive cholesterol from the bloodstream.",
                                 "clozeCorefTransformation": "For example, in __________ __________, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up cholesterol from the bloodstream.",
+                                "correctResponseCorefTransformation": "familial hypercholesterolemia",
                                 "semanticRole": "ARGM-LOC",
                                 "rootDistance": 3,
                                 "startDistance": 3,
                                 "itemId": -793562070,
                                 "clozeId": 1619634795,
                                 "originalItem": "For example, in __________ __________, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up cholesterol from the bloodstream."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, in __________ __________, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive cholesterol from the bloodstream."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -349,6 +334,7 @@
                                 "clozeProbability": 0.00000314628279863165,
                                 "clozeParaphraseTransformation": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive cholesterol from the __________.",
                                 "clozeCorefTransformation": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up cholesterol from the __________.",
+                                "correctResponseCorefTransformation": "bloodstream",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 25,
                                 "corefClusterBackwardWeight": 18,
@@ -358,12 +344,7 @@
                                 "itemId": -793562070,
                                 "clozeId": 1211947838,
                                 "originalItem": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up cholesterol from the __________."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive cholesterol from the __________."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -380,18 +361,14 @@
                                 "clozeProbability": 0.00000314628279863165,
                                 "clozeParaphraseTransformation": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive __________ from the bloodstream.",
                                 "clozeCorefTransformation": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up __________ from the bloodstream.",
+                                "correctResponseCorefTransformation": "cholesterol",
                                 "syntacticRole": "dobj",
                                 "rootDistance": 5,
                                 "startDistance": 25,
                                 "itemId": -793562070,
                                 "clozeId": -1598119978,
                                 "originalItem": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks LDL receptors on liver cells that take up __________ from the bloodstream."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks LDL receptors in the liver cells, which receive __________ from the bloodstream."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -408,18 +385,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks __________ __________ in the liver cells, which receive cholesterol from the bloodstream.",
                                 "clozeCorefTransformation": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks __________ __________ on liver cells that take up cholesterol from the bloodstream.",
+                                "correctResponseCorefTransformation": "LDL receptors",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 7,
                                 "startDistance": 17,
                                 "itemId": -793562070,
                                 "clozeId": 1763711351,
                                 "originalItem": "For example, in familial hypercholesterolemia, a person with two disease- causing alleles completely lacks __________ __________ on liver cells that take up cholesterol from the bloodstream."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, in familial hypercholesterolemia, a person with two disease-causing alleles completely lacks __________ __________ in the liver cells, which receive cholesterol from the bloodstream."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -436,18 +409,14 @@
                                 "clozeProbability": 0.00000608192839360935,
                                 "clozeParaphraseTransformation": "For example, in familial hypercholesterolemia, a person with two disease-causing __________ completely lacks LDL receptors in the liver cells, which receive cholesterol from the bloodstream.",
                                 "clozeCorefTransformation": "For example, in familial hypercholesterolemia, a person with two disease- causing __________ completely lacks LDL receptors on liver cells that take up cholesterol from the bloodstream.",
+                                "correctResponseCorefTransformation": "alleles",
                                 "syntacticRole": "dobj",
                                 "rootDistance": 3,
                                 "startDistance": 14,
                                 "itemId": -793562070,
                                 "clozeId": -643511882,
                                 "originalItem": "For example, in familial hypercholesterolemia, a person with two disease- causing __________ completely lacks LDL receptors on liver cells that take up cholesterol from the bloodstream."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, in familial hypercholesterolemia, a person with two disease-causing __________ completely lacks LDL receptors in the liver cells, which receive cholesterol from the bloodstream."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -553,18 +522,14 @@
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeParaphraseTransformation": "Y-linked genes are considered in three groups based on their __________ to X-linked genes.",
                                 "clozeCorefTransformation": "Y- linked genes are considered in three groups, based on their __________ to X- linked genes.",
+                                "correctResponseCorefTransformation": "similarity",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 5,
                                 "startDistance": 13,
                                 "itemId": 1999417607,
                                 "clozeId": -1681413706,
                                 "originalItem": "Y- linked genes are considered in three groups, based on their __________ to X- linked genes."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Y-linked genes are considered in three groups based on their __________ to X-linked genes."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -742,6 +707,7 @@
                                 "sentenceWeight": 11,
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeCorefTransformation": "CVS is also called non- invasive prenatal testing, or NIPT, but CVS also includes __________ __________.",
+                                "correctResponseCorefTransformation": "ultrasound scans",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 3,
                                 "startDistance": 18,
@@ -769,18 +735,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "Exome makes up only about 1.5% of the DNA in the human genome, but includes about 85% of the __________ that are known to affect health.",
                                 "clozeCorefTransformation": "The exome is only about 1.5% of the DNA in a human genome, but Genomics includes about 85% of __________ known to affect health.",
+                                "correctResponseCorefTransformation": "mutations",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 4,
                                 "startDistance": 22,
                                 "itemId": -257115057,
                                 "clozeId": 707498299,
                                 "originalItem": "The exome is only about 1.5% of the DNA in a human genome, but it includes about 85% of __________ known to affect health."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Exome makes up only about 1.5% of the DNA in the human genome, but includes about 85% of the __________ that are known to affect health."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -797,18 +759,14 @@
                                 "clozeProbability": 0.000006742179232986,
                                 "clozeParaphraseTransformation": "Exome makes up only about 1.5% of the DNA in the human __________, but includes about 85% of the mutations that are known to affect health.",
                                 "clozeCorefTransformation": "The exome is only about 1.5% of the DNA in a human __________, but Genomics includes about 85% of mutations known to affect health.",
+                                "correctResponseCorefTransformation": "genome",
                                 "syntacticRole": "pobj",
                                 "rootDistance": 2,
                                 "startDistance": 13,
                                 "itemId": -257115057,
                                 "clozeId": -407256334,
                                 "originalItem": "The exome is only about 1.5% of the DNA in a human __________, but it includes about 85% of mutations known to affect health."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Exome makes up only about 1.5% of the DNA in the human __________, but includes about 85% of the mutations that are known to affect health."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -828,6 +786,7 @@
                                 "sentenceWeight": 9,
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeCorefTransformation": "The boy with the damaged __________ had an\" atypical presentation\" of XIAP deficiency.",
+                                "correctResponseCorefTransformation": "intestines",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 9,
                                 "corefClusterBackwardWeight": 0,
@@ -854,6 +813,7 @@
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeParaphraseTransformation": "A boy with a damaged intestine had an “atypical picture” of __________ __________.",
                                 "clozeCorefTransformation": "The boy with the damaged intestines had an\" atypical presentation\" of __________ __________.",
+                                "correctResponseCorefTransformation": "XIAP deficiency",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 9,
                                 "corefClusterBackwardWeight": 0,
@@ -863,12 +823,7 @@
                                 "itemId": -1658678155,
                                 "clozeId": -1769360396,
                                 "originalItem": "The boy with the damaged intestines had an\" atypical presentation\" of __________ __________."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "A boy with a damaged intestine had an “atypical picture” of __________ __________."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -884,6 +839,7 @@
                                 "sentenceWeight": 9,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeCorefTransformation": "The boy with the damaged intestines had an\" __________ __________\" of XIAP deficiency.",
+                                "correctResponseCorefTransformation": "atypical presentation",
                                 "semanticRole": "ARG1",
                                 "rootDistance": 4,
                                 "startDistance": 7,
@@ -963,6 +919,7 @@
                                 "sentenceWeight": 7,
                                 "clozeProbability": 0.00000392415387705948,
                                 "clozeCorefTransformation": "For example, the boy with the __________ __________ inherited the boy mutation from the boy mother-- it is X- linked recessive.",
+                                "correctResponseCorefTransformation": "dissolving intestines",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 7,
                                 "corefClusterBackwardWeight": 3,
@@ -989,18 +946,14 @@
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "For example, a boy with a dissolved intestine inherited his mutation from his mother - this is a __________ X-linked type.",
                                 "clozeCorefTransformation": "For example, the boy with the dissolving intestines inherited the boy mutation from the boy mother-- it is X- linked __________.",
+                                "correctResponseCorefTransformation": "recessive",
                                 "semanticRole": "C-ARG1",
                                 "rootDistance": 3,
                                 "startDistance": 16,
                                 "itemId": 1127537406,
                                 "clozeId": -631191389,
                                 "originalItem": "For example, the boy with the dissolving intestines inherited his mutation from his mother-- it is X- linked __________."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, a boy with a dissolved intestine inherited his mutation from his mother - this is a __________ X-linked type."
-                                }
-                            ]
+                            }
                         },
                         {
                             "response": {
@@ -1017,18 +970,14 @@
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "For example, a boy with a dissolved intestine inherited his __________ from his mother - this is a recessive X-linked type.",
                                 "clozeCorefTransformation": "For example, the boy with the dissolving intestines inherited the boy __________ from the boy mother-- it is X- linked recessive.",
+                                "correctResponseCorefTransformation": "mutation",
                                 "syntacticRole": "dobj",
                                 "rootDistance": 1,
                                 "startDistance": 11,
                                 "itemId": 1127537406,
                                 "clozeId": -54755495,
                                 "originalItem": "For example, the boy with the dissolving intestines inherited his __________ from his mother-- it is X- linked recessive."
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "For example, a boy with a dissolved intestine inherited his __________ from his mother - this is a recessive X-linked type."
-                                }
-                            ]
+                            }
                         }
                     ]
                 },
