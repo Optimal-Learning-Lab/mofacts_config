@@ -112,6 +112,20 @@ function getStimFromClozes(result,filename){
             completedSentenceIDs[sentenceID] = true;
         }
     }
+
+    curStim.stimuli.setspec.clusters.push({
+        "stims" : [ 
+            {
+                "response" : {
+                    "correctResponse" : "Yes~Excellent this should make the practice more effective.;.*~That may not be the best choice. We suggest going back and reading the chapter. "
+                },
+                "display" : {
+                    "clozeText" : "Did you read the chapter (yes/no)?"
+                },
+                "parameter" : "0,.7"
+            }
+        ]
+    });
     
     curStim.fileName = filename;
     curStim.owner = "fill me in"
