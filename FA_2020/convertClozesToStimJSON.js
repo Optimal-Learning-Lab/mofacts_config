@@ -27,6 +27,8 @@ for(var i=1;i<25;i++){
 }
 
 function getStimFromClozes(result,filename){
+    let isEven = parseInt(filename.split('_')[2].substring(2)) % 2 == 0;
+    let parameter = isEven ? "0,.72" : "0,.82";
     sentenceIDtoSentenceMap = {};
     clozeIDToClozeMap = {};
     sentenceIDtoClozesMap = {};
@@ -81,7 +83,7 @@ function getStimFromClozes(result,filename){
                     "display": {
                         "clozeText": ""
                     },
-                    "parameter": "0,.7",
+                    "parameter": parameter,
                     "tags": {}
                 };
                 stim.display.clozeText  = cloze.cloze;
@@ -90,22 +92,35 @@ function getStimFromClozes(result,filename){
                 stim.tags['itemId'] = cloze.itemId;
                 stim.tags['clozeId'] = cloze.clozeId;
 
-                if(cloze.tags.clozeCorefTransformation){
-                    stim.tags.originalItem = JSON.parse(JSON.stringify(stim.display.clozeText));
-                    stim.display.clozeText = cloze.tags.clozeCorefTransformation;
+                if(stim.tags.clozeCorefTransformation && 
+                    (stim.tags.clozeCorefTransformation != stim.display.clozeText)){
 
-                    if(cloze.tags.correctResponseCorefTransformation){
-                        if(cloze.tags.correctResponseCorefTransformation != stim.response.correctResponse){
-                            stim.tags.originalCorrectResponse = JSON.parse(JSON.stringify(stim.response.correctResponse));
-                            stim.response.correctResponse = cloze.tags.correctResponseCorefTransformation;
-                        }else{
-                            delete stim.tags.correctResponseCorefTransformation;
-                        }                    
+                    if(stim.tags.clozeCorefTransformation != stim.display.clozeText){
+                        stim.tags.originalItem = JSON.parse(JSON.stringify(stim.display.clozeText));
+                        stim.display.clozeText = stim.tags.clozeCorefTransformation;
+
+                        if(stim.tags.correctResponseCorefTransformation){
+                            if(cloze.tags.correctResponseCorefTransformation != stim.response.correctResponse){
+                                stim.tags.originalCorrectResponse = JSON.parse(JSON.stringify(stim.response.correctResponse));
+                                stim.response.correctResponse = stim.tags.correctResponseCorefTransformation;
+                            }else{
+                                delete stim.tags.correctResponseCorefTransformation;
+                            }                    
+                        }
                     }
-                }else if(cloze.tags.clozeParaphraseTransformation){
-                    stim.alternateDisplays = [{"clozeText": cloze.tags.clozeParaphraseTransformation}];
-                }
-                
+                }else{
+                    if(stim.tags.clozeParaphraseTransformation){
+                        if(stim.tags.clozeParaphraseTransformation != stim.display.clozeText){
+                            stim.alternateDisplays = [{"clozeText": stim.tags.clozeParaphraseTransformation}];
+                        }else{
+                            delete stim.tags.clozeParaphraseTransformation;
+                        }
+                    }
+
+                    delete stim.tags.clozeCorefTransformation;
+                    delete stim.tags.correctResponseCorefTransformation;
+                } 
+
                 cluster.stims.push(stim);
             }
             curStim.stimuli.setspec.clusters.push(cluster);
@@ -122,13 +137,13 @@ function getStimFromClozes(result,filename){
                 "display" : {
                     "clozeText" : "Did you read the chapter (yes/no)?"
                 },
-                "parameter" : "0,.7"
+                "parameter" : "0,.72"
             }
         ]
     });
     
     curStim.fileName = filename;
-    curStim.owner = "fill me in"
+    curStim.owner = "jEdm7We6sQXB3x3Y3"
 
     return curStim;
 }

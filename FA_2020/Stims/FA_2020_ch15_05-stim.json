@@ -258,8 +258,6 @@
                                 "orderGroup": 2,
                                 "sentenceWeight": 94,
                                 "clozeProbability": 0.00000392415387705948,
-                                "clozeParaphraseTransformation": "The __________, which corresponds to the visceral pericardium, protects the heart by reducing friction.",
-                                "clozeCorefTransformation": "The __________, which corresponds to the visceral pericardium, protects the heart by reducing friction.",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 94,
                                 "corefClusterBackwardWeight": 34,
@@ -267,8 +265,7 @@
                                 "rootDistance": 5,
                                 "startDistance": 0,
                                 "itemId": 4771777,
-                                "clozeId": 1933994072,
-                                "originalItem": "The __________, which corresponds to the visceral pericardium, protects the heart by reducing friction."
+                                "clozeId": 1933994072
                             }
                         },
                         {
@@ -284,14 +281,11 @@
                                 "orderGroup": 2,
                                 "sentenceWeight": 94,
                                 "clozeProbability": 0.00000517368184211515,
-                                "clozeParaphraseTransformation": "The epicardium, which corresponds to the visceral pericardium, protects the heart by reducing __________.",
-                                "clozeCorefTransformation": "The epicardium, which corresponds to the visceral pericardium, protects the heart by reducing __________.",
                                 "syntacticRole": "dobj",
                                 "rootDistance": 3,
                                 "startDistance": 15,
                                 "itemId": 4771777,
-                                "clozeId": -1797961565,
-                                "originalItem": "The epicardium, which corresponds to the visceral pericardium, protects the heart by reducing __________."
+                                "clozeId": -1797961565
                             }
                         }
                     ]
@@ -342,7 +336,6 @@
                                 "sentenceWeight": 78,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "The right atrium receives blood from the vena cava, two large veins: the superior vena cava and the __________ __________ __________.",
-                                "clozeCorefTransformation": "The right atrium receives blood from the vena cavae, two large veins: the superior vena cava and the __________ __________ __________.",
                                 "corefClusters": 2,
                                 "corefClusterTotalWeight": 78,
                                 "corefClusterBackwardWeight": 28,
@@ -350,9 +343,13 @@
                                 "rootDistance": 5,
                                 "startDistance": 19,
                                 "itemId": -1260527994,
-                                "clozeId": -1807705054,
-                                "originalItem": "The right atrium receives blood from the vena cavae, two large veins: the superior vena cava and the __________ __________ __________."
-                            }
+                                "clozeId": -1807705054
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The right atrium receives blood from the vena cava, two large veins: the superior vena cava and the __________ __________ __________."
+                                }
+                            ]
                         }
                     ]
                 },
@@ -1078,7 +1075,6 @@
                                 "orderGroup": 2,
                                 "sentenceWeight": 79,
                                 "clozeProbability": 9.30988328446582e-7,
-                                "clozeCorefTransformation": "When the right ventricular wall contracts, the tricuspid valve closes the __________ __________ __________, and the blood passes through the open pulmonary valve into the pulmonary trunk and its branches.",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 79,
                                 "corefClusterBackwardWeight": 65,
@@ -1086,8 +1082,7 @@
                                 "rootDistance": 2,
                                 "startDistance": 11,
                                 "itemId": -816720605,
-                                "clozeId": 235245733,
-                                "originalItem": "When the right ventricular wall contracts, the tricuspid valve closes the __________ __________ __________, and the blood passes through the open pulmonary valve into the pulmonary trunk and its branches."
+                                "clozeId": 235245733
                             }
                         },
                         {
@@ -1104,7 +1099,6 @@
                                 "sentenceWeight": 79,
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "When the right ventricular wall contracts, the __________ __________ closes the right atrioventricular opening and blood flows through the open lung valve into the pulmonary trunk and branches.",
-                                "clozeCorefTransformation": "When the right ventricular wall contracts, the __________ __________ closes the right atrioventricular orifice, and the blood passes through the open pulmonary valve into the pulmonary trunk and its branches.",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 79,
                                 "corefClusterBackwardWeight": 65,
@@ -1112,9 +1106,13 @@
                                 "rootDistance": 2,
                                 "startDistance": 7,
                                 "itemId": -816720605,
-                                "clozeId": -1012820067,
-                                "originalItem": "When the right ventricular wall contracts, the __________ __________ closes the right atrioventricular orifice, and the blood passes through the open pulmonary valve into the pulmonary trunk and its branches."
-                            }
+                                "clozeId": -1012820067
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "When the right ventricular wall contracts, the __________ __________ closes the right atrioventricular opening and blood flows through the open lung valve into the pulmonary trunk and branches."
+                                }
+                            ]
                         },
                         {
                             "response": {
@@ -1129,13 +1127,11 @@
                                 "orderGroup": 2,
                                 "sentenceWeight": 79,
                                 "clozeProbability": 0.00000433606687724915,
-                                "clozeCorefTransformation": "When the right ventricular wall contracts, the tricuspid valve closes the right atrioventricular orifice, and the blood passes through the __________ __________ __________ into the pulmonary trunk and its branches.",
                                 "semanticRole": "ARGM-DIR",
                                 "rootDistance": 5,
                                 "startDistance": 20,
                                 "itemId": -816720605,
-                                "clozeId": 571203697,
-                                "originalItem": "When the right ventricular wall contracts, the tricuspid valve closes the right atrioventricular orifice, and the blood passes through the __________ __________ __________ into the pulmonary trunk and its branches."
+                                "clozeId": 571203697
                             }
                         }
                     ]
@@ -1526,7 +1522,6 @@
                                 "sentenceWeight": 88,
                                 "clozeProbability": 0.00000433606687724915,
                                 "clozeParaphraseTransformation": "The thoracic aorta is the part of the descending aorta above the __________.",
-                                "clozeCorefTransformation": "The part of the descending aorta above the __________ is the thoracic aorta.",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 88,
                                 "corefClusterBackwardWeight": 36,
@@ -1534,9 +1529,13 @@
                                 "rootDistance": 6,
                                 "startDistance": 7,
                                 "itemId": 284959897,
-                                "clozeId": -941507833,
-                                "originalItem": "The part of the descending aorta above the __________ is the thoracic aorta."
-                            }
+                                "clozeId": -941507833
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The thoracic aorta is the part of the descending aorta above the __________."
+                                }
+                            ]
                         },
                         {
                             "response": {
@@ -1552,7 +1551,6 @@
                                 "sentenceWeight": 88,
                                 "clozeProbability": 0.00000517368184211515,
                                 "clozeParaphraseTransformation": "The __________ __________ is the part of the descending aorta above the diaphragm.",
-                                "clozeCorefTransformation": "The part of the descending aorta above the diaphragm is the __________ __________.",
                                 "corefClusters": 3,
                                 "corefClusterTotalWeight": 88,
                                 "corefClusterBackwardWeight": 36,
@@ -1560,9 +1558,13 @@
                                 "rootDistance": 1,
                                 "startDistance": 10,
                                 "itemId": 284959897,
-                                "clozeId": 940565962,
-                                "originalItem": "The part of the descending aorta above the diaphragm is the __________ __________."
-                            }
+                                "clozeId": 940565962
+                            },
+                            "alternateDisplays": [
+                                {
+                                    "clozeText": "The __________ __________ is the part of the descending aorta above the diaphragm."
+                                }
+                            ]
                         }
                     ]
                 },
@@ -2115,13 +2117,11 @@
                                 "orderGroup": 6,
                                 "sentenceWeight": 89,
                                 "clozeProbability": 0.00000301500014386427,
-                                "clozeCorefTransformation": "__________ __________ of the femoral artery include the following: As the femoral artery passes behind the medial distal femur and reaches the proximal border of the space behind the knee, it becomes the popliteal artery.",
                                 "semanticRole": "ARG2",
                                 "rootDistance": 4,
                                 "startDistance": 0,
                                 "itemId": -565941208,
-                                "clozeId": 1806098240,
-                                "originalItem": "__________ __________ of the femoral artery include the following: As the femoral artery passes behind the medial distal femur and reaches the proximal border of the space behind the knee, it becomes the popliteal artery."
+                                "clozeId": 1806098240
                             }
                         }
                     ]
@@ -2221,14 +2221,14 @@
                             "display": {
                                 "clozeText": "Did you read the chapter (yes/no)?"
                             },
-                            "parameter": "0,.82"
+                            "parameter": "0,.72"
                         }
                     ]
                 }
             ]
         }
     },
-    "owner": "fill me in",
+    "owner": "jEdm7We6sQXB3x3Y3",
     "source": "content_generation",
     "sourceSentences": [
         {
