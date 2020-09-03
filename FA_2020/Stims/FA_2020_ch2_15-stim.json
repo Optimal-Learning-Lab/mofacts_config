@@ -175,82 +175,6 @@
                     "stims": [
                         {
                             "response": {
-                                "correctResponse": "medications"
-                            },
-                            "display": {
-                                "clozeText": "The food that we eat, liquids that we drink, and __________ that we take are chemicals."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 4,
-                                "orderGroup": 1,
-                                "sentenceWeight": 3,
-                                "clozeProbability": 0.00000314628279863165,
-                                "semanticRole": "ARG1",
-                                "rootDistance": 2,
-                                "startDistance": 12,
-                                "itemId": 170183971,
-                                "clozeId": 825304271
-                            }
-                        },
-                        {
-                            "response": {
-                                "correctResponse": "chemicals"
-                            },
-                            "display": {
-                                "clozeText": "The food that we eat, liquids that we drink, and medications that we take are __________."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 4,
-                                "clozeParaphraseTransformation": "The food we eat, the liquids we drink, and the drugs we take are __________.",
-                                "orderGroup": 1,
-                                "sentenceWeight": 3,
-                                "clozeProbability": 0.00000433606687724915,
-                                "syntacticRole": "root",
-                                "rootDistance": 0,
-                                "startDistance": 17,
-                                "itemId": 170183971,
-                                "clozeId": 1623648944
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "The food we eat, the liquids we drink, and the drugs we take are __________."
-                                }
-                            ]
-                        },
-                        {
-                            "response": {
-                                "correctResponse": "liquids"
-                            },
-                            "display": {
-                                "clozeText": "The food that we eat, __________ that we drink, and medications that we take are chemicals."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 4,
-                                "clozeParaphraseTransformation": "The food we eat, the __________ we drink, and the drugs we take are chemicals.",
-                                "orderGroup": 1,
-                                "sentenceWeight": 3,
-                                "clozeProbability": 0.00000608192839360935,
-                                "semanticRole": "ARG1",
-                                "rootDistance": 2,
-                                "startDistance": 6,
-                                "itemId": 170183971,
-                                "clozeId": -1842327336
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "The food we eat, the __________ we drink, and the drugs we take are chemicals."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "stims": [
-                        {
-                            "response": {
                                 "correctResponse": "Isotopes"
                             },
                             "display": {
@@ -325,32 +249,6 @@
                                 "corefClusterForwardWeight": 2,
                                 "rootDistance": 5,
                                 "startDistance": 14,
-                                "itemId": -133006491,
-                                "clozeId": -970072241
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "One electron of the hydrogen atom is in the first shell; two __________ of a helium atom fill their first shell; and of the three __________ of the lithium atom, two are in the first shell and one in the second shell."
-                                }
-                            ]
-                        },
-                        {
-                            "response": {
-                                "correctResponse": "electrons"
-                            },
-                            "display": {
-                                "clozeText": "The single electron of a hydrogen atom is in the first shell; the two __________ of a helium atom fill its first shell; and of the three __________ of a lithium atom, two are in the first shell and one is in the second shell."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 3,
-                                "orderGroup": 2,
-                                "sentenceWeight": 7,
-                                "clozeProbability": 0.00000433606687724915,
-                                "clozeParaphraseTransformation": "One electron of the hydrogen atom is in the first shell; two __________ of a helium atom fill their first shell; and of the three __________ of the lithium atom, two are in the first shell and one in the second shell.",
-                                "syntacticRole": "pobj",
-                                "rootDistance": 3,
-                                "startDistance": 29,
                                 "itemId": -133006491,
                                 "clozeId": -970072241
                             },
@@ -868,35 +766,6 @@
                         },
                         {
                             "response": {
-                                "correctResponse": "molecule"
-                            },
-                            "display": {
-                                "clozeText": "Unlike an ion, a polar __________ has an equal number of protons and electrons, but more of the electrons are at one end of the __________, making that end slightly negative, while the other end of the __________ is slightly positive."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 3,
-                                "clozeParaphraseTransformation": "Unlike an ion, a polar __________ has the same number of protons and electrons, but there are more electrons at one end of the __________, making that end slightly negative, while the other end of the __________ is slightly positive.",
-                                "orderGroup": 2,
-                                "sentenceWeight": 6,
-                                "clozeProbability": 0.00000517368184211515,
-                                "corefClusters": 2,
-                                "corefClusterTotalWeight": 6,
-                                "corefClusterBackwardWeight": 2,
-                                "corefClusterForwardWeight": 0,
-                                "rootDistance": 5,
-                                "startDistance": 41,
-                                "itemId": -1067844634,
-                                "clozeId": 149192350
-                            },
-                            "alternateDisplays": [
-                                {
-                                    "clozeText": "Unlike an ion, a polar __________ has the same number of protons and electrons, but there are more electrons at one end of the __________, making that end slightly negative, while the other end of the __________ is slightly positive."
-                                }
-                            ]
-                        },
-                        {
-                            "response": {
                                 "correctResponse": "protons"
                             },
                             "display": {
@@ -1262,29 +1131,6 @@
                                 "semanticRole": "ARG2",
                                 "rootDistance": 3,
                                 "startDistance": 2,
-                                "itemId": -1229724417,
-                                "clozeId": -67697283,
-                                "originalItem": "They combine with __________ __________ when these ions are in excess, or they donate __________ __________ when these ions are depleted."
-                            }
-                        },
-                        {
-                            "response": {
-                                "correctResponse": "hydrogen ions"
-                            },
-                            "display": {
-                                "clozeText": "They combine with __________ __________ when these ions are in excess, or they donate __________ __________ when pH ions are depleted."
-                            },
-                            "parameter": "0,.72",
-                            "tags": {
-                                "weightGroup": 1,
-                                "orderGroup": 2,
-                                "sentenceWeight": 20,
-                                "clozeProbability": 0.00000517368184211515,
-                                "clozeParaphraseTransformation": "They combine with __________ __________ when these ions are in excess, or give up __________ __________ when these ions are depleted.",
-                                "clozeCorefTransformation": "They combine with __________ __________ when these ions are in excess, or they donate __________ __________ when pH ions are depleted.",
-                                "semanticRole": "ARG1",
-                                "rootDistance": 3,
-                                "startDistance": 15,
                                 "itemId": -1229724417,
                                 "clozeId": -67697283,
                                 "originalItem": "They combine with __________ __________ when these ions are in excess, or they donate __________ __________ when these ions are depleted."

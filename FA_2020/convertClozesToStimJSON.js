@@ -15,6 +15,8 @@ for(var i=1;i<25;i++){
             if (err) throw err;
             var result = JSON.parse(data);
             console.log(filename);
+            console.log(result.clozes.length)
+            //countIdenticalClozes(countMap,result,filename);
             var stimJSON = getStimFromClozes(result,resultFilename)
             fs.writeFile(resultFilePath,JSON.stringify(stimJSON,null,4),function(err,file){
                 if(err) throw err;
@@ -26,6 +28,34 @@ for(var i=1;i<25;i++){
     }
 }
 
+// var countMap = {};
+// var flatMap = {};
+// for(let filename in countMap){
+//     if(!flatMap[filename]) flatMap[filename] = [];
+//     for(let clozeText in countMap[filename]){
+//         flatMap[filename].push(countMap[filename][clozeText]);
+//     }
+// }
+
+// console.log(flatMap);
+// var numOver1 = {};
+// for(let filename in countMap){
+//     if(!numOver1[filename]) numOver1[filename] = 0;
+//     for(let clozeText in countMap[filename]){
+//         if(countMap[filename][clozeText]>1) numOver1[filename] += 1;
+//     }
+// }
+
+
+
+// function countIdenticalClozes(countMap,result,fileName){
+//     if(!countMap[fileName]) countMap[fileName] = {};
+//     for(let cloze of result.clozes){
+//         if(!countMap[fileName][cloze.cloze]) countMap[fileName][cloze.cloze] = 1;
+//         else countMap[fileName][cloze.cloze] += 1;
+//     }
+// }
+
 function getStimFromClozes(result,filename){
     let isEven = parseInt(filename.split('_')[2].substring(2)) % 2 == 0;
     let parameter = isEven ? "0,.72" : "0,.82";
@@ -34,7 +64,15 @@ function getStimFromClozes(result,filename){
     sentenceIDtoClozesMap = {};
     
     var sentences = result.sentences;
-    var clozes = result.clozes;
+    var clozes = [];
+    var clozeMap = {};
+    for(var cloze of result.clozes){
+        var key = cloze.clozeId;
+        if(!clozeMap[key]){
+            clozeMap[key] = true;
+            clozes.push(cloze);
+        }
+    }
     for(var cloze of clozes){
       cloze.unitIndex = 0;
     }
