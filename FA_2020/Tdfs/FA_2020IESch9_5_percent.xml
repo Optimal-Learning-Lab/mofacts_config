@@ -301,7 +301,7 @@ Our MoFaCTS system has chosen some of the most important sentences from your tex
           p.hintsylls = [];
 if((p.stimSuccessCount+p.stimFailureCount)<3 && p.syllables>2) {
             var numHintSylls = getRandomInt(3);
-            
+
             for(var index=0;index<numHintSylls;index++){
               p.hintsylls.push(index);
             }
@@ -329,7 +329,7 @@ if (p.hintsylls.length==0) {intercept=-1.03873} else if (p.hintsylls.length==1) 
 
         <deliveryparams>
           <autostopTimeoutThreshold>2</autostopTimeoutThreshold>
-          <feedbackType>dialogue</feedbackType>
+          <feedbackType>refutational</feedbackType>
             <drill>30000</drill>
             <purestudy>16000</purestudy>
             <skipstudy>false</skipstudy>
