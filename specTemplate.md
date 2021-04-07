@@ -127,9 +127,17 @@ Stipulations
 ## Content Module Setup
 <!-- lots of things are not yet done. try to tell me about any explicit errors (not omissions as much, except perhaps to just list what you want added next). How high priority are the definitions? Many many things could be defined-->
 <!-- how should I specify xml fields, should they be defined? where? -->
+<!-- AT: For now just make a list of all required and all optional tags/values for tags and I'll pick out the important ones to delve into to save you specifying all of them.  In general for this cycle try to aim for breadth before depth and I'll try to help guide where reqs are most useful to optimize your time usage. -->
+
 <!-- not understanding your example of local variable "myteacher" above, what does it add in this example? when is it really useful? -->
+<!-- AT: It's useful in cases where you would need a noun that you need to refer back to basically.  For example, if i wanted to say that a teacher can assign a tdf to other teachers, I would want to define teacherA and teacherB.  My examples were a tad overly specific in that regard to show how to do that in a formatted way.  For example, neither of your reqs need to do them. -->
+
 <!-- seems guid can be added later?-->
+<!-- AT: correct -->
+
 <!-- are the stipulation numeric refs sections going to update correctly? Not sure how that should work since main sections are not numeric now. See below. Also what needs to be stipulated here?-->
+<!-- AT: the stipulation refs won't update automatically, they have to be copied.  The automatic numbering of the 1. 's would change every time we move a stipulation so we have to manually specify them. Strictly speaking they just need unique identifiers, not sequential numbers, but numbers seemed easier to talk about. -->
+<!-- AT: I can't think of any stipulations needed yet as I don't think we're far enough into the specifics to need them. -->
 
 
 
@@ -147,7 +155,10 @@ Stipulations
 
     As a [**teacher**](#teacherDef) I want to be able to create a unit in a [**tdf**](#tdfDef) of content under the control of a [**unitMode**](#selalgDef)
 
-    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher, ***myteacher*** designates a unit <unit> of content in a tdf file with the <learningsession> tag
+    <!-- AT: html tags are interpreted so you have to escape them to display them literally with \ prepended as below; you may want to open the atom markdown preview side-by-side to make sure it displays as you desire -->
+    <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it's about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next item for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
+
+    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher, ***myteacher*** designates a unit \<unit> of content in a tdf file with the \<learningsession> tag 
 
         And a **clusterlist** is designated
 
@@ -157,8 +168,8 @@ Stipulations
 
         Then the **tdf** **learningsession** unit is will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the unit to occur in the ordered sequence of units for the tdf.                                
 
-      ---
-
+        --- 
+        <!-- The horizontal line here wasn't indented correctly FYI.  Indentation is semantic in markdown, as are many forms of whitespace such as newlines. -->
         Stipulations:
 
         [Stip1.1](#Stip1.1)
