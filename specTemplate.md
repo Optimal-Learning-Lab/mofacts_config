@@ -98,16 +98,43 @@ Stipulations
 
 ## Content Module Setup
 
-
-1. Basic trial delivery unit parameters
+1. Trial delivery \<unit> parameters
 
     As a [**teacher**](#teacherDef) I want to be able to create a unit in a [**tdf**](#tdfDef) of content where each trial has certain features (qualitative and quantitative.)
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
-        And \<deleveryparams> is designated
+        * And \<deleveryparams> is designated with values   
+          * \<'showhistory> with default false,
+          * \<forceCorrection> with default false,
+          * \<scoringEnabled> with default isLearningSession,
+          * \<purestudy> with default 0,
+          * \<initialview> with default 0,
+          * \<drill> with default 0,
+          * \<reviewstudy> with default 0,
+          * \<correctprompt> with default 0,
+          * \<skipstudy> with default false,
+          * \<lockoutminutes> with default 0,
+          * \<fontsize> with default 3,
+          * \<numButtonListImageColumns> with default 2,
+          * \<correctscore> with default 1,
+          * \<incorrectscore> with default 0,
+          * \<practiceseconds> with default 0,
+          * \<autostopTimeoutThreshold> with default 0,
+          * \<autostopTranscriptionAttemptLimit> with default 3,
+          * \<timeuntilaudio' : 0,
+          * \<timeuntilaudiofeedback' : 0,
+          * \<prestimulusdisplaytime' : 0,
+          * \<forcecorrectprompt> with default '',
+          * \<forcecorrecttimeout> with default 0,
+          * \<studyFirst> with default false,
+          * \<enhancedFeedback> with default false,
+          * \<checkOtherAnswers> with default false,
+          * \<feedbackType> with default '',
+          * \<allowFeedbackTypeSelect> with default false,
+          * \<falseAnswerLimit> with default 9999999     
 
-        Then the **trials** will be provided according to the \<deliveryparams>, which include \<drill>, \<purestudy>, \<skipstudy>, \<reviewstudy>, \<correctprompt>, \<fontsize>, \<correctscore>, \<incorrectscore>, \<autostopTimeoutThreshold>, and \<feedbackType>
+     Then the **trials** will be provided with these parameters
 
 1. Learning unit creation
 
@@ -115,19 +142,17 @@ Stipulations
 
     1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher designates a unit \<unit> of content in a tdf file with the \<learningsession> tag
 
-        And \<deleveryparams> is designated for the \<unit>
+        * And the following required tags are specified for the \<unit>:
+          * \<deleveryparams>
+        * And the following required tags are specified for the \<learningsession>:
+          * \<clusterlist>
+          * \<unitMode>
+          * \<calculateProbability>            
+        * And the following optional tags are specified for \<unit>:
+          * \<buttonorder>
+          * \<buttonOptions>
 
-        And a \<buttonorder> is optionally designated for the \<unit>
-
-        And a \<buttonOptions> is optionally designated for the \<unit>
-
-        And a \<clusterlist> is designated for the \<learningsession
-
-        And a \<unitMode> is optionally designated for the \<learningsession> <!--make not optional someday-->
-
-        And a \<calculateProbability> is optionally designated for the \<learningsession> <!--make not optional someday-->
-
-        Then the **tdf** \<learningsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<learningsession> unit to occur in the ordered sequence of units for the tdf.                  
+      Then the **tdf** \<learningsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<learningsession> unit to occur in the ordered sequence of units for the tdf.                  
 
 1. Assessment, factorials designs, and survey unit creation
 
@@ -135,34 +160,27 @@ Stipulations
 
     1. Given a teacher designates a unit \<unit> of content in a tdf file with the \<assessmentsession> tag
 
-        And \<deleveryparams> is designated for the \<unit>
+        * And the following required tags are specified for \<unit>:
+          * \<deleveryparams>
+          * \<conditiontemplatesbygroup
+        * And the following required tags are specified for \<assessmentsession>:
+          * \<initialpositions>
+          * \<randomizegroups>
+          * \<clusterlist>
+          * \<permutefinalresult>
+          * \<assignrandomclusters>
+        * And the following required tags are specified for \<conditiontemplatesbygroup>:
+          * \<groupnames>
+          * \<clustersrepeated>
+          * \<templatesrepeated>
+          * \<groups>s
+        * And the following optional tags are specified for \<unit>:
+          * \<buttonorder>
+          * \<buttonOptions>          
+        * And the following optional tags are specified for \<assessmentsession>:
+          * \<randomchoices>          
 
-        And a \<buttonorder> is optionally designated for the \<unit>
-
-        And a \<buttonOptions> is optionally designated for the \<unit>
-
-        And \<conditiontemplatesbygroup> is designated for the  \<assessmentsession>
-
-        And \<groupnames>, \<clustersrepeated>, \<templatesrepeated>, and \<groups>s are designated for the  \<conditiontemplatesbygroup>
-
-        And \<initialpositions> is designated for the \<assessmentsession
-
-        And \<randomizegroups> is designated for the \<assessmentsession
-
-        And \<clusterlist> is designated for the \<assessmentsession
-
-        And \<permutefinalresult> is designated for the \<assessmentsession
-
-        And \<assignrandomclusters> is designated for the \<assessmentsession
-
-        And \<randomchoices> is optionally designated for the \<assessmentsession
-
-        Then the **tdf** \<assessmentsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<assessmentsession> unit to occur in the ordered sequence of units for the tdf.      
-
-
-
-
-
+      Then the **tdf** \<assessmentsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<assessmentsession> unit to occur in the ordered sequence of units for the tdf.      
 
 ---
 
@@ -172,9 +190,12 @@ Stipulations
 
 <a id="studentDef">Student - A user who has been assigned the student role.</a>
 
+---
+
+## Appendix B - Notes
 
   <!-- AT: html tags are interpreted so you have to escape them to display them literally with \ prepended as below; you may want to open the atom markdown preview side-by-side to make sure it displays as you desire -->
-  <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it's about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next item for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
+  <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it        *    \<s about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next item for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
   <!-- lots of things are not yet done. try to tell me about any explicit errors (not omissions as much, except perhaps to just list what you want added next). How high priority are the definitions? Many many things could be defined-->
   <!-- how should I specify xml fields, should they be defined? where? -->
   <!-- AT: For now just make a list of all required and all optional tags/values for tags and I'll pick out the important ones to delve into to save you specifying all of them.  In general for this cycle try to aim for breadth before depth and I'll try to help guide where reqs are most useful to optimize your time usage. -->
@@ -212,5 +233,3 @@ Stipulations
   ---
 
   User flows? List of req guids with general flow described?
-
-  # Example
