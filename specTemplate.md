@@ -6,11 +6,11 @@
 
     As a [**teacher**](#teacherDef) I want to be able to create classes to group students and give them assignments <!-- first time term is encountered, link to a definition -->
 
-    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher, ***myteacher*** is on the classEdit page <!-- each leaf requirement has a unique guid --><!-- myteacher is a local variable, useful for referencing the same concept repeatedly in a req -->
+    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher,**myteacher*** is on the classEdit page <!-- each leaf requirement has a unique guid --><!-- myteacher is a local variable, useful for referencing the same concept repeatedly in a req -->
 
         And an existing class is not selected
 
-        And a class name, ***myclassname*** has been entered in the class name box
+        And a class name,**myclassname*** has been entered in the class name box
 
         And 0 or more student usernames have been entered into the student login ids box
 
@@ -29,9 +29,9 @@
 
     As a **teacher** I want to be able to edit classes to change which students are associated with them
 
-    1. <a id="47f2ab4e-e1ad-4b4c-88e8-b490fa371d80"></a> Given a teacher, ***myteacher*** is on the classEdit page
+    1. <a id="47f2ab4e-e1ad-4b4c-88e8-b490fa371d80"></a> Given a teacher,**myteacher*** is on the classEdit page
 
-        And an existing class, ***myclassname*** is selected
+        And an existing class,**myclassname*** is selected
 
         Then the student usernames associated with ***myclassname*** are populated into the student login ids box
 
@@ -47,7 +47,7 @@
 
     1. <a id="5748fbfc-78e6-4b22-a7ea-410eb3bb6e6b"></a> Given a teacher is on the classEdit page
 
-        And an existing class, ***myclassname*** is selected
+        And an existing class,**myclassname*** is selected
 
         And ***myteacher*** clicks save class
 
@@ -65,9 +65,9 @@
 
     As a **teacher** I want to be able to edit class assignments to change which tdfs are assigned to a group of students
 
-    1. <a id="f3e02563-fb22-4391-bd06-03c32fc08d14"></a> Given a teacher, ***myteacher*** is on the tdfAssignmentEdit page
+    1. <a id="f3e02563-fb22-4391-bd06-03c32fc08d14"></a> Given a teacher,**myteacher*** is on the tdfAssignmentEdit page
 
-        And an existing class, ***myclassname*** is selected
+        And an existing class,**myclassname*** is selected
 
         Then the tdfs associated with ***myclassname*** are populated into the Selected Chapters box and the chapters available to be assigned are populated into the Available Chapters Box
 
@@ -75,13 +75,13 @@
 
         Stipulations:
 
-        1. Chapters available to be assigned are those which are owned by the owner of the class, ***myteacher***, and were created in the current semester
+        1. Chapters available to be assigned are those which are owned by the owner of the class,**myteacher***, and were created in the current semester
 
         <!-- stipulations that only apply to one requirement should be put inline with that requirement for ease of readability.  If they get used by another, pull out and ref as already seen -->
 
-    1. <a id="9ca34559-cf4b-4226-befa-3069a5227b88"></a> Given a teacher, ***myteacher*** is on the tdfAssignmentEdit page
+    1. <a id="9ca34559-cf4b-4226-befa-3069a5227b88"></a> Given a teacher,**myteacher*** is on the tdfAssignmentEdit page
 
-        And an existing class, ***myclassname*** is selected
+        And an existing class,**myclassname*** is selected
 
         And ***myteacher*** clicks the save assignment button
 
@@ -194,25 +194,25 @@ Stipulations
 
         * And there exists prior data for that tdf
 
-     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates the field is not provide for instruction records.
+     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screens and units.
 
-      * **Anon Student Id** with default  d(username, ''),
-      * **Session ID** with default  (new Date(d(lastq.clientSideTimeStamp, 0))).toUTCString().substr(0, 16) + " " + tdfName, //hack
-      * **Condition Namea** with default  tdfName,
-      * **Condition Typea** with default  'tdf file',
-      * **Condition Nameb** with default  xcond,
-      * **Condition Typeb** with default  'xcondition',
+      * \* **Anon Student Id** with default  d(username, ''),
+      * \* **Session ID** with default  (new Date(d(lastq.clientSideTimeStamp, 0))).toUTCString().substr(0, 16) + " " + tdfName, //hack *
+      * \* **Condition Namea** with default  tdfName,
+      * \* **Condition Typea** with default  'tdf file',
+      * \* **Condition Nameb** with default  xcond,
+      * \* **Condition Typeb** with default  'xcondition',
       * **Condition Namec** with default  d(schedCondition, ''),
       * **Condition Typec** with default  'schedule condition',
       * **Condition Named** with default  d(lasta.guiSource, ''),
       * **Condition Typed** with default  'how answered',
       * **Condition Namee** with default  d(lasta.wasButtonTrial, false),
       * **Condition Typee** with default  'button trial',
-      * **Level (Unit)** with default  unitNum,
-      * **Level (Unitname)** with default  d(unitName, ''),
+      * \* **Level (Unit)** with default  unitNum,
+      * \* **Level (Unitname)** with default  d(unitName, ''),
       * **Problem Name** with default  d(stringifyIfExists(lastq.originalSelectedDisplay), ''),
       * **Step Name** with default  stepName,
-      * **Time** with default  d(lastq.clientSideTimeStamp, 0),
+      * \* **Time** with default  d(lastq.clientSideTimeStamp, 0),
       * **Selection** with default  '',
       * **Action** with default  '',
       * **Input** with default  d(lasta.answer, ''),
@@ -225,25 +225,25 @@ Stipulations
       * **KC Category(Default)** with default  '',
       * **KC (Cluster)** with default  kcCluster,
       * **KC Category(Cluster)** with default  '',
-      * **CF (GUI Source)** with default d(lasta.guiSource,''), *
-      * **CF (Audio Input Enabled)** with default lasta.audioInputEnabled, *
-      * **CF (Audio Output Enabled)** with default lasta.audioOutputEnabled, *
-      * **CF (Display Order)** with default  d(lastq.questionIndex, -1),
+      * **CF (GUI Source)** with default d(lasta.guiSource,''),
+      * **CF (Audio Input Enabled)** with default lasta.audioInputEnabled,
+      * **CF (Audio Output Enabled)** with default lasta.audioOutputEnabled,
+      * \* **CF (Display Order)** with default  d(lastq.questionIndex, -1),
       * **CF (Stim File Index)** with default  d(lastq.clusterIndex, -1),
       * **CF (Set Shuffled Index)** with default  d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?
-      * **CF (Alternate Display Index)** with default  d(lastq.alternateDisplayIndex, -1), *
+      * **CF (Alternate Display Index)** with default  d(lastq.alternateDisplayIndex, -1),
       * **CF (Stimulus Version)** with default  whichStim,
       * **CF (Correct Answer)** with default  correctAnswer,
-      * **CF (Correct Answer Syllables)** with default  currentAnswerSyllablesArray, *
-      * **CF (Correct Answer Syllables Count)** with default  currentAnswerSyllableCount, *
-      * **CF (Display Syllable Indices)** with default  currentAnswerSyllableIndices, *
+      * **CF (Correct Answer Syllables)** with default  currentAnswerSyllablesArray,
+      * **CF (Correct Answer Syllables Count)** with default  currentAnswerSyllableCount,
+      * **CF (Display Syllable Indices)** with default  currentAnswerSyllableIndices,
       * **CF (Overlearning)** with default  d(lastq.showOverlearningText, false),
-      * **CF (Response Time)** with default  d(lasta.clientSideTimeStamp, 0),
+      * \* **CF (Response Time)** with default  d(lasta.clientSideTimeStamp, 0),
       * **CF (Start Latency)** with default  d(startLatency, 0),
       * **CF (End Latency)** with default  d(endLatency, 0),
-      * **CF (Review Latency)** with default  d(reviewLatency, 0),
+      * \* **CF (Review Latency)** with default  d(reviewLatency, 0),
       * **CF (Review Entry)** with default  d(lasta.forceCorrectFeedback, ''),
-      * **CF (Button Order)** with default  d(lasta.buttonOrder, ''), *
+      * **CF (Button Order)** with default  d(lasta.buttonOrder, ''),
       * **CF (Note)** with default  d(note, ''),
       * **Feedback Text** with default  d(lasta.displayedSystemResponse, ''),
 
