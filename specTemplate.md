@@ -104,7 +104,7 @@ Stipulations
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
-        * And \<deleveryparams> is designated with values   
+        * And \<deleveryparams> is designated with values
           * \<'showhistory> with default false,
           * \<forceCorrection> with default false,
           * \<scoringEnabled> with default isLearningSession,
@@ -181,6 +181,74 @@ Stipulations
           * \<randomchoices>          
 
       Then the **tdf** \<assessmentsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<assessmentsession> unit to occur in the ordered sequence of units for the tdf.      
+
+---
+
+## Data Output Module Setup
+
+1. Output of student data in DataShop format
+
+    As a [**teacher**](#teacherDef) I want to be able to output data for a tdf used by students.
+
+    1. Given a teacher, [**teacher**](#teacherDef) navigates to the data download page  and clicks on the tdf name
+
+        * And there exists prior data for that tdf
+
+     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates the field is not provide for instruction records.
+
+      * **Anon Student Id** with default  d(username, ''),
+      * **Session ID** with default  (new Date(d(lastq.clientSideTimeStamp, 0))).toUTCString().substr(0, 16) + " " + tdfName, //hack
+      * **Condition Namea** with default  tdfName,
+      * **Condition Typea** with default  'tdf file',
+      * **Condition Nameb** with default  xcond,
+      * **Condition Typeb** with default  'xcondition',
+      * **Condition Namec** with default  d(schedCondition, ''),
+      * **Condition Typec** with default  'schedule condition',
+      * **Condition Named** with default  d(lasta.guiSource, ''),
+      * **Condition Typed** with default  'how answered',
+      * **Condition Namee** with default  d(lasta.wasButtonTrial, false),
+      * **Condition Typee** with default  'button trial',
+      * **Level (Unit)** with default  unitNum,
+      * **Level (Unitname)** with default  d(unitName, ''),
+      * **Problem Name** with default  d(stringifyIfExists(lastq.originalSelectedDisplay), ''),
+      * **Step Name** with default  stepName,
+      * **Time** with default  d(lastq.clientSideTimeStamp, 0),
+      * **Selection** with default  '',
+      * **Action** with default  '',
+      * **Input** with default  d(lasta.answer, ''),
+      * **Outcome** with default  d(outcome, null), //answerCorrect recoded as CORRECT or INCORRECT
+      * **Student Response Type** with default  isStudy ? "HINT_REQUEST" : "ATTEMPT", // where is ttype set?
+      * **Student Response Subtype** with default  d(lasta.qtype, ''),
+      * **Tutor Response Type** with default  isStudy ? "HINT_MSG" : "RESULT", // where is ttype set?
+      * **Tutor Response Subtype** with default  '',
+      * **KC (Default)** with default  d(lastq.clusterIndex, -1) + "-" + d(lastq.whichStim, -1) + " " + d(stringifyIfExists(lastq.originalSelectedDisplay), ''),
+      * **KC Category(Default)** with default  '',
+      * **KC (Cluster)** with default  kcCluster,
+      * **KC Category(Cluster)** with default  '',
+      * **CF (GUI Source)** with default d(lasta.guiSource,''), *
+      * **CF (Audio Input Enabled)** with default lasta.audioInputEnabled, *
+      * **CF (Audio Output Enabled)** with default lasta.audioOutputEnabled, *
+      * **CF (Display Order)** with default  d(lastq.questionIndex, -1),
+      * **CF (Stim File Index)** with default  d(lastq.clusterIndex, -1),
+      * **CF (Set Shuffled Index)** with default  d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?
+      * **CF (Alternate Display Index)** with default  d(lastq.alternateDisplayIndex, -1), *
+      * **CF (Stimulus Version)** with default  whichStim,
+      * **CF (Correct Answer)** with default  correctAnswer,
+      * **CF (Correct Answer Syllables)** with default  currentAnswerSyllablesArray, *
+      * **CF (Correct Answer Syllables Count)** with default  currentAnswerSyllableCount, *
+      * **CF (Display Syllable Indices)** with default  currentAnswerSyllableIndices, *
+      * **CF (Overlearning)** with default  d(lastq.showOverlearningText, false),
+      * **CF (Response Time)** with default  d(lasta.clientSideTimeStamp, 0),
+      * **CF (Start Latency)** with default  d(startLatency, 0),
+      * **CF (End Latency)** with default  d(endLatency, 0),
+      * **CF (Review Latency)** with default  d(reviewLatency, 0),
+      * **CF (Review Entry)** with default  d(lasta.forceCorrectFeedback, ''),
+      * **CF (Button Order)** with default  d(lasta.buttonOrder, ''), *
+      * **CF (Note)** with default  d(note, ''),
+      * **Feedback Text** with default  d(lasta.displayedSystemResponse, ''),
+
+
+
 
 ---
 
