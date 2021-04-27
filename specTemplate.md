@@ -196,59 +196,58 @@ Stipulations
 
      Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screens and units.
 
-      * \* **Anon Student Id** with default  d(username, ''),
-      * \* **Session ID** with default  (new Date(d(lastq.clientSideTimeStamp, 0))).toUTCString().substr(0, 16) + " " + tdfName, //hack *
-      * \* **Condition Namea** with default  tdfName,
-      * \* **Condition Typea** with default  'tdf file',
-      * \* **Condition Nameb** with default  xcond,
-      * \* **Condition Typeb** with default  'xcondition',
-      * **Condition Namec** with default  d(schedCondition, ''),
-      * **Condition Typec** with default  'schedule condition',
-      * **Condition Named** with default  d(lasta.guiSource, ''),
-      * **Condition Typed** with default  'how answered',
-      * **Condition Namee** with default  d(lasta.wasButtonTrial, false),
-      * **Condition Typee** with default  'button trial',
-      * \* **Level (Unit)** with default  unitNum,
-      * \* **Level (Unitname)** with default  d(unitName, ''),
-      * **Problem Name** with default  d(stringifyIfExists(lastq.originalSelectedDisplay), ''),
-      * **Step Name** with default  stepName,
-      * \* **Time** with default  d(lastq.clientSideTimeStamp, 0),
-      * **Selection** with default  '',
-      * **Action** with default  '',
-      * **Input** with default  d(lasta.answer, ''),
-      * **Outcome** with default  d(outcome, null), //answerCorrect recoded as CORRECT or INCORRECT
-      * **Student Response Type** with default  isStudy ? "HINT_REQUEST" : "ATTEMPT", // where is ttype set?
-      * **Student Response Subtype** with default  d(lasta.qtype, ''),
-      * **Tutor Response Type** with default  isStudy ? "HINT_MSG" : "RESULT", // where is ttype set?
-      * **Tutor Response Subtype** with default  '',
-      * **KC (Default)** with default  d(lastq.clusterIndex, -1) + "-" + d(lastq.whichStim, -1) + " " + d(stringifyIfExists(lastq.originalSelectedDisplay), ''),
-      * **KC Category(Default)** with default  '',
-      * **KC (Cluster)** with default  kcCluster,
-      * **KC Category(Cluster)** with default  '',
-      * **CF (GUI Source)** with default d(lasta.guiSource,''),
-      * **CF (Audio Input Enabled)** with default lasta.audioInputEnabled,
-      * **CF (Audio Output Enabled)** with default lasta.audioOutputEnabled,
-      * \* **CF (Display Order)** with default  d(lastq.questionIndex, -1),
-      * **CF (Stim File Index)** with default  d(lastq.clusterIndex, -1),
-      * **CF (Set Shuffled Index)** with default  d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?
-      * **CF (Alternate Display Index)** with default  d(lastq.alternateDisplayIndex, -1),
-      * **CF (Stimulus Version)** with default  whichStim,
-      * **CF (Correct Answer)** with default  correctAnswer,
-      * **CF (Correct Answer Syllables)** with default  currentAnswerSyllablesArray,
-      * **CF (Correct Answer Syllables Count)** with default  currentAnswerSyllableCount,
-      * **CF (Display Syllable Indices)** with default  currentAnswerSyllableIndices,
-      * **CF (Overlearning)** with default  d(lastq.showOverlearningText, false),
-      * \* **CF (Response Time)** with default  d(lasta.clientSideTimeStamp, 0),
-      * **CF (Start Latency)** with default  d(startLatency, 0),
-      * **CF (End Latency)** with default  d(endLatency, 0),
-      * \* **CF (Review Latency)** with default  d(reviewLatency, 0),
-      * **CF (Review Entry)** with default  d(lasta.forceCorrectFeedback, ''),
-      * **CF (Button Order)** with default  d(lasta.buttonOrder, ''),
-      * **CF (Note)** with default  d(note, ''),
-      * **Feedback Text** with default  d(lasta.displayedSystemResponse, ''),
-
-
-
+  | Column Header | Default | Explanation |
+  |---------------|---------|-------------|
+  |* **Anon Student Id**|d(username, '')|Student login value
+  |* **Session ID**|(new Date(d(lastq.clientSideTimeStamp, 0))).toUTCString().substr(0, 16) + " " + tdfName, //hack   |Unique identifier for the particular run of the tdf by the student
+  |* **Condition Namea**|tdfName   |Filename for tdf
+  |* **Condition Typea**|'tdf file'   |DataShop required
+  |* **Condition Nameb**|xcond   |Integer indicating long-term retention condition for this student
+  |* **Condition Typeb**|'xcondition'   |DataShop required
+ |**Condition Namec**|d(schedCondition, '')    |Assessment session provides data on \<assessmentsession> \<unit> condition, i.e. group and template number
+ |**Condition Typec**|'schedule condition' |DataShop required
+ |**Condition Named**|d(lasta.guiSource, '')|Mode of input for the trial (button, keypress, timeout)
+ |**Condition Typed**|'how answered'   |DataShop required
+ |**Condition Namee**|d(lasta.wasButtonTrial, false),
+ |**Condition Typee**|'button trial',
+  |* **Level (Unit)**|unitNum|Integer sequence value for the unit
+  |* **Level (Unitname)**|d(unitName, '')   |Proper name for the unit
+ |**Problem Name**|d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |Text of item or filename of item
+ |**Step Name**|stepName   |Problem Name with preappended with the count for the item for the student
+  |* **Time**|d(lastq.clientSideTimeStamp, 0)   |Time that a trial starts
+ |**Selection**|''   |DataShop required
+ |**Action**|''   |DataShop required
+ |**Input**|d(lasta.answer, '')   |What the student input, for matching with CF (Correct Answer) below to check correctness
+ |**Outcome**|d(outcome, null), //answerCorrect recoded as CORRECT or INCORRECT   |Used by DataShop to for scoring, HINT is also allowable, but not implelented
+ |**Student Response Type**|isStudy ? "HINT_REQUEST" : "ATTEMPT", // where is ttype set?   |Used by DataShop to for scoring
+ |**Student Response Subtype**|d(lasta.qtype, '')  |DataShop required
+ |**Tutor Response Type**|isStudy ? "HINT_MSG" : "RESULT", // where is ttype set?   |Used by DataShop to for scoring
+ |**Tutor Response Subtype**|''   |DataShop required
+ |**KC (Default)**|d(lastq.clusterIndex, -1) + "-" + d(lastq.whichStim, -1) + " " + d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |The item KC, corresponds to verbatim repetitions
+ |**KC Category(Default)**|''   |DataShop required
+ |**KC (Cluster)**|kcCluster   |The grouping KC, used by models to indicate related items
+ |**KC Category(Cluster)**|''   |DataShop required
+ |**CF (GUI Source)** | d(lasta.guiSource,'')   |seems redundant with Condition name D???
+ |**CF (Audio Input Enabled)** | lasta.audioInputEnabled   |Was the student in SR mode?
+ |**CF (Audio Output Enabled)** | lasta.audioOutputEnabled   |Was the student in TTS mode
+ |* **CF (Display Order)**|d(lastq.questionIndex, -1)|Order of the trials within a unit
+ |**CF (Stim File Index)**|d(lastq.clusterIndex, -1)|The integer value of the cluster for the item|
+ |**CF (Set Shuffled Index)**|d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?|Can't figure out why this is needed|
+ |**CF (Alternate Display Index)**|d(lastq.alternateDisplayIndex, -1)|DK|
+ |**CF (Stimulus Version)**|whichStim|Which item of a cluster is displayed|
+ |**CF (Correct Answer)**|correctAnswer|If a drill or test, this is the correct answer to the item|
+ |**CF (Correct Answer Syllables)**|currentAnswerSyllablesArray|For text responses, this is the response segmented into syllables, comma delimited|
+ |**CF (Correct Answer Syllables Count)**|currentAnswerSyllableCount|For text responses, this is the count of syllables in the response|
+ |**CF (Display Syllable Indices)**|currentAnswerSyllableIndices|For text responses, this is the indexes of syllables given as hints|
+ |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all items above the critereon for selection|
+ |* **CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
+ |**CF (Start Latency)**|d(startLatency, 0)|How long it takes from the start of the trial until the student begins typing a response|
+ |**CF (End Latency)**|d(endLatency, 0)|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
+ |* **CF (Review Latency)**|d(reviewLatency, 0)|How long they spent on the review opportunity, study trial, study screen, or study unit|
+ |**CF (Review Entry)**|d(lasta.forceCorrectFeedback, ''),|DK|
+ |**CF (Button Order)**|d(lasta.buttonOrder, ''),|Order of buttons displayed to student for button interfaces|
+ |**CF (Note)**|d(note, '')|DK|
+ |**Feedback Text**|d(lasta.displayedSystemResponse, '')|The text o filename of the feedback|
 
 ---
 
