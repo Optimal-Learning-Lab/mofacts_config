@@ -105,34 +105,36 @@ Stipulations
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
         * And \<deleveryparams> is designated with values
-          * \<'showhistory> with default false,
-          * \<forceCorrection> with default false,
-          * \<scoringEnabled> with default isLearningSession,
-          * \<purestudy> with default 0,
-          * \<initialview> with default 0,
-          * \<drill> with default 0,
-          * \<reviewstudy> with default 0,
-          * \<correctprompt> with default 0,
-          * \<skipstudy> with default false,
-          * \<lockoutminutes> with default 0,
-          * \<fontsize> with default 3,
-          * \<numButtonListImageColumns> with default 2,
-          * \<correctscore> with default 1,
-          * \<incorrectscore> with default 0,
-          * \<practiceseconds> with default 0,
-          * \<autostopTimeoutThreshold> with default 0,
-          * \<autostopTranscriptionAttemptLimit> with default 3,
-          * \<timeuntilaudio' : 0,
-          * \<timeuntilaudiofeedback' : 0,
-          * \<prestimulusdisplaytime' : 0,
-          * \<forcecorrectprompt> with default '',
-          * \<forcecorrecttimeout> with default 0,
-          * \<studyFirst> with default false,
-          * \<enhancedFeedback> with default false,
-          * \<checkOtherAnswers> with default false,
-          * \<feedbackType> with default '',
-          * \<allowFeedbackTypeSelect> with default false,
-          * \<falseAnswerLimit> with default 9999999     
+        | Fields | Default | Explanation |
+        |--------|---------|------------|
+          | \<showhistory> | false| scrolls back the history during practice
+          | \<forceCorrection> | false| forces the student to type the response after feedback
+          | \<scoringEnabled> | isLearningSession| enables scoring in \<learningsession>
+          | \<purestudy> | 0| ms the system presents the item when it is a study only trial
+          | \<initialview> | 0| see TwoPartStim.json and TwoPartOptim.xml, allows 2 stimuli parts for an item, the first of which is shown for initialview ms
+          | \<drill> | 0| ms the system waits before timeout, resets for each keypress to prevent timeouts during responding
+          | \<reviewstudy> | 0| ms the system presents the item after failure in a drill
+          | \<correctprompt> | 0| ms the system presents the icon for correctness for response
+          | \<skipstudy> | false| if true study trials can be skipped by pressing the spacebar
+          | \<lockoutminutes> | 0| the number of minutes that must be waited before the system allows the student to proceed, at which point the \<turkemail> is triggered if present, may occur multiple times as triggered by \<randomizedDelivery> option in \<setspec>
+          | \<fontsize> | 3| CSS font size
+          | \<numButtonListImageColumns> | 2| if using buttonimages, this is how many columns
+          | \<correctscore> | 1| amount score increases for correct response
+          | \<incorrectscore> | 0| amount score decreases for incorrect response
+          | \<practiceseconds> | 0| the duration of practice for a \<learningsession>
+          | \<autostopTimeoutThreshold> | 0| number of sequential timeout trials that triggers return to module select screen
+          | \<autostopTranscriptionAttemptLimit> | 3| ??? try to transcribe a response this many times before marking it a timeout
+          | \<timeuntilaudio' | 0| pause before audio plays before drill or test trials
+          | \<timeuntilaudiofeedback' | 0| pause before audio plays for review and pure study trials
+          | \<prestimulusdisplaytime' | 0| duration of the \<prestimulusDisplay> that is defined in the \<setspec>
+          | \<forcecorrectprompt> | ''| if \<forceCorrection>==true then this is the prompt given to the student
+          | \<forcecorrecttimeout> | 0| ??? if \<forceCorrection>==true then this is the duration before timeout (does this work like drill timer?)
+          | \<studyFirst> | false| if in \<learningsession> give a study trial instead of drill the first time for each item
+          | \<enhancedFeedback> | false| ??? can't find
+          | \<checkOtherAnswers> | false| this will cause it to prevent edit distance checking if the response matches other in set resposes (in case responses are similar you need this)
+          | \<feedbackType> | ''| simple, refutational, and dialogue are possible for cloze
+          | \<allowFeedbackTypeSelect> | false| ??? not sure
+          | \<falseAnswerLimit> | 9999999     | ??? the number of incorrect responses provided for each button trial randomly from other items responses
 
      Then the **trials** will be provided with these parameters
 
@@ -230,7 +232,7 @@ Stipulations
  |**CF (GUI Source)** | d(lasta.guiSource,'')   |seems redundant with Condition name D???
  |**CF (Audio Input Enabled)** | lasta.audioInputEnabled   |Was the student in SR mode?
  |**CF (Audio Output Enabled)** | lasta.audioOutputEnabled   |Was the student in TTS mode
- |* **CF (Display Order)**|d(lastq.questionIndex, -1)|Order of the trials within a unit
+ |**CF (Display Order)**|d(lastq.questionIndex, -1)|Order of the trials within a unit
  |**CF (Stim File Index)**|d(lastq.clusterIndex, -1)|The integer value of the cluster for the item|
  |**CF (Set Shuffled Index)**|d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?|Can't figure out why this is needed|
  |**CF (Alternate Display Index)**|d(lastq.alternateDisplayIndex, -1)|DK|
@@ -240,14 +242,14 @@ Stipulations
  |**CF (Correct Answer Syllables Count)**|currentAnswerSyllableCount|For text responses, this is the count of syllables in the response|
  |**CF (Display Syllable Indices)**|currentAnswerSyllableIndices|For text responses, this is the indexes of syllables given as hints|
  |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all items above the critereon for selection|
- |* **CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
+ |**CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
  |**CF (Start Latency)**|d(startLatency, 0)|How long it takes from the start of the trial until the student begins typing a response|
  |**CF (End Latency)**|d(endLatency, 0)|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
  |* **CF (Review Latency)**|d(reviewLatency, 0)|How long they spent on the review opportunity, study trial, study screen, or study unit|
- |**CF (Review Entry)**|d(lasta.forceCorrectFeedback, ''),|DK|
+ |**CF (Review Entry)**|d(lasta.forceCorrectFeedback, ''),| feedback provided from \<forceCorrection> when turned on|
  |**CF (Button Order)**|d(lasta.buttonOrder, ''),|Order of buttons displayed to student for button interfaces|
- |**CF (Note)**|d(note, '')|DK|
- |**Feedback Text**|d(lasta.displayedSystemResponse, '')|The text o filename of the feedback|
+ |**CF (Note)**|d(note, '')| for error logging|
+ |* **Feedback Text**|d(lasta.displayedSystemResponse, '')|The text o filename of the feedback|
 
 ---
 
