@@ -1,4 +1,5 @@
-
+Specification for MoFaCTS
+===
 
 ## Class Management
 
@@ -6,11 +7,11 @@
 
     As a [**teacher**](#teacherDef) I want to be able to create classes to group students and give them assignments <!-- first time term is encountered, link to a definition -->
 
-    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher,**myteacher*** is on the classEdit page <!-- each leaf requirement has a unique guid --><!-- myteacher is a local variable, useful for referencing the same concept repeatedly in a req -->
+    1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher, ***myteacher*** is on the classEdit page <!-- each leaf requirement has a unique guid --><!-- myteacher is a local variable, useful for referencing the same concept repeatedly in a req -->
 
         And an existing class is not selected
 
-        And a class name,**myclassname*** has been entered in the class name box
+        And a class name, ***myclassname*** has been entered in the class name box
 
         And 0 or more student usernames have been entered into the student login ids box
 
@@ -29,9 +30,9 @@
 
     As a **teacher** I want to be able to edit classes to change which students are associated with them
 
-    1. <a id="47f2ab4e-e1ad-4b4c-88e8-b490fa371d80"></a> Given a teacher,**myteacher*** is on the classEdit page
+    1. <a id="47f2ab4e-e1ad-4b4c-88e8-b490fa371d80"></a> Given a teacher, ***myteacher*** is on the classEdit page
 
-        And an existing class,**myclassname*** is selected
+        And an existing class, ***myclassname*** is selected
 
         Then the student usernames associated with ***myclassname*** are populated into the student login ids box
 
@@ -47,7 +48,7 @@
 
     1. <a id="5748fbfc-78e6-4b22-a7ea-410eb3bb6e6b"></a> Given a teacher is on the classEdit page
 
-        And an existing class,**myclassname*** is selected
+        And an existing class, ***myclassname*** is selected
 
         And ***myteacher*** clicks save class
 
@@ -65,9 +66,9 @@
 
     As a **teacher** I want to be able to edit class assignments to change which tdfs are assigned to a group of students
 
-    1. <a id="f3e02563-fb22-4391-bd06-03c32fc08d14"></a> Given a teacher,**myteacher*** is on the tdfAssignmentEdit page
+    1. <a id="f3e02563-fb22-4391-bd06-03c32fc08d14"></a> Given a teacher, ***myteacher*** is on the tdfAssignmentEdit page
 
-        And an existing class,**myclassname*** is selected
+        And an existing class, ***myclassname*** is selected
 
         Then the tdfs associated with ***myclassname*** are populated into the Selected Chapters box and the chapters available to be assigned are populated into the Available Chapters Box
 
@@ -79,9 +80,9 @@
 
         <!-- stipulations that only apply to one requirement should be put inline with that requirement for ease of readability.  If they get used by another, pull out and ref as already seen -->
 
-    1. <a id="9ca34559-cf4b-4226-befa-3069a5227b88"></a> Given a teacher,**myteacher*** is on the tdfAssignmentEdit page
+    1. <a id="9ca34559-cf4b-4226-befa-3069a5227b88"></a> Given a teacher, ***myteacher*** is on the tdfAssignmentEdit page
 
-        And an existing class,**myclassname*** is selected
+        And an existing class, ***myclassname*** is selected
 
         And ***myteacher*** clicks the save assignment button
 
