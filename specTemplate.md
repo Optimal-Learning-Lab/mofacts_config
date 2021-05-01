@@ -105,9 +105,10 @@ Stipulations
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
         * And \<deleveryparams> is designated with values
+        
         | Fields | Default | Explanation |
         |--------|---------|------------|
-          | \<showhistory> | false| scrolls back the history during practice
+          | \<showhistory> | false| enables scrolling history during practice
           | \<forceCorrection> | false| forces the student to type the response after feedback
           | \<scoringEnabled> | isLearningSession| enables scoring in \<learningsession>
           | \<purestudy> | 0| ms the system presents the item when it is a study only trial
