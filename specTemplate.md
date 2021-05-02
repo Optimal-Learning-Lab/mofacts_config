@@ -110,33 +110,32 @@ Stipulations
         | Fields | Default | Explanation |
         |--------|---------|------------|
           | \<showhistory> | false| enables scrolling history during practice
-          | \<forceCorrection> | false| forces the student to type the response after feedback
-          | \<scoringEnabled> | isLearningSession| enables scoring in \<learningsession>
-          | \<purestudy> | 0| ms the system presents the item when it is a study only trial
-          | \<initialview> | 0| see TwoPartStim.json and TwoPartOptim.xml, allows 2 stimuli parts for an item, the first of which is shown for initialview ms
-          | \<drill> | 0| ms the system waits before timeout, resets for each keypress to prevent timeouts during responding
-          | \<reviewstudy> | 0| ms the system presents the item after failure in a drill
-          | \<correctprompt> | 0| ms the system presents the icon for correctness for response
+          | \<forceCorrection> | false| forces the student to type the correct response after feedback
+          | \<scoringEnabled> | isLearningSession| enables or disables scoring in \<learningsession>
+          | \<purestudy> | 0| time in ms the system presents the [**item**](#itemDef) when it is a study only trial
+          | \<initialview> | 0| see TwoPartStim.json and TwoPartOptim.xml, allows 2 stimuli parts for an [**item**](#itemDef), the first of which is shown for initialview ms
+          | \<drill> | 0| time in ms the system waits before timeout, resets for each keypress to prevent timeouts during responding
+          | \<reviewstudy> | 0| time in ms the system presents the [**item**](#itemDef) after failure in a drill
+          | \<correctprompt> | 0| time in ms the system presents the system icon for the correct response, this is the delay after a correct response before the next trial begins
           | \<skipstudy> | false| if true study trials can be skipped by pressing the spacebar
           | \<lockoutminutes> | 0| the number of minutes that must be waited before the system allows the student to proceed, at which point the \<turkemail> is triggered if present, may occur multiple times as triggered by \<randomizedDelivery> option in \<setspec>
           | \<fontsize> | 3| CSS font size
           | \<numButtonListImageColumns> | 2| if using buttonimages, this is how many columns
           | \<correctscore> | 1| amount score increases for correct response
           | \<incorrectscore> | 0| amount score decreases for incorrect response
-          | \<practiceseconds> | 0| the duration of practice for a \<learningsession>
-          | \<autostopTimeoutThreshold> | 0| number of sequential timeout trials that triggers return to module select screen
-          | \<autostopTranscriptionAttemptLimit> | 3| ??? try to transcribe a response this many times before marking it a timeout
-          | \<timeuntilaudio' | 0| pause before audio plays before drill or test trials
-          | \<timeuntilaudiofeedback' | 0| pause before audio plays for review and pure study trials
-          | \<prestimulusdisplaytime' | 0| duration of the \<prestimulusDisplay> that is defined in the \<setspec>
+          | \<practiceseconds> | 0| the duration of practice for a \<learningsession>, the time after instructions during the unit
+          | \<autostopTimeoutThreshold> | 0| number of sequential trials that have timed out that triggers return to module select screen
+          | \<autostopTranscriptionAttemptLimit> | 3| try to transcribe a response this many times before giving up and forcing a default answer (first button in button trial or FORCEDINCORRECT for text input)
+          | \<timeuntilaudio> | 0| pause before audio plays before study, drill, or test trials
+          | \<timeuntilaudiofeedback> | 0| pause before feedback (review study) audio plays
+          | \<prestimulusdisplaytime> | 0| duration of the \<prestimulusDisplay> that is defined in the \<setspec> in ms
           | \<forcecorrectprompt> | ''| if \<forceCorrection>==true then this is the prompt given to the student
-          | \<forcecorrecttimeout> | 0| ??? if \<forceCorrection>==true then this is the duration before timeout (does this work like drill timer?)
-          | \<studyFirst> | false| if in \<learningsession> give a study trial instead of drill the first time for each item
-          | \<enhancedFeedback> | false| ??? can't find
-          | \<checkOtherAnswers> | false| this will cause it to prevent edit distance checking if the response matches other in set resposes (in case responses are similar you need this)
+          | \<forcecorrecttimeout> | 0| ??? if \<forceCorrection>==true then this is the duration before timeout (works like drill timer)
+          | \<studyFirst> | false| if in \<learningsession> give a study trial instead of drill the first time for each [**item**](#itemDef)
+          | \<checkOtherAnswers> | false| when true this will cause it to do \<lfparameter> edit distance checking if the response matches other in set resposes (in case responses are similar you need this)
           | \<feedbackType> | ''| simple, refutational, and dialogue are possible for cloze
-          | \<allowFeedbackTypeSelect> | false| ??? not sure
-          | \<falseAnswerLimit> | 9999999     | ??? the number of incorrect responses provided for each button trial randomly from other items responses
+          | \<allowFeedbackTypeSelect> | false| This allows users to set the feedbackType above by selecting an option on profile (note they could still choose one and it would be ignored if not set to true)
+          | \<falseAnswerLimit> | 9999999     | ??? the number of incorrect responses provided for each button trial from incorrectResponses array in [**item**](#itemDef)s or buttonOptions in unit declaration  
 
      Then the **trials** will be provided with these parameters
 
@@ -216,8 +215,8 @@ Stipulations
  |**Condition Typee**|'button trial',
   |* **Level (Unit)**|unitNum|Integer sequence value for the unit
   |* **Level (Unitname)**|d(unitName, '')   |Proper name for the unit
- |**Problem Name**|d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |Text of item or filename of item
- |**Step Name**|stepName   |Problem Name with preappended with the count for the item for the student
+ |**Problem Name**|d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |Text of [**item**](#itemDef) or filename of [**item**](#itemDef)
+ |**Step Name**|stepName   |Problem Name with preappended with the count for the [**item**](#itemDef) for the student
   |* **Time**|d(lastq.clientSideTimeStamp, 0)   |Time that a trial starts
  |**Selection**|''   |DataShop required
  |**Action**|''   |DataShop required
@@ -227,23 +226,23 @@ Stipulations
  |**Student Response Subtype**|d(lasta.qtype, '')  |DataShop required
  |**Tutor Response Type**|isStudy ? "HINT_MSG" : "RESULT", // where is ttype set?   |Used by DataShop to for scoring
  |**Tutor Response Subtype**|''   |DataShop required
- |**KC (Default)**|d(lastq.clusterIndex, -1) + "-" + d(lastq.whichStim, -1) + " " + d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |The item KC, corresponds to verbatim repetitions
+ |**KC (Default)**|d(lastq.clusterIndex, -1) + "-" + d(lastq.whichStim, -1) + " " + d(stringifyIfExists(lastq.originalSelectedDisplay), '')   |The [**item**](#itemDef) KC, corresponds to verbatim repetitions
  |**KC Category(Default)**|''   |DataShop required
- |**KC (Cluster)**|kcCluster   |The grouping KC, used by models to indicate related items
+ |**KC (Cluster)**|kcCluster   |The grouping KC, used by models to indicate related [**item**](#itemDef)s
  |**KC Category(Cluster)**|''   |DataShop required
  |**CF (GUI Source)** | d(lasta.guiSource,'')   |seems redundant with Condition name D???
  |**CF (Audio Input Enabled)** | lasta.audioInputEnabled   |Was the student in SR mode?
  |**CF (Audio Output Enabled)** | lasta.audioOutputEnabled   |Was the student in TTS mode
  |**CF (Display Order)**|d(lastq.questionIndex, -1)|Order of the trials within a unit
- |**CF (Stim File Index)**|d(lastq.clusterIndex, -1)|The integer value of the cluster for the item|
+ |**CF (Stim File Index)**|d(lastq.clusterIndex, -1)|The integer value of the cluster for the [**item**](#itemDef)|
  |**CF (Set Shuffled Index)**|d(lastq.shufIndex, d(lastq.clusterIndex, -1)), //why?|Can't figure out why this is needed|
  |**CF (Alternate Display Index)**|d(lastq.alternateDisplayIndex, -1)|DK|
- |**CF (Stimulus Version)**|whichStim|Which item of a cluster is displayed|
- |**CF (Correct Answer)**|correctAnswer|If a drill or test, this is the correct answer to the item|
+ |**CF (Stimulus Version)**|whichStim|Which [**item**](#itemDef) of a cluster is displayed|
+ |**CF (Correct Answer)**|correctAnswer|If a drill or test, this is the correct answer to the [**item**](#itemDef)|
  |**CF (Correct Answer Syllables)**|currentAnswerSyllablesArray|For text responses, this is the response segmented into syllables, comma delimited|
  |**CF (Correct Answer Syllables Count)**|currentAnswerSyllableCount|For text responses, this is the count of syllables in the response|
  |**CF (Display Syllable Indices)**|currentAnswerSyllableIndices|For text responses, this is the indexes of syllables given as hints|
- |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all items above the critereon for selection|
+ |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all [**item**](#itemDef)s above the critereon for selection|
  |**CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
  |**CF (Start Latency)**|d(startLatency, 0)|How long it takes from the start of the trial until the student begins typing a response|
  |**CF (End Latency)**|d(endLatency, 0)|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
@@ -266,7 +265,7 @@ Stipulations
 ## Appendix B - Notes
 
   <!-- AT: html tags are interpreted so you have to escape them to display them literally with \ prepended as below; you may want to open the atom markdown preview side-by-side to make sure it displays as you desire -->
-  <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it        *    \<s about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next item for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
+  <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it        *    \<s about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next [**item**](#itemDef) for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
   <!-- lots of things are not yet done. try to tell me about any explicit errors (not omissions as much, except perhaps to just list what you want added next). How high priority are the definitions? Many many things could be defined-->
   <!-- how should I specify xml fields, should they be defined? where? -->
   <!-- AT: For now just make a list of all required and all optional tags/values for tags and I'll pick out the important ones to delve into to save you specifying all of them.  In general for this cycle try to aim for breadth before depth and I'll try to help guide where reqs are most useful to optimize your time usage. -->
