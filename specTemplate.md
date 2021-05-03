@@ -107,8 +107,8 @@ Stipulations
 
         * And \<deleveryparams> is designated with values
         
-        | Fields | Default | Explanation |
-        |--------|---------|------------|
+          | Fields | Default | Explanation |
+          |--------|---------|------------|
           | \<showhistory> | false| enables scrolling history during practice
           | \<forceCorrection> | false| forces the student to type the correct response after feedback
           | \<scoringEnabled> | isLearningSession| enables or disables scoring in \<learningsession>
