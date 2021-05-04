@@ -99,6 +99,73 @@ Stipulations
 
 ## Content Module Setup
 
+1. \<setspec> parameters
+
+    As a [**teacher**](#teacherDef) I want to be able to create a module in a [**tdf**](#tdfDef) that has certain features (qualitative and quantitative) for 1 or more subsequent units
+
+    1. Given a teacher, [**teacher**](#teacherDef) designates a tdf file 
+
+        * And \<setspec> is designated
+        
+            | Fields | Default | Explanation |
+            |--------|---------|------------|
+            | \<name> |  |
+            | \<lessonname> |  |
+            | \<userselect> |  |
+            | \<stimulusfile> |  |
+            | \<isModeled> |  |
+            | \<lfparameter> |  |
+            | \<simTimeout> |  |
+            | \<simCorrectProb> |  |
+            | \<speechAPIKey> |  |
+            | \<audioInputEnabled> |  |
+            | \<audioInputSensitivity> |  |
+            | \<speechIgnoreOutOfGrammarResponses> |  |
+            | \<speechOutOfGrammarFeedback> |  |
+            | \<enableAudioPromptAndFeedback> |  |
+            | \<audioPromptSpeakingRate> |  |
+            | \<textToSpeechAPIKey> |  |
+            | \<shuffleclusters> |  |
+            | \<experimentTarget> |  |
+            | \<clustermodel> |  |
+            | \<clustersize> |  |
+            | \<swapclusters> |  |
+            | \<randomizedDelivery> |  |
+            | \<condition> |  |
+            | \<experimentPasswordRequired> |  |
+            | \<prestimulusDisplay> |  |
+          
+     Then the \<units> will be provided with these parameters
+
+1. \<unit> parameters
+
+    As a [**teacher**](#teacherDef) I want to be able to create a unit in a [**tdf**](#tdfDef) of content where the unit has certain features (qualitative and quantitative.)
+
+    1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file 
+
+        * And \<deleveryparams> is designated with values
+        
+            | Fields | Default | Explanation |
+            |--------|---------|------------|
+            | \<unitname> |  |
+            | \<unitinstructions> |  |
+            | \<buttonorder> |  |
+            | \<deliveryparams> |  |
+            | \<buttontrial> |  |
+            | \<assessmentsession> |  |
+            | \<learningsession> |  |
+            | \<buttonOptions> |  |
+            | \<instructionminseconds> |  |
+            | \<instructionmaxseconds> |  |
+            | \<turkemailsubject> |  |
+            | \<turkemail> |  |
+            | \<turkbonus> |  |
+            | \<picture> |  |
+            | \<turkpay> |  |
+            | \<turkminscore> |  |
+          
+     Then the **trials** will be provided with these parameters
+
 1. Trial delivery \<unit> parameters
 
     As a [**teacher**](#teacherDef) I want to be able to create a unit in a [**tdf**](#tdfDef) of content where each trial has certain features (qualitative and quantitative.)
@@ -154,6 +221,9 @@ Stipulations
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>
+        * And the following optional tags are specified for the \<learningsession>:
+          * \<displayminseconds>
+          * \<displaymaxseconds>
 
       Then the **tdf** \<learningsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<learningsession> unit to occur in the ordered sequence of units for the tdf.                  
 
@@ -165,8 +235,8 @@ Stipulations
 
         * And the following required tags are specified for \<unit>:
           * \<deleveryparams>
-          * \<conditiontemplatesbygroup
         * And the following required tags are specified for \<assessmentsession>:
+          * \<conditiontemplatesbygroup
           * \<initialpositions>
           * \<randomizegroups>
           * \<clusterlist>
