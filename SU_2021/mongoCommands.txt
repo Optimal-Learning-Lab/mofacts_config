@@ -1,0 +1,10 @@
+mongoexport --jsonArray --db MoFaCT --collection tdfs --out tdfs.json
+mongoexport --jsonArray --db MoFaCT --collection stimuli --out stimuli.json
+
+mongoimport --db MoFaCT --collection stimuli ./SU_2021_Stimuli.json --jsonArray --mode=upsert
+mongoimport --db MoFaCT --collection tdfs ./SU_2021_Tdfs.json --jsonArray --mode=upsert
+
+
+mongoimport --collection stimuli  --jsonArray --mode=upsert --uri="mongodb://xxx" ./SU_2021_Stimuli.json
+
+mongoimport --collection tdfs --jsonArray --mode=upsert --uri="mongodb://xxx" ./SU_2021_Tdfs.json 
