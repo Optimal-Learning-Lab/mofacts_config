@@ -109,31 +109,31 @@ Stipulations
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<name> |  |
-            | \<lessonname> |  |
-            | \<userselect> |  |
-            | \<stimulusfile> |  |
-            | \<isModeled> |  |
-            | \<lfparameter> |  |
-            | \<simTimeout> |  |
-            | \<simCorrectProb> |  |
-            | \<speechAPIKey> |  |
-            | \<audioInputEnabled> |  |
-            | \<audioInputSensitivity> |  |
+            | \<name> |  |Short name
+            | \<lessonname> | |Full name, punctuated as needed
+            | \<userselect> | False | True indicates the tdf should be on the main page
+            | \<stimulusfile> |  | Filename for stimulus list for tdf
+            | \<isModeled> |  | ? not sure
+            | \<lfparameter> | 1  | set from 0 to 1 which indicates the percentage of the response characters for string responses that need to be correct (?round up or down)
+            | \<simTimeout> |  | ? How many millisecond simulation takes per simulated test
+            | \<simCorrectProb> |  | Chance that each simulated trials is correctly responded to
+            | \<speechAPIKey> |  | Google SR API key
+            | \<audioInputEnabled> |  | Whether SR is available
+            | \<audioInputSensitivity> |  | Setting for microphone gain
             | \<speechIgnoreOutOfGrammarResponses> |  |
             | \<speechOutOfGrammarFeedback> |  |
             | \<enableAudioPromptAndFeedback> |  |
             | \<audioPromptSpeakingRate> |  |
-            | \<textToSpeechAPIKey> |  |
-            | \<shuffleclusters> |  |
-            | \<experimentTarget> |  |
-            | \<clustermodel> |  |
-            | \<clustersize> |  |
-            | \<swapclusters> |  |
-            | \<randomizedDelivery> |  |
-            | \<condition> |  |
-            | \<experimentPasswordRequired> |  |
-            | \<prestimulusDisplay> |  |
+            | \<textToSpeechAPIKey> |  | Google TTS API key
+            | \<shuffleclusters> |  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
+            | \<experimentTarget> |  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
+            | \<clustermodel> |  | ? is this used still
+            | \<clustersize> |  | ? is this in the code still
+            | \<swapclusters> |  | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
+            | \<randomizedDelivery> |  | ? not sure
+            | \<condition> |  | ? not sure
+            | \<experimentPasswordRequired> |  | ? not sure
+            | \<prestimulusDisplay> |  | String for the intertrial prompt before each trial (duration specificied in delivery params) 
           
      Then the \<units> will be provided with these parameters
 
