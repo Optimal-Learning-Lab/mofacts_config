@@ -147,12 +147,12 @@ Stipulations
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<unitname> |  |
-            | \<unitinstructions> |  |
-            | \<buttonorder> |  |
-            | \<deliveryparams> |  |
-            | \<buttontrial> |  |
-            | \<assessmentsession> |  |
+            | \<unitname> |  | For tracking of data
+            | \<unitinstructions> |  | Displayed with continue button
+            | \<buttonorder> |  | Order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
+            | \<deliveryparams> |  | Set of values described below
+            | \<buttontrial> |  | Whether the trials are displayed on the button interface if it is a learning session
+            | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
             | \<learningsession> |  |
             | \<buttonOptions> |  |
             | \<instructionminseconds> |  |
