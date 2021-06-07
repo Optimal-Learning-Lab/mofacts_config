@@ -153,16 +153,16 @@ Stipulations
             | \<deliveryparams> |  | Set of values described below
             | \<buttontrial> |  | Whether the trials are displayed on the button interface if it is a learning session
             | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
-            | \<learningsession> |  |
-            | \<buttonOptions> |  |
-            | \<instructionminseconds> |  |
-            | \<instructionmaxseconds> |  |
-            | \<turkemailsubject> |  |
-            | \<turkemail> |  |
-            | \<turkbonus> |  |
-            | \<picture> |  |
-            | \<turkpay> |  |
-            | \<turkminscore> |  |
+            | \<learningsession> |  | Set of values describing control by a selection algorithm
+            | \<buttonOptions> |  | ?
+            | \<instructionminseconds> |  | This is the mininmum time the student may may view the instructions (to better ensure reading)
+            | \<instructionmaxseconds> |  | This is the maximuum time the student may may view the instructions (to standardize instruction)
+            | \<turkemailsubject> |  | Subject for a Amazon Turk message when 
+            | \<turkemail> |  | Contents of email
+            | \<turkbonus> |  | Amount of the Amazon Turk bonus triggered if unit is reached
+            | \<picture> |  | image presented with the unit instructions
+            | \<turkpay> |  | ?
+            | \<turkminscore> |  | ?
           
      Then the **trials** will be provided with these parameters
 
