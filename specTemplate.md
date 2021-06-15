@@ -332,7 +332,78 @@ Stipulations
 
 ---
 
-## Appendix B - Notes
+## Appendix B -Testing
+
+### Student side testing (primarily learning sessions, and student reports)
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
+2.Login to the ppavlik@sw.tn.edu
+> [name=Andrew Tackett] We don't tell them which class/section to login to.  Are we assuming teacher side testing comes before student testing?
+3. Proceed to available chapters
+4. Choose the first 1, and select all items
+5. Practice for 50 trials
+> [name=Andrew Tackett] I'm not sure if this needs to be said but we should have them test both the right answer and the wrong answer sometimes.  I assume wrong answer is easy to do so we may have to instruct them to try to get some right.
+6. Check progress report 
+> [name=Andrew Tackett] What are they checking the progress report for?  Just that it doesn't look broken? Or that no probs are null?  They'll probably need a bit more guidance
+7. Navigate to home
+8. Close the browser
+9. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+> [name=Andrew Tackett] Notice how numbering is auto incremented, if you want to force it to reset you need to separate the lists or indent them.  I might split these up into various "tasks" A1-A10, B1-B10, etc. so you can have them refer to the exact step number a bug happened on. Also makes it feel like less work/more manageable
+10. Use same login
+3. Proceed to available chapters
+4. Choose the same one, and select all items again
+5. Practice for 20 trials
+7. Navigate to home
+6. Check progress report
+7. Navigate to home
+1. Proceed to available chapters
+4. Choose the same one, and select all items again
+5. Practice for 5 trials
+7. Navigate to home
+1. Proceed to available chapters
+4. Choose the same one, and select high priority again
+> [name=Andrew Tackett] High priority is only listed once here, also we may want to have them test other subtdfs than all or high priority, perhaps give them a choice at certain testing steps to probabilistically cover various paths with more testers
+23. Practice for 5 trials
+6. Go to home
+7. Select survey link
+8. Complete survey 
+9. Report ANY issues and test user id to Pavlik et al. in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
+> [name=Andrew Tackett] I would have a standard procedure for reporting errors.  First have them submit an error report in the app.  Also have them submit (in the error report or slack): what they were doing (reproduction steps or at least the exact step they were on in the manual test case), what appeared to happen, and what they expected to happen.  Ideal would be getting them to try to reproduce it again and submit another error report if they do.  In any case if they encounter an error they should immediately submit an error report and stop that run and start again with a new user id (to help preserve the last state they errored in in the logs and db).  If they've already encountered the error on that step of the test case before and submitted an error report they can proceed (just to help gather more data so we might get multiple bugs fixed at once)
+> [name=Andrew Tackett] I don't see anything that tests audio input/output or the simple/refutational/dialogue feedbacktypes
+
+### Experiment side testing (primarily new experiments)
+1. Go through all the trials at experiment link being tested
+2. Check data to confirm
+
+### Teacher side testing (primarily content gen, assignement, and student reports)
+1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+2. Use content creation to create a chapter with an unchanged template (no delete or edit), call it something with your initials and the current date
+3. Use content creation again to create a chapter with an changed template (delete at least 1 item and edit at least 1), call it something with your initials and the word edited
+4. Again use content creation to create a third chapter, but try a few things, like sorting and unsorting and editing and deleting. 
+> [name=Andrew Tackett] I think adding a third chapter where we have them try sorting, unsorting, and just doing a bunch of random things in random order essentially to test various combinations of UI state to make sure there's no bugs in the content gen tool view logic
+3. Create a class section
+4. Assign the chapters to the section
+5. Login as student tester to your teacher link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+6. Select your ID, then select the class section you created without edits
+7. Select all items and do a few trials, check the progress report and then go to home
+8. Select the class section you created without edits again
+9. Select high priority items and do a few trials
+10. Repeat for the other chapter with edits
+11. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+12. Go to teacher reports and inspect the progress report for the class you created. confirm that the practice is reported
+13. Select the student and drill down to their individual report, look for obvious glitches and confirm totals are same as the main group report
+13. Confirm that if you set a time filter for before the time you practiced the practice is NOT reported
+14. Create records for a new student on the next day and again check progress reporter with time filter to show the old student but not the new one
+> [name=Andrew Tackett] The time filters are by date so we may want/need to define testing over a several day period to cover the time filter testing
+> [name=Andrew Tackett] We might want to add them testing with a second student id here just to explore reporting with multiple students.  The totals would be more tested that way for instance.
+
+### Admin side testing (primarliy data download)
+1. Download data from all the tests above
+3. Confirm downloads, trials are in chronological sequence, shows student response, shows student correctness, shows latencies of actions, show problem and answer, show hints, show time, show tdf used, show student login
+    
+---
+
+## Appendix C - Notes
 
   <!-- AT: html tags are interpreted so you have to escape them to display them literally with \ prepended as below; you may want to open the atom markdown preview side-by-side to make sure it displays as you desire -->
   <!-- AT: The first req seems good.  The one below needs a little work. It would seem from the userStory that it        *    \<s about the unitMode parameter but you end up specifying how to make a learningsession unit.  Assuming you meant the former (which is a big assumption on my part and I make just to be illustrative now), clusterlist and calculateProbability aren't, strictly speaking, relevant to unitMode I believe. Also the end result would be the effect of the unitMode tag, i.e. changing the way the probability is calculated to select the next [**item**](#itemDef) for a trial. I would start by defining the necessary parts of a learningsession, then specify any optional parts the are often used and their effects. For the optional parts you would then refer back to the necessary tags as a prerequisite (using the GUID, which for now you can just make up random strings and we'll make it real GUIDs later) and any optional tags required for that tag specifically. -->
@@ -345,8 +416,6 @@ Stipulations
   <!-- AT: the stipulation refs won't update automatically, they have to be copied.  The automatic numbering of the 1. 's would change every time we move a stipulation so we have to manually specify them. Strictly speaking they just need unique identifiers, not sequential numbers, but numbers seemed easier to talk about. -->
   <!-- AT: I can't think of any stipulations needed yet as I don't think we're far enough into the specifics to need them. -->
 
-
-  Markdown preview: https://jbt.github.io/markdown-editor/
 
   GUID generator: https://richardkundl.github.io/shortguid/ (Generate GUID, not short GUID)
 
