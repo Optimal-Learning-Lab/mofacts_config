@@ -334,37 +334,49 @@ Stipulations
 
 ## Appendix B -Testing
 
+### Error Reporting Procedure (in the app)
+* what you were doing (and step if using procedure below)
+* what happened
+* what you expected
+* resume testing after reporting the error if it is minor enough
+
 ### Student side testing (primarily learning sessions, and student reports)
+#### Part 1
 1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
 1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
-2.Login to the ppavlik@sw.tn.edu
+2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9
 > [name=Andrew Tackett] We don't tell them which class/section to login to.  Are we assuming teacher side testing comes before student testing?
 3. Proceed to available chapters
 4. Choose the first 1, and select all items
-5. Practice for 50 trials
+5. Practice until you start seeing repetitions, make sure you get some right an wrong, the best test is to practice like a real student with effort
 > [name=Andrew Tackett] I'm not sure if this needs to be said but we should have them test both the right answer and the wrong answer sometimes.  I assume wrong answer is easy to do so we may have to instruct them to try to get some right.
-6. Check progress report 
+6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
 > [name=Andrew Tackett] What are they checking the progress report for?  Just that it doesn't look broken? Or that no probs are null?  They'll probably need a bit more guidance
 7. Navigate to home
 8. Close the browser
-9. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+
+#### Part 2
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
 > [name=Andrew Tackett] Notice how numbering is auto incremented, if you want to force it to reset you need to separate the lists or indent them.  I might split these up into various "tasks" A1-A10, B1-B10, etc. so you can have them refer to the exact step number a bug happened on. Also makes it feel like less work/more manageable
-10. Use same login
+2. Use same login
 3. Proceed to available chapters
 4. Choose the same one, and select all items again
-5. Practice for 20 trials
+1. Practice for 20 trials
 7. Navigate to home
 6. Check progress report
 7. Navigate to home
 1. Proceed to available chapters
-4. Choose the same one, and select all items again
+2. Choose SR and/or TTS for input and output on home screen
+4. Choose the same chapter, and select all items again
 5. Practice for 5 trials
 7. Navigate to home
 1. Proceed to available chapters
 4. Choose the same one, and select high priority again
 > [name=Andrew Tackett] High priority is only listed once here, also we may want to have them test other subtdfs than all or high priority, perhaps give them a choice at certain testing steps to probabilistically cover various paths with more testers
-23. Practice for 5 trials
-6. Go to home
+15. Practice for 5 trials
+
+#### Part 3
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
 7. Select survey link
 8. Complete survey 
 9. Report ANY issues and test user id to Pavlik et al. in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
