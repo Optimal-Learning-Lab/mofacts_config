@@ -1,6 +1,77 @@
-Specification for MoFaCTS
+Testing and Specification for MoFaCTS
 ===
+---
 
+# Testing
+## Error Reporting Procedure (using the button for reporting in the app)
+* what you were doing (and step if using procedure below)
+* what happened
+* what you expected
+* resume testing after reporting the error if it is minor enough
+* if it is severe/important, reproduce it and submit a second error report
+* open a thread about it here in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
+
+## Student side testing (primarily learning sessions, and student reports)
+### Part A
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
+2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9 or 10
+3. Proceed to available chapters
+4. Choose the first 1, and select all items
+5. Practice until you start seeing repetitions, make sure you get some right and wrong, the best test is to practice like a real student with effort
+6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
+7. Navigate to home
+8. Close the browser
+
+### Part B
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+2. Use same login
+3. Proceed to available chapters
+4. Choose the same one
+7. Navigate to home
+6. Check progress report
+7. Navigate to home
+1. Proceed to available chapters
+2. Choose SR and/or TTS for input and output on home screen
+4. Choose the same chapter
+5. Practice for 5 trials
+7. Navigate to home
+1. Proceed to available chapters
+3. Choose refutation and/or dialogue feedback on home screen
+4. Choose the same chapter again
+15. Practice for 5 trials
+
+### Part C
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+7. Select survey link
+8. Complete survey 
+
+## Experiment side testing (primarily new experiments)
+1. Upload TDF and stim file
+2. Go through all the trials at experiment link being tested
+3. Check data to confirm
+
+## Teacher side testing (assignements and teacher progress reports)
+1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+3. Create a class section
+4. Assign the chapters to the section
+5. Login as student tester to your teacher link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+6. Select your ID, then select the class section and then chapter you created
+7. Do a few trials, check the progress report and then go to home
+9. Do a few trials
+10. Repeat for the other chapter with edits
+11. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+12. Go to teacher reports and inspect the progress report for the class you created. confirm that the practice is reported
+13. Select the student and drill down to their individual report, look for obvious glitches and confirm totals are same as the main group report
+13. Confirm that if you set a time filter for before the time you practiced the practice is NOT reported
+14. Create records for a new student on the next day and again check progress reporter with time filter to show the old student but not the new one
+
+## Admin side testing (data download)
+1. Download data from all the tests above
+3. Confirm downloads, trials are in chronological sequence, shows student response, shows student correctness, shows latencies of actions, show problem and answer, show hints, show time, show tdf used, show student login
+    
+---
+# Specification
 ## Class Management
 
 1. Class creation <!-- Notice all numbered lists are "1.", markdown auto numbers for us -->
@@ -143,7 +214,7 @@ Stipulations
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file 
 
-        * And \<deleveryparams> is designated with values
+        * And \<deliveryparams> is designated with values
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
@@ -154,15 +225,13 @@ Stipulations
             | \<buttontrial> |  | Whether the trials are displayed on the button interface if it is a learning session
             | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
             | \<learningsession> |  | Set of values describing control by a selection algorithm
-            | \<buttonOptions> |  | ?
+            | \<buttonOptions> |  | If options for button trial the fixed set is a comma delimited list here
             | \<instructionminseconds> |  | This is the mininmum time the student may may view the instructions (to better ensure reading)
             | \<instructionmaxseconds> |  | This is the maximuum time the student may may view the instructions (to standardize instruction)
             | \<turkemailsubject> |  | Subject for a Amazon Turk message when 
             | \<turkemail> |  | Contents of email
             | \<turkbonus> |  | Amount of the Amazon Turk bonus triggered if unit is reached
             | \<picture> |  | image presented with the unit instructions
-            | \<turkpay> |  | ?
-            | \<turkminscore> |  | ?
           
      Then the **trials** will be provided with these parameters
 
@@ -186,7 +255,7 @@ Stipulations
           | \<correctprompt> | 0| time in ms the system presents the system icon for the correct response, this is the delay after a correct response before the next trial begins
           | \<skipstudy> | false| if true study trials can be skipped by pressing the spacebar
           | \<lockoutminutes> | 0| the number of minutes that must be waited before the system allows the student to proceed, at which point the \<turkemail> is triggered if present, may occur multiple times as triggered by \<randomizedDelivery> option in \<setspec>
-          | \<fontsize> | 3| CSS font size
+          | \<fontsize> | 3| CSS font size (second part of a tag that is one of h1-h6)
           | \<numButtonListImageColumns> | 2| if using buttonimages, this is how many columns
           | \<correctscore> | 1| amount score increases for correct response
           | \<incorrectscore> | 0| amount score decreases for incorrect response
@@ -332,88 +401,6 @@ Stipulations
 
 ---
 
-## Appendix B -Testing
-
-### Error Reporting Procedure (in the app)
-* what you were doing (and step if using procedure below)
-* what happened
-* what you expected
-* resume testing after reporting the error if it is minor enough
-
-### Student side testing (primarily learning sessions, and student reports)
-#### Part 1
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
-1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
-2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9
-> [name=Andrew Tackett] We don't tell them which class/section to login to.  Are we assuming teacher side testing comes before student testing?
-3. Proceed to available chapters
-4. Choose the first 1, and select all items
-5. Practice until you start seeing repetitions, make sure you get some right an wrong, the best test is to practice like a real student with effort
-> [name=Andrew Tackett] I'm not sure if this needs to be said but we should have them test both the right answer and the wrong answer sometimes.  I assume wrong answer is easy to do so we may have to instruct them to try to get some right.
-6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
-> [name=Andrew Tackett] What are they checking the progress report for?  Just that it doesn't look broken? Or that no probs are null?  They'll probably need a bit more guidance
-7. Navigate to home
-8. Close the browser
-
-#### Part 2
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
-> [name=Andrew Tackett] Notice how numbering is auto incremented, if you want to force it to reset you need to separate the lists or indent them.  I might split these up into various "tasks" A1-A10, B1-B10, etc. so you can have them refer to the exact step number a bug happened on. Also makes it feel like less work/more manageable
-2. Use same login
-3. Proceed to available chapters
-4. Choose the same one, and select all items again
-1. Practice for 20 trials
-7. Navigate to home
-6. Check progress report
-7. Navigate to home
-1. Proceed to available chapters
-2. Choose SR and/or TTS for input and output on home screen
-4. Choose the same chapter, and select all items again
-5. Practice for 5 trials
-7. Navigate to home
-1. Proceed to available chapters
-4. Choose the same one, and select high priority again
-> [name=Andrew Tackett] High priority is only listed once here, also we may want to have them test other subtdfs than all or high priority, perhaps give them a choice at certain testing steps to probabilistically cover various paths with more testers
-15. Practice for 5 trials
-
-#### Part 3
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
-7. Select survey link
-8. Complete survey 
-9. Report ANY issues and test user id to Pavlik et al. in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
-> [name=Andrew Tackett] I would have a standard procedure for reporting errors.  First have them submit an error report in the app.  Also have them submit (in the error report or slack): what they were doing (reproduction steps or at least the exact step they were on in the manual test case), what appeared to happen, and what they expected to happen.  Ideal would be getting them to try to reproduce it again and submit another error report if they do.  In any case if they encounter an error they should immediately submit an error report and stop that run and start again with a new user id (to help preserve the last state they errored in in the logs and db).  If they've already encountered the error on that step of the test case before and submitted an error report they can proceed (just to help gather more data so we might get multiple bugs fixed at once)
-> [name=Andrew Tackett] I don't see anything that tests audio input/output or the simple/refutational/dialogue feedbacktypes
-
-### Experiment side testing (primarily new experiments)
-1. Go through all the trials at experiment link being tested
-2. Check data to confirm
-
-### Teacher side testing (primarily content gen, assignement, and student reports)
-1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
-2. Use content creation to create a chapter with an unchanged template (no delete or edit), call it something with your initials and the current date
-3. Use content creation again to create a chapter with an changed template (delete at least 1 item and edit at least 1), call it something with your initials and the word edited
-4. Again use content creation to create a third chapter, but try a few things, like sorting and unsorting and editing and deleting. 
-> [name=Andrew Tackett] I think adding a third chapter where we have them try sorting, unsorting, and just doing a bunch of random things in random order essentially to test various combinations of UI state to make sure there's no bugs in the content gen tool view logic
-3. Create a class section
-4. Assign the chapters to the section
-5. Login as student tester to your teacher link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
-6. Select your ID, then select the class section you created without edits
-7. Select all items and do a few trials, check the progress report and then go to home
-8. Select the class section you created without edits again
-9. Select high priority items and do a few trials
-10. Repeat for the other chapter with edits
-11. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
-12. Go to teacher reports and inspect the progress report for the class you created. confirm that the practice is reported
-13. Select the student and drill down to their individual report, look for obvious glitches and confirm totals are same as the main group report
-13. Confirm that if you set a time filter for before the time you practiced the practice is NOT reported
-14. Create records for a new student on the next day and again check progress reporter with time filter to show the old student but not the new one
-> [name=Andrew Tackett] The time filters are by date so we may want/need to define testing over a several day period to cover the time filter testing
-> [name=Andrew Tackett] We might want to add them testing with a second student id here just to explore reporting with multiple students.  The totals would be more tested that way for instance.
-
-### Admin side testing (primarliy data download)
-1. Download data from all the tests above
-3. Confirm downloads, trials are in chronological sequence, shows student response, shows student correctness, shows latencies of actions, show problem and answer, show hints, show time, show tdf used, show student login
-    
----
 
 ## Appendix C - Notes
 
