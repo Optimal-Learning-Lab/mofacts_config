@@ -4,6 +4,7 @@ Testing and Specification for MoFaCTS
 
 # Testing
 ## Error Reporting Procedure (using the button for reporting in the app)
+* check current errors: https://github.com/memphis-iis/mofacts-ies/milestone/15
 * what you were doing (and step if using procedure below)
 * what happened
 * what you expected
@@ -51,7 +52,7 @@ Testing and Specification for MoFaCTS
 2. Go through all the trials at experiment link being tested
 3. Check data to confirm
 
-## Teacher side testing (assignements and teacher progress reports)
+## Teacher side testing (assignments and teacher progress reports)
 1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
 3. Create a class section
 4. Assign the chapters to the section
@@ -182,28 +183,25 @@ Stipulations
             |--------|---------|------------|
             | \<name> |  |Short name
             | \<lessonname> | |Full name, punctuated as needed
-            | \<userselect> | False | True indicates the tdf should be on the main page
+            | \<userselect> | False | True indicates the tdf should be displayed on the main page
             | \<stimulusfile> |  | Filename for stimulus list for tdf
-            | \<isModeled> |  | ? not sure
             | \<lfparameter> | 1  | set from 0 to 1 which indicates the percentage of the response characters for string responses that need to be correct (?round up or down)
-            | \<simTimeout> |  | ? How many millisecond simulation takes per simulated test
-            | \<simCorrectProb> |  | Chance that each simulated trials is correctly responded to
+            | \<simTimeout> | integer >0 | How many millisecond simulation takes per simulated test
+            | \<simCorrectProb> | range from 0 to 1 | Chance that each simulated trials is correctly responded to
             | \<speechAPIKey> |  | Google SR API key
-            | \<audioInputEnabled> |  | Whether SR is available
+            | \<audioInputEnabled> | False | Whether SR is available
             | \<audioInputSensitivity> |  | Setting for microphone gain
-            | \<speechIgnoreOutOfGrammarResponses> |  |
-            | \<speechOutOfGrammarFeedback> |  |
-            | \<enableAudioPromptAndFeedback> |  |
-            | \<audioPromptSpeakingRate> |  |
+            | \<speechIgnoreOutOfGrammarResponses> |  | Boolean, whether to ignore and force users to try again if we transcribe a response not within the answer set of a tdf while using speech to text
+            | \<speechOutOfGrammarFeedback> |  | Message to display if an answer not in the answer set is found in the case that speechIgnoreOutOfGrammarResponses is set to true
+            | \<enableAudioPromptAndFeedback> |False| Boolean to enable/disable text to speech
+            | \<audioPromptSpeakingRate> | 1 |Value from 0.1 to 2 for the speed of text to speech. Acts as percentage relative to 1
             | \<textToSpeechAPIKey> |  | Google TTS API key
             | \<shuffleclusters> |  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
             | \<experimentTarget> |  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
             | \<clustermodel> |  | ? is this used still
-            | \<clustersize> |  | ? is this in the code still
             | \<swapclusters> |  | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
-            | \<randomizedDelivery> |  | ? not sure
+            | \<randomizedDelivery> |  | This is the count for how many retention interval conditions the tdf contains. It requires a unit of the tdf to have retention interval marks equal to the count in a unit as follows: \<deliveryparams> \<lockoutminutes># of minutes here</lockoutminutes> \</deliveryparams>		
             | \<condition> |  | ? not sure
-            | \<experimentPasswordRequired> |  | ? not sure
             | \<prestimulusDisplay> |  | String for the intertrial prompt before each trial (duration specificied in delivery params) 
           
      Then the \<units> will be provided with these parameters
@@ -222,7 +220,7 @@ Stipulations
             | \<unitinstructions> |  | Displayed with continue button
             | \<buttonorder> |  | Order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
             | \<deliveryparams> |  | Set of values described below
-            | \<buttontrial> |  | Whether the trials are displayed on the button interface if it is a learning session
+            | \<buttontrial> | False | Whether the trials are displayed on the button interface if it is a learning session
             | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
             | \<learningsession> |  | Set of values describing control by a selection algorithm
             | \<buttonOptions> |  | If options for button trial the fixed set is a comma delimited list here
@@ -241,7 +239,7 @@ Stipulations
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
-        * And \<deleveryparams> is designated with values
+        * And \<deliveryparams> is designated with values
         
           | Fields | Default | Explanation |
           |--------|---------|------------|
@@ -282,7 +280,7 @@ Stipulations
     1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher designates a unit \<unit> of content in a tdf file with the \<learningsession> tag
 
         * And the following required tags are specified for the \<unit>:
-          * \<deleveryparams>
+          * \<deliveryparams>
         * And the following required tags are specified for the \<learningsession>:
           * \<clusterlist>
           * \<unitMode>
@@ -303,9 +301,9 @@ Stipulations
     1. Given a teacher designates a unit \<unit> of content in a tdf file with the \<assessmentsession> tag
 
         * And the following required tags are specified for \<unit>:
-          * \<deleveryparams>
+          * \<deliveryparams>
         * And the following required tags are specified for \<assessmentsession>:
-          * \<conditiontemplatesbygroup
+          * \<conditiontemplatesbygroup>
           * \<initialpositions>
           * \<randomizegroups>
           * \<clusterlist>
@@ -315,7 +313,7 @@ Stipulations
           * \<groupnames>
           * \<clustersrepeated>
           * \<templatesrepeated>
-          * \<groups>s
+          * \<groups>
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>          
