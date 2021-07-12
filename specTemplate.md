@@ -181,28 +181,26 @@ Stipulations
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<name> |  |Short name
-            | \<lessonname> | |Full name, punctuated as needed
+            | \<name> |n/a  |Short name
+            | \<lessonname> | n/a |Full name, punctuated as needed
             | \<userselect> | False | True indicates the tdf should be displayed on the main page
-            | \<stimulusfile> |  | Filename for stimulus list for tdf
+            | \<stimulusfile> | na  | Filename for stimulus list for tdf
             | \<lfparameter> | 1  | set from 0 to 1 which indicates the percentage of the response characters for string responses that need to be correct (?round up or down)
             | \<simTimeout> | integer >0 | How many millisecond simulation takes per simulated test
             | \<simCorrectProb> | range from 0 to 1 | Chance that each simulated trials is correctly responded to
-            | \<speechAPIKey> |  | Google SR API key
+            | \<speechAPIKey> | n/a | Google SR API key
             | \<audioInputEnabled> | False | Whether SR is available
             | \<audioInputSensitivity> |  | Setting for microphone gain
-            | \<speechIgnoreOutOfGrammarResponses> |  | Boolean, whether to ignore and force users to try again if we transcribe a response not within the answer set of a tdf while using speech to text
-            | \<speechOutOfGrammarFeedback> |  | Message to display if an answer not in the answer set is found in the case that speechIgnoreOutOfGrammarResponses is set to true
+            | \<speechIgnoreOutOfGrammarResponses> | True | Boolean, whether to ignore and force users to try again if we transcribe a response not within the answer set of a tdf while using speech to text. autostopTranscriptionAttemptLimit controls how many times this is attempted for unit in delivery params.
+            | \<speechOutOfGrammarFeedback> | "Not a possible response."" | Message to display if an answer not in the answer set is found in the case that speechIgnoreOutOfGrammarResponses is set to true
             | \<enableAudioPromptAndFeedback> |False| Boolean to enable/disable text to speech
             | \<audioPromptSpeakingRate> | 1 |Value from 0.1 to 2 for the speed of text to speech. Acts as percentage relative to 1
-            | \<textToSpeechAPIKey> |  | Google TTS API key
-            | \<shuffleclusters> |  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
-            | \<experimentTarget> |  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
-            | \<clustermodel> |  | ? is this used still
-            | \<swapclusters> |  | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
-            | \<randomizedDelivery> |  | This is the count for how many retention interval conditions the tdf contains. It requires a unit of the tdf to have retention interval marks equal to the count in a unit as follows: \<deliveryparams> \<lockoutminutes># of minutes here</lockoutminutes> \</deliveryparams>		
-            | \<condition> |  | ? not sure
-            | \<prestimulusDisplay> |  | String for the intertrial prompt before each trial (duration specificied in delivery params) 
+            | \<textToSpeechAPIKey> |n/a  | Google TTS API key
+            | \<shuffleclusters> |n/a  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
+            | \<experimentTarget> |n/a  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
+            | \<swapclusters> | n/a | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
+            | \<randomizedDelivery> |n/a  | This is the count for how many retention interval conditions the tdf contains. It requires a unit of the tdf to have retention interval marks equal to the count in a unit as follows: \<deliveryparams> \<lockoutminutes># of minutes here</lockoutminutes> \</deliveryparams>		
+            | \<prestimulusDisplay> |n/a | String for the intertrial prompt before each trial (duration specificied in delivery params) 
           
      Then the \<units> will be provided with these parameters
 
@@ -216,21 +214,20 @@ Stipulations
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<unitname> |  | For tracking of data
-            | \<unitinstructions> |  | Displayed with continue button
-            | \<buttonorder> |  | Order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
-            | \<deliveryparams> |  | Set of values described below
+            | \<unitname> | n/a | For tracking of data
+            | \<unitinstructions> |n/a  | Displayed with continue button
+            | \<buttonorder> | fixed | Fixed or random order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
+            | \<deliveryparams> | n/a | Set of values described below
             | \<buttontrial> | False | Whether the trials are displayed on the button interface if it is a learning session
-            | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
-            | \<learningsession> |  | Set of values describing control by a selection algorithm
-            | \<buttonOptions> |  | If options for button trial the fixed set is a comma delimited list here
-            | \<instructionminseconds> |  | This is the mininmum time the student may may view the instructions (to better ensure reading)
-            | \<instructionmaxseconds> |  | This is the maximuum time the student may may view the instructions (to standardize instruction)
-            | \<turkemailsubject> |  | Subject for a Amazon Turk message when 
-            | \<turkemail> |  | Contents of email
-            | \<turkbonus> |  | Amount of the Amazon Turk bonus triggered if unit is reached
-            | \<picture> |  | image presented with the unit instructions
-          
+            | \<assessmentsession> | n/a  | Set of values describing unit if it is a designed pattern of trials (not optimization)
+            | \<learningsession> |n/a  | Set of values describing control by a selection algorithm
+            | \<buttonOptions> |n/a  | If option for \<buttontrial> is fixed, this is a comma delimited list of possible options
+            | \<instructionminseconds> | 0 | This is the mininmum time the student may may view the instructions (to better ensure reading)
+            | \<instructionmaxseconds> | 0 (which implies no maximuum) | This is the maximuum time the student may may view the instructions (to standardize instruction)
+            | \<turkemailsubject> | n/a  | Subject for a Amazon Turk message when 
+            | \<turkemail> |n/a  | Contents of email
+            | \<turkbonus> |n/a  | Amount of the Amazon Turk bonus triggered if unit is reached
+            | \<picture> |n/a  | image presented with the unit instructions
      Then the **trials** will be provided with these parameters
 
 1. Trial delivery \<unit> parameters
@@ -282,15 +279,15 @@ Stipulations
         * And the following required tags are specified for the \<unit>:
           * \<deliveryparams>
         * And the following required tags are specified for the \<learningsession>:
-          * \<clusterlist>
-          * \<unitMode>
-          * \<calculateProbability>            
+          * \<clusterlist> this is a consecutive list of x-y pairs indicating the sequential chunks of clusters (all stimuli in each cluser all always used in learning sessions), e.g. 0-6 12-17 would indicate the first 7 items, followed by items 13 to item 18. The example 12-17 0-6 is invalid, since it is nonsequntial
+          * \<unitMode> this is one of several possible stimulus selection algorithms that specifies a method to select the next item to display for the learning session. threshold cieling, distance, highest, and unspecified (default) are current options
+          * \<calculateProbability> this is a javascript code block that may define fucntions, but must ultimately return a value, p (typically a probability), that may be used in the selection algorithms. The code block will have acces to a variety of state and history information for the user.
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>
         * And the following optional tags are specified for the \<learningsession>:
-          * \<displayminseconds>
-          * \<displaymaxseconds>
+          * \<displayminseconds> ) 0 is default (which implies no minimum) This is the mininmum time the student may may use the learning session for before they may skip to the next unit by pressign continue (to ensure some practice)
+          * \<displaymaxseconds> 0 is default (which implies no maximuum) This is the maximuum time the student may use the practice (to standardize practice amount for the unit)
 
       Then the **tdf** \<learningsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<learningsession> unit to occur in the ordered sequence of units for the tdf.                  
 
@@ -303,22 +300,22 @@ Stipulations
         * And the following required tags are specified for \<unit>:
           * \<deliveryparams>
         * And the following required tags are specified for \<assessmentsession>:
-          * \<conditiontemplatesbygroup>
-          * \<initialpositions>
-          * \<randomizegroups>
-          * \<clusterlist>
-          * \<permutefinalresult>
-          * \<assignrandomclusters>
+          * \<conditiontemplatesbygroup> see below
+          * \<initialpositions> a list of the positions of the stimuli repetitions after the templating is applied.  The key information here is the start location of each of the template repetitions. the template itself allow inference of the other positions, but the software requires them (it serves as a logic checsum for the schedule)
+          * \<randomizegroups> not used in recent memory (could be removed)
+          * \<clusterlist> this is a consecutive list of x-y pairs indicating the sequential chunks of clusters, e.g. 0-6 12-17 would indicate the first 7 items, followed by items 13 to item 18. The example 12-17 0-6 is invalid, since it is nonsequntial
+          * \<permutefinalresult> this has identical structure, but it means that as a last step in creating the sequence (which is saved to the unitstate for that tdf for that user) each of these regions is randomly order individually, then the regions (chunks) are asted back in order. Again, then chunk sequence can't be reordered, only the sequence within chunks is randomized to complete the schedule for the unit
+          * \<assignrandomclusters> this causes the assessment session, as a first step in making the schedule to rerandomize the clusters (typically they are first randomized globally in the setspec which makes them random during the initial unit). To do random assignment for subsequent units this is needed because often subsequent units need to be randomized relative to initial units. for example in a pretest,learning, posttest design, you might need 3 randomization of the order
         * And the following required tags are specified for \<conditiontemplatesbygroup>:
-          * \<groupnames>
-          * \<clustersrepeated>
-          * \<templatesrepeated>
-          * \<groups>
+          * \<groupnames> letters to indicate the names of conditions of practice applying to sequences of item or cluster practices
+          * \<clustersrepeated> this is how many time each cluster is repeated, it is the template length for each of the groupnames
+          * \<templatesrepeated> this is how many templates there are for each groupname (each containing )
+          * \<groups> this is a list for each group of a,b,c,d (4 csv values) for each trial within each repetition of each groupname. The first value is the stimulus item within the cluster (0 indexed) with r indicated a random index. The second value is the dispay mode, e.g. f is standard text responses, b is a button trial. The third value is the whether t, d, or s for a test without feedback, test with feedback, or feedback only. The 4th value is the 0 index location of this trial within the "template" for example 2,f,d,0 2,f,d,18 2,f,d,36 indicates 3 fill in trials for the 3rd stimulus in the cluster with the second trial 18 trials after the first and the third 18 trials after the second 
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>          
         * And the following optional tags are specified for \<assessmentsession>:
-          * \<randomchoices>          
+          * \<randomchoices> the random index mentioned in \<groups> above
 
       Then the **tdf** \<assessmentsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<assessmentsession> unit to occur in the ordered sequence of units for the tdf.      
 
@@ -334,7 +331,9 @@ Stipulations
 
         * And there exists prior data for that tdf
 
-     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screens and units.
+     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screen trials and instruction units, while assessment sessions and learning session trials (after the instructions) produce the whole list of values. 
+     
+     "CF" is with a parenthetical name is the standardized method for adding new fields not in DataShop format already, but old fields should be used in preference is consulation with Pavlik on case by case basis. DataShop format is specified here: https://datashop.memphis.edu/help?page=importFormatTd 
 
   | Column Header | Default | Explanation |
   |---------------|---------|-------------|
@@ -381,9 +380,9 @@ Stipulations
  |**CF (Display Syllable Indices)**|currentAnswerSyllableIndices|For text responses, this is the indexes of syllables given as hints|
  |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all [**item**](#itemDef)s above the critereon for selection|
  |**CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
- |**CF (Start Latency)**|d(startLatency, 0)|How long it takes from the start of the trial until the student begins typing a response|
- |**CF (End Latency)**|d(endLatency, 0)|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
- |* **CF (Review Latency)**|d(reviewLatency, 0)|How long they spent on the review opportunity, study trial, study screen, or study unit|
+ |**CF (Start Latency)**| history.stimulusduration|How long it takes from the start of the trial until the student begins typing a response|
+ |**CF (Response Latency)**|history.responseduration|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
+ |* **CF (Review Latency)**|history.feedbackduration|How long they spent on the review opportunity, study trial, study screen, or study unit|
  |**CF (Review Entry)**|d(lasta.forceCorrectFeedback, ''),| feedback provided from \<forceCorrection> when turned on|
  |**CF (Button Order)**|d(lasta.buttonOrder, ''),|Order of buttons displayed to student for button interfaces|
  |**CF (Note)**|d(note, '')| for error logging|
