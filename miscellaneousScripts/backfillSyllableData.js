@@ -66,15 +66,11 @@ for(var tdf of syllableTdfs){
 }
 
 function syllableCheck(utl){ 
+    var newUtl = JSON.parse(JSON.stringify(utl));
     var updated=false;
     if(!updatedTdfsLog[utl._id]) updatedTdfsLog[utl._id] = {};
     Object.keys(utl).map(function(key){ 
         var logs = [];
-        if(key==="Banker:_Chapter_1_ambanker_2020_08_26T15_43_06_096Z_FA_2020_TDF_xml"){
-            keyUpdated = true;
-            updated=true;
-            logs.push("!!!test2:")
-        }
         var keyUpdated=false;
         if(syllableTdfs.indexOf(key)!=-1){
             var syllableData = syllableStimsData[key];
@@ -98,24 +94,27 @@ function syllableCheck(utl){
                     }else{
                         var selectedAnswer = lastQuestion.selectedAnswer;
                         var originalAnswer = lastQuestion.originalAnswer;
-
-
-                        if(key==="Banker:_Chapter_1_ambanker_2020_08_26T15_43_06_096Z_FA_2020_TDF_xml"){
-                            logs.push("!!!test:",JSON.parse(JSON.stringify(i)),originalAnswer,selectedAnswer,(selectedAnswer !== originalAnswer),(selectedAnswer.toLowerCase() !== originalAnswer.toLowerCase()));
+                        var originalQuestion = lastQuestion.originalQuestion;
+                        if(originalQuestion === "Did you read the chapter (yes/no)?"){
+                            lastWasAnswer = true;
+                            continue;
                         }
-                        if(originalAnswer && (selectedAnswer !== originalAnswer) && (selectedAnswer.toLowerCase() !== originalAnswer.toLowerCase())){ //Probably did syllable replacement?
-                            var syllableAnswerData = syllableData[originalAnswer];
+                        var syllableAnswerData = syllableData[originalAnswer];
+                        if(!syllableAnswerData){
+                            syllableAnswerData = syllableData[(originalAnswer || "zxzxczxcvzxcv").toLowerCase()];
                             if(!syllableAnswerData){
-                                syllableAnswerData = syllableData[originalAnswer.toLowerCase()];
+                                syllableAnswerData = syllableData[selectedAnswer];
                                 if(!syllableAnswerData){
                                     logs.push("no syllable data: ",[record.currentAnswerSyllables=="",originalAnswer,lastQuestion,record]);
                                     continue;
                                 }
                             }
-                            //var oldSylls = JSON.parse(JSON.stringify(record.currentAnswerSyllables));
-                            //var hadSylls = !!record.currentAnswerSyllables;
-                            record['currentAnswerSyllables'] = syllableAnswerData;
-                            logs.push("had syllable data:",JSON.parse(JSON.stringify(i)),syllableAnswerData,record.currentAnswerSyllables);
+                        }
+                        var hadSylls = !!record.currentAnswerSyllables;
+                        if(!!originalQuestion && !hadSylls){
+                            newUtl[key][i]['currentAnswerSyllables'] = syllableAnswerData;
+                            logs.push(JSON.parse(JSON.stringify(i)));
+                            //logs.push(JSON.parse(JSON.stringify(i)),newUtl[key][i].currentAnswerSyllables,syllableAnswerData,lastQuestion,newUtl[key][i]);
 
                             keyUpdated = true;
                             updated=true;
@@ -133,17 +132,17 @@ function syllableCheck(utl){
                 }
             }
         }        
-        if(keyUpdated){
+        //if(keyUpdated){
             if(!updatedTdfsLog[utl._id][key]){
-                updatedTdfsLog[utl._id][key] = logs;//.slice(0,15);
+                updatedTdfsLog[utl._id][key] = logs.slice(0,15);
             }else{
-                updatedTdfsLog[utl._id][key] = updatedTdfsLog[utl._id][key].concat(logs);
+                //updatedTdfsLog[utl._id][key] = updatedTdfsLog[utl._id][key].concat(logs);
             }
-        }
+        //}
     })
     if(updated){
         updatedTdfs.push(utl._id);
-        db.getCollection('userTimesLog').replaceOne({"_id":utl._id},utl);
+        db.getCollection('userTimesLog').replaceOne({"_id":utl._id},newUtl);
     }
 }
 
