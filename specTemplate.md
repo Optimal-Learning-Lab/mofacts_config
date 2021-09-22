@@ -1,6 +1,78 @@
-Specification for MoFaCTS
+Testing and Specification for MoFaCTS
 ===
+---
 
+# Testing
+## Error Reporting Procedure (using the button for reporting in the app)
+* check current errors: https://github.com/memphis-iis/mofacts-ies/milestone/15
+* what you were doing (and step if using procedure below)
+* what happened
+* what you expected
+* resume testing after reporting the error if it is minor enough
+* if it is severe/important, reproduce it and submit a second error report
+* open a thread about it here in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
+
+## Student side testing (primarily learning sessions, and student reports)
+### Part A
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
+2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9 or 10
+3. Proceed to available chapters
+4. Choose the first 1, and select all items
+5. Practice until you start seeing repetitions, make sure you get some right and wrong, the best test is to practice like a real student with effort
+6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
+7. Navigate to home
+8. Close the browser
+
+### Part B
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+2. Use same login
+3. Proceed to available chapters
+4. Choose the same one
+7. Navigate to home
+6. Check progress report
+7. Navigate to home
+1. Proceed to available chapters
+2. Choose SR and/or TTS for input and output on home screen
+4. Choose the same chapter
+5. Practice for 5 trials
+7. Navigate to home
+1. Proceed to available chapters
+3. Choose refutation and/or dialogue feedback on home screen
+4. Choose the same chapter again
+15. Practice for 5 trials
+
+### Part C
+1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+7. Select survey link
+8. Complete survey 
+
+## Experiment side testing (primarily new experiments)
+1. Upload TDF and stim file
+2. Go through all the trials at experiment link being tested
+3. Check data to confirm
+
+## Teacher side testing (assignments and teacher progress reports)
+1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+3. Create a class section
+4. Assign the chapters to the section
+5. Login as student tester to your teacher link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
+6. Select your ID, then select the class section and then chapter you created
+7. Do a few trials, check the progress report and then go to home
+9. Do a few trials
+10. Repeat for the other chapter with edits
+11. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
+12. Go to teacher reports and inspect the progress report for the class you created. confirm that the practice is reported
+13. Select the student and drill down to their individual report, look for obvious glitches and confirm totals are same as the main group report
+13. Confirm that if you set a time filter for before the time you practiced the practice is NOT reported
+14. Create records for a new student on the next day and again check progress reporter with time filter to show the old student but not the new one
+
+## Admin side testing (data download)
+1. Download data from all the tests above
+3. Confirm downloads, trials are in chronological sequence, shows student response, shows student correctness, shows latencies of actions, show problem and answer, show hints, show time, show tdf used, show student login
+    
+---
+# Specification
 ## Class Management
 
 1. Class creation <!-- Notice all numbered lists are "1.", markdown auto numbers for us -->
@@ -109,31 +181,26 @@ Stipulations
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<name> |  |Short name
-            | \<lessonname> | |Full name, punctuated as needed
-            | \<userselect> | False | True indicates the tdf should be on the main page
-            | \<stimulusfile> |  | Filename for stimulus list for tdf
-            | \<isModeled> |  | ? not sure
+            | \<name> |n/a  |Short name
+            | \<lessonname> | n/a |Full name, punctuated as needed
+            | \<userselect> | False | True indicates the tdf should be displayed on the main page
+            | \<stimulusfile> | na  | Filename for stimulus list for tdf
             | \<lfparameter> | 1  | set from 0 to 1 which indicates the percentage of the response characters for string responses that need to be correct (?round up or down)
-            | \<simTimeout> |  | ? How many millisecond simulation takes per simulated test
-            | \<simCorrectProb> |  | Chance that each simulated trials is correctly responded to
-            | \<speechAPIKey> |  | Google SR API key
-            | \<audioInputEnabled> |  | Whether SR is available
+            | \<simTimeout> | integer >0 | How many millisecond simulation takes per simulated test
+            | \<simCorrectProb> | range from 0 to 1 | Chance that each simulated trials is correctly responded to
+            | \<speechAPIKey> | n/a | Google SR API key
+            | \<audioInputEnabled> | False | Whether SR is available
             | \<audioInputSensitivity> |  | Setting for microphone gain
-            | \<speechIgnoreOutOfGrammarResponses> |  |
-            | \<speechOutOfGrammarFeedback> |  |
-            | \<enableAudioPromptAndFeedback> |  |
-            | \<audioPromptSpeakingRate> |  |
-            | \<textToSpeechAPIKey> |  | Google TTS API key
-            | \<shuffleclusters> |  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
-            | \<experimentTarget> |  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
-            | \<clustermodel> |  | ? is this used still
-            | \<clustersize> |  | ? is this in the code still
-            | \<swapclusters> |  | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
-            | \<randomizedDelivery> |  | ? not sure
-            | \<condition> |  | ? not sure
-            | \<experimentPasswordRequired> |  | ? not sure
-            | \<prestimulusDisplay> |  | String for the intertrial prompt before each trial (duration specificied in delivery params) 
+            | \<speechIgnoreOutOfGrammarResponses> | True | Boolean, whether to ignore and force users to try again if we transcribe a response not within the answer set of a tdf while using speech to text. autostopTranscriptionAttemptLimit controls how many times this is attempted for unit in delivery params.
+            | \<speechOutOfGrammarFeedback> | "Not a possible response."" | Message to display if an answer not in the answer set is found in the case that speechIgnoreOutOfGrammarResponses is set to true
+            | \<enableAudioPromptAndFeedback> |False| Boolean to enable/disable text to speech
+            | \<audioPromptSpeakingRate> | 1 |Value from 0.1 to 2 for the speed of text to speech. Acts as percentage relative to 1
+            | \<textToSpeechAPIKey> |n/a  | Google TTS API key
+            | \<shuffleclusters> |n/a  | Allows shuffling within groups of n clusters, specified as x-y, each of which is shuffled as a unit, and replaced in the sequence. ranges may overlap as process is 1 by 1
+            | \<experimentTarget> |n/a  | location of no login link for tdf directly for experiments format is optimallearning.mofacts.org/experiment/experimentTarget 
+            | \<swapclusters> | n/a | Allows shuffling of groups of clusters, the n groups are shuffled, as specified by non-overlapping ranges. Shuffling the n groups occurs simultaneously. e.g. 0-3 4-6 7-9 indicates  3 groups and can result in 6 possible orders, groups 1,2,3; groups 1,3,2; 2,1,3; 2,3,1; 3,1,2; 3,2,1
+            | \<randomizedDelivery> |n/a  | This is the count for how many retention interval conditions the tdf contains. It requires a unit of the tdf to have retention interval marks equal to the count in a unit as follows: \<deliveryparams> \<lockoutminutes># of minutes here</lockoutminutes> \</deliveryparams>		
+            | \<prestimulusDisplay> |n/a | String for the intertrial prompt before each trial (duration specificied in delivery params) 
           
      Then the \<units> will be provided with these parameters
 
@@ -143,27 +210,24 @@ Stipulations
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file 
 
-        * And \<deleveryparams> is designated with values
+        * And \<deliveryparams> is designated with values
         
             | Fields | Default | Explanation |
             |--------|---------|------------|
-            | \<unitname> |  | For tracking of data
-            | \<unitinstructions> |  | Displayed with continue button
-            | \<buttonorder> |  | Order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
-            | \<deliveryparams> |  | Set of values described below
-            | \<buttontrial> |  | Whether the trials are displayed on the button interface if it is a learning session
-            | \<assessmentsession> |  | Set of values describing unit if it is a designed pattern of trials (not optimization)
-            | \<learningsession> |  | Set of values describing control by a selection algorithm
-            | \<buttonOptions> |  | ?
-            | \<instructionminseconds> |  | This is the mininmum time the student may may view the instructions (to better ensure reading)
-            | \<instructionmaxseconds> |  | This is the maximuum time the student may may view the instructions (to standardize instruction)
-            | \<turkemailsubject> |  | Subject for a Amazon Turk message when 
-            | \<turkemail> |  | Contents of email
-            | \<turkbonus> |  | Amount of the Amazon Turk bonus triggered if unit is reached
-            | \<picture> |  | image presented with the unit instructions
-            | \<turkpay> |  | ?
-            | \<turkminscore> |  | ?
-          
+            | \<unitname> | n/a | For tracking of data
+            | \<unitinstructions> |n/a  | Displayed with continue button
+            | \<buttonorder> | fixed | Fixed or random order of the buttons for all trials for this unit (avoids hardcoding in stimuli)
+            | \<deliveryparams> | n/a | Set of values described below
+            | \<buttontrial> | False | Whether the trials are displayed on the button interface if it is a learning session
+            | \<assessmentsession> | n/a  | Set of values describing unit if it is a designed pattern of trials (not optimization)
+            | \<learningsession> |n/a  | Set of values describing control by a selection algorithm
+            | \<buttonOptions> |n/a  | If option for \<buttontrial> is fixed, this is a comma delimited list of possible options
+            | \<instructionminseconds> | 0 | This is the mininmum time the student may may view the instructions (to better ensure reading)
+            | \<instructionmaxseconds> | 0 (which implies no maximuum) | This is the maximuum time the student may may view the instructions (to standardize instruction)
+            | \<turkemailsubject> | n/a  | Subject for a Amazon Turk message when 
+            | \<turkemail> |n/a  | Contents of email
+            | \<turkbonus> |n/a  | Amount of the Amazon Turk bonus triggered if unit is reached
+            | \<picture> |n/a  | image presented with the unit instructions
      Then the **trials** will be provided with these parameters
 
 1. Trial delivery \<unit> parameters
@@ -172,7 +236,7 @@ Stipulations
 
     1. Given a teacher, [**teacher**](#teacherDef) designates a unit <unit> of content in a tdf file with either an \<learningsession> or an \<assessmentsession>
 
-        * And \<deleveryparams> is designated with values
+        * And \<deliveryparams> is designated with values
         
           | Fields | Default | Explanation |
           |--------|---------|------------|
@@ -186,7 +250,7 @@ Stipulations
           | \<correctprompt> | 0| time in ms the system presents the system icon for the correct response, this is the delay after a correct response before the next trial begins
           | \<skipstudy> | false| if true study trials can be skipped by pressing the spacebar
           | \<lockoutminutes> | 0| the number of minutes that must be waited before the system allows the student to proceed, at which point the \<turkemail> is triggered if present, may occur multiple times as triggered by \<randomizedDelivery> option in \<setspec>
-          | \<fontsize> | 3| CSS font size
+          | \<fontsize> | 3| CSS font size (second part of a tag that is one of h1-h6)
           | \<numButtonListImageColumns> | 2| if using buttonimages, this is how many columns
           | \<correctscore> | 1| amount score increases for correct response
           | \<incorrectscore> | 0| amount score decreases for incorrect response
@@ -213,17 +277,17 @@ Stipulations
     1. <a id="932a6db8-dd1a-4120-aa75-a7f523f627ad"></a> Given a teacher designates a unit \<unit> of content in a tdf file with the \<learningsession> tag
 
         * And the following required tags are specified for the \<unit>:
-          * \<deleveryparams>
+          * \<deliveryparams>
         * And the following required tags are specified for the \<learningsession>:
-          * \<clusterlist>
-          * \<unitMode>
-          * \<calculateProbability>            
+          * \<clusterlist> this is a consecutive list of x-y pairs indicating the sequential chunks of clusters (all stimuli in each cluser all always used in learning sessions), e.g. 0-6 12-17 would indicate the first 7 items, followed by items 13 to item 18. The example 12-17 0-6 is invalid, since it is nonsequntial
+          * \<unitMode> this is one of several possible stimulus selection algorithms that specifies a method to select the next item to display for the learning session. threshold cieling, distance, highest, and unspecified (default) are current options
+          * \<calculateProbability> this is a javascript code block that may define fucntions, but must ultimately return a value, p (typically a probability), that may be used in the selection algorithms. The code block will have acces to a variety of state and history information for the user.
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>
         * And the following optional tags are specified for the \<learningsession>:
-          * \<displayminseconds>
-          * \<displaymaxseconds>
+          * \<displayminseconds> ) 0 is default (which implies no minimum) This is the mininmum time the student may may use the learning session for before they may skip to the next unit by pressign continue (to ensure some practice)
+          * \<displaymaxseconds> 0 is default (which implies no maximuum) This is the maximuum time the student may use the practice (to standardize practice amount for the unit)
 
       Then the **tdf** \<learningsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<learningsession> unit to occur in the ordered sequence of units for the tdf.                  
 
@@ -234,24 +298,24 @@ Stipulations
     1. Given a teacher designates a unit \<unit> of content in a tdf file with the \<assessmentsession> tag
 
         * And the following required tags are specified for \<unit>:
-          * \<deleveryparams>
+          * \<deliveryparams>
         * And the following required tags are specified for \<assessmentsession>:
-          * \<conditiontemplatesbygroup
-          * \<initialpositions>
-          * \<randomizegroups>
-          * \<clusterlist>
-          * \<permutefinalresult>
-          * \<assignrandomclusters>
+          * \<conditiontemplatesbygroup> see below
+          * \<initialpositions> a list of the positions of the stimuli repetitions after the templating is applied.  The key information here is the start location of each of the template repetitions. the template itself allow inference of the other positions, but the software requires them (it serves as a logic checsum for the schedule)
+          * \<randomizegroups> not used in recent memory (could be removed)
+          * \<clusterlist> this is a consecutive list of x-y pairs indicating the sequential chunks of clusters, e.g. 0-6 12-17 would indicate the first 7 items, followed by items 13 to item 18. The example 12-17 0-6 is invalid, since it is nonsequntial
+          * \<permutefinalresult> this has identical structure, but it means that as a last step in creating the sequence (which is saved to the unitstate for that tdf for that user) each of these regions is randomly order individually, then the regions (chunks) are asted back in order. Again, then chunk sequence can't be reordered, only the sequence within chunks is randomized to complete the schedule for the unit
+          * \<assignrandomclusters> this causes the assessment session, as a first step in making the schedule to rerandomize the clusters (typically they are first randomized globally in the setspec which makes them random during the initial unit). To do random assignment for subsequent units this is needed because often subsequent units need to be randomized relative to initial units. for example in a pretest,learning, posttest design, you might need 3 randomization of the order
         * And the following required tags are specified for \<conditiontemplatesbygroup>:
-          * \<groupnames>
-          * \<clustersrepeated>
-          * \<templatesrepeated>
-          * \<groups>s
+          * \<groupnames> letters to indicate the names of conditions of practice applying to sequences of item or cluster practices
+          * \<clustersrepeated> this is how many time each cluster is repeated, it is the template length for each of the groupnames
+          * \<templatesrepeated> this is how many templates there are for each groupname (each containing )
+          * \<groups> this is a list for each group of a,b,c,d (4 csv values) for each trial within each repetition of each groupname. The first value is the stimulus item within the cluster (0 indexed) with r indicated a random index. The second value is the dispay mode, e.g. f is standard text responses, b is a button trial. The third value is the whether t, d, or s for a test without feedback, test with feedback, or feedback only. The 4th value is the 0 index location of this trial within the "template" for example 2,f,d,0 2,f,d,18 2,f,d,36 indicates 3 fill in trials for the 3rd stimulus in the cluster with the second trial 18 trials after the first and the third 18 trials after the second 
         * And the following optional tags are specified for \<unit>:
           * \<buttonorder>
           * \<buttonOptions>          
         * And the following optional tags are specified for \<assessmentsession>:
-          * \<randomchoices>          
+          * \<randomchoices> the random index mentioned in \<groups> above
 
       Then the **tdf** \<assessmentsession> unit  will be produced if a **student** uses the **tdf** (presumably made available by a **teacher**) long enough for the \<assessmentsession> unit to occur in the ordered sequence of units for the tdf.      
 
@@ -267,7 +331,9 @@ Stipulations
 
         * And there exists prior data for that tdf
 
-     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screens and units.
+     Then the txt data tab delimited data file will be provide with these headers and defaults.  * indicates fields provide for instruction screen trials and instruction units, while assessment sessions and learning session trials (after the instructions) produce the whole list of values. 
+     
+     "CF" is with a parenthetical name is the standardized method for adding new fields not in DataShop format already, but old fields should be used in preference is consulation with Pavlik on case by case basis. DataShop format is specified here: https://datashop.memphis.edu/help?page=importFormatTd 
 
   | Column Header | Default | Explanation |
   |---------------|---------|-------------|
@@ -314,9 +380,9 @@ Stipulations
  |**CF (Display Syllable Indices)**|currentAnswerSyllableIndices|For text responses, this is the indexes of syllables given as hints|
  |**CF (Overlearning)**|d(lastq.showOverlearningText, false)|For some \<learningsession>s this indicates the student is practicing with all [**item**](#itemDef)s above the critereon for selection|
  |**CF (Response Time)**|d(lasta.clientSideTimeStamp, 0)|The time corresponding to when CF (End Latency) is recorded|
- |**CF (Start Latency)**|d(startLatency, 0)|How long it takes from the start of the trial until the student begins typing a response|
- |**CF (End Latency)**|d(endLatency, 0)|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
- |* **CF (Review Latency)**|d(reviewLatency, 0)|How long they spent on the review opportunity, study trial, study screen, or study unit|
+ |**CF (Start Latency)**| history.stimulusduration|How long it takes from the start of the trial until the student begins typing a response|
+ |**CF (Response Latency)**|history.responseduration|How long it takes from when a student begins typing a response to when they finish or hit ENTER||
+ |* **CF (Review Latency)**|history.feedbackduration|How long they spent on the review opportunity, study trial, study screen, or study unit|
  |**CF (Review Entry)**|d(lasta.forceCorrectFeedback, ''),| feedback provided from \<forceCorrection> when turned on|
  |**CF (Button Order)**|d(lasta.buttonOrder, ''),|Order of buttons displayed to student for button interfaces|
  |**CF (Note)**|d(note, '')| for error logging|
@@ -332,88 +398,6 @@ Stipulations
 
 ---
 
-## Appendix B -Testing
-
-### Error Reporting Procedure (in the app)
-* what you were doing (and step if using procedure below)
-* what happened
-* what you expected
-* resume testing after reporting the error if it is minor enough
-
-### Student side testing (primarily learning sessions, and student reports)
-#### Part 1
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
-1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
-2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9
-> [name=Andrew Tackett] We don't tell them which class/section to login to.  Are we assuming teacher side testing comes before student testing?
-3. Proceed to available chapters
-4. Choose the first 1, and select all items
-5. Practice until you start seeing repetitions, make sure you get some right an wrong, the best test is to practice like a real student with effort
-> [name=Andrew Tackett] I'm not sure if this needs to be said but we should have them test both the right answer and the wrong answer sometimes.  I assume wrong answer is easy to do so we may have to instruct them to try to get some right.
-6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
-> [name=Andrew Tackett] What are they checking the progress report for?  Just that it doesn't look broken? Or that no probs are null?  They'll probably need a bit more guidance
-7. Navigate to home
-8. Close the browser
-
-#### Part 2
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
-> [name=Andrew Tackett] Notice how numbering is auto incremented, if you want to force it to reset you need to separate the lists or indent them.  I might split these up into various "tasks" A1-A10, B1-B10, etc. so you can have them refer to the exact step number a bug happened on. Also makes it feel like less work/more manageable
-2. Use same login
-3. Proceed to available chapters
-4. Choose the same one, and select all items again
-1. Practice for 20 trials
-7. Navigate to home
-6. Check progress report
-7. Navigate to home
-1. Proceed to available chapters
-2. Choose SR and/or TTS for input and output on home screen
-4. Choose the same chapter, and select all items again
-5. Practice for 5 trials
-7. Navigate to home
-1. Proceed to available chapters
-4. Choose the same one, and select high priority again
-> [name=Andrew Tackett] High priority is only listed once here, also we may want to have them test other subtdfs than all or high priority, perhaps give them a choice at certain testing steps to probabilistically cover various paths with more testers
-15. Practice for 5 trials
-
-#### Part 3
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
-7. Select survey link
-8. Complete survey 
-9. Report ANY issues and test user id to Pavlik et al. in Slack https://optimallearninglab.slack.com/archives/C024PQ9ABGD
-> [name=Andrew Tackett] I would have a standard procedure for reporting errors.  First have them submit an error report in the app.  Also have them submit (in the error report or slack): what they were doing (reproduction steps or at least the exact step they were on in the manual test case), what appeared to happen, and what they expected to happen.  Ideal would be getting them to try to reproduce it again and submit another error report if they do.  In any case if they encounter an error they should immediately submit an error report and stop that run and start again with a new user id (to help preserve the last state they errored in in the logs and db).  If they've already encountered the error on that step of the test case before and submitted an error report they can proceed (just to help gather more data so we might get multiple bugs fixed at once)
-> [name=Andrew Tackett] I don't see anything that tests audio input/output or the simple/refutational/dialogue feedbacktypes
-
-### Experiment side testing (primarily new experiments)
-1. Go through all the trials at experiment link being tested
-2. Check data to confirm
-
-### Teacher side testing (primarily content gen, assignement, and student reports)
-1. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
-2. Use content creation to create a chapter with an unchanged template (no delete or edit), call it something with your initials and the current date
-3. Use content creation again to create a chapter with an changed template (delete at least 1 item and edit at least 1), call it something with your initials and the word edited
-4. Again use content creation to create a third chapter, but try a few things, like sorting and unsorting and editing and deleting. 
-> [name=Andrew Tackett] I think adding a third chapter where we have them try sorting, unsorting, and just doing a bunch of random things in random order essentially to test various combinations of UI state to make sure there's no bugs in the content gen tool view logic
-3. Create a class section
-4. Assign the chapters to the section
-5. Login as student tester to your teacher link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
-6. Select your ID, then select the class section you created without edits
-7. Select all items and do a few trials, check the progress report and then go to home
-8. Select the class section you created without edits again
-9. Select high priority items and do a few trials
-10. Repeat for the other chapter with edits
-11. Login as teacher with teacher level access account https://staging.optimallearning.org/signIn
-12. Go to teacher reports and inspect the progress report for the class you created. confirm that the practice is reported
-13. Select the student and drill down to their individual report, look for obvious glitches and confirm totals are same as the main group report
-13. Confirm that if you set a time filter for before the time you practiced the practice is NOT reported
-14. Create records for a new student on the next day and again check progress reporter with time filter to show the old student but not the new one
-> [name=Andrew Tackett] The time filters are by date so we may want/need to define testing over a several day period to cover the time filter testing
-> [name=Andrew Tackett] We might want to add them testing with a second student id here just to explore reporting with multiple students.  The totals would be more tested that way for instance.
-
-### Admin side testing (primarliy data download)
-1. Download data from all the tests above
-3. Confirm downloads, trials are in chronological sequence, shows student response, shows student correctness, shows latencies of actions, show problem and answer, show hints, show time, show tdf used, show student login
-    
----
 
 ## Appendix C - Notes
 
