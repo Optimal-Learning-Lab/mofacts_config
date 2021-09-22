@@ -25,7 +25,20 @@ var syllableTdfs = [
     "Chapter_16_ambanker_2020_11_09T03_42_56_411Z_SP_2021_TDF_xml", 
     "Chapter_21_ambanker_2020_12_03T04_19_20_659Z_SP_2021_TDF_xml", 
     "Chapter_20_ambanker_2020_12_03T04_20_32_769Z_SP_2021_TDF_xml", 
+    "Chapter_1_ambanker_2021_06_01T19_44_12_027Z_SU_2021_TDF_xml", 
+    "Chapter_2_ambanker_2021_06_01T19_44_23_009Z_SU_2021_TDF_xml", 
+    "Chapter_3_ambanker_2021_06_01T19_44_35_562Z_SU_2021_TDF_xml", 
+    "Chapter_5_ambanker_2021_06_01T19_44_58_055Z_SU_2021_TDF_xml", 
+    "Chapter_6_ambanker_2021_06_01T19_45_11_414Z_SU_2021_TDF_xml", 
+    "Chapter_11-A_Banker_ambanker_2020_06_24T19_35_47_939Z_SU_2021_TDF_xml", 
+    "Chapter_12-A_Banker_ambanker_2020_06_24T19_36_04_932Z_SU_2021_TDF_xml", 
+    "Chapter_7_ambanker_2020_10_14T19_52_13_812Z_SU_2021_TDF_xml", 
+    "Chapter_8_ambanker_2020_10_14T19_55_11_590Z_SU_2021_TDF_xml", 
+    "Chapter_9_ambanker_2020_10_26T14_29_30_552Z_SU_2021_TDF_xml", 
+    "Chapter_10_ambanker_2020_11_11T15_34_31_278Z_SU_2021_TDF_xml", 
 ]
+
+    
 
 var syllableStims = [];
 var syllableStimsData = {};
@@ -56,8 +69,11 @@ for(var tdf of syllableTdfs){
             if(!syllables){
                 syllables = db.getCollection('stimuli_syllables').findOne({filename:tdfStimFile.replace("SU_2021","SP_2021")});
                 if(!syllables){
-                    errorLog.push("no syllables for: ",tdfStimFile,tdfName);
-                    continue;
+                    syllables = db.getCollection('stimuli_syllables').findOne({filename:tdfStimFile.replace("SP_2021","SU_2021")});
+                    if(!syllables){
+                        errorLog.push("no syllables for: ",tdfStimFile,tdfName);
+                        continue;
+                    }
                 }
             }
         }
@@ -74,6 +90,10 @@ function syllableCheck(utl){
         var keyUpdated=false;
         if(syllableTdfs.indexOf(key)!=-1){
             var syllableData = syllableStimsData[key];
+            if(!syllableData){
+                logs.push("no syllableData for:",key);
+                return;
+            }
             var log = utl[key];
             var lastQuestion = undefined;
             var lastWasAnswer = false;
