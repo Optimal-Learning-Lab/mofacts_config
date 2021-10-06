@@ -1,0 +1,117 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "DissertPairedDE",
+            "lessonname": "Dissert-0",
+            "stimulusfile": "Dissertstims.json",
+            "clustermodel": "",
+            "clustersize": "1",
+            "isModeled": "false",
+            "timeoutInSeconds": "15",
+            "userselect": "false",
+            "swapclusters": [
+                "0-8 9-17 18-26 27-35",
+                "36-44 45-53 54-62 63-71",
+                "72-80 81-89 90-98 99-107",
+                "108-116 117-125 126-134 135-143",
+                "0-35 36-71 72-107 108-143"
+            ],
+            "shuffleclusters": "0-3 4-7 9-12 13-16 18-21 22-25 27-30 31-34  36-39 40-43 45-48 49-52 54-57 58-61 63-66 67-70   72-75 76-79 81-84 85-88 90-93 94-97 99-102 103-106     108-111 112-115   117-120 121-124  126-129 130-133  135-138 139-142 144-149"
+        },
+        "unit": [
+            {
+                "unitname": "Heart Posttest",
+                "unitinstructions": "Thank you for continuing. You will now complete a posttest containing a total of 18 questions. \nDuring Part 1 (2 days ago), you practiced several research methods concepts by answering definition and example questions about those concepts. Two instances (not seen during practice, and which do not need to be learned) are shown below:\n<br><br>\n<b>Definition question:</b> What type of studies are prone to attrition, or people dropping out of the study, because the study takes place over a lengthy period of time? \n<br><br>\n<b>Example question:</b> Mr. Smith completed a longitudinal study at his university in which he tracked a set of students' progress over the course of 4 years. He began with 200 students, but lost 75 due to attrition. What type of study did Mr. Smith conduct?\n<br><br>\n<b>During Part 2 (right now) you will be completing a post test which has some questions that are very similar to those you practiced, and a new type of question that asks you to generate your own example.</b>\n<br><br>\nPlease answer each question, even if you are unsure of the answer. Unlike the practice portion you completed in Part 1, you will not be told if your answer is correct or incorrect.\n<br><br>Click below to continue.\n        ",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "purestudy": "3000",
+                    "readyprompt": "0",
+                    "reviewstudy": "3000",
+                    "correctprompt": "1000",
+                    "drill": "60000",
+                    "timebeforefeedback": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "500"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "D E F",
+                        "clustersrepeated": "1 1 1",
+                        "templatesrepeated": "6 6 6",
+                        "group": [
+                            " \n                    0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0      \n                ",
+                            " 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 ",
+                            "0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0"
+                        ]
+                    },
+                    "initialpositions": "\n                D_1 D_2 D_3 D_4 D_5 D_6 \n                E_1 E_2 E_3 E_4 E_5 E_6 \n                F_1 F_2 F_3 F_4 F_5 F_6\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "\n                3-3 12-12 39-39 48-48 75-75 84-84\n                7-7 16-16 43-43 52-52 79-79 88-88\n                26-26 35-35 62-62 71-71 98-98 107-107\n            ",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-17"
+                }
+            },
+            {
+                "unitname": "Emotions3",
+                "unitinstructions": "Please rate how much you agree with each of the following statements regarding how you are <b>currently feeling</b>. Each page will ask about a different emotion, which you may or may not be feeling.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "120000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "6",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+                    },
+                    "initialpositions": " A_1 A_2 A_3 A_4 A_5 A_6 ",
+                    "randomizegroups": "false",
+                    "clusterlist": "144-149",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "Demographics",
+                "unitinstructions": "Demographic Survey<br><br>\nPlease answer the following 4 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "4",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,f,t,0"
+                    },
+                    "initialpositions": "A_1 A_2 A_3 A_4",
+                    "randomizegroups": "false",
+                    "clusterlist": "150-153",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "turkbonus": "2.50",
+                "unitname": "last",
+                "unitinstructions": "Thank you for participating. This study intends to investigate the effects of different practice scheduling (the orderin of questions in the first session) on posttest performance (the items from this second session). If you would like more information about this study, please contact Jackie at jkmaass@memphis.edu.<br><br>\nWe will check your completion and you will receive payment within 3 days."
+            }
+        ]
+    }
+}

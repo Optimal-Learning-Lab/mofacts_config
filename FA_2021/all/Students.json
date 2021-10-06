@@ -1,0 +1,42 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Optimized Drill Practice of Students 2",
+            "stimulusfile": "Studentsstim.json",
+            "shuffleclusters": "0-19",
+            "lfparameter": "0.80",
+            "experimentTarget": "fall2017",
+            "userselect": "false"
+        },
+        "unit": [
+            {
+                "unitname": "Instructions",
+                "unitinstructions": "Do your best to identify the student shown"
+            },
+            {
+                "unitname": "Model Practice",
+                "unitinstructions": "",
+                "instructionminseconds": "",
+                "instructionmaxseconds": "",
+                "learningsession": {
+                    "displayminseconds": "",
+                    "displaymaxseconds": "",
+                    "clusterlist": "0-19"
+                },
+                "deliveryparams": {
+                    "autostopTimeoutThreshold": "",
+                    "purestudy": "10000",
+                    "drill": "10000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "practiceseconds": "300000000",
+                    "finalInstructions": "Thank you for using this tutor."
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "Internal Testing with SVO and Models",
+            "lessonname": "ChineseTest_21.xml",
+            "userselect": "false",
+            "stimulusfile": "Chinesestims.json"
+        },
+        "unit": [
+            {
+                "unitname": "Informed Consent",
+                "unitinstructions": "<p>The Mechanical Turk task you have selected is part of a research project that is described below. You will use your computer's web browser for this experiment, first to load the program, then to do the experiment, which takes a variable amount of time (about 30 min, in 1 session), depending on how fast you complete the practice. Since the experiment is about sound, in order to ensure the audio input quality, you are required to wear your headphone when you are doing the task. \n<p>The experiment is designed to compare effects of Chinese phonetic tone characteristics such as duration, pitch, gender and syllable on tone learning and perception. You will be randomly selected for one of 24 conditions with slightly different tone materials if you choose to participate. Whatever condition you are in, please follow the directions and try to do your best. You have 7 seconds to respond to each trial. Correct feedback last 1 second, while incorrect feedback lasts 6 seconds. This task pays $6 upon completion of the session.\n<p>If you should have any questions about this research study please feel free to contact Meng Cao at mcao@memphis.edu, or the faculty advisor Philip Pavlik at ppavlik@memphis.edu. For questions regarding the research subjects' rights, the Chair of the Institutional Review Board for the Protection of Human Subjects should be contacted at\n901-678-2705.\n<p>All efforts, within the limits allowed by law, will be made to keep the personal information (your Amazon Turk Worker ID) in your research record private but total privacy cannot be promised. We will deidentify your data (remove your ID) after the experiment before storing it on our computers long-term. By participating, you understand and agree that the deidentified data gathered during this study may be used by the University of Memphis and published and/or disclosed by the University of Memphis to others outside of the University of Memphis. However, no personally identifying information will ever be mentioned in any such publication or dissemination of the research data and/or results\nto other researchers.\n<p>Note that Amazon.com has stated that the MTurk platform is NOT meant to support participant anonymity. MTurk worker IDs are linked to Amazon.com public profiles. Amazon.com may disclose worker information. Additionally, worker information may be available to others (who submit a request) for tax reporting purposes.\n<br><br><p align=\"center\">By clicking this continue button, I consent to the above terms. "
+            },
+            {
+                "unitname": "Instructions",
+                "unitinstructions": "First, please put on your headphones. At the beginning of this experiment, you will be presented with the Chinse (Mandarin) 4 tone contours and tone samples for the syllable ma. <br><br>Then you will have a learning session with 216 drills of various examples of the 4 tones. Besides ma, you may hear other syllables like mo and/or ya. In each drill, you need to listen to the sound and make a choice of which of the 4 tones it belongs to.<br><br> Finally, there will be a demographic survey include 9 quick multiple choice items.<br><br>When you are ready to begin this example portion of the experiment, please press the CONTINUE button below.\n        "
+            },
+            {
+                "unitname": "Samples",
+                "picture": "/resources/images/pitch.jpg"
+            },
+            {
+                "unitname": "ma1",
+                "unitinstructions": " Click the CONTINUE button to hear two examples of tone 1 ma.\n        ",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "purestudy": "16000",
+                    "readyprompt": "0",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "drill": "7000",
+                    "timebeforefeedback": "5000",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "2",
+                        "group": "0,f,d,0 0,f,d,0"
+                    },
+                    "initialpositions": "\n                 A_1 A_2\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "14-14 15-15",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                },
+                "buttonOptions": "tone 1, tone 2, tone 3, tone 4"
+            },
+            {
+                "unitname": "ma2",
+                "unitinstructions": " Click the CONTINUE button to hear two examples of tone 2 ma. \n        ",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "purestudy": "16000",
+                    "readyprompt": "0",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "drill": "7000",
+                    "timebeforefeedback": "5000",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "2",
+                        "group": "0,f,d,0 0,f,d,0 "
+                    },
+                    "initialpositions": "\n                 A_1 A_2\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "68-68 69-69",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                },
+                "buttonOptions": "tone 1, tone 2, tone 3, tone 4"
+            },
+            {
+                "unitname": "ma3",
+                "unitinstructions": " Click the CONTINUE button to hear two examples of tone 3 ma.\n        ",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "purestudy": "16000",
+                    "readyprompt": "0",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "drill": "7000",
+                    "timebeforefeedback": "5000",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "2",
+                        "group": "0,f,d,0 0,f,d,0"
+                    },
+                    "initialpositions": "\n                 A_1 A_2\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": " 122-122 123-123",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                },
+                "buttonOptions": "tone 1, tone 2, tone 3, tone 4"
+            },
+            {
+                "unitname": "ma4",
+                "unitinstructions": " Click the CONTINUE button to hear two examples of tone 4 ma. \n        ",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "purestudy": "16000",
+                    "readyprompt": "0",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "drill": "7000",
+                    "timebeforefeedback": "5000",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "2",
+                        "group": "0,f,d,0 0,f,d,0"
+                    },
+                    "initialpositions": "\n                 A_1 A_2\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": " 176-176 177-177 ",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                },
+                "buttonOptions": "tone 1, tone 2, tone 3, tone 4"
+            },
+            {
+                "unitname": "Learning Session",
+                "unitinstructions": " Here come the 216 learning drills. Please select the correct tone for each one, and do your best to learn from the feedback. The practice moves more quickly when you respond correctly since the feedback is much shorter. You will get 1 point for each drill.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "7000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "fontsize": "3",
+                    "correctscore": "1",
+                    "incorrectscore": "-1",
+                    "timebeforefeedback": "5000",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A B",
+                        "clustersrepeated": "1 1 ",
+                        "templatesrepeated": "72 144",
+                        "group": [
+                            " 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0   ",
+                            "0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0   "
+                        ]
+                    },
+                    "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_11 A_12 A_13 A_14 A_15 A_16 A_17 A_18 A_19 A_20 A_21 A_22 A_23 A_24 A_25 A_26 A_27 A_28 A_29 A_30 A_31 A_32 A_33 A_34 A_35 A_36 A_37 A_38 A_39 A_40 A_41 A_42 A_43 A_44 A_45 A_46 A_47 A_48 A_49 A_50 A_51 A_52 A_53 A_54 A_55 A_56 A_57 A_58 A_59 A_60 A_61 A_62 A_63 A_64 A_65 A_66 A_67 A_68 A_69 A_70 A_71 A_72 B_1 B_2 B_3 B_4 B_5 B_6 B_7 B_8 B_9 B_10 B_11 B_12 B_13 B_14 B_15 B_16 B_17 B_18 B_19 B_20 B_21 B_22 B_23 B_24 B_25 B_26 B_27 B_28 B_29 B_30 B_31 B_32 B_33 B_34 B_35 B_36 B_37 B_38 B_39 B_40 B_41 B_42 B_43 B_44 B_45 B_46 B_47 B_48 B_49 B_50 B_51 B_52 B_53 B_54 B_55 B_56 B_57 B_58 B_59 B_60 B_61 B_62 B_63 B_64 B_65 B_66 B_67 B_68 B_69 B_70 B_71 B_72 B_73 B_74 B_75 B_76 B_77 B_78 B_79 B_80 B_81 B_82 B_83 B_84 B_85 B_86 B_87 B_88 B_89 B_90 B_91 B_92 B_93 B_94 B_95 B_96 B_97 B_98 B_99 B_100 B_101 B_102 B_103 B_104 B_105 B_106 B_107 B_108 B_109 B_110 B_111 B_112 B_113 B_114 B_115 B_116 B_117 B_118 B_119 B_120 B_121 B_122 B_123 B_124 B_125 B_126 B_127 B_128 B_129 B_130 B_131 B_132 B_133 B_134 B_135 B_136 B_137 B_138 B_139 B_140 B_141 B_142 B_143 B_144  ",
+                    "randomizegroups": "false",
+                    "clusterlist": "0-0 2-2 4-4 6-6 8-8 10-10 12-12 14-14 16-16 36-36 38-38 40-40 42-42 44-44 46-46 48-48 50-50 52-52 54-54 56-56 58-58 60-60 62-62 64-64 66-66 68-68 70-70 90-90 92-92 94-94 96-96 98-98 100-100 102-102 104-104 106-106 108-108 110-110 112-112 114-114 116-116 118-118 120-120 122-122 124-124 144-144 146-146 148-148 150-150 152-152 154-154 156-156 158-158 160-160 162-162 164-164 166-166 168-168 170-170 172-172 174-174 176-176 178-178 198-198 200-200 202-202 204-204 206-206 208-208 210-210 212-212 214-214 0-0 2-2 4-4 6-6 8-8 10-10 12-12 14-14 16-16 36-36 38-38 40-40 42-42 44-44 46-46 48-48 50-50 52-52 54-54 56-56 58-58 60-60 62-62 64-64 66-66 68-68 70-70 90-90 92-92 94-94 96-96 98-98 100-100 102-102 104-104 106-106 108-108 110-110 112-112 114-114 116-116 118-118 120-120 122-122 124-124 144-144 146-146 148-148 150-150 152-152 154-154 156-156 158-158 160-160 162-162 164-164 166-166 168-168 170-170 172-172 174-174 176-176 178-178 198-198 200-200 202-202 204-204 206-206 208-208 210-210 212-212 214-214 1-1 3-3 5-5 7-7 9-9 11-11 13-13 15-15 17-17 37-37 39-39 41-41 43-43 45-45 47-47 49-49 51-51 53-53 55-55 57-57 59-59 61-61 63-63 65-65 67-67 69-69 71-71 91-91 93-93 95-95 97-97 99-99 101-101 103-103 105-105 107-107 109-109 111-111 113-113 115-115 117-117 119-119 121-121 123-123 125-125 145-145 147-147 149-149 151-151 153-153 155-155 157-157 159-159 161-161 163-163 165-165 167-167 169-169 171-171 173-173 175-175 177-177 179-179 199-199 201-201 203-203 205-205 207-207 209-209 211-211 213-213 215-215\n",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-71 72-215"
+                },
+                "buttonOptions": "tone 1, tone 2, tone 3, tone 4"
+            },
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Demographic Survey<br><br>\nPlease answer the following 9 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "9",
+                        "group": "0,b,t,0 0,f,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,f,t,0 0,b,t,0 0,b,t,0 "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9          ",
+                    "randomizegroups": "false",
+                    "clusterlist": "216-224",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You have completed the experiment. \n<br><br>\n<strong>Please enter the code- Tones -into the Amazon Mechanical Turk website for this HIT and submit your response now. \n<br><br>\nWe will check your completion and approve your assignment for the $6 payment."
+            }
+        ]
+    }
+}

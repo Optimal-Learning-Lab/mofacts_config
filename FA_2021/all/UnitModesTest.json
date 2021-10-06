@@ -1,1 +1,46 @@
-{"setspec":{"clusters":[{"stims":[{"response":{"correctResponse":"alif"},"display":{"text":"ا"},"parameter":"-1.49888999999999,0.50,1.0"},{"response":{"correctResponse":"alif"},"display":{"text":"ا"},"parameter":"-1.49889999999999,0.51,0.999"},{"response":{"correctResponse":"alif"},"display":{"text":"ـا"},"parameter":"-1.49890999999999,0.52,0.99"},{"response":{"correctResponse":"alif"},"display":{"text":"ـا"},"parameter":"-1.49891999999999,0.53,0.89"}]},{"stims":[{"response":{"correctResponse":"ba"},"display":{"text":"ب"},"parameter":"-1.49892999999999"},{"response":{"correctResponse":"ba"},"display":{"text":"بـ"},"parameter":"-1.49893999999999"},{"response":{"correctResponse":"ba"},"display":{"text":"ـبـ"},"parameter":"-1.49894999999999"},{"response":{"correctResponse":"ba"},"display":{"text":"ـب"},"parameter":"-1.49895999999999"}]}]}}
+{
+    "tutor": {
+        "setspec": {
+            "name": "Unit Mode Testing",
+            "lessonname": "Optimized Drill Practice of Unit Mode Testing",
+            "userselect": "false",
+            "stimulusfile": "UnitModesTest.json",
+            "isModeled": "false",
+            "lfparameter": ".85",
+            "simTimeout": "3500",
+            "simCorrectProb": "0.85",
+            "speechAPIKey": "",
+            "audioInputEnabled": "true",
+            "audioInputSensitivity": "15",
+            "speechIgnoreOutOfGrammarResponses": "true",
+            "speechOutOfGrammarFeedback": "Please try again",
+            "enableAudioPromptAndFeedback": "true",
+            "audioPromptSpeakingRate": "2"
+        },
+        "unit": [
+            {
+                "unitinstructions": "Here comes the optimized learning of Arabic letter names.",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "clusterlist": "0-1",
+                    "unitMode": "distance"
+                },
+                "deliveryparams": {
+                    "practiceseconds": "1000000",
+                    "drill": "8000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You are all done."
+            }
+        ]
+    }
+}

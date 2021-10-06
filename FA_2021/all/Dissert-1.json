@@ -1,0 +1,263 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "DissertPairedED",
+            "lessonname": "Dissert-1",
+            "stimulusfile": "Dissertstims.json",
+            "clustermodel": "",
+            "clustersize": "1",
+            "isModeled": "false",
+            "timeoutInSeconds": "15",
+            "userselect": "false",
+            "swapclusters": [
+                "0-8 9-17 18-26 27-35",
+                "36-44 45-53 54-62 63-71",
+                "72-80 81-89 90-98 99-107",
+                "108-116 117-125 126-134 135-143",
+                "0-35 36-71 72-107 108-143"
+            ],
+            "shuffleclusters": "0-3 4-7 9-12 13-16 18-21 22-25 27-30 31-34  36-39 40-43 45-48 49-52 54-57 58-61 63-66 67-70   72-75 76-79 81-84 85-88 90-93 94-97 99-102 103-106     108-111 112-115   117-120 121-124  126-129 130-133  135-138 139-142 144-149"
+        },
+        "unit": [
+            {
+                "unitname": "Informed Consent",
+                "unitinstructions": "The Mechanical Turk task you have selected is part of a research project that is described below.  You will use you computer for this experiment.\n<p><p>This project involves two sessions that take place 48 hours apart. Participants must complete both sessions in order to be fully compensated. The first session will consist of taking a pretest to assess your prior knowledge about basic research methods. Then you will complete a practice portion in which you answer additional questions as a method of studying this material. You may also be asked questions regarding your current mood or level of motivation. This first session should take about 45 to 60 minutes to complete. You will be compensated $3.50 for completing the first session.\n<p>You will be emailed (through MTurk) 48 hours after completing the first session with a link to complete the second session of this experiment. The second session should take approximately 30 minutes to complete. After completing the second session, you will be paid an additional $2.50.\n<p>If you should have any questions about this research study please feel free to contact Jaclyn Maass at jkmaass@memphis.edu. For questions regarding the research subjects' rights, the Chair of the Institutional Review Board for the Protection of Human Subjects should be contacted via phone at 901 768 2705 or via email at irb@memphis.edu.\n<p>All efforts, within the limits allowed by law, will be made to keep the personal information (your Amazon Turk Worker ID) in your research record private but total privacy cannot be promised. We will deidentify your data (remove your ID) after the experiment before storing it on our computers long-term. Because of privacy and confidentiality limitations associated with using MTurk IDs, we cannot guarantee complete anonymity. Worker IDs will only be used to distribute payment and will not be stored with survey responses. MTurk Worker IDs will not be shared with anyone. Further identifying information we gather (demographic information) will never be attached to your responses.\n<p>By participating, you understand and agree that the deidentified data gathered during this study may be used by University of Memphis and published and/or disclosed by Unviersity of Memphis to others outside of University of Memphis. However, no personally identifying information will ever be mentioned in any such publication or dissemination of the research data and/or results to other researchers.\n<br><br><p>Please click the \"Continue\" button if you agree to participate.\n        "
+            },
+            {
+                "unitname": "Instructions",
+                "unitinstructions": "Reading all of the instructions is essential to this experiment, so please take your time to read everything on each page before moving on.<br>\n            <b>Requirements / Rules</b>\n       <br>You are <b>NOT</b> allowed to take notes during any portion of this experiment.\n       <br>You are <b>NOT</b> allowed to \"Google\"/ search online for any of the answers. It is okay if you do not know the material well and poor performance will not affect your payment.\n       <br>You <b>MUST</b> be a native-English speaker.\n       <br><br>By continuing with the experiment, you are <b>agreeing to each of the conditions</b> listed above. <br><br>\n<b>This experiment takes place over two sessions. You are about to begin the first session. The second session will begin 48 hours after this session- you will be sent a link via MTurk.</b>\n<br><br> Please press continue below for more instructions.\n"
+            },
+            {
+                "unitname": "Part 1 Instructions",
+                "unitinstructions": "For Part 1, you will begin by taking a brief pretest. This is meant to assess your current level of understanding about basic scientific research methods.  \n<b>The questions from the pretest will not be repeated later in the the experiment.</b> It is okay if you do not know the information; do not look up any answers.\n<br><br>Next you will answer a set a \"current emotion\" questions about how you are feeling in that moment. \n<br><br>Third, you will complete 72 practice trials about research methods. These questions will be short answer, meaning you will type in your response. You <b>MUST</b> hit <b>ENTER</b> to submit each answer. \n <b>It is important to try your best, because you will finish the experiment more quickly when you get these questions correct.</b>\n<br><br>In this section you will practice different types of questions about the research methods concepts. The correct answers will be technical terms related to research and experimentation.\n<br>This section ends by asking you to answer the \"current emotion\" questions again. At that point, you will have completed Part 1 of the experiment. You will be given a code to enter into MTurk.\n<br><br> 48 hours after the first session, you will receive an email with a link to complete Part 2. This session will consist of a posttest, which will assess how much you learned during Part 1.\n<br>Please make sure your internet browser window is maximized and click below to begin.\n"
+            },
+            {
+                "unitname": "Pretest",
+                "unitinstructions": "You will now begin the pretest. Please answer the each of the following 8 questions; if you do not know the answer, please make your best guess. You must begin to type your answer within 30 seconds. Remember, you must hit the <b>Enter</b> button to submr response. If you are unsure of an answer, please make your best guess. You will not be told if you answered correctly or incorrectly.  <br><br><br>Click the Continue button to begin.",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "drill": "60000",
+                    "purestudy": "3000",
+                    "readyprompt": "0",
+                    "reviewstudy": "3000",
+                    "correctprompt": "1000",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timebeforefeedback": "500",
+                    "timeuntilaudio": "500"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "8",
+                        "group": "0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0\n                "
+                    },
+                    "initialpositions": "\n                A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "108-108 112-112 117-117 121-121 126-126 130-130 135-135 139-139",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-7"
+                }
+            },
+            {
+                "unitname": "Emotions1",
+                "unitinstructions": "Please rate how much you agree with each of the following statements regarding how you are <b>currently feeling</b>. Each page will ask about a different emotion or state of mind, which you may or may not be feeling.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "120000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "6",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0"
+                    },
+                    "initialpositions": " A_1 A_2 A_3 A_4 A_5 A_6 ",
+                    "randomizegroups": "false",
+                    "clusterlist": "144-149",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "Dissert Retrieval Practice",
+                "unitinstructions": "You will now begin the practice portion. This portion consists of 72 trials. You will be answering different types of questions about concepts related to scientific research methods. You will type in your answer to each question. All answers will be scientifically oriented terminology that might be used in research conducted in a psychological or medical setting.\n            <br><br>\n            There will be several trials for every concept, so some trials may look like previous ones you have completed.\n    <br><br>You must begin typing your answer within 30 seconds, otherwise the system will score it as incorrect and move to the next question. You <b>must hit the ENTER key to submit your answer.</b>\n            <br><br>\n    <p>You will receive corrective feedback for each item. This means if you get the answer correct, a \"Correct\" message notification will briefly appear in a green box underneath your answer. If you get the answer incorrect, you will receive a Review Period during which the correct answer will be shown in a red box at the bottom of the screen. These Review Periods last 10 seconds, which is longer than the Correct notification, so it is in your best interest to try your best to get them correct, so you can finish the experiment more quickly.\n            <br><br>\n            <b>Remember that you are not allowed to take notes or \"look up\" any answers.<br>\n            <br>Please be sure to read each question in its entirety before answering. <br><br>\n            Click Continue to begin the practice portion.\n",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "drill": "60000",
+                    "purestudy": "3000",
+                    "readyprompt": "0",
+                    "reviewstudy": "10000",
+                    "correctprompt": "1000",
+                    "timebeforefeedback": "500",
+                    "timeuntilaudio": "500"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "72",
+                        "group": "0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0  0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0  0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0                     0,f,d,0                     0,f,d,0 0,f,d,0 0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0                     0,f,d,0\n                "
+                    },
+                    "initialpositions": "\n                A_1 A_4 A_7 A_10 A_13 A_16 A_19 A_22\n                A_2 A_5 A_8 A_11 A_14 A_17 A_20 A_23\n                A_3 A_6 A_9 A_12 A_15 A_18 A_21 A_24\n                \n                A_25 A_28 A_31 A_34 A_37 A_40 A_43 A_46\n                A_26 A_29 A_32 A_35 A_38 A_41 A_44 A_47\n                A_27 A_30 A_33 A_36 A_39 A_42 A_45 A_48\n                \n                A_49 A_52 A_55 A_58 A_61 A_64 A_67 A_70\n                A_50 A_53 A_56 A_59 A_62 A_65 A_68 A_71\n                A_51 A_54 A_57 A_60 A_63 A_66 A_69 A_72\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "4-6 0-2    13-15 9-11    22-24 18-20   31-33 27-29 \n                        40-42 36-38   49-51 45-47   58-60 54-56   67-69 63-65 \n                        76-78 72-74   85-87 81-83  94-96 90-92  103-105 99-101 \n            ",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": [
+                        "0-0",
+                        "0-0",
+                        "0-0",
+                        "0-0",
+                        "0-0",
+                        "0-0"
+                    ],
+                    "swapfinalresult": [
+                        "8-9 10-11 12-13 14-15",
+                        "16-17 18-19 20-21 22-23",
+                        "32-33 34-35 36-37 38-39",
+                        "40-41 42-43 44-45 46-47",
+                        "56-57 58-59 60-61 62-63",
+                        "64-65 66-67 68-69 70-71"
+                    ]
+                }
+            },
+            {
+                "unitname": "Emotions2",
+                "unitinstructions": "Please rate how much you agree with each of the following statements regarding how you are <b>currently feeling</b>. Each page will ask about a different emotion or state of mind, which you may or may not be feeling.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "120000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "6",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0"
+                    },
+                    "initialpositions": " A_1 A_2 A_3 A_4 A_5 A_6 ",
+                    "randomizegroups": "false",
+                    "clusterlist": "144-149",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "turkemailsubject": "Link for $2.50 Bonus for Turk HIT",
+                "turkemail": "\nDear Amazon Turk Worker,\nRecently you completed part 1 of a 2 part experiment called Practicing Research Methods Concepts, which paid $3.50. Now we would appreciate it if you would please return do part 2. It will take less time than part 1, which is why we are paying $2.50 for completion. Part 2 must be completed within 24 hours from when you get this email.\nPlease avoid typos in your Turk ID, since then we cannot identify you as a part 2 person and cannot pay your bonus. You will know you have continued correctly if it says 'Thank you for continuing. You will now complete a posttest...'\nHere is the link to finish: http://mofacts.optimallearning.org/experiment/dissert",
+                "unitinstructions": "You have completed Part 1 of the experiment. \n<br><br>\n<b>Please enter the code- H2j17dRm1 -into the Amazon Mechanical Turk website for this HIT and submit your response now.</b> \n<br><br>\nWe will check your completion and approve your assignment for the $3.50 payment. You will receive a private Turk message (delivered to your email inbox) for instructions on Session 2. Session 2 earns a $2.50 bonus for completion.\n<br><br>You may close this window once you have submitted the code above to mTurk.",
+                "unitname": "Lockout unit",
+                "deliveryparams": {
+                    "lockoutminutes": "2880"
+                }
+            },
+            {
+                "unitname": "Heart Posttest",
+                "unitinstructions": "Thank you for continuing. You will now complete a posttest containing a total of 18 questions. \nDuring Part 1 (2 days ago), you practiced several research methods concepts by answering definition and example questions about those concepts. Two instances (not seen during practice, and which do not need to be learned) are shown below:\n<br><br>\n<b>Definition question:</b> What type of studies are prone to attrition, or people dropping out of the study, because the study takes place over a lengthy period of time? \n<br><br>\n<b>Example question:</b> Mr. Smith completed a longitudinal study at his university in which he tracked a set of students' progress over the course of 4 years. He began with 200 students, but lost 75 due to attrition. What type of study did Mr. Smith conduct?\n<br><br>\n<b>During Part 2 (right now) you will be completing a post test which has some questions that are very similar to those you practiced, and a new type of question that asks you to generate your own example.</b>\n<br><br>\nPlease answer each question, even if you are unsure of the answer. Unlike the practice portion you completed in Part 1, you will not be told if your answer is correct or incorrect.\n<br><br>Click below to continue.\n        ",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "purestudy": "3000",
+                    "readyprompt": "0",
+                    "reviewstudy": "3000",
+                    "correctprompt": "1000",
+                    "drill": "60000",
+                    "timebeforefeedback": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "timeuntilaudio": "500"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "D E F",
+                        "clustersrepeated": "1 1 1",
+                        "templatesrepeated": "6 6 6",
+                        "group": [
+                            " \n                    0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0      \n                ",
+                            " 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 ",
+                            "0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0 0,f,t,0"
+                        ]
+                    },
+                    "initialpositions": "\n                D_1 D_2 D_3 D_4 D_5 D_6 \n                E_1 E_2 E_3 E_4 E_5 E_6 \n                F_1 F_2 F_3 F_4 F_5 F_6\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "\n                3-3 12-12 39-39 48-48 75-75 84-84\n                7-7 16-16 43-43 52-52 79-79 88-88\n                26-26 35-35 62-62 71-71 98-98 107-107\n            ",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-17"
+                }
+            },
+            {
+                "unitname": "Emotions3",
+                "unitinstructions": "Please rate how much you agree with each of the following statements regarding how you are <b>currently feeling</b>. Each page will ask about a different emotion, which you may or may not be feeling.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "120000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "6",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+                    },
+                    "initialpositions": " A_1 A_2 A_3 A_4 A_5 A_6 ",
+                    "randomizegroups": "false",
+                    "clusterlist": "144-149",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "Demographics",
+                "unitinstructions": "Demographic Survey<br><br>\nPlease answer the following 4 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "4",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,f,t,0"
+                    },
+                    "initialpositions": "A_1 A_2 A_3 A_4",
+                    "randomizegroups": "false",
+                    "clusterlist": "150-153",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "turkbonus": "2.50",
+                "unitname": "last",
+                "unitinstructions": "Thank you for participating. This study intends to investigate the effects of different practice scheduling (the orderin of questions in the first session) on posttest performance (the items from this second session). If you would like more information about this study, please contact Jackie at jkmaass@memphis.edu.<br><br>\nWe will check your completion and you will receive payment within 3 days."
+            }
+        ]
+    }
+}
