@@ -14,18 +14,16 @@ Testing and Specification for MoFaCTS
 
 ## Student side testing (primarily learning sessions, and student reports)
 ### Part A
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true
-1. Use login with your last name and an identifier for the run # and or the date, such as Pavlik3on530
-2. Login to the ppavlik@sw.tn.edu, choose TESTCOURSE and then choose Chapter 9 or 10
-3. Proceed to available chapters
-4. Choose the first 1, and select all items
+1. Login to test link: https://staging.optimallearning.org/signinsouthwest?showTestLogins=true&showDialogueHints=true
+1. Use login with "test" your last name or initials and an identifier for the run # and or the date, such as testPavlik3on530
+2. Login to the pavlik@southwest.tn.edu, choose Test Class and then choose Chapter chapter 10 or 11
 5. Practice until you start seeing repetitions, make sure you get some right and wrong, the best test is to practice like a real student with effort
 6. Check progress report to confirm that the readout appears to be what you completed. Is everything reported comprehensible?
 7. Navigate to home
 8. Close the browser
 
 ### Part B
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+1. Login to test link: https://staging.optimallearning.org/signinsouthwest?showTestLogins=true&showDialogueHints=true the same way as before
 2. Use same login
 3. Proceed to available chapters
 4. Choose the same one
@@ -43,7 +41,10 @@ Testing and Specification for MoFaCTS
 15. Practice for 5 trials
 
 ### Part C
-1. Login to test link: https://staging.optimallearning.org/signInSouthwest?showTestLogins=true the same way as before
+1. Do about 5 minutes of practice in the second chapter
+
+### Part D
+1. Login to test link: https://staging.optimallearning.org/signinsouthwest?showTestLogins=true&showDialogueHints=true the same way as before
 7. Select survey link
 8. Complete survey 
 
