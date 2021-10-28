@@ -5,8 +5,8 @@ Testing and Specification for MoFaCTS
 # Testing
 ## Error Reporting Procedure (using the button for reporting in the app)
 * check current errors: https://github.com/memphis-iis/mofacts-ies/milestone/15
-* what you were doing (and step if using procedure below)
-* what happened
+* what you were doing with details on the item or a screenshot(and step if using procedure below)
+* what happened (screenshots help a lot, open the console (usually with ctrl-shoft-j) to show the error if it stops running)
 * what you expected
 * resume testing after reporting the error if it is minor enough
 * if it is severe/important, reproduce it and submit a second error report
