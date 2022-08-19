@@ -1,0 +1,82 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "Internal Testing",
+            "lessonname": "Testing Tdf",
+            "userselect": "true",
+            "experimentTarget": "test",
+            "stimulusfile": "testStim.json",
+            "isModeled": "false",
+            "lfparameter": ".85",
+            "simTimeout": "3500",
+            "simCorrectProb": "0.85",
+            "prestimulusDisplay": "Prestimulus Display Text"
+        },
+        "unit": [
+            {
+                "unitinstructions": "Here comes the test assessment session",
+                "unitname": "Schedule Unit",
+                "buttontrial": "true",
+                "deliveryparams": {
+                    "feedbackType": "simple",
+                    "allowFeedbackTypeSelect": "true",
+                    "practiceseconds": "1000000",
+                    "drill": "5000",
+                    "skipstudy": "false",
+                    "purestudy": "5000",
+                    "reviewstudy": "5000",
+                    "correctprompt": "500",
+                    "fontsize": "2",
+                    "correctscore": "0",
+                    "incorrectscore": "0",
+                    "numButtonListImageColumns": "3"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "1",
+                        "group": "0,t,t,0"
+                    },
+                    "initialpositions": "A_1",
+                    "randomizegroups": "false",
+                    "clusterlist": "2-2",
+                    "assignrandomclusters": "false"
+                }
+            },
+            {
+                "unitinstructions": "Here comes the testing learning session.",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "maxTrials": "2",
+                    "clusterlist": "1-1",
+                    "calculateProbability": "\r\n          function mul(m1, m2) {\r\n            var result = 0;\r\n            var len = m1.length;\r\n            for (var i = 0; i < len; i++) {\r\n                result += m1[i] * m2[i]\r\n            }\r\n            return result\r\n          }\r\n          function logitdec(outcomes, decay) {\r\n            if (outcomes) {\r\n                var outcomessuc = JSON.parse(JSON.stringify(outcomes));\r\n                var outcomesfail = outcomes.map(function(value) {\r\n                    return Math.abs(value - 1)\r\n                });\r\n                var w = outcomessuc.unshift(1);\r\n                var v = outcomesfail.unshift(1);\r\n                return Math.log(mul(outcomessuc, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })) / mul(outcomesfail, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })))\r\n            }\r\n            return 0\r\n          }\r\n          function recency(age, d) {\r\n          if (age==0) { return 0;\r\n          } else\r\n            {return Math.pow(1 + age, -d);\r\n            }\r\n          }\r\n          function quaddiffcor(seq, probs) {\r\n            return mul(seq, probs.map(function(value) {\r\n                return value * value\r\n            }))\r\n          }\r\n          function linediffcor(seq, probs) {\r\n            return mul(seq, probs)\r\n          }\r\n          function linediffincor(seq, probs) {\r\n            return mul(seq.map(function(value) {\r\n                return Math.abs(value - 1)\r\n            }), probs)\r\n          }\r\n          var numTotalSyllables = p.syllables;\r\n          p.hintsylls = [];\r\n          var numHiddenSyllables = p.stimIndex % 2 == 0 ? 1 : 2;\r\n          if(numHiddenSyllables > numTotalSyllables){\r\n              numHiddenSyllables = numTotalSyllables;\r\n          }\r\n          for(var i=0;i<numTotalSyllables-numHiddenSyllables;i++){\r\n              p.hintsylls.push(i);\r\n          }\r\n          \r\n          p.y = -0.72159+\r\n          .58150 * logitdec(\r\n              p.overallOutcomeHistory.slice(p.overallOutcomeHistory.length-60,\r\n              p.overallOutcomeHistory.length), .97) +\r\n          .54467 * logitdec(p.responseOutcomeHistory, .79) +\r\n          9.67995 * recency(p.stimSecsSinceLastShown, .35)+\r\n          1.85143  * linediffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n          -1.96012 * quaddiffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n          -0.27823 * linediffincor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities);\r\n          p.probability = 1.0 / (1.0 + Math.exp(-p.y));\r\n        // console.log(p.overallOutcomeHistory+\" - \"+p.responseOutcomeHistory +\" - \"+p.stimSecsSinceLastShown+\" - \"+p.stimOutcomeHistory+\" - \"+p.stimPreviousCalculatedProbabilities);\r\n          return p\r\n             "
+                },
+                "buttontrial": "false",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "feedbackType": "dialogue",
+                    "forceCorrection": "false",
+                    "practiceseconds": "1000000",
+                    "drill": "20000",
+                    "purestudy": "20000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "500",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "falseAnswerLimit": "3",
+                    "timeuntilaudio": "500",
+                    "timeuntilaudiofeedback": "500",
+                    "autostopTranscriptionAttemptLimit": "4",
+                    "prestimulusdisplaytime": "500"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You are all done."
+            }
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "IES Optimized Cloze Practice of Basic Statistics",
+            "userselect": "false",
+            "stimulusfile": "SVOIESstims.json",
+            "isModeled": "false",
+            "lfparameter": ".85",
+            "shuffleclusters": "0-17",
+            "simTimeout": "3500",
+            "simCorrectProb": "0.75"
+        },
+        "unit": [
+            {
+                "unitinstructions": "Here comes the optimized learning.",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "clusterlist": "0-17",
+                    "unitMode": "thresholdCeiling",
+                    "calculateProbability": "\r\n          function mul(m1, m2) {\r\n            var result = 0;\r\n            var len = m1.length;\r\n            for (var i = 0; i < len; i++) {\r\n                result += m1[i] * m2[i]\r\n            }\r\n            return result\r\n          }\r\n          function logitdec(outcomes, decay) {\r\n            if (outcomes) {\r\n                var outcomessuc = JSON.parse(JSON.stringify(outcomes));\r\n                var outcomesfail = outcomes.map(function(value) {\r\n                    return Math.abs(value - 1)\r\n                });\r\n                var w = outcomessuc.unshift(1);\r\n                var v = outcomesfail.unshift(1);\r\n                return Math.log(mul(outcomessuc, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })) / mul(outcomesfail, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })))\r\n            }\r\n            return 0\r\n          }\r\n          function recency(age, d) {\r\n          if (age==0) { return 0;\r\n          } else\r\n            {return Math.pow(1 + age, -d);\r\n            }\r\n          }\r\n          function quaddiffcor(seq, probs) {\r\n            return mul(seq, probs.map(function(value) {\r\n                return value * value\r\n            }))\r\n          }\r\n          function linediffcor(seq, probs) {\r\n            return mul(seq, probs)\r\n          }\r\n          function linediffincor(seq, probs) {\r\n            return mul(seq.map(function(value) {\r\n                return Math.abs(value - 1)\r\n            }), probs)\r\n          }\r\n          p.y = -0.72159+\r\n          .58150 *\r\n            logitdec(\r\n              p.overallOutcomeHistory.slice(p.overallOutcomeHistory.length-60,\r\n              p.overallOutcomeHistory.length),\r\n                .97) +\r\n          .54467 * logitdec(p.responseOutcomeHistory, .79) +\r\n          9.67995 * recency(p.stimSecsSinceLastShown, .35)+\r\n          1.85143  * linediffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n          -1.96012 * quaddiffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n          -0.27823 * linediffincor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities);\r\n          p.probability = 1.0 / (1.0 + Math.exp(-p.y));\r\n         console.log(\r\n          p.overallOutcomeHistory+\" - \"+\r\n        p.responseOutcomeHistory +\" - \"+\r\n        p.stimSecsSinceLastShown+\" - \"+\r\n    p.stimOutcomeHistory+\" - \"+\r\n  p.stimPreviousCalculatedProbabilities);\r\n          return p\r\n             "
+                },
+                "deliveryparams": {
+                    "drill": "60000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "12000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0"
+                }
+            },
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "5",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "18-22",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You are all done."
+            }
+        ]
+    }
+}

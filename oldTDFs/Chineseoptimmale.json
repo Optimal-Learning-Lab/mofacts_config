@@ -1,0 +1,109 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "Mandarin optim Test",
+            "lessonname": "Chineseoptimmale",
+            "experimentTarget": "tonelearningmalecond",
+            "userselect": "true",
+            "stimulusfile": "Chinesetonestimsoptim2021.json",
+            "shuffleclusters": "0-8 ",
+            "audioInputEnabled": "false"
+        },
+        "unit": [
+            {
+                "unitname": "Learning Session",
+                "unitinstructions": " This learning session will have 350 trials. Please listen carefully to the syllable and try to identify the tone to continue. There will be feedback about your answer.\n<p><br />If you are <strong> correct </strong>, the feedback will be just <strong> one second </strong>. </p>\n<p><br />If you are <strong> wrong </strong>, the system will replay the tone sound and show the correct answer. The feedback will last for <strong> 6 seconds </strong> so that you have enough time to learn from it. Please do your best to <strong> learn from the feedback </strong>.</p>\n<p><br /> You will receive <strong> a bonus of $.01 for each correct answer</strong>.</p>\n<p><br />The tones are carried by six syllables from the nine syllables (ma, mo, ya, yi, shu, wei, xue, yuan, and sheng). After this learning session, you will take a post-test.</p>",
+                "buttonorder": "fixed",
+                "wrongButtonCount": "",
+                "buttonOptions": "level (-), rising (/), dipping (\\/), falling (\\)",
+                "deliveryparams": {
+                    "drill": "70000000",
+                    "skipstudy": "false",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "timeuntilaudiofeedback": "1000",
+                    "timeuntilaudio": "1000",
+                    "readyprompt": "1000"
+                },
+                "buttontrial": "true",
+                "learningsession": {
+                    "clusterlist": "0-8",
+                    "unitMode": "distance",
+                    "calculateProbability": "\n                 function mul(m1, m2) {\n                   var result = 0;\n                   var len = m1.length;\n                   for (var i = 0; i < len; i++) {\n                       result += m1[i] * m2[i]\n                   }\n                   return result\n                 }\n                 function lineafm(outcomes) {\n                 if (outcomes) {\n                   var outcomessuc = JSON.parse(JSON.stringify(outcomes)).reduce(function (\n                     a,\n                     b\n                   ) {\n                     return a + b;\n                   },\n                   0);\n                   var outcomesfail = outcomes\n                     .map(function (value) {\n                       return Math.abs(value - 1);\n                     })\n                     .reduce(function (a, b) {\n                       return a + b;\n                     }, 0);\n                   return outcomessuc + outcomesfail;\n                 }\n                 return 0;\n               }\n                 function logitdec(outcomes, decay) {\n                   if (outcomes) {\n                       var outcomessuc = JSON.parse(JSON.stringify(outcomes));\n                       var outcomesfail = outcomes.map(function(value) {\n                           return Math.abs(value - 1)\n                       });\n                       var w = outcomessuc.unshift(1);\n                       var v = outcomesfail.unshift(1);\n                       return Math.log(mul(outcomessuc, [...Array(w).keys()].reverse().map(function(value, index) {\n                           return Math.pow(decay, value)\n                       })) / mul(outcomesfail, [...Array(w).keys()].reverse().map(function(value, index) {\n                           return Math.pow(decay, value)\n                       })))\n                   }\n                   return 0\n                 }\n                 function propdec(outcomes, decay) {\n                   if (outcomes) {\n                       var outcomesLocal = JSON.parse(JSON.stringify(outcomes));\n                       var w = outcomesLocal.unshift(1);\n                       return mul(outcomesLocal, [...Array(w).keys()].reverse().map(function(value, index) {\n                           return Math.pow(decay, value)\n                       })) / [...Array(w + 1).keys()].reverse().map(function(value, index) {\n                           return Math.pow(decay, value)\n                       }).reduce((a, b) => a + b, 0)\n                   }\n                   return .5\n                 }\n                 function baselevel(age, interference, d, f) {\n                   return 1 / Math.pow(1 + interference + ((age - interference) * f), d)\n                 }\n                 function recency(age, d) {\n                   return 1 / Math.pow(1 + age, d)\n                 }\n                 function compdiffcor(seq, probs) {\n                   return mul(seq, probs) - mul(seq, probs.map(function(value) {\n                       return value * value\n                   }))\n                 }\n                 function quaddiffcor(seq, probs) {\n                   return mul(seq, probs.map(function(value) {\n                       return value * value\n                   }))\n                 }\n                 function linediffcor(seq, probs) {\n                   return mul(seq, probs)\n                 }\n                 function linediffincor(seq, probs) {\n                   return mul(seq.map(function(value) {\n                       return Math.abs(value - 1)\n                   }), probs)\n                 }\n                 p.y = -0.5608868175+ p.stimParameters[0] + 0.5809807505 * logitdec(p.overallOutcomeHistory, .98) +\n        p.stimParameters[4] * logitdec(p.clusterOutcomeHistory, .97) +\n        0.4410716021 * logitdec(p.stimOutcomeHistory,.79) +\n                       p.stimParameters[2] * compdiffcor(p.clusterOutcomeHistory, p.clusterPreviousCalculatedProbabilities) +\n                       p.stimParameters[3] * linediffincor(p.clusterOutcomeHistory, p.clusterPreviousCalculatedProbabilities);\n                 p.probability = 1.0 / (1.0 + Math.exp(-p.y));\n                 console.log(p.stimParameters[0]);\n                 console.log(.548682560 * logitdec(p.overallOutcomeHistory, .98));\n        console.log(p.stimParameters[4] * logitdec(p.clusterOutcomeHistory, .97));\n                 console.log(p.stimParameters[2] * compdiffcor(p.clusterOutcomeHistory, p.clusterPreviousCalculatedProbabilities));\n                 console.log(p.stimParameters[3] * linediffincor(p.clusterOutcomeHistory, p.clusterPreviousCalculatedProbabilities));\n       console.log(p.probability )\n                 return p\n                    \n"
+                }
+            },
+            {
+                "unitinstructions": "<p>This post-test will have 36 trials. Please listen carefully to the syllable and try to identify the tone to continue. There will be <strong> no feedback </strong> about your answer.</p>\n<p><br /> You will receive <strong> a bonus of $.01 for each correct answer</strong>.</p>\n <p><br />The tones are carried by three syllables selected from the nine syllables (ma, mo, ya, yi, shu, wei, xue, yuan, and sheng). There will be a short survey after this post-test.</p>",
+                "unitname": "Tone post-test",
+                "buttonorder": "fixed",
+                "wrongButtonCount": "",
+                "buttonOptions": "level (-), rising (/), dipping (\\/), falling (\\)",
+                "deliveryparams": {
+                    "drill": "70000000",
+                    "skipstudy": "false",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "timeuntilaudiofeedback": "1000",
+                    "timeuntilaudio": "1000"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A B C ",
+                        "clustersrepeated": "12 12 12",
+                        "templatesrepeated": "1 1 1",
+                        "group": [
+                            "0,f,t,0 2,f,t,1 4,f,t,2 6,f,t,3 8,f,t,4 10,f,t,5 12,f,t,6 14,f,t,7 16,f,t,8 18,f,t,9 20,f,t,10 22,f,t,11",
+                            "0,f,t,0 2,f,t,1 4,f,t,2 6,f,t,3 8,f,t,4 10,f,t,5 12,f,t,6 14,f,t,7 16,f,t,8 18,f,t,9 20,f,t,10 22,f,t,11",
+                            "0,f,t,0 2,f,t,1 4,f,t,2 6,f,t,3 8,f,t,4 10,f,t,5 12,f,t,6 14,f,t,7 16,f,t,8 18,f,t,9 20,f,t,10 22,f,t,11"
+                        ]
+                    },
+                    "initialpositions": "\n                A_1 A_1 A_1 A_1 A_1 A_1 A_1 A_1 A_1 A_1 A_1 A_1\n                B_1 B_1 B_1 B_1 B_1 B_1 B_1 B_1 B_1 B_1 B_1 B_1\n                C_1 C_1 C_1 C_1 C_1 C_1 C_1 C_1 C_1 C_1 C_1 C_1\n            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "6-8",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-35"
+                }
+            },
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Survey Questions<br><br>\nPlease answer the following questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "2",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "E",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "17",
+                        "group": "0,b,t,0 0,f,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,f,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+                    },
+                    "initialpositions": "  E_1 E_2 E_3 E_4 E_5 E_6 E_7 E_8 E_9 E_10 E_11 E_12 E_13 E_14 E_15 E_16 E_17      ",
+                    "randomizegroups": "false",
+                    "clusterlist": "10-26",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You have completed the experiment.\n<br><br>\nPlease enter the SECRET KEY- <strong> cheers </strong> -into the CloudResearch website for this HIT and submit your response now.\n<br><br>\nWe will check your completion and approve your assignment for the $7 payment and the bonus."
+            }
+        ]
+    }
+}

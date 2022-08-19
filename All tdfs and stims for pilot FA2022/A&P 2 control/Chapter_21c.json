@@ -1,9 +1,9 @@
 {
     "tutor": {
         "setspec": {
-            "lessonname": "Chapter 16",
+            "lessonname": "Chapter 21",
             "userselect": "true",
-            "stimulusfile": "ch16.10.selected-cloze.json",
+            "stimulusfile": "ch21.10.selected-cloze.json",
             "lfparameter": ".85",
             "audioInputEnabled": "true",
             "audioInputSensitivity": "15",
@@ -34,7 +34,7 @@
                     },
                     "initialpositions": "A_1",
                     "randomizegroups": "false",
-                    "clusterlist": "51-51",
+                    "clusterlist": "30-30",
                     "assignrandomclusters": "false",
                     "permutefinalresult": "0-0"
                 },
@@ -54,7 +54,7 @@
                 "unitinstructions": "<p>Welcome to MoFaCTS! </p>\n                <p>How it Works: fill-in-the-blank to complete each sentence from your textbook. MoFaCTS helps you practice - you are not graded on your performance, and it expects you to get answers wrong. MoFaCTS automatically moves on to the next flashcard so you can keep practicing at a good pace, and come back to difficult ones later.</p>\n                <p>Progress: The Progress page shows how much practice you have done and how well you have learned the material to help you decide if you should keep practicing.</p>\n                <p>Audio Settings: You can silently read and type your answers, or the system can read the questions out loud and detect your spoken answers.</p>\n                <p>Practice Tips</p>\n                <ul>\n                <li>Read your textbook before using MoFaCTS</li>\n                </ul>\n                <ul>\n                <li>Use the Refutation and Dialogue Feedback if you need help learning why you got an answer wrong</li>\n                <li>This is not a test! It&rsquo;s ok to get answers wrong. The system will help you practice those items.</li>\n                <li>If you have any technical problems, use the &ldquo;Report Error&rdquo; button to automatically alert the programmers about your issue.</li>\n                </ul>",
                 "unitname": "Learning unit",
                 "learningsession": {
-                    "clusterlist": "0-50",
+                    "clusterlist": "0-29",
                     "unitMode": "distance",
                     "calculateProbability": "function mul(m1, m2) {\n      var result = 0;\n            var len = m1.length;\n            for (var i = 0; i < len; i++) {\n                result += m1[i] * m2[i]\n            }\n            return result\n          }\n\n          function logitdec(outcomes, decay) {\n            if (outcomes) {\n                var outcomessuc = JSON.parse(JSON.stringify(outcomes));\n                var outcomesfail = outcomes.map(function(value) {\n                    return Math.abs(value - 1)\n                });\n                var w = outcomessuc.unshift(1);\n                var v = outcomesfail.unshift(1);\n                return Math.log(mul(outcomessuc, [...Array(w).keys()].reverse().map(function(value, index) {\n                    return Math.pow(decay, value)\n                })) / mul(outcomesfail, [...Array(w).keys()].reverse().map(function(value, index) {\n                    return Math.pow(decay, value)\n                })))\n            }\n            return 0\n          }\n\n          function recency(age, d) {\n          if (age==0) { return 0;\n          } else\n            {return Math.pow(1 + age, -d);\n            }\n          }\n\n          function quaddiffcor(seq, probs) {\n            return mul(seq, probs.map(function(value) {\n                return value * value\n            }))\n          }\n\n          function quaddiffcor(seq, probs) {\n            return mul(seq, probs.map(function(value) {\n                return value * value\n            }))\n          }\n\n          function quaddiffincor(seq, probs) {\n            return mul(Math.abs(seq-1), probs.map(function(value) {\n                return value * value\n            }))\n          }\n\n          function linediffcor(seq, probs) {\n            return mul(seq, probs)\n          }\n\n          function linediffincor(seq, probs) {\n            return mul(seq.map(function(value) {\n                return Math.abs(value - 1)\n            }), probs)\n          }\n                                   var intercept;\n            function arrSum(arr){return arr.reduce(function(a,b){return a + b}, 0)}\n            function errlist(seq) {  return seq.map(function(value) {return Math.abs(value - 1)})}\n            if (p.hintLevel==0) {intercept=.89} else if (p.hintLevel==1) {intercept=1.46} else {intercept=2.07}\n            var clozeProbability =p.stim.tags ? (p.stim.tags.clozeProbability || 0) : 0;\n  var sentenceWeight =p.stim.tags ? (p.stim.tags.sentenceWeight || 0) : 0;\n              p.y = intercept    +\n                    .99 * logitdec(\n                        p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length-60,1),\n                        p.overallOutcomeHistory.length), .97) +\n                    3.77 * recency(p.stimSecsSinceLastShown, .25) +\n                    1.75 *  recency(p.responseSecsSinceLastShown, .026) +\n                    .80  * linediffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\n                    -.80 * quaddiffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\n                    -.22 * arrSum(errlist(p.stimOutcomeHistory)) +\n       .083*Math.log(parseFloat(clozeProbability))+\n -.077*Math.log(parseFloat(sentenceWeight))+\n             -.61* Math.log(p.answerText.length);\n                    p.probability = 1.0 / (1.0 + Math.exp(-p.y));        \n                    return p\n" 
                 },
