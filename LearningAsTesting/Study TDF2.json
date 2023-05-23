@@ -1,0 +1,81 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Memory for Anatomy Experiment",
+            "userselect": "false",
+            "experimentTarget": "testingaslearning",
+            "stimulusfile": "Anatomystims.json",
+            "lfparameter": ".85",
+            "tags": ["Experiment", "Anatomy and Physiology", "A & P", "Holes"]
+        },
+        "unit": [{
+                "unitname": "Informed Consent",
+                "unitinstructions": "<p>Consent to Use Data<br /><br />The Mechanical Turk task you have selected is part of a research project.&nbsp;&nbsp;The experiment has 50 test fill-in-the blank&nbsp;questions that repeat twice (100 trials).&nbsp;After you have answered each, you will see the correct answer and have another chance to answer the question on a later trial.&nbsp;For every right answer, you will receive an additional $.05 for a potential bonus of up to $5, since it is important for our research that learners do their best.<br />After completing these questions, you will be asked to fill out a 4 item survey.&nbsp;<br /><br />If you should have any questions about this research study, please feel free to contact Philip Pavlik at 901-678-2326. For questions regarding the research subjects' rights, the Chair of the Institutional Review Board for the Protection of Human Subjects should be contacted at 901-678-2533&nbsp;or via email at irb@memphis.edu.<br /><br />All efforts, within the limits allowed by law, will be made to keep the personal information (your Amazon Turk Worker ID) in your research record private, but total privacy cannot be promised. We will deidentify your data (remove your ID) after the experiment before storing it on our computers long-term. Because of privacy and confidentiality limitations associated with using MTurk IDs, we cannot guarantee complete anonymity. Worker IDs will only be used to distribute payment and will not be stored with survey responses. MTurk Worker IDs will not be shared with anyone. Further identifying information we gather will never be attached to your responses.<br /><br />By clicking this button, I consent to the above terms.</p>"
+            }, 
+   {
+                "unitname": "Anatomy Practice",
+                "unitinstructions": "We are conducting an experiment about learning fill-in-the-blank items. For this HIT, you will:1. Select the link below to complete the experiment. Log in with your Turk worker ID.2. You will be asked to read and answer fill in the blank items about anatomy. Please answer all the items to the best of your ability based on your current knowledge of anatomy.For the trials, you will have 30 seconds to begin typing your answer (the timer resets when you are typing). Hit ENTER after each response or when you don't have a good guess.3. If you get the fill-in-the-blank incorrect, you will have a 6-second required wait period to review the answer.4. The experiment has 50 test questions that repeat twice (100 trials). After you have answered, you will see the correct answer and have another chance to answer the question on a later trial. For every right answer, you will receive an additional $.05 at the end of the experiment for a potential bonus of up to $5 since it is important for our research that learners do their best.5. After completing these questions, you will be asked to fill out a brief survey (4 questions). 6. Make sure to leave this window open as you complete the practice part of the experiment. At the end of the survey, you will receive a code to paste into the box below to receive $5 for doing the experiment. When you are finished, you will return to this page to paste the code into the box.",
+                "deliveryparams": {
+                    "drill": "30000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "6000",
+                    "correctprompt": "1000",
+                    "fontsize": "3",
+                    "correctscore": "1",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A B",
+                        "clustersrepeated": "2 2",
+                        "templatesrepeated": "25 25",
+                        "group": [
+                            " 0,f,t,0 0,f,d,10 0,f,t,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10     0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10        0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10      0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10        0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 0,f,d,0 0,f,d,10 ",
+                            " 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50       0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50        0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50        0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50        0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50 0,f,d,0 0,f,d,50  "
+                        ]
+                    },
+                    "initialpositions": "A_1 A_2 A_3 A_4 A_5 B_1 B_2 B_3 B_4 B_5 A_1 A_2 A_3 A_4 A_5 B_6 B_7 B_8 B_9 B_10 A_6 A_7 A_8 A_9 A_10 B_11 B_12 B_13 B_14 B_15 A_6 A_7 A_8 A_9 A_10 B_16 B_17 B_18 B_19 B_20 A_11 A_12 A_13 A_14 A_15 B_21 B_22 B_23 B_24 B_25 A_11 A_12 A_13 A_14 A_15 B_1 B_2 B_3 B_4 B_5 A_16 A_17 A_18 A_19 A_20 B_6 B_7 B_8 B_9 B_10 A_16 A_17 A_18 A_19 A_20 B_11 B_12 B_13 B_14 B_15 A_21 A_22 A_23 A_24 A_25 B_16 B_17 B_18 B_19 B_20 A_21 A_22 A_23 A_24 A_25 B_21 B_22 B_23 B_24 B_25",
+                    "randomizegroups": "false",
+                    "clusterlist": "0-49",
+                    "permutefinalresult": "0-9 10-19 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99",
+                    "assignrandomclusters": "false"
+                }
+
+            }, 
+   {
+                "unitname": "Experience questions",
+                "unitinstructions": "Experience Survey<br><br>\r\nPlease answer the following 4 quick experience questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "4",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0        "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4   ",
+                    "randomizegroups": "false",
+                    "clusterlist": "50-53",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },{
+                "unitname": "Final",
+                "unitinstructions": "Your answers have been submitted. Thank you for participating in this challenging study of learning and assessment."
+            }
+
+        ]
+    }
+}

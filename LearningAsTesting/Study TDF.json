@@ -1,0 +1,87 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Memory for Anatomy Experiment",
+            "userselect": "false",
+            "stimulusfile": "selected stimuli.json",
+            "lfparameter": ".85",
+            "tags": ["Anatomy and Physiology", "A & P", "Holes"],
+            "progressReporterParams": [0.8, 30, 60, 30, 90, 60]
+        },
+        "unit": [
+		{
+                "unitname": "Informed Consent",
+                "unitinstructions": "<p>Consent to Use Data<br /><br />The Mechanical Turk task you have selected is part of a research project.&nbsp;&nbsp;The experiment has 50 test fill-in-the blank&nbsp;questions that repeat twice (100 trials).&nbsp;After you have answered each, you will see the correct answer and have another chance to answer the question on a later trial.&nbsp;For every right answer, you will receive an additional $.05 for a potential bonus of up to $5, since it is important for our research that learners do their best.<br />After completing these questions, you will be asked to fill out a 4 item survey.&nbsp;<br /><br />If you should have any questions about this research study, please feel free to contact Philip Pavlik at 901-678-2326. For questions regarding the research subjects' rights, the Chair of the Institutional Review Board for the Protection of Human Subjects should be contacted at 901-678-2533&nbsp;or via email at irb@memphis.edu.<br /><br />All efforts, within the limits allowed by law, will be made to keep the personal information (your Amazon Turk Worker ID) in your research record private, but total privacy cannot be promised. We will deidentify your data (remove your ID) after the experiment before storing it on our computers long-term. Because of privacy and confidentiality limitations associated with using MTurk IDs, we cannot guarantee complete anonymity. Worker IDs will only be used to distribute payment and will not be stored with survey responses. MTurk Worker IDs will not be shared with anyone. Further identifying information we gather (demographic information) will never be attached to your responses.<br /><br />By clicking this button, I consent to the above terms.</p>"           
+        },
+            
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "5",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "36-40",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "Statistics Practice",
+                "unitinstructions": "Memory for Statistics Experiment<br><br>\r\n             Task: You will see a sequence of 68 sentences on statistics. Some of the sentences will be just to read and some will require you to fill in the blank '__________' (if there are two blanks, it is the same word used twice, but only type it once). You must press ENTER to submit your answer. Try to guess or remember the answers for the blanks, and if you cannot guess, just press ENTER to read the correct answer. If you get a fill in the blank answer wrong, you will be given a review with the correct answer. You have 16 seconds when reading for study or review, and 12 seconds to begin typing the answers for fill-in-the-blank sentences. Please make sure this window is maximized before you begin.\r\n            Hit ENTER after typing to submit your response.  ",
+                "deliveryparams": {
+                    "drill": "12000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "1000",
+                    "fontsize": "3",
+                    "correctscore": "1",
+                    "incorrectscore": "0"
+                },
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A B C D E F G H",
+                        "clustersrepeated": "8 4 2 8 4 2 4 2",
+                        "templatesrepeated": "2 2 2 2 2 2 2 2",
+                        "group": [
+                            " 0,f,z,0 0,f,z,1 0,f,z,6 0,f,z,7 0,f,z,15 0,f,z,16 0,f,z,26 0,f,z,27\r\n\t\t\t\t\tr,f,z,0 r,f,z,1 r,f,z,8 r,f,z,9 r,f,z,18 r,f,z,19 r,f,z,27 r,f,z,28 ",
+                            " 0,f,z,0 0,f,z,1 0,f,z,11 0,f,z,12\r\n\t\t\t\t\tr,f,z,0 r,f,z,1 r,f,z,9 r,f,z,10 ",
+                            " 0,f,z,0 0,f,z,1\r\n\t\t\t\t\tr,f,z,0 r,f,z,1 ",
+                            " 0,f,z,0 0,f,z,8 0,f,z,18 0,f,z,27 0,f,z,34 0,f,z,40 0,f,z,49 0,f,z,60\r\n\t\t\t\t\tr,f,z,0 r,f,z,8 r,f,z,18 r,f,z,27 r,f,z,34 r,f,z,40 r,f,z,49 r,f,z,60 ",
+                            " 0,f,z,0 0,f,z,6 0,f,z,15 0,f,z,26\r\n\t\t\t\t\tr,f,z,0 r,f,z,8 r,f,z,18 r,f,z,27 ",
+                            " 0,f,z,0 0,f,z,11\r\n\t\t\t\t\tr,f,z,0 r,f,z,10 ",
+                            " 0,f,z,0 0,f,z,18 0,f,z,31 0,f,z,52\r\n\t\t\t\t\tr,f,z,0 r,f,z,19 r,f,z,34 r,f,z,50 ",
+                            " 0,f,z,0 0,f,z,21\r\n\t\t\t\t\tr,f,z,0 r,f,z,18 "
+                        ]
+                    },
+                    "initialpositions": "A_2  A_2\tD_2\tD_1\tE_2\tG_2\r\n\t\t\t\tC_2\tC_2\tA_2\tA_2\tD_2\tD_1\tE_2\tF_2\tG_1\tH_2\r\n\t\t\t\tB_2\tB_2\tA_2\tA_2\tD_2\tD_1\tE_2\tF_2\tG_2\r\n\t\t\t\tB_2\tB_2\tA_2\tA_2\tD_2\tD_1\tE_2\tG_1\tH_2\r\n\t\t\t\tA_1\tA_1\tD_2\tD_1\tE_1\tG_2\r\n\t\t\t\tA_1\tA_1\tD_2\tD_1\tE_1\tG_1\tH_1\r\n\t\t\t\tB_1\tB_1\tA_1\tA_1\tD_2\tD_1\tE_1\tF_1\tG_2\r\n\t\t\t\tC_1\tC_1\tB_1\tB_1\tA_1\tA_1\tD_2\tD_1\tE_1\tF_1\tG_1\tH_1\r\n\t\t\t",
+                    "randomizegroups": "false",
+                    "clusterlist": "0-15",
+                    "permutefinalresult": "0-5 6-15 16-24 25-33 34-39 40-46 47-55 56-67",
+                    "assignrandomclusters": "false",
+                    "randomchoices": "4"
+                }
+				
+            }
+		
+    ]
+    }
+    }
