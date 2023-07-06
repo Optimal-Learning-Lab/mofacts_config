@@ -1,0 +1,43 @@
+{
+	"tutor": {
+		"setspec": {
+			"lessonname": "Bengaluru",
+			"userselect": "true",
+			"experimentTarget": "BengaluruFood",
+			"stimulusfile": "BengaluruFood.json",
+			"shuffleclusters": "0-33",
+			"lfparameter": ".85",
+			"hintsEnabled": false,
+			"tags": [
+				"Food"
+			]
+		},
+		"unit": [
+
+			{
+				"unitinstructions": "Learn the food of Bangaluru",
+				"unitname": "Learning unit 1",
+				"learningsession": {
+					"clusterlist": "0-33",
+					"unitMode": "distance",
+				"calculateProbability": "function arrSum(arr){return arr.reduce(function(a,b){return a + b}, 0)}  \n     function errlist(seq) {  return seq.map(function(value) {return Math.abs(value - 1)})}\n     p.y = -.73 +\n    .61 *(( p.stimStudyTrialCount==0) ? 0 : pFunc.logitdec(\n     p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length-60,1),\n     p.overallOutcomeHistory.length), .966)) +\n .514*p.stimSuccessCount -.370*p.stimFailureCount+\n     8.55 * pFunc.recency(p.stimSecsSinceLastShown, (p.stimStudyTrialCount && p.stimOutcomeHistory.length==0) ? .5 : .32) ;\n     p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n return p\n"
+				},
+				"deliveryparams": {
+					"feedbackType": "simple",
+					"studyFirst" :  false,
+					"drill": "10000",
+					"purestudy": "6000",
+					"skipstudy": "false",
+					"reviewstudy": "6000",
+					"correctprompt": "750",
+					"fontsize": "3",
+					"correctscore": "1",
+					"incorrectscore": "0",
+					"optimalThreshold": "1.39",
+                    "practiceseconds": "30000000000",
+					"resetStudentPerformance": true,
+					"practicetimer": "clock-based"
+				}
+			}]
+	}
+}

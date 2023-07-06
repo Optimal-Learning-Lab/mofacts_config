@@ -1,0 +1,44 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Optimized Drill Practice of World Countries: Version 2",
+            "stimulusfile": "Worldstim.json",
+            "shuffleclusters": "0-232",
+            "userselect": "true",
+            "lfparameter": "0.80",
+            "simTimeout": "1500",
+            "simCorrectProb": "0.75"
+        },
+        "unit": [
+            {
+                "unitname": "Instructions",
+                "unitinstructions": "Do your best to identify the country shown"
+            },
+            {
+                "unitname": "Model Practice",
+                "unitinstructions": "",
+                "instructionminseconds": "",
+                "instructionmaxseconds": "",
+                "learningsession": {
+                    "displayminseconds": "",
+                    "displaymaxseconds": "",
+                    "clusterlist": "0-234",
+                    "calculateProbability": "\r\n                // A demonstration of a variable that will be shown in the console\r\n                p.CUSTOM_MSG = \"In our custom function\";\r\n                // Calculated metrics\r\n                p.baseLevel = 1 / Math.pow(1 + p.questionSecsPracticingOthers + ((p.questionSecsSinceFirstShown - p.questionSecsPracticingOthers) * 0.037),  0.31);\r\n                p.meanSpacing = 0;\r\n                if (p.questionStudyTrialCount + p.questionTotalTests == 1) {\r\n                    p.meanspacing = 3;\r\n                } else {\r\n                    if (p.questionStudyTrialCount + p.questionTotalTests > 1) {\r\n                        p.meanSpacing = Math.max(\r\n                                1, Math.pow((p.questionSecsSinceFirstShown - p.questionSecsSinceLastShown) / (p.questionStudyTrialCount + p.questionTotalTests - 1), 0.31)\r\n                                );\r\n                    }}\r\n                p.intbs = p.meanSpacing * p.baseLevel;\r\n                // Helpful to be able to see our y parameter for debugging\r\n                p.y = p.stimParameters[0] -.0324+\r\n                .3744*(p.stimSuccessCount- p.stimFailureCount)+\r\n                .00299* (p.userCorrectResponses- (p.userTotalResponses-p.userCorrectResponses))+\r\n                1.63* p.intbs * Math.log(1+p.stimSuccessCount + p.stimFailureCount)+\r\n                1.77* p.baseLevel * Math.log(1 +p.questionTotalTests ) +\r\n                .283* p.baseLevel * Math.log(1 + p.responseSuccessCount + p.responseFailureCount);\r\n         // At a minimum we need to set p.probability and return p\r\n                p.probability = 1.0 / (1.0 + Math.exp(-p.y));  // Actual probability\r\n                return p;\r\n            "
+                },
+                "deliveryparams": {
+                    "autostopTimeoutThreshold": "",
+                    "purestudy": "10000",
+                    "drill": "10000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "practiceseconds": "1000000",
+                    "finalInstructions": "You are done practicing Countries of the World. Thank you for using this tutor."
+                }
+            }
+        ]
+    }
+}
