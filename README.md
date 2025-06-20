@@ -1,15 +1,21 @@
-# MoFaCTS Configuration Repository
+Arabic Test: When trying to practice, the test does not load onto the screen. Commented with a screenshot from today's practice in the original bug report (Arabic Test #1128).
 
-This repository contains configuration files and stimulus files for various MoFaCTS lessons and experiments. Files are organized into directories by project or semester. Example `.json` lesson files and associated stimulus sets are included.
+Bridge Test: When trying to practice, the test does not load onto the screen. Did not submit a bug report.
 
-## Duplicate file helper
+Countries Test: No issues with practicing the test.
 
-The `find_duplicates.py` script checks this repository for duplicate files. It detects files that share the same name and modification date and reports pairs of zip archives with matching folders.
+Croatia Test: When trying to practice, the test does not load onto the screen. Commented with a screenshot from 4/26 in the original bug report (Croatia Test Error #1103).
 
-Run the script from the repository root:
+Greek Test: No issues with practicing the test.
 
-```bash
-python3 find_duplicates.py
-```
+Hiragana Test: No issues with practicing the test.
 
-The script lists any duplicates it finds and prints suggested `git rm` commands for removing redundant copies.
+Music Test: No issues with practicing the test.
+
+Psyc 7302 Test: When trying to practice, the test does not load onto the screen. Created a new bug report today.
+
+Chinese Radicals Test: No issues with practicing the test.
+
+Swahili Test: No issues with practicing the test.
+
+Plants Test: No issues with practicing the test.
