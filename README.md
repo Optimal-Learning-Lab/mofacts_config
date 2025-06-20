@@ -1,21 +1,21 @@
-Arabic Test: When trying to practice, the test does not load onto the screen. Commented with a screenshot from today's practice in the original bug report (Arabic Test #1128).
+# MOFaCTS Example Content
 
-Bridge Test: When trying to practice, the test does not load onto the screen. Did not submit a bug report.
+This repository contains example MOFaCTS stimulus and TDF files that are used for internal testing.
 
-Countries Test: No issues with practicing the test.
+## Test Status
 
-Croatia Test: When trying to practice, the test does not load onto the screen. Commented with a screenshot from 4/26 in the original bug report (Croatia Test Error #1103).
+- **Arabic Test** – The test does not load when practicing. A screenshot was added to the original bug report (Arabic Test #1128).
+- **Bridge Test** – The test does not load when practicing. No bug report has been submitted.
+- **Countries Test** – No issues occurred during practice.
+- **Croatia Test** – The test does not load when practicing. A screenshot was posted on 4/26 in the original bug report (Croatia Test Error #1103).
+- **Greek Test** – No issues occurred during practice.
+- **Hiragana Test** – No issues occurred during practice.
+- **Music Test** – No issues occurred during practice.
+- **Psyc 7302 Test** – The test does not load when practicing. A new bug report was filed.
+- **Chinese Radicals Test** – No issues occurred during practice.
+- **Swahili Test** – No issues occurred during practice.
+- **Plants Test** – No issues occurred during practice.
 
-Greek Test: No issues with practicing the test.
+## Creating and Posting New Content
 
-Hiragana Test: No issues with practicing the test.
-
-Music Test: No issues with practicing the test.
-
-Psyc 7302 Test: When trying to practice, the test does not load onto the screen. Created a new bug report today.
-
-Chinese Radicals Test: No issues with practicing the test.
-
-Swahili Test: No issues with practicing the test.
-
-Plants Test: No issues with practicing the test.
+See the [Content Creation and Posting guide](https://github.com/memphis-iis/mofacts/wiki/Content-Creation-and-Posting) for steps on how to add new materials.
