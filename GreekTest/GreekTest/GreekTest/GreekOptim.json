@@ -1,0 +1,80 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Optimized Drill Practice of Greek letter names",
+            "userselect": "true",
+            "stimulusfile": "Greekstims.json",
+            "lfparameter": ".85"
+        },
+        "unit": [
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Before we begin learning Greek letters, please answer these 3 quick questions. This helps us understand how different people learn.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "3",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0                "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "48-50",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitinstructions": "Greek Letter Learning Session<br><br>You'll learn the names of Greek letters (α, β, γ, δ, etc.) that are commonly used in math and science.<br><br>How it works:<br>- Study each letter for 6 seconds<br>- Practice by typing the English name when prompted (you have 10 seconds to answer)<br>- Review the correct answer for 6 seconds if needed<br>- Brief confirmation message (1 second)<br><br>The system automatically adjusts to keep you at about 80% accuracy for optimal learning. Take your time and continue until you feel confident with all the letters.<br><br>Click 'Begin' to start!",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "clusterlist": "0-47",
+                  "unitMode": "distance",
+                  "calculateProbability": "p.y = p.stimParameters[0] +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));} \n return p\n"
+                },
+                "deliveryparams": {
+                  "forceSpacing": false,
+                  "feedbackType": "simple",
+                  "studyFirst": true,
+                  "drill": "10000",
+                  "purestudy": "6000",
+                  "skipstudy": "false",
+                  "reviewstudy": "6000",
+                  "correctprompt": "1000",
+                  "fontsize": "4",
+                  "correctscore": "1",
+                  "incorrectscore": "0",
+                  "optimalThreshold": ".8",
+                  "practiceseconds": "1800",
+                  "resetStudentPerformance": true,
+                  "practicetimer": "clock-based"
+                },
+                "uiSettings": {
+                  "displayReviewTimeoutAsBarOrText": "false",
+                  "displayReadyPromptTimeoutAsBarOrText": "false",
+                  "displayCardTimeoutAsBarOrText": false,
+                  "displayTimeOutDuringStudy": false,
+                  "singleLineFeedback": true,
+                  "feedbackDisplayPosition": "middle",
+                  "displayPerformanceDuringStudy": true
+                }
+              },
+            {
+                "unitname": "last",
+                "unitinstructions": "Great job! You've completed the Greek letter learning session. You now know the Greek letters commonly used in mathematics, chemistry, and other sciences. Feel free to practice again anytime to strengthen your memory."
+            }
+        ]
+    }
+}

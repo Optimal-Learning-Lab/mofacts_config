@@ -1,0 +1,47 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "Introduction to Statistics Formulas",
+            "lessonname": "Master Statistical Formulas and Equations",
+            "userselect": "true",
+            "stimulusfile": "IntroStatsStims.json",
+            "lfparameter": "0.80"
+        },
+        "unit": [
+            {
+                "unitinstructions": "<p><strong>Welcome to Statistics Formula Identification</strong></p><p>This tutor will help you master the essential formulas used in introductory statistics courses.</p><p><strong>How this works</strong></p><p>You will be shown a statistical formula or equation, and you need to identify what it represents by typing a short label. For example:</p><ul><li>Formula: <code>σ = √[Σ(X - μ)² / N]</code></li><li>Answer: <strong>Population SD</strong></li></ul><p><strong>What's covered</strong></p><ul><li>Descriptive Statistics (mean, median, variance, standard deviation)</li><li>Standardization (z-scores, t-scores)</li><li>Inferential Statistics (confidence intervals, hypothesis tests)</li><li>Correlation and Regression</li><li>Probability Rules</li><li>Distribution Formulas (binomial, normal, Poisson)</li></ul><p><strong>Tips for success</strong></p><ul><li>Be specific: distinguish between population (μ, σ) and sample (x̄, s) statistics</li><li>Use consistent abbreviations (e.g., SD for standard deviation, SE for standard error)</li><li>The system adapts to your performance, bringing back challenging formulas more frequently</li><li>Take your time to read each formula carefully</li></ul><p>Click <strong>Next</strong> when you're ready to begin!</p>",
+                "unitname": "Introduction",
+                "learningsession": {
+                    "clusterlist": "0-59",
+                    "unitMode": "distance",
+                    "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+                },
+                "deliveryparams": {
+                    "practiceseconds": "1000000",
+                    "drill": "8000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "optimalThreshold": ".8"
+                },
+                "uiSettings": {
+                    "displayReviewTimeoutAsBarOrText": "false",
+                    "displayReadyPromptTimeoutAsBarOrText": "false",
+                    "displayCardTimeoutAsBarOrText": false,
+                    "displayTimeOutDuringStudy": false,
+                    "displayPerformanceDuringStudy": true,
+                    "singleLineFeedback": true,
+                    "feedbackDisplayPosition": "middle"
+                }
+            },
+            {
+                "unitname": "Completion",
+                "unitinstructions": "<p><strong>Great work!</strong></p><p>You've completed your statistics formula practice session. The adaptive system has been tracking your progress and will continue to optimize your learning on future sessions.</p><p><strong>Common formulas to remember:</strong></p><ul><li><strong>Descriptive:</strong> Mean, variance, and standard deviation form the foundation</li><li><strong>Inference:</strong> Standard error connects samples to populations</li><li><strong>Testing:</strong> t-tests and z-tests help make decisions from data</li><li><strong>Relationships:</strong> Correlation and regression reveal patterns</li></ul><p>Continue practicing to build fluency with these essential statistical tools!</p>"
+            }
+        ]
+    }
+}

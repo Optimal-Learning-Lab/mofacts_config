@@ -1,0 +1,726 @@
+{
+    "setspec": {
+        "clusters": [
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Population Mean"
+                        },
+                        "display": {
+                            "clozeText": "μ = ΣX / N"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Mean"
+                        },
+                        "display": {
+                            "clozeText": "x̄ = Σx / n"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Population Variance"
+                        },
+                        "display": {
+                            "clozeText": "σ² = Σ(X - μ)² / N"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Variance"
+                        },
+                        "display": {
+                            "clozeText": "s² = Σ(x - x̄)² / (n - 1)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Population SD"
+                        },
+                        "display": {
+                            "clozeText": "σ = √[Σ(X - μ)² / N]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample SD"
+                        },
+                        "display": {
+                            "clozeText": "s = √[Σ(x - x̄)² / (n - 1)]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Z-score"
+                        },
+                        "display": {
+                            "clozeText": "z = (x - μ) / σ"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Z-score"
+                        },
+                        "display": {
+                            "clozeText": "z = (x - x̄) / s"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "SE Mean"
+                        },
+                        "display": {
+                            "clozeText": "SE = s / √n"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "SE Proportion"
+                        },
+                        "display": {
+                            "clozeText": "SE = √[p(1 - p) / n]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Range"
+                        },
+                        "display": {
+                            "clozeText": "Range = Max - Min"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "IQR"
+                        },
+                        "display": {
+                            "clozeText": "IQR = Q₃ - Q₁"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "CV"
+                        },
+                        "display": {
+                            "clozeText": "CV = (s / x̄) × 100%"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "One-Sample T"
+                        },
+                        "display": {
+                            "clozeText": "t = (x̄ - μ₀) / (s / √n)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Two-Sample T"
+                        },
+                        "display": {
+                            "clozeText": "t = (x̄₁ - x̄₂) / √(s₁²/n₁ + s₂²/n₂)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Paired T"
+                        },
+                        "display": {
+                            "clozeText": "t = d̄ / (s_d / √n)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Z-Test Statistic"
+                        },
+                        "display": {
+                            "clozeText": "z = (x̄ - μ₀) / (σ / √n)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Proportion Z-Test"
+                        },
+                        "display": {
+                            "clozeText": "z = (p̂ - p₀) / √[p₀(1 - p₀) / n]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "CI Mean (z)"
+                        },
+                        "display": {
+                            "clozeText": "x̄ ± z* × (σ / √n)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "CI Mean (t)"
+                        },
+                        "display": {
+                            "clozeText": "x̄ ± t* × (s / √n)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "CI Proportion"
+                        },
+                        "display": {
+                            "clozeText": "p̂ ± z* × √[p̂(1 - p̂) / n]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Margin of Error"
+                        },
+                        "display": {
+                            "clozeText": "ME = z* × SE"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Proportion"
+                        },
+                        "display": {
+                            "clozeText": "p̂ = x / n"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Pearson's r"
+                        },
+                        "display": {
+                            "clozeText": "r = Σ[(x - x̄)(y - ȳ)] / √[Σ(x - x̄)² × Σ(y - ȳ)²]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "R-squared"
+                        },
+                        "display": {
+                            "clozeText": "R² = 1 - (SSE / SST)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Regression Slope"
+                        },
+                        "display": {
+                            "clozeText": "b₁ = r × (s_y / s_x)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Regression Intercept"
+                        },
+                        "display": {
+                            "clozeText": "b₀ = ȳ - b₁x̄"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Regression Line"
+                        },
+                        "display": {
+                            "clozeText": "ŷ = b₀ + b₁x"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Residual"
+                        },
+                        "display": {
+                            "clozeText": "e = y - ŷ"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Chi-Square Statistic"
+                        },
+                        "display": {
+                            "clozeText": "χ² = Σ[(O - E)² / E]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Expected Value"
+                        },
+                        "display": {
+                            "clozeText": "E(X) = Σ[x × P(x)]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Binomial Probability"
+                        },
+                        "display": {
+                            "clozeText": "P(X = k) = C(n,k) × p^k × (1-p)^(n-k)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Binomial Mean"
+                        },
+                        "display": {
+                            "clozeText": "μ = n × p"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Binomial SD"
+                        },
+                        "display": {
+                            "clozeText": "σ = √[n × p × (1 - p)]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Pooled Variance"
+                        },
+                        "display": {
+                            "clozeText": "s²_p = [(n₁-1)s₁² + (n₂-1)s₂²] / (n₁+n₂-2)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Pooled SD"
+                        },
+                        "display": {
+                            "clozeText": "s_p = √{[(n₁-1)s₁² + (n₂-1)s₂²] / (n₁+n₂-2)}"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Pooled T-Test"
+                        },
+                        "display": {
+                            "clozeText": "t = (x̄₁ - x̄₂) / [s_p × √(1/n₁ + 1/n₂)]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Cohen's d"
+                        },
+                        "display": {
+                            "clozeText": "d = (x̄₁ - x̄₂) / s_pooled"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Degrees of Freedom"
+                        },
+                        "display": {
+                            "clozeText": "df = n - 1"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Two-Sample DF"
+                        },
+                        "display": {
+                            "clozeText": "df = n₁ + n₂ - 2"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Combinations"
+                        },
+                        "display": {
+                            "clozeText": "C(n,k) = n! / [k!(n-k)!]"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Permutations"
+                        },
+                        "display": {
+                            "clozeText": "P(n,k) = n! / (n-k)!"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Addition Rule"
+                        },
+                        "display": {
+                            "clozeText": "P(A or B) = P(A) + P(B) - P(A and B)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Multiplication Rule"
+                        },
+                        "display": {
+                            "clozeText": "P(A and B) = P(A) × P(B|A)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Conditional Probability"
+                        },
+                        "display": {
+                            "clozeText": "P(A|B) = P(A and B) / P(B)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Bayes' Theorem"
+                        },
+                        "display": {
+                            "clozeText": "P(A|B) = [P(B|A) × P(A)] / P(B)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Complement Rule"
+                        },
+                        "display": {
+                            "clozeText": "P(A') = 1 - P(A)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Independence Test"
+                        },
+                        "display": {
+                            "clozeText": "P(A and B) = P(A) × P(B)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Size (Mean)"
+                        },
+                        "display": {
+                            "clozeText": "n = (z* × σ / ME)²"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Sample Size (Proportion)"
+                        },
+                        "display": {
+                            "clozeText": "n = p*(1-p*) × (z*/ME)²"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "SSE"
+                        },
+                        "display": {
+                            "clozeText": "SSE = Σ(y - ŷ)²"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "SST"
+                        },
+                        "display": {
+                            "clozeText": "SST = Σ(y - ȳ)²"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "MSE"
+                        },
+                        "display": {
+                            "clozeText": "MSE = SSE / (n - 2)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "F-Statistic"
+                        },
+                        "display": {
+                            "clozeText": "F = MS_between / MS_within"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Power"
+                        },
+                        "display": {
+                            "clozeText": "Power = 1 - β"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Percentile Position"
+                        },
+                        "display": {
+                            "clozeText": "L = (P/100) × (n + 1)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Z for Percentile"
+                        },
+                        "display": {
+                            "clozeText": "X = μ + z × σ"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "SE Difference"
+                        },
+                        "display": {
+                            "clozeText": "SE = √(SE₁² + SE₂²)"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Weighted Mean"
+                        },
+                        "display": {
+                            "clozeText": "x̄_w = Σ(w × x) / Σw"
+                        }
+                    }
+                ]
+            },
+            {
+                "stims": [
+                    {
+                        "response": {
+                            "correctResponse": "Poisson Probability"
+                        },
+                        "display": {
+                            "clozeText": "P(X = k) = (λ^k × e^(-λ)) / k!"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

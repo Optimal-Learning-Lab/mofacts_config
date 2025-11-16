@@ -1,0 +1,47 @@
+{
+    "tutor": {
+        "setspec": {
+            "name": "Delphic Maxims",
+            "lessonname": "Learn the 147 Delphic Maxims",
+            "userselect": "true",
+            "stimulusfile": "DelphicMaximsStims_Reversed.json",
+            "lfparameter": "0.80"
+        },
+        "unit": [
+            {
+                "unitinstructions": "<p><strong>Welcome to the Delphic Maxims</strong></p><p>The Delphic Maxims are a set of 147 aphorisms inscribed at Delphi in ancient Greece. Attributed to the Seven Sages of Greece and Apollo, these maxims embody the ancient Greek values and philosophy.</p><p><strong>How this works</strong></p><p>You will be shown a number (1-147), and you need to type the corresponding maxim text. The adaptive learning system will help you memorize all 147 maxims by spacing them out based on your performance.</p><p><strong>Tips for success</strong></p><ul><li>Type the complete maxim text (e.g., \"Follow the gods\", \"Know thyself\")</li><li>The system tracks your progress and brings back maxims you struggle with more frequently</li><li>Correct answers earn points and move the maxim to longer-term memory</li><li>Take your time to learn the wisdom of the ancient Greeks!</li></ul>",
+                "unitname": "Introduction",
+                "learningsession": {
+                    "clusterlist": "0-146",
+                    "unitMode": "distance",
+                    "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+                },
+                "deliveryparams": {
+                    "practiceseconds": "1000000",
+                    "drill": "8000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "optimalThreshold": ".8"
+                },
+                "uiSettings": {
+                    "displayReviewTimeoutAsBarOrText": "false",
+                    "displayReadyPromptTimeoutAsBarOrText": "false",
+                    "displayCardTimeoutAsBarOrText": false,
+                    "displayTimeOutDuringStudy": false,
+                    "displayPerformanceDuringStudy": true,
+                    "singleLineFeedback": true,
+                    "feedbackDisplayPosition": "middle"
+                }
+            },
+            {
+                "unitname": "Completion",
+                "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your study session of the Delphic Maxims. The wisdom of ancient Greece is now becoming part of your memory.</p><p>Remember: \"Know thyself\" (Maxim 008) - Continue practicing to strengthen your knowledge of all 147 maxims.</p>"
+            }
+        ]
+    }
+}

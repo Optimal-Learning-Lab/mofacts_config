@@ -1,0 +1,37 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "U.S. Presidents (pics) (imported from Anki)",
+      "stimulusfile": "U.S. Presidents (pics)_stims.json",
+      "shuffleclusters": "0-43",
+      "userselect": "true",
+      "lfparameter": "0.85"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<p>This lesson was imported from an Anki deck.</p><p>Study each card and type your answer when prompted.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-43",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+        },
+        "deliveryparams": {
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000"
+        }
+      }
+    ]
+  }
+}

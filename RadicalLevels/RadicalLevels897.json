@@ -1,0 +1,396 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Individual differences Chinese Radicals",
+      "userselect": "false",
+      "stimulusfile": "Radicalstims.json",
+      "experimentTarget": "t879",
+      "shuffleclusters": "3-77",
+      "lfparameter": ".85",
+      "hintsEnabled": false,
+            "uiSettings": {
+                "experimentLoginText": "Turk Login"
+            },
+      "tags": [
+        "Experiment",
+        "Chinese Radicals"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Informed Consent",
+        "unitinstructions": "<p><strong>Consent to Participate</strong></p><p>You are being invited to participate in a research study. The purpose of this research is to evaluate how individual factors, such as prior knowledge, anxiety level, and need for cognition, influence the optimal difficulty level in adaptive training for Chinese character components. The study will involve experiencing three different difficulty levels of training and a posttest to determine the optimal difficulty level considering individual factors. You have been invited to participate because you are an experienced Amazon Turk worker. You will be one of 240 subjects taking part in this research.<br /><br /> If you agree to participate, you will be asked to complete the following procedures: <br /><br />&nbsp; &nbsp;&nbsp; &nbsp; 1. The experiment consists of <strong>two parts</strong>. The <strong>first part</strong> involves training sessions on Chinese character components, which will take approximately <strong>35 minutes</strong>. The <strong>second part</strong> will take place <strong>1 day later </strong>and will include a posttest (approximately 15-25 minutes) with the same items from the training sessions, as well as some survey questions. <br /><br /> &nbsp; &nbsp;&nbsp; &nbsp;2. In the <strong>first part</strong>, there will be a total of <strong>three 10-minute</strong> training sessions with different difficulty levels for Chinese character components. During each session, you will be presented with fill-in-the-blank items and asked to type the corresponding English meaning. Please do your best to answer all the items based on your current knowledge. You will have 10 seconds to begin typing your answer (the timer resets while you are typing). Press ENTER after each response or if you are unable to make a guess. If you provide an incorrect response for an item, you will review the correct answer for 6 seconds. If your response is correct, the feedback will be displayed for 1 second. After each training session, you will be asked a few questions regarding your thoughts on the training. <br /><br />&nbsp; &nbsp;&nbsp; &nbsp;3. The <strong>second part</strong> will take place 1 day later. You will complete a posttest that consists of fill-in-the-blank items, similar to the training sessions, along with survey questions about demographic information, anxiety levels, and the need for cognition. <br /><br /> Participating in this study is completely voluntary and if you decide to participate now, you may change your mind and stop at any point. You may choose not to answer any survey questions or do the training.<br /><br />As a participant in this research study, you may gain knowledge about Chinese character components. The findings of this research may provide recommendations for implementing adaptive training with optimal difficulty in real-world scenarios. <br /><br />There are no foreseeable risks involved in participating in this study other than those encountered in day-to-day life. <br /><br />Upon completion of the research study, you will receive compensation. After completing the <strong>first part</strong>, you will be paid <strong>$8</strong>. Additionally, there is also a <strong>bonus</strong> of $0.05 for each correct answer during the three training sessions. Most participants can expect a bonus of $10 or $15 with moderate effort (e.g., achieving 200 correct answers). <strong>It is important to note that</strong> the bonus, along with an <strong>additional $5</strong> for participating in the second part, will be paid when you return and complete the second part of the study. <br /><br />All efforts, within the limits allowed by law, will be made to keep the personal information (your Amazon Turk Worker ID) in your research record private, but total privacy cannot be promised. We will deidentify your data (remove your ID) after the experiment before storing it on our computers long-term. Because of privacy and confidentiality limitations associated with using MTurk IDs, we cannot guarantee complete anonymity. Worker IDs will only be used to distribute payment and will not be stored with survey responses. MTurk Worker IDs will not be shared with anyone. Further identifying information we gather (e.g. demographic information or IP addresses) will never be attached to your responses.<br /><br />If you have questions about the research you may contact Hannah-Joy Simms at 901-238-6393 or via email at H.Simms@memphis.edu and, or Philip Pavlik at 412-605-0581 or via email at ppavlik@memphis.edu. For questions regarding the research subjects' rights, the Chair of the Institutional Review Board for the Protection of Human Subjects should be contacted at 901.678.2705 or via email at irb@memphis.edu.</p><p><strong>ELECTRONIC CONSENT </strong></p><p>Please select your choice below. You may print a copy of this consent document for your records. Clicking on the <strong>Continue</strong> button indicates that you:</p><ul><li>Have read the above information</li><li>Voluntarily agree to participate</li><li>Are 18 years of age or older</li></ul>"
+      },
+      {
+        "unitinstructions": "In this 10-minute training session, you will engage in adaptive practice of Chinese character components. This session will be conducted at our medium difficulty level, aiming for <strong>approximately 80% correct</strong> responses. Please make an effort to learn the items and provide accurate responses. We are examining whether this level of difficulty provides the optimal challenge for your learning. <br /><br /> When a Chinese character component is initially introduced, the corresponding English meaning will be displayed for 6 seconds. Your task is to memorize the English meaning for each Chinese character component. Afterwards, the Chinese character component will be shown, and you will be asked to <strong>type the corresponding English meaning within a 10-second timeframe</strong> in the provided blank. Press <strong>ENTER </strong>after each response or if you are unable to make a guess.<br><br> If you provide an <strong>incorrect response</strong> for the item, you will have a <strong>6-second</strong> opportunity to review the answer. In the case of a <strong>correct</strong> response, the feedback will only be displayed for <strong>1 second</strong>. ",
+        "unitname": "Learning unit 80",
+        "learningsession": {
+          "clusterlist": "28-52",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = p.stimParameters[0] +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 3)));} \n return p\n"
+        },
+        "deliveryparams": {
+          "forceSpacing": false,
+          "feedbackType": "simple",
+          "studyFirst": true,
+          "drill": "10000",
+          "purestudy": "6000",
+          "skipstudy": "false",
+          "reviewstudy": "6000",
+          "correctprompt": "1000",
+          "fontsize": "4",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "600",
+          "resetStudentPerformance": true,
+          "practicetimer": "clock-based"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayUserAnswerAtTop": true,
+          "displayPerformanceDuringStudy": true,
+          "displayCorrectAnswerInCenter": true,
+          "onlyShowSimpleFeedback": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "top",
+          "incorrectColor": "darkorange",
+          "correctColor": "green",
+          "stimuliPosition": "top"
+        }
+      },
+      {
+        "unitname": "Survey questions 80",
+        "unitinstructions": "<p>Please answer <strong>four survey questions </strong>regarding <strong>the training session you just completed</strong>. <br><br>Read each statement carefully and choose the option that best reflects your agreement. </p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "stackChoiceButtons": true,
+          "displayPerformanceDuringTrial": false
+        },
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "4",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+          },
+          "initialpositions": " A_1 A_2 A_3 A_4 ",
+          "randomizegroups": "false",
+          "clusterlist": "136-139",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-3"
+        }
+      },
+      {
+        "unitinstructions": "In this 10-minute training session, you will engage in adaptive practice of Chinese character components. This session will be conducted at our lowest difficulty level, aiming for <strong>approximately 90% correct</strong> responses. Please make an effort to learn the items and provide accurate responses. We are examining whether this level of difficulty provides the optimal challenge for your learning. <br /><br /> When a Chinese character component is initially introduced, the corresponding English meaning will be displayed for 6 seconds. Your task is to memorize the English meaning for each Chinese character component. Afterwards, the Chinese character component will be shown, and you will be asked to <strong>type the corresponding English meaning within a 10-second timeframe</strong> in the provided blank. Press <strong>ENTER </strong>after each response or if you are unable to make a guess.<br><br> If you provide an <strong>incorrect response</strong> for the item, you will have a <strong>6-second</strong> opportunity to review the answer. In the case of a <strong>correct</strong> response, the feedback will only be displayed for <strong>1 second</strong>. ",
+        "unitname": "Learning unit 90",
+        "learningsession": {
+          "clusterlist": "53-77",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = p.stimParameters[0] +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 3)));} \n return p\n"
+        },
+        "deliveryparams": {
+          "forceSpacing": false,
+          "feedbackType": "simple",
+          "studyFirst": true,
+          "drill": "10000",
+          "purestudy": "6000",
+          "skipstudy": "false",
+          "reviewstudy": "6000",
+          "correctprompt": "1000",
+          "fontsize": "4",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".9",
+          "practiceseconds": "600",
+          "resetStudentPerformance": true,
+          "practicetimer": "clock-based"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayUserAnswerAtTop": true,
+          "displayPerformanceDuringStudy": true,
+          "displayCorrectAnswerInCenter": true,
+          "onlyShowSimpleFeedback": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "top",
+          "incorrectColor": "darkorange",
+          "correctColor": "green",
+          "stimuliPosition": "top"
+        }
+      },
+      {
+        "unitname": "Survey questions 90",
+        "unitinstructions": "<p>Please answer <strong>four survey questions </strong>regarding <strong>the training session you just completed</strong>. <br><br>Read each statement carefully and choose the option that best reflects your agreement. </p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "stackChoiceButtons": true,
+          "displayPerformanceDuringTrial": false
+        },
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "4",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+          },
+          "initialpositions": " A_1 A_2 A_3 A_4 ",
+          "randomizegroups": "false",
+          "clusterlist": "136-139",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-3"
+        }
+      },
+      {
+        "unitinstructions": "In this 10-minute training session, you will engage in adaptive practice of Chinese character components. This session will be conducted at our highest difficulty level, aiming for <strong>approximately 70% correct</strong> responses. Please make an effort to learn the items and provide accurate responses. We are examining whether this level of difficulty provides the optimal challenge for your learning. <br /><br /> When a Chinese character component is initially introduced, the corresponding English meaning will be displayed for 6 seconds. Your task is to memorize the English meaning for each Chinese character component. Afterwards, the Chinese character component will be shown, and you will be asked to <strong>type the corresponding English meaning within a 10-second timeframe</strong> in the provided blank. Press <strong>ENTER </strong>after each response or if you are unable to make a guess.<br><br> If you provide an <strong>incorrect response</strong> for the item, you will have a <strong>6-second</strong> opportunity to review the answer. In the case of a <strong>correct</strong> response, the feedback will only be displayed for <strong>1 second</strong>. ",
+        "unitname": "Learning unit 70",
+        "learningsession": {
+          "clusterlist": "3-27",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = p.stimParameters[0] +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 3)));} \n return p\n"
+        },
+        "deliveryparams": {
+          "forceSpacing": false,
+          "feedbackType": "simple",
+          "studyFirst": true,
+          "drill": "10000",
+          "purestudy": "6000",
+          "skipstudy": "false",
+          "reviewstudy": "6000",
+          "correctprompt": "1000",
+          "fontsize": "4",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".7",
+          "practiceseconds": "600",
+          "resetStudentPerformance": true,
+          "practicetimer": "clock-based"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayUserAnswerAtTop": true,
+          "displayPerformanceDuringStudy": true,
+          "displayCorrectAnswerInCenter": true,
+          "onlyShowSimpleFeedback": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "top",
+          "incorrectColor": "darkorange",
+          "correctColor": "green",
+          "stimuliPosition": "top"
+        }
+      },
+      {
+        "unitname": "Survey questions 70",
+        "unitinstructions": "<p>Please answer <strong>four survey questions </strong>regarding <strong>the training session you just completed</strong>. <br><br>Read each statement carefully and choose the option that best reflects your agreement. </p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "stackChoiceButtons": true,
+          "displayPerformanceDuringTrial": false
+        },
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "4",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+          },
+          "initialpositions": " A_1 A_2 A_3 A_4 ",
+          "randomizegroups": "false",
+          "clusterlist": "136-139",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-3"
+        }
+      },
+      {
+        "unitname": "Final survey questions",
+        "unitinstructions": "<p>Based on your <strong>overall experience</strong> from the <strong>three training sessions</strong>, please answer the following <strong>three survey questions</strong> regarding the learning methods you used.<br><br> Carefully read each statement and select the option that aligns best with your agreement. </p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "6000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "stackChoiceButtons": true,
+          "displayPerformanceDuringTrial": false
+        },
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0  "
+          },
+          "initialpositions": " A_1 A_2 A_3",
+          "randomizegroups": "false",
+          "clusterlist": "140-142",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0 1-1 2-2"
+        }
+      },
+      {
+        "turkemailsubject": "Link for 5$ Bonus for Turk HIT",
+        "turkemail": "\r\nDear Amazon Turk Worker,\r\n Thank you for completing Part 1 of the 'Individual Differences in Optimal Learning' experiment, which offered a payment of $8.00. We kindly request your participation in Part 2 of the experiment. Part 2 requires less effort compared to Part 1, and we will compensate you with a payment of $5.00 upon completion. In addition, we will provide an extra bonus based on the number of correct answers you provided in Part 1 ($0.05 per correct answer, for example, $10 for 200 correct answers) when you return to complete Part 2. Please ensure that you complete Part 2 within 24 hours of receiving this email.\r\n To ensure a smooth process, please enter your Turk ID accurately, as any typos may prevent us from identifying you as a Part 2 participant and hinder the payment of your bonus. You will know that you have continued correctly when you observe the final page of part 1, which you have previously encountered.\r\n  To proceed, please follow this link to Part 2: https://mofacts.optimallearning.org/experiment/radicalexptest5\r\n We appreciate your participation in this study.\r\nBest regards,\r\nHannah-Joy and Phil\r\n        ",
+        "unitinstructions": "<p><strong>Congratulations on completing Part 1 of the experiment!</strong> <br /><br /> To ensure that your assignment is approved and you receive the $8 payment, please enter the code <strong>'AXDTYUY'</strong> into the Amazon Mechanical Turk website for this HIT and submit your response now. We will review your completion and approve your assignment accordingly. <br /><br /> Please note that you have a countdown of <strong>1 day</strong> for part 2 of the study. After this timeframe, you will receive a private Turk message (delivered to your email inbox normally) containing instructions for Part 2. Completing Part 2 will earn you $5, in addition to an extra bonus based on the number of correct answers you provided in Part 1. <br /><br />Thank you for your participation, and keep an eye on your email inbox for further instructions on Part 2. If you do not receive a followup email 24 hours from now, feel free to contact us. <br /><br /> After the time has passed, the continue button to go to the posttest will be activated below.</p>",
+        "unitname": "Lockout unit",
+        "deliveryparams": [
+          {
+            "lockoutminutes": "1440"
+          }
+        ]
+      },
+      {
+        "unitname": "Posttest",
+        "unitinstructions": "<p>Thank you for continuing with the experiment. You have now reached the posttest.<br><br> In the posttest, you will be presented with the 75 Chinese character components. Some of these you may not have seen in session 1 since not all items are introduced for all participants. Your task is to type the corresponding English meaning for each component. The timing and feedback will follow the same format as Part 1.</p>",
+        "deliveryparams": {
+          "drill": "10000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "6000",
+          "correctprompt": "1000",
+          "fontsize": "3",
+          "correctscore": "1",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayUserAnswerAtTop": true,
+          "displayPerformanceDuringStudy": true,
+          "displayCorrectAnswerInCenter": true,
+          "onlyShowSimpleFeedback": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "top",
+          "incorrectColor": "darkorange",
+          "correctColor": "green",
+          "stimuliPosition": "top"
+        },
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A B C",
+            "clustersrepeated": "1 1 1",
+            "templatesrepeated": "25 25 25",
+            "group": [
+              "0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0",
+              "0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0",
+              "0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0 0,f,d,0"
+            ]
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_11 A_12 A_13 A_14 A_15 A_16 A_17 A_18 A_19 A_20 A_21 A_22 A_23 A_24 A_25 B_1 B_2 B_3 B_4 B_5 B_6 B_7 B_8 B_9 B_10 B_11 B_12 B_13 B_14 B_15 B_16 B_17 B_18 B_19 B_20 B_21 B_22 B_23 B_24 B_25 C_1 C_2 C_3 C_4 C_5 C_6 C_7 C_8 C_9 C_10 C_11 C_12 C_13 C_14 C_15 C_16 C_17 C_18 C_19 C_20 C_21 C_22 C_23 C_24 C_25",
+          "randomizegroups": "false",
+          "clusterlist": "3-77",
+          "permutefinalresult": "0-74",
+          "assignrandomclusters": "false"
+        }
+      },
+      {
+        "unitname": "Individual Difference Survey questions",
+        "unitinstructions": "<p><strong>Survey questions</strong></p><p>Please answer the following 19 survey questions. Your responses will help us better understand a few individual differences. The survey consists of the following sections:<br /><br />1. <strong>Demographic Information </strong>: Answer three questions about your basic demographic details. <br /><br /> 2. <strong>Learning Experience </strong>: Share your thoughts on your learning experience with the experiment material by answering two questions. <br /><br />3. <strong>Test Anxiety </strong>: Evaluate your test anxiety level based on your past testing experiences. Consider all testing experiences when responding to the ten questions in this section.<br /> <br />4. <strong>Need for Cognition</strong>: Measure your inclination and enjoyment of thinking with four questions. <br /><br /> To complete the survey, read through each statement and select one option that best describes you.</p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "stackChoiceButtons": true,
+          "displayPerformanceDuringTrial": false
+        },
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "19",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 "
+          },
+          "initialpositions": " A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_11 A_12 A_13 A_14 A_15 A_16 A_17 A_18 A_19",
+          "randomizegroups": "false",
+          "clusterlist": "117-135",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "5-14 15-18"
+        },
+        "countcompletion": true
+      },
+      {
+        "unitname": "Final",
+        "unitinstructions": "<p>Your answers have been submitted. Thank you for participating in this challenging study of learning and assessment. Your account will be credited with the bonus after we check your results.</p>"
+      }
+    ]
+  }
+}

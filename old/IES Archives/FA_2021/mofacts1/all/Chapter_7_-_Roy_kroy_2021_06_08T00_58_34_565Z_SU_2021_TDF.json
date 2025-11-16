@@ -1,0 +1,172 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Chapter 7 - Roy",
+      "userselect": "false",
+      "stimulusfile": "Chapter_7_-_Roy_kroy_2021_06_08T00_58_34_565Z_SU_2021_Stim.json",
+      "lfparameter": ".85",
+      "audioInputEnabled": "true",
+      "audioInputSensitivity": "15",
+      "speechIgnoreOutOfGrammarResponses": "false",
+      "speechOutOfGrammarFeedback": "Please try again",
+      "enableAudioPromptAndFeedback": "true",
+      "audioPromptSpeakingRate": "1",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "alternateImageFiltering": "true"
+    },
+    "generatedtdfs": {
+      "generatedtdf": [
+        {
+          "name": "Chapter 7 All Items",
+          "criteria": {
+            "weights": "0-100"
+          }
+        },
+        {
+          "name": "Chapter 7 High Priority Items",
+          "criteria": {
+            "weights": "0-1"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 0 Items",
+          "criteria": {
+            "orderGroups": "0"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 1 Items",
+          "criteria": {
+            "orderGroups": "1"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 2 Items",
+          "criteria": {
+            "orderGroups": "2"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 3 Items",
+          "criteria": {
+            "orderGroups": "3"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 4 Items",
+          "criteria": {
+            "orderGroups": "4"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 5 Items",
+          "criteria": {
+            "orderGroups": "5"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 6 Items",
+          "criteria": {
+            "orderGroups": "6"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 7 Items",
+          "criteria": {
+            "orderGroups": "7"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 8 Items",
+          "criteria": {
+            "orderGroups": "8"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 9 Items",
+          "criteria": {
+            "orderGroups": "9"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 10 Items",
+          "criteria": {
+            "orderGroups": "9"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 11 Items",
+          "criteria": {
+            "orderGroups": "9"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 12 Items",
+          "criteria": {
+            "orderGroups": "9"
+          }
+        },
+        {
+          "name": "Chapter 7 Section 13 Items",
+          "criteria": {
+            "orderGroups": "9"
+          }
+        }
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "Press continue to start"
+      },
+      {
+        "unitname": "Reading completed",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "1",
+            "group": "0,f,d,0"
+          },
+          "initialpositions": " A_1     ",
+          "randomizegroups": "false",
+          "clusterlist": "18-18",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0"
+        },
+        "deliveryparams": {
+          "drill": "10000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "8000",
+          "correctprompt": "8000",
+          "fontsize": "2",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        }
+      },
+      {
+        "unitinstructions": "\r\n          <center><h3>Anatomy & Physiology Practice Instructions</h3></center><br>\r\nOur MoFaCTS system has chosen some of the most important sentences from your textbook and they are presented here for your practice. This practice will work better we think if you have read the textbook first, so that you understand the overall organization. For each important sentence we remove keywords and the practice is to fill-in-the-blank for each sentence. Sometimes we substitute a paraphrase of the sentence to imporve it or provide variety. Sometimes there will be 1 or 2 syllables presented as a hint. Fill-in-the-blank quizzing has been proven to be an powerful aid to memory, and the system focuses on items you get wrong to make sure you learn all the items thouroughly. The system  pronounces keywords to help you memorize them if you turn that on in the main menu. The system also provides the progress button above to check how much practice you have done, and how well our AI system thinks you have learned the words. We hope you will be able to use this progress information to decide if you want to continue the practice after you have completed the required amount.\r\n<br>\r\n        <center><h3>Practice Tips Video</h3></center>\r\n        <br>\r\n          <center>\r\n                  <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tgRcASfdjIY\" frameborder=\"0\" allow=\"accelerometer;\r\n          margin-left: auto;\r\n          margin-right: auto;\r\n          autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>  </center>\r\n        ",
+        "unitname": "Title of the unit goes here***",
+        "learningsession": {
+          "clusterlist": "0-0",
+          "unitMode": "thresholdCeiling",
+          "calculateProbability": "\r\n          function mul(m1, m2) {\r\n            var result = 0;\r\n            var len = m1.length;\r\n            for (var i = 0; i < len; i++) {\r\n                result += m1[i] * m2[i]\r\n            }\r\n            return result\r\n          }\r\n\r\n          function logitdec(outcomes, decay) {\r\n            if (outcomes) {\r\n                var outcomessuc = JSON.parse(JSON.stringify(outcomes));\r\n                var outcomesfail = outcomes.map(function(value) {\r\n                    return Math.abs(value - 1)\r\n                });\r\n                var w = outcomessuc.unshift(1);\r\n                var v = outcomesfail.unshift(1);\r\n                return Math.log(mul(outcomessuc, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })) / mul(outcomesfail, [...Array(w).keys()].reverse().map(function(value, index) {\r\n                    return Math.pow(decay, value)\r\n                })))\r\n            }\r\n            return 0\r\n          }\r\n\r\n          function recency(age, d) {\r\n          if (age==0) { return 0;\r\n          } else\r\n            {return Math.pow(1 + age, -d);\r\n            }\r\n          }\r\n\r\n          function quaddiffcor(seq, probs) {\r\n            return mul(seq, probs.map(function(value) {\r\n                return value * value\r\n            }))\r\n          }\r\n\r\n          function quaddiffcor(seq, probs) {\r\n            return mul(seq, probs.map(function(value) {\r\n                return value * value\r\n            }))\r\n          }\r\n\r\n          function quaddiffincor(seq, probs) {\r\n            return mul(Math.abs(seq-1), probs.map(function(value) {\r\n                return value * value\r\n            }))\r\n          }\r\n\r\n          function linediffcor(seq, probs) {\r\n            return mul(seq, probs)\r\n          }\r\n\r\n          function linediffincor(seq, probs) {\r\n            return mul(seq.map(function(value) {\r\n                return Math.abs(value - 1)\r\n            }), probs)\r\n          }\r\n\r\n          p.hintsylls = [];\r\nif((p.stimSuccessCount+p.stimFailureCount)<3 && p.syllables>2) {\r\n            var numHintSylls = getRandomInt(3);\r\n\r\n            for(var index=0;index<numHintSylls;index++){\r\n              p.hintsylls.push(index);\r\n            }\r\n          }\r\n          var intercept;\r\n          function arrSum(arr){return arr.reduce(function(a,b){return a + b}, 0)}\r\n          function errlist(seq) {  return seq.map(function(value) {return Math.abs(value - 1)})}\r\n          if (p.hintsylls.length==0) {intercept=-.563} else if (p.hintsylls.length==1) {intercept=0.261} else {intercept=0.496}\r\n                              p.y = intercept    +\r\n                              .721 * logitdec(\r\n                                  p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length-60,1),\r\n                                  p.overallOutcomeHistory.length), .955) +\r\n                              .268 * logitdec(p.responseOutcomeHistory, .794) +\r\n                              10.4 * recency(p.stimSecsSinceLastShown, .519) +\r\n                              .943 *  recency(p.responseSecsSinceLastShown, .049) +\r\n                              1.40  * linediffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n                              -1.40 * quaddiffcor(p.stimOutcomeHistory, p.stimPreviousCalculatedProbabilities) +\r\n                              -.178 * arrSum(errlist(p.stimOutcomeHistory)) ;\r\n                              p.probability = 1.0 / (1.0 + Math.exp(-p.y));          \r\n\r\n                  // console.log(p.overallOutcomeHistory+\\\" - \\\"+p.responseOutcomeHistory +\\\" - \\\"+p.stimSecsSinceLastShown+\\\" - \\\"+p.stimOutcomeHistory+\\\" - \\\"+p.stimPreviousCalculatedProbabilities);\r\n                    return p\r\n                      "
+        },
+        "deliveryparams": {
+          "autostopTimeoutThreshold": "2",
+          "feedbackType": "refutational",
+          "drill": "30000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "750",
+          "fontsize": "3",
+          "correctscore": "1",
+          "incorrectscore": "0"
+        }
+      }
+    ]
+  }
+}

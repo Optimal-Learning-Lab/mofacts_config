@@ -1,0 +1,53 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Optimized Drill Practice of World Countries",
+      "stimulusfile": "Worldstim.json",
+      "shuffleclusters": "0-232",
+      "userselect": "true",
+      "lfparameter": "0.80",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<p><strong>What you will see</strong></p><p>Each practice card shows a locator-map image that highlights the country you need to identify. Type the country name in the answer box and press ENTER to submit.</p><p><strong>How the adaptive model works</strong></p><p>The tutor estimates your readiness using your recent answers, streaks, and how long it has been since each map appeared. Countries you miss or hesitate on come back sooner, while confident responses are spaced out, and the system aims to keep your accuracy near 80% so the challenge feels balanced.</p><p><strong>Practice flow and feedback</strong></p><ul><li>Study and drill rounds keep each card open for up to 10 seconds before input is required, and the timer refreshes while you type.</li><li>Color cues and brief audio prompts let you know right away if you were correct.</li><li>Correct answers earn a point, and every incorrect response shows the right country name before you move on.</li></ul><p><strong>Using speech input & audio prompts</strong></p><p>Click the Audio button (headphone icon on the card toolbar) to open the panel at any time. Turn on <em>Microphone Input</em>, allow your browser to use the mic, and wait for the green indicator. When it is active you can speak the country name, watch the textbox fill in what it heard, and fix anything before pressing ENTER or Confirm.</p><p>The same panel has toggles for <em>Question</em> and <em>Feedback</em> prompts. Sessions start in <strong>Feedback</strong> mode, which speaks a short feedback message (including the correct answer). Because these prompts are images, leave <strong>Question</strong> off, the lesson only speaks feedback messages (including the correct answer).</p>"
+      },
+      {
+        "unitname": "Model Practice",
+        "learningsession": {
+          "clusterlist": "0-232",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+        },
+        "deliveryparams": {
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000",
+          "finalInstructions": "You are done practicing Countries of the World. Thank you for using this tutor."
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayPerformanceDuringStudy": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "middle"
+        }
+      }
+    ]
+  }
+}
