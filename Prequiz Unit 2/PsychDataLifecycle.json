@@ -1,0 +1,44 @@
+{
+    "tutor": {
+        "setspec": {
+            "lessonname": "Psychology Data Lifecycle Pre-Quiz",
+            "userselect": "true",
+            "stimulusfile": "PsychDataLifecycle_stims.json"
+        },
+        "unit": [
+            {
+                "unitname": "Pre-Quiz Questions",
+                "unitinstructions": "<p><strong>Psychology Data Lifecycle Pre-Quiz</strong></p><p>This pre-quiz assesses your understanding of the data lifecycle and types of random variables in psychology research.</p><p>Please answer the following 10 multiple choice questions. Select the best answer for each question.</p><p>Your responses will help us understand your baseline knowledge before beginning the unit.</p>",
+                "buttonorder": "random",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "10",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0"
+                    },
+                    "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10",
+                    "randomizegroups": "false",
+                    "clusterlist": "0-9",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitname": "Completion",
+                "unitinstructions": "<p><strong>Pre-Quiz Complete!</strong></p><p>Thank you for completing the Psychology Data Lifecycle pre-quiz. Your responses have been recorded.</p><p>You may now proceed to the next section of the course.</p>"
+            }
+        ]
+    }
+}
