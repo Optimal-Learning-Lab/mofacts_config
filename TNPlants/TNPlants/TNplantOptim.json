@@ -1,81 +1,81 @@
 {
-  "tutor": {
-    "setspec": {
-      "lessonname": "Optimized Drill Practice of TN Native Plant Names",
-      "userselect": "true",
-      "stimulusfile": "TNplantstims.json",
-      "lfparameter": ".85",
-      "enableAudioPromptAndFeedback": "true",
-      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
-      "audioInputEnabled": "true",
-      "audioPromptMode": "feedback",
-      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
-      "speechIgnoreOutOfGrammarResponses": "true"
-    },
-    "unit": [
-      {
-        "unitname": "Show the questions",
-        "unitinstructions": "<p><strong>Before You Begin: Demographic Survey</strong></p><p>Please answer the following 5 quick demographic questions. This information helps us understand how different learners interact with the system and improve the tutor for future users.</p><p>Your responses are confidential and used only for research purposes.</p>",
-        "buttonorder": "fixed",
-        "deliveryparams": {
-          "drill": "12000000",
-          "purestudy": "16000",
-          "skipstudy": "false",
-          "reviewstudy": "16000",
-          "correctprompt": "500",
-          "fontsize": "3",
-          "correctscore": "0",
-          "incorrectscore": "0"
+    "tutor": {
+        "setspec": {
+            "lessonname": "Optimized Drill Practice of TN Native Plant Names",
+            "userselect": "true",
+            "stimulusfile": "TNplantstims.json",
+            "lfparameter": ".85",
+            "enableAudioPromptAndFeedback": "true",
+            "speechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+            "audioInputEnabled": "true",
+            "audioPromptMode": "feedback",
+            "textToSpeechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+            "speechIgnoreOutOfGrammarResponses": "true"
         },
-        "buttontrial": "true",
-        "assessmentsession": {
-          "conditiontemplatesbygroup": {
-            "groupnames": "A",
-            "clustersrepeated": "1",
-            "templatesrepeated": "5",
-            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
-          },
-          "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
-          "randomizegroups": "false",
-          "clusterlist": "112-116",
-          "assignrandomclusters": "false",
-          "permutefinalresult": "0-0"
-        }
-      },
-      {
-        "unitinstructions": "<p><strong>What you will see</strong></p><p>Each practice card shows a photograph of a Tennessee native plant that you need to identify. Type the plant's common name in the answer box and press ENTER to submit your response.</p><p><strong>How the adaptive model works</strong></p><p>The tutor estimates your readiness using your recent answers, response patterns, and how long it has been since each plant appeared. Plants you miss or hesitate on come back sooner for additional practice, while confident responses are spaced out over time. The system aims to keep your accuracy near 85% so the challenge feels appropriately balanced for botanical learning.</p><p><strong>Practice flow and feedback</strong></p><ul><li>Study and drill rounds keep each card open for up to 12 seconds before input is required, giving you time to observe plant features, and the timer refreshes while you type.</li><li>Review rounds display plants for up to 8 seconds, allowing time to confirm your knowledge.</li><li>Color cues and brief audio prompts let you know right away if you were correct.</li><li>Correct answers earn a point, and every incorrect response shows the right plant name before you move on.</li></ul><p><strong>Using speech input & audio prompts</strong></p><p>Click the Audio button (headphone icon on the card toolbar) to open the panel at any time. Turn on <em>Microphone Input</em>, allow your browser to use the mic, and wait for the green indicator. When it is active you can speak the plant name (e.g., \"eastern redbud\" or \"flowering dogwood\"), watch the textbox fill in what it heard, and fix anything before pressing ENTER or Confirm.</p><p>The same panel has toggles for <em>Question</em> and <em>Feedback</em> prompts. Sessions start in <strong>Feedback</strong> mode, which speaks a short feedback message including the correct answer when you respond. Since questions are plant photographs, leave <strong>Question</strong> off—the lesson only speaks feedback messages with the correct plant name.</p><p><strong>Learning tips</strong></p><ul><li>Pay attention to distinctive features: leaf shapes, flower colors, bark patterns, and overall plant structure.</li><li>Common names may include variations (e.g., \"black gum\" vs \"blackgum\")—the system will recognize them.</li><li>Take your time during study rounds to really observe each plant's unique characteristics.</li><li>The spaced repetition will help you build long-term recognition of these 112 Tennessee native plants.</li></ul>",
-        "unitname": "Model Unit",
-        "learningsession": {
-          "clusterlist": "0-111",
-          "unitMode": "distance",
-          "calculateProbability": "p.y = -3 +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));} \n return p\n"
-        },
-        "deliveryparams": {
-          "practiceseconds": "1000000",
-          "drill": "10000",
-          "purestudy": "12000",
-          "skipstudy": "false",
-          "reviewstudy": "8000",
-          "correctprompt": "750",
-          "fontsize": "2",
-          "correctscore": "1",
-          "incorrectscore": "0",
-          "optimalThreshold": ".8"
-        },
-        "uiSettings": {
-          "displayReviewTimeoutAsBarOrText": "false",
-          "displayReadyPromptTimeoutAsBarOrText": "false",
-          "displayCardTimeoutAsBarOrText": false,
-          "displayTimeOutDuringStudy": false,
-          "displayPerformanceDuringStudy": true,
-          "singleLineFeedback": true,
-          "feedbackDisplayPosition": "middle"
-        }
-      },
-      {
-        "unitname": "Completion",
-        "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your practice session with the Tennessee Native Plants tutor. Through spaced repetition and adaptive learning, you've been building your ability to recognize and identify these 112 native plant species.</p><p>Thank you for using this tutor to learn about Tennessee's botanical heritage!</p>"
-      }
-    ]
-  }
+        "unit": [
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "<p><strong>Before You Begin: Demographic Survey</strong></p><p>Please answer the following 5 quick demographic questions. This information helps us understand how different learners interact with the system and improve the tutor for future users.</p><p>Your responses are confidential and used only for research purposes.</p>",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "true",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "5",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "112-116",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitinstructions": "<p><strong>What you will see</strong></p><p>Each practice card shows a photograph of a Tennessee native plant that you need to identify. Type the plant's common name in the answer box and press ENTER to submit your response.</p><p><strong>How the adaptive model works</strong></p><p>The tutor estimates your readiness using your recent answers, response patterns, and how long it has been since each plant appeared. Plants you miss or hesitate on come back sooner for additional practice, while confident responses are spaced out over time. The system aims to keep your accuracy near 85% so the challenge feels appropriately balanced for botanical learning.</p><p><strong>Practice flow and feedback</strong></p><ul><li>Study and drill rounds keep each card open for up to 12 seconds before input is required, giving you time to observe plant features, and the timer refreshes while you type.</li><li>Review rounds display plants for up to 8 seconds, allowing time to confirm your knowledge.</li><li>Color cues and brief audio prompts let you know right away if you were correct.</li><li>Correct answers earn a point, and every incorrect response shows the right plant name before you move on.</li></ul><p><strong>Using speech input & audio prompts</strong></p><p>Click the Audio button (headphone icon on the card toolbar) to open the panel at any time. Turn on <em>Microphone Input</em>, allow your browser to use the mic, and wait for the green indicator. When it is active you can speak the plant name (e.g., \"eastern redbud\" or \"flowering dogwood\"), watch the textbox fill in what it heard, and fix anything before pressing ENTER or Confirm.</p><p>The same panel has toggles for <em>Question</em> and <em>Feedback</em> prompts. Sessions start in <strong>Feedback</strong> mode, which speaks a short feedback message including the correct answer when you respond. Since questions are plant photographs, leave <strong>Question</strong> off—the lesson only speaks feedback messages with the correct plant name.</p><p><strong>Learning tips</strong></p><ul><li>Pay attention to distinctive features: leaf shapes, flower colors, bark patterns, and overall plant structure.</li><li>Common names may include variations (e.g., \"black gum\" vs \"blackgum\")—the system will recognize them.</li><li>Take your time during study rounds to really observe each plant's unique characteristics.</li><li>The spaced repetition will help you build long-term recognition of these 112 Tennessee native plants.</li></ul>",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "clusterlist": "0-111",
+                    "unitMode": "distance",
+                    "calculateProbability": "p.y = -3 +\n .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,0),\n p.overallOutcomeHistory.length), .974)+\n 1.4 * Math.log(1+p.stimSuccessCount) +\n 7.98 * pFunc.recency(p.stimSecsSinceLastShown, .115) ; \n  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0),p.overallOutcomeHistory.length);\n  var sum = lastElements.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n var average = sum / (lastElements.length);\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)); \n if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));} \n return p\n"
+                },
+                "deliveryparams": {
+                    "practiceseconds": "1000000",
+                    "drill": "10000",
+                    "purestudy": "12000",
+                    "skipstudy": "false",
+                    "reviewstudy": "8000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "optimalThreshold": ".8"
+                },
+                "uiSettings": {
+                  "displayReviewTimeoutAsBarOrText": "false",
+                  "displayReadyPromptTimeoutAsBarOrText": "false",
+                  "displayCardTimeoutAsBarOrText": false,
+                  "displayTimeOutDuringStudy": false,
+                  "displayPerformanceDuringStudy": true,
+                  "singleLineFeedback": true,
+                  "feedbackDisplayPosition": "middle"
+                }
+            },
+            {
+                "unitname": "Completion",
+                "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your practice session with the Tennessee Native Plants tutor. Through spaced repetition and adaptive learning, you've been building your ability to recognize and identify these 112 native plant species.</p><p>Thank you for using this tutor to learn about Tennessee's botanical heritage!</p>"
+            }
+        ]
+    }
 }
