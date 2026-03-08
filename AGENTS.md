@@ -18,3 +18,8 @@
 ## Cross-Repo Coordination Is Expected
 - Do not assume this repo is self-contained.
 - Application code and configuration definitions must evolve together.
+
+## Required Sync Procedure
+- Before committing/pushing config changes, follow `README-SYNC-SCRIPTS.md`.
+- Use the sync scripts (`sync-config.js` or wrappers) for normal config sync so API keys are stripped in committed content and restored locally after push.
+- If a manual commit/push is explicitly requested by the user, still verify key-safety requirements from `README-SYNC-SCRIPTS.md` before pushing.
