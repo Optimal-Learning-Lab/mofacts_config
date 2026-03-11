@@ -7,23 +7,23 @@
       "userselect": "true",
       "lfparameter": "0.85",
       "enableAudioPromptAndFeedback": "true",
-      "speechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
       "audioInputEnabled": "true",
       "audioPromptMode": "feedback",
-      "textToSpeechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
       "speechIgnoreOutOfGrammarResponses": "true"
     },
     "unit": [
       {
         "unitname": "Instructions",
-        "unitinstructions": "<p>This lesson was imported from an Anki deck.</p><p>Study each card and type your answer when prompted.</p>"
+        "unitinstructions": "<h2>&#127760; Countries of the World</h2><p>Practice naming 200 active country maps drawn from a larger image bank, giving you broad geography coverage without making the first pass too heavy.</p><ul><li><strong>What you will do:</strong> Each card shows a simplified country outline or locator image, and you type the country name from memory.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Feedback appears immediately after every response, so you can connect the visual shape to the correct name right away.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings uncertain countries back sooner and spaces familiar ones farther apart for stronger long-term map memory.</li></ul><p>Use the outline, region, coastline, and neighboring shapes as clues, then begin when you are ready.</p>"
       },
       {
         "unitname": "Practice",
         "learningsession": {
           "clusterlist": "0-199",
           "unitMode": "distance",
-          "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
         "deliveryparams": {
           "lfparameter": "0.85",

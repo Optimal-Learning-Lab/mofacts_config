@@ -40,12 +40,12 @@
                 }
             },
             {
-                "unitinstructions": "Here comes the optimized learning of the Croatian phrases.",
+                "unitinstructions": "<h2>&#128483; Croatian Phrases</h2><p>This lesson practices 144 Croatian travel words and short phrases through active recall.</p><ul><li><strong>What you will do:</strong> Some prompts appear as written Croatian and others as spoken audio, and you type the English meaning from memory.</li><li><strong>Timing:</strong> Study and drill screens last about 12 seconds, review screens last about 8 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps connect sound, spelling, and meaning, especially when similar phrases begin to overlap.</li><li><strong>Why it helps:</strong> Adaptive scheduling returns weaker phrases sooner and pushes stronger ones farther out, building both phrase recall and early listening comprehension.</li></ul><p>Listen closely, notice repeated roots and patterns, and begin when you are ready.</p>",
                 "unitname": "Model Unit",
                 "learningsession": {
                     "clusterlist": "0-143",
           "unitMode": "distance",
-          "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
                 "deliveryparams": {
                     "practiceseconds": "1000000",

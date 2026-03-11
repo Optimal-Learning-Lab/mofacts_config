@@ -7,23 +7,23 @@
       "userselect": "false",
       "lfparameter": "0.85",
       "enableAudioPromptAndFeedback": "true",
-      "speechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
       "audioInputEnabled": "true",
       "audioPromptMode": "feedback",
-      "textToSpeechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
       "speechIgnoreOutOfGrammarResponses": "true"
     },
     "unit": [
       {
         "unitname": "Instructions",
-        "unitinstructions": "<p>Study each faculty/staff portrait and type the matching full name when prompted.</p>"
+        "unitinstructions": "<h2>&#128100; Memphis Psychology People</h2><p>This tutor includes 39 portraits of faculty and staff connected to the Memphis psychology community.</p><ul><li><strong>What you will do:</strong> Each card shows a face, and you type the matching full name from memory.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Immediate feedback follows every response, and optional audio feedback can reinforce the correct name aloud.</li><li><strong>Why it helps:</strong> Adaptive scheduling repeats unfamiliar people more often and spaces out the names you already know, making department navigation easier and more natural.</li></ul><p>Focus on distinctive facial features and full-name spelling, then begin when you are ready.</p>"
       },
       {
         "unitname": "Practice",
         "learningsession": {
           "clusterlist": "0-38",
           "unitMode": "distance",
-          "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
         "deliveryparams": {
           "lfparameter": "0.85",

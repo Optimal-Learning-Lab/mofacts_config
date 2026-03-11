@@ -1,0 +1,44 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Gen-Z Slang",
+      "stimulusfile": "Gen-Z Slang_stims.json",
+      "shuffleclusters": "0-69",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>&#128241; Gen-Z Slang</h2><p>Practice current Gen-Z slang by matching each clue to the exact term, from <em>rizz</em> and <em>delulu</em> to <em>doomscrolling</em>, <em>glazing</em>, and <em>rage bait</em>.</p><ul><li><strong>What you will do:</strong> Each card gives you a vibe-heavy clue, and you type the Gen-Z slang term it is giving.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Feedback appears right away, so if your answer is mid, not clocking, or fully cooked, you immediately see the exact term and can lock it in.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings back the terms that are not quite sticking yet and spaces out the ones where you already left no crumbs.</li></ul><p>Use the clue wording, discourse context, and meme lore as your side quest map, then begin when you are ready.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-69",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "lfparameter": "0.85",
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "24",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000"
+        }
+      }
+    ]
+  }
+}

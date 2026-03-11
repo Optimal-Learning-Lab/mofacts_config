@@ -1,82 +1,82 @@
 {
-    "tutor": {
-        "setspec": {
-            "name": "Internal Testing with SVO and Models",
-            "lessonname": "Optimized Drill Practice of Hiragana and Katakana",
-            "userselect": "true",
-            "stimulusfile": "Hiraganastims.json",
-            "lfparameter": "0.80",
-            "enableAudioPromptAndFeedback": "true",
-            "speechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
-            "audioInputEnabled": "true",
-            "audioPromptMode": "feedback",
-            "textToSpeechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
-            "speechIgnoreOutOfGrammarResponses": "true"
+  "tutor": {
+    "setspec": {
+      "name": "Internal Testing with SVO and Models",
+      "lessonname": "Optimized Drill Practice of Hiragana and Katakana",
+      "userselect": "true",
+      "stimulusfile": "Hiraganastims.json",
+      "lfparameter": "0.80",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Show the questions",
+        "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "3",
+          "correctscore": "0",
+          "incorrectscore": "0"
         },
-        "unit": [
-            {
-                "unitname": "Show the questions",
-                "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
-                "buttonorder": "fixed",
-                "deliveryparams": {
-                    "drill": "12000000",
-                    "purestudy": "16000",
-                    "skipstudy": "false",
-                    "reviewstudy": "16000",
-                    "correctprompt": "500",
-                    "fontsize": "3",
-                    "correctscore": "0",
-                    "incorrectscore": "0"
-                },
-                "buttontrial": "false",
-                "assessmentsession": {
-                    "conditiontemplatesbygroup": {
-                        "groupnames": "A",
-                        "clustersrepeated": "1",
-                        "templatesrepeated": "5",
-                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
-                    },
-                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
-                    "randomizegroups": "false",
-                    "clusterlist": "92-96",
-                    "assignrandomclusters": "false",
-                    "permutefinalresult": "0-0"
-                }
-            },
-            {
-                "unitinstructions": "<p><strong>What you will see</strong></p><p>Each practice card shows a Japanese hiragana or katakana character. Type the romanized pronunciation in the answer box and press ENTER to submit.</p><p><strong>How the adaptive model works</strong></p><p>The tutor estimates your readiness using your recent answers, streaks, and how long it has been since each character appeared. Characters you miss or hesitate on come back sooner, while confident responses are spaced out, and the system aims to keep your accuracy near 80% so the challenge feels balanced.</p><p><strong>Practice flow and feedback</strong></p><ul><li>Study and drill rounds keep each card open for up to 10 seconds before input is required, and the timer refreshes while you type.</li><li>Color cues and brief audio prompts let you know right away if you were correct.</li><li>Correct answers earn a point, and every incorrect response shows the right pronunciation before you move on.</li></ul><p><strong>Using speech input & audio prompts</strong></p><p>Click the Audio button (headphone icon on the card toolbar) to open the panel at any time. Turn on <em>Microphone Input</em>, allow your browser to use the mic, and wait for the green indicator. When it is active you can speak the pronunciation, watch the textbox fill in what it heard, and fix anything before pressing ENTER or Confirm.</p><p>The same panel has toggles for <em>Question</em> and <em>Feedback</em> prompts. Sessions start in <strong>Feedback</strong> mode, which speaks a short feedback message (including the correct answer).</p>",
-                "unitname": "Model Unit",
-                "learningsession": {
-                    "clusterlist": "0-91",
-                    "unitMode": "distance",
-                    "calculateProbability": "p.y = -3 + .508* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ 1.4 * Math.log(1+p.stimSuccessCount) + 7.98 * pFunc.recency(p.stimSecsSinceLastShown,  .115) ;  var lastElements = p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60,  0),  p.overallOutcomeHistory.length); var sum = lastElements.reduce((accumulator,  currentValue) => accumulator + currentValue,  0); var average = sum / (lastElements.length); p.probability = 1.0 / (1.0 + Math.exp(-p.y));  if ( p.overallStudyHistory && p.overallStudyHistory.length % 4 !== 0 && average > p.stimParameters[1] && p.probability > p.stimParameters[1]) {p.probability = 1 / (1 + Math.exp(-(Math.log(p.probability / (1 - p.probability)) + 6)));}  return p\n"
-                },
-                "deliveryparams": {
-                    "practiceseconds": "1000000",
-                    "drill": "8000",
-                    "purestudy": "16000",
-                    "skipstudy": "false",
-                    "reviewstudy": "5000",
-                    "correctprompt": "750",
-                    "fontsize": "2",
-                    "correctscore": "1",
-                    "incorrectscore": "0",
-                    "optimalThreshold": ".8"
-                },
-                "uiSettings": {
-                    "displayReviewTimeoutAsBarOrText": "false",
-                    "displayReadyPromptTimeoutAsBarOrText": "false",
-                    "displayCardTimeoutAsBarOrText": false,
-                    "displayTimeOutDuringStudy": false,
-                    "displayPerformanceDuringStudy": true,
-                    "singleLineFeedback": true,
-                    "feedbackDisplayPosition": "middle"
-                }
-            },
-            {
-                "unitname": "last",
-                "unitinstructions": "You are all done."
-            }
-        ]
-    }
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "5",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+          },
+          "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+          "randomizegroups": "false",
+          "clusterlist": "92-96",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0"
+        }
+      },
+      {
+        "unitinstructions": "<h2>&#12354; Hiragana and Katakana</h2><p>This lesson practices 92 Japanese kana, covering the hiragana and katakana symbols that appear constantly in beginner reading.</p><ul><li><strong>What you will do:</strong> Each card shows one character, and you type its romanized pronunciation from memory.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps connect each visual form to its sound, and audio feedback can reinforce the answer aloud.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings confusing symbols back sooner and spaces out the ones you already know, supporting reading fluency before vocabulary and grammar work.</li></ul><p>Watch for look-alike characters and script differences, then begin when you are ready.</p>",
+        "unitname": "Model Unit",
+        "learningsession": {
+          "clusterlist": "0-91",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "practiceseconds": "1000000",
+          "drill": "8000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "750",
+          "fontsize": "2",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayPerformanceDuringStudy": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "middle"
+        }
+      },
+      {
+        "unitname": "last",
+        "unitinstructions": "You are all done."
+      }
+    ]
+  }
 }

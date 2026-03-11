@@ -7,23 +7,23 @@
       "userselect": "true",
       "lfparameter": "0.80",
       "enableAudioPromptAndFeedback": "true",
-      "speechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
       "audioInputEnabled": "true",
       "audioPromptMode": "feedback",
-      "textToSpeechAPIKey": "AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
       "speechIgnoreOutOfGrammarResponses": "true"
     },
     "unit": [
       {
         "unitname": "Instructions",
-        "unitinstructions": "<p><strong>What you will see</strong></p><p>Each practice card shows a locator-map image that highlights the country you need to identify. Type the country name in the answer box and press ENTER to submit.</p><p><strong>How the adaptive model works</strong></p><p>The tutor estimates your readiness using your recent answers, streaks, and how long it has been since each map appeared. Countries you miss or hesitate on come back sooner, while confident responses are spaced out, and the system aims to keep your accuracy near 80% so the challenge feels balanced.</p><p><strong>Practice flow and feedback</strong></p><ul><li>Study and drill rounds keep each card open for up to 10 seconds before input is required, and the timer refreshes while you type.</li><li>Color cues and brief audio prompts let you know right away if you were correct.</li><li>Correct answers earn a point, and every incorrect response shows the right country name before you move on.</li></ul><p><strong>Using speech input & audio prompts</strong></p><p>Click the Audio button (headphone icon on the card toolbar) to open the panel at any time. Turn on <em>Microphone Input</em>, allow your browser to use the mic, and wait for the green indicator. When it is active you can speak the country name, watch the textbox fill in what it heard, and fix anything before pressing ENTER or Confirm.</p><p>The same panel has toggles for <em>Question</em> and <em>Feedback</em> prompts. Sessions start in <strong>Feedback</strong> mode, which speaks a short feedback message (including the correct answer). Because these prompts are images, leave <strong>Question</strong> off, the lesson only speaks feedback messages (including the correct answer).</p>"
+        "unitinstructions": "<h2>&#128506; Countries Tutor CIA Maps</h2><p>This geography lesson practices 233 locator maps, with each card highlighting one country or territory for you to identify.</p><ul><li><strong>What you will do:</strong> Type the place name from memory instead of choosing from multiple-choice options.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Immediate visual feedback follows each response, and the audio panel can also speak the correct answer aloud.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings back places you miss or hesitate on and spaces out the ones you already know.</li></ul><p>Use coastlines, region, and overall shape as clues, then press Begin when you are ready.</p>"
       },
       {
         "unitname": "Model Practice",
         "learningsession": {
           "clusterlist": "0-232",
           "unitMode": "distance",
-          "calculateProbability": "p.y = -2 + .458* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .974)+ .29 * p.stimSuccessCount - .09 * p.stimFailureCount + 6.14 * pFunc.recency(p.stimSecsSinceLastShown,  .2) ;\n  p.probability = 1.0 / (1.0 + Math.exp(-p.y)) ;\n  return p\n"
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
         "deliveryparams": {
           "purestudy": "10000",
@@ -51,10 +51,3 @@
     ]
   }
 }
-
-
-
-
-
-
-
