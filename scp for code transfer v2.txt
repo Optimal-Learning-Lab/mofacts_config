@@ -1,6 +1,8 @@
 
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187
 
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53
+
 docker compose build --no-cache; docker compose push; scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" docker-compose.yml ubuntu@44.253.109.187:/var/www/mofacts/docker-compose.yaml; ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose pull && sudo docker compose down && sudo docker compose up -d"
 
 
@@ -16,7 +18,7 @@ ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /va
 
 saving progress clunky
 flashing interfaces in trials
-flashing main menu interface
+resume functionality
 
 
 

@@ -3,7 +3,7 @@
     "setspec": {
       "lessonname": "Kennesaw Sociology Criminal Justice Faculty",
       "stimulusfile": "Kennesaw Sociology Criminal Justice Faculty_stims.json",
-      "shuffleclusters": "0-26",
+      "shuffleclusters": "0-37",
       "userselect": "false",
       "lfparameter": "0.85",
       "enableAudioPromptAndFeedback": "true",
@@ -16,21 +16,21 @@
     "unit": [
       {
         "unitname": "Instructions",
-        "unitinstructions": "<h2>Kennesaw Sociology and Criminal Justice Faculty</h2><p>This tutor covers 27 full-time faculty members from the Kennesaw State University Sociology and Criminal Justice department.</p><ul><li><strong>Prompt:</strong> Each card shows a faculty headshot and research-interest text.</li><li><strong>Response:</strong> Type the faculty member's full name without any middle initial.</li><li><strong>Source rule:</strong> If the department site does not list research interests for a faculty member, the card says so explicitly instead of guessing.</li></ul><p>Use the image and research areas together to retrieve the correct name.</p>"
+        "unitinstructions": "<h2>Kennesaw Sociology and Criminal Justice Faculty and Administration</h2><p>This tutor covers 27 full-time faculty members, 8 department administration entries, and 3 additional Radow/graduate leadership entries.</p><ul><li><strong>Faculty cards:</strong> Prompt text uses research-interest information.</li><li><strong>Admin cards:</strong> Prompt text uses role and, when published, expertise or focus areas.</li><li><strong>Response:</strong> Type the person's full name without any middle initial.</li><li><strong>Source rule:</strong> If source pages omit expertise details, cards do not invent them.</li></ul><p>Use the image and text prompt together to retrieve the correct name.</p>"
       },
       {
         "unitname": "Practice",
         "learningsession": {
-          "clusterlist": "0-26",
+          "clusterlist": "0-37",
           "unitMode": "distance",
-          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+          "calculateProbability": "p.y = .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
         "deliveryparams": {
           "lfparameter": "0.85",
           "purestudy": "10000",
           "drill": "16000",
           "skipstudy": "false",
-          "reviewstudy": "10000",
+          "reviewstudy": "6000",
           "correctprompt": "500",
           "correctscore": "1",
           "incorrectscore": "0",
