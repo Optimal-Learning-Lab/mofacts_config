@@ -1,0 +1,35 @@
+MoFaCTS deploy/build cheat sheet
+
+Run all Docker commands from:
+C:\dev\mofacts\svelte-app\mofacts\.deploy
+
+Local rebuild with current code:
+docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml up --build -d
+docker compose ps
+docker compose logs --tail 100 mofacts
+docker compose logs --tail 100 mongodb
+
+Staging SSH:
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187
+
+Production SSH:
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53
+
+Staging deploy:
+docker compose build --no-cache
+docker compose push
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\docker-compose.yml ubuntu@44.253.109.187:/var/www/mofacts/docker-compose.yaml
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\.env.staging ubuntu@44.253.109.187:/var/www/mofacts/.env
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
+
+Production deploy:
+docker compose build --no-cache
+docker compose push
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\docker-compose.yml ubuntu@52.89.109.53:/var/www/mofacts/docker-compose.yaml
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\.env.production ubuntu@52.89.109.53:/var/www/mofacts/.env
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
+
+Loose notes:
+- saving progress clunky
+- flashing interfaces in trials
+- resume functionality
