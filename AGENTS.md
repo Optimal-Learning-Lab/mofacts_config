@@ -4,6 +4,13 @@
 - Repository: `C:\Users\ppavl\OneDrive\Active projects\mofacts_config`
 - Holds MoFaCTS configuration and content definitions, including TDF-related structures consumed by application code.
 
+## Repo Selection Rule
+- Do not assume the current working directory is the correct repo for the task.
+- Choose the repo based on feature ownership first, then use the current directory only if it matches that ownership.
+- For runtime behavior, UI rendering, themes, transitions, Svelte components, state machines, or application logic, switch to `C:\dev\mofacts` and prefer `svelte-app/`.
+- Stay in this repo when the task is about configuration content, TDF definitions, schemas, payload values, or sync workflows.
+- When a task spans repos, start in the primary owning repo and inspect sibling repos for compatibility as needed.
+
 ## Sibling Repositories In This Workspace
 - `C:\dev\mofacts` (main application code)
 - `C:\Users\ppavl\OneDrive\Active projects\mofacts.wiki` (documentation)
