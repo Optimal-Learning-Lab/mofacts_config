@@ -1,0 +1,81 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "TN Native Plant Names",
+      "userselect": "true",
+      "stimulusfile": "TNplantstims.json",
+      "lfparameter": ".85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Show the questions",
+        "unitinstructions": "<p><strong>Before You Begin: Demographic Survey</strong></p><p>Please answer the following 5 quick demographic questions. This information helps us understand how different learners interact with the system and improve the tutor for future users.</p><p>Your responses are confidential and used only for research purposes.</p>",
+        "buttonorder": "fixed",
+        "deliveryparams": {
+          "drill": "12000000",
+          "purestudy": "16000",
+          "skipstudy": "false",
+          "reviewstudy": "16000",
+          "correctprompt": "500",
+          "fontsize": "24",
+          "correctscore": "0",
+          "incorrectscore": "0"
+        },
+        "buttontrial": "true",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "5",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+          },
+          "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+          "randomizegroups": "false",
+          "clusterlist": "112-116",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0"
+        }
+      },
+      {
+        "unitinstructions": "<h2>&#127810; Tennessee Native Plants</h2><p>This plant identification tutor practices 112 Tennessee native species through photo-based active recall.</p><ul><li><strong>What you will do:</strong> Each card shows a plant photo, and you type the plant's common name from memory.</li><li><strong>Timing:</strong> Study screens last about 12 seconds, drill screens about 10 seconds, review screens about 8 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Feedback appears immediately after every response, and audio tools can speak the correct answer aloud if you want another cue.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings missed plants back sooner and spaces familiar ones out for stronger long-term field identification.</li></ul><p>Watch for leaf shape, flower color, bark texture, and overall growth habit, then begin when you are ready.</p>",
+        "unitname": "Model Unit",
+        "learningsession": {
+          "clusterlist": "0-111",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .8* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "practiceseconds": "1000000",
+          "drill": "10000",
+          "purestudy": "12000",
+          "skipstudy": "false",
+          "reviewstudy": "8000",
+          "correctprompt": "750",
+          "fontsize": "24",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8"
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayPerformanceDuringStudy": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "middle"
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your practice session with the Tennessee Native Plants tutor. Through spaced repetition and adaptive learning, you've been building your ability to recognize and identify these 112 native plant species.</p><p>Thank you for using this tutor to learn about Tennessee's botanical heritage!</p>"
+      }
+    ]
+  }
+}

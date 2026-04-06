@@ -26,11 +26,11 @@ scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\.env.staging ubuntu@44.253.
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
 
 Production deploy:
+
+Production deploy:
 docker compose build --no-cache
 docker compose push
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\docker-compose.yml ubuntu@52.89.109.53:/var/www/mofacts/docker-compose.yaml
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\.env.production ubuntu@52.89.109.53:/var/www/mofacts/.env
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
 
-Loose notes:
-- flashing interfaces in trials

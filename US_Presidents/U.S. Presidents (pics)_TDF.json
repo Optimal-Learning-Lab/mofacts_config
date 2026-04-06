@@ -1,0 +1,43 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "U.S. Presidents (pics) (imported from Anki)",
+      "stimulusfile": "U.S. Presidents (pics)_stims.json",
+      "shuffleclusters": "0-43",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>U.S. Presidents by Portrait</h2><p>This lesson covers 44 presidential portraits, helping you identify each U.S. president represented in the current image set.</p><ul><li><strong>What you will do:</strong> Each card shows a portrait and president number, and you type the full name from memory.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps connect the face, historical period, and name in a single pass.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings back the presidents you confuse and spaces out the ones you already recognize confidently.</li></ul><p>Use hairstyle, clothing, age, and portrait style as clues, then begin when you are ready.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-43",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "24",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000"
+        }
+      }
+    ]
+  }
+}

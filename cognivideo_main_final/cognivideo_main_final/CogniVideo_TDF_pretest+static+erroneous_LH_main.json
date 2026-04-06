@@ -1,0 +1,125 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Experimentiervideos zu Keimung: Gruppe 3 main-ES",
+      "userselect": "true",
+      "stimulusfile": "CogniVideo_stim_allQuestions_main.json",
+      "experimentTarget": "haupt-gruppe3",
+      "lfparameter": ".85",
+      "hintsEnabled": false,
+      "tags": [
+        "erroneous",
+        "video",
+        "static"
+      ],
+      "uiSettings": {
+        "singleLineFeedback": false,
+        "incorrectColor": "#ff8c00",
+        "correctColor": "#008000",
+        "stimuliPosition": "top",
+        "inputPlaceholderText": "Antworte hier",
+        "displayUserAnswerInFeedback": false,
+        "displayTimeoutBar": false,
+        "displayPerformance": false,
+        "onlyShowSimpleFeedback": false,
+        "continueButtonText": "Weiter"
+      }
+    },
+    "unit": [
+      {
+        "buttonorder": "random",
+        "unitname": "pretest",
+        "unitinstructions": "Mit den folgenden Fragen soll dein Wissen über gute und aufschlussreiche Experimente abgefragt werden. Bitte gib dir Mühe und versuche, alle Fragen richtig zu beantworten. Bei allen Fragen musst du die richtige Antwort ankreuzen. Es ist immer nur <b>eine Antwort</b> richtig.",
+        "buttontrial": "false",
+        "assessmentsession": {
+          "randomizegroups": "false",
+          "clusterlist": "0-24",
+          "permutefinalresult": "0-0",
+          "assignrandomclusters": "false",
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "25",
+            "group": [
+              "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,f,t,0"
+            ],
+            "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_11 A_12 A_13 A_14 A_15 A_16 A_17 A_18 A_19 A_20 A_21 A_22 A_23 A_24 A_25"
+          }
+        },
+        "deliveryparams": {
+          "drill": 2000000,
+          "correctprompt": 0,
+          "reviewstudy": 0
+        }
+      },
+      {
+        "buttonorder": "random",
+        "unitname": "erroneous_cress_static",
+        "unitinstructions": "Schau dir das Video genau an. Du kannst das Video bei Bedarf pausieren und zurück- oder vorspulen. Beantworte die Fragen, die im Video auftauchen. <b>Achtung</b>: Es kann sein, dass beim Experiment Fehler gemacht werden!",
+        "videosession": {
+          "videosource": "https://youtu.be/EF8F8knobGw",
+          "questions": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            39,
+            40
+          ],
+          "questiontimes": [
+            63,
+            88,
+            390,
+            465,
+            470,
+            484,
+            499
+          ]
+        },
+        "deliveryparams": {
+          "drill": 2000000,
+          "correctprompt": 2000,
+          "reviewstudy": 12000
+        }
+      },
+      {
+        "buttonorder": "random",
+        "unitname": "erroneous_wheat_static",
+        "unitinstructions": "Schau dir auch das zweite Video genau an. Du kannst wieder pausieren und zurück- oder vorspulen. Beantworte die Fragen, die im Video auftauchen. <b>Achtung</b>: Es kann sein, dass beim Experiment Fehler gemacht werden!",
+        "videosession": {
+          "videosource": "https://youtu.be/2qNgFzO8v-Q",
+          "questions": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            41,
+            42
+          ],
+          "questiontimes": [
+            47,
+            83,
+            406,
+            480,
+            488,
+            502,
+            514
+          ]
+        },
+        "deliveryparams": {
+          "drill": 2000000,
+          "correctprompt": 2000,
+          "reviewstudy": 2000
+        }
+      },
+      {
+        "buttonorder": "random",
+        "unitname": "Final",
+        "unitinstructions": "<h3>Danke!</h3> Deine Antworten wurden gespeichert. Melde dich bei der Lehrperson, wenn du fertig bist.",
+        "countcompletion": true
+      }
+    ]
+  }
+}
