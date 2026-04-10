@@ -1,82 +1,82 @@
 {
-  "tutor": {
-    "setspec": {
-      "name": "Internal Testing with SVO and Models",
-      "lessonname": "Optimized Drill Practice of Hiragana and Katakana",
-      "userselect": "true",
-      "stimulusfile": "Hiraganastims.json",
-      "lfparameter": "0.80",
-      "enableAudioPromptAndFeedback": "true",
-      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
-      "audioInputEnabled": "true",
-      "audioPromptMode": "feedback",
-      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
-      "speechIgnoreOutOfGrammarResponses": "true"
-    },
-    "unit": [
-      {
-        "unitname": "Show the questions",
-        "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
-        "buttonorder": "fixed",
-        "deliveryparams": {
-          "drill": "12000000",
-          "purestudy": "16000",
-          "skipstudy": "false",
-          "reviewstudy": "16000",
-          "correctprompt": "500",
-          "fontsize": "3",
-          "correctscore": "0",
-          "incorrectscore": "0"
+    "tutor": {
+        "setspec": {
+            "name": "Internal Testing with SVO and Models",
+            "lessonname": "Optimized Drill Practice of Hiragana and Katakana",
+            "userselect": "true",
+            "stimulusfile": "Hiraganastims.json",
+            "lfparameter": "0.80",
+            "enableAudioPromptAndFeedback": "true",
+            "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+            "audioInputEnabled": "true",
+            "audioPromptMode": "feedback",
+            "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+            "speechIgnoreOutOfGrammarResponses": "true"
         },
-        "buttontrial": "false",
-        "assessmentsession": {
-          "conditiontemplatesbygroup": {
-            "groupnames": "A",
-            "clustersrepeated": "1",
-            "templatesrepeated": "5",
-            "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
-          },
-          "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
-          "randomizegroups": "false",
-          "clusterlist": "92-96",
-          "assignrandomclusters": "false",
-          "permutefinalresult": "0-0"
-        }
-      },
-      {
-        "unitinstructions": "<h2>&#12354; Hiragana and Katakana</h2><p>This lesson practices 92 Japanese kana, covering the hiragana and katakana symbols that appear constantly in beginner reading.</p><ul><li><strong>What you will do:</strong> Each card shows one character, and you type its romanized pronunciation from memory.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps connect each visual form to its sound, and audio feedback can reinforce the answer aloud.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings confusing symbols back sooner and spaces out the ones you already know, supporting reading fluency before vocabulary and grammar work.</li></ul><p>Watch for look-alike characters and script differences, then begin when you are ready.</p>",
-        "unitname": "Model Unit",
-        "learningsession": {
-          "clusterlist": "0-91",
-          "unitMode": "distance",
-          "calculateProbability": "p.y = -0.45 + .73* pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .95)+ .52* Math.log(1+p.stimSuccessCount) + 2.17 * pFunc.recency(p.stimSecsSinceLastShown,  .30) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
-        },
-        "deliveryparams": {
-          "practiceseconds": "1000000",
-          "drill": "8000",
-          "purestudy": "16000",
-          "skipstudy": "false",
-          "reviewstudy": "5000",
-          "correctprompt": "750",
-          "fontsize": "2",
-          "correctscore": "1",
-          "incorrectscore": "0",
-          "optimalThreshold": ".8"
-        },
-        "uiSettings": {
-          "displayReviewTimeoutAsBarOrText": "false",
-          "displayReadyPromptTimeoutAsBarOrText": "false",
-          "displayCardTimeoutAsBarOrText": false,
-          "displayTimeOutDuringStudy": false,
-          "displayPerformanceDuringStudy": true,
-          "singleLineFeedback": true,
-          "feedbackDisplayPosition": "middle"
-        }
-      },
-      {
-        "unitname": "last",
-        "unitinstructions": "You are all done."
-      }
-    ]
-  }
+        "unit": [
+            {
+                "unitname": "Show the questions",
+                "unitinstructions": "Demographic Survey<br><br>\r\nPlease answer the following 5 quick demographic questions, which may be useful for us to understand the data we collect.",
+                "buttonorder": "fixed",
+                "deliveryparams": {
+                    "drill": "12000000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "16000",
+                    "correctprompt": "500",
+                    "fontsize": "3",
+                    "correctscore": "0",
+                    "incorrectscore": "0"
+                },
+                "buttontrial": "false",
+                "assessmentsession": {
+                    "conditiontemplatesbygroup": {
+                        "groupnames": "A",
+                        "clustersrepeated": "1",
+                        "templatesrepeated": "5",
+                        "group": "0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0 0,b,t,0                "
+                    },
+                    "initialpositions": "                A_1 A_2 A_3 A_4 A_5            ",
+                    "randomizegroups": "false",
+                    "clusterlist": "92-96",
+                    "assignrandomclusters": "false",
+                    "permutefinalresult": "0-0"
+                }
+            },
+            {
+                "unitinstructions": "<h2>&#12354; Hiragana and Katakana</h2><p>This lesson practices 92 Japanese kana, covering the hiragana and katakana symbols that appear constantly in beginner reading.</p><ul><li><strong>What you will do:</strong> Each card shows one character, and you type its romanized pronunciation from memory.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps connect each visual form to its sound, and audio feedback can reinforce the answer aloud.</li><li><strong>Why it helps:</strong> Adaptive scheduling brings confusing symbols back sooner and spaces out the ones you already know, supporting reading fluency before vocabulary and grammar work.</li></ul><p>Watch for look-alike characters and script differences, then begin when you are ready.</p>",
+                "unitname": "Model Unit",
+                "learningsession": {
+                    "clusterlist": "0-91",
+                    "unitMode": "distance",
+                    "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+                },
+                "deliveryparams": {
+                    "practiceseconds": "1000000",
+                    "drill": "8000",
+                    "purestudy": "16000",
+                    "skipstudy": "false",
+                    "reviewstudy": "5000",
+                    "correctprompt": "750",
+                    "fontsize": "2",
+                    "correctscore": "1",
+                    "incorrectscore": "0",
+                    "optimalThreshold": ".8"
+                },
+                "uiSettings": {
+                    "displayReviewTimeoutAsBarOrText": "false",
+                    "displayReadyPromptTimeoutAsBarOrText": "false",
+                    "displayCardTimeoutAsBarOrText": false,
+                    "displayTimeOutDuringStudy": false,
+                    "displayPerformanceDuringStudy": true,
+                    "singleLineFeedback": true,
+                    "feedbackDisplayPosition": "middle"
+                }
+            },
+            {
+                "unitname": "last",
+                "unitinstructions": "You are all done."
+            }
+        ]
+    }
 }
