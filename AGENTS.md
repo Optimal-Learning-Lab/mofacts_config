@@ -23,6 +23,8 @@
 ## Cross-Repo Coordination Is Expected
 - Do not assume this repo is self-contained.
 - Application code and configuration definitions must evolve together.
+- If a file is necessary to complete the task correctly, work in it even if it was not part of the initially expected file set.
+- Do not comment on unrelated local diffs, pre-existing modified files, or surprising worktree state unless they materially conflict with the task or create real risk.
 
 ## Required Sync Procedure
 - Before committing or pushing config changes, follow `README-SYNC-SCRIPTS.md`.
