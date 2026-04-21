@@ -1,0 +1,54 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "A&P Openstax Chapter 1 Terms",
+      "stimulusfile": "A&P_Openstax_Chapter_1_Terms_stims.json",
+      "shuffleclusters": "0-70",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>A&amp;P Openstax Chapter 1 Terms</h2><p>This tutor practices 71 key terms from Anatomy and Physiology 2e, Chapter 1. Each card gives you a textbook definition, and you type the matching anatomy and physiology term from memory.</p><ul><li><strong>What you will do:</strong> Read the definition and enter the exact key term it describes.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Immediate feedback connects the definition to the correct term, while adaptive scheduling brings uncertain terms back sooner.</li><li><strong>Study tip:</strong> Pay attention to directional, cavity, imaging, and homeostasis vocabulary because many terms are closely related.</li></ul><p><strong>Source and attribution:</strong> Terms and definitions are from OpenStax <em>Anatomy and Physiology 2e</em>, Chapter 1 Key Terms. Access for free at <a href=\"https://openstax.org/books/anatomy-and-physiology-2e/pages/1-key-terms\" target=\"_blank\" rel=\"noopener noreferrer\">https://openstax.org/books/anatomy-and-physiology-2e/pages/1-key-terms</a>. OpenStax textbook content is licensed under the Creative Commons Attribution 4.0 International License.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-70",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "lfparameter": "0.85",
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "24",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000",
+          "finalInstructions": "You are done practicing A&P Openstax Chapter 1 Terms. Thank you for using this tutor."
+        },
+        "uiSettings": {
+          "displayReviewTimeoutAsBarOrText": "false",
+          "displayReadyPromptTimeoutAsBarOrText": "false",
+          "displayCardTimeoutAsBarOrText": false,
+          "displayTimeOutDuringStudy": false,
+          "displayPerformanceDuringStudy": true,
+          "singleLineFeedback": true,
+          "feedbackDisplayPosition": "middle"
+        }
+      }
+    ]
+  }
+}
