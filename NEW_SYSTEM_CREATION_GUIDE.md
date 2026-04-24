@@ -131,7 +131,14 @@ Example image card:
             "display": {
               "type": "image",
               "imgSrc": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Afghanistan_in_its_region.svg",
-              "alt": "Locator map for Afghanistan"
+              "alt": "Locator map for Afghanistan",
+              "attribution": {
+                "creatorName": "TUBS",
+                "sourceName": "Wikimedia Commons",
+                "sourceUrl": "https://commons.wikimedia.org/wiki/File:Afghanistan_in_its_region.svg",
+                "licenseName": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+              }
             },
             "response": {
               "correctResponse": "Afghanistan"
@@ -143,6 +150,8 @@ Example image card:
   }
 }
 ```
+
+For licensed media prompts, keep attribution in `display.attribution`. The app renders a small linked caption under the prompt image using `creatorName`, `sourceName`, and `licenseName`, and opens `sourceUrl` when clicked.
 
 Example definition card:
 
@@ -347,4 +356,3 @@ Before calling a new system complete:
 - A few representative cards have been manually checked.
 - Source CSV, script, or audit artifacts are saved when useful.
 - If app code changed, `npm run typecheck` passed in the app repo.
-

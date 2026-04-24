@@ -25,12 +25,28 @@ scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\docker-compose.yml ubuntu@4
 scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\.env.staging ubuntu@44.253.109.187:/var/www/mofacts/.env
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
 
-Production deploy:
+
 
 Production deploy:
-docker compose build --no-cache
-docker compose push
+
+docker compose --env-file .\.env.production build --no-cache
+docker compose --env-file .\.env.production push
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\docker-compose.yml ubuntu@52.89.109.53:/var/www/mofacts/docker-compose.yaml
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\.env.production ubuntu@52.89.109.53:/var/www/mofacts/.env
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-public-cert.pem" ubuntu@52.89.109.53:/tmp/memphis-saml-public-cert.pem
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-private-key.pem" ubuntu@52.89.109.53:/tmp/memphis-saml-private-key.pem
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "sudo mkdir -p /mofactsAssets_override && sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
+
+
+
+to do:
+Track usage level by user for future quotas/charging
+Balancing conditions
+Video testing
+Revenue strategy
+Content attribution infrastructure
+Test Content Manager
+MCP load testing and network and security scanning
+Theme bugs
 
