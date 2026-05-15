@@ -1,0 +1,38 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "3020 Sample Exam Review Practice",
+      "stimulusfile": "3020_Sample_Exam_Review_Practice_stims.json",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "shuffleclusters": "0-29"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Sample Exam Review Practice</h2>  <p>    This activity is designed to help you review and practice the material covered across the course. The system uses adaptive scheduling to decide which question you should see next, focusing attention on items that need more work.  </p>  <ul>    <li>You will answer multiple-choice questions drawn from the full set of review items.</li>    <li>You will have up to 15 seconds to respond to each question.</li>    <li>If you answer correctly, the system will move on after a brief 1-second confirmation.</li>    <li>If you answer incorrectly, the system will show the correct information and give you 15 seconds to review it.</li>    <li>Questions you know well may appear less often.</li>    <li>Questions that are newer or more difficult for you may appear again sooner.</li>    <li>The goal is to help you learn progressively while keeping errors at a manageable level.</li>    <li>This is intended as practice, not just as a one-time test of what you already know.</li>  </ul>  <p>Work steadily and do your best on each question. The system is designed to support learning over repeated practice.  </p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-29",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "drill": 1000000,
+          "correctprompt": 500,
+          "reviewstudy": 20000,
+          "purestudy": 10000,
+          "skipstudy": "false",
+          "fontsize": "24",
+          "practiceseconds": 10000000,
+          "correctscore": 1,
+          "incorrectscore": 0,
+          "optimalThreshold": 0.8
+        },
+        "buttonorder": "random"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Spanish 1000 Words",
+      "stimulusfile": "Spanish_1000_Words_stims.json",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Spanish 1000 Words</h2><p>This tutor practices 1,000 high-frequency Spanish words using open Spanish-English dictionary and frequency data. Each card gives you an English gloss, and you type the matching Spanish word from memory.</p><ul><li><strong>What you will do:</strong> Read the English meaning and enter the Spanish word it describes.</li><li><strong>Timing:</strong> Study and drill screens last about 20 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li><li><strong>How it works:</strong> Immediate feedback connects the English gloss to the Spanish word, while adaptive scheduling brings uncertain words back sooner.</li><li><strong>Study tip:</strong> Focus on the core meaning first, then use the gender marker when present to help learn masculine and feminine nouns.</li></ul><div style=\"font-size: 0.85em; line-height: 1.35; margin-top: 1em;\"><p><strong>Source and attribution:</strong> This flashcard deck is adapted from <a href=\"https://github.com/doozan/spanish_data\" target=\"_blank\" rel=\"noopener noreferrer\">doozan/spanish_data</a>, a Spanish-English dictionary and frequency-data repository built from Wiktionary, FrequencyWords, and Tatoeba sources. The deck uses Spanish-English dictionary data from <code>es-en.data</code> and Spanish lemma frequency data from <code>frequency.csv</code>. The repository is licensed under the <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">Creative Commons Attribution 4.0 International License</a>; upstream source credits include Wiktionary under CC BY-SA, FrequencyWords under CC BY-SA 3.0, and Tatoeba sentence data under CC BY 2.0 FR.</p><p>This material has been adapted into flashcards for MoFaCTS practice.</p></div>"
+      },
+      {
+        "unitname": "Practice",
+        "deliveryparams": {
+          "purestudy": 10000,
+          "drill": 20000,
+          "reviewstudy": 5000,
+          "correctprompt": 500,
+          "skipstudy": "false",
+          "fontsize": 24,
+          "correctscore": 1,
+          "incorrectscore": 0,
+          "practiceseconds": 1000000,
+          "optimalThreshold": 0.8
+        },
+        "learningsession": {
+          "clusterlist": "0-999",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p\n"
+        }
+      }
+    ]
+  }
+}

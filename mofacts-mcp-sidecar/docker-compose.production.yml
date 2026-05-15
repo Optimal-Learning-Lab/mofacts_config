@@ -6,7 +6,6 @@ services:
       TEMP: /tmp
       TMPDIR: /tmp
       PLAYWRIGHT_MCP_OUTPUT_DIR: /tmp/playwright-mcp/output
-      PLAYWRIGHT_MCP_USER_DATA_DIR: /tmp/playwright-mcp/browser
 
   ssh-tunnel:
     image: alpine:3.20

@@ -11,7 +11,7 @@ It does not add a second UI, does not change your main app, and does not expose 
 
 ## Architecture
 
-- `playwright-mcp` is a standalone browser automation MCP server. It connects to your live site the same way a real browser does, so clicks, navigation, and inspection happen against the real app.
+- `playwright-mcp` is a standalone browser automation MCP server. It connects to your live site the same way a real browser does, so clicks, navigation, and inspection happen against the real app. The local image extends the official Playwright MCP image and runs isolated browser contexts by default for repeatable experiment smoke tests.
 - `mongo-mcp` is a separate MCP server that connects to MongoDB with read-only application logic. It exposes only a few fixed tools instead of a raw query console.
 - Both services are published as HTTP MCP endpoints, so an AI client can attach to them side by side.
 
@@ -111,6 +111,27 @@ When you are done:
 .\scripts\stop-production.ps1
 ```
 
+## Reset Playwright Only
+
+For repeated browser smoke tests, recreate the isolated Playwright MCP sidecar
+without touching Mongo:
+
+```powershell
+.\scripts\reset-playwright.ps1
+```
+
+Against production overrides:
+
+```powershell
+.\scripts\reset-playwright.ps1 -Production
+```
+
+If old ad hoc Playwright MCP containers are still running, remove them explicitly:
+
+```powershell
+.\scripts\reset-playwright.ps1 -Production -RemoveOtherPlaywrightMcp
+```
+
 ## How The AI Uses It
 
 ### Playwright for UI interaction
@@ -181,7 +202,7 @@ Recommended rule: add narrowly scoped read-only tools for specific questions, in
 
 ## Notes
 
-- The Playwright service is intentionally off-the-shelf and nearly config-free.
+- The Playwright service is intentionally close to upstream. The local Dockerfile extends the official image so project defaults can be changed here without editing the main app.
 - The Mongo service is intentionally small and readable rather than abstract.
 - Both endpoints bind to `localhost` on the host machine by default so they are not exposed broadly.
 - Production Mongo access is tunneled over SSH rather than opened publicly.

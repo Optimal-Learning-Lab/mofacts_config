@@ -1,52 +1,244 @@
 MoFaCTS deploy/build cheat sheet
 
-Run all Docker commands from:
-C:\dev\mofacts\svelte-app\mofacts\.deploy
+# Paste these commands in PowerShell.
+# PowerShell comments start with #, so comment lines are safe to paste.
+# Lines inside ssh "..." run on Linux. Keep those as plain commands.
+#
+# Run app Docker commands from:
+#   C:\dev\MoFaCTS\mofacts\.deploy
+#
+# Run MCP sidecar local Docker commands from:
+#   C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar
+#
+# App files on staging and remote/production live under:
+#   /var/www/mofacts
+#
+# MCP sidecar files on staging and remote/production live under:
+#   /var/www/mofacts-mcp-sidecar
+#
+# Important:
+# - The app can be deployed by itself.
+# - MCP sidecar deploy requires its compose files, services/playwright-mcp Dockerfile,
+#   and services/mongo-mcp source files to be copied first.
+# - Do not run the MCP remote docker compose command until docker-compose.yml,
+#   docker-compose.remote-server.yml, services/playwright-mcp, and services/mongo-mcp exist on the remote server.
+# - Do not recursively scp the whole services/mongo-mcp folder. It may contain
+#   node_modules, which transfers thousands of unnecessary files. Copy only the
+#   Docker build inputs listed below.
+# - Staging currently uses .env.production in the commands below because that is how this
+#   sheet was previously written. If staging should use .env.staging, switch both the
+#   build/push env file and the scp source for staging.
 
-Local rebuild with current code:
+
+# ---------------------------------------------------------------------------
+# Local app rebuild with current code
+# ---------------------------------------------------------------------------
+
+cd C:\dev\MoFaCTS\mofacts\.deploy
+
 docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml build --no-cache mofacts
 docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml up -d mofacts
 
-docker compose ps
 
-docker compose logs --tail 100 mofacts
-docker compose logs --tail 100 mongodb
+# ---------------------------------------------------------------------------
+# Local MCP sidecar rebuild
+# ---------------------------------------------------------------------------
 
-Staging SSH:
+cd "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar"
+
+docker compose -f docker-compose.yml -f docker-compose.local-server.yml down --remove-orphans
+docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --build
+
+
+# ---------------------------------------------------------------------------
+# SSH shortcuts
+# ---------------------------------------------------------------------------
+
+# Staging SSH
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187
 
-Production SSH:
+# Remote/production SSH
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53
 
-Staging deploy:
-docker compose build --no-cache
-docker compose push
-scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\docker-compose.yml ubuntu@44.253.109.187:/var/www/mofacts/docker-compose.yaml
+
+# ---------------------------------------------------------------------------
+# Staging app deploy only
+# ---------------------------------------------------------------------------
+
+cd C:\dev\MoFaCTS\mofacts\.deploy
+
+# Build and push the app image for staging.
+# Skip these two lines if the desired image tag has already been pushed.
+# Staging currently uses .env.production because that is how this sheet was
+# previously written. If staging should use .env.staging, switch both lines
+# below and the staging scp env source to .env.staging.
+docker compose --env-file .\.env.staging build --no-cache
+docker compose --env-file .\.env.staging push
+
+# Create the app runtime directory before copying into it.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "sudo mkdir -p /var/www/mofacts && sudo chown -R ubuntu:ubuntu /var/www/mofacts"
+
+# Copy the compose file and env file used by the remote app runtime.
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\docker-compose-staging.yml ubuntu@44.253.109.187:/var/www/mofacts/docker-compose.yaml
 scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" .\.env.staging ubuntu@44.253.109.187:/var/www/mofacts/.env
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
+
+# Copy Memphis SAML cert/key into /tmp first, then move them with sudo.
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-public-cert.pem" ubuntu@44.253.109.187:/tmp/memphis-saml-public-cert.pem
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-private-key.pem" ubuntu@44.253.109.187:/tmp/memphis-saml-private-key.pem
+
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "sudo mkdir -p /mofactsAssets_override && sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
+
+# Pull and restart only the app stack.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
 
 
+# ---------------------------------------------------------------------------
+# Staging app + MCP sidecar deploy
+# ---------------------------------------------------------------------------
 
-Production deploy:
+# Do the staging app deploy steps above first.
+# Then copy the MCP sidecar files and start the MCP stack.
 
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
+
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\docker-compose.yml" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/docker-compose.yml
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\docker-compose.remote-server.yml" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "rm -rf /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp && mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src"
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\playwright-mcp\Dockerfile" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\.dockerignore" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/.dockerignore
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\Dockerfile" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/Dockerfile
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\package.json" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package.json
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\package-lock.json" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package-lock.json
+scp -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" -r "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\src\*" ubuntu@44.253.109.187:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/src/
+
+# Preflight check: fail before docker compose if files were not copied.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp"
+
+# Start/rebuild MCP sidecar. The remote override joins the app Docker network.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml up -d --build"
+
+
+# ---------------------------------------------------------------------------
+# Stop MCP on staging
+# ---------------------------------------------------------------------------
+
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down"
+
+
+# ---------------------------------------------------------------------------
+# Remote/production app deploy only
+# ---------------------------------------------------------------------------
+
+cd C:\dev\MoFaCTS\mofacts\.deploy
+
+# Build and push the app image for remote/production.
+# Skip these two lines if the desired image tag has already been pushed.
 docker compose --env-file .\.env.production build --no-cache
 docker compose --env-file .\.env.production push
+
+# Create the app runtime directory before copying into it.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "sudo mkdir -p /var/www/mofacts && sudo chown -R ubuntu:ubuntu /var/www/mofacts"
+
+# Copy the compose file and env file used by the remote app runtime.
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\docker-compose.yml ubuntu@52.89.109.53:/var/www/mofacts/docker-compose.yaml
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" .\.env.production ubuntu@52.89.109.53:/var/www/mofacts/.env
+
+# Copy Memphis SAML cert/key into /tmp first, then move them with sudo.
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-public-cert.pem" ubuntu@52.89.109.53:/tmp/memphis-saml-public-cert.pem
 scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml\memphis-saml-private-key.pem" ubuntu@52.89.109.53:/tmp/memphis-saml-private-key.pem
+
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "sudo mkdir -p /mofactsAssets_override && sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
+
+# Pull and restart only the app stack.
 ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull && sudo docker compose --env-file .env -f docker-compose.yaml up -d"
 
 
+# ---------------------------------------------------------------------------
+# Remote/production app + MCP sidecar deploy
+# ---------------------------------------------------------------------------
 
-to do:
-Track usage level by user for future quotas/charging
-Balancing conditions
-Video testing
-Revenue strategy
-Content attribution infrastructure
-Test Content Manager
-MCP load testing and network and security scanning
-Theme bugs
+# Do the remote/production app deploy steps above first.
+# Then copy the MCP sidecar files and start the MCP stack.
 
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
+
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\docker-compose.yml" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/docker-compose.yml
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\docker-compose.remote-server.yml" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "rm -rf /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp && mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src"
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\playwright-mcp\Dockerfile" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\.dockerignore" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/.dockerignore
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\Dockerfile" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/Dockerfile
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\package.json" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package.json
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\package-lock.json" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package-lock.json
+scp -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" -r "C:\Users\ppavl\OneDrive\Active projects\mofacts_config\mofacts-mcp-sidecar\services\mongo-mcp\src\*" ubuntu@52.89.109.53:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/src/
+
+# Preflight check: fail before docker compose if files were not copied.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp"
+
+# Start/rebuild MCP sidecar. The remote override joins the app Docker network.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml up -d --build"
+
+
+# ---------------------------------------------------------------------------
+# Stop MCP on remote/production
+# ---------------------------------------------------------------------------
+
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down"
+
+
+# ---------------------------------------------------------------------------
+# Optional remote checks
+# ---------------------------------------------------------------------------
+
+# Check app containers on staging.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+
+# Check app containers on remote/production.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+
+# Check MCP containers on staging.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml ps"
+
+# Check MCP containers on remote/production.
+ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml ps"
+
+
+# ---------------------------------------------------------------------------
+# Notes / future work
+# ---------------------------------------------------------------------------
+
+# Enterprise:
+# - Track usage level by user for future quotas/charging.
+# - Revenue strategy.
+# - Multi-tenant hosting.
+# - Billing and subscriptions.
+# - Marketplace/revenue-share infrastructure.
+# - Deployment automation.
+# - Production monitoring.
+# - Logging and alerting.
+# - Backup/recovery tooling.
+# - Official hosted-service branding.
+#
+# Core:
+# - MCP load testing and network/security scanning.
+# - Balancing conditions.
+# - Video testing.
+# - Slight flash after continue button before first trial.
+# - LMS/LTI integrations.
+# - FERPA/privacy/compliance workflows.
+# - Spanish touch up.
+# - World history content.
+#
+# Not yet:
+# - Institutional administration.
+# - Organization-level dashboards.
+# - Premium support/admin tools.
+#
+# Performance notes:
+# - Meteor MergeBox work can dominate CPU when many live subscriptions watch data
+#   that changes frequently.
+# - Trial payload JSON parsing/stringifying blocks the Node event loop while it runs.
+# - JSON-based deep cloning, such as JSON.parse(JSON.stringify(...)), is expensive
+#   in hot paths.
+# - Mongo writes trigger Meteor observer/oplog work, so frequent trial writes can
+#   cascade into subscription invalidation and update checks.

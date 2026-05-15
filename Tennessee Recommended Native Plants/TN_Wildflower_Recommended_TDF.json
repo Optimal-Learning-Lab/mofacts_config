@@ -1,0 +1,44 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Tennessee Recommended Native Plants",
+      "stimulusfile": "TN_Wildflower_Recommended_stims.json",
+      "shuffleclusters": "0-118",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "YOUR_GOOGLE_SPEECH_API_KEY",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "textToSpeechAPIKey": "YOUR_GOOGLE_TTS_API_KEY",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Tennessee Recommended Native Plants</h2><p>Practice identifying Tennessee recommended native plants from photos sourced from the Lady Bird Johnson Wildflower Center.</p><ul><li><strong>What you will do:</strong> Each card shows a plant photo, and you type the first listed common name for that species.</li><li><strong>Image source:</strong> Images were downloaded from the Wildflower Center image archive for local MoFaCTS hosting; no remote image links are used for prompts.</li><li><strong>Attribution:</strong> Plant names and photos are attributed to the Lady Bird Johnson Wildflower Center Tennessee Recommended collection: <a href=\"https://www.wildflower.org/collections/printable_QR_main.php?collection=TN\">https://www.wildflower.org/collections/printable_QR_main.php?collection=TN</a>.</li><li><strong>How it works:</strong> Feedback appears immediately so you can connect each photo to the correct common name.</li></ul><p>Look for flower shape, leaf arrangement, bark, growth habit, and color cues, then begin when you are ready.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-118",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliveryparams": {
+          "lfparameter": "0.85",
+          "purestudy": "10000",
+          "drill": "10000",
+          "skipstudy": "false",
+          "reviewstudy": "5000",
+          "correctprompt": "500",
+          "fontsize": "30",
+          "correctscore": "1",
+          "incorrectscore": "0",
+          "optimalThreshold": ".8",
+          "practiceseconds": "1000000"
+        }
+      }
+    ]
+  }
+}

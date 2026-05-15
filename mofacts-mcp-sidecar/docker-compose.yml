@@ -1,15 +1,19 @@
 services:
   playwright-mcp:
-    image: mcr.microsoft.com/playwright/mcp
+    build:
+      context: ./services/playwright-mcp
+    image: mofacts-playwright-mcp
     init: true
     command:
       # Force Linux-native writable paths inside the container.
       # Without these, some MCP clients send a Windows cwd like C:\... during init,
       # and Playwright MCP may derive /C:/... output paths that crash in Linux.
+      #
+      # Use isolated browser contexts by default for repeatable experiment smoke tests.
+      # This avoids stale cookies and profile lock errors between AI-driven runs.
+      - --isolated
       - --output-dir
       - /tmp/playwright-mcp/output
-      - --user-data-dir
-      - /tmp/playwright-mcp/browser
       - --host
       - 0.0.0.0
       - --port
@@ -22,7 +26,6 @@ services:
       TEMP: /tmp
       TMPDIR: /tmp
       PLAYWRIGHT_MCP_OUTPUT_DIR: /tmp/playwright-mcp/output
-      PLAYWRIGHT_MCP_USER_DATA_DIR: /tmp/playwright-mcp/browser
     ports:
       # Bind to localhost only so the MCP endpoint stays local to this machine by default.
       - "127.0.0.1:8931:8931"
