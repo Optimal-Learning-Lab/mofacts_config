@@ -19,19 +19,17 @@
           "unitMode": "distance",
           "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
-        "deliveryparams": {
+        "buttonorder": "random",
+        "deliverySettings": {
           "drill": 1000000,
           "correctprompt": 500,
           "reviewstudy": 20000,
           "purestudy": 10000,
-          "skipstudy": "false",
-          "fontsize": "24",
+          "skipstudy": false,
+          "fontsize": 24,
           "practiceseconds": 10000000,
-          "correctscore": 1,
-          "incorrectscore": 0,
           "optimalThreshold": 0.8
-        },
-        "buttonorder": "random"
+        }
       }
     ]
   }

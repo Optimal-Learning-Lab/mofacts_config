@@ -1,80 +1,70 @@
 {
-    "tutor": {
-        "setspec": {
-            "lessonname": "Optimized Drill Practice of Greek letter names",
-            "userselect": "true",
-            "stimulusfile": "Greekstims.json",
-            "lfparameter": ".85"
+  "tutor": {
+    "setspec": {
+      "lessonname": "Optimized Drill Practice of Greek letter names",
+      "userselect": "true",
+      "stimulusfile": "Greekstims.json",
+      "lfparameter": ".85"
+    },
+    "unit": [
+      {
+        "unitname": "Show the questions",
+        "unitinstructions": "Before we begin learning Greek letters, please answer these 3 quick questions. This helps us understand how different people learn.",
+        "buttonorder": "fixed",
+        "buttontrial": "false",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,b,t,0 0,b,t,0 0,b,t,0                "
+          },
+          "initialpositions": "                A_1 A_2 A_3            ",
+          "randomizegroups": "false",
+          "clusterlist": "48-50",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0"
         },
-        "unit": [
-            {
-                "unitname": "Show the questions",
-                "unitinstructions": "Before we begin learning Greek letters, please answer these 3 quick questions. This helps us understand how different people learn.",
-                "buttonorder": "fixed",
-                "deliveryparams": {
-                    "drill": "12000000",
-                    "purestudy": "16000",
-                    "skipstudy": "false",
-                    "reviewstudy": "16000",
-                    "correctprompt": "500",
-                    "fontsize": "3",
-                    "correctscore": "0",
-                    "incorrectscore": "0"
-                },
-                "buttontrial": "false",
-                "assessmentsession": {
-                    "conditiontemplatesbygroup": {
-                        "groupnames": "A",
-                        "clustersrepeated": "1",
-                        "templatesrepeated": "3",
-                        "group": "0,b,t,0 0,b,t,0 0,b,t,0                "
-                    },
-                    "initialpositions": "                A_1 A_2 A_3            ",
-                    "randomizegroups": "false",
-                    "clusterlist": "48-50",
-                    "assignrandomclusters": "false",
-                    "permutefinalresult": "0-0"
-                }
-            },
-            {
-                "unitinstructions": "<h2>&#945; Greek Letters</h2><p>This tutor practices 48 Greek-letter prompts, including the upper- and lower-case forms used constantly in mathematics, science, and statistics.</p><ul><li><strong>What you will do:</strong> Each card shows a Greek symbol, and you type the English letter name from memory.</li><li><strong>Timing:</strong> Study screens last about 6 seconds, answer time is about 10 seconds, review screens last about 6 seconds, and correct confirmations last about 1 second.</li><li><strong>How it works:</strong> Feedback stays simple and immediate so you can focus on matching each symbol to its name without extra distraction.</li><li><strong>Why it helps:</strong> Adaptive scheduling repeats the letters you still mix up and spaces out the ones you can already read confidently.</li></ul><p>Look carefully at upper- versus lower-case forms and common confusions such as eta, theta, and zeta, then begin when you are ready.</p>",
-                "unitname": "Model Unit",
-                "learningsession": {
-                    "clusterlist": "0-47",
-                  "unitMode": "distance",
-                  "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
-                },
-                "deliveryparams": {
-                  "forceSpacing": false,
-                  "feedbackType": "simple",
-                  "studyFirst": true,
-                  "drill": "10000",
-                  "purestudy": "6000",
-                  "skipstudy": "false",
-                  "reviewstudy": "6000",
-                  "correctprompt": "1000",
-                  "fontsize": "4",
-                  "correctscore": "1",
-                  "incorrectscore": "0",
-                  "optimalThreshold": ".8",
-                  "practiceseconds": "180000",
-                  "resetStudentPerformance": true,
-                  "practicetimer": "clock-based"
-                },
-                "uiSettings": {
-                  "displayReviewTimeoutAsBarOrText": "false",
-                  "displayReadyPromptTimeoutAsBarOrText": "false",
-                  "displayCardTimeoutAsBarOrText": false,
-                  "displayTimeOutDuringStudy": false,
-                  "singleLineFeedback": true,
-                  "feedbackDisplayPosition": "middle",
-                  "displayPerformanceDuringStudy": true
-                }
-              },
-            {
-                "unitname": "last",
-                "unitinstructions": "Great job! You've completed the Greek letter learning session. You now know the Greek letters commonly used in mathematics, chemistry, and other sciences. Feel free to practice again anytime to strengthen your memory."
-            }
-        ]
-    }
+        "deliverySettings": {
+          "drill": 12000000,
+          "purestudy": 16000,
+          "skipstudy": false,
+          "reviewstudy": 16000,
+          "correctprompt": 500,
+          "fontsize": 3
+        }
+      },
+      {
+        "unitinstructions": "<h2>&#945; Greek Letters</h2><p>This tutor practices 48 Greek-letter prompts, including the upper- and lower-case forms used constantly in mathematics, science, and statistics.</p><ul><li><strong>What you will do:</strong> Each card shows a Greek symbol, and you type the English letter name from memory.</li><li><strong>Timing:</strong> Study screens last about 6 seconds, answer time is about 10 seconds, review screens last about 6 seconds, and correct confirmations last about 1 second.</li><li><strong>How it works:</strong> Feedback stays simple and immediate so you can focus on matching each symbol to its name without extra distraction.</li><li><strong>Why it helps:</strong> Adaptive scheduling repeats the letters you still mix up and spaces out the ones you can already read confidently.</li></ul><p>Look carefully at upper- versus lower-case forms and common confusions such as eta, theta, and zeta, then begin when you are ready.</p>",
+        "unitname": "Model Unit",
+        "learningsession": {
+          "clusterlist": "0-47",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "feedbackLayout": "inline",
+          "displayPerformance": true,
+          "forceSpacing": false,
+          "studyFirst": 1,
+          "drill": 10000,
+          "purestudy": 6000,
+          "skipstudy": false,
+          "reviewstudy": 6000,
+          "correctprompt": 1000,
+          "fontsize": 4,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 180000,
+          "resetStudentPerformance": true,
+          "practicetimer": "clock-based"
+        }
+      },
+      {
+        "unitname": "last",
+        "unitinstructions": "Great job! You've completed the Greek letter learning session. You now know the Greek letters commonly used in mathematics, chemistry, and other sciences. Feel free to practice again anytime to strengthen your memory."
+      }
+    ]
+  }
 }

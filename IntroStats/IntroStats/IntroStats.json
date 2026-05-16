@@ -1,47 +1,40 @@
 {
-    "tutor": {
-        "setspec": {
-            "name": "Introduction to Statistics Formulas",
-            "lessonname": "Master Statistical Formulas and Equations",
-            "userselect": "true",
-            "stimulusfile": "IntroStatsStims.json",
-            "lfparameter": "0.80"
+  "tutor": {
+    "setspec": {
+      "name": "Introduction to Statistics Formulas",
+      "lessonname": "Master Statistical Formulas and Equations",
+      "userselect": "true",
+      "stimulusfile": "IntroStatsStims.json",
+      "lfparameter": "0.80"
+    },
+    "unit": [
+      {
+        "unitinstructions": "<h2>&#128202; Intro Statistics Formulas</h2><p>This tutor practices 60 core statistics formulas that students often need to recognize quickly in an introductory course.</p><ul><li><strong>What you will do:</strong> Each card shows a formula or symbolic expression, and you type a short identifying label such as the name of the statistic, test, or distribution.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps you separate visually similar formulas before they blur together, especially when sample and population notation differ by only one symbol.</li><li><strong>Why it helps:</strong> Adaptive scheduling returns shaky formulas sooner and spaces familiar ones farther apart for stronger exam and homework fluency.</li></ul><p>Read each expression carefully, watch for notation such as mu, sigma, x-bar, and s, then begin when you are ready.</p>",
+        "unitname": "Introduction",
+        "learningsession": {
+          "clusterlist": "0-59",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
-        "unit": [
-            {
-                "unitinstructions": "<h2>&#128202; Intro Statistics Formulas</h2><p>This tutor practices 60 core statistics formulas that students often need to recognize quickly in an introductory course.</p><ul><li><strong>What you will do:</strong> Each card shows a formula or symbolic expression, and you type a short identifying label such as the name of the statistic, test, or distribution.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps you separate visually similar formulas before they blur together, especially when sample and population notation differ by only one symbol.</li><li><strong>Why it helps:</strong> Adaptive scheduling returns shaky formulas sooner and spaces familiar ones farther apart for stronger exam and homework fluency.</li></ul><p>Read each expression carefully, watch for notation such as mu, sigma, x-bar, and s, then begin when you are ready.</p>",
-                "unitname": "Introduction",
-                "learningsession": {
-                    "clusterlist": "0-59",
-                    "unitMode": "distance",
-                    "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
-                },
-                "deliveryparams": {
-                    "practiceseconds": "1000000",
-                    "drill": "8000",
-                    "purestudy": "16000",
-                    "skipstudy": "false",
-                    "reviewstudy": "5000",
-                    "correctprompt": "750",
-                    "fontsize": "2",
-                    "correctscore": "1",
-                    "incorrectscore": "0",
-                    "optimalThreshold": ".8"
-                },
-                "uiSettings": {
-                    "displayReviewTimeoutAsBarOrText": "false",
-                    "displayReadyPromptTimeoutAsBarOrText": "false",
-                    "displayCardTimeoutAsBarOrText": false,
-                    "displayTimeOutDuringStudy": false,
-                    "displayPerformanceDuringStudy": true,
-                    "singleLineFeedback": true,
-                    "feedbackDisplayPosition": "middle"
-                }
-            },
-            {
-                "unitname": "Completion",
-                "unitinstructions": "<p><strong>Great work!</strong></p><p>You've completed your statistics formula practice session. The adaptive system has been tracking your progress and will continue to optimize your learning on future sessions.</p><p><strong>Common formulas to remember:</strong></p><ul><li><strong>Descriptive:</strong> Mean, variance, and standard deviation form the foundation</li><li><strong>Inference:</strong> Standard error connects samples to populations</li><li><strong>Testing:</strong> t-tests and z-tests help make decisions from data</li><li><strong>Relationships:</strong> Correlation and regression reveal patterns</li></ul><p>Continue practicing to build fluency with these essential statistical tools!</p>"
-            }
-        ]
-    }
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "practiceseconds": 1000000,
+          "drill": 8000,
+          "purestudy": 16000,
+          "skipstudy": false,
+          "reviewstudy": 5000,
+          "correctprompt": 750,
+          "fontsize": 2,
+          "optimalThreshold": 0.8
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>Great work!</strong></p><p>You've completed your statistics formula practice session. The adaptive system has been tracking your progress and will continue to optimize your learning on future sessions.</p><p><strong>Common formulas to remember:</strong></p><ul><li><strong>Descriptive:</strong> Mean, variance, and standard deviation form the foundation</li><li><strong>Inference:</strong> Standard error connects samples to populations</li><li><strong>Testing:</strong> t-tests and z-tests help make decisions from data</li><li><strong>Relationships:</strong> Correlation and regression reveal patterns</li></ul><p>Continue practicing to build fluency with these essential statistical tools!</p>"
+      }
+    ]
+  }
 }

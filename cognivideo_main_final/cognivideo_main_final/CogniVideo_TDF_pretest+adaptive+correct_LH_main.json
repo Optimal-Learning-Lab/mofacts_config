@@ -12,18 +12,6 @@
         "video",
         "adaptive"
       ],
-      "uiSettings": {
-        "singleLineFeedback": false,
-        "incorrectColor": "#ff8c00",
-        "correctColor": "#008000",
-        "stimuliPosition": "top",
-        "inputPlaceholderText": "Antworte hier",
-        "displayUserAnswerInFeedback": false,
-        "displayTimeoutBar": false,
-        "displayPerformance": false,
-        "onlyShowSimpleFeedback": false,
-        "continueButtonText": "Weiter"
-      },
       "unitTemplate": [
         {
           "buttonorder": "random",
@@ -34,7 +22,7 @@
             "questions": [],
             "questiontimes": []
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 0,
             "reviewstudy": 0
@@ -49,7 +37,7 @@
             "questions": [],
             "questiontimes": []
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 0,
             "reviewstudy": 0
@@ -106,7 +94,7 @@
             "IF NOT C3S0 OR NOT C7S0 OR NOT C11S0 OR NOT C15S0 OR NOT C19S0 OR NOT C23S0 THEN C38S0 AT 491"
           ]
         },
-        "deliveryparams": {
+        "deliverySettings": {
           "drill": 2000000,
           "correctprompt": 0,
           "reviewstudy": 0
@@ -118,6 +106,17 @@
         "unitinstructions": "<h3>Danke!</h3> Deine Antworten wurden gespeichert. Melde dich bei der Lehrperson, wenn du fertig bist.",
         "countcompletion": true
       }
-    ]
+    ],
+    "deliverySettings": {
+      "feedbackLayout": "stacked",
+      "incorrectColor": "#ff8c00",
+      "correctColor": "#008000",
+      "stimuliPosition": "top",
+      "inputPlaceholderText": "Antworte hier",
+      "displayUserAnswerInFeedback": false,
+      "displayTimeoutBar": false,
+      "displayPerformance": false,
+      "continueButtonText": "Weiter"
+    }
   }
 }

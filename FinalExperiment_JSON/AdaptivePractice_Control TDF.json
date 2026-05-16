@@ -17,9 +17,16 @@
           "videosession": {
             "videosource": "https://www.youtube.com/watch?v=TitrRpMUt0I",
             "questions": "8-13",
-            "questiontimes": [166,228,287,373,423,568]
+            "questiontimes": [
+              166,
+              228,
+              287,
+              373,
+              423,
+              568
+            ]
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 2000,
             "reviewstudy": 12000
@@ -31,9 +38,17 @@
           "videosession": {
             "videosource": "https://www.youtube.com/watch?v=_dYkByQ9Kmg",
             "questions": "14-20",
-            "questiontimes": [87,132,166,228,287,373,423]
+            "questiontimes": [
+              87,
+              132,
+              166,
+              228,
+              287,
+              373,
+              423
+            ]
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 2000,
             "reviewstudy": 12000
@@ -61,20 +76,17 @@
             "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8"
           }
         },
-        "deliveryparams": {
-          "drill": 2000000,
-          "correctprompt": 2000,
-          "reviewstudy": 2000
-        },
-        "uiSettings": {
-          "singleLineFeedback": false,
+        "deliverySettings": {
+          "feedbackLayout": "stacked",
           "incorrectColor": "#ff8c00",
           "correctColor": "#008000",
           "stimuliPosition": "top",
           "displayUserAnswerInFeedback": false,
           "displayTimeoutBar": false,
           "displayPerformance": false,
-          "onlyShowSimpleFeedback": "onCorrect"
+          "drill": 2000000,
+          "correctprompt": 2000,
+          "reviewstudy": 2000
         }
       },
       {

@@ -19,7 +19,7 @@
             "questions": [],
             "questiontimes": []
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 2000,
             "reviewstudy": 12000
@@ -33,7 +33,7 @@
             "questions": [],
             "questiontimes": []
           },
-          "deliveryparams": {
+          "deliverySettings": {
             "drill": 2000000,
             "correctprompt": 2000,
             "reviewstudy": 12000
@@ -70,7 +70,7 @@
           }
         },
         "adaptiveLogic": {
-        "2": [
+          "2": [
             "IF NOT C5S0 THEN C8S0 AT 174",
             "IF NOT C2S0 OR NOT C4S0 THEN C9S0 AT 215",
             "IF NOT C6S0 THEN C10S0 AT 308",
@@ -88,20 +88,17 @@
             "IF NOT C0S0 OR NOT C4S0 THEN C20S0 AT 423"
           ]
         },
-        "deliveryparams": {
-          "drill": 2000000,
-          "correctprompt": 2000,
-          "reviewstudy": 2000
-        },
-        "uiSettings": {
-          "singleLineFeedback": false,
+        "deliverySettings": {
+          "feedbackLayout": "stacked",
           "incorrectColor": "#ff8c00",
           "correctColor": "#008000",
           "stimuliPosition": "top",
           "displayUserAnswerInFeedback": false,
           "displayTimeoutBar": false,
           "displayPerformance": false,
-          "onlyShowSimpleFeedback": "onCorrect"
+          "drill": 2000000,
+          "correctprompt": 2000,
+          "reviewstudy": 2000
         }
       },
       {

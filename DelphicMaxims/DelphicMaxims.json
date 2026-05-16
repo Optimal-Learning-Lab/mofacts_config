@@ -1,47 +1,40 @@
 {
-    "tutor": {
-        "setspec": {
-            "name": "Delphic Maxims",
-            "lessonname": "Learn the 147 Delphic Maxims",
-            "userselect": "true",
-            "stimulusfile": "DelphicMaximsStims_Reversed.json",
-            "lfparameter": "0.80"
+  "tutor": {
+    "setspec": {
+      "name": "Delphic Maxims",
+      "lessonname": "Learn the 147 Delphic Maxims",
+      "userselect": "true",
+      "stimulusfile": "DelphicMaximsStims_Reversed.json",
+      "lfparameter": "0.80"
+    },
+    "unit": [
+      {
+        "unitinstructions": "<h2>&#9878; Delphic Maxims</h2><p>This tutor covers all 147 Delphic Maxims, the short sayings associated with Delphi and ancient Greek moral thought.</p><ul><li><strong>What you will do:</strong> Each prompt shows a maxim number, and you type the matching maxim text in full.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps you correct wording quickly, while adaptive spacing keeps difficult maxims circulating until they become stable.</li><li><strong>Why it helps:</strong> The lesson builds precise verbal recall while also reinforcing themes such as self-knowledge, restraint, duty, and character.</li></ul><p>Type each maxim as accurately as you can, then begin when you are ready.</p>",
+        "unitname": "Introduction",
+        "learningsession": {
+          "clusterlist": "0-146",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
-        "unit": [
-            {
-                "unitinstructions": "<h2>&#9878; Delphic Maxims</h2><p>This tutor covers all 147 Delphic Maxims, the short sayings associated with Delphi and ancient Greek moral thought.</p><ul><li><strong>What you will do:</strong> Each prompt shows a maxim number, and you type the matching maxim text in full.</li><li><strong>Timing:</strong> Study screens last about 16 seconds, drill screens about 8 seconds, review screens about 5 seconds, and correct confirmations last about 0.75 seconds.</li><li><strong>How it works:</strong> Immediate feedback helps you correct wording quickly, while adaptive spacing keeps difficult maxims circulating until they become stable.</li><li><strong>Why it helps:</strong> The lesson builds precise verbal recall while also reinforcing themes such as self-knowledge, restraint, duty, and character.</li></ul><p>Type each maxim as accurately as you can, then begin when you are ready.</p>",
-                "unitname": "Introduction",
-                "learningsession": {
-                    "clusterlist": "0-146",
-                    "unitMode": "distance",
-                    "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
-                },
-                "deliveryparams": {
-                    "practiceseconds": "1000000",
-                    "drill": "8000",
-                    "purestudy": "16000",
-                    "skipstudy": "false",
-                    "reviewstudy": "5000",
-                    "correctprompt": "750",
-                    "fontsize": "2",
-                    "correctscore": "1",
-                    "incorrectscore": "0",
-                    "optimalThreshold": ".8"
-                },
-                "uiSettings": {
-                    "displayReviewTimeoutAsBarOrText": "false",
-                    "displayReadyPromptTimeoutAsBarOrText": "false",
-                    "displayCardTimeoutAsBarOrText": false,
-                    "displayTimeOutDuringStudy": false,
-                    "displayPerformanceDuringStudy": true,
-                    "singleLineFeedback": true,
-                    "feedbackDisplayPosition": "middle"
-                }
-            },
-            {
-                "unitname": "Completion",
-                "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your study session of the Delphic Maxims. The wisdom of ancient Greece is now becoming part of your memory.</p><p>Remember: \"Know thyself\" (Maxim 008) - Continue practicing to strengthen your knowledge of all 147 maxims.</p>"
-            }
-        ]
-    }
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "practiceseconds": 1000000,
+          "drill": 8000,
+          "purestudy": 16000,
+          "skipstudy": false,
+          "reviewstudy": 5000,
+          "correctprompt": 750,
+          "fontsize": 2,
+          "optimalThreshold": 0.8
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>Congratulations!</strong></p><p>You have completed your study session of the Delphic Maxims. The wisdom of ancient Greece is now becoming part of your memory.</p><p>Remember: \"Know thyself\" (Maxim 008) - Continue practicing to strengthen your knowledge of all 147 maxims.</p>"
+      }
+    ]
+  }
 }

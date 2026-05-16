@@ -25,28 +25,19 @@
           "unitMode": "distance",
           "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
         },
-        "deliveryparams": {
-          "lfparameter": "0.85",
-          "purestudy": "10000",
-          "drill": "10000",
-          "skipstudy": "false",
-          "reviewstudy": "5000",
-          "correctprompt": "500",
-          "fontsize": "24",
-          "correctscore": "1",
-          "incorrectscore": "0",
-          "optimalThreshold": ".8",
-          "practiceseconds": "1000000",
-          "finalInstructions": "You are done practicing A&P Openstax Chapter 1 Terms. Thank you for using this tutor."
-        },
-        "uiSettings": {
-          "displayReviewTimeoutAsBarOrText": "false",
-          "displayReadyPromptTimeoutAsBarOrText": "false",
-          "displayCardTimeoutAsBarOrText": false,
-          "displayTimeOutDuringStudy": false,
-          "displayPerformanceDuringStudy": true,
-          "singleLineFeedback": true,
-          "feedbackDisplayPosition": "middle"
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "purestudy": 10000,
+          "drill": 10000,
+          "skipstudy": false,
+          "reviewstudy": 5000,
+          "correctprompt": 500,
+          "fontsize": 24,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 1000000
         }
       }
     ]
