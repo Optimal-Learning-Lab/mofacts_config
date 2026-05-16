@@ -13,6 +13,7 @@ const KEYS_TO_STRIP = [
   { key: 'textToSpeechAPIKey', placeholder: 'YOUR_GOOGLE_TTS_API_KEY' }
 ];
 
+const SCRIPT_DIR = __dirname;
 const COMMIT_MSG = process.argv[2] || 'Update configuration files';
 const BACKUP_DIR = `.key_backups_${Date.now()}`;
 
@@ -116,9 +117,17 @@ function gitCommitAllowNoChanges(message) {
 }
 
 function ensureRepoRoot() {
-  if (!fs.existsSync(path.join(process.cwd(), '.git'))) {
-    throw new Error('Run this script from the mofacts_config repository root (missing .git).');
+  if (fs.existsSync(path.join(process.cwd(), '.git'))) {
+    return;
   }
+
+  const parentDir = path.resolve(SCRIPT_DIR, '..');
+  if (fs.existsSync(path.join(parentDir, '.git'))) {
+    process.chdir(parentDir);
+    return;
+  }
+
+  throw new Error('Run this script from the mofacts_config repository root or scripts directory (missing .git).');
 }
 
 function restoreAll(jsonFiles) {

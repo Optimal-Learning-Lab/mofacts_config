@@ -17,21 +17,28 @@ After push, local files are restored from backup.
 - Requirements: Node.js + Git
 - Usage:
 ```bash
-node sync-config.js "Your commit message"
+node scripts/sync-config.js "Your commit message"
 ```
 
 2. `sync-config.sh` (bash wrapper)
 - Runs `sync-config.js`
 - Usage:
 ```bash
-./sync-config.sh "Your commit message"
+./scripts/sync-config.sh "Your commit message"
 ```
 
 3. `sync-config.bat` (cmd wrapper)
 - Runs `sync-config.js`
 - Usage:
 ```cmd
-sync-config.bat "Your commit message"
+scripts\sync-config.bat "Your commit message"
+```
+
+4. `sync.bat` (short Windows alias)
+- Runs `sync-config.js`
+- Usage:
+```cmd
+scripts\sync.bat "Your commit message"
 ```
 
 ## How it works
@@ -45,7 +52,8 @@ sync-config.bat "Your commit message"
 
 ## Important notes
 
-- Run from repo root: `C:\Users\ppavl\OneDrive\Active projects\mofacts_config`.
+- Recommended: run from repo root: `C:\Users\ppavl\OneDrive\Active projects\mofacts_config`.
+- The scripts also work when launched from the `scripts` directory.
 - Do not interrupt the script until it exits.
 - Verify push success from command output.
 - If a failure occurs, the script attempts restore automatically.
@@ -65,4 +73,8 @@ const KEYS_TO_STRIP = [
 
 1. Local files should contain real local key values after completion.
 2. Committed content should contain placeholders for stripped keys.
-3. `git status` should be clean after a successful run.
+3. `git status` may show local modifications for files whose real key values were restored after commit.
+4. To verify committed content, inspect `HEAD`, for example:
+```bash
+git grep -n -E '"(speechAPIKey|textToSpeechAPIKey)"' HEAD -- '*.json'
+```

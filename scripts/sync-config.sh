@@ -10,6 +10,5 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
 
-node sync-config.js "$@"
+node "$SCRIPT_DIR/sync-config.js" "$@"
