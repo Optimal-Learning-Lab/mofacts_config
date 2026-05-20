@@ -1,0 +1,112 @@
+{
+  "setspec": {
+    "lessonname": "H5P Learning Tester",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "multiple-choice",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "text": "H5P learning activity: Multiple Choice.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-multichoice-001",
+                "packageAssetId": "multiple-choice-713.h5p",
+                "library": "H5P.MultiChoice 1.16",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 420
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 1,
+        "clustername": "fill-in-the-blanks",
+        "stims": [
+          {
+            "stimulusid": 1,
+            "display": {
+              "text": "H5P learning activity: Fill in the Blanks.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-fill-blanks-001",
+                "packageAssetId": "fill-in-the-blanks-837.h5p",
+                "library": "H5P.Blanks 1.14",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 520
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 2,
+        "clustername": "drag-and-drop-matching",
+        "stims": [
+          {
+            "stimulusid": 2,
+            "display": {
+              "text": "H5P learning activity: Drag and Drop Matching.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-drag-drop-matching-001",
+                "packageAssetId": "drag-and-drop-712.h5p",
+                "library": "H5P.DragQuestion 1.14",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 620
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 3,
+        "clustername": "drag-the-words",
+        "stims": [
+          {
+            "stimulusid": 3,
+            "display": {
+              "text": "H5P learning activity: Drag the Words.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-drag-words-001",
+                "packageAssetId": "drag-the-words-1399.h5p",
+                "library": "H5P.DragText 1.10",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 520
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 4,
+        "clustername": "true-false",
+        "stims": [
+          {
+            "stimulusid": 4,
+            "display": {
+              "text": "H5P learning activity: True/False.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-true-false-001",
+                "packageAssetId": "true-false-question-34806.h5p",
+                "library": "H5P.TrueFalse 1.8",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 420
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

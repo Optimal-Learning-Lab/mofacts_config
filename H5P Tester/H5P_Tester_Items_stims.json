@@ -1,0 +1,112 @@
+{
+  "setspec": {
+    "lessonname": "H5P Tester Items",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "multiple-choice",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "text": "Final-test target: atomic H5P multiple-choice widget. The H5P event stream should produce one item-level answer observation.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-multichoice-001",
+                "packageAssetId": "multiple-choice-713.h5p",
+                "library": "H5P.MultiChoice 1.16",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 420
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 1,
+        "clustername": "fill-in-the-blanks",
+        "stims": [
+          {
+            "stimulusid": 1,
+            "display": {
+              "text": "Final-test target: H5P fill-in-the-blanks widget. The H5P event stream should support blank-level history rows when blank-level evidence is recoverable.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-fill-blanks-001",
+                "packageAssetId": "fill-in-the-blanks-837.h5p",
+                "library": "H5P.Blanks 1.14",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 520
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 2,
+        "clustername": "drag-and-drop-matching",
+        "stims": [
+          {
+            "stimulusid": 2,
+            "display": {
+              "text": "Final-test target: H5P drag-and-drop matching widget. Each learner placement should become a separate ordered history-write candidate.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-drag-drop-matching-001",
+                "packageAssetId": "drag-and-drop-712.h5p",
+                "library": "H5P.DragQuestion 1.14",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 620
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 3,
+        "clustername": "drag-the-words",
+        "stims": [
+          {
+            "stimulusid": 3,
+            "display": {
+              "text": "Final-test target: H5P drag-the-words widget. Each token placement should be recoverable as an ordered part-level event.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-drag-words-001",
+                "packageAssetId": "drag-the-words-1399.h5p",
+                "library": "H5P.DragText 1.10",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 520
+              }
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 4,
+        "clustername": "true-false",
+        "stims": [
+          {
+            "stimulusid": 4,
+            "display": {
+              "text": "Final-test target: atomic H5P true/false widget. The H5P event stream should produce one binary item-level answer observation.",
+              "h5p": {
+                "sourceType": "self-hosted",
+                "contentId": "h5p-tester-true-false-001",
+                "packageAssetId": "true-false-question-34806.h5p",
+                "library": "H5P.TrueFalse 1.8",
+                "completionPolicy": "xapi-completed",
+                "scorePolicy": "record-only",
+                "preferredHeight": 420
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

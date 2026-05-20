@@ -1,0 +1,41 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "H5P Learning Tester",
+      "userselect": "true",
+      "stimulusfile": "H5P_Learning_Tester_stims.json",
+      "lfparameter": "0.85"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>H5P Learning Tester</h2><p>This learning session demonstrates five self-hosted H5P activity types in adaptive MoFaCTS practice. Each activity is authored as its own cluster and knowledge component.</p>"
+      },
+      {
+        "unitname": "H5P Learning Practice",
+        "learningsession": {
+          "clusterlist": "0-4",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "purestudy": 16000,
+          "drill": 12000000,
+          "skipstudy": false,
+          "reviewstudy": 16000,
+          "correctprompt": 500,
+          "fontsize": 22,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 12000000,
+          "drillFields": "h5p,text",
+          "reviewFields": "h5p,text",
+          "studyFields": "h5p,text"
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>H5P learning practice complete.</strong></p><p>The five H5P activities have been presented as learning trials across five clusters.</p>"
+      }
+    ]
+  }
+}

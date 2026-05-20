@@ -1,0 +1,40 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "H5P Tester Items",
+      "userselect": "true",
+      "stimulusfile": "H5P_Tester_Items_stims.json"
+    },
+    "unit": [
+      {
+        "unitname": "H5P Tester Assessment",
+        "unitinstructions": "<h2>H5P Tester Items</h2><p>This assessment is a final integration target for five self-hosted H5P interaction types: Multiple Choice, Fill in the Blanks, Drag and Drop, Drag the Words, and True/False.</p><p>Each trial should render an H5P activity, let the H5P runtime define the learner interaction, and let MoFaCTS ingest the H5P runtime event data into normalized assessment history. The drag-and-drop item is the key multi-row target: each learner placement should become an ordered history-write candidate with placement correctness and latency since the previous H5P event.</p>",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "5",
+            "group": "0,h,h,0 0,h,h,0 0,h,h,0 0,h,h,0 0,h,h,0"
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5",
+          "randomizegroups": "false",
+          "clusterlist": "0-4",
+          "assignrandomclusters": "false",
+          "permutefinalresult": "0-0"
+        },
+        "deliverySettings": {
+          "drill": 12000000,
+          "purestudy": 16000,
+          "skipstudy": false,
+          "reviewstudy": 16000,
+          "correctprompt": 500,
+          "fontsize": 22
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>H5P tester assessment complete.</strong></p><p>Your H5P activity events should have been ingested and recorded. This system is intended to support development and QA of self-hosted H5P playback, event ingestion, normalization, and history logging behavior.</p>"
+      }
+    ]
+  }
+}
