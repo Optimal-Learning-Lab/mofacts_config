@@ -1,0 +1,30 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "AutoTutor Compound Interest",
+      "name": "autotutor_compound_interest",
+      "stimulusfile": "AutoTutor_Compound_Interest_stims.json",
+      "userselect": "true",
+      "openRouterApiKey": "YOUR_OPENROUTER_API_KEY",
+      "openRouterModel": "openai/gpt-5.4-nano",
+      "tags": [
+        "autotutor",
+        "finance",
+        "compound-interest"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Compound Interest AutoTutor",
+        "autotutorsession": {
+          "cluster": 0,
+          "maxTurns": 25,
+          "graduation": {
+            "requiredExpectationCount": 4,
+            "maxActiveMisconceptions": 0
+          }
+        }
+      }
+    ]
+  }
+}

@@ -10,7 +10,8 @@ const { execSync } = require('child_process');
 
 const KEYS_TO_STRIP = [
   { key: 'speechAPIKey', placeholder: 'YOUR_GOOGLE_SPEECH_API_KEY' },
-  { key: 'textToSpeechAPIKey', placeholder: 'YOUR_GOOGLE_TTS_API_KEY' }
+  { key: 'textToSpeechAPIKey', placeholder: 'YOUR_GOOGLE_TTS_API_KEY' },
+  { key: 'openRouterApiKey', placeholder: 'YOUR_OPENROUTER_API_KEY' }
 ];
 
 const SCRIPT_DIR = __dirname;
@@ -57,36 +58,59 @@ function backupFile(filePath) {
 }
 
 function stripKeys(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(content);
-    let modified = false;
+  const content = fs.readFileSync(filePath, 'utf8');
+  const data = JSON.parse(content);
+  let modified = false;
 
-    function stripFromObject(obj) {
-      for (const [key, value] of Object.entries(obj)) {
-        if (value && typeof value === 'object') {
-          stripFromObject(value);
-          continue;
-        }
+  function stripFromObject(obj) {
+    for (const [key, value] of Object.entries(obj)) {
+      if (value && typeof value === 'object') {
+        stripFromObject(value);
+        continue;
+      }
 
-        const keyConfig = KEYS_TO_STRIP.find(k => k.key === key);
-        if (keyConfig && value !== keyConfig.placeholder) {
-          obj[key] = keyConfig.placeholder;
-          modified = true;
-        }
+      const keyConfig = KEYS_TO_STRIP.find(k => k.key === key);
+      if (keyConfig && value !== keyConfig.placeholder) {
+        obj[key] = keyConfig.placeholder;
+        modified = true;
       }
     }
-
-    stripFromObject(data);
-
-    if (!modified) return false;
-
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n', 'utf8');
-    return true;
-  } catch (error) {
-    log(`  ! Error processing ${filePath}: ${error.message}`, 'yellow');
-    return false;
   }
+
+  stripFromObject(data);
+
+  if (!modified) return false;
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n', 'utf8');
+  return true;
+}
+
+function validateJsonFiles(jsonFiles) {
+  const invalidFiles = [];
+
+  jsonFiles.forEach(file => {
+    try {
+      JSON.parse(fs.readFileSync(file, 'utf8'));
+    } catch (error) {
+      invalidFiles.push({
+        file: path.relative(process.cwd(), file),
+        message: error.message
+      });
+    }
+  });
+
+  if (invalidFiles.length === 0) return;
+
+  const report = invalidFiles
+    .map(({ file, message }) => `  - ${file}: ${message}`)
+    .join('\n');
+
+  throw new Error([
+    'Sync aborted because one or more JSON files could not be parsed.',
+    'No files were staged, committed, or pushed.',
+    'Invalid JSON report:',
+    report
+  ].join('\n'));
 }
 
 function restoreFile(filePath) {
@@ -169,6 +193,10 @@ async function main() {
       backupFile(file);
       log(`  + Backed up: ${path.relative(process.cwd(), file)}`, 'green');
     });
+
+    log('\nValidating JSON files...', 'cyan');
+    validateJsonFiles(jsonFiles);
+    log('  + JSON validation passed', 'green');
 
     log('\nStripping API keys...', 'cyan');
     let strippedCount = 0;

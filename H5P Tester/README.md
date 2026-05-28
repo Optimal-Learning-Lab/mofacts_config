@@ -4,6 +4,8 @@ This folder contains a five-item MoFaCTS assessment system for final H5P integra
 
 The current target is the final H5P assessment contract, not a button-trial workaround and not an external-display smoke file. Each stimulus uses `display.h5p` with `sourceType: "self-hosted"`, a stable `contentId`, package metadata, `completionPolicy: "xapi-completed"`, and `scorePolicy: "record-only"`. The assessment template marks the trials as H5P trials rather than native MoFaCTS button or text tests.
 
+The `.h5p` files are self-contained package assets: each one bundles its required H5P library folders, so a normal MoFaCTS package upload can install the libraries and content together without a separate deploy-time H5P seed step.
+
 The assessment template currently uses:
 
 ```text

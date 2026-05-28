@@ -1,0 +1,30 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "AutoTutor Nonviolent Communication",
+      "name": "autotutor_nonviolent_communication",
+      "stimulusfile": "AutoTutor_Nonviolent_Communication_stims.json",
+      "userselect": "true",
+      "openRouterApiKey": "YOUR_OPENROUTER_API_KEY",
+      "openRouterModel": "openai/gpt-5.4-nano",
+      "tags": [
+        "autotutor",
+        "communication",
+        "nonviolent-communication"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Nonviolent Communication AutoTutor",
+        "autotutorsession": {
+          "cluster": 0,
+          "maxTurns": 25,
+          "graduation": {
+            "requiredExpectationCount": 6,
+            "maxActiveMisconceptions": 0
+          }
+        }
+      }
+    ]
+  }
+}

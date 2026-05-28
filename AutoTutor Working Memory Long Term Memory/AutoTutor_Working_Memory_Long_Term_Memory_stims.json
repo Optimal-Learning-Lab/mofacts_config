@@ -1,0 +1,225 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "When you hold a verification code in mind long enough to type it, but remember your childhood address years later, what is the difference between working memory and long-term memory?"
+            },
+            "autoTutor": {
+              "id": "working_memory_ltm_001",
+              "topic": "Working memory vs. long-term memory",
+              "learningGoal": "Explain working memory as limited active use of information and long-term memory as durable stored knowledge that can be retrieved back into working memory.",
+              "idealAnswer": "Working memory is the limited mental workspace used to hold and manipulate information for a current task, like keeping a code active while typing it. Long-term memory is durable stored knowledge and experiences, such as an old address or vocabulary. Information in long-term memory is not automatically active; when you use it, you retrieve it into working memory. Learning depends partly on managing working-memory limits while building and retrieving long-term knowledge.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "working-memory active workspace",
+                  "proposition": "Working memory holds and manipulates a small amount of information for an ongoing task.",
+                  "acceptableVariants": [
+                    "It is the mental workspace for current thinking.",
+                    "It lets you keep information active while using it."
+                  ],
+                  "commonPartialAnswers": [
+                    "Short-term memory.",
+                    "Temporary memory."
+                  ],
+                  "hints": [
+                    "What are you doing with the verification code while typing it?",
+                    "Is working memory passive storage or active use?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What are you doing with the verification code while typing it?",
+                      "target": "Working memory is limited active maintenance and manipulation for current cognition"
+                    }
+                  ],
+                  "assertion": "Working memory is limited active maintenance and manipulation for current cognition.",
+                  "sourceSupport": [
+                    "MEM_OPENSTAX_NEURO",
+                    "MEM_COWAN"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "long-term durable store",
+                  "proposition": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
+                  "acceptableVariants": [
+                    "It holds information over long periods.",
+                    "It stores facts, episodes, and learned skills."
+                  ],
+                  "commonPartialAnswers": [
+                    "Old memories.",
+                    "Permanent memory."
+                  ],
+                  "hints": [
+                    "Where would a childhood address or vocabulary word be stored?",
+                    "What makes long-term memory different in time scale?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Where would a childhood address or vocabulary word be stored?",
+                      "target": "Long-term memory is durable storage for knowledge and experiences"
+                    }
+                  ],
+                  "assertion": "Long-term memory is durable storage for knowledge and experiences.",
+                  "sourceSupport": [
+                    "MEM_OPENSTAX_NEURO",
+                    "MEM_GATHERCOLE_ALLOWAY"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "retrieval into working memory",
+                  "proposition": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
+                  "acceptableVariants": [
+                    "You bring stored knowledge into mind to work with it.",
+                    "Recall makes long-term information active."
+                  ],
+                  "commonPartialAnswers": [
+                    "You remember it.",
+                    "It comes back."
+                  ],
+                  "hints": [
+                    "When solving a problem with a known formula, where is the formula while you use it?",
+                    "Does stored knowledge help without being brought into current attention?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "When solving a problem with a known formula, where is the formula while you use it?",
+                      "target": "Using long-term knowledge requires retrieving it into working memory"
+                    }
+                  ],
+                  "assertion": "Using long-term knowledge requires retrieving it into working memory.",
+                  "sourceSupport": [
+                    "MEM_UMN",
+                    "MEM_COWAN"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "capacity and learning load",
+                  "proposition": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
+                  "acceptableVariants": [
+                    "Too many new elements can overload the workspace.",
+                    "Prior knowledge can chunk information and reduce load."
+                  ],
+                  "commonPartialAnswers": [
+                    "Working memory is small.",
+                    "Long-term memory helps learning."
+                  ],
+                  "hints": [
+                    "Why can too many new steps overwhelm a learner?",
+                    "How can prior knowledge make a task easier?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Why can too many new steps overwhelm a learner?",
+                      "target": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks"
+                    }
+                  ],
+                  "assertion": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks.",
+                  "sourceSupport": [
+                    "MEM_GATHERCOLE_ALLOWAY",
+                    "MEM_UMN"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "storage-size misconception",
+                  "misconception": "Working memory is just a smaller hard drive where temporary memories sit until moved unchanged into long-term memory.",
+                  "detectionCues": [
+                    "describes memory as simple file transfer",
+                    "treats working memory as passive storage only"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "Working memory is active use and attention, not merely a passive staging folder.",
+                  "repairQuestion": "What makes working memory 'working' when you solve a mental arithmetic problem?",
+                  "repairCriteria": "Repaired when the learner says information is actively held, manipulated, or attended to for a task.",
+                  "acceptableRepairAnswers": [
+                    "You use and manipulate the information.",
+                    "It is active attention for the current task."
+                  ],
+                  "sourceSupport": [
+                    "MEM_COWAN",
+                    "MEM_OPENSTAX_NEURO"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "automatic-transfer misconception",
+                  "misconception": "Everything held briefly in working memory automatically becomes long-term memory.",
+                  "detectionCues": [
+                    "says all short-term contents are saved",
+                    "ignores encoding and retrieval"
+                  ],
+                  "contrastWithExpectations": [
+                    "E2",
+                    "E4"
+                  ],
+                  "correction": "Many working-memory contents fade when no longer needed; durable learning requires encoding, practice, or meaningful connection.",
+                  "repairQuestion": "Why might you forget a verification code seconds after using it?",
+                  "repairCriteria": "Repaired when the learner says temporary information can be discarded or not encoded into long-term memory.",
+                  "acceptableRepairAnswers": [
+                    "It was not encoded or practiced.",
+                    "Working memory can drop it after the task."
+                  ],
+                  "sourceSupport": [
+                    "MEM_OPENSTAX_NEURO",
+                    "MEM_GATHERCOLE_ALLOWAY"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "long-term-always-conscious misconception",
+                  "misconception": "If something is in long-term memory, it is constantly present in conscious thought.",
+                  "detectionCues": [
+                    "says long-term memories are always active",
+                    "confuses storage with current awareness"
+                  ],
+                  "contrastWithExpectations": [
+                    "E2",
+                    "E3"
+                  ],
+                  "correction": "Long-term memory can be stored without being active; retrieval brings it into working memory when needed.",
+                  "repairQuestion": "Where is your childhood address before someone asks for it?",
+                  "repairCriteria": "Repaired when the learner says it is stored in long-term memory but not active until retrieved.",
+                  "acceptableRepairAnswers": [
+                    "It is stored but not in mind until retrieved.",
+                    "You bring it into working memory when asked."
+                  ],
+                  "sourceSupport": [
+                    "MEM_UMN",
+                    "MEM_COWAN"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Working memory is a small, active workspace for current thinking; long-term memory is durable storage of knowledge and experiences. Remembered knowledge must be retrieved into working memory to be used. Working-memory limits matter for learning, and long-term knowledge can reduce load by organizing information into meaningful chunks."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

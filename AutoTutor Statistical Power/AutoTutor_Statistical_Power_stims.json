@@ -1,0 +1,254 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "A researcher says a planned study has 80% power to detect a specific effect size at alpha .05. What does that mean, and what does it not mean?"
+            },
+            "autoTutor": {
+              "id": "statistical_power_001",
+              "topic": "Statistical power",
+              "learningGoal": "Interpret statistical power as a pre-study probability of rejecting the null for a specified effect size and test, not as the probability a specific result is true.",
+              "idealAnswer": "Statistical power is the probability that the planned test will reject the null hypothesis if a specified alternative effect is truly present. So 80% power means that, under that assumed effect size, alpha, sample size, variability, and analysis plan, repeated studies would produce statistically significant results about 80% of the time. Power depends on the effect size one wants to detect, sample size, variability, alpha, and the test. It does not mean an obtained significant result has an 80% chance of being true, and post-hoc power based on the observed result is not a magic explanation.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "conditional detection probability",
+                  "proposition": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
+                  "acceptableVariants": [
+                    "It is the chance of detecting a real effect of a chosen size.",
+                    "It is 1 minus the Type II error rate for that alternative."
+                  ],
+                  "commonPartialAnswers": [
+                    "Chance to find an effect.",
+                    "Probability of significance."
+                  ],
+                  "hints": [
+                    "Power is conditional on what being true?",
+                    "What event counts as detection in a significance test?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Power is conditional on what being true?",
+                      "target": "Statistical power is the probability of rejection under a specified true alternative"
+                    }
+                  ],
+                  "assertion": "Statistical power is the probability of rejection under a specified true alternative.",
+                  "sourceSupport": [
+                    "POW_NCBI_STATPEARLS",
+                    "POW_GREENLAND"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "specified effect and test",
+                  "proposition": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
+                  "acceptableVariants": [
+                    "80% power is not free-floating; it is for a chosen minimum effect and design.",
+                    "Changing sample size, alpha, or effect size changes power."
+                  ],
+                  "commonPartialAnswers": [
+                    "It depends on sample size.",
+                    "It depends on the design."
+                  ],
+                  "hints": [
+                    "Can a study have one power value without naming an effect size?",
+                    "What design choices affect power?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Can a study have one power value without naming an effect size?",
+                      "target": "Power must be tied to a specified effect size and testing plan"
+                    }
+                  ],
+                  "assertion": "Power must be tied to a specified effect size and testing plan.",
+                  "sourceSupport": [
+                    "POW_GREENLAND",
+                    "POW_SCRIBBR"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "long-run repeated-study meaning",
+                  "proposition": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
+                  "acceptableVariants": [
+                    "In the long run, about 80 out of 100 such studies detect that effect.",
+                    "It is a repeated-sampling design probability."
+                  ],
+                  "commonPartialAnswers": [
+                    "80% chance of significant.",
+                    "It works 80% of the time."
+                  ],
+                  "hints": [
+                    "What would happen over many repeats if the assumed effect were real?",
+                    "Does power describe one completed result or a design's long-run behavior?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What would happen over many repeats if the assumed effect were real?",
+                      "target": "Power describes long-run detection frequency for a design under an assumed effect"
+                    }
+                  ],
+                  "assertion": "Power describes long-run detection frequency for a design under an assumed effect.",
+                  "sourceSupport": [
+                    "POW_GREENLAND",
+                    "POW_SCRIBBR"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "not truth probability",
+                  "proposition": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
+                  "acceptableVariants": [
+                    "It does not mean an 80% chance the finding is real.",
+                    "It is not posterior probability."
+                  ],
+                  "commonPartialAnswers": [
+                    "The result is probably true.",
+                    "80% confidence in the hypothesis."
+                  ],
+                  "hints": [
+                    "Does power condition on the effect being true, or tell us whether it is true?",
+                    "What would be wrong with saying a significant result has 80% chance of being real?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Does power condition on the effect being true, or tell us whether it is true?",
+                      "target": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses"
+                    }
+                  ],
+                  "assertion": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses.",
+                  "sourceSupport": [
+                    "POW_GREENLAND",
+                    "POW_APS"
+                  ]
+                },
+                {
+                  "id": "E5",
+                  "label": "sample size and effect tradeoff",
+                  "proposition": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
+                  "acceptableVariants": [
+                    "Small effects need more data.",
+                    "Increasing sample size usually increases the chance to detect the effect."
+                  ],
+                  "commonPartialAnswers": [
+                    "More participants helps.",
+                    "Small effects are harder."
+                  ],
+                  "hints": [
+                    "Why does detecting a small effect require more data?",
+                    "What happens to power when sample size increases, all else equal?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Why does detecting a small effect require more data?",
+                      "target": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal"
+                    }
+                  ],
+                  "assertion": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal.",
+                  "sourceSupport": [
+                    "POW_SCRIBBR",
+                    "POW_NCBI_STATPEARLS"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "truth-probability misconception",
+                  "misconception": "80% power means there is an 80% chance the hypothesis or significant result is true.",
+                  "detectionCues": [
+                    "says result has 80% probability of being true",
+                    "treats power as confidence in the claim"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E4"
+                  ],
+                  "correction": "Power assumes a specified effect is true and asks how often the test detects it; it does not tell whether the effect is true.",
+                  "repairQuestion": "In a power calculation, is the specified effect assumed or concluded?",
+                  "repairCriteria": "Repaired when the learner says the effect is assumed for the calculation, not proven or assigned 80% truth probability.",
+                  "acceptableRepairAnswers": [
+                    "It is assumed for planning.",
+                    "Power does not say the hypothesis is 80% true."
+                  ],
+                  "sourceSupport": [
+                    "POW_GREENLAND",
+                    "POW_APS"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "effect-free power",
+                  "misconception": "A study simply has 80% power in general, without specifying an effect size or test.",
+                  "detectionCues": [
+                    "omits effect size",
+                    "talks about generic power detached from design"
+                  ],
+                  "contrastWithExpectations": [
+                    "E2"
+                  ],
+                  "correction": "Power is always for a specified effect size, alpha, sample size, variability, and analysis plan.",
+                  "repairQuestion": "What information is missing if someone only says 'this study has 80% power'?",
+                  "repairCriteria": "Repaired when the learner names the needed effect size and design/test conditions.",
+                  "acceptableRepairAnswers": [
+                    "We need the effect size and test.",
+                    "Power depends on alpha, sample size, variability, and analysis."
+                  ],
+                  "sourceSupport": [
+                    "POW_GREENLAND",
+                    "POW_SCRIBBR"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "post-hoc-excuse misconception",
+                  "misconception": "After a nonsignificant result, observed post-hoc power proves there was no effect or proves the study failed only because of low power.",
+                  "detectionCues": [
+                    "uses post-hoc power as decisive explanation",
+                    "equates nonsignificance with no effect because power was high"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E3"
+                  ],
+                  "correction": "Power is most useful before data collection for a meaningful effect size. A nonsignificant result must be interpreted with design, interval estimates, assumptions, and uncertainty.",
+                  "repairQuestion": "Why is power analysis usually more informative before the study than after seeing the result?",
+                  "repairCriteria": "Repaired when the learner says power is a planning tool tied to assumed effects and observed results need confidence intervals or uncertainty, not just post-hoc power.",
+                  "acceptableRepairAnswers": [
+                    "It is for planning around an assumed effect.",
+                    "Afterward you should look at estimates and uncertainty."
+                  ],
+                  "sourceSupport": [
+                    "POW_APS",
+                    "POW_GREENLAND"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [
+                  "E5"
+                ],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Power is a design property: the probability of detecting a specified true effect with a specified test and alpha. It depends on sample size, effect size, variability, alpha, and design. It is not the probability that a hypothesis or result is true, and it must be tied to a meaningful effect size."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

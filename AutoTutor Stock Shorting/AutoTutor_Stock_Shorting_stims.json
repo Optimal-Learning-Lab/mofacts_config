@@ -1,0 +1,223 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "Imagine someone says, 'I shorted 100 shares because I think the price will fall.' What is the basic short-selling transaction, and how can it make or lose money?"
+            },
+            "autoTutor": {
+              "id": "stock_shorting_001",
+              "topic": "Stock shorting",
+              "learningGoal": "Explain short selling as borrowing and selling shares, then later buying shares to return them, with profit from price declines and potentially large losses from price increases.",
+              "idealAnswer": "In a short sale, the trader borrows shares, sells them now, and later must buy shares back to return to the lender. The trader profits if the buyback price is lower than the sale price, before costs and margin requirements. The trader loses if the price rises, because buying back the shares costs more. The maximum gain is bounded because a stock cannot fall below zero, while losses can be very large because the price can keep rising.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "borrow-and-sell transaction",
+                  "proposition": "A short seller sells shares they have borrowed rather than shares they already own.",
+                  "acceptableVariants": [
+                    "They borrow stock and sell it in the market.",
+                    "The seller does not start by owning the shares."
+                  ],
+                  "commonPartialAnswers": [
+                    "They sell a stock first.",
+                    "They bet against a stock."
+                  ],
+                  "hints": [
+                    "Where do the shares come from before they are sold?",
+                    "Does the short seller own the shares outright at the start?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Where do the shares come from before they are sold?",
+                      "target": "A standard short sale begins by borrowing shares and selling them"
+                    }
+                  ],
+                  "assertion": "A standard short sale begins by borrowing shares and selling them.",
+                  "sourceSupport": [
+                    "SHORT_SEC_REGSHO",
+                    "SHORT_CRS"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "must buy to return",
+                  "proposition": "The short seller later must buy equivalent shares to return to the lender.",
+                  "acceptableVariants": [
+                    "They cover the short by buying shares back.",
+                    "They have an obligation to replace the borrowed stock."
+                  ],
+                  "commonPartialAnswers": [
+                    "They buy it later.",
+                    "They close the trade."
+                  ],
+                  "hints": [
+                    "What has to happen to the borrowed shares?",
+                    "How does the trader close the short position?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What has to happen to the borrowed shares?",
+                      "target": "Closing a short position requires buying shares to return the borrowed shares"
+                    }
+                  ],
+                  "assertion": "Closing a short position requires buying shares to return the borrowed shares.",
+                  "sourceSupport": [
+                    "SHORT_SEC_REGSHO",
+                    "SHORT_SCHWAB"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "profit from decline",
+                  "proposition": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+                  "acceptableVariants": [
+                    "Sell high, buy back lower.",
+                    "If the stock falls, the short seller can cover for less."
+                  ],
+                  "commonPartialAnswers": [
+                    "They make money if it falls.",
+                    "They are betting it goes down."
+                  ],
+                  "hints": [
+                    "Which price needs to be lower: the sale price or the buyback price?",
+                    "Why does a price decline help the short seller?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Which price needs to be lower: the sale price or the buyback price?",
+                      "target": "A short seller profits when the stock can be bought back for less than it was sold for"
+                    }
+                  ],
+                  "assertion": "A short seller profits when the stock can be bought back for less than it was sold for.",
+                  "sourceSupport": [
+                    "SHORT_SCHWAB",
+                    "SHORT_BANKRATE"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "asymmetric risk",
+                  "proposition": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+                  "acceptableVariants": [
+                    "The most you can gain is roughly the sale proceeds, but losses are not capped the same way.",
+                    "A short squeeze or price rise can force costly covering."
+                  ],
+                  "commonPartialAnswers": [
+                    "Shorting is risky.",
+                    "You can lose a lot."
+                  ],
+                  "hints": [
+                    "How low can a stock price go, and how high can it rise?",
+                    "What happens if the stock rises after the short sale?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "How low can a stock price go, and how high can it rise?",
+                      "target": "Short selling has bounded upside and potentially very large downside"
+                    }
+                  ],
+                  "assertion": "Short selling has bounded upside and potentially very large downside.",
+                  "sourceSupport": [
+                    "SHORT_SCHWAB",
+                    "SHORT_BANKRATE"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "ordinary-sale misconception",
+                  "misconception": "Short selling means selling shares you already own because you expect a decline.",
+                  "detectionCues": [
+                    "describes it as a normal sale of owned stock",
+                    "omits borrowing and returning"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2"
+                  ],
+                  "correction": "Selling owned shares exits a long position; short selling creates an obligation because borrowed shares must be returned.",
+                  "repairQuestion": "What makes a short sale different from simply selling stock you already own?",
+                  "repairCriteria": "Repaired when the learner mentions borrowed shares or the later duty to return equivalent shares.",
+                  "acceptableRepairAnswers": [
+                    "You borrow the shares first.",
+                    "You have to buy shares later and return them."
+                  ],
+                  "sourceSupport": [
+                    "SHORT_SEC_REGSHO",
+                    "SHORT_CRS"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "risk-capped misconception",
+                  "misconception": "Short selling can only lose the amount originally received from selling the shares.",
+                  "detectionCues": [
+                    "says maximum loss is sale proceeds",
+                    "claims risk is limited because the trader did not buy shares"
+                  ],
+                  "contrastWithExpectations": [
+                    "E4"
+                  ],
+                  "correction": "The buyback price can exceed the sale price by a lot, so losses can exceed the original proceeds.",
+                  "repairQuestion": "If shares are sold short at $80 and later cost $200 to buy back, what happens?",
+                  "repairCriteria": "Repaired when the learner says the short seller loses money because covering costs more than the sale proceeds.",
+                  "acceptableRepairAnswers": [
+                    "They lose $120 per share before costs.",
+                    "They must buy back at a higher price, so the loss can be large."
+                  ],
+                  "sourceSupport": [
+                    "SHORT_SCHWAB",
+                    "SHORT_BANKRATE"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "illegal-manipulation misconception",
+                  "misconception": "All short selling is illegal market manipulation.",
+                  "detectionCues": [
+                    "calls any short sale illegal",
+                    "equates shorting with spreading false rumors"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E3"
+                  ],
+                  "correction": "Ordinary short selling is regulated and can be used for speculation, hedging, or liquidity. Manipulative conduct such as spreading false rumors is a separate problem.",
+                  "repairQuestion": "How is a regulated short sale different from manipulative short-and-distort behavior?",
+                  "repairCriteria": "Repaired when the learner distinguishes ordinary regulated borrowing/selling from illegal manipulation or false rumors.",
+                  "acceptableRepairAnswers": [
+                    "Shorting itself can be legal; manipulation is the illegal part.",
+                    "Borrowing and selling is different from spreading false rumors."
+                  ],
+                  "sourceSupport": [
+                    "SHORT_SEC_REGSHO",
+                    "SHORT_CRS"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Short selling reverses the usual buy-then-sell order: borrow shares, sell them, then buy replacement shares to return. Falling prices can create profit; rising prices create losses and margin pressure. Ordinary short selling is regulated and distinct from manipulative rumor-driven trading."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "A drought leaves mostly hard seeds on an island, and birds with slightly deeper beaks leave more offspring. How would natural selection explain beak changes in the population over generations?"
+            },
+            "autoTutor": {
+              "id": "natural_selection_001",
+              "topic": "Natural selection",
+              "learningGoal": "Explain natural selection as non-teleological change in heritable trait frequencies caused by differential reproductive success in an environment.",
+              "idealAnswer": "Natural selection starts with variation among individuals, such as some birds already having deeper beaks. If that variation is heritable and deeper beaks help birds survive or reproduce when hard seeds are common, those birds leave more offspring. Across generations, alleles or traits associated with deeper beaks become more common in the population. The population evolves; individual birds do not change their beaks because they need to, and selection has no goal or intention.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "existing variation",
+                  "proposition": "Individuals in the population already vary in the trait before selection acts.",
+                  "acceptableVariants": [
+                    "Some birds already have deeper or shallower beaks.",
+                    "Selection works on variation that is present."
+                  ],
+                  "commonPartialAnswers": [
+                    "Birds are different.",
+                    "There is variation."
+                  ],
+                  "hints": [
+                    "Do all birds start with identical beaks?",
+                    "Does selection create the variation from scratch?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Do all birds start with identical beaks?",
+                      "target": "Natural selection acts on existing variation among individuals"
+                    }
+                  ],
+                  "assertion": "Natural selection acts on existing variation among individuals.",
+                  "sourceSupport": [
+                    "SEL_OPENSTAX",
+                    "SEL_GREGORY"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "heritability",
+                  "proposition": "The relevant variation must be heritable for trait frequencies to change across generations.",
+                  "acceptableVariants": [
+                    "Beak differences need a genetic component.",
+                    "Offspring tend to inherit the trait."
+                  ],
+                  "commonPartialAnswers": [
+                    "It gets passed on.",
+                    "Genes matter."
+                  ],
+                  "hints": [
+                    "Why must offspring resemble parents for evolution to occur?",
+                    "Would an acquired injury to a beak be inherited?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Why must offspring resemble parents for evolution to occur?",
+                      "target": "Only heritable variation can produce evolutionary change by natural selection"
+                    }
+                  ],
+                  "assertion": "Only heritable variation can produce evolutionary change by natural selection.",
+                  "sourceSupport": [
+                    "SEL_OPENSTAX_POP",
+                    "SEL_OPENSTAX"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "differential reproductive success",
+                  "proposition": "Individuals with traits better suited to the environment leave more surviving offspring.",
+                  "acceptableVariants": [
+                    "Deeper-beaked birds reproduce more under hard-seed conditions.",
+                    "Fitness means reproductive contribution, not just strength."
+                  ],
+                  "commonPartialAnswers": [
+                    "They survive better.",
+                    "They are more fit."
+                  ],
+                  "hints": [
+                    "What does 'fit' mean in evolutionary terms?",
+                    "Which birds contribute more to the next generation?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What does 'fit' mean in evolutionary terms?",
+                      "target": "Selection occurs when trait differences affect survival or reproductive success"
+                    }
+                  ],
+                  "assertion": "Selection occurs when trait differences affect survival or reproductive success.",
+                  "sourceSupport": [
+                    "SEL_OPENSTAX",
+                    "SEL_GREGORY"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "population-level change",
+                  "proposition": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+                  "acceptableVariants": [
+                    "The population has more deeper-beaked birds later.",
+                    "Allele frequencies shift over generations."
+                  ],
+                  "commonPartialAnswers": [
+                    "The species changes.",
+                    "More birds have the trait."
+                  ],
+                  "hints": [
+                    "Who evolves: an individual bird or the population over generations?",
+                    "What changes after several generations?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Who evolves: an individual bird or the population over generations?",
+                      "target": "Evolution by natural selection is a change in population trait or allele frequencies across generations"
+                    }
+                  ],
+                  "assertion": "Evolution by natural selection is a change in population trait or allele frequencies across generations.",
+                  "sourceSupport": [
+                    "SEL_OPENSTAX",
+                    "SEL_OPENSTAX_POP"
+                  ]
+                },
+                {
+                  "id": "E5",
+                  "label": "no need or goal",
+                  "proposition": "Natural selection is not intentional and does not make individuals change because they need to.",
+                  "acceptableVariants": [
+                    "Birds do not decide to grow better beaks.",
+                    "Evolution has no goal of improvement."
+                  ],
+                  "commonPartialAnswers": [
+                    "It is not on purpose.",
+                    "They do not try to adapt."
+                  ],
+                  "hints": [
+                    "Does the drought make an individual bird intentionally grow a deeper beak?",
+                    "Is natural selection aiming at perfection?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Does the drought make an individual bird intentionally grow a deeper beak?",
+                      "target": "Natural selection has no foresight, intention, or goal"
+                    }
+                  ],
+                  "assertion": "Natural selection has no foresight, intention, or goal.",
+                  "sourceSupport": [
+                    "SEL_GREGORY",
+                    "SEL_SMITHSONIAN",
+                    "SEL_OPENSTAX"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "need-based individual change",
+                  "misconception": "Individual birds grow deeper beaks during their lives because they need them.",
+                  "detectionCues": [
+                    "says birds adapt their beaks in response to need",
+                    "describes individual transformation as evolution"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E4",
+                    "E5"
+                  ],
+                  "correction": "Selection changes populations across generations by sorting existing heritable variation, not by need-driven change in individuals.",
+                  "repairQuestion": "In the drought example, what changes during an individual bird's life and what changes across generations?",
+                  "repairCriteria": "Repaired when the learner says individuals do not evolve their beaks from need; populations change over generations.",
+                  "acceptableRepairAnswers": [
+                    "Individuals with deeper beaks leave more offspring, so the population changes.",
+                    "The bird does not grow a new beak because it needs one."
+                  ],
+                  "sourceSupport": [
+                    "SEL_GREGORY",
+                    "SEL_SMITHSONIAN"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "survival-only fitness",
+                  "misconception": "Natural selection is only about which individuals survive, not whether they reproduce.",
+                  "detectionCues": [
+                    "defines fitness as strength or survival only",
+                    "omits offspring"
+                  ],
+                  "contrastWithExpectations": [
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "Survival matters because it can affect reproductive contribution, but evolutionary fitness is about leaving offspring or genes in the next generation.",
+                  "repairQuestion": "Why is reproduction essential in natural selection?",
+                  "repairCriteria": "Repaired when the learner connects fitness to offspring or contribution to the next generation.",
+                  "acceptableRepairAnswers": [
+                    "The trait spreads only if they leave more offspring.",
+                    "Fitness is reproductive success."
+                  ],
+                  "sourceSupport": [
+                    "SEL_OPENSTAX",
+                    "SEL_GREGORY"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "progress misconception",
+                  "misconception": "Natural selection always makes organisms more advanced, perfect, or complex.",
+                  "detectionCues": [
+                    "says evolution aims to improve species",
+                    "uses goal-directed progress language"
+                  ],
+                  "contrastWithExpectations": [
+                    "E5"
+                  ],
+                  "correction": "Selection favors traits in a particular environment; it has no general direction toward perfection or complexity.",
+                  "repairQuestion": "Why might a trait be favored in one environment but not another?",
+                  "repairCriteria": "Repaired when the learner says selection is environment-specific and not goal-directed progress.",
+                  "acceptableRepairAnswers": [
+                    "It depends on the environment.",
+                    "Evolution has no goal of perfection."
+                  ],
+                  "sourceSupport": [
+                    "SEL_OPENSTAX",
+                    "SEL_GREGORY"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [
+                  "E5"
+                ],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Natural selection requires existing heritable variation, environmental differences in survival or reproduction, and resulting changes in trait or allele frequencies across generations. It acts through individuals' reproductive success but evolution is a population-level outcome. It is not need-based, intentional, or goal-directed."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "Suppose $1,000 earns 5% interest each year and the interest is left in the account. In your own words, how does compound interest make the balance grow over time?"
+            },
+            "autoTutor": {
+              "id": "compound_interest_001",
+              "topic": "Compound interest",
+              "learningGoal": "Explain compound interest as growth where each period's interest is calculated on the previous balance, and distinguish it from simple linear interest.",
+              "idealAnswer": "Compound interest means interest is added to the balance and later interest is calculated on that larger balance. With $1,000 at 5% annually, year 1 adds $50, year 2 earns 5% of $1,050, and so on. The growth is multiplicative across periods, so time and compounding frequency matter. It is different from simple interest, where each period's interest is based only on the original principal.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "interest added to balance",
+                  "proposition": "After each compounding period, earned interest is added to the balance or principal.",
+                  "acceptableVariants": [
+                    "The account balance becomes principal for the next period.",
+                    "Interest gets reinvested instead of being paid out."
+                  ],
+                  "commonPartialAnswers": [
+                    "You earn interest.",
+                    "The money grows."
+                  ],
+                  "hints": [
+                    "What happens to the interest after the first period?",
+                    "Does the next calculation use the old principal only, or the updated balance?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What happens to the interest after the first period?",
+                      "target": "After each period, compound interest adds earned interest to the balance"
+                    }
+                  ],
+                  "assertion": "After each period, compound interest adds earned interest to the balance.",
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_CFPB"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "interest on interest",
+                  "proposition": "Later interest is calculated on the original principal plus previously earned interest.",
+                  "acceptableVariants": [
+                    "You earn interest on earlier interest.",
+                    "The second year uses $1,050, not just $1,000."
+                  ],
+                  "commonPartialAnswers": [
+                    "It keeps adding 5%.",
+                    "It adds another $50."
+                  ],
+                  "hints": [
+                    "For $1,000 at 5%, what amount earns interest in year 2?",
+                    "Why is the second year's interest more than the first year's in annual compounding?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "For $1,000 at 5%, what amount earns interest in year 2?",
+                      "target": "Compound interest pays interest on accumulated interest as well as original principal"
+                    }
+                  ],
+                  "assertion": "Compound interest pays interest on accumulated interest as well as original principal.",
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_KHAN"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "multiplicative growth",
+                  "proposition": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
+                  "acceptableVariants": [
+                    "It multiplies by a factor such as 1.05 each year.",
+                    "The dollar growth can get larger over time."
+                  ],
+                  "commonPartialAnswers": [
+                    "It grows faster.",
+                    "It is like repeated percent increases."
+                  ],
+                  "hints": [
+                    "What operation happens each period when you apply a percent rate?",
+                    "Does a fixed 5% rate mean a fixed dollar amount every year?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What operation happens each period when you apply a percent rate?",
+                      "target": "Compounding repeatedly multiplies the balance by a rate factor"
+                    }
+                  ],
+                  "assertion": "Compounding repeatedly multiplies the balance by a rate factor.",
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_MCKENZIE_LIERSCH"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "contrast with simple interest",
+                  "proposition": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance.",
+                  "acceptableVariants": [
+                    "Simple is based on the starting amount; compound is based on the growing amount.",
+                    "Simple interest is linear; compound interest uses reinvested interest."
+                  ],
+                  "commonPartialAnswers": [
+                    "Compound is more than simple.",
+                    "Simple interest does not compound."
+                  ],
+                  "hints": [
+                    "What amount does simple interest keep using as its base?",
+                    "How does the base for compound interest change?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What amount does simple interest keep using as its base?",
+                      "target": "Simple interest keeps the original principal as the base; compound interest updates the base"
+                    }
+                  ],
+                  "assertion": "Simple interest keeps the original principal as the base; compound interest updates the base.",
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_KHAN"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "linear-growth misconception",
+                  "misconception": "A fixed annual rate means the same dollar amount is added every year.",
+                  "detectionCues": [
+                    "says it adds $50 every year at 5%",
+                    "describes compound interest as a straight-line increase"
+                  ],
+                  "contrastWithExpectations": [
+                    "E2",
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "A fixed percent is applied to a changing balance, so the dollar amount can grow.",
+                  "repairQuestion": "After the first $50 is added, what balance earns interest in the next year?",
+                  "repairCriteria": "Repaired when the learner says the next period uses the updated balance or that the dollar interest can increase because the base increased.",
+                  "acceptableRepairAnswers": [
+                    "The next year uses $1,050.",
+                    "The interest can be more than $50 because the balance grew."
+                  ],
+                  "sourceSupport": [
+                    "CMP_MCKENZIE_LIERSCH",
+                    "CMP_OPENSTAX"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "principal-only misconception",
+                  "misconception": "Compound interest is just interest on the original principal.",
+                  "detectionCues": [
+                    "only mentions original principal",
+                    "denies interest can earn interest"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E4"
+                  ],
+                  "correction": "That describes simple interest. Compound interest includes accumulated interest in the future base.",
+                  "repairQuestion": "What part besides the original principal can earn interest in compound interest?",
+                  "repairCriteria": "Repaired when the learner identifies accumulated or previous interest as also earning interest.",
+                  "acceptableRepairAnswers": [
+                    "The previous interest earns interest too.",
+                    "The accumulated interest becomes part of the balance."
+                  ],
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_CFPB"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "frequency-does-not-matter misconception",
+                  "misconception": "Compounding frequency is irrelevant if the annual rate is the same.",
+                  "detectionCues": [
+                    "says monthly and annual are always identical",
+                    "ignores number of compounding periods"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E3"
+                  ],
+                  "correction": "With the same nominal annual rate, more frequent compounding updates the balance more often, changing the amount unless the rate is already expressed as an effective annual yield.",
+                  "repairQuestion": "Why might monthly compounding produce a different balance than annual compounding at the same nominal rate?",
+                  "repairCriteria": "Repaired when the learner says the balance is updated more often or the rate is applied across more periods.",
+                  "acceptableRepairAnswers": [
+                    "Monthly compounding adds interest to the base more often.",
+                    "The rate is split and applied more times."
+                  ],
+                  "sourceSupport": [
+                    "CMP_OPENSTAX",
+                    "CMP_KHAN"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Compound interest is interest on the original principal plus accumulated interest. Each compounding period updates the balance, so growth is multiplicative rather than a fixed linear dollar add-on. Simple interest uses only the original principal; compound interest uses the growing balance."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

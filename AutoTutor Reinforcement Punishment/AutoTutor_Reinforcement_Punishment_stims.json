@@ -1,0 +1,224 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "In operant conditioning, how do you tell whether a consequence is reinforcement or punishment, and what do positive and negative mean in those terms?"
+            },
+            "autoTutor": {
+              "id": "reinforcement_punishment_001",
+              "topic": "Reinforcement vs. punishment",
+              "learningGoal": "Classify operant consequences by behavioral effect and stimulus change, especially distinguishing negative reinforcement from punishment.",
+              "idealAnswer": "First ask what happens to the target behavior: reinforcement increases it, while punishment decreases it. Then ask whether a stimulus is added or removed: positive means added, negative means removed. Positive reinforcement adds something to increase behavior, negative reinforcement removes something to increase behavior, positive punishment adds something to decrease behavior, and negative punishment removes something to decrease behavior. Negative reinforcement is not punishment because its effect is to increase behavior.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "effect dimension",
+                  "proposition": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
+                  "acceptableVariants": [
+                    "Reinforcement makes behavior more likely, punishment less likely.",
+                    "Look at whether the behavior goes up or down."
+                  ],
+                  "commonPartialAnswers": [
+                    "Reinforcement is reward; punishment is penalty.",
+                    "It changes behavior."
+                  ],
+                  "hints": [
+                    "What happens to the behavior after the consequence?",
+                    "Which term means the behavior becomes more likely?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What happens to the behavior after the consequence?",
+                      "target": "Reinforcement increases behavior; punishment decreases behavior"
+                    }
+                  ],
+                  "assertion": "Reinforcement increases behavior; punishment decreases behavior.",
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_SIMPLY"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "positive-negative dimension",
+                  "proposition": "Positive means a stimulus is added; negative means a stimulus is removed.",
+                  "acceptableVariants": [
+                    "Positive is adding, negative is taking away.",
+                    "They do not mean good and bad here."
+                  ],
+                  "commonPartialAnswers": [
+                    "Positive is good; negative is bad.",
+                    "Something is added or removed."
+                  ],
+                  "hints": [
+                    "In this technical vocabulary, what does positive mean?",
+                    "Does negative mean unpleasant, or removed?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "In this technical vocabulary, what does positive mean?",
+                      "target": "In operant conditioning, positive means added and negative means removed"
+                    }
+                  ],
+                  "assertion": "In operant conditioning, positive means added and negative means removed.",
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_IHS"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "negative reinforcement",
+                  "proposition": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
+                  "acceptableVariants": [
+                    "Buckling a seatbelt stops the beep and makes buckling more likely.",
+                    "Escape or avoidance can reinforce behavior."
+                  ],
+                  "commonPartialAnswers": [
+                    "It is removing something bad.",
+                    "It makes you do it more."
+                  ],
+                  "hints": [
+                    "If the seatbelt beep stops when you buckle up, what behavior increases?",
+                    "Why is this reinforcement rather than punishment?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "If the seatbelt beep stops when you buckle up, what behavior increases?",
+                      "target": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus"
+                    }
+                  ],
+                  "assertion": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus.",
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_IHS"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "four-cell classification",
+                  "proposition": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
+                  "acceptableVariants": [
+                    "Add to increase, remove to increase, add to decrease, remove to decrease.",
+                    "Use a two-question grid: added/removed and behavior up/down."
+                  ],
+                  "commonPartialAnswers": [
+                    "There are four types.",
+                    "Positive and negative can apply to both."
+                  ],
+                  "hints": [
+                    "How would you classify adding a reprimand to reduce texting?",
+                    "How would you classify removing a toy to reduce misbehavior?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "How would you classify adding a reprimand to reduce texting?",
+                      "target": "Operant consequences are classified by crossing added/removed with increase/decrease"
+                    }
+                  ],
+                  "assertion": "Operant consequences are classified by crossing added/removed with increase/decrease.",
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_SIMPLY"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "negative-reinforcement-punishment",
+                  "misconception": "Negative reinforcement means punishment or a bad consequence.",
+                  "detectionCues": [
+                    "equates negative reinforcement with punishment",
+                    "says negative reinforcement decreases behavior"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E3"
+                  ],
+                  "correction": "Negative reinforcement is still reinforcement; it increases behavior by removing something.",
+                  "repairQuestion": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?",
+                  "repairCriteria": "Repaired when the learner says reinforcement because the behavior increases and the aversive stimulus is removed.",
+                  "acceptableRepairAnswers": [
+                    "It is negative reinforcement because buckling increases and the beep is removed.",
+                    "Reinforcement, since the behavior goes up."
+                  ],
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_IHS"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "positive-good-negative-bad",
+                  "misconception": "Positive means pleasant/good and negative means unpleasant/bad.",
+                  "detectionCues": [
+                    "uses good/bad instead of added/removed",
+                    "calls scolding negative because it feels bad"
+                  ],
+                  "contrastWithExpectations": [
+                    "E2",
+                    "E4"
+                  ],
+                  "correction": "In this vocabulary, positive and negative refer to adding or removing a stimulus, not moral value or pleasantness.",
+                  "repairQuestion": "What does positive mean in positive punishment?",
+                  "repairCriteria": "Repaired when the learner says a stimulus is added, even if it is unpleasant.",
+                  "acceptableRepairAnswers": [
+                    "It means something is added.",
+                    "Positive punishment adds an aversive stimulus."
+                  ],
+                  "sourceSupport": [
+                    "REINF_OPENSTAX",
+                    "REINF_SIMPLY"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "intention-over-effect",
+                  "misconception": "A consequence is reinforcement if the teacher intended it as a reward, regardless of what happens to behavior.",
+                  "detectionCues": [
+                    "classifies by adult intention",
+                    "ignores whether behavior increased or decreased"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E4"
+                  ],
+                  "correction": "Operant labels depend on the behavior's observed future change, not only the giver's intention.",
+                  "repairQuestion": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?",
+                  "repairCriteria": "Repaired when the learner says classification depends on whether the behavior actually increases or decreases.",
+                  "acceptableRepairAnswers": [
+                    "No, you have to see the behavior increase.",
+                    "The effect on future behavior matters."
+                  ],
+                  "sourceSupport": [
+                    "REINF_OPENSTAX"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Reinforcement and punishment are defined by behavioral effect: increase versus decrease. Positive and negative mean adding versus removing a stimulus. The common trap is treating negative reinforcement as punishment; it is reinforcement because it increases the behavior that removes or avoids an aversive condition."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "A researcher reports a 95% confidence interval of [42, 50] for a population mean. What does the 95% mean?"
+            },
+            "autoTutor": {
+              "id": "stats_confidence_interval_001",
+              "topic": "Confidence intervals",
+              "learningGoal": "Explain what a confidence interval means without incorrectly saying that there is a 95% probability the fixed population parameter is inside one already-computed interval.",
+              "idealAnswer": "The 95% is a confidence level for the method. If we repeatedly took random samples from the same population and computed intervals the same way, about 95% of those intervals would contain the true population mean. For this particular interval, the population mean is fixed, so the interval either contains it or it does not.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "repeated-sampling setup",
+                  "proposition": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
+                  "acceptableVariants": [
+                    "If we repeated the study many times and made a new interval each time.",
+                    "The 95% is about what would happen across repeated samples using the same method."
+                  ],
+                  "commonPartialAnswers": [
+                    "It means we are 95% confident.",
+                    "It means the interval is usually right."
+                  ],
+                  "hints": [
+                    "Think about repeating the whole study, not just looking at this one reported interval.",
+                    "What would change from one repetition of the study to the next?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "To interpret the 95%, imagine taking many repeated random samples and computing...",
+                      "target": "a new interval from each sample"
+                    }
+                  ],
+                  "assertion": "The 95% is interpreted across repeated random samples using the same interval-building method."
+                },
+                {
+                  "id": "E2",
+                  "label": "long-run coverage",
+                  "proposition": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+                  "acceptableVariants": [
+                    "About 95% of those intervals would capture the true mean.",
+                    "The method produces intervals that contain the population mean about 95% of the time in the long run."
+                  ],
+                  "commonPartialAnswers": [
+                    "The interval captures 95%.",
+                    "95% of the results are in the interval."
+                  ],
+                  "hints": [
+                    "In the repeated-study picture, what proportion of the new intervals should succeed?",
+                    "What are the intervals trying to contain?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Over many repeated samples, about 95% of the computed intervals would...",
+                      "target": "contain the true population mean"
+                    }
+                  ],
+                  "assertion": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean."
+                },
+                {
+                  "id": "E3",
+                  "label": "fixed-parameter distinction",
+                  "proposition": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+                  "acceptableVariants": [
+                    "The true mean is either between 42 and 50 or it is not.",
+                    "For this specific interval, the parameter is not random."
+                  ],
+                  "commonPartialAnswers": [
+                    "There is a 95% chance the mean is in this interval.",
+                    "The mean probably falls between 42 and 50."
+                  ],
+                  "hints": [
+                    "Once the interval has been computed, is the true population mean changing?",
+                    "For this specific interval, can the parameter be partly inside it?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "For this already-computed interval, the true mean is either inside it or...",
+                      "target": "not inside it"
+                    }
+                  ],
+                  "assertion": "For this specific computed interval, the population mean is either contained or not contained."
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "posterior-probability misconception",
+                  "misconception": "There is a 95% probability that the true mean lies inside this specific interval.",
+                  "detectionCues": [
+                    "The student says there is a 95% chance the mean is between 42 and 50.",
+                    "The student treats the fixed parameter as random after the interval is computed."
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E3"
+                  ],
+                  "correction": "That sounds natural, but in the usual frequentist interpretation it is not quite right. The 95% describes the long-run reliability of the method, not the probability that this fixed interval contains the fixed mean.",
+                  "repairQuestion": "If we repeated the same sampling and interval-construction process many times, what proportion of the newly computed intervals would contain the true population mean?",
+                  "repairCriteria": "Mark this misconception repaired when the learner says, in any wording, that repeated or newly computed intervals would sometimes contain the true population mean and about 95% would contain it in the long run. If the tutor's repair question just referred to newly computed intervals, pronouns such as they, them, it, each one, or repetitions may refer to those intervals and should be interpreted in that context. Do not require the learner to restate the fixed-parameter distinction to repair this misconception; that is a separate expectation.",
+                  "acceptableRepairAnswers": [
+                    "About 95% of the new intervals would contain the true population mean.",
+                    "Sometimes the newly computed interval would contain the mean and sometimes not, and in the long run about 95% would contain it.",
+                    "The repeated intervals would contain the population mean about 95% of the time.",
+                    "They would either contain the true mean or not because the mean is fixed, and about 95% of repetitions would contain it."
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "individual-values misconception",
+                  "misconception": "The interval means 95% of individual observations fall between 42 and 50.",
+                  "detectionCues": [
+                    "The student says 95% of people, scores, or data points are in this range.",
+                    "The student confuses a confidence interval with a prediction interval or distribution range."
+                  ],
+                  "contrastWithExpectations": [
+                    "E2",
+                    "E3"
+                  ],
+                  "correction": "This interval is about uncertainty in the population mean, not the spread of individual observations.",
+                  "repairQuestion": "Is this confidence interval estimating individual observations, or is it estimating the population mean?",
+                  "repairCriteria": "Mark this misconception repaired when the learner identifies the population mean as the target of the interval, or clearly rejects individual observations/scores/data points as the target. Do not require a full long-run coverage explanation to repair this misconception.",
+                  "acceptableRepairAnswers": [
+                    "It is estimating the population mean.",
+                    "It is about the population mean, not individual scores.",
+                    "The interval is for the mean of the population, not for 95% of observations."
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "sample-statistics-inside-interval misconception",
+                  "misconception": "The interval means 95% of sample means, future sample means, or future confidence intervals will fall between 42 and 50.",
+                  "detectionCues": [
+                    "The student says 95% of sample averages would be between 42 and 50.",
+                    "The student says 95% of future intervals will be inside this interval.",
+                    "The student treats [42, 50] as a range for repeated sample statistics rather than a range for the population mean."
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2"
+                  ],
+                  "correction": "The 95% is not about future sample means or future intervals landing inside [42, 50]. It is about how often intervals built the same way contain the true population mean.",
+                  "repairQuestion": "In the repeated-sampling picture, is each new interval trying to fall inside [42, 50], or trying to contain the true population mean?",
+                  "repairCriteria": "Mark this misconception repaired when the learner says each new interval is trying to contain the true population mean, or clearly rejects the idea that new intervals or future sample means must fall inside [42, 50].",
+                  "acceptableRepairAnswers": [
+                    "Each new interval is trying to contain the true population mean.",
+                    "The new intervals do not have to fall inside [42, 50]; they are trying to capture the mean.",
+                    "It is about whether intervals contain the population mean, not whether future means land between 42 and 50."
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3"
+                ],
+                "optionalExpectations": [],
+                "ifStudentIsClose": "Ask a prompt targeting the missing phrase or distinction.",
+                "ifStudentIsWrong": "Identify the misconception, give a brief correction, and ask the repair question.",
+                "ifStudentIsStuck": "Use a hint before giving the assertion.",
+                "completionRule": "Complete when the learner has expressed the repeated-sampling setup, the long-run coverage idea, and the fixed-parameter distinction."
+              },
+              "summary": "A 95% confidence interval means that if we repeatedly sampled from the same population and built intervals the same way, about 95% of those intervals would contain the true population mean. For this particular interval, the true mean is fixed, so it is either inside the interval or it is not."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

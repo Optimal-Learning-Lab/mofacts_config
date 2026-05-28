@@ -1,0 +1,257 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "A study finds that people who exercise more also report lower stress. What can a correlation like this tell us, and what would we need before claiming exercise causes lower stress?"
+            },
+            "autoTutor": {
+              "id": "correlation_causation_001",
+              "topic": "Correlation vs. causation",
+              "learningGoal": "Distinguish association from causal inference, including direction, confounding, and the role of research design without dismissing correlation as useless.",
+              "idealAnswer": "The correlation says exercise and stress vary together in the data, but by itself it does not show that exercise causes lower stress. The direction could be reversed, or another variable could affect both exercise and stress. Stronger causal claims need a design or evidence that addresses alternatives, such as random assignment, temporal order, control of confounders, or converging causal evidence. Correlation can still be useful for prediction and as a clue to investigate.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "association not cause",
+                  "proposition": "A correlation shows that two variables are related or vary together, not that one causes the other.",
+                  "acceptableVariants": [
+                    "It shows association, not causation.",
+                    "The variables move together in the data."
+                  ],
+                  "commonPartialAnswers": [
+                    "They are connected.",
+                    "There is a relationship."
+                  ],
+                  "hints": [
+                    "What exactly does correlation measure?",
+                    "Does a relationship alone identify a cause?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What exactly does correlation measure?",
+                      "target": "Correlation establishes association but not causation by itself"
+                    }
+                  ],
+                  "assertion": "Correlation establishes association but not causation by itself.",
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_NATURE"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "direction ambiguity",
+                  "proposition": "The causal direction may be A causing B, B causing A, both, or neither.",
+                  "acceptableVariants": [
+                    "Stress might change exercise rather than exercise changing stress.",
+                    "The arrow of causation is not known from the correlation alone."
+                  ],
+                  "commonPartialAnswers": [
+                    "It could go either way.",
+                    "Maybe stress affects exercise."
+                  ],
+                  "hints": [
+                    "Could lower stress lead people to exercise more instead?",
+                    "What causal arrow is still uncertain?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Could lower stress lead people to exercise more instead?",
+                      "target": "A correlation alone does not determine causal direction"
+                    }
+                  ],
+                  "assertion": "A correlation alone does not determine causal direction.",
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_MIT"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "third-variable confounding",
+                  "proposition": "A third variable may influence both correlated variables and produce a noncausal association.",
+                  "acceptableVariants": [
+                    "Sleep, income, health, or schedule could affect both.",
+                    "A confounder might explain the relationship."
+                  ],
+                  "commonPartialAnswers": [
+                    "Something else could be involved.",
+                    "There may be another factor."
+                  ],
+                  "hints": [
+                    "What other variable could affect both exercise and stress?",
+                    "How could a common cause create the observed correlation?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What other variable could affect both exercise and stress?",
+                      "target": "A confounding variable can create or distort a correlation"
+                    }
+                  ],
+                  "assertion": "A confounding variable can create or distort a correlation.",
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_MIT"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "causal design evidence",
+                  "proposition": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
+                  "acceptableVariants": [
+                    "An experiment would help.",
+                    "We need design features that rule out confounding and reverse causation."
+                  ],
+                  "commonPartialAnswers": [
+                    "More research is needed.",
+                    "A controlled study would be better."
+                  ],
+                  "hints": [
+                    "What kind of evidence would make the causal claim stronger?",
+                    "How could the study rule out other explanations?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What kind of evidence would make the causal claim stronger?",
+                      "target": "Causal inference requires research design or evidence that rules out plausible alternatives"
+                    }
+                  ],
+                  "assertion": "Causal inference requires research design or evidence that rules out plausible alternatives.",
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_NATURE",
+                    "CORR_FRONTIERS"
+                  ]
+                },
+                {
+                  "id": "E5",
+                  "label": "correlation still useful",
+                  "proposition": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
+                  "acceptableVariants": [
+                    "It is a clue, not proof.",
+                    "It can predict or motivate experiments."
+                  ],
+                  "commonPartialAnswers": [
+                    "It matters but is not enough.",
+                    "It can be useful."
+                  ],
+                  "hints": [
+                    "Should we ignore the correlation entirely?",
+                    "What can correlation do even without proving cause?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Should we ignore the correlation entirely?",
+                      "target": "Correlation is useful evidence, but it is not sufficient causal proof by itself"
+                    }
+                  ],
+                  "assertion": "Correlation is useful evidence, but it is not sufficient causal proof by itself.",
+                  "sourceSupport": [
+                    "CORR_FRONTIERS",
+                    "CORR_NATURE"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "causal-overclaim",
+                  "misconception": "If two variables are correlated, one must cause the other.",
+                  "detectionCues": [
+                    "says exercise causes stress reduction solely because correlated",
+                    "uses correlation as proof"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E2",
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "Association alone does not rule out reverse causation or third variables.",
+                  "repairQuestion": "Name one alternative explanation for the exercise-stress correlation besides exercise causing lower stress.",
+                  "repairCriteria": "Repaired when the learner gives reverse causation or a third-variable explanation.",
+                  "acceptableRepairAnswers": [
+                    "Less stressed people may exercise more.",
+                    "Sleep or health could affect both."
+                  ],
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_FRONTIERS"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "correlation-useless overcorrection",
+                  "misconception": "Because correlation is not causation, a correlation tells us nothing useful.",
+                  "detectionCues": [
+                    "says correlation is meaningless",
+                    "dismisses all correlational evidence"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E5"
+                  ],
+                  "correction": "Correlation can be valuable for prediction and for generating hypotheses, even when it does not prove cause.",
+                  "repairQuestion": "What is one useful thing a correlation can do even if it does not prove causation?",
+                  "repairCriteria": "Repaired when the learner mentions prediction, description, screening, or hypothesis generation.",
+                  "acceptableRepairAnswers": [
+                    "It can help predict.",
+                    "It can point to something worth studying experimentally."
+                  ],
+                  "sourceSupport": [
+                    "CORR_FRONTIERS",
+                    "CORR_NATURE"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "control-equals-proof",
+                  "misconception": "Adding a few statistical controls automatically proves causation.",
+                  "detectionCues": [
+                    "claims controlled regression proves cause",
+                    "treats measured controls as eliminating all confounds"
+                  ],
+                  "contrastWithExpectations": [
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "Controls help only for variables measured well and modeled appropriately; unmeasured confounding or design problems can remain.",
+                  "repairQuestion": "Why might statistical controls improve but not automatically prove a causal claim?",
+                  "repairCriteria": "Repaired when the learner says controls may miss unmeasured or poorly measured confounders or that design still matters.",
+                  "acceptableRepairAnswers": [
+                    "There could be unmeasured confounders.",
+                    "Controls help but do not replace a good design."
+                  ],
+                  "sourceSupport": [
+                    "CORR_JMP",
+                    "CORR_NATURE"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [
+                  "E5"
+                ],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Correlation is evidence of association, not by itself proof of cause. Causal claims require ruling out plausible alternatives such as reverse causation and confounding through design, timing, controls, or converging evidence. Correlations are still useful for prediction and hypothesis generation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@ These scripts let you commit and push configuration updates without committing l
 The Node script replaces these keys with placeholders before commit/push:
 - `speechAPIKey` -> `"YOUR_GOOGLE_SPEECH_API_KEY"`
 - `textToSpeechAPIKey` -> `"YOUR_GOOGLE_TTS_API_KEY"`
+- `openRouterApiKey` -> `"YOUR_OPENROUTER_API_KEY"`
 
 After push, local files are restored from backup.
 
@@ -45,10 +46,11 @@ scripts\sync.bat "Your commit message"
 
 1. Finds `.json` files recursively (excluding `.git`, `node_modules`, and `.key_backups_*`).
 2. Creates `.key_backups_[timestamp]` backups.
-3. Replaces configured key fields with placeholders.
-4. Runs `git add -A`, commit, and push.
-5. Restores original local files from backup.
-6. Deletes backup directory.
+3. Parses every `.json` file and aborts with an invalid JSON report if any file cannot be inspected.
+4. Replaces configured key fields with placeholders.
+5. Runs `git add -A`, commit, and push.
+6. Restores original local files from backup.
+7. Deletes backup directory.
 
 ## Important notes
 
@@ -57,6 +59,7 @@ scripts\sync.bat "Your commit message"
 - Do not interrupt the script until it exits.
 - Verify push success from command output.
 - If a failure occurs, the script attempts restore automatically.
+- Invalid JSON is a hard failure: the script reports every unparsable file and stops before staging, committing, or pushing.
 
 ## Adding more keys
 
@@ -65,6 +68,7 @@ Edit `KEYS_TO_STRIP` in `sync-config.js`:
 const KEYS_TO_STRIP = [
   { key: 'speechAPIKey', placeholder: 'YOUR_GOOGLE_SPEECH_API_KEY' },
   { key: 'textToSpeechAPIKey', placeholder: 'YOUR_GOOGLE_TTS_API_KEY' },
+  { key: 'openRouterApiKey', placeholder: 'YOUR_OPENROUTER_API_KEY' },
   { key: 'newKey', placeholder: 'YOUR_NEW_KEY_HERE' }
 ];
 ```
@@ -76,5 +80,5 @@ const KEYS_TO_STRIP = [
 3. `git status` may show local modifications for files whose real key values were restored after commit.
 4. To verify committed content, inspect `HEAD`, for example:
 ```bash
-git grep -n -E '"(speechAPIKey|textToSpeechAPIKey)"' HEAD -- '*.json'
+git grep -n -E '"(speechAPIKey|textToSpeechAPIKey|openRouterApiKey)"' HEAD -- '*.json'
 ```

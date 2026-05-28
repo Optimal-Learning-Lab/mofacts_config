@@ -1,0 +1,255 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "stims": [
+          {
+            "display": {
+              "text": "Two spaceships pass each other at a constant high relative speed. How does special relativity change what each inertial observer can say about time and simultaneity?"
+            },
+            "autoTutor": {
+              "id": "special_relativity_001",
+              "topic": "Special relativity",
+              "learningGoal": "Explain special relativity for inertial frames as invariant light speed plus frame-dependent measurements of time and simultaneity, without treating effects as mere illusion or one-sided slowness.",
+              "idealAnswer": "Special relativity applies to inertial frames moving at constant velocity relative to each other. All inertial observers measure the same speed of light, so they do not agree on all separate measurements of time and space. Each observer can find the other's moving clock time-dilated for appropriately defined events, meaning the moving clock has less elapsed proper time between events on its own worldline than the coordinate time assigned in the observer's frame. Observers can also disagree about whether distant events are simultaneous. These are real frame-dependent measurements, not just visual delay or mechanical clock defects.",
+              "expectations": [
+                {
+                  "id": "E1",
+                  "label": "inertial-frame scope",
+                  "proposition": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
+                  "acceptableVariants": [
+                    "It is about non-accelerating reference frames.",
+                    "The spaceships can each be treated as inertial if they pass at constant speed."
+                  ],
+                  "commonPartialAnswers": [
+                    "Different frames.",
+                    "Moving observers."
+                  ],
+                  "hints": [
+                    "What kind of reference frames are being compared?",
+                    "Is acceleration central to this basic setup?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "What kind of reference frames are being compared?",
+                      "target": "Special relativity's basic postulates apply to inertial reference frames"
+                    }
+                  ],
+                  "assertion": "Special relativity's basic postulates apply to inertial reference frames.",
+                  "sourceSupport": [
+                    "REL_OPENSTAX_CONSEQ",
+                    "REL_OPENSTAX_TIME"
+                  ]
+                },
+                {
+                  "id": "E2",
+                  "label": "invariant light speed",
+                  "proposition": "All inertial observers measure light in vacuum as having the same speed.",
+                  "acceptableVariants": [
+                    "The speed of light is not simply added to the spaceship speed.",
+                    "Both frames measure c for light."
+                  ],
+                  "commonPartialAnswers": [
+                    "Light speed is constant.",
+                    "c is the same."
+                  ],
+                  "hints": [
+                    "If one ship shines a light, does the other measure c plus the ship speed?",
+                    "What measurement is invariant across inertial frames?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "If one ship shines a light, does the other measure c plus the ship speed?",
+                      "target": "The speed of light in vacuum is invariant for inertial observers"
+                    }
+                  ],
+                  "assertion": "The speed of light in vacuum is invariant for inertial observers.",
+                  "sourceSupport": [
+                    "REL_OPENSTAX_CONSEQ",
+                    "REL_EINSTEIN_ONLINE"
+                  ]
+                },
+                {
+                  "id": "E3",
+                  "label": "time dilation as frame-dependent elapsed time",
+                  "proposition": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
+                  "acceptableVariants": [
+                    "Moving clocks tick slower relative to that frame.",
+                    "Proper time is shortest along the moving clock's own path between the events in this setup."
+                  ],
+                  "commonPartialAnswers": [
+                    "Time slows down.",
+                    "Moving clocks run slow."
+                  ],
+                  "hints": [
+                    "Which clock is moving relative to the observer's frame?",
+                    "What two event times are being compared?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Which clock is moving relative to the observer's frame?",
+                      "target": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events"
+                    }
+                  ],
+                  "assertion": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events.",
+                  "sourceSupport": [
+                    "REL_OPENSTAX_TIME",
+                    "REL_OPENSTAX_CONSEQ"
+                  ]
+                },
+                {
+                  "id": "E4",
+                  "label": "relativity of simultaneity",
+                  "proposition": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
+                  "acceptableVariants": [
+                    "There is no absolute simultaneity for spatially separated events.",
+                    "Observers can disagree on whether far-apart events happen at the same time."
+                  ],
+                  "commonPartialAnswers": [
+                    "Simultaneity changes.",
+                    "Same time depends on frame."
+                  ],
+                  "hints": [
+                    "Can two separated flashes be simultaneous for everyone?",
+                    "What happens to 'now' at a distance across moving frames?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Can two separated flashes be simultaneous for everyone?",
+                      "target": "Simultaneity for distant events is frame-dependent in special relativity"
+                    }
+                  ],
+                  "assertion": "Simultaneity for distant events is frame-dependent in special relativity.",
+                  "sourceSupport": [
+                    "REL_VOKOS",
+                    "REL_EINSTEIN_ONLINE"
+                  ]
+                },
+                {
+                  "id": "E5",
+                  "label": "not illusion or broken clocks",
+                  "proposition": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
+                  "acceptableVariants": [
+                    "It is not just what it looks like after light travel time.",
+                    "Good clocks really record different elapsed times when compared after different paths."
+                  ],
+                  "commonPartialAnswers": [
+                    "It is real.",
+                    "It is not an illusion."
+                  ],
+                  "hints": [
+                    "Could correcting for light travel time remove special relativity?",
+                    "Are the clocks malfunctioning?"
+                  ],
+                  "prompts": [
+                    {
+                      "stem": "Could correcting for light travel time remove special relativity?",
+                      "target": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions"
+                    }
+                  ],
+                  "assertion": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions.",
+                  "sourceSupport": [
+                    "REL_OPENSTAX_CONSEQ",
+                    "REL_VOKOS"
+                  ]
+                }
+              ],
+              "misconceptions": [
+                {
+                  "id": "M1",
+                  "label": "absolute-time misconception",
+                  "misconception": "There is one universal time and one universal simultaneity that all observers must agree on.",
+                  "detectionCues": [
+                    "insists one frame has the real time",
+                    "denies relativity of simultaneity"
+                  ],
+                  "contrastWithExpectations": [
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "Special relativity rejects absolute simultaneity for distant events; different inertial frames can assign different times consistently.",
+                  "repairQuestion": "Can two distant events be simultaneous in one inertial frame but not in another?",
+                  "repairCriteria": "Repaired when the learner says yes, simultaneity of distant events can differ by frame.",
+                  "acceptableRepairAnswers": [
+                    "Yes, simultaneity can be frame-dependent.",
+                    "Different inertial frames may disagree about distant simultaneity."
+                  ],
+                  "sourceSupport": [
+                    "REL_VOKOS",
+                    "REL_EINSTEIN_ONLINE"
+                  ]
+                },
+                {
+                  "id": "M2",
+                  "label": "visual-delay misconception",
+                  "misconception": "Time dilation is only an illusion caused by signal travel time or looking at moving clocks.",
+                  "detectionCues": [
+                    "says it only appears slow",
+                    "claims correction for light delay removes the effect"
+                  ],
+                  "contrastWithExpectations": [
+                    "E3",
+                    "E5"
+                  ],
+                  "correction": "Light travel delay is separate from the relativistic coordinate effect; after correcting observations, inertial frames still compute time dilation.",
+                  "repairQuestion": "If observers correct for light-travel time, does special-relativistic time dilation disappear?",
+                  "repairCriteria": "Repaired when the learner says no, time dilation remains as a frame-dependent measurement, not mere viewing delay.",
+                  "acceptableRepairAnswers": [
+                    "No, it is not just visual delay.",
+                    "Correcting for signal travel time does not remove the relativistic time difference."
+                  ],
+                  "sourceSupport": [
+                    "REL_OPENSTAX_TIME",
+                    "REL_OPENSTAX_CONSEQ"
+                  ]
+                },
+                {
+                  "id": "M3",
+                  "label": "one-sided moving-clock misconception",
+                  "misconception": "Only one spaceship is really moving, so only its clock really slows in all frames.",
+                  "detectionCues": [
+                    "selects one absolute moving observer",
+                    "denies reciprocity between inertial frames"
+                  ],
+                  "contrastWithExpectations": [
+                    "E1",
+                    "E3",
+                    "E4"
+                  ],
+                  "correction": "In inertial relative motion, each frame may treat itself as at rest and the other as moving; resolving reunion comparisons requires the full path and often acceleration or frame changes.",
+                  "repairQuestion": "During constant relative motion, can each inertial observer consistently describe the other ship as moving?",
+                  "repairCriteria": "Repaired when the learner says yes, motion is relative between inertial frames and each can use its own frame consistently.",
+                  "acceptableRepairAnswers": [
+                    "Yes, each can regard itself as at rest.",
+                    "During inertial motion each sees the other as moving relative to them."
+                  ],
+                  "sourceSupport": [
+                    "REL_OPENSTAX_CONSEQ",
+                    "REL_VOKOS"
+                  ]
+                }
+              ],
+              "dialogPolicy": {
+                "allowAnyOrder": true,
+                "requiredExpectations": [
+                  "E1",
+                  "E2",
+                  "E3",
+                  "E4"
+                ],
+                "optionalExpectations": [
+                  "E5"
+                ],
+                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
+                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
+                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
+                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
+              },
+              "summary": "Special relativity says the laws of physics and the speed of light are the same in inertial frames. As a result, elapsed time and simultaneity are frame-dependent: moving clocks are time-dilated for defined event pairs, and distant simultaneity is not absolute. These effects are not illusions, broken clocks, or simple visual-delay artifacts."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
