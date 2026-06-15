@@ -1,0 +1,3371 @@
+{
+  "setspec": {
+    "lessonname": "SPARC Fractions Addition",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "sparc-fractions-addition-example",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "type": "sparc",
+              "documentId": "sparc-fractions-addition",
+              "schema": "tutorscript-sparc/1.0",
+              "unitType": "sparc-fractions-addition",
+              "layout": {
+                "orientation": "problem-canvas",
+                "zones": [
+                  {
+                    "id": "workspace",
+                    "role": "primary-equation-stack",
+                    "region": "left",
+                    "anchor": "top-left",
+                    "flow": "vertical",
+                    "accepts": [
+                      "group"
+                    ],
+                    "ordered": true,
+                    "allowedGroupTypes": [
+                      "equation-row",
+                      "symbol-row",
+                      "action-row",
+                      "navigation-row"
+                    ]
+                  },
+                  {
+                    "id": "skillRail",
+                    "role": "auxiliary-bars",
+                    "region": "right",
+                    "anchor": "top-right",
+                    "flow": "vertical",
+                    "accepts": [
+                      "group"
+                    ],
+                    "ordered": true,
+                    "allowedGroupTypes": [
+                      "skill-row-list"
+                    ]
+                  },
+                  {
+                    "id": "bottomRail",
+                    "role": "hint-and-controls",
+                    "region": "bottom",
+                    "anchor": "bottom",
+                    "flow": "row",
+                    "accepts": [
+                      "group"
+                    ],
+                    "ordered": false,
+                    "allowedGroupTypes": [
+                      "action-row"
+                    ]
+                  },
+                  {
+                    "id": "navigation",
+                    "role": "navigation-strip",
+                    "region": "bottom",
+                    "anchor": "bottom",
+                    "flow": "row",
+                    "accepts": [
+                      "group"
+                    ],
+                    "ordered": false,
+                    "allowedGroupTypes": [
+                      "navigation-row"
+                    ]
+                  }
+                ],
+                "regions": {
+                  "workspace": {
+                    "anchor": "left",
+                    "width": "60%",
+                    "flow": "vertical",
+                    "description": "Primary equation blocks are stacked in one vertical column."
+                  },
+                  "skillRail": {
+                    "anchor": "top-right",
+                    "width": "40%",
+                    "flow": "vertical",
+                    "description": "Progress bars are on the right."
+                  },
+                  "bottomRail": {
+                    "anchor": "bottom",
+                    "flow": "row",
+                    "alignment": "center"
+                  },
+                  "navigation": {
+                    "anchor": "bottom",
+                    "flow": "row",
+                    "alignment": "space-between"
+                  }
+                },
+                "panelMap": {
+                  "workspacePanel": "node-group-equation-known-1",
+                  "skillPanel": "node-group-skill-bars",
+                  "hintPanel": "node-group-hint-controls",
+                  "navPanel": "node-group-navigation"
+                }
+              },
+              "nodes": [
+                {
+                  "id": "node-group-equation-known-1",
+                  "nodeType": "group",
+                  "groupType": "equation-row",
+                  "placement": {
+                    "region": "workspace",
+                    "order": 1
+                  },
+                  "label": "Known fraction line",
+                  "children": [
+                    {
+                      "id": "node-known-1-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-box",
+                      "position": "top",
+                      "value": "1",
+                      "readOnly": true,
+                      "expected": "1"
+                    },
+                    {
+                      "id": "node-known-1-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-box",
+                      "position": "bottom",
+                      "value": "4",
+                      "readOnly": true,
+                      "expected": "4"
+                    },
+                    {
+                      "id": "node-known-1-equals",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "="
+                    },
+                    {
+                      "id": "node-known-1-equivalent-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "style": "green",
+                      "expected": "3",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-known-1-equivalent-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "bottom",
+                      "value": "",
+                      "style": "green",
+                      "expected": "12",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-plus",
+                  "nodeType": "group",
+                  "groupType": "symbol-row",
+                  "placement": {
+                    "region": "workspace",
+                    "order": 2
+                  },
+                  "label": "Addition operator row",
+                  "children": [
+                    {
+                      "id": "node-plus",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "+"
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-equation-known-2",
+                  "nodeType": "group",
+                  "groupType": "equation-row",
+                  "placement": {
+                    "region": "workspace",
+                    "order": 3
+                  },
+                  "label": "Second fraction with blank converted numerator",
+                  "children": [
+                    {
+                      "id": "node-need-convert-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-box",
+                      "position": "top",
+                      "value": "1",
+                      "readOnly": true,
+                      "expected": "1"
+                    },
+                    {
+                      "id": "node-need-convert-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-box",
+                      "position": "bottom",
+                      "value": "6",
+                      "readOnly": true,
+                      "expected": "6"
+                    },
+                    {
+                      "id": "node-need-convert-equals",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "="
+                    },
+                    {
+                      "id": "node-converted-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "expected": "2",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-converted-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "bottom",
+                      "value": "",
+                      "style": "green",
+                      "expected": "12",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-sum",
+                  "nodeType": "group",
+                  "groupType": "equation-row",
+                  "placement": {
+                    "region": "workspace",
+                    "order": 4
+                  },
+                  "label": "Sum line",
+                  "children": [
+                    {
+                      "id": "node-sum-left-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "expected": "2",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-sum-left-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-box",
+                      "position": "bottom",
+                      "value": "12",
+                      "readOnly": true,
+                      "expected": "12"
+                    },
+                    {
+                      "id": "node-sum-plus",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "+"
+                    },
+                    {
+                      "id": "node-sum-right-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "expected": "3",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-sum-right-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "bottom",
+                      "value": "",
+                      "expected": "12",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-sum-equals",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "="
+                    },
+                    {
+                      "id": "node-sum-result-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "expected": "5",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-sum-result-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "bottom",
+                      "value": "",
+                      "expected": "12",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-final-answer",
+                  "nodeType": "group",
+                  "groupType": "equation-row",
+                  "placement": {
+                    "region": "workspace",
+                    "order": 5
+                  },
+                  "label": "Simplified answer",
+                  "children": [
+                    {
+                      "id": "node-final-equals",
+                      "nodeType": "atomic",
+                      "atomType": "operator",
+                      "value": "="
+                    },
+                    {
+                      "id": "node-final-answer-top",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "top",
+                      "value": "",
+                      "expected": "5",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    },
+                    {
+                      "id": "node-final-answer-bottom",
+                      "nodeType": "atomic",
+                      "atomType": "fraction-input",
+                      "position": "bottom",
+                      "value": "",
+                      "expected": "12",
+                      "inputMode": "numeric",
+                      "maxlength": 2
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-skill-bars",
+                  "nodeType": "group",
+                  "groupType": "skill-row-list",
+                  "placement": {
+                    "region": "skillRail",
+                    "order": 1
+                  },
+                  "label": "Skill bars",
+                  "children": [
+                    {
+                      "id": "node-skill-copy-den",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "copy-answer-denominator",
+                      "fill": 70
+                    },
+                    {
+                      "id": "node-skill-reduce-den",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "reduce-denominator",
+                      "fill": 25
+                    },
+                    {
+                      "id": "node-skill-lcd",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "determine-lcd",
+                      "fill": 90
+                    },
+                    {
+                      "id": "node-skill-convert-num",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "convert-numerator",
+                      "fill": 70
+                    },
+                    {
+                      "id": "node-skill-reduce-num",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "reduce-numerator",
+                      "fill": 15
+                    },
+                    {
+                      "id": "node-skill-add-num",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "add-numerators",
+                      "fill": 5
+                    },
+                    {
+                      "id": "node-skill-mult-den",
+                      "nodeType": "atomic",
+                      "atomType": "skill-bar",
+                      "label": "multiply-denominators",
+                      "fill": 45
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-hint-controls",
+                  "nodeType": "group",
+                  "groupType": "action-row",
+                  "placement": {
+                    "region": "bottomRail",
+                    "order": 1
+                  },
+                  "label": "Hint and done controls",
+                  "children": [
+                    {
+                      "id": "node-hint-button",
+                      "nodeType": "atomic",
+                      "atomType": "button",
+                      "label": "Hint",
+                      "variant": "yellow",
+                      "icon": "?"
+                    },
+                    {
+                      "id": "node-hint-message",
+                      "nodeType": "atomic",
+                      "atomType": "message-box",
+                      "value": ""
+                    },
+                    {
+                      "id": "node-done-button",
+                      "nodeType": "atomic",
+                      "atomType": "button",
+                      "label": "Done",
+                      "value": "-1"
+                    }
+                  ]
+                },
+                {
+                  "id": "node-group-navigation",
+                  "nodeType": "group",
+                  "groupType": "navigation-row",
+                  "placement": {
+                    "region": "navigation",
+                    "order": 1
+                  },
+                  "label": "Navigation",
+                  "children": [
+                    {
+                      "id": "node-prev-button",
+                      "nodeType": "atomic",
+                      "atomType": "button",
+                      "label": "Previous"
+                    },
+                    {
+                      "id": "node-next-button",
+                      "nodeType": "atomic",
+                      "atomType": "button",
+                      "label": "Next"
+                    }
+                  ]
+                }
+              ],
+              "behaviorRefs": {
+                "firstNumGiven": "node-known-1-top",
+                "firstDenGiven": "node-known-1-bottom",
+                "firstNumConv": "node-known-1-equivalent-top",
+                "firstDenConv": "node-known-1-equivalent-bottom",
+                "secNumGiven": "node-need-convert-top",
+                "secDenGiven": "node-need-convert-bottom",
+                "secNumConv": "node-converted-top",
+                "secDenConv": "node-converted-bottom",
+                "ansNum1": "node-sum-result-top",
+                "ansDen1": "node-sum-result-bottom",
+                "ansNumFinal1": "node-final-answer-top",
+                "ansDenFinal1": "node-final-answer-bottom",
+                "done": "node-done-button"
+              },
+              "workingMemoryFacts": [
+                {
+                  "factType": "problem",
+                  "slots": {
+                    "type": "fraction-addition",
+                    "firstNumerator": 1,
+                    "firstDenominator": 4,
+                    "secondNumerator": 1,
+                    "secondDenominator": 6,
+                    "finalNumerator": 5,
+                    "finalDenominator": 12
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-known-1-equivalent-bottom",
+                    "selection": "firstDenConv",
+                    "role": "converted-denominator",
+                    "fraction": "first"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-converted-bottom",
+                    "selection": "secDenConv",
+                    "role": "converted-denominator",
+                    "fraction": "second"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-known-1-equivalent-top",
+                    "selection": "firstNumConv",
+                    "role": "converted-numerator",
+                    "fraction": "first"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-converted-top",
+                    "selection": "secNumConv",
+                    "role": "converted-numerator",
+                    "fraction": "second"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-sum-result-top",
+                    "selection": "ansNum1",
+                    "role": "answer-numerator",
+                    "answerStage": "intermediate"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-sum-result-bottom",
+                    "selection": "ansDen1",
+                    "role": "answer-denominator",
+                    "answerStage": "intermediate"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-final-answer-top",
+                    "selection": "ansNumFinal1",
+                    "role": "answer-numerator",
+                    "answerStage": "final"
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "node": "node-final-answer-bottom",
+                    "selection": "ansDenFinal1",
+                    "role": "answer-denominator",
+                    "answerStage": "final"
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "choose-common-denominator",
+                    "index": 1,
+                    "text": "What could you do with the fractions so they have the same denominator?"
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "choose-common-denominator",
+                    "index": 2,
+                    "text": "Choose a denominator that both denominators divide into."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "choose-common-denominator",
+                    "index": 3,
+                    "text": "You may use the least common denominator, 12, or another common denominator such as 24."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "convert-numerators",
+                    "index": 1,
+                    "text": "Divide each original denominator into the common denominator."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "convert-numerators",
+                    "index": 2,
+                    "text": "Multiply the original numerator by that factor."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "convert-numerators",
+                    "index": 3,
+                    "text": "Enter the converted numerators in the highlighted fields."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "add-numerators",
+                    "index": 1,
+                    "text": "When fractions have the same denominator, add the numerators."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "add-numerators",
+                    "index": 2,
+                    "text": "Keep the active common denominator for the intermediate answer."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "reduce-if-needed",
+                    "index": 1,
+                    "text": "The fraction 10/24 must be simplified."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "reduce-if-needed",
+                    "index": 2,
+                    "text": "Divide both numerator and denominator by 2."
+                  }
+                },
+                {
+                  "factType": "fraction-hint-message",
+                  "slots": {
+                    "step": "complete-problem",
+                    "index": 1,
+                    "text": "Click Done when the answer is 5/12."
+                  }
+                },
+                {
+                  "factType": "fraction-source",
+                  "slots": {
+                    "fraction": "first",
+                    "selection": "firstNumConv",
+                    "numerator": 1,
+                    "denominator": 4
+                  }
+                },
+                {
+                  "factType": "fraction-source",
+                  "slots": {
+                    "fraction": "second",
+                    "selection": "secNumConv",
+                    "numerator": 1,
+                    "denominator": 6
+                  }
+                }
+              ],
+              "behavior": {
+                "schema": "sparc-behavior/1.0",
+                "source": {
+                  "format": "CTAT BRD",
+                  "file": "C:\\dev\\mofacts_config\\1416.brd",
+                  "tutorType": "Example-tracing Tutor",
+                  "translationPolicy": "Preserve learner-facing SAI, paths, hints, feedback, and model targets without preserving BRD edge traversal as runtime architecture."
+                },
+                "orderPolicy": "dependency",
+                "responseFormalism": "SAI",
+                "pathActivation": {
+                  "type": "first-matching-valid-denominator-pair",
+                  "selections": [
+                    "firstDenConv",
+                    "secDenConv"
+                  ]
+                },
+                "paths": [
+                  {
+                    "id": "lcd-12",
+                    "label": "Use least common denominator 12",
+                    "preferred": true,
+                    "requiresReduction": false,
+                    "responses": [
+                      {
+                        "selection": "firstDenConv",
+                        "action": "UpdateTextArea",
+                        "input": "12",
+                        "nodeRef": "node-known-1-equivalent-bottom",
+                        "type": "numeric",
+                        "modelTarget": "determine-lcd"
+                      },
+                      {
+                        "selection": "secDenConv",
+                        "action": "UpdateTextArea",
+                        "input": "12",
+                        "nodeRef": "node-converted-bottom",
+                        "type": "numeric",
+                        "modelTarget": "determine-lcd"
+                      },
+                      {
+                        "selection": "firstNumConv",
+                        "action": "UpdateTextArea",
+                        "input": "3",
+                        "nodeRef": "node-known-1-equivalent-top",
+                        "type": "numeric",
+                        "modelTarget": "convert-numerator"
+                      },
+                      {
+                        "selection": "secNumConv",
+                        "action": "UpdateTextArea",
+                        "input": "2",
+                        "nodeRef": "node-converted-top",
+                        "type": "numeric",
+                        "modelTarget": "convert-numerator"
+                      },
+                      {
+                        "selection": "ansNum1",
+                        "action": "UpdateTextArea",
+                        "input": "5",
+                        "nodeRef": "node-sum-result-top",
+                        "type": "numeric",
+                        "modelTarget": "add-numerators"
+                      },
+                      {
+                        "selection": "ansDen1",
+                        "action": "UpdateTextArea",
+                        "input": "12",
+                        "nodeRef": "node-sum-result-bottom",
+                        "type": "numeric",
+                        "modelTarget": "copy-answer-denominator"
+                      },
+                      {
+                        "selection": "done",
+                        "action": "ButtonPressed",
+                        "input": "-1",
+                        "nodeRef": "node-done-button",
+                        "modelTarget": "complete-problem"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "common-denominator-24",
+                    "label": "Use common denominator 24 and reduce",
+                    "preferred": false,
+                    "requiresReduction": true,
+                    "responses": [
+                      {
+                        "selection": "firstDenConv",
+                        "action": "UpdateTextArea",
+                        "input": "24",
+                        "nodeRef": "node-known-1-equivalent-bottom",
+                        "type": "numeric",
+                        "modelTarget": "multiply-denominators"
+                      },
+                      {
+                        "selection": "secDenConv",
+                        "action": "UpdateTextArea",
+                        "input": "24",
+                        "nodeRef": "node-converted-bottom",
+                        "type": "numeric",
+                        "modelTarget": "multiply-denominators"
+                      },
+                      {
+                        "selection": "firstNumConv",
+                        "action": "UpdateTextArea",
+                        "input": "6",
+                        "nodeRef": "node-known-1-equivalent-top",
+                        "type": "numeric",
+                        "modelTarget": "convert-numerator"
+                      },
+                      {
+                        "selection": "secNumConv",
+                        "action": "UpdateTextArea",
+                        "input": "4",
+                        "nodeRef": "node-converted-top",
+                        "type": "numeric",
+                        "modelTarget": "convert-numerator"
+                      },
+                      {
+                        "selection": "ansNum1",
+                        "action": "UpdateTextArea",
+                        "input": "10",
+                        "nodeRef": "node-sum-result-top",
+                        "type": "numeric",
+                        "modelTarget": "add-numerators"
+                      },
+                      {
+                        "selection": "ansDen1",
+                        "action": "UpdateTextArea",
+                        "input": "24",
+                        "nodeRef": "node-sum-result-bottom",
+                        "type": "numeric",
+                        "modelTarget": "copy-answer-denominator"
+                      },
+                      {
+                        "selection": "ansNumFinal1",
+                        "action": "UpdateTextArea",
+                        "input": "5",
+                        "nodeRef": "node-final-answer-top",
+                        "type": "numeric",
+                        "modelTarget": "reduce-numerator"
+                      },
+                      {
+                        "selection": "ansDenFinal1",
+                        "action": "UpdateTextArea",
+                        "input": "12",
+                        "nodeRef": "node-final-answer-bottom",
+                        "type": "numeric",
+                        "modelTarget": "reduce-denominator"
+                      },
+                      {
+                        "selection": "done",
+                        "action": "ButtonPressed",
+                        "input": "-1",
+                        "nodeRef": "node-done-button",
+                        "modelTarget": "complete-problem"
+                      }
+                    ]
+                  }
+                ],
+                "steps": [
+                  {
+                    "id": "choose-common-denominator",
+                    "kind": "path-choice",
+                    "paths": [
+                      "lcd-12",
+                      "common-denominator-24"
+                    ],
+                    "hints": [
+                      "What could you do with the fractions so they have the same denominator?",
+                      "Choose a denominator that both denominators divide into.",
+                      "You may use the least common denominator, 12, or another common denominator such as 24."
+                    ]
+                  },
+                  {
+                    "id": "convert-numerators",
+                    "requiresAnyPath": [
+                      "lcd-12",
+                      "common-denominator-24"
+                    ],
+                    "hints": [
+                      "Divide each original denominator into the common denominator.",
+                      "Multiply the original numerator by that factor.",
+                      "Enter the converted numerators in the highlighted fields."
+                    ]
+                  },
+                  {
+                    "id": "add-numerators",
+                    "requires": [
+                      "convert-numerators"
+                    ],
+                    "hints": [
+                      "When fractions have the same denominator, add the numerators.",
+                      "Keep the active common denominator for the intermediate answer."
+                    ]
+                  },
+                  {
+                    "id": "reduce-if-needed",
+                    "requiresPath": "common-denominator-24",
+                    "hints": [
+                      "The fraction 10/24 must be simplified.",
+                      "Divide both numerator and denominator by 2."
+                    ]
+                  },
+                  {
+                    "id": "complete-problem",
+                    "requiresAnyPath": [
+                      "lcd-12",
+                      "common-denominator-24"
+                    ],
+                    "hints": [
+                      "Click Done when the answer is 5/12."
+                    ]
+                  },
+                  {
+                    "id": "request-hint",
+                    "kind": "hint-request",
+                    "responses": [
+                      {
+                        "selection": "hint",
+                        "action": "ButtonPressed",
+                        "input": "Hint",
+                        "nodeRef": "node-hint-button"
+                      }
+                    ]
+                  }
+                ],
+                "feedback": [
+                  {
+                    "id": "added-denominators-first",
+                    "when": {
+                      "selection": "firstDenConv",
+                      "action": "UpdateTextArea",
+                      "input": "10"
+                    },
+                    "nodeRef": "node-known-1-equivalent-bottom",
+                    "message": "Instead of adding the denominators, choose a denominator that both denominators divide into."
+                  },
+                  {
+                    "id": "added-denominators-second",
+                    "when": {
+                      "selection": "secDenConv",
+                      "action": "UpdateTextArea",
+                      "input": "10"
+                    },
+                    "nodeRef": "node-converted-bottom",
+                    "message": "Instead of adding the denominators, choose a denominator that both denominators divide into."
+                  },
+                  {
+                    "id": "premature-add-numerators",
+                    "when": {
+                      "selection": "ansNum1",
+                      "action": "UpdateTextArea",
+                      "input": "2"
+                    },
+                    "requiresNot": [
+                      "convert-numerators"
+                    ],
+                    "nodeRef": "node-sum-result-top",
+                    "message": "You cannot add the numerators until the fractions have been converted to a common denominator."
+                  }
+                ],
+                "completion": {
+                  "type": "path-complete",
+                  "doneSelection": "done",
+                  "doneAction": "ButtonPressed",
+                  "finalAnswer": {
+                    "numerator": "5",
+                    "denominator": "12"
+                  }
+                },
+                "modelTargets": [
+                  {
+                    "id": "determine-lcd",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 2
+                  },
+                  {
+                    "id": "multiply-denominators",
+                    "productionSet": "fraction-addition"
+                  },
+                  {
+                    "id": "convert-numerator",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 2
+                  },
+                  {
+                    "id": "add-numerators",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 1
+                  },
+                  {
+                    "id": "copy-answer-denominator",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 1
+                  },
+                  {
+                    "id": "reduce-numerator",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 1
+                  },
+                  {
+                    "id": "reduce-denominator",
+                    "productionSet": "fraction-addition",
+                    "opportunities": 1
+                  }
+                ]
+              },
+              "response": {
+                "gradingMode": "sai-path-intent",
+                "evaluation": {
+                  "mathNormalize": true,
+                  "trimWhitespace": true,
+                  "ignoreCase": true
+                },
+                "scoredNodes": [
+                  "node-known-1-equivalent-top",
+                  "node-known-1-equivalent-bottom",
+                  "node-converted-top",
+                  "node-converted-bottom",
+                  "node-sum-result-top",
+                  "node-sum-result-bottom",
+                  "node-final-answer-top",
+                  "node-final-answer-bottom"
+                ],
+                "intentByPath": [
+                  {
+                    "path": "lcd-12",
+                    "intentByNode": [
+                      {
+                        "node": "node-known-1-equivalent-top",
+                        "expected": "3",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-known-1-equivalent-bottom",
+                        "expected": "12",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-converted-top",
+                        "expected": "2",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-converted-bottom",
+                        "expected": "12",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-sum-result-top",
+                        "expected": "5",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-sum-result-bottom",
+                        "expected": "12",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      }
+                    ]
+                  },
+                  {
+                    "path": "common-denominator-24",
+                    "intentByNode": [
+                      {
+                        "node": "node-known-1-equivalent-top",
+                        "expected": "6",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-known-1-equivalent-bottom",
+                        "expected": "24",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-converted-top",
+                        "expected": "4",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-converted-bottom",
+                        "expected": "24",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-sum-result-top",
+                        "expected": "10",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-sum-result-bottom",
+                        "expected": "24",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-final-answer-top",
+                        "expected": "5",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      },
+                      {
+                        "node": "node-final-answer-bottom",
+                        "expected": "12",
+                        "tolerance": 0,
+                        "type": "numeric"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "productionRules": [
+                {
+                  "id": "fractions.choose-common-denominator.hint.1",
+                  "module": "fraction-addition",
+                  "salience": 499,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "hint"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "bound",
+                            "variable": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "literal",
+                            "value": "first"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "interface-state",
+                        "slots": {
+                          "documentId": {
+                            "type": "bound",
+                            "variable": "documentId"
+                          },
+                          "node": {
+                            "type": "literal",
+                            "value": "root"
+                          },
+                          "key": {
+                            "type": "literal",
+                            "value": "hintStage:choose-common-denominator"
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "assert-fact",
+                      "persist": false,
+                      "fact": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "hint",
+                      "template": "What could you do with the fractions so they have the same denominator?",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "root"
+                          }
+                        },
+                        "key": "hintStage:choose-common-denominator",
+                        "value": {
+                          "type": "literal",
+                          "value": 1
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.choose-common-denominator.hint.2",
+                  "module": "fraction-addition",
+                  "salience": 498,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "hint"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "bound",
+                            "variable": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "literal",
+                            "value": "first"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "factType": "interface-state",
+                      "slots": {
+                        "documentId": {
+                          "type": "bound",
+                          "variable": "documentId"
+                        },
+                        "node": {
+                          "type": "literal",
+                          "value": "root"
+                        },
+                        "key": {
+                          "type": "literal",
+                          "value": "hintStage:choose-common-denominator"
+                        },
+                        "value": {
+                          "type": "literal",
+                          "value": 1
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "assert-fact",
+                      "persist": false,
+                      "fact": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "hint",
+                      "template": "Choose a denominator that both denominators divide into.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "root"
+                          }
+                        },
+                        "key": "hintStage:choose-common-denominator",
+                        "value": {
+                          "type": "literal",
+                          "value": 2
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.choose-common-denominator.hint.3",
+                  "module": "fraction-addition",
+                  "salience": 497,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "hint"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "bound",
+                            "variable": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "literal",
+                            "value": "first"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "factType": "interface-state",
+                      "slots": {
+                        "documentId": {
+                          "type": "bound",
+                          "variable": "documentId"
+                        },
+                        "node": {
+                          "type": "literal",
+                          "value": "root"
+                        },
+                        "key": {
+                          "type": "literal",
+                          "value": "hintStage:choose-common-denominator"
+                        },
+                        "value": {
+                          "type": "literal",
+                          "value": 2
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "assert-fact",
+                      "persist": false,
+                      "fact": {
+                        "factType": "hint-selected",
+                        "slots": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "hint",
+                      "template": "Enter '12', the least common denominator between both fractions, in the highlighted field.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "root"
+                          }
+                        },
+                        "key": "hintStage:choose-common-denominator",
+                        "value": {
+                          "type": "literal",
+                          "value": 3
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.choose-first-common-denominator",
+                  "module": "fraction-addition",
+                  "salience": 30,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "bind",
+                          "variable": "selection"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "selection": {
+                          "type": "bound",
+                          "variable": "selection"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "converted-denominator"
+                        },
+                        "fraction": {
+                          "type": "bind",
+                          "variable": "fraction"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "firstDenominator": {
+                          "type": "bind",
+                          "variable": "d1"
+                        },
+                        "secondDenominator": {
+                          "type": "bind",
+                          "variable": "d2"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "lcm",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "d1"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "d2"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "selection"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "firstDenConv"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "input"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "active-common-denominator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          "strategy": {
+                            "type": "literal",
+                            "value": "lcd"
+                          },
+                          "path": {
+                            "type": "literal",
+                            "value": "lcd-12"
+                          },
+                          "denominatorModelTarget": {
+                            "type": "literal",
+                            "value": "determine-lcd"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "variable",
+                            "name": "fraction"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "determine-lcd"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.choose-first-common-denominator.product",
+                  "module": "fraction-addition",
+                  "salience": 30,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "bind",
+                          "variable": "selection"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "selection": {
+                          "type": "bound",
+                          "variable": "selection"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "converted-denominator"
+                        },
+                        "fraction": {
+                          "type": "bind",
+                          "variable": "fraction"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "firstDenominator": {
+                          "type": "bind",
+                          "variable": "d1"
+                        },
+                        "secondDenominator": {
+                          "type": "bind",
+                          "variable": "d2"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "multiply",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "d1"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "d2"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "selection"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "firstDenConv"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "input"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "active-common-denominator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          "strategy": {
+                            "type": "literal",
+                            "value": "product-denominator"
+                          },
+                          "path": {
+                            "type": "literal",
+                            "value": "common-denominator-24"
+                          },
+                          "denominatorModelTarget": {
+                            "type": "literal",
+                            "value": "multiply-denominators"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "variable",
+                            "name": "fraction"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "success",
+                      "template": "Good job!",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "multiply-denominators"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.buggy-added-denominators",
+                  "module": "fraction-addition",
+                  "salience": 40,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "bind",
+                          "variable": "selection"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "bound",
+                          "variable": "selection"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "converted-denominator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "firstDenominator": {
+                          "type": "bind",
+                          "variable": "d1"
+                        },
+                        "secondDenominator": {
+                          "type": "bind",
+                          "variable": "d2"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "d1"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "d2"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "buggy"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "buggy"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "buggy",
+                      "template": "Instead of adding the denominators, choose a denominator both denominators divide into.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.buggy-premature-add-numerators",
+                  "module": "fraction-addition",
+                  "salience": 40,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNum1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNum1"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "answer-numerator"
+                        },
+                        "answerStage": {
+                          "type": "literal",
+                          "value": "intermediate"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "firstNumerator": {
+                          "type": "bind",
+                          "variable": "n1"
+                        },
+                        "secondNumerator": {
+                          "type": "bind",
+                          "variable": "n2"
+                        }
+                      }
+                    },
+                    {
+                      "type": "not",
+                      "pattern": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-numerator"
+                          },
+                          "fraction": {
+                            "type": "literal",
+                            "value": "first"
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "input"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "n1"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "n2"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "buggy"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "buggy"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "buggy",
+                      "template": "You cannot add the numerators until the fractions have been converted to a common denominator.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.fill-second-common-denominator",
+                  "module": "fraction-addition",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "secDenConv"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "secDenConv"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "converted-denominator"
+                        },
+                        "fraction": {
+                          "type": "bind",
+                          "variable": "fraction"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "active-common-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "input"
+                        },
+                        "denominatorModelTarget": {
+                          "type": "bind",
+                          "variable": "kc"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "input"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-denominator"
+                          },
+                          "fraction": {
+                            "type": "variable",
+                            "name": "fraction"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "{kc}"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.copy-answer-denominator",
+                  "module": "fraction-addition",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansDen1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansDen1"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "answer-denominator"
+                        },
+                        "answerStage": {
+                          "type": "literal",
+                          "value": "intermediate"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "active-common-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "input"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "intermediate-denominator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "input"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "copy-answer-denominator"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.convert-numerator",
+                  "module": "fraction-addition",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "bind",
+                          "variable": "selection"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "convertedNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "bound",
+                          "variable": "selection"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "converted-numerator"
+                        },
+                        "fraction": {
+                          "type": "bind",
+                          "variable": "fraction"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "fraction-source",
+                      "slots": {
+                        "fraction": {
+                          "type": "bound",
+                          "variable": "fraction"
+                        },
+                        "numerator": {
+                          "type": "bind",
+                          "variable": "n"
+                        },
+                        "denominator": {
+                          "type": "bind",
+                          "variable": "d"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "active-common-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "D"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "convertedNumerator"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "multiply",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "n"
+                          },
+                          {
+                            "type": "function",
+                            "name": "divide",
+                            "args": [
+                              {
+                                "type": "variable",
+                                "name": "D"
+                              },
+                              {
+                                "type": "variable",
+                                "name": "d"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "convertedNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "converted-numerator"
+                          },
+                          "fraction": {
+                            "type": "variable",
+                            "name": "fraction"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "convertedNumerator"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "convert-numerator"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.add-converted-numerators",
+                  "module": "fraction-addition",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNum1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "sumNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNum1"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "answer-numerator"
+                        },
+                        "answerStage": {
+                          "type": "literal",
+                          "value": "intermediate"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "converted-numerator"
+                        },
+                        "fraction": {
+                          "type": "literal",
+                          "value": "first"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "firstConvertedNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "converted-numerator"
+                        },
+                        "fraction": {
+                          "type": "literal",
+                          "value": "second"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "secondConvertedNumerator"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "sumNumerator"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "firstConvertedNumerator"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "secondConvertedNumerator"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "sumNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "intermediate-numerator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "sumNumerator"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "add-numerators"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.reduce-denominator",
+                  "module": "fraction-addition",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansDenFinal1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "finalDenominator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansDenFinal1"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "answer-denominator"
+                        },
+                        "answerStage": {
+                          "type": "literal",
+                          "value": "final"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-numerator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "intermediateNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "intermediateDenominator"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "gt",
+                      "left": {
+                        "type": "function",
+                        "name": "gcd",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "intermediateNumerator"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "intermediateDenominator"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "finalDenominator"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "divide",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "intermediateDenominator"
+                          },
+                          {
+                            "type": "function",
+                            "name": "gcd",
+                            "args": [
+                              {
+                                "type": "variable",
+                                "name": "intermediateNumerator"
+                              },
+                              {
+                                "type": "variable",
+                                "name": "intermediateDenominator"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "finalDenominator"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "final-denominator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "finalDenominator"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "reduce-denominator"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.reduce-numerator",
+                  "module": "fraction-addition",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNumFinal1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "finalNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "node-role",
+                      "slots": {
+                        "selection": {
+                          "type": "literal",
+                          "value": "ansNumFinal1"
+                        },
+                        "node": {
+                          "type": "bind",
+                          "variable": "node"
+                        },
+                        "role": {
+                          "type": "literal",
+                          "value": "answer-numerator"
+                        },
+                        "answerStage": {
+                          "type": "literal",
+                          "value": "final"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-numerator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "intermediateNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "intermediateDenominator"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "gt",
+                      "left": {
+                        "type": "function",
+                        "name": "gcd",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "intermediateNumerator"
+                          },
+                          {
+                            "type": "variable",
+                            "name": "intermediateDenominator"
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "finalNumerator"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "function",
+                        "name": "divide",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "intermediateNumerator"
+                          },
+                          {
+                            "type": "function",
+                            "name": "gcd",
+                            "args": [
+                              {
+                                "type": "variable",
+                                "name": "intermediateNumerator"
+                              },
+                              {
+                                "type": "variable",
+                                "name": "intermediateDenominator"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "variable",
+                            "name": "node"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "variable",
+                          "name": "finalNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "final-numerator"
+                          },
+                          "value": {
+                            "type": "variable",
+                            "name": "finalNumerator"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "reduce-numerator"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.complete-problem.unreduced",
+                  "module": "fraction-addition",
+                  "salience": 5,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "done"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "doneInput"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "finalNumerator": {
+                          "type": "bind",
+                          "variable": "finalNumerator"
+                        },
+                        "finalDenominator": {
+                          "type": "bind",
+                          "variable": "finalDenominator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-numerator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "finalNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "intermediate-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "finalDenominator"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "doneInput"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": -1
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "completed"
+                          },
+                          "value": {
+                            "type": "literal",
+                            "value": true
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "success",
+                      "template": "You're all done with the problem.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "complete-problem"
+                    }
+                  ]
+                },
+                {
+                  "id": "fractions.complete-problem.reduced",
+                  "module": "fraction-addition",
+                  "salience": 5,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "done"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "doneInput"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "problem",
+                      "slots": {
+                        "type": {
+                          "type": "literal",
+                          "value": "fraction-addition"
+                        },
+                        "finalNumerator": {
+                          "type": "bind",
+                          "variable": "expectedNumerator"
+                        },
+                        "finalDenominator": {
+                          "type": "bind",
+                          "variable": "expectedDenominator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "final-numerator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "expectedNumerator"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "model",
+                      "slots": {
+                        "name": {
+                          "type": "literal",
+                          "value": "final-denominator"
+                        },
+                        "value": {
+                          "type": "bind",
+                          "variable": "expectedDenominator"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "function",
+                        "name": "add",
+                        "args": [
+                          {
+                            "type": "variable",
+                            "name": "doneInput"
+                          },
+                          {
+                            "type": "literal",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": -1
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "assert-fact",
+                      "fact": {
+                        "factType": "model",
+                        "slots": {
+                          "name": {
+                            "type": "literal",
+                            "value": "completed"
+                          },
+                          "value": {
+                            "type": "literal",
+                            "value": true
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "success",
+                      "template": "You're all done with the problem.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-hint-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "complete-problem"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

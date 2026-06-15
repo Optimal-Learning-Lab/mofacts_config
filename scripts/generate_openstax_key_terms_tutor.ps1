@@ -143,10 +143,10 @@ $tdfDoc = [ordered]@{
       userselect = 'true'
       lfparameter = '0.85'
       enableAudioPromptAndFeedback = 'true'
-      speechAPIKey = 'AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE'
+      speechAPIKey = 'YOUR_GOOGLE_SPEECH_API_KEY'
       audioInputEnabled = 'true'
       audioPromptMode = 'feedback'
-      textToSpeechAPIKey = 'AIzaSyCDfGq40cf6H1N_KepDtjPNfWEf4dZ_fSE'
+      textToSpeechAPIKey = 'YOUR_GOOGLE_TTS_API_KEY'
       speechIgnoreOutOfGrammarResponses = 'true'
     }
     unit = @(

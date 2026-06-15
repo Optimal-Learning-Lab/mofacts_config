@@ -1,0 +1,28 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "SPARC Fractions Addition",
+      "stimulusfile": "SPARC_Fractions_Addition_stims.json",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "shuffleclusters": "0"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>SPARC Fractions Addition</h2><p>This is a concrete TutorScript/SPARC package instance aligned to the CTAT 1416 fraction-addition behavior. It keeps SPARC nodes as the document units, adds behaviorRefs for CTAT SAI labels, and represents behavior declaratively with dependency steps, path-scoped responses, hints, feedback, completion, and model targets.</p><p>Learners may use either the least common denominator path (12) or the common-denominator path (24) followed by reduction to 5/12.</p>"
+      },
+      {
+        "unitname": "Fractions Practice",
+        "sparcsession": {
+          "clusterlist": "0",
+          "unitMode": "distance"
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>Fractions practice complete.</strong> This package is ready as an SPARC goal unit and can be bound to a SPARC component runtime.</p>"
+      }
+    ]
+  }
+}
