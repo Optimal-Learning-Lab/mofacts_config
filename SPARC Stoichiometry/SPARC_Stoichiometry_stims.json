@@ -127,6 +127,22 @@
                     "region": "workPanel",
                     "order": 1
                   },
+                  "layout": {
+                    "visualPreset": "dimensional-analysis",
+                    "glue": {
+                      "mode": "term-chain",
+                      "flow": "horizontal",
+                      "wideContent": "shrink",
+                      "columns": [
+                        "given",
+                        "conversion",
+                        "workspace",
+                        "workspace",
+                        "result"
+                      ]
+                    },
+                    "density": "compact"
+                  },
                   "label": "Dimensional analysis terms",
                   "children": [
                     {
@@ -201,6 +217,13 @@
                       "nodeType": "group",
                       "groupType": "term-row",
                       "label": "Given term",
+                      "layout": {
+                        "glue": {
+                          "mode": "term-column",
+                          "role": "given"
+                        },
+                        "density": "compact"
+                      },
                       "children": [
                         {
                           "id": "node-term-0-label",
@@ -310,6 +333,13 @@
                       "nodeType": "group",
                       "groupType": "term-row",
                       "label": "Unit conversion term",
+                      "layout": {
+                        "glue": {
+                          "mode": "term-column",
+                          "role": "conversion"
+                        },
+                        "density": "compact"
+                      },
                       "children": [
                         {
                           "id": "node-term-1-label",
@@ -414,6 +444,13 @@
                       "nodeType": "group",
                       "groupType": "term-row",
                       "label": "Unused term 2",
+                      "layout": {
+                        "glue": {
+                          "mode": "term-column",
+                          "role": "workspace"
+                        },
+                        "density": "compact"
+                      },
                       "children": [
                         {
                           "id": "node-term-2-label",
@@ -521,6 +558,13 @@
                       "nodeType": "group",
                       "groupType": "term-row",
                       "label": "Unused term 3",
+                      "layout": {
+                        "glue": {
+                          "mode": "term-column",
+                          "role": "workspace"
+                        },
+                        "density": "compact"
+                      },
                       "children": [
                         {
                           "id": "node-term-3-label",
@@ -628,6 +672,13 @@
                       "nodeType": "group",
                       "groupType": "term-row",
                       "label": "Result term",
+                      "layout": {
+                        "glue": {
+                          "mode": "term-column",
+                          "role": "result"
+                        },
+                        "density": "compact"
+                      },
                       "children": [
                         {
                           "id": "node-term-4-label",
@@ -737,6 +788,12 @@
                     "region": "hintPanel",
                     "order": 1
                   },
+                  "layout": {
+                    "visualPreset": "corner-hint",
+                    "glue": {
+                      "mode": "hint-corner"
+                    }
+                  },
                   "label": "Hint window",
                   "children": [
                     {
@@ -773,6 +830,12 @@
                   "placement": {
                     "region": "footer",
                     "order": 1
+                  },
+                  "layout": {
+                    "glue": {
+                      "mode": "footer-actions",
+                      "alignment": "end"
+                    }
                   },
                   "label": "Submit controls",
                   "children": [

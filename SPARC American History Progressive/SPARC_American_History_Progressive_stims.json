@@ -24,15 +24,8 @@
                     "ordered": true
                   },
                   {
-                    "id": "activityBox",
-                    "role": "current-activity",
-                    "region": "left",
-                    "flow": "vertical",
-                    "ordered": true
-                  },
-                  {
                     "id": "feedbackBox",
-                    "role": "feedback-and-remediation",
+                    "role": "transient-feedback",
                     "region": "right",
                     "flow": "vertical",
                     "ordered": true
@@ -41,10 +34,6 @@
                 "frontiers": {
                   "main": {
                     "boxId": "chapterFlowBox",
-                    "status": "open"
-                  },
-                  "activity": {
-                    "boxId": "activityBox",
                     "status": "open"
                   }
                 }
@@ -69,65 +58,39 @@
                 },
                 {
                   "id": "node-mc-problem",
-                  "nodeType": "group",
-                  "groupType": "activity-row",
+                  "nodeType": "semantic",
+                  "semanticType": "multiple-choice",
                   "placement": {
-                    "region": "activityBox",
-                    "order": 1
+                    "region": "chapterFlowBox",
+                    "order": 2
                   },
                   "label": "Multiple choice",
-                  "children": [
-                    {
-                      "id": "node-mc-question",
-                      "nodeType": "atomic",
-                      "atomType": "text-block",
-                      "value": "Which event marked the beginning of open fighting in the American Revolution?"
-                    },
+                  "prompt": {
+                    "id": "node-mc-question",
+                    "value": "Which event marked the beginning of open fighting in the American Revolution?"
+                  },
+                  "feedbackNodeId": "node-mc-feedback-message",
+                  "answerGroupId": "node-mc-answers",
+                  "choices": [
                     {
                       "id": "node-choice-lexington-concord",
-                      "nodeType": "atomic",
-                      "atomType": "button",
                       "label": "Lexington and Concord",
-                      "value": "Lexington and Concord",
-                      "variant": "green"
+                      "value": "Lexington and Concord"
                     },
                     {
                       "id": "node-choice-bunker-hill",
-                      "nodeType": "atomic",
-                      "atomType": "button",
                       "label": "Bunker Hill",
                       "value": "Bunker Hill"
                     },
                     {
                       "id": "node-choice-declaration",
-                      "nodeType": "atomic",
-                      "atomType": "button",
                       "label": "Declaration of Independence",
                       "value": "Declaration of Independence"
                     },
                     {
                       "id": "node-choice-saratoga",
-                      "nodeType": "atomic",
-                      "atomType": "button",
                       "label": "Saratoga",
                       "value": "Saratoga"
-                    }
-                  ]
-                },
-                {
-                  "id": "node-feedback-panel",
-                  "nodeType": "group",
-                  "groupType": "feedback-panel",
-                  "placement": {
-                    "region": "feedbackBox",
-                    "order": 1
-                  },
-                  "children": [
-                    {
-                      "id": "node-feedback-message",
-                      "nodeType": "atomic",
-                      "atomType": "message-box",
-                      "value": ""
                     }
                   ]
                 }
@@ -192,14 +155,6 @@
                     "boxId": "chapterFlowBox",
                     "status": "open"
                   }
-                },
-                {
-                  "factType": "frontier",
-                  "slots": {
-                    "name": "activity",
-                    "boxId": "activityBox",
-                    "status": "open"
-                  }
                 }
               ],
               "productionRules": [
@@ -238,7 +193,7 @@
                     {
                       "type": "message",
                       "messageType": "success",
-                      "template": "Correct. Lexington and Concord were the first open clashes of the Revolution.",
+                      "template": "Correct.",
                       "target": {
                         "documentId": {
                           "type": "variable",
@@ -246,23 +201,32 @@
                         },
                         "nodeId": {
                           "type": "literal",
-                          "value": "node-feedback-message"
+                          "value": "node-mc-feedback-message"
                         }
                       }
                     },
                     {
                       "type": "append-node",
-                      "frontier": "activity",
-                      "boxId": "activityBox",
+                      "frontier": "main",
+                      "boxId": "chapterFlowBox",
                       "node": {
                         "id": "node-challenge-yorktown",
                         "nodeType": "group",
                         "groupType": "activity-row",
                         "placement": {
-                          "region": "activityBox"
+                          "region": "chapterFlowBox"
                         },
                         "label": "Challenge",
                         "children": [
+                          {
+                            "id": "node-challenge-feedback-message",
+                            "nodeType": "atomic",
+                            "atomType": "message-box",
+                            "value": "",
+                            "layout": {
+                              "role": "header-feedback"
+                            }
+                          },
                           {
                             "id": "node-challenge-question",
                             "nodeType": "atomic",
@@ -321,7 +285,7 @@
                     {
                       "type": "message",
                       "messageType": "feedback",
-                      "template": "Bunker Hill came later in 1775. Look back at the first clashes.",
+                      "template": "Incorrect.",
                       "target": {
                         "documentId": {
                           "type": "variable",
@@ -329,23 +293,37 @@
                         },
                         "nodeId": {
                           "type": "literal",
-                          "value": "node-feedback-message"
+                          "value": "node-mc-feedback-message"
                         }
                       }
                     },
                     {
-                      "type": "append-node",
+                      "type": "append-node-if-missing",
                       "frontier": "main",
                       "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
                       "node": {
-                        "id": "node-remediation-bunker-hill",
-                        "nodeType": "atomic",
-                        "atomType": "text-block",
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
                         "placement": {
                           "region": "chapterFlowBox"
                         },
-                        "value": "Remediation: Bunker Hill was an early major battle, but the war had already begun at Lexington and Concord."
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
                       }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "Bunker Hill was an early major battle, but the war had already begun at Lexington and Concord."
                     }
                   ]
                 },
@@ -384,7 +362,7 @@
                     {
                       "type": "message",
                       "messageType": "feedback",
-                      "template": "The Declaration came in 1776, after fighting had already started.",
+                      "template": "Incorrect.",
                       "target": {
                         "documentId": {
                           "type": "variable",
@@ -392,23 +370,37 @@
                         },
                         "nodeId": {
                           "type": "literal",
-                          "value": "node-feedback-message"
+                          "value": "node-mc-feedback-message"
                         }
                       }
                     },
                     {
-                      "type": "append-node",
+                      "type": "append-node-if-missing",
                       "frontier": "main",
                       "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
                       "node": {
-                        "id": "node-remediation-declaration",
-                        "nodeType": "atomic",
-                        "atomType": "text-block",
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
                         "placement": {
                           "region": "chapterFlowBox"
                         },
-                        "value": "Remediation: The Declaration of Independence stated the colonies' break with Britain, but it was not the first fighting."
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
                       }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "The Declaration of Independence stated the colonies' break with Britain, but it was not the first fighting."
                     }
                   ]
                 },
@@ -447,7 +439,7 @@
                     {
                       "type": "message",
                       "messageType": "feedback",
-                      "template": "Saratoga was a turning point in 1777, not the start of open fighting.",
+                      "template": "Incorrect.",
                       "target": {
                         "documentId": {
                           "type": "variable",
@@ -455,23 +447,37 @@
                         },
                         "nodeId": {
                           "type": "literal",
-                          "value": "node-feedback-message"
+                          "value": "node-mc-feedback-message"
                         }
                       }
                     },
                     {
-                      "type": "append-node",
+                      "type": "append-node-if-missing",
                       "frontier": "main",
                       "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
                       "node": {
-                        "id": "node-remediation-saratoga",
-                        "nodeType": "atomic",
-                        "atomType": "text-block",
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
                         "placement": {
                           "region": "chapterFlowBox"
                         },
-                        "value": "Remediation: Saratoga helped bring France into the war, but Lexington and Concord came first."
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
                       }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "Saratoga helped bring France into the war, but Lexington and Concord came first."
                     }
                   ]
                 },
@@ -530,7 +536,7 @@
                     {
                       "type": "message",
                       "messageType": "success",
-                      "template": "Correct. The Battle of Yorktown in 1781 effectively ended major fighting.",
+                      "template": "Correct.",
                       "target": {
                         "documentId": {
                           "type": "variable",
@@ -538,13 +544,75 @@
                         },
                         "nodeId": {
                           "type": "literal",
-                          "value": "node-feedback-message"
+                          "value": "node-challenge-feedback-message"
                         }
                       }
                     },
                     {
                       "type": "credit",
                       "kc": "american-revolution-yorktown"
+                    }
+                  ]
+                },
+                {
+                  "id": "history.challenge.incorrect.yorktown",
+                  "module": "american-history-progressive",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "challengeYorktown"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "challengeInput"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "neq",
+                      "left": {
+                        "type": "variable",
+                        "name": "challengeInput"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Yorktown"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "Incorrect.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-challenge-feedback-message"
+                        }
+                      }
                     }
                   ]
                 }
