@@ -1,0 +1,574 @@
+{
+  "setspec": {
+    "lessonname": "SPARC Intro Stats - Module 33 - Measures of Fit",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "sparc-intro-stats-variables",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "type": "sparc",
+              "documentId": "sparc-intro-stats-module-33-measures-of-fit",
+              "schema": "tutorscript-sparc/1.0",
+              "unitType": "sparc-intro-stats-variables",
+              "layout": {
+                "orientation": "document",
+                "zones": [
+                  {
+                    "id": "document",
+                    "role": "contiguous-page",
+                    "region": "center",
+                    "flow": "vertical",
+                    "accepts": [
+                      "group",
+                      "atomic"
+                    ],
+                    "ordered": true
+                  }
+                ],
+                "regions": {
+                  "document": {
+                    "anchor": "center",
+                    "flow": "vertical",
+                    "width": "100%"
+                  }
+                }
+              },
+              "nodes": [
+                {
+                  "id": "node-page-141803",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Introduction to Measures of Fit",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-141803-h1-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>Measures of Fit in Statistical Modeling</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In statistics, a model is a simplified representation of reality, constructed to understand and predict aspects of the real world based on patterns found in data. These models range from simple linear regressions predicting one variable from another to complex machine learning algorithms forecasting outcomes based on multiple inputs. In inferential statistics, models play a crucial role as they allow researchers to make predictions and inferences about a population based on sample data.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In the context of statistical modeling, the term &quot;fit&quot; is a metaphor that compares the relationship between a model and the data it represents to a piece of clothing on a person. Just as a well-fitted garment sits comfortably and appropriately on an individual, accentuating the right features without being overly tight or loose, a well-fitted model accurately captures the essential patterns and characteristics of the data without overfitting or underfitting. Overfitting occurs when a model is too complex, capturing noise along with the signal, much like a garment that is too tight and restricts movement. Underfitting, on the other hand, happens when a model is too simple, missing significant trends or patterns in the data, akin to wearing a garment that is too loose and fails to provide a good shape. Thus, measures of fit help statisticians ensure that their model &quot;fits&quot; the data just right, providing an optimal balance that allows for effective prediction and analysis. </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Measures of fit evaluate how well these statistical models align with the actual data. They are essential because they provide insight into the effectiveness of a model in capturing the underlying data patterns. Effective measures of fit can help confirm the validity of inferences drawn from the model, ensuring that conclusions about the population are reliable and accurate. By assessing the model&#39;s fit, analysts can determine whether the model is appropriate for the data and its intended use, thus guiding decisions on model selection, model refinement, and the interpretation of model outputs.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Here&#39;s a bulleted list of examples of models that are specifically designed to minimize error:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Linear Regression Models</strong>: Aim to minimize the sum of the squared differences between observed values and values predicted by the model (least squares).</p></li><li><p><strong>Logistic Regression Models</strong>: Minimize the deviation between observed class labels and model predictions, often using methods like maximum likelihood estimation.</p></li><li><p><strong>Support Vector Machines (SVM)</strong>: Construct a hyperplane in a high-dimensional space to minimize the error margin between different class labels.</p></li><li><p><strong>Neural Networks</strong>: Use a loss function, such as mean squared error for regression tasks or cross-entropy loss for classification, to adjust the weights in the network to minimize prediction errors.</p></li><li><p><strong>Decision Trees and Random Forests</strong>: These models aim to minimize error by reducing the Gini impurity or entropy in classification tasks and mean squared error in regression.</p></li><li><p><strong>Ridge and Lasso Regression</strong>: These are extensions of linear regression that include regularization terms in their loss functions to minimize overfitting alongside the prediction error.</p></li><li><p><strong>Ensemble Methods (e.g., Boosting and Bagging)</strong>: Combine multiple models to decrease variance and bias, thus minimizing overall prediction error.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Each of these models incorporates a specific strategy for error reduction, making them suitable for various data types and predictive modeling tasks.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-h2-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>R-Squared and Adjusted R-Squared: Assessing Model Fit</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>R-Squared (Coefficient of Determination)</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>R-squared quantifies the percentage of the variance in the dependent variable that is predictable from the independent variables. It is a key metric used to measure the &quot;fit&quot; of a model:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p> <strong>Definition and Formula</strong>: R-squared is defined as <details class=\"oli-popup\"><summary>hover</summary><p></p></details><img src=\"R^2 = 1 - \\frac{SS_{\\text{res}}}{SS_{\\text{tot}}}\" alt=\"\"> Here, <em>SS</em>res​ (sum of squares of residuals) is the variability left unexplained by the model, and <em>SS</em>tot​ (total sum of squares) measures the total variability in the dependent variable.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Interpretation</strong>: An R-squared value close to 1 indicates that the model explains a large proportion of the variance in the dependent variable, signifying a strong fit. Values near 0 indicate a poor fit, suggesting that the model fails to capture the data&#39;s underlying trends.</p></li><li><p><strong>Limitations</strong>: R-squared does not adjust for the number of predictors in the model, potentially leading to overestimations of the fit in models with many variables.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Adjusted R-Squared</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Adjusted R-squared modifies the R-squared to account for the number of predictors in the model, providing a more accurate assessment of model fit:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Definition and Calculation</strong>: Adjusted R-squared is calculated as <img src=\"R^2_{\\text{adj}} = 1 - \\left(\\frac{(1-R^2)(n-1)}{n-p-1}\\right)\" alt=\"\">where <em>n</em> is the sample size and <em>p</em> is the number of predictors.</p></li><li><p><strong>Interpretation</strong>: Adjusted R-squared compensates for the model complexity, decreasing when a predictor does not improve the model&#39;s predictive capability sufficiently. It is therefore a more reliable indicator of model fit, particularly when comparing models with different numbers of predictors.</p></li><li><p><strong>Application</strong>: This measure helps to prevent the misleading influence of adding irrelevant predictors, making it crucial for model selection and validation.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-h2-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Mean Squared Error (MSE)</strong>: MSE quantifies the average of the squared differences between predicted values and observed values. It reflects how closely a model’s predictions match the actual outcomes across the dataset.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Where:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><em>Yi</em>​ are the observed values,</p></li><li><p><em>Y</em>^<em>i</em>​ are the predicted values by the model,</p></li><li><p><em>n</em> is the number of observations.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 19
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-20",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Root Mean Squared Error (RMSE)</strong>: RMSE is the square root of MSE, providing an average measure of the errors in the same units as the response variable. It offers a direct interpretation of the average error magnitude.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 20
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-21",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Differences between MSE and RMSE</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 21
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-22",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Units</strong>: MSE is measured in squared units of the output variable, complicating direct interpretations, especially when comparing across different datasets. RMSE, by taking the square root, reverts these units back to the original scale of the data.</p></li><li><p><strong>Interpretability</strong>: Both metrics emphasize larger errors due to the squaring of error terms. RMSE is generally preferred for its direct interpretability because it reflects average error in the same units as the data.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 22
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-p-23",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Applications and Interpretation</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 23
+                      }
+                    },
+                    {
+                      "id": "node-page-141803-ul-24",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Model Comparison</strong>: Both MSE and RMSE are crucial for comparing the performance of statistical models. Lower values indicate a model that better fits the data, with RMSE often being more useful due to its direct interpretability.</p></li><li><p><strong>Performance Metrics</strong>: They are widely used in regression analysis to quantify how far a model’s predictions deviate from actual values. They serve as standard measures for evaluating the accuracy of predictive models.</p></li><li><p><strong>Diagnostic Use</strong>: High values of MSE or RMSE can indicate problems such as model underfitting, whereas very low values might suggest overfitting.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 24
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "141803",
+                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-141804",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Model Comparison",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-141804-h1-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>Example: Predicting House Prices</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Suppose we have a dataset containing house prices as the outcome variable and several predictors such as the number of bedrooms, number of bathrooms, square footage, and age of the house.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Model 1: Simple Linear Regression</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ul-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Predictors</strong>: Number of bedrooms</p></li><li><p><strong>Model</strong>: Price=<em>β</em>0​+<em>β</em>1​×Bedrooms</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Model 2: Multiple Linear Regression</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ul-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Predictors</strong>: Number of bedrooms, number of bathrooms, square footage</p></li><li><p><strong>Model</strong>: Price=<em>β</em>0​+<em>β</em>1​×Bedrooms+<em>β</em>2​×Bathrooms+<em>β</em>3​×SquareFootage</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-h3-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Implementation in R</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Here’s a brief example of how you might implement this in R:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-code-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><pre><code># Example DataFrame\ndata &lt;- data.frame(\n  Price = c(200000, 300000, 250000, 450000, 320000),\n  Bedrooms = c(3, 4, 2, 5, 4),\n  Bathrooms = c(2, 3, 2, 4, 3),\n  SquareFootage = c(2000, 2500, 1800, 3000, 2400)\n)\n\n# Model 1: Simple Linear Regression\nmodel1 &lt;- lm(Price ~ Bedrooms, data = data)\n\n# Model 2: Multiple Linear Regression\nmodel2 &lt;- lm(Price ~ Bedrooms + Bathrooms + SquareFootage, data = data)</code></pre></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In this R example:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ol-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p>We create a data frame called <code>data</code> with the same values as in the Python example. The <code>data.frame()</code> function is used to create the data frame, and the <code>c()</code> function is used to specify the values for each column.</p></li><li><p>For Model 1, we fit a simple linear regression model using the <code>lm()</code> function. The formula <code>Price ~ Bedrooms</code> specifies that we want to predict the <code>Price</code> variable using the <code>Bedrooms</code> variable. The <code>data</code> argument specifies the data frame to be used.</p></li><li><p>For Model 2, we fit a multiple linear regression model using the <code>lm()</code> function. The formula <code>Price ~ Bedrooms + Bathrooms + SquareFootage</code> specifies that we want to predict the <code>Price</code> variable using the <code>Bedrooms</code>, <code>Bathrooms</code>, and <code>SquareFootage</code> variables. Again, the <code>data</code> argument specifies the data frame to be used.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Note that in R, we don&#39;t need to explicitly add a constant term for the intercept, as it is included by default in the <code>lm()</code> function.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-h3-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Using the Likelihood Ratio Test (LRT)</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>If the models are nested — for instance, if Model 1 can be considered a restricted version of Model 2 where the coefficients for bathrooms and square footage are constrained to zero — you can perform an LRT:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-h4-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>LRT Calculation</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ol-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Compute the Test Statistic</strong>: <img src=\"D = -2(\\ln(\\text{Likelihood of simpler model}) - \\ln(\\text{Likelihood of complex model}))\" alt=\"\">  Where <em>D</em> is the test statistic for the likelihood ratio test. ln⁡(Likelihood of simpler model)ln(Likelihood of simpler model) is the natural logarithm of the likelihood of the simpler model. ln⁡(Likelihood of complex model) ln(Likelihood of complex model) is the natural logarithm of the likelihood of the more complex model.</p></li><li><p><strong>Distribute Under the Null Hypothesis</strong>: The test statistic <em>D</em> follows a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters between the complex and simpler model.</p></li><li><p></p><figure><pre><code># Assuming &#39;model1&#39; and &#39;model2&#39; are already fitted\n\n# Calculate test statistic\nlr_stat &lt;- 2 * (logLik(model2) - logLik(model1))\n\n# Degrees of freedom: Number of additional parameters in Model 2\ndf &lt;- length(coef(model2)) - length(coef(model1))\n\n# Calculate p-value using the chi-square distribution\np_value &lt;- 1 - pchisq(lr_stat, df)\n\ncat(&quot;LR Statistic:&quot;, lr_stat, &quot;\\n&quot;)\ncat(&quot;p-value:&quot;, p_value, &quot;\\n&quot;)</code></pre></figure><p>In this R example:</p><ol><li><p>We assume that <code>model1</code> and <code>model2</code> are already fitted models, such as linear regression models or generalized linear models.</p></li><li><p>We calculate the likelihood ratio test statistic by taking twice the difference in log-likelihoods between <code>model2</code> and <code>model1</code>. In R, we can obtain the log-likelihood of a model using the <code>logLik()</code> function.</p></li><li><p>We calculate the degrees of freedom by taking the difference in the number of parameters between <code>model2</code> and <code>model1</code>. In R, we can get the number of parameters using the <code>length(coef())</code> function.</p></li><li><p>We calculate the p-value using the cumulative distribution function of the chi-square distribution. In R, we use the <code>pchisq()</code> function with the likelihood ratio statistic and degrees of freedom, and subtract the result from 1 to obtain the p-value.</p></li><li><p>Finally, we print the likelihood ratio statistic and the p-value using the <code>cat()</code> function.</p></li></ol></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-h3-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Interpretation</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ul-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>p-value</strong>: If the p-value is low (commonly &lt; 0.05), we reject the null hypothesis that Model 1 fits the data as well as Model 2. This would suggest that the additional parameters in Model 2 are justified.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>By these methods, you can compare two models, determining not just the best fitting model but also quantitatively testing the significance of the improvement in fit provided by the additional predictors in the more complex model.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 19
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-h2-20",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>Assumptions</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 20
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-21",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>The Likelihood Ratio Test (LRT) is a statistical test used to compare the goodness of fit of two nested models. The test makes several assumptions, which are as follows:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 21
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-ol-22",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p>Nested models: The two models being compared must be nested, meaning that one model (the null model) is a special case of the other model (the alternative model).</p></li><li><p>Independence: The observations in the dataset must be independent of each other.</p></li><li><p>Sample size: The sample size should be large enough for the test to be valid. Small sample sizes may lead to inaccurate results.</p></li><li><p>Identifiability: The parameters of the models must be identifiable, meaning that there should be a unique set of parameter values that maximize the likelihood function.</p></li><li><p>Parametric models: The models being compared must be parametric, meaning that they are described by a finite set of parameters.</p></li><li><p>Regularity conditions: The likelihood function should satisfy certain regularity conditions, such as being continuous and differentiable with respect to the parameters.</p></li><li><p>Correct specification: The models being compared should be correctly specified, meaning that they should include all relevant variables and have the correct functional form.</p></li><li><p>No perfect multicollinearity: There should be no perfect multicollinearity among the predictor variables in the models.</p></li><li><p>Asymptotic distribution: As the sample size increases, the test statistic (-2 times the log-likelihood ratio) follows a chi-square distribution with degrees of freedom equal to the difference in the number of parameters between the two models.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 22
+                      }
+                    },
+                    {
+                      "id": "node-page-141804-p-23",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>It is important to note that violations of these assumptions may lead to inaccurate or unreliable results from the Likelihood Ratio Test.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 23
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "141804",
+                    "purpose": "foundation"
+                  }
+                }
+              ],
+              "behavior": {
+                "steps": []
+              },
+              "response": {
+                "gradingMode": "production-rules",
+                "intentByNode": []
+              },
+              "productionRules": [],
+              "source": {
+                "conversion": "OLI flat JSON export to SPARC document page",
+                "moduleId": "97431",
+                "moduleTitle": "Measures of Fit",
+                "pageIds": [
+                  "141803",
+                  "141804"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
