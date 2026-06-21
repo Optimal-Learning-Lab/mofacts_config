@@ -1,0 +1,28 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "SPARC Stoichiometry",
+      "stimulusfile": "SPARC_Stoichiometry_stims.json",
+      "userselect": "true",
+      "lfparameter": "0.85",
+      "shuffleclusters": "0"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>SPARC Stoichiometry</h2><p>This is a concrete TutorScript/SPARC package instance aligned to the CTAT prob-stoich-1 behavior. It asks learners to convert 10.6 mg of COH4 to grams using a dimensional-analysis conversion ratio, cancellation, and a result of 0.0106 g COH4.</p><p>The stimulus keeps SPARC nodes as the document units, adds behaviorRefs for CTAT SAI labels, and represents behavior declaratively with chemistry terms, dependency steps, accepted variants, hints, feedback, completion, and model targets.</p>"
+      },
+      {
+        "unitname": "Stoichiometry Practice",
+        "sparcsession": {
+          "clusterlist": "0",
+          "unitMode": "distance"
+        }
+      },
+      {
+        "unitname": "Completion",
+        "unitinstructions": "<p><strong>Stoichiometry practice complete.</strong> This package is ready as an SPARC goal unit and can be bound to a SPARC component runtime.</p>"
+      }
+    ]
+  }
+}

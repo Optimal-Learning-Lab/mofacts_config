@@ -1,0 +1,642 @@
+{
+  "setspec": {
+    "lessonname": "SPARC American History Progressive",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "sparc-american-history-progressive-example",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "type": "sparc",
+              "documentId": "sparc-american-history-progressive",
+              "schema": "tutorscript-sparc/1.0",
+              "unitType": "sparc-progressive-chapter",
+              "layout": {
+                "orientation": "progressive-document",
+                "zones": [
+                  {
+                    "id": "chapterFlowBox",
+                    "role": "reading-and-realized-path",
+                    "region": "left",
+                    "flow": "vertical",
+                    "ordered": true
+                  },
+                  {
+                    "id": "feedbackBox",
+                    "role": "transient-feedback",
+                    "region": "right",
+                    "flow": "vertical",
+                    "ordered": true
+                  }
+                ],
+                "frontiers": {
+                  "main": {
+                    "boxId": "chapterFlowBox",
+                    "status": "open"
+                  }
+                }
+              },
+              "nodes": [
+                {
+                  "id": "node-intro-paragraph",
+                  "nodeType": "group",
+                  "groupType": "text-panel",
+                  "placement": {
+                    "region": "chapterFlowBox",
+                    "order": 1
+                  },
+                  "children": [
+                    {
+                      "id": "node-intro-text",
+                      "nodeType": "atomic",
+                      "atomType": "text-block",
+                      "value": "In April 1775, tensions between British troops and colonial militia turned into open fighting. The first clashes at Lexington and Concord became a symbolic starting point for the American Revolution."
+                    }
+                  ]
+                },
+                {
+                  "id": "node-mc-problem",
+                  "nodeType": "semantic",
+                  "semanticType": "multiple-choice",
+                  "placement": {
+                    "region": "chapterFlowBox",
+                    "order": 2
+                  },
+                  "label": "Multiple choice",
+                  "prompt": {
+                    "id": "node-mc-question",
+                    "value": "Which event marked the beginning of open fighting in the American Revolution?"
+                  },
+                  "feedbackNodeId": "node-mc-feedback-message",
+                  "answerGroupId": "node-mc-answers",
+                  "choices": [
+                    {
+                      "id": "node-choice-lexington-concord",
+                      "label": "Lexington and Concord",
+                      "value": "Lexington and Concord"
+                    },
+                    {
+                      "id": "node-choice-bunker-hill",
+                      "label": "Bunker Hill",
+                      "value": "Bunker Hill"
+                    },
+                    {
+                      "id": "node-choice-declaration",
+                      "label": "Declaration of Independence",
+                      "value": "Declaration of Independence"
+                    },
+                    {
+                      "id": "node-choice-saratoga",
+                      "label": "Saratoga",
+                      "value": "Saratoga"
+                    }
+                  ]
+                }
+              ],
+              "behavior": {
+                "schema": "sparc-behavior/1.0",
+                "orderPolicy": "progressive",
+                "responseFormalism": "SAI",
+                "steps": [
+                  {
+                    "id": "answer-opening-multiple-choice",
+                    "responses": [
+                      {
+                        "selection": "choiceLexingtonConcord",
+                        "action": "ButtonPressed",
+                        "input": "Lexington and Concord",
+                        "nodeRef": "node-choice-lexington-concord",
+                        "modelTarget": "american-revolution-opening"
+                      },
+                      {
+                        "selection": "choiceBunkerHill",
+                        "action": "ButtonPressed",
+                        "input": "Bunker Hill",
+                        "nodeRef": "node-choice-bunker-hill",
+                        "modelTarget": "american-revolution-opening"
+                      },
+                      {
+                        "selection": "choiceDeclaration",
+                        "action": "ButtonPressed",
+                        "input": "Declaration of Independence",
+                        "nodeRef": "node-choice-declaration",
+                        "modelTarget": "american-revolution-opening"
+                      },
+                      {
+                        "selection": "choiceSaratoga",
+                        "action": "ButtonPressed",
+                        "input": "Saratoga",
+                        "nodeRef": "node-choice-saratoga",
+                        "modelTarget": "american-revolution-opening"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer-challenge-fill-in",
+                    "responses": [
+                      {
+                        "selection": "challengeYorktown",
+                        "action": "UpdateTextArea",
+                        "input": "Yorktown",
+                        "nodeRef": "node-challenge-answer",
+                        "modelTarget": "american-revolution-yorktown"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "workingMemoryFacts": [
+                {
+                  "factType": "frontier",
+                  "slots": {
+                    "name": "main",
+                    "boxId": "chapterFlowBox",
+                    "status": "open"
+                  }
+                }
+              ],
+              "productionRules": [
+                {
+                  "id": "history.mc.correct.lexington-concord",
+                  "module": "american-history-progressive",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "choiceLexingtonConcord"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "literal",
+                          "value": "Lexington and Concord"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "success",
+                      "template": "Correct.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-mc-feedback-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "append-node",
+                      "frontier": "main",
+                      "boxId": "chapterFlowBox",
+                      "node": {
+                        "id": "node-challenge-yorktown",
+                        "nodeType": "group",
+                        "groupType": "activity-row",
+                        "placement": {
+                          "region": "chapterFlowBox"
+                        },
+                        "label": "Challenge",
+                        "children": [
+                          {
+                            "id": "node-challenge-feedback-message",
+                            "nodeType": "atomic",
+                            "atomType": "message-box",
+                            "value": "",
+                            "layout": {
+                              "role": "header-feedback"
+                            }
+                          },
+                          {
+                            "id": "node-challenge-question",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": "Challenge: Which 1781 battle effectively ended major fighting in the American Revolution?"
+                          },
+                          {
+                            "id": "node-challenge-answer",
+                            "nodeType": "atomic",
+                            "atomType": "text-input",
+                            "value": "",
+                            "hint": "Battle name",
+                            "expected": "Yorktown"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "american-revolution-opening"
+                    }
+                  ]
+                },
+                {
+                  "id": "history.mc.incorrect.bunker-hill",
+                  "module": "american-history-progressive",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "choiceBunkerHill"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "literal",
+                          "value": "Bunker Hill"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "Incorrect.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-mc-feedback-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "append-node-if-missing",
+                      "frontier": "main",
+                      "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
+                      "node": {
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
+                        "placement": {
+                          "region": "chapterFlowBox"
+                        },
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "Bunker Hill was an early major battle, but the war had already begun at Lexington and Concord."
+                    }
+                  ]
+                },
+                {
+                  "id": "history.mc.incorrect.declaration",
+                  "module": "american-history-progressive",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "choiceDeclaration"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "literal",
+                          "value": "Declaration of Independence"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "Incorrect.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-mc-feedback-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "append-node-if-missing",
+                      "frontier": "main",
+                      "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
+                      "node": {
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
+                        "placement": {
+                          "region": "chapterFlowBox"
+                        },
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "The Declaration of Independence stated the colonies' break with Britain, but it was not the first fighting."
+                    }
+                  ]
+                },
+                {
+                  "id": "history.mc.incorrect.saratoga",
+                  "module": "american-history-progressive",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "choiceSaratoga"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "literal",
+                          "value": "Saratoga"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "Incorrect.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-mc-feedback-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "append-node-if-missing",
+                      "frontier": "main",
+                      "boxId": "chapterFlowBox",
+                      "afterNodeId": "node-mc-problem",
+                      "node": {
+                        "id": "node-remediation-feedback-container",
+                        "nodeType": "group",
+                        "groupType": "remediation-panel",
+                        "placement": {
+                          "region": "chapterFlowBox"
+                        },
+                        "children": [
+                          {
+                            "id": "node-remediation-feedback",
+                            "nodeType": "atomic",
+                            "atomType": "text-block",
+                            "value": ""
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "append-text",
+                      "nodeId": "node-remediation-feedback",
+                      "separator": " ",
+                      "text": "Saratoga helped bring France into the war, but Lexington and Concord came first."
+                    }
+                  ]
+                },
+                {
+                  "id": "history.challenge.correct.yorktown",
+                  "module": "american-history-progressive",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "challengeYorktown"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "literal",
+                          "value": "Yorktown"
+                        }
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-challenge-answer"
+                          }
+                        },
+                        "key": "value",
+                        "value": {
+                          "type": "literal",
+                          "value": "Yorktown"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "success",
+                      "template": "Correct.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-challenge-feedback-message"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "american-revolution-yorktown"
+                    }
+                  ]
+                },
+                {
+                  "id": "history.challenge.incorrect.yorktown",
+                  "module": "american-history-progressive",
+                  "salience": 10,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "challengeYorktown"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "UpdateTextArea"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "challengeInput"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "neq",
+                      "left": {
+                        "type": "variable",
+                        "name": "challengeInput"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Yorktown"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "Incorrect.",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-challenge-feedback-message"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "response": {
+                "gradingMode": "node-intent",
+                "evaluation": {
+                  "trimWhitespace": true,
+                  "ignoreCase": true
+                },
+                "scoredNodes": [
+                  "node-choice-lexington-concord"
+                ],
+                "intentByNode": [
+                  {
+                    "node": "node-choice-lexington-concord",
+                    "expected": "Lexington and Concord"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

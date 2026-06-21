@@ -1,0 +1,32 @@
+{
+  "sourceRoot": "C:\\dev\\mofacts_config\\extracted_intro_to_stats_full_l71p6",
+  "module": {
+    "id": "97228",
+    "title": "Case Q→Q (Simple Regression)",
+    "pageIds": [
+      "96960",
+      "96874",
+      "96887",
+      "96852",
+      "96955",
+      "96843",
+      "96876",
+      "97050",
+      "96993",
+      "96936",
+      "96772",
+      "128651"
+    ]
+  },
+  "rules": {
+    "multipleChoice": "Activity with content.choices and no inputs becomes a SPARC multiple-choice group. Positive-score response legacyMatch gives the correct choice id.",
+    "targetedCata": "Activity with content.type TargetedCATA becomes a checkbox-list group. content.authoring.correct[0] gives the set of selected choice ids; every choice becomes a checkbox node with expected true/false.",
+    "dropdown": "Activity with content.inputs becomes a dropdown-list group. Each input partId maps to authoring.parts; the positive-score response legacyMatch maps through content.choices to the expected dropdown label."
+  },
+  "counts": {
+    "pages": 12,
+    "behaviorSteps": 59,
+    "responseIntent": 59,
+    "productionRules": 59
+  }
+}

@@ -1,0 +1,1197 @@
+{
+  "setspec": {
+    "lessonname": "SPARC Intro Stats - Module 16 - Continuous Random Variables",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "sparc-intro-stats-variables",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "type": "sparc",
+              "documentId": "sparc-intro-stats-module-16-continuous-random-variables",
+              "schema": "tutorscript-sparc/1.0",
+              "unitType": "sparc-intro-stats-variables",
+              "layout": {
+                "orientation": "document",
+                "zones": [
+                  {
+                    "id": "document",
+                    "role": "contiguous-page",
+                    "region": "center",
+                    "flow": "vertical",
+                    "accepts": [
+                      "group",
+                      "atomic"
+                    ],
+                    "ordered": true
+                  }
+                ],
+                "regions": {
+                  "document": {
+                    "anchor": "center",
+                    "flow": "vertical",
+                    "width": "100%"
+                  }
+                }
+              },
+              "nodes": [
+                {
+                  "id": "node-page-97139",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Probability Distribution (1 of 2)",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-97139-h1-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>The Probability Distribution of a Continuous Random Variable</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In order to shift our focus from discrete to continuous random variables, let us first consider the probability histogram below for the shoe size of adult males. Let X represent these shoe sizes. Thus, X is a discrete random variable, since shoe sizes can only take whole and half number values, nothing in between.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-image-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/fa/fa1401f616f6097180f6d6811fd43858/image100.gif\" alt=\"A histogram for male shoe sizes. The vertical axis is labeled &quot;Probability&quot; and the horizontal axis is labeled &quot;Male shoe size&quot;. Moving from left to right across the horizontal axis, we start at size=6.5, where the probability is very low, below .02 . From there, the probabilities grow until size=11, where probability is at about .20 . Then, as sizes increase, probability decreases. The axis ends at size = 15.5 . The histogram makes a typical normal shape.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall that in all of the previous probability histograms we&#39;ve seen, the X-values were whole numbers. Thus, the width of each bar was 1. The height of each bar was the same as the probability for its corresponding X-value. Due to the principle that states the sum of probabilities of all possible outcomes in the sample space must be 1, the <strong>heights</strong> of all the rectangles in the histogram must sum to 1. This meant that the area was also 1. </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>This histogram uses half-sizes. We wish to keep the area = 1, but we still want the horizontal scale to represent half-sizes. Therefore, we must adjust the vertical scale of the histogram. As is, the total area of the histogram rectangles would be .50 times the sum of the probabilities, since the width of each bar is .50. Thus, the area is .50(1) = .50. If we double the vertical scale, the area will double and be 1, just like we want. This means we are changing the vertical scale from &quot;Probability&quot; to &quot;Probability per half size.&quot; The shape and the horizontal scale remain unchanged.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-image-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/62/62c1445d190aa81f8189aef19773ddaf/image101.gif\" alt=\"The same histogram as the previous one, except that the vertical axis has been changed. It is now labeled &quot;Probability per half size&quot;, and now the units are half as large, so that at size = 11, probability is .40 . We also see that the area for all of the bars using this new vertical axis is 1.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Now we can tell the probability of shoe size taking a value in any interval, just by finding the area of the rectangles over that interval. For instance, the area of the rectangles up to and including 9 shows the probability of having a shoe size less than or equal to 9.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-image-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/d8/d86f5a996d7607b5f46afa059b416e21/image102.gif\" alt=\"The same histogram as the previous one, but the bars for sizes 6.5 to 9 have been shaded. The area of the shading is the Probability of shoe size less than or equal to 9.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall that for a discrete random variable like shoe size, the probability is affected by whether we want strict inequality or not. For example, the area—and corresponding probability—is reduced if we only consider shoe sizes strictly less than 9:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-image-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/fc/fc8196faf2930314da815a4ad7c48c44/image103.gif\" alt=\"The histogram now only has the bars for shoe sizes 6.5 though 8.5 shaded. The shaded area is the Probability of shoe size &lt; 9.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-group-11",
+                      "nodeType": "group",
+                      "groupType": "oli-didigetthis",
+                      "layout": {
+                        "visualPreset": "didigetthis",
+                        "glue": {
+                          "mode": "didigetthis"
+                        }
+                      },
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      },
+                      "children": [
+                        {
+                          "id": "node-96632",
+                          "nodeType": "group",
+                          "groupType": "multiple-choice",
+                          "label": "The shaded area in the probability histogram below represents the probability of a male's shoe size being",
+                          "placement": {
+                            "region": "document",
+                            "order": 12
+                          },
+                          "layout": {
+                            "visualPreset": "practice-panel",
+                            "glue": {
+                              "mode": "multiple-choice",
+                              "answerPlacement": "below-prompt",
+                              "feedbackPlacement": "below-answers"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "node-96632-answers",
+                              "nodeType": "group",
+                              "groupType": "answer-list",
+                              "children": [
+                                {
+                                  "id": "node-96632-choice-Res1",
+                                  "nodeType": "atomic",
+                                  "atomType": "button",
+                                  "label": "at least 12",
+                                  "value": "Res1",
+                                  "expected": "Res3"
+                                },
+                                {
+                                  "id": "node-96632-choice-Res2",
+                                  "nodeType": "atomic",
+                                  "atomType": "button",
+                                  "label": "more than 12",
+                                  "value": "Res2",
+                                  "expected": "Res3"
+                                },
+                                {
+                                  "id": "node-96632-choice-Res3",
+                                  "nodeType": "atomic",
+                                  "atomType": "button",
+                                  "label": "between (and including) 12 and 14",
+                                  "value": "Res3",
+                                  "expected": "Res3"
+                                },
+                                {
+                                  "id": "node-96632-choice-Res4",
+                                  "nodeType": "atomic",
+                                  "atomType": "button",
+                                  "label": "between (not including) 12 and 14",
+                                  "value": "Res4",
+                                  "expected": "Res3"
+                                },
+                                {
+                                  "id": "node-96632-choice-Res5",
+                                  "nodeType": "atomic",
+                                  "atomType": "button",
+                                  "label": "less than 14",
+                                  "value": "Res5",
+                                  "expected": "Res3"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "node-96632-feedback",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            }
+                          ],
+                          "source": {
+                            "activityId": "96632",
+                            "pageId": "97139",
+                            "oliSubType": "oli_multiple_choice"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "oliType": "group",
+                        "purpose": "didigetthis"
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-h1-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>Transition to Continuous Random Variables</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Now we are going to be making the transition from <strong>discrete</strong> to <strong>continuous</strong> random variables. Recall that continuous random variables represent measurements and can take on any value within an interval. </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>For our shoe size example, this would mean measuring shoe sizes in smaller units,such as tenths, or hundredths. As the number of intervals increases, the width of the bars becomes narrower and narrower, and the graph approaches a smooth curve. </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>To illustrate this, the following graphs represent two steps in this process of narrowing the widths of the intervals. Specifically, the interval widths are .25 and .10.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-97139-p-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>We&#39;ll use these smooth curves to represent the probability distributions of continuous random variables. This idea will be discussed in more detail on the next page.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "97139",
+                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-96915",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Probability Distribution (2 of 2)",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-96915-p-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Now consider another random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values, because foot lengths can take any value over a <strong>continuous</strong> range of possibilities, so we cannot present this variable with a probability histogram or a table. The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve.</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-image-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/56/56fa9f9d3836bd93bf9551105601a334/image104.gif\" alt=\"A probability density curve. The horizontal axis is labeled X=Male Foot Length. On this graph, a curve is drawn. The curve appears to be a bell curve (looks like the cross section of a bell), centered at x=11. The area below the curve is equal to 1.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Like the modified probability histogram above, the total area under the density curve equals 1, and the curve represents probabilities by area. </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>The probability that X gets values in any interval is represented by the area above this interval and below the density curve. In our foot length example, if our interval of interest is between 10 and 12 (marked in red below), and we would like to know P(10&lt;X&lt;12), the probability that a randomly chosen male has a foot length anywhere between 10 and 12 inches, we&#39;ll have to find the area above our interval of interest (10,12) and below our density curve, shaded in blue:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-image-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/8d/8d0c07aa6c3f0673a2e2eaf21bd354fa/image105.gif\" alt=\"The area under the curve and above the horizontal axis from X=10 to X=12 has been shaded in blue. This area is P(10 &lt; X &lt; 12).\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>If, for example, we are interested in P(X &lt; 9), the probability that a randomly chosen male has a foot length of less than 9 inches, we&#39;ll have to find the area shaded in blue below:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-image-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/af/af1c398b4d6af8b7f74bd31746e74e5b/image106.gif\" alt=\"The area under the curve and above the horizontal axis from X = 6 (the left end of the graph) to X = 9 has been shaded. This area is P(X &lt; 9).\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-h1-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>Comments</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-ol-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p>We have seen that for a <strong>discrete</strong> random variable like shoe size, whether we have a strict inequality or not <strong>does matter</strong> when solving for probabilities. In contrast, for a <strong>continuous</strong> random variable like foot length, the probability of a foot length of less than or equal to 9 will be the same as the probability of a foot length of strictly less than 9. In other words,</p><p><img src=\"&lt;m:math xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot; overflow=&quot;scroll&quot;&gt;&lt;m:mi&gt;P&lt;/m:mi&gt;&lt;m:mo&gt;(&lt;/m:mo&gt;&lt;m:mi&gt;X&lt;/m:mi&gt;&lt;m:mo&gt;&lt;&lt;/m:mo&gt;&lt;m:mn&gt;9&lt;/m:mn&gt;&lt;m:mo&gt;)&lt;/m:mo&gt;&lt;m:mo&gt;=&lt;/m:mo&gt;&lt;m:mi&gt;P&lt;/m:mi&gt;&lt;m:mo&gt;(&lt;/m:mo&gt;&lt;m:mi&gt;X&lt;/m:mi&gt;&lt;m:mo&gt;≤&lt;/m:mo&gt;&lt;m:mn&gt;9&lt;/m:mn&gt;&lt;m:mo&gt;)&lt;/m:mo&gt;&lt;/m:math&gt;\" alt=\"\">.</p><p>Visually, in terms of our density curve, the area under the curve up to and including a certain point is the same as the area up to and excluding the point, because there is no area over a single point. Conceptually, because a continuous random variable has infinitely many possible values, technically the probability of any single value occurring is zero! </p></li><li><p>It should be clear now why the total area under any probability density curve must be 1. The total area under the curve represents P(X gets a value in the interval of its possible values). Clearly, according to the rules of probability this must be 1, or always true.</p></li><li><p>Density curves, like probability histograms, may have any shape imaginable as long as the total area underneath the curve is 1.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-h1-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h1>Let&#39;s Summarize</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>The probability distribution of a continuous random variable is represented by a probability density curve.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>The probability that X gets a value in any interval of interest is the area above this interval and below the density curve.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-image-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/1b/1b9cef03e8904ce7312726dcfeea247d/image108.gif\" alt=\"A probability density curve. The vertical axis is labeled &quot;Density&quot; and the horizontal axis is labeled &quot;X.&quot; The density curve of x has been drawn on the graph, and on the horizontal axis, two points a and b, a &lt; b, have been marked. The area under the density curve and above the horizontal axis from a &lt; X &lt; b has been shaded. This area is P(a ≤ X ≤ b).\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Now that we see how probabilities are found for continuous random variables, we understand why it is more complicated than finding probabilities in the discrete case. As anyone who has studied calculus can attest, finding the area under a curve can be difficult. The general approach is to use <strong>integrals.</strong> For those of you who did study calculus, the following should be familiar....</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><img src=\"&lt;m:math xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot; overflow=&quot;scroll&quot;&gt;&lt;m:mi&gt;P&lt;/m:mi&gt;&lt;m:mo&gt;(&lt;/m:mo&gt;&lt;m:mi&gt;a&lt;/m:mi&gt;&lt;m:mo&gt;≤&lt;/m:mo&gt;&lt;m:mi&gt;X&lt;/m:mi&gt;&lt;m:mo&gt;≤&lt;/m:mo&gt;&lt;m:mi&gt;b&lt;/m:mi&gt;&lt;m:mo&gt;)&lt;/m:mo&gt;&lt;m:mo&gt;=&lt;/m:mo&gt;&lt;m:mo&gt;(&lt;/m:mo&gt;&lt;m:mi&gt;area between a and b and below the density curve&lt;/m:mi&gt;&lt;m:mo&gt;)&lt;/m:mo&gt;&lt;m:mo&gt;=&lt;/m:mo&gt;&lt;m:msubsup&gt;&lt;m:mo&gt;∫&lt;/m:mo&gt;&lt;m:mrow&gt;&lt;m:mi&gt;a&lt;/m:mi&gt;&lt;/m:mrow&gt;&lt;m:mrow&gt;&lt;m:mi&gt;b&lt;/m:mi&gt;&lt;/m:mrow&gt;&lt;/m:msubsup&gt;&lt;m:mi&gt;f&lt;/m:mi&gt;&lt;m:mo&gt;(&lt;/m:mo&gt;&lt;m:mi&gt;x&lt;/m:mi&gt;&lt;m:mo&gt;)&lt;/m:mo&gt;&lt;m:mi&gt;d&lt;/m:mi&gt;&lt;m:mi&gt;x&lt;/m:mi&gt;&lt;/m:math&gt;\" alt=\"\"> , where f(x) represents the density curve.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>For those who did not study calculus, don&#39;t worry about it. This kind of calculation is definitely beyond the scope of this course.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In this course, we will encounter several important density curves—those for normal random variables, t random variables, chi-square random variables, and F random variables. Normal and t distributions are bell-shaped (single-peaked and symmetric) like the density curve in the foot length example; chi-square and F distributions are single-peaked and skewed right, like in the figure above.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Rather than get bogged down in the calculus of solving for areas under curves, we will find probabilities for the above-mentioned random variables by consulting tables. Also, statistical software automatically provides such probabilities in the appropriate context.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-96915-p-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In the next section, we will study in more depth one of those random variables, the normal random variable, and see how we can find probabilities associated with it using software and tables.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 19
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "96915",
+                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-98719",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Explore in R",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-98719-h3-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>R Exercise: Understanding PDF and CDF</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-h4-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>Background:</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>We will explore the normal distribution as an example of a continuous probability distribution. The normal distribution is defined by two parameters: the mean (μ) and the standard deviation (σ). For this exercise, we will assume a normal distribution with a mean (μ) of 50 and a standard deviation (σ) of 10.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-h4-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>Objectives:</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-ul-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p>To visualize the PDF and CDF of a normal distribution.</p></li><li><p>To understand how the area under a portion of the PDF corresponds to the probability of that interval, as represented by the CDF.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-h4-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>Tasks:</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-ol-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Visualize the PDF:</strong></p><ul><li><p>Plot the PDF of the normal distribution with the given parameters.</p></li><li><p>Highlight the area under the curve between two points (e.g., 40 and 60) on the PDF plot.</p></li></ul></li><li><p><strong>Visualize the CDF:</strong></p><ul><li><p>Plot the CDF of the same normal distribution.</p></li><li><p>Show the corresponding probability for the interval between the two points (40 and 60) on the CDF plot.</p></li></ul></li><li><p><strong>Interpret the Results:</strong></p><ul><li><p>Explain how the highlighted area on the PDF plot relates to the value on the CDF plot.</p></li></ul></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-h4-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>Instructions:</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Provide the following R code to the students, which is a worked example that they can run and study.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-code-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><pre><code># Set up the mean and standard deviation\nmean &lt;- 50\nsd &lt;- 10\n\n# Define the range of x values\nx_values &lt;- seq(20, 80, by = 0.1)\n\n# Task 1: Visualize the PDF\npdf_values &lt;- dnorm(x_values, mean = mean, sd = sd)\nplot(x_values, pdf_values, type = &#39;l&#39;, main = &#39;PDF of Normal Distribution&#39;, xlab = &#39;Value&#39;, ylab = &#39;Density&#39;)\nabline(v = c(40, 60), col = &#39;red&#39;, lty = 2)\npolygon(c(40, seq(40, 60, by = 0.1), 60), c(0, dnorm(seq(40, 60, by = 0.1), mean, sd), 0), col = &#39;skyblue&#39;)\n\n# Task 2: Visualize the CDF\ncdf_values &lt;- pnorm(x_values, mean = mean, sd = sd)\nplot(x_values, cdf_values, type = &#39;l&#39;, main = &#39;CDF of Normal Distribution&#39;, xlab = &#39;Value&#39;, ylab = &#39;Cumulative Probability&#39;)\nabline(h = pnorm(40, mean, sd), v = 40, col = &#39;red&#39;, lty = 2)\nabline(h = pnorm(60, mean, sd), v = 60, col = &#39;red&#39;, lty = 2)\n\n# Task 3: Interpret the Results\n# The area under the PDF between x=40 and x=60 corresponds to the probability of a value falling within that range.\n# This probability is represented by the difference in the CDF values at x=60 and x=40.\nprob_interval &lt;- pnorm(60, mean, sd) - pnorm(40, mean, sd)\ncat(&quot;The probability of a value falling between 40 and 60 is:&quot;, prob_interval, &quot;\\n&quot;)\n</code></pre></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-h4-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h4>Expected Outcomes:</h4>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-98719-p-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Students should run the R code and observe the plots. The PDF plot will show the normal distribution curve with the area between 40 and 60 shaded, representing the probability of a value falling within that interval. The CDF plot will show how this probability corresponds to the cumulative probability up to the point x=60 minus the cumulative probability up to the point x=40. The <code>cat</code> function will output the actual probability of the interval, helping students to make the connection between the area under the PDF and the values of the CDF.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "98719",
+                    "purpose": "foundation"
+                  }
+                }
+              ],
+              "behavior": {
+                "steps": [
+                  {
+                    "id": "behavior-96632-Res1",
+                    "responses": [
+                      {
+                        "nodeRef": "node-96632-choice-Res1",
+                        "selection": "96632:Res1",
+                        "action": "ButtonPressed",
+                        "input": "Res1"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "behavior-96632-Res2",
+                    "responses": [
+                      {
+                        "nodeRef": "node-96632-choice-Res2",
+                        "selection": "96632:Res2",
+                        "action": "ButtonPressed",
+                        "input": "Res2"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "behavior-96632-Res3",
+                    "responses": [
+                      {
+                        "nodeRef": "node-96632-choice-Res3",
+                        "selection": "96632:Res3",
+                        "action": "ButtonPressed",
+                        "input": "Res3"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "behavior-96632-Res4",
+                    "responses": [
+                      {
+                        "nodeRef": "node-96632-choice-Res4",
+                        "selection": "96632:Res4",
+                        "action": "ButtonPressed",
+                        "input": "Res4"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "behavior-96632-Res5",
+                    "responses": [
+                      {
+                        "nodeRef": "node-96632-choice-Res5",
+                        "selection": "96632:Res5",
+                        "action": "ButtonPressed",
+                        "input": "Res5"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "response": {
+                "gradingMode": "production-rules",
+                "intentByNode": [
+                  {
+                    "node": "node-96632-choice-Res1",
+                    "expected": "Res1",
+                    "type": "incorrect-choice"
+                  },
+                  {
+                    "node": "node-96632-choice-Res2",
+                    "expected": "Res2",
+                    "type": "incorrect-choice"
+                  },
+                  {
+                    "node": "node-96632-choice-Res3",
+                    "expected": "Res3",
+                    "type": "correct-choice"
+                  },
+                  {
+                    "node": "node-96632-choice-Res4",
+                    "expected": "Res4",
+                    "type": "incorrect-choice"
+                  },
+                  {
+                    "node": "node-96632-choice-Res5",
+                    "expected": "Res5",
+                    "type": "incorrect-choice"
+                  }
+                ]
+              },
+              "productionRules": [
+                {
+                  "id": "sparc-intro-stats.96632.Res1.correct",
+                  "module": "continuous-random-variables",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "96632:Res1"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "input"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Res1"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-96632-choice-Res1"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "incorrect"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "<p>Incorrect. What values of shoe size are covered by the shaded area?</p>",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-96632-feedback"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "probdistvaluesc"
+                    }
+                  ]
+                },
+                {
+                  "id": "sparc-intro-stats.96632.Res2.correct",
+                  "module": "continuous-random-variables",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "96632:Res2"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "input"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Res2"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-96632-choice-Res2"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "incorrect"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "<p>Incorrect. What values of shoe size are covered by the shaded area?</p>",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-96632-feedback"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "probdistvaluesc"
+                    }
+                  ]
+                },
+                {
+                  "id": "sparc-intro-stats.96632.Res3.correct",
+                  "module": "continuous-random-variables",
+                  "salience": 30,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "96632:Res3"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "input"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Res3"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "correct"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-96632-choice-Res3"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "correct"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "<p>Correct. The values of shoe size that are covered by the shaded area are 12, 12.5, 13, 13.5, and 14.</p>",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-96632-feedback"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "probdistvaluesc"
+                    }
+                  ]
+                },
+                {
+                  "id": "sparc-intro-stats.96632.Res4.correct",
+                  "module": "continuous-random-variables",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "96632:Res4"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "input"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Res4"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-96632-choice-Res4"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "incorrect"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "<p>Incorrect. What values of shoe size are covered by the shaded area?</p>",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-96632-feedback"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "probdistvaluesc"
+                    }
+                  ]
+                },
+                {
+                  "id": "sparc-intro-stats.96632.Res5.correct",
+                  "module": "continuous-random-variables",
+                  "salience": 20,
+                  "when": [
+                    {
+                      "factType": "interface-event",
+                      "slots": {
+                        "documentId": {
+                          "type": "bind",
+                          "variable": "documentId"
+                        },
+                        "selection": {
+                          "type": "literal",
+                          "value": "96632:Res5"
+                        },
+                        "action": {
+                          "type": "literal",
+                          "value": "ButtonPressed"
+                        },
+                        "input": {
+                          "type": "bind",
+                          "variable": "input"
+                        }
+                      }
+                    }
+                  ],
+                  "tests": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "type": "variable",
+                        "name": "input"
+                      },
+                      "right": {
+                        "type": "literal",
+                        "value": "Res5"
+                      }
+                    }
+                  ],
+                  "then": [
+                    {
+                      "type": "classify",
+                      "outcome": "incorrect"
+                    },
+                    {
+                      "type": "write-state",
+                      "write": {
+                        "target": {
+                          "documentId": {
+                            "type": "variable",
+                            "name": "documentId"
+                          },
+                          "nodeId": {
+                            "type": "literal",
+                            "value": "node-96632-choice-Res5"
+                          }
+                        },
+                        "key": "correctness",
+                        "value": {
+                          "type": "literal",
+                          "value": "incorrect"
+                        }
+                      }
+                    },
+                    {
+                      "type": "message",
+                      "messageType": "feedback",
+                      "template": "<p>Incorrect. What values of shoe size are covered by the shaded area?</p>",
+                      "target": {
+                        "documentId": {
+                          "type": "variable",
+                          "name": "documentId"
+                        },
+                        "nodeId": {
+                          "type": "literal",
+                          "value": "node-96632-feedback"
+                        }
+                      }
+                    },
+                    {
+                      "type": "credit",
+                      "kc": "probdistvaluesc"
+                    }
+                  ]
+                }
+              ],
+              "source": {
+                "conversion": "OLI flat JSON export to SPARC document page",
+                "moduleId": "97202",
+                "moduleTitle": "Continuous Random Variables",
+                "pageIds": [
+                  "97139",
+                  "96915",
+                  "98719"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

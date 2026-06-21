@@ -1,0 +1,815 @@
+{
+  "setspec": {
+    "lessonname": "SPARC Intro Stats - Module 32 - Interactions",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "sparc-intro-stats-variables",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "display": {
+              "type": "sparc",
+              "documentId": "sparc-intro-stats-module-32-interactions",
+              "schema": "tutorscript-sparc/1.0",
+              "unitType": "sparc-intro-stats-variables",
+              "layout": {
+                "orientation": "document",
+                "zones": [
+                  {
+                    "id": "document",
+                    "role": "contiguous-page",
+                    "region": "center",
+                    "flow": "vertical",
+                    "accepts": [
+                      "group",
+                      "atomic"
+                    ],
+                    "ordered": true
+                  }
+                ],
+                "regions": {
+                  "document": {
+                    "anchor": "center",
+                    "flow": "vertical",
+                    "width": "100%"
+                  }
+                }
+              },
+              "nodes": [
+                {
+                  "id": "node-page-130780",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Interactions Preliminaries",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-130780-h2-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>Interactions</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In the realm of statistics, interaction effects occur when the impact of one independent variable on a dependent variable changes depending on the level or value of another independent variable. This phenomenon suggests that the combined effect of two variables is not merely additive but rather multiplicative or synergistic. For example, if we consider two independent variables, <em>X</em>1​ and <em>X</em>2​, and a dependent variable <em>Y</em>, an interaction effect implies that the influence of <em>X</em>1​ on <em>Y</em> varies at different levels of <em>X</em>2​, and vice versa. This can be mathematically represented in a linear regression model as <em>Y</em>=<em>β</em>0​+<em>β</em>1​<em>X</em>1​+<em>β</em>2​<em>X</em>2​+<em>β</em>3​(<em>X</em>1​×<em>X</em>2​)+<em>ϵ</em>, where <em>β</em>3​ captures the interaction effect between <em>X</em>1​ and <em>X</em>2​.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Understanding interaction effects is crucial because they reveal complex relationships between variables that might not be apparent when considering each variable in isolation. For instance, in medical research, the effectiveness of a treatment (<em>X</em>1​) might depend on the age of the patient (<em>X</em>2​), indicating an interaction between the treatment and age. Such insights can lead to more nuanced conclusions and can guide tailored interventions or policies. Ignoring interaction effects when they exist can result in oversimplified models that fail to capture the reality of how variables interrelate, potentially leading to incorrect predictions or conclusions.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Identifying and interpreting interaction effects require careful analysis. Statistically significant interaction terms (<em>β</em>3​ in the model) indicate that the relationship between one predictor and the outcome changes at different levels of another predictor. The interpretation of these effects can be nuanced; for example, a positive <em>β</em>3​ suggests that the effect of <em>X</em>1​ on <em>Y</em> becomes stronger as <em>X</em>2​ increases. Conversely, a negative <em>β</em>3​ would indicate that the effect of <em>X</em>1​ on <em>Y</em> weakens as <em>X</em>2​ increases. It&#39;s also essential to visualize these interactions, often using interaction plots, to fully grasp the nature of the relationship between the variables and to communicate findings effectively.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Significance and Implications of Interaction Effects:</strong> In the domain of statistical analysis, interaction effects play a crucial role in unveiling the complexity of relationships among variables. This is especially pivotal in psychological research, where human behavior and mental processes are influenced by a myriad of interrelated factors. Understanding these interactions helps psychologists and researchers design more effective interventions, tailor therapeutic approaches to individual needs, and refine theoretical models of behavior. For instance, the differential effectiveness of a psychological intervention across various demographic groups (e.g., age, gender, ethnicity) can only be understood through examining interaction effects, thereby leading to more inclusive and effective psychological practices.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Definition of Main Effects:</strong> Before delving into interaction effects, it&#39;s essential to understand main effects. A main effect is the individual impact of one independent variable on the dependent variable, ignoring the influence of other variables. In a psychological study, for example, a main effect might be observed as the impact of a therapeutic intervention on reducing anxiety levels, without considering other variables like the type of anxiety disorder or patient demographics. Main effects provide a broad overview of the relationships between variables, but they do not capture the complexity of how these relationships may vary under different conditions.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Interaction Effects Explained:</strong> Interaction effects occur when the effect of one independent variable on the dependent variable changes across the levels of another independent variable. This is indicative of a synergy where the combined influence of two variables is different from what would be expected based on their individual effects. In psychological research, this could manifest in a study examining the effectiveness of a new cognitive therapy for depression, where the interaction effect might reveal that the therapy is particularly effective for patients with a specific genetic marker or those experiencing a certain type of stressor. Such findings underscore the importance of considering and analyzing interaction effects to fully understand the multifaceted nature of psychological phenomena.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Real-world Examples in Psychology:</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Clinical Psychology</strong>: A study may investigate the efficacy of an anxiety treatment across different age groups. While the treatment might show benefit (main effect), an interaction effect could reveal that its effectiveness is significantly enhanced in younger adults compared to older adults, suggesting age-related differences in response to treatment.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Educational Psychology</strong>: Research on educational interventions to improve academic performance might find that an intervention&#39;s effectiveness (main effect) varies by students&#39; socioeconomic status, an interaction effect. This could indicate that additional support mechanisms are needed for students from lower socioeconomic backgrounds to benefit equally from the intervention.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-h2-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2><strong>Identifying Interactions</strong></h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>In the intricate field of psychological statistics, identifying interaction effects is paramount for understanding complex relationships between variables. This understanding is facilitated through various techniques and tools designed to highlight how the influence of one variable on another changes under different conditions.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Visualization Techniques</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Visualization plays a crucial role in identifying and understanding interaction effects. Two common methods are interaction plots and modified scatter plots.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Interaction Plots</strong>: These plots display the means of a dependent variable across levels of one factor for each level of another factor, offering a clear visual representation of potential interactions. For example, in a study investigating the effects of sleep and diet on cognitive function, an interaction plot could show cognitive scores on the y-axis, hours of sleep on the x-axis, and different lines representing different diets. If lines cross or diverge significantly, this suggests an interaction effect between sleep and diet on cognitive function.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-image-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/B1/B1CFC28E890484E4E34B18193790ADC5/line_interaction_plots_high_res.png\" alt=\"Line graph depictions\" loading=\"lazy\"><figcaption><p>Line graph depictions</p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-image-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/96/96ED074B43C1B967085CF223FF114316/corrected_interaction_plots_high_res.png\" alt=\"Same data bar graph depictions\" loading=\"lazy\"><figcaption><p>Same data bar graph depictions</p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Modified Scatter Plots</strong>: Scatter plots can be adapted to show interactions by coloring or shaping data points based on a categorical variable. For instance, a scatter plot illustrating the relationship between stress levels (x-axis) and productivity (y-axis) could use different colors to represent participants with high vs. low social support. A visible pattern, such as one color grouping showing a stronger relationship between stress and productivity, would indicate an interaction between social support and stress on productivity.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Statistical Indicators</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 19
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-20",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Before diving deep into complex statistical models, researchers can look for preliminary evidence of interaction effects through various statistical indicators.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 20
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-21",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Correlation Coefficients</strong>: A preliminary analysis might involve calculating correlation coefficients for subsets of data based on levels of another variable. Significant variations in these coefficients across subsets can signal potential interactions.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 21
+                      }
+                    },
+                    {
+                      "id": "node-page-130780-p-22",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Variance Analysis</strong>: Comparing the variances of groups formed by combining levels of two or more factors can provide hints about interactions. If the variance within a combined group is significantly different from the variances within groups based on a single factor, this may suggest an interaction effect.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 22
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "130780",
+                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-130782",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Interactions in ANOVA",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-130782-h2-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>Modeling Interactions in ANOVA</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Introduction to ANOVA With Interactions</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Analysis of Variance (ANOVA) is a statistical technique designed to explore the differences among group means in a dataset and can handle more than one independent variable. Unlike linear regression, which typically examines the effect of continuous predictors on an outcome, ANOVA focuses on categorical independent variables and their impact on a continuous dependent variable. A significant advantage of ANOVA is its ability to include interaction effects between independent variables, offering insights into how the relationship between a categorical independent variable and the dependent variable may vary across the levels of another independent variable.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Factorial ANOVA</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Factorial ANOVA designs are particularly powerful in investigating not just the main effects of each independent variable but also the interaction effects between them. This means analyzing whether the impact of one independent variable on the dependent variable changes across the levels of another independent variable.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ul-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Two-Way Interactions</strong>: A two-way ANOVA looks at the main effects of two independent variables and their interaction effect on a dependent variable. For example, in a study assessing the effectiveness of different teaching methods (Method A, Method B) across different classroom environments (Online, In-person), a two-way ANOVA could reveal not only how each teaching method and classroom environment individually affects student performance but also whether the effectiveness of a teaching method depends on the classroom environment.</p></li><li><p><strong>Three-Way Interactions</strong>: Adding another independent variable extends the analysis to a three-way ANOVA, which examines two main effects, three two-way interaction effects, and one three-way interaction effect. For instance, adding student year (Freshman, Sophomore) to the previous example allows the analysis to explore whether the interaction between teaching method and classroom environment varies by student year. A significant three-way interaction might suggest that the optimal combination of teaching method and classroom environment depends significantly on whether students are freshmen or sophomores.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Incorporating interaction effects into ANOVA allows for a deeper and more nuanced understanding of the data by highlighting how the effect of one factor may change in the context of another factor. This enriched analysis is crucial in fields such as psychology, education, and medicine, where the interdependencies between variables can provide key insights into the phenomena under study.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h2-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>In-Depth</h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Let&#39;s construct a hypothetical example in R, demonstrating how to perform a two-way ANOVA with a significant interaction effect. In this scenario, we&#39;ll investigate the effect of two factors—<code>TeachingMethod</code> (A, B) and <code>ClassroomEnvironment</code> (Online, In-person)—on <code>StudentPerformance</code> (a continuous variable representing test scores).</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>First, we&#39;ll generate some simulated data that includes a significant interaction between our two factors. Then, we&#39;ll use R&#39;s <code>aov()</code> function to perform the ANOVA and interpret the results, particularly focusing on the interaction term.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-code-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><pre><code># Load necessary library\nlibrary(ggplot2)\n\n# Simulate data\nset.seed(123) # For reproducibility\nn &lt;- 100 # Number of observations\n\nTeachingMethod &lt;- factor(rep(c(&quot;A&quot;, &quot;B&quot;), each=n/2))\nClassroomEnvironment &lt;- factor(rep(c(&quot;Online&quot;, &quot;In-person&quot;), times=n/2))\nInteractionEffect &lt;- ifelse(TeachingMethod==&quot;A&quot; &amp; ClassroomEnvironment==&quot;Online&quot;, 10, \n                            ifelse(TeachingMethod==&quot;B&quot; &amp; ClassroomEnvironment==&quot;In-person&quot;, 15, 5))\nStudentPerformance &lt;- 70 + InteractionEffect + rnorm(n, mean=0, sd=10)\n\ndata &lt;- data.frame(TeachingMethod, ClassroomEnvironment, StudentPerformance)\n\n# Perform two-way ANOVA\nanova_result &lt;- aov(StudentPerformance ~ TeachingMethod * ClassroomEnvironment, data=data)\nsummary(anova_result)\n\n# Visualize the interaction\nggplot(data, aes(x=TeachingMethod, y=StudentPerformance, color=ClassroomEnvironment)) +\n  geom_point(position=position_dodge(width=0.2)) +\n  stat_summary(fun=mean, geom=&quot;errorbar&quot;, width=0.2, position=position_dodge(width=0.2), aes(ymax=..y.., ymin=..y..)) +\n  stat_summary(fun=mean, geom=&quot;point&quot;, size=3, position=position_dodge(width=0.2)) +\n  labs(title=&quot;Interaction between Teaching Method and Classroom Environment on Student Performance&quot;,\n       x=&quot;Teaching Method&quot;, y=&quot;Student Performance&quot;) +\n  theme_minimal()\n</code></pre></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-12",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Steps in the R Example:</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 12
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ol-13",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Data Simulation</strong>: We create a dataset simulating the conditions for our two factors, <code>TeachingMethod</code> and <code>ClassroomEnvironment</code>, and their impact on <code>StudentPerformance</code>. An interaction effect is introduced by varying the performance boost depending on the combination of teaching method and environment.</p></li><li><p><strong>ANOVA Execution</strong>: Using the <code>aov()</code> function, we model <code>StudentPerformance</code> as a function of both factors and their interaction. The <code>summary()</code> function then provides the ANOVA table, including F-statistics and p-values for the main effects and the interaction effect.</p></li><li><p><strong>Visualization</strong>: We use <code>ggplot2</code> to generate a plot illustrating the interaction. This visualization helps in understanding how the effect of teaching method on student performance varies across different classroom environments, confirming the presence of a significant interaction if the lines in the plot are not parallel.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 13
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-14",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>This example should give you a practical understanding of performing an ANOVA with an interaction term in R, interpreting the results, and visualizing the interaction effect.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 14
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-15",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Result </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 15
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-code-16",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><pre><code>summary(anova_result)\n                                    Df Sum Sq Mean Sq F value   Pr(&gt;F)    \nTeachingMethod                       1    328   327.6   3.834   0.0531 .  \nClassroomEnvironment                 1    110   110.1   1.288   0.2592    \nTeachingMethod:ClassroomEnvironment  1   1658  1657.9  19.402 2.75e-05 ***\nResiduals                           96   8203    85.5                     \n---\nSignif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-image-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/56/56ED53DD5E52000AD235B2676A97450A/Rplot01.png\" alt=\"\" loading=\"lazy\"></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h2-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h2>Simple Effects </h2>",
+                      "placement": {
+                        "region": "document",
+                        "order": 19
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-20",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>When we find a significant interaction effect in ANOVA, it indicates that the effect of one factor depends on the level of another factor. However, the ANOVA results alone don&#39;t tell us exactly how these effects differ across levels. This is where simple effects tests come in. Simple effects tests break down the interaction by analyzing the effect of one factor at each level of the other factor, providing a more detailed understanding of the interaction.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 20
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-21",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Why We Need Simple Effects Tests</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 21
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ol-22",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Detailed Analysis</strong>: While ANOVA tells us there is an interaction, simple effects tests show us where the differences lie. This is crucial for practical application and theory development.</p></li><li><p><strong>Clarifying Interactions</strong>: They help in understanding whether a factor has a significant effect at specific levels of another factor, which might be masked in the overall ANOVA.</p></li><li><p><strong>Guiding Decisions</strong>: In applied settings, knowing the specific conditions under which effects occur can guide more nuanced decisions and interventions.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 22
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-23",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Conducting Simple Effects Tests</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 23
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-24",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>To continue with our R example, let&#39;s conduct simple effects tests for the interaction between <code>TeachingMethod</code> and <code>ClassroomEnvironment</code> on <code>StudentPerformance</code>. We&#39;ll use the <code>emmeans</code> package, which provides tools for post hoc analysis, including simple effects tests.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 24
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-25",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Interpreting Simple Effects</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 25
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ol-26",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Output</strong>: The <code>summary(emmeans_results$contrasts)</code> command provides the estimated marginal means for <code>TeachingMethod</code> within each level of <code>ClassroomEnvironment</code>, including differences, confidence intervals, and p-values.</p></li><li><p><strong>Significance</strong>: A significant p-value in the simple effects tests indicates that the effect of <code>TeachingMethod</code> on <code>StudentPerformance</code> significantly differs within a particular level of <code>ClassroomEnvironment</code>.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 26
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-code-27",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<figure><pre><code>&gt; library(emmeans)\n&gt; # Install and load the emmeans package if you haven&#39;t already\n&gt; # install.packages(&quot;emmeans&quot;)\n&gt; library(emmeans)\n&gt; \n&gt; # Perform simple effects tests TeachingMethod | ClassroomEnvironment\n&gt; emmeans_results &lt;- emmeans(anova_result, pairwise ~ TeachingMethod | ClassroomEnvironment)\n&gt; summary(emmeans_results$contrasts)\nClassroomEnvironment = In-person:\n contrast estimate   SE df t.ratio p.value\n A - B      -11.76 2.61 96  -4.499  &lt;.0001\n\nClassroomEnvironment = Online:\n contrast estimate   SE df t.ratio p.value\n A - B        4.52 2.61 96   1.730  0.0868\n\n&gt; # Perform simple effects tests ClassroomEnvironment| TeachingMethod\n&gt; emmeans_results &lt;- emmeans(anova_result, pairwise ~  ClassroomEnvironment| TeachingMethod )\n&gt; summary(emmeans_results$contrasts)\nTeachingMethod = A:\n contrast             estimate   SE df t.ratio p.value\n (In-person) - Online    -6.05 2.61 96  -2.312  0.0229\n\nTeachingMethod = B:\n contrast             estimate   SE df t.ratio p.value\n (In-person) - Online    10.24 2.61 96   3.917  0.0002\n\n</code></pre><figcaption><p>﻿Simple effects t-tests (note each interaction has 4)</p></figcaption></figure>",
+                      "placement": {
+                        "region": "document",
+                        "order": 27
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-28",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>When analyzing a significant interaction between two categorical variables in an ANOVA, it&#39;s crucial to delve into simple effects tests. These tests are essential because a significant interaction indicates the effect of one variable on the outcome depends on the level of another variable. This interaction doesn&#39;t just suggest a difference but a variation in differences across the levels of involved factors. Therefore, to fully understand the interaction, we examine it from all possible angles, leading to four distinct simple effects tests for a two-way interaction.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 28
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-29",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Why Four Simple Effects Tests Are Necessary</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 29
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-30",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>The necessity for four simple effects tests stems from the complexity of the interaction between the factors. Each test examines the interaction&#39;s nature from a different perspective, offering a comprehensive understanding of how one factor&#39;s effect on the outcome variable changes at each level of the other factor. This comprehensive analysis is crucial for:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 30
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ol-31",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Identifying Specific Differences</strong>: Pinpointing exactly where significant differences lie within the levels of each factor.</p></li><li><p><strong>Understanding Interaction Dynamics</strong>: Clarifying how and why the effects of one factor vary across the levels of another factor.</p></li><li><p><strong>Informing Targeted Actions</strong>: Guiding more nuanced decisions or interventions based on the detailed insights derived from each test.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 31
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-32",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>The Four Simple Effects Tests for Our Example</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 32
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-33",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Given our example involving <code>TeachingMethod</code> (A, B) and <code>ClassroomEnvironment</code> (Online, In-person), and their impact on <code>StudentPerformance</code>, the four simple effects tests we&#39;d consider are:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 33
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-ol-34",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ol><li><p><strong>Effect of Teaching Method within Online Environment</strong>: This test examines if the impact of Teaching Method A differs significantly from Teaching Method B when classes are held online. It isolates the Online environment to scrutinize the teaching methods&#39; effectiveness in this setting.</p></li><li><p><strong>Effect of Teaching Method within In-person Environment</strong>: Similar to the first but focusing on In-person classes, this test explores whether the difference between Teaching Methods A and B on Student Performance is evident in a traditional classroom setting.</p></li><li><p><strong>Effect of Classroom Environment within Teaching Method A</strong>: Focusing on Teaching Method A, this analysis assesses whether shifting from Online to In-person (or vice versa) environments influences Student Performance under this method.</p></li><li><p><strong>Effect of Classroom Environment within Teaching Method B</strong>: Parallel to the third test but for Teaching Method B, it evaluates how changes between Online and In-person environments affect Student Performance when using this particular teaching strategy.</p></li></ol>",
+                      "placement": {
+                        "region": "document",
+                        "order": 34
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-h3-35",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>How Each Test Offers a Unique Perspective</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 35
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-36",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Each of these tests provides insights into the nuanced ways teaching methods and classroom environments interact to influence student performance. By conducting and interpreting these four simple effects tests, we can identify specific conditions under which each teaching method excels or falls short, as well as how each classroom environment contributes to or detracts from student performance. This detailed analysis enables educators, researchers, and policymakers to make informed decisions tailored to maximizing educational outcomes based on the unique combinations of teaching methods and classroom environments.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 36
+                      }
+                    },
+                    {
+                      "id": "node-page-130782-p-37",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Simple effects tests are akin to zooming in on a map to see details of a particular area. Just as ANOVA tells us there&#39;s an interaction, like noticing varied terrain from a distance, simple effects tests show us the specifics of that terrain—where the hills are steep and where the plains stretch out. This detailed view is invaluable for researchers and practitioners alike, as it illuminates the nuances of how and under what conditions different factors influence outcomes. By conducting these tests, we move beyond knowing that variables interact to understanding how they interact, enabling more precise and actionable insights.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 37
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "130782",
+                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-130781",
+                  "nodeType": "group",
+                  "groupType": "section",
+                  "label": "Interactions in Regression",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  },
+                  "layout": {
+                    "visualPreset": "section",
+                    "density": "comfortable"
+                  },
+                  "children": [
+                    {
+                      "id": "node-page-130781-h3-1",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<h3>Modeling Interactions in Linear Regression</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 1
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-2",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Incorporating Interaction Terms</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 2
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-3",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Interaction terms in linear regression models allow us to understand how the relationship between two variables can depend on the value of a third variable. To include an interaction term in a model, we multiply the interacting variables together, creating a new variable that represents their combined effect on the dependent variable. The general form of a linear regression model with an interaction term between variables <em>X</em>1​ and <em>X</em>2​ is:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 3
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-4",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><em>Y</em>=<em>β</em>0​+<em>β</em>1​<em>X</em>1​+<em>β</em>2​<em>X</em>2​+<em>β</em>3​(<em>X</em>1​×<em>X</em>2​)+<em>ϵ</em></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 4
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-5",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Here, <em>Y</em> is the dependent variable, <em>X</em>1​ and <em>X</em>2​ are the independent variables, <em>β</em>0​ is the intercept, <em>β</em>1​ and <em>β</em>2​ are the coefficients for <em>X</em>1​ and <em>X</em>2​ respectively, <em>β</em>3​ is the coefficient for the interaction term, and <em>ϵ</em> is the error term.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 5
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-6",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Interpretation of Coefficients</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 6
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-ul-7",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><em><strong>β</strong></em><strong>1​ and </strong><em><strong>β</strong></em><strong>2​</strong>: These coefficients represent the main effects of <em>X</em>1​ and <em>X</em>2​ on <em>Y</em>, assuming the other variable is held constant. However, in the presence of an interaction term, this assumption does not hold true because the effect of <em>X</em>1​ on <em>Y</em> depends on the level of <em>X</em>2​, and vice versa.</p></li><li><p><em><strong>β</strong></em><strong>3​</strong>: This coefficient represents the interaction effect. It indicates how the effect of <em>X</em>1​ on <em>Y</em> changes for a one-unit increase in <em>X</em>2​, and vice versa. A significant <em>β</em>3​ suggests that the relationship between <em>X</em>1​ and <em>Y</em> is different at different levels of <em>X</em>2​.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 7
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-8",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p><strong>Example Analyses</strong></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 8
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-ul-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<ul><li><p><strong>Continuous-Continuous Interaction</strong>: Suppose we&#39;re studying the effect of study time (<em>X</em>1​) and sleep time (<em>X</em>2​) on academic performance (<em>Y</em>). The interaction term (<em>X</em>1​×<em>X</em>2​) would allow us to examine how the benefit of study time on performance changes with varying amounts of sleep. For instance, if <em>β</em>3​&gt;0, this might suggest that more sleep enhances the effectiveness of study time on academic performance.</p></li><li><p><strong>Continuous-Categorical Interaction</strong>: Consider a model predicting house prices (<em>Y</em>) from house size (<em>X</em>1​, a continuous variable) and whether the house has a sea view (<em>X</em>2​, a binary categorical variable coded as 0 or 1). The interaction term (<em>X</em>1​×<em>X</em>2​) explores whether the impact of house size on price is different for houses with vs. without a sea view. If <em>β</em>3​ is significant and positive, it implies that the premium on house size is greater for houses with a sea view.</p></li></ul>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
+                    {
+                      "id": "node-page-130781-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>When modeling interactions, it&#39;s essential to include the main effects of the interacting variables alongside the interaction term to accurately estimate and interpret the interaction. These examples illustrate the process of incorporating interaction terms into regression models and highlight the nuanced insights they can provide into complex relationships among variables.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    }
+                  ],
+                  "source": {
+                    "pageId": "130781",
+                    "purpose": "foundation"
+                  }
+                }
+              ],
+              "behavior": {
+                "steps": []
+              },
+              "response": {
+                "gradingMode": "production-rules",
+                "intentByNode": []
+              },
+              "productionRules": [],
+              "source": {
+                "conversion": "OLI flat JSON export to SPARC document page",
+                "moduleId": "97433",
+                "moduleTitle": "Interactions",
+                "pageIds": [
+                  "130780",
+                  "130782",
+                  "130781"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

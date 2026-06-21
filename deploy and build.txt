@@ -16,23 +16,38 @@ MoFaCTS deploy/build cheat sheet
 # - The remote /h5p-content and /h5p-libraries directories are runtime storage
 #   mounts used by the app after packages are uploaded.
 
+# Operator-local inputs. Keep these in the private config repo, not the public
+# app repo. These paths are intentionally convenient for this workstation.
+$MofactsRoot = "C:\dev\MoFaCTS"
+$DeployDir = Join-Path $MofactsRoot "deploy"
+$SidecarDir = Join-Path $MofactsRoot "mofacts-mcp-sidecar"
+$OperatorRoot = Join-Path $env:USERPROFILE "OneDrive\Desktop"
+$ActiveProjectsRoot = Join-Path $env:USERPROFILE "OneDrive\Active projects"
+$LocalSettingsPath = Join-Path $OperatorRoot "settings.local.json"
+$StageKey = Join-Path $OperatorRoot "mykey.pem"
+$ProdKey = Join-Path $OperatorRoot "prodkey.pem"
+$StageHost = "ubuntu@44.253.109.187"
+$ProdHost = "ubuntu@52.89.109.53"
+$SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
+
 
 # ---------------------------------------------------------------------------
 # Local app loops
 # ---------------------------------------------------------------------------
 
 # Fast local UI/app loop at http://localhost:3200.
-cd C:\dev\MoFaCTS\deploy
-.\hotfix-dev.ps1 start
+cd $DeployDir
+if (!(Test-Path $LocalSettingsPath)) { throw "Missing local settings file: $LocalSettingsPath" }
+.\hotfix-dev.ps1 start -SettingsPath $LocalSettingsPath
 .\hotfix-dev.ps1 status
 
 # Production-shaped local app-code verification without pushing an image.
-cd C:\dev\MoFaCTS\deploy
+cd $DeployDir
 .\hotfix-local.ps1
 
 # Full local Docker image check at http://localhost:3100.
 # Use only when you deliberately want to verify the Docker image path.
-cd C:\dev\MoFaCTS\deploy
+cd $DeployDir
 docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml build --no-cache mofacts
 docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml up -d mofacts
 
@@ -42,12 +57,12 @@ docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.loc
 # ---------------------------------------------------------------------------
 
 # MCP sidecar pointed at the normal hotfix-dev app on http://localhost:3200.
-cd C:\dev\MoFaCTS\mofacts-mcp-sidecar
+cd $SidecarDir
 docker compose -f docker-compose.yml -f docker-compose.hotfix-dev.yml down --remove-orphans
 docker compose -f docker-compose.yml -f docker-compose.hotfix-dev.yml up --build
 
 # MCP sidecar pointed at the Dockerized local app on http://localhost:3100.
-cd C:\dev\MoFaCTS\mofacts-mcp-sidecar
+cd $SidecarDir
 docker compose -f docker-compose.yml -f docker-compose.local-server.yml down --remove-orphans
 docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --build
 
@@ -56,12 +71,9 @@ docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --bui
 # Staging app deploy
 # ---------------------------------------------------------------------------
 
-cd C:\dev\MoFaCTS\deploy
+cd $DeployDir
 
-$StageKey = "C:\Users\ppavl\OneDrive\Desktop\mykey.pem"
-$StageHost = "ubuntu@44.253.109.187"
-$SamlDir = "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml"
-
+if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
 if (!(Test-Path .\docker-compose-staging.yml)) { throw "Missing staging compose file" }
 if (!(Test-Path .\.env.staging)) { throw "Missing staging env file" }
 if (!(Test-Path .\settingsstaging.json)) { throw "Missing staging settings file" }
@@ -95,11 +107,9 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-fi
 # Staging MCP sidecar deploy
 # ---------------------------------------------------------------------------
 
-cd C:\dev\MoFaCTS\mofacts-mcp-sidecar
+cd $SidecarDir
 
-$StageKey = "C:\Users\ppavl\OneDrive\Desktop\mykey.pem"
-$StageHost = "ubuntu@44.253.109.187"
-
+if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
 ssh -i $StageKey $StageHost "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
 
 scp -i $StageKey .\docker-compose.yml "${StageHost}:/var/www/mofacts-mcp-sidecar/docker-compose.yml"
@@ -122,12 +132,9 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 # Production app deploy
 # ---------------------------------------------------------------------------
 
-cd C:\dev\MoFaCTS\deploy
+cd $DeployDir
 
-$ProdKey = "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem"
-$ProdHost = "ubuntu@52.89.109.53"
-$SamlDir = "C:\Users\ppavl\OneDrive\Active projects\mofacts-saml"
-
+if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
 if (!(Test-Path .\docker-compose.yml)) { throw "Missing production compose file" }
 if (!(Test-Path .\.env.production)) { throw "Missing production env file" }
 if (!(Test-Path .\settings.json)) { throw "Missing production settings file" }
@@ -180,11 +187,9 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file
 # Production MCP sidecar deploy
 # ---------------------------------------------------------------------------
 
-cd C:\dev\MoFaCTS\mofacts-mcp-sidecar
+cd $SidecarDir
 
-$ProdKey = "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem"
-$ProdHost = "ubuntu@52.89.109.53"
-
+if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
 ssh -i $ProdKey $ProdHost "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
 
 scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts-mcp-sidecar/docker-compose.yml"
@@ -208,13 +213,13 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compos
 # ---------------------------------------------------------------------------
 
 # App checks.
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
 
 # MCP checks.
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml ps"
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml ps"
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml ps"
 
 # Stop MCP sidecars.
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\mykey.pem" ubuntu@44.253.109.187 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml down"
-ssh -i "C:\Users\ppavl\OneDrive\Desktop\prodkey.pem" ubuntu@52.89.109.53 "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down"
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml down"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down"

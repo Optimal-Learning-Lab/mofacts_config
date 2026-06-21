@@ -91,7 +91,7 @@ logitdec Anon.Student.Id 0.965863
 recency KC..Default. 0.5066582
 ppes KC..Default. 0.6667762 0.003230863 0.3951594 0.3135672
 ppesKC..Default.+recencyKC..Default.+logitdecAnon.Student.Id+1
-McFadden's R2 logistic: 0.232595
+McFaddens R2 logistic: 0.232595
 LogLike logistic: -29148.7236548
 >
 > modelob$coefs
@@ -100,7 +100,26 @@ LogLike logistic: -29148.7236548
 ppesKC..Default.          1.5937255
 recencyKC..Default.      11.9969903
 logitdecAnon.Student.Id   0.6198172
->
+
+
+
+modelob <- LKT(data = val, interc=TRUE,dualfit = FALSE,factrv = 1e11,
+                 components = c("Anon.Student.Id","KC..Default.","KC..Default.","KC..Default."                                )
+                 ,features = c("logitdec", "recency","ppes","logitdecevol"),fixedpars =c(0.965863,0.5066582,0.6667762,0.003230863,0.3951594,0.3135672,.99))
+
+modelob$coefs
+
+
+
+
+modelob <- LKT(data = val, interc=TRUE,dualfit = FALSE,factrv = 1e11,
+               components = c("Anon.Student.Id","KC..Default.","KC..Default.","KC..Default."                                )
+               ,features = c("logitdec", "recency","ppes","logitdecevol"),fixedpars =c(0.9691022,0.4107161,0.4776455,0.009481083,0.1083237,0.2081279,.99))
+
+modelob$coefs
+
+p.ppes = pFunc.ppesFromTimes(p.stimSuccessCount, p.stimTotalTests, p.stimTimeHistory, 0.4776455, 0.009481083, 0.1083237, 0.2081279); p.recency = pFunc.recency(p.stimSecsSinceLastShown, 0.4107161); p.logitdec = pFunc.logitdec(p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0), p.overallOutcomeHistory.length), 0.9691022); p.logitdecevol = Math.log((p.crowdStimSuccessCount + 1) / (p.crowdStimFailureCount + 1)); p.y = -1.0994439 + 1.1044788 * p.logitdecevol + 0.9491793 * p.ppes + 11.6903657 * p.recency + 0.7823623 * p.logitdec; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p;
+
 
 
 "calculateProbability": "p.ppes = pFunc.ppesFromTimes(p.stimSuccessCount, p.stimTotalTests, p.stimTimeHistory, 0.6667762, 0.003230863, 0.3951594, 0.3135672); p.recency = pFunc.recency(p.stimSecsSinceLastShown, 0.5066582); p.logitdec = pFunc.logitdec(p.overallOutcomeHistory.slice(Math.max(p.overallOutcomeHistory.length - 60, 0), p.overallOutcomeHistory.length), 0.965863); p.y = -0.7725027 + 1.5937255 * p.ppes + 11.9969903 * p.recency + 0.6198172 * p.logitdec; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
