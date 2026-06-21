@@ -19,7 +19,7 @@ A new MOFaCTS content system usually needs:
 Use this repo for content work:
 
 ```powershell
-C:\Users\ppavl\OneDrive\Active projects\mofacts_config
+C:\dev\mofacts_config
 ```
 
 Use the app repo only when the runtime behavior needs to change:
@@ -87,7 +87,7 @@ Good source checks:
 For OpenStax key terms, use the reusable generator script:
 
 ```powershell
-Set-Location "C:\Users\ppavl\OneDrive\Active projects\mofacts_config"
+Set-Location "C:\dev\mofacts_config"
 
 .\scripts\generate_openstax_key_terms_tutor.ps1 `
   -Url "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-key-terms" `

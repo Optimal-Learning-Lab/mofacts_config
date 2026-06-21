@@ -12,7 +12,7 @@ steps = [
 ]
 powershell_snippet = """
 # Replace the path below with the JSON file you want to format
-$path = 'C:/Users/ppavl/OneDrive/Active projects/mofacts_config/Countries Tutor/Countries Tutor/Worldtest.json'
+$path = 'C:/dev/mofacts_config/Countries Tutor/Countries Tutor/Worldtest.json'
 $content = Get-Content -Raw $path
 $content = $content.Replace('\u003c','<').Replace('\u003e','>').Replace('\u0026','&')
 $min = ($content | ConvertFrom-Json | ConvertTo-Json -Depth 20 -Compress)

@@ -4,9 +4,9 @@ This repository contains example MOFaCTS stimulus and TDF files used for interna
 
 ## Workspace Repos
 
-- `C:\Users\ppavl\OneDrive\Active projects\mofacts_config`
+- `C:\dev\mofacts_config`
 - `C:\dev\mofacts`
-- `C:\Users\ppavl\OneDrive\Active projects\mofacts.wiki`
+- `C:\dev\MoFaCTS.wiki`
 
 ## Creating and Posting New Content
 
