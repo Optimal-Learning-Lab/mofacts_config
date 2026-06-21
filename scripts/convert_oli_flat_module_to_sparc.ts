@@ -355,6 +355,34 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#39;');
 }
 
+function normalizeYouTubeEmbedSrc(rawSrc: unknown): string {
+  const src = optionalText(rawSrc);
+  if (!src) {
+    return '';
+  }
+  const videoIdPattern = /^[A-Za-z0-9_-]{11}$/;
+  let videoId = src.trim().split(/[?&#/]/)[0] || '';
+  try {
+    const url = new URL(src);
+    const host = url.hostname.toLowerCase().replace(/^www\./, '');
+    if (host === 'youtu.be') {
+      videoId = url.pathname.replace(/^\//, '').split(/[?&#/]/)[0] || '';
+    } else if (host === 'youtube.com' || host === 'youtube-nocookie.com' || host.endsWith('.youtube.com')) {
+      videoId = url.searchParams.get('v') || '';
+      if (!videoId) {
+        videoId = url.pathname.match(/^\/(?:embed|shorts|live)\/([^/?#]+)/)?.[1] || '';
+      }
+      videoId = videoId.split(/[?&#/]/)[0] || '';
+    }
+  } catch (_error) {
+    // Bare OLI YouTube ids are expected and handled below.
+  }
+  if (!videoIdPattern.test(videoId)) {
+    throw new Error(`OLI youtube node requires a valid YouTube video id or URL; received "${src}"`);
+  }
+  return `https://www.youtube-nocookie.com/embed/${videoId}`;
+}
+
 function richTextToPlainText(value: unknown): string {
   if (value === null || value === undefined) {
     return '';
@@ -505,7 +533,7 @@ function richTextToHtml(value: unknown): string {
     return `<details class="oli-popup"><summary>${trigger}</summary>${content}</details>`;
   }
   if (type === 'youtube' || type === 'iframe') {
-    const src = optionalText(value.src);
+    const src = type === 'youtube' ? normalizeYouTubeEmbedSrc(value.src) : optionalText(value.src);
     const caption = richTextToHtml(value.caption).trim() || childHtml;
     if (!src) {
       return caption;
