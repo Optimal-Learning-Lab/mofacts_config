@@ -1,0 +1,104 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "fractions.lcd",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Find the least common denominator that can be used to rewrite fraction addends with a shared denominator."
+            },
+            "response": {
+              "correctResponse": "fractions lcd"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.common-denominator-product",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Use the product of the denominators as a valid common denominator for adding fractions."
+            },
+            "response": {
+              "correctResponse": "fractions common denominator product"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.convert-numerator",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Scale a numerator by the same factor used to change its denominator so the fraction remains equivalent."
+            },
+            "response": {
+              "correctResponse": "fractions convert numerator"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.add-numerators",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Add the numerators once the fractions have the same denominator."
+            },
+            "response": {
+              "correctResponse": "fractions add numerators"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.copy-answer-denominator",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Carry the shared denominator into the answer after adding the numerators."
+            },
+            "response": {
+              "correctResponse": "fractions copy answer denominator"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.simplify-numerator",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Reduce the numerator by dividing it by the common factor when simplifying an equivalent fraction."
+            },
+            "response": {
+              "correctResponse": "fractions simplify numerator"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      },
+      {
+        "clusterKC": "fractions.simplify-denominator",
+        "stims": [
+          {
+            "display": {
+              "clozeText": "Reduce the denominator by dividing it by the same common factor used to simplify the numerator."
+            },
+            "response": {
+              "correctResponse": "fractions simplify denominator"
+            },
+            "parameter": "0,0.8"
+          }
+        ]
+      }
+    ]
+  }
+}

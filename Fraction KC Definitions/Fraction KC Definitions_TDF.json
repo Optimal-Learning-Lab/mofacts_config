@@ -1,0 +1,39 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Fraction KC Definitions",
+      "stimulusfile": "Fraction_KC_Definitions_stims.json",
+      "shuffleclusters": "0-6",
+      "userselect": "true",
+      "lfparameter": "0.85"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Fraction KC Definitions</h2><p>This flashcard tutor practices the seven fraction-addition knowledge components used by the SPARC Fractions Addition tutor. Each card shows a definition of a fraction skill. Type the matching KC name with punctuation replaced by spaces.</p><p>This deck is intended to be assigned in the same course as SPARC Fractions Addition so the two units can test shared cluster-model behavior through matching <code>clusterKC</code> values.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-6",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0), p.overallOutcomeHistory.length), .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
+        },
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "purestudy": 10000,
+          "drill": 10000,
+          "skipstudy": false,
+          "reviewstudy": 5000,
+          "correctprompt": 500,
+          "fontsize": 24,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 1000000
+        }
+      }
+    ]
+  }
+}
