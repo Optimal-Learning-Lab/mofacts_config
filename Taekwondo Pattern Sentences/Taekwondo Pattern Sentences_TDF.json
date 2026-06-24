@@ -1,0 +1,39 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Taekwondo Pattern Sentences",
+      "stimulusfile": "Taekwondo_Pattern_Sentences_stims.json",
+      "shuffleclusters": "",
+      "userselect": "true",
+      "lfparameter": "0.85"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Taekwondo Pattern Sentences</h2><p>This tutor practices 68 sentence-level pattern meaning items. Each card shows one sentence from a pattern transcription. Type the sticky label plus the sentence number, for example <strong>Choong Moo 1</strong>.</p><ul><li><strong>What you will do:</strong> Read the sentence and enter the matching sticky label with its sentence number.</li><li><strong>Order:</strong> The introduction follows the source table order and is not randomized.</li><li><strong>Timing:</strong> Study and drill screens last about 10 seconds, review screens last about 5 seconds, and correct confirmations flash for about 0.5 seconds.</li></ul>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-67",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "purestudy": 10000,
+          "drill": 1000000000,
+          "skipstudy": false,
+          "reviewstudy": 20000,
+          "correctprompt": 1000,
+          "fontsize": 24,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 1000000
+        }
+      }
+    ]
+  }
+}
