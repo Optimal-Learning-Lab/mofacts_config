@@ -9,6 +9,7 @@ type ConversionContext = {
   moduleId: string;
   moduleNumber?: number;
   outputRoot: string;
+  auditRoot: string;
   lessonName: string;
   documentId: string;
   stimulusFile: string;
@@ -1670,8 +1671,8 @@ function printHelp(): void {
 Options:
   --source-root <path>    Extracted OLI export root.
   --module-id <id>       Convert one hierarchy module/container. Default: 97146.
-  --all-modules          Convert every hierarchy module/container to one package folder per module.
-  --output-root <path>   Output folder. For --all-modules this is the parent output folder.
+  --all-modules          Convert every hierarchy module/container to one flat upload package.
+  --output-root <path>   Upload package folder.
   --lesson-prefix <name> Lesson name prefix for generated all-module outputs.
   --no-zip              Write package folders without creating zip files.
 `);
@@ -1685,6 +1686,7 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
       moduleId,
       moduleNumber: moduleIndex + 1,
       outputRoot: options.outputRoot,
+      auditRoot: `${options.outputRoot} Conversion Audit`,
       lessonName: 'SPARC Intro Stats Variables',
       documentId: 'sparc-intro-stats-variables',
       stimulusFile: 'SPARC_Intro_Stats_Variables_stims.json',
@@ -1699,7 +1701,8 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
     sourceRoot: options.sourceRoot,
     moduleId,
     moduleNumber,
-    outputRoot: options.allModules ? path.join(options.outputRoot, `${moduleLabel} ${safeFileName(title)}`) : options.outputRoot,
+    outputRoot: options.outputRoot,
+    auditRoot: `${options.outputRoot} Conversion Audit`,
     lessonName,
     documentId: slug(lessonName),
     stimulusFile: `${fileStem}_stims.json`,
@@ -1710,7 +1713,8 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
 function writeConversionResult(context: ConversionContext, result: ConversionResult): void {
   writeJson(path.join(context.outputRoot, context.tdfFile), result.tdf);
   writeJson(path.join(context.outputRoot, context.stimulusFile), result.stimuli);
-  writeJson(path.join(context.outputRoot, 'conversion-notes.json'), result.conversionNotes);
+  const notesStem = path.basename(context.tdfFile, '_TDF.json');
+  writeJson(path.join(context.auditRoot, `${notesStem}_conversion-notes.json`), result.conversionNotes);
 }
 
 function zipConversionOutput(context: ConversionContext): void {
@@ -1733,13 +1737,18 @@ function main(): void {
   const options = parseArgs(process.argv.slice(2));
   const moduleIds = options.allModules ? allModuleIds(options.sourceRoot) : [options.moduleId];
   assertPreflightReferences(options.sourceRoot, moduleIds);
+  let lastContext: ConversionContext | null = null;
   for (const [index, moduleId] of moduleIds.entries()) {
     const context = contextForModule(options, moduleId, index);
+    lastContext = context;
     const result = convertModule(context);
     writeConversionResult(context, result);
-    if (options.zip) {
+    if (options.zip && !options.allModules) {
       zipConversionOutput(context);
     }
+  }
+  if (options.zip && options.allModules && lastContext) {
+    zipConversionOutput(lastContext);
   }
 }
 
