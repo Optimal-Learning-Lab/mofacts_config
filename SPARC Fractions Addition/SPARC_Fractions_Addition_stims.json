@@ -352,9 +352,10 @@
                 {
                   "id": "node-sum-left-top",
                   "nodeType": "atomic",
-                  "atomType": "fraction-input",
+                  "atomType": "fraction-box",
                   "position": "top",
                   "value": "",
+                  "readOnly": true,
                   "expected": "2",
                   "inputMode": "numeric",
                   "maxlength": 2
@@ -377,9 +378,10 @@
                 {
                   "id": "node-sum-right-top",
                   "nodeType": "atomic",
-                  "atomType": "fraction-input",
+                  "atomType": "fraction-box",
                   "position": "top",
                   "value": "",
+                  "readOnly": true,
                   "expected": "3",
                   "inputMode": "numeric",
                   "maxlength": 2
@@ -387,9 +389,10 @@
                 {
                   "id": "node-sum-right-bottom",
                   "nodeType": "atomic",
-                  "atomType": "fraction-input",
+                  "atomType": "fraction-box",
                   "position": "bottom",
                   "value": "",
+                  "readOnly": true,
                   "expected": "12",
                   "inputMode": "numeric",
                   "maxlength": 2
@@ -614,7 +617,7 @@
               "slots": {
                 "step": "choose-common-denominator",
                 "index": 1,
-                "text": "What could you do with the fractions so they have the same denominator?"
+                "text": "What could you do with the fractions so that they have the same denominator?"
               }
             },
             {
@@ -622,7 +625,7 @@
               "slots": {
                 "step": "choose-common-denominator",
                 "index": 2,
-                "text": "Choose a denominator that both denominators divide into."
+                "text": "Choose a denominator both denominators go into."
               }
             },
             {
@@ -630,7 +633,7 @@
               "slots": {
                 "step": "choose-common-denominator",
                 "index": 3,
-                "text": "You may use the least common denominator, 12, or another common denominator such as 24."
+                "text": "You may enter '12', the least common denominator, or '24', the product of the denominators, in the highlighted field."
               }
             },
             {
@@ -726,6 +729,57 @@
             },
             "orderPolicy": "dependency",
             "responseFormalism": "SAI",
+            "kcMapping": [
+              {
+                "brdRuleName": "determine-lcd",
+                "sparcCredit": "determine-lcd",
+                "clusterIndex": 0,
+                "clusterKC": "fractions.lcd",
+                "opportunities": 2
+              },
+              {
+                "brdRuleName": "multiply-denominators",
+                "sparcCredit": "multiply-denominators",
+                "clusterIndex": 1,
+                "clusterKC": "fractions.common-denominator-product",
+                "opportunities": 1
+              },
+              {
+                "brdRuleName": "convert-numerator",
+                "sparcCredit": "convert-numerator",
+                "clusterIndex": 2,
+                "clusterKC": "fractions.convert-numerator",
+                "opportunities": 2
+              },
+              {
+                "brdRuleName": "add-numerators",
+                "sparcCredit": "add-numerators",
+                "clusterIndex": 3,
+                "clusterKC": "fractions.add-numerators",
+                "opportunities": 1
+              },
+              {
+                "brdRuleName": "copy-answer-denominator",
+                "sparcCredit": "copy-answer-denominator",
+                "clusterIndex": 4,
+                "clusterKC": "fractions.copy-answer-denominator",
+                "opportunities": 1
+              },
+              {
+                "brdRuleName": "reduce-numerator",
+                "sparcCredit": "reduce-numerator",
+                "clusterIndex": 5,
+                "clusterKC": "fractions.simplify-numerator",
+                "opportunities": 1
+              },
+              {
+                "brdRuleName": "reduce-denominator",
+                "sparcCredit": "reduce-denominator",
+                "clusterIndex": 6,
+                "clusterKC": "fractions.simplify-denominator",
+                "opportunities": 1
+              }
+            ],
             "pathActivation": {
               "type": "first-matching-valid-denominator-pair",
               "selections": [
@@ -884,9 +938,9 @@
                   "common-denominator-24"
                 ],
                 "hints": [
-                  "What could you do with the fractions so they have the same denominator?",
-                  "Choose a denominator that both denominators divide into.",
-                  "You may use the least common denominator, 12, or another common denominator such as 24."
+                  "What could you do with the fractions so that they have the same denominator?",
+                  "Choose a denominator both denominators go into.",
+                  "You may enter '12', the least common denominator, or '24', the product of the denominators, in the highlighted field."
                 ]
               },
               {
@@ -951,7 +1005,7 @@
                   "input": "10"
                 },
                 "nodeRef": "node-known-1-equivalent-bottom",
-                "message": "Instead of adding the denominators, choose a denominator that both denominators divide into."
+                "message": "Instead of trying to add the denominators, choose a denominator both denominators go into."
               },
               {
                 "id": "added-denominators-second",
@@ -961,7 +1015,7 @@
                   "input": "10"
                 },
                 "nodeRef": "node-converted-bottom",
-                "message": "Instead of adding the denominators, choose a denominator that both denominators divide into."
+                "message": "Instead of trying to add the denominators, choose a denominator both denominators go into."
               },
               {
                 "id": "premature-add-numerators",
@@ -974,7 +1028,7 @@
                   "convert-numerators"
                 ],
                 "nodeRef": "node-sum-result-top",
-                "message": "You cannot add the numerators until the fractions have been converted to a common denominator."
+                "message": "You can't add the numerators until you've converted the fractions."
               }
             ],
             "completion": {
@@ -1472,7 +1526,7 @@
                 {
                   "type": "message",
                   "messageType": "hint",
-                  "template": "Enter '12', the least common denominator between both fractions, in the highlighted field.",
+                  "template": "You may enter '12', the least common denominator, or '24', the product of the denominators, in the highlighted field.",
                   "target": {
                     "documentId": {
                       "type": "variable",
@@ -7833,6 +7887,10 @@
                       "denominatorModelTarget": {
                         "type": "literal",
                         "value": "determine-lcd"
+                      },
+                      "denominatorClusterIndex": {
+                        "type": "literal",
+                        "value": 0
                       }
                     }
                   }
@@ -8038,6 +8096,10 @@
                       "denominatorModelTarget": {
                         "type": "literal",
                         "value": "multiply-denominators"
+                      },
+                      "denominatorClusterIndex": {
+                        "type": "literal",
+                        "value": 1
                       }
                     }
                   }
@@ -8222,7 +8284,7 @@
                 {
                   "type": "message",
                   "messageType": "buggy",
-                  "template": "Instead of adding the denominators, choose a denominator both denominators divide into.",
+                  "template": "Instead of trying to add the denominators, choose a denominator both denominators go into.",
                   "target": {
                     "documentId": {
                       "type": "variable",
@@ -8378,7 +8440,7 @@
                 {
                   "type": "message",
                   "messageType": "buggy",
-                  "template": "You cannot add the numerators until the fractions have been converted to a common denominator.",
+                  "template": "You can't add the numerators until you've converted the fractions.",
                   "target": {
                     "documentId": {
                       "type": "variable",
@@ -8453,6 +8515,10 @@
                     "denominatorModelTarget": {
                       "type": "bind",
                       "variable": "kc"
+                    },
+                    "denominatorClusterIndex": {
+                      "type": "bind",
+                      "variable": "clusterIndex"
                     }
                   }
                 }
@@ -8505,6 +8571,26 @@
                 {
                   "type": "credit",
                   "kc": "{kc}"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "nodeId": {
+                    "type": "variable",
+                    "name": "node"
+                  },
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  },
+                  "input": {
+                    "type": "variable",
+                    "name": "input"
+                  },
+                  "clusterIndex": {
+                    "type": "variable",
+                    "name": "clusterIndex"
+                  }
                 }
               ]
             },
