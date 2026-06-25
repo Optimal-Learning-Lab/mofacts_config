@@ -1,0 +1,48 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Taekwondo Pattern Sentences Reverse",
+      "stimulusfile": "Taekwondo_Pattern_Sentences_Reverse_stims.json",
+      "shuffleclusters": "",
+      "userselect": "true",
+      "lfparameter": "0.8",
+      "srfilterclose": "false",
+      "enableAudioPromptAndFeedback": "true",
+      "speechAPIKey": "",
+      "textToSpeechAPIKey": "",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "all",
+      "speechRecognitionLanguage": "en-US",
+      "textToSpeechLanguage": "en-US",
+      "speechIgnoreOutOfGrammarResponses": "false"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Taekwondo Pattern Sentences Reverse</h2><p>This tutor practices the same 68 sentence-level pattern meaning items in reverse. Each card shows the sticky label plus sentence number, such as <strong>Choong Moo 1</strong>. Say or type the full matching sentence.</p><ul><li><strong>What you will do:</strong> Read or hear the label and sentence number, then respond with the whole sentence transcription.</li><li><strong>Audio:</strong> Text-to-speech is enabled for both prompts and feedback, and speech recognition is enabled for spoken sentence responses.</li><li><strong>Order:</strong> The introduction follows the source table order and is not randomized.</li></ul>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-67",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "purestudy": 10000,
+          "drill": 1000000000,
+          "skipstudy": false,
+          "reviewstudy": 20000,
+          "correctprompt": 1000,
+          "fontsize": 24,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 1000000
+        }
+      }
+    ]
+  }
+}
