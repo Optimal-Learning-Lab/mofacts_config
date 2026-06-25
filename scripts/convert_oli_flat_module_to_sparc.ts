@@ -1580,13 +1580,27 @@ function convertModule(context: ConversionContext): ConversionResult {
       pageIds: itemRefs,
     },
   };
+  display.clusterTargets = [{ clusterIndex: 0 }];
+  const clusterKC = moduleSlug;
+  const stimulusKC = `${moduleSlug}-sparc-page`;
   const stimuli = {
     setspec: {
       lessonname: context.lessonName,
       clusters: [{
         clusterid: 0,
-        clustername: 'sparc-intro-stats-variables',
-        stims: [{ stimulusid: 0, display }],
+        clustername: moduleSlug,
+        clusterKC,
+        stims: [{
+          stimulusid: 0,
+          stimulusKC,
+          clusterKC,
+          textStimulus: context.lessonName,
+          response: { correctResponse: '__SPARC_COMPLETED__' },
+        }],
+      }],
+      sparcPages: [{
+        pageId: context.documentId,
+        display,
       }],
     },
   };
@@ -1601,7 +1615,7 @@ function convertModule(context: ConversionContext): ConversionResult {
       },
       unit: [
         {
-          unitname: 'Variables SPARC Page',
+          unitname: `${moduleTitle} SPARC Page`,
           sparcsession: {
             clusterlist: '0',
             unitMode: 'distance',

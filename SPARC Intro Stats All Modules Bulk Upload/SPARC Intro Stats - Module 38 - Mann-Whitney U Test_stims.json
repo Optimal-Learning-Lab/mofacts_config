@@ -4,56 +4,73 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "mann-whitney-u-test",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-38-mann-whitney-u-test",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
-                ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
-              },
-              "nodes": [],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
-              "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97437",
-                "moduleTitle": "Mann-Whitney U Test",
-                "pageIds": []
-              }
+            "stimulusKC": "mann-whitney-u-test-sparc-page",
+            "clusterKC": "mann-whitney-u-test",
+            "textStimulus": "SPARC Intro Stats - Module 38 - Mann-Whitney U Test",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
             }
           }
-        ]
+        ],
+        "clusterKC": "mann-whitney-u-test"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-38-mann-whitney-u-test",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-38-mann-whitney-u-test",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
+                ],
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97437",
+            "moduleTitle": "Mann-Whitney U Test",
+            "pageIds": []
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }

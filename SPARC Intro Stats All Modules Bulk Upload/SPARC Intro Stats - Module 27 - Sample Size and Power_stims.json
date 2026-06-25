@@ -4,711 +4,728 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "sample-size-and-power",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-27-sample-size-and-power",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
+            "stimulusKC": "sample-size-and-power-sparc-page",
+            "clusterKC": "sample-size-and-power",
+            "textStimulus": "SPARC Intro Stats - Module 27 - Sample Size and Power",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ],
+        "clusterKC": "sample-size-and-power"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-27-sample-size-and-power",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-27-sample-size-and-power",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
                 ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "id": "node-page-112996",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Power (1 of 2)",
+              "placement": {
+                "region": "document",
+                "order": 1
               },
-              "nodes": [
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
                 {
-                  "id": "node-page-112996",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Power (1 of 2)",
+                  "id": "node-page-112996-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Definition of Statistical Power</h3>",
                   "placement": {
                     "region": "document",
                     "order": 1
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-112996-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Definition of Statistical Power</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Statistical Power</strong> in the realm of hypothesis testing is a fundamental concept that measures the effectiveness of a test in detecting an effect, if there is one. Specifically, it is the probability that the test correctly rejects a false null hypothesis. In simpler terms, it&#39;s the test&#39;s ability to identify a true effect or difference when it actually exists.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Understanding Hypothesis Testing</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To appreciate the concept of power, one must first understand hypothesis testing. In statistical tests, we start with a null hypothesis (H0) that assumes no effect or no difference between groups. For example, H0 might state that a new drug has no effect on blood pressure compared to a placebo. The alternative hypothesis (H1), on the other hand, posits that there is an effect or a difference.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Type I and Type II Errors</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In testing these hypotheses, two types of errors can occur:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Type I Error</strong>: Occurs when the null hypothesis is true, but the test incorrectly rejects it. This is like a false alarm. The probability of making this error is denoted by α (alpha), the significance level of the test.</p></li><li><p><strong>Type II Error</strong>: Happens when the null hypothesis is false, but the test fails to reject it. This is akin to a missed detection. The probability of making this error is denoted by β (beta).</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Power: The Antidote to Type II Errors</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The power of a test is mathematically represented as 1 - β. It’s the probability that the test will reject a false null hypothesis. High statistical power (closer to 1) means that the test has a high probability of detecting an effect when it is truly there. In our drug example, a powerful test would accurately detect the true impact of the drug on blood pressure if there is one.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Why is Power Important?</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Power is crucial for several reasons:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ol-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Reliability of Results</strong>: A test with low power might fail to detect real effects, leading to the erroneous conclusion that the treatment or condition has no impact.</p></li><li><p><strong>Ethical and Practical Implications</strong>: Conducting a study with low power can be considered unethical and wasteful, as it uses resources without a good chance of providing conclusive results.</p></li><li><p><strong>Informed Decision Making</strong>: Understanding power helps in designing studies. It informs choices about sample size and significance levels, balancing the need to detect true effects with the resources available.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In summary, statistical power is a vital concept in hypothesis testing, ensuring that statistical tests are not just tools for data analysis but effective instruments for discovering truth and making informed decisions. It is a measure of a test&#39;s ability to find the truth when it exists, balancing the delicate act between detecting real effects and avoiding false detections.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Here&#39;s a basic figure illustrating the concepts of α (alpha), β (beta), 1 - α, and 1 - β in the context of hypothesis testing:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-image-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/FB/FB7A4E74BB4A6B9730AAC9AF8304DEC7/statistical_power_plot_no_annotations_v2.png\" alt=\"\" loading=\"lazy\"></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The blue curve represents the distribution under the null hypothesis (H0).The orange curve represents the distribution under the alternative hypothesis (H1).The area under the blue curve to the right of the red dashed line (critical value) represents α, the probability of a Type I error (false positive).The area under the orange curve to the left of the red dashed line represents β, the probability of a Type II error (false negative).The area under the blue curve to the left of the red dashed line represents 1 - α, often associated with the confidence level of the test.The area under the orange curve to the right of the red dashed line represents 1 - β, which is the statistical power of the test.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Effect Size</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Effect Size</strong> is a measure of the magnitude of the phenomenon under study. It plays a pivotal role in determining power:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Larger Effects Are Easier to Detect</strong>: Intuitively, the larger the true effect, the easier it is for a test to detect it. A large effect size increases the difference between the null and alternative hypotheses, making it more likely that a test will reject a false null hypothesis.</p></li><li><p><strong>Practical Significance</strong>: While statistical significance tells us if an effect exists, the effect size tells us how meaningful this effect is in practical terms.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Sample Size</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Sample Size</strong> refers to the number of observations or data points in the study:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Direct Relationship with Power</strong>: Generally, as the sample size increases, so does the power of the test. A larger sample provides more information about the population, reducing the variability and uncertainty in the results.</p></li><li><p><strong>Diminishing Returns</strong>: It&#39;s important to note that the relationship between sample size and power is not linear. Beyond a certain point, increasing the sample size yields diminishing returns in terms of increased power.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Significance Level (α)</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Significance Level (α)</strong> is the threshold for rejecting the null hypothesis:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Balancing Act</strong>: Typically set at 0.05, α represents the probability of making a Type I error. Setting a lower α (e.g., 0.01) reduces the risk of falsely declaring an effect, but at the same time, it reduces the test’s power.</p></li><li><p><strong>Context-Dependent Choice</strong>: The choice of α should depend on the context and the consequences of Type I and Type II errors. For instance, in medical trials, a lower α is often used due to the high stakes involved in false positives.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-26",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Variability</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 26
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-27",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Variability</strong> in the data affects the power:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Inverse Relationship with Power</strong>: High variability within the data can mask the effect being tested, making it harder to detect real differences. Conversely, low variability enhances the test&#39;s ability to detect an effect.</p></li><li><p><strong>Control Through Design</strong>: Variability can often be controlled or reduced through careful experimental design and by controlling external factors.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h2-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Calculating Power</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-30",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The calculation of power is a critical step in the design of experiments and studies in statistics. It involves assessing the probability that a statistical test will detect an effect, given that an effect actually exists. This section introduces the basic methodology for calculating power, along with simple formulas and considerations for common test scenarios.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 30
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-31",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Basic Concept</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 31
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-32",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Power is calculated based on several factors, including the effect size, sample size, significance level (α), and the variability in the data. The general idea is to determine the probability that the test statistic will fall into the critical region when the alternative hypothesis is true.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 32
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-33",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Common Test Scenarios</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 33
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ol-34",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Z-test for Means</strong>:</p><ul><li><p>Formula: Power=<em>P</em>(<em>Z</em>&gt;<em>Zα</em>​−Standard ErrorEffect Size​)</p></li><li><p>Here, <em>Zα</em>​ is the critical Z-value for the chosen α level (e.g., 1.96 for α = 0.05 in a two-tailed test). The effect size is typically the difference between the population mean and the hypothesized mean, and the standard error depends on the sample size and population standard deviation.</p></li></ul></li><li><p><strong>T-test for Means</strong>:</p><ul><li><p>Similar to the Z-test but uses the t-distribution, which is more appropriate for smaller sample sizes.</p></li><li><p>Power calculation can be more complex due to the t-distribution’s dependence on degrees of freedom.</p></li></ul></li><li><p><strong>Chi-Square Test for Independence</strong>:</p><ul><li><p>Involves calculating the expected frequencies under the null hypothesis and comparing them to the observed frequencies.</p></li><li><p>Power calculations can be done using specialized software or tables that consider the degrees of freedom and the effect size.</p></li></ul></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 34
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-35",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Software and Tools</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-p-36",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Given the complexity of these calculations, especially for more advanced tests and designs, researchers often use statistical software tools (like R, SAS, or G*Power) for power analysis. These tools provide more accurate calculations and can handle a variety of test types and designs.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-h4-37",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Practical Considerations</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 37
-                      }
-                    },
-                    {
-                      "id": "node-page-112996-ul-38",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Pilot Studies</strong>: Preliminary data from pilot studies can provide estimates of the effect size and variability, aiding in more accurate power calculations.</p></li><li><p><strong>Trade-offs</strong>: Researchers must often balance the desired power with practical limitations like sample size and resource availability.</p></li><li><p><strong>Ethical Implications</strong>: Ethically, it is important to aim for high power to avoid wasteful studies that cannot provide conclusive results.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 38
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "112996",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-112997",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Power (2 of 2)",
+                  "id": "node-page-112996-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Statistical Power</strong> in the realm of hypothesis testing is a fundamental concept that measures the effectiveness of a test in detecting an effect, if there is one. Specifically, it is the probability that the test correctly rejects a false null hypothesis. In simpler terms, it&#39;s the test&#39;s ability to identify a true effect or difference when it actually exists.</p>",
                   "placement": {
                     "region": "document",
                     "order": 2
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-112997-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Understanding and Interpreting Statistical Power Plots</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Statistical power plays a crucial role in hypothesis testing. It is the probability that a test will correctly reject a false null hypothesis (H0). To grasp this concept, let&#39;s dive into the series of plots provided and learn how to read and interpret them.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-image-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/08/082BCB44BCC0A66406A9BF80B59269B0/statistical_power_plots_v6.png\" alt=\"Thinking about Power\" loading=\"lazy\"><figcaption><p>﻿Thinking about Power</p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-h4-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>The Basics of the Plots</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Each plot consists of two bell-shaped curves, representing two hypotheses:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-ol-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Null Hypothesis (H0, blue curve):</strong> This hypothesis suggests that there is no significant effect or difference.</p></li><li><p><strong>Alternative Hypothesis (H1, orange curve):</strong> This hypothesis posits the presence of a significant effect or difference.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The area under each curve corresponds to the probability of observing different outcomes. A key point in these plots is the <strong>critical value</strong> (red dashed line), which separates the region of rejecting H0 (to the right of the line) from not rejecting H0 (to the left of the line).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-h4-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Reading the Plots</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-ol-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Alpha (α) Region:</strong> The area under the H0 curve to the right of the critical value (shaded blue) represents the probability of a Type I error - falsely rejecting H0 when it is true.</p></li><li><p><strong>Power Region:</strong> The area under the H1 curve to the right of the critical value (unshaded orange) represents the statistical power of the test, the probability of correctly rejecting H0 when it is false.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-h4-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Interpretations and Insights</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-ul-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Sample Size:</strong> Larger sample sizes (smaller standard deviation) result in narrower distributions, increasing the power of the test. Conversely, smaller sample sizes lead to wider distributions, reducing power.</p></li><li><p><strong>Effect Size:</strong> A larger effect size, indicated by a greater distance between the means of H0 and H1, increases power. A smaller effect size decreases it.</p></li><li><p><strong>Alpha (α) Level:</strong> A higher alpha level increases the probability of a Type I error but also increases power. A lower alpha level reduces both the Type I error rate and the power.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-h4-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Key Takeaways</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-112997-ul-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Balancing Act:</strong> There is a trade-off between Type I and Type II errors. Reducing one often increases the other.</p></li><li><p><strong>Strategic Testing:</strong> Understanding these relationships helps in designing tests with appropriate power, sample size, and significance levels.</p></li><li><p><strong>Practical Application:</strong> These plots aid in visualizing how changes in these parameters affect the outcomes of hypothesis tests, guiding researchers in making informed decisions about their study designs.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "112997",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-113182",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Software for Power",
+                  "id": "node-page-112996-h4-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Understanding Hypothesis Testing</h4>",
                   "placement": {
                     "region": "document",
                     "order": 3
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-113182-p-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>One resource for computing power are prebuilt function in R. For example, the pwr package.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-113182-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To use the &#39;pwr&#39; package in R for power analysis:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-113182-ol-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Installation</strong>: Install it by running <code>install.packages(&quot;pwr&quot;)</code> in R.</p></li><li><p><strong>Loading</strong>: Load the package with <code>library(pwr)</code>.</p></li><li><p><strong>Choosing Functions</strong>: Select appropriate functions like <code>pwr.t.test</code> for t-tests or <code>pwr.anova.test</code> for ANOVA, based on your analysis needs.</p></li><li><p><strong>Setting Parameters</strong>: Input relevant parameters (effect size, sample size, significance level, power) into the chosen function. Leave out the parameter you wish to calculate.</p></li><li><p><strong>Interpreting Output</strong>: The output will provide the missing parameter, helping in planning study design or interpreting results.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-113182-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The &quot;vignette&quot; for the package provides examples. A great tutorial for the package is also here: https://www.statmethods.net/stats/power.html</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-113182-iframe-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure class=\"oli-embed\"><iframe src=\"https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\" title=\"pwr package examples\" width=\"100%\" height=\"360\" loading=\"lazy\" allowfullscreen></iframe><figcaption><p>﻿pwr package examples</p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-113182-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Another option is the very popular G-Power software program.  GPower is a statistical power analysis tool available for Mac and Windows. It supports various test types, including t tests, F tests, χ2 tests, z tests, and some exact tests. The software allows for computation of effect sizes and graphical display of power analysis results. It is continuously updated to fix bugs and improve functionality. Users can download manuals and tutorials for guidance and are encouraged to cite relevant references when using GPower in research. The software is free for all users, including those in commercial environments. For more details and to download the software, visit <a href=\"https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower\" target=\"_blank\" rel=\"noopener noreferrer\">G*Power&#39;s website</a>. </p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "113182",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-112999",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Explore in R",
+                  "id": "node-page-112996-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To appreciate the concept of power, one must first understand hypothesis testing. In statistical tests, we start with a null hypothesis (H0) that assumes no effect or no difference between groups. For example, H0 might state that a new drug has no effect on blood pressure compared to a placebo. The alternative hypothesis (H1), on the other hand, posits that there is an effect or a difference.</p>",
                   "placement": {
                     "region": "document",
                     "order": 4
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [],
-                  "source": {
-                    "pageId": "112999",
-                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Type I and Type II Errors</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In testing these hypotheses, two types of errors can occur:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Type I Error</strong>: Occurs when the null hypothesis is true, but the test incorrectly rejects it. This is like a false alarm. The probability of making this error is denoted by α (alpha), the significance level of the test.</p></li><li><p><strong>Type II Error</strong>: Happens when the null hypothesis is false, but the test fails to reject it. This is akin to a missed detection. The probability of making this error is denoted by β (beta).</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Power: The Antidote to Type II Errors</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The power of a test is mathematically represented as 1 - β. It’s the probability that the test will reject a false null hypothesis. High statistical power (closer to 1) means that the test has a high probability of detecting an effect when it is truly there. In our drug example, a powerful test would accurately detect the true impact of the drug on blood pressure if there is one.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Why is Power Important?</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Power is crucial for several reasons:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-112996-ol-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Reliability of Results</strong>: A test with low power might fail to detect real effects, leading to the erroneous conclusion that the treatment or condition has no impact.</p></li><li><p><strong>Ethical and Practical Implications</strong>: Conducting a study with low power can be considered unethical and wasteful, as it uses resources without a good chance of providing conclusive results.</p></li><li><p><strong>Informed Decision Making</strong>: Understanding power helps in designing studies. It informs choices about sample size and significance levels, balancing the need to detect true effects with the resources available.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In summary, statistical power is a vital concept in hypothesis testing, ensuring that statistical tests are not just tools for data analysis but effective instruments for discovering truth and making informed decisions. It is a measure of a test&#39;s ability to find the truth when it exists, balancing the delicate act between detecting real effects and avoiding false detections.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Here&#39;s a basic figure illustrating the concepts of α (alpha), β (beta), 1 - α, and 1 - β in the context of hypothesis testing:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-112996-image-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/FB/FB7A4E74BB4A6B9730AAC9AF8304DEC7/statistical_power_plot_no_annotations_v2.png\" alt=\"\" loading=\"lazy\"></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The blue curve represents the distribution under the null hypothesis (H0).The orange curve represents the distribution under the alternative hypothesis (H1).The area under the blue curve to the right of the red dashed line (critical value) represents α, the probability of a Type I error (false positive).The area under the orange curve to the left of the red dashed line represents β, the probability of a Type II error (false negative).The area under the blue curve to the left of the red dashed line represents 1 - α, often associated with the confidence level of the test.The area under the orange curve to the right of the red dashed line represents 1 - β, which is the statistical power of the test.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Effect Size</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Effect Size</strong> is a measure of the magnitude of the phenomenon under study. It plays a pivotal role in determining power:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Larger Effects Are Easier to Detect</strong>: Intuitively, the larger the true effect, the easier it is for a test to detect it. A large effect size increases the difference between the null and alternative hypotheses, making it more likely that a test will reject a false null hypothesis.</p></li><li><p><strong>Practical Significance</strong>: While statistical significance tells us if an effect exists, the effect size tells us how meaningful this effect is in practical terms.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Sample Size</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Sample Size</strong> refers to the number of observations or data points in the study:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Direct Relationship with Power</strong>: Generally, as the sample size increases, so does the power of the test. A larger sample provides more information about the population, reducing the variability and uncertainty in the results.</p></li><li><p><strong>Diminishing Returns</strong>: It&#39;s important to note that the relationship between sample size and power is not linear. Beyond a certain point, increasing the sample size yields diminishing returns in terms of increased power.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Significance Level (α)</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Significance Level (α)</strong> is the threshold for rejecting the null hypothesis:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Balancing Act</strong>: Typically set at 0.05, α represents the probability of making a Type I error. Setting a lower α (e.g., 0.01) reduces the risk of falsely declaring an effect, but at the same time, it reduces the test’s power.</p></li><li><p><strong>Context-Dependent Choice</strong>: The choice of α should depend on the context and the consequences of Type I and Type II errors. For instance, in medical trials, a lower α is often used due to the high stakes involved in false positives.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-26",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Variability</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 26
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-27",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Variability</strong> in the data affects the power:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 27
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-28",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Inverse Relationship with Power</strong>: High variability within the data can mask the effect being tested, making it harder to detect real differences. Conversely, low variability enhances the test&#39;s ability to detect an effect.</p></li><li><p><strong>Control Through Design</strong>: Variability can often be controlled or reduced through careful experimental design and by controlling external factors.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-112996-h2-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Calculating Power</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 29
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-30",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The calculation of power is a critical step in the design of experiments and studies in statistics. It involves assessing the probability that a statistical test will detect an effect, given that an effect actually exists. This section introduces the basic methodology for calculating power, along with simple formulas and considerations for common test scenarios.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 30
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-31",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Basic Concept</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 31
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-32",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Power is calculated based on several factors, including the effect size, sample size, significance level (α), and the variability in the data. The general idea is to determine the probability that the test statistic will fall into the critical region when the alternative hypothesis is true.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 32
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-33",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Common Test Scenarios</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 33
+                  }
+                },
+                {
+                  "id": "node-page-112996-ol-34",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Z-test for Means</strong>:</p><ul><li><p>Formula: Power=<em>P</em>(<em>Z</em>&gt;<em>Zα</em>​−Standard ErrorEffect Size​)</p></li><li><p>Here, <em>Zα</em>​ is the critical Z-value for the chosen α level (e.g., 1.96 for α = 0.05 in a two-tailed test). The effect size is typically the difference between the population mean and the hypothesized mean, and the standard error depends on the sample size and population standard deviation.</p></li></ul></li><li><p><strong>T-test for Means</strong>:</p><ul><li><p>Similar to the Z-test but uses the t-distribution, which is more appropriate for smaller sample sizes.</p></li><li><p>Power calculation can be more complex due to the t-distribution’s dependence on degrees of freedom.</p></li></ul></li><li><p><strong>Chi-Square Test for Independence</strong>:</p><ul><li><p>Involves calculating the expected frequencies under the null hypothesis and comparing them to the observed frequencies.</p></li><li><p>Power calculations can be done using specialized software or tables that consider the degrees of freedom and the effect size.</p></li></ul></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 34
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-35",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Software and Tools</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 35
+                  }
+                },
+                {
+                  "id": "node-page-112996-p-36",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Given the complexity of these calculations, especially for more advanced tests and designs, researchers often use statistical software tools (like R, SAS, or G*Power) for power analysis. These tools provide more accurate calculations and can handle a variety of test types and designs.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 36
+                  }
+                },
+                {
+                  "id": "node-page-112996-h4-37",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Practical Considerations</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 37
+                  }
+                },
+                {
+                  "id": "node-page-112996-ul-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Pilot Studies</strong>: Preliminary data from pilot studies can provide estimates of the effect size and variability, aiding in more accurate power calculations.</p></li><li><p><strong>Trade-offs</strong>: Researchers must often balance the desired power with practical limitations like sample size and resource availability.</p></li><li><p><strong>Ethical Implications</strong>: Ethically, it is important to aim for high power to avoid wasteful studies that cannot provide conclusive results.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 38
                   }
                 }
               ],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
               "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97432",
-                "moduleTitle": "Sample Size and Power",
-                "pageIds": [
-                  "112996",
-                  "112997",
-                  "113182",
-                  "112999"
-                ]
+                "pageId": "112996",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-112997",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Power (2 of 2)",
+              "placement": {
+                "region": "document",
+                "order": 2
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-112997-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Understanding and Interpreting Statistical Power Plots</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-112997-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Statistical power plays a crucial role in hypothesis testing. It is the probability that a test will correctly reject a false null hypothesis (H0). To grasp this concept, let&#39;s dive into the series of plots provided and learn how to read and interpret them.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-112997-image-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/08/082BCB44BCC0A66406A9BF80B59269B0/statistical_power_plots_v6.png\" alt=\"Thinking about Power\" loading=\"lazy\"><figcaption><p>﻿Thinking about Power</p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-112997-h4-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>The Basics of the Plots</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-112997-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Each plot consists of two bell-shaped curves, representing two hypotheses:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-112997-ol-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Null Hypothesis (H0, blue curve):</strong> This hypothesis suggests that there is no significant effect or difference.</p></li><li><p><strong>Alternative Hypothesis (H1, orange curve):</strong> This hypothesis posits the presence of a significant effect or difference.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-112997-p-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The area under each curve corresponds to the probability of observing different outcomes. A key point in these plots is the <strong>critical value</strong> (red dashed line), which separates the region of rejecting H0 (to the right of the line) from not rejecting H0 (to the left of the line).</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-112997-h4-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Reading the Plots</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-112997-ol-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Alpha (α) Region:</strong> The area under the H0 curve to the right of the critical value (shaded blue) represents the probability of a Type I error - falsely rejecting H0 when it is true.</p></li><li><p><strong>Power Region:</strong> The area under the H1 curve to the right of the critical value (unshaded orange) represents the statistical power of the test, the probability of correctly rejecting H0 when it is false.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-112997-h4-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Interpretations and Insights</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-112997-ul-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Sample Size:</strong> Larger sample sizes (smaller standard deviation) result in narrower distributions, increasing the power of the test. Conversely, smaller sample sizes lead to wider distributions, reducing power.</p></li><li><p><strong>Effect Size:</strong> A larger effect size, indicated by a greater distance between the means of H0 and H1, increases power. A smaller effect size decreases it.</p></li><li><p><strong>Alpha (α) Level:</strong> A higher alpha level increases the probability of a Type I error but also increases power. A lower alpha level reduces both the Type I error rate and the power.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-112997-h4-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Key Takeaways</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-112997-ul-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Balancing Act:</strong> There is a trade-off between Type I and Type II errors. Reducing one often increases the other.</p></li><li><p><strong>Strategic Testing:</strong> Understanding these relationships helps in designing tests with appropriate power, sample size, and significance levels.</p></li><li><p><strong>Practical Application:</strong> These plots aid in visualizing how changes in these parameters affect the outcomes of hypothesis tests, guiding researchers in making informed decisions about their study designs.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "112997",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-113182",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Software for Power",
+              "placement": {
+                "region": "document",
+                "order": 3
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-113182-p-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>One resource for computing power are prebuilt function in R. For example, the pwr package.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-113182-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To use the &#39;pwr&#39; package in R for power analysis:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-113182-ol-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Installation</strong>: Install it by running <code>install.packages(&quot;pwr&quot;)</code> in R.</p></li><li><p><strong>Loading</strong>: Load the package with <code>library(pwr)</code>.</p></li><li><p><strong>Choosing Functions</strong>: Select appropriate functions like <code>pwr.t.test</code> for t-tests or <code>pwr.anova.test</code> for ANOVA, based on your analysis needs.</p></li><li><p><strong>Setting Parameters</strong>: Input relevant parameters (effect size, sample size, significance level, power) into the chosen function. Leave out the parameter you wish to calculate.</p></li><li><p><strong>Interpreting Output</strong>: The output will provide the missing parameter, helping in planning study design or interpreting results.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-113182-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The &quot;vignette&quot; for the package provides examples. A great tutorial for the package is also here: https://www.statmethods.net/stats/power.html</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-113182-iframe-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure class=\"oli-embed\"><iframe src=\"https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\" title=\"pwr package examples\" width=\"100%\" height=\"360\" loading=\"lazy\" allowfullscreen></iframe><figcaption><p>﻿pwr package examples</p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-113182-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Another option is the very popular G-Power software program.  GPower is a statistical power analysis tool available for Mac and Windows. It supports various test types, including t tests, F tests, χ2 tests, z tests, and some exact tests. The software allows for computation of effect sizes and graphical display of power analysis results. It is continuously updated to fix bugs and improve functionality. Users can download manuals and tutorials for guidance and are encouraged to cite relevant references when using GPower in research. The software is free for all users, including those in commercial environments. For more details and to download the software, visit <a href=\"https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower\" target=\"_blank\" rel=\"noopener noreferrer\">G*Power&#39;s website</a>. </p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "113182",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-112999",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Explore in R",
+              "placement": {
+                "region": "document",
+                "order": 4
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [],
+              "source": {
+                "pageId": "112999",
+                "purpose": "foundation"
               }
             }
-          }
-        ]
+          ],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97432",
+            "moduleTitle": "Sample Size and Power",
+            "pageIds": [
+              "112996",
+              "112997",
+              "113182",
+              "112999"
+            ]
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }

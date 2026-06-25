@@ -4,1304 +4,1321 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "case-c-q-q-multiple-regression",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-30-case-c-q-q-multiple-regression",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
+            "stimulusKC": "case-c-q-q-multiple-regression-sparc-page",
+            "clusterKC": "case-c-q-q-multiple-regression",
+            "textStimulus": "SPARC Intro Stats - Module 30 - Case C + Q → Q (Multiple regression)",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ],
+        "clusterKC": "case-c-q-q-multiple-regression"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-30-case-c-q-q-multiple-regression",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-30-case-c-q-q-multiple-regression",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
                 ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "id": "node-page-128647",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Intro to Multiple Regression",
+              "placement": {
+                "region": "document",
+                "order": 1
               },
-              "nodes": [
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
                 {
-                  "id": "node-page-128647",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Intro to Multiple Regression",
+                  "id": "node-page-128647-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Multiple Regression: An Introduction</h3>",
                   "placement": {
                     "region": "document",
                     "order": 1
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-128647-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Multiple Regression: An Introduction</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-h4-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Definition and Overview</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>What is Multiple Regression?</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Multiple regression is a statistical technique that models the relationship between two or more independent variables and a single dependent variable. It extends the concept of linear regression by incorporating multiple predictors, allowing for a more detailed and nuanced analysis of how various factors influence the outcome.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>The Purpose of Multiple Regression Analysis</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The primary purpose of multiple regression analysis is to understand and quantify the relationship between the dependent variable and several independent variables. It aims to:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-ul-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>Predict the value of the dependent variable based on the values of the independent variables.</p></li><li><p>Assess the relative importance of each independent variable in explaining variations in the dependent variable.</p></li><li><p>Control for confounding variables to isolate the effect of a particular independent variable of interest.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-h4-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>The Difference Between Simple and Multiple Regression</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Introduction to Simple Regression</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Simple regression is the cornerstone upon which multiple regression is built. In simple regression, there are only two variables: one independent variable (predictor) and one dependent variable (outcome). The relationship between these two variables is described by a straight line, known as the regression line, which is calculated to minimize the distance between the line and the data points.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Expanding to Multiple Independent Variables</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Multiple regression expands on the simple regression model by including two or more independent variables. This expansion allows for a more comprehensive analysis of how various factors together influence the dependent variable. In essence, while simple regression can provide insights into how a single factor affects an outcome, multiple regression offers a multidimensional view, acknowledging that real-world outcomes are often the result of multiple influences.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>This progression from simple to multiple regression is crucial for dealing with complex data in fields such as economics, psychology, and the natural sciences, where multiple factors simultaneously affect outcomes. By incorporating multiple variables, researchers can better model reality, leading to more accurate predictions and a deeper understanding of the interactions between variables.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In summary, multiple regression serves as a powerful tool for analysis in situations where the relationship between variables is intricate and influenced by many factors. It builds on the principles of simple regression, providing a more detailed and nuanced understanding of the dynamics at play.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-h3-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Foundations of Multiple Regression</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Understanding the foundations of multiple regression is critical for effectively applying the technique in research. This section delves into key concepts and terminology, followed by an overview of the assumptions underlying multiple regression analysis.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-h4-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Key Concepts and Terminology</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-ul-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Dependent and Independent Variables</strong>: In multiple regression, the <strong>dependent variable</strong> is the outcome or the variable that we are trying to predict or explain. The <strong>independent variables</strong> (also known as predictors or explanatory variables) are the factors that we hypothesize have an impact on the dependent variable.</p></li><li><p><strong>Coefficients</strong>: Each independent variable in a multiple regression model is associated with a coefficient. This coefficient estimates the change in the dependent variable for a one-unit change in the independent variable, holding all other variables constant. It quantifies the strength and direction of the association between each predictor and the outcome.</p></li><li><p><strong>Intercept</strong>: The intercept (often denoted as the constant term) represents the expected value of the dependent variable when all independent variables are set to zero. It provides a baseline from which the influence of predictors can be measured.</p></li><li><p><strong>R-squared (R²)</strong>: R-squared is a statistical measure that represents the proportion of the variance for the dependent variable that&#39;s explained by the independent variables in the model. It ranges from 0 to 1, where a value closer to 1 indicates that the model explains a larger portion of the variance.</p></li><li><p><strong>Adjusted R-squared</strong>: Adjusted R-squared is a modified version of R-squared that adjusts for the number of predictors in the model. It is used to compare the explanatory power of regression models that contain different numbers of independent variables.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-h4-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Assumptions of Multiple Regression</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To ensure the validity of a multiple regression analysis, several key assumptions about the data must be met:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-ul-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Linearity</strong>: The relationship between each independent variable and the dependent variable is assumed to be linear. This can be assessed through scatterplots of observed vs. predicted values or residuals vs. predicted values.</p></li><li><p><strong>Independence of Errors</strong>: The residuals (errors) of the model are assumed to be independent of each other. Serial correlation in the residuals can violate this assumption, particularly in time series data.</p></li><li><p><strong>Homoscedasticity</strong>: This assumption entails that the variance of error terms (residuals) is consistent across all levels of the independent variables. Heteroscedasticity, where the variance of the residuals is unequal across different values of the independent variables, can lead to inefficiency in the estimates.</p></li><li><p><strong>Normal Distribution of Errors</strong>: For inference purposes (such as calculating confidence intervals and conducting hypothesis tests), the residuals should be approximately normally distributed.</p></li><li><p><strong>Multicollinearity</strong>: Refers to the situation where two or more independent variables are highly correlated with each other. This can make it difficult to determine the individual effect of each predictor on the dependent variable. <strong>Variance Inflation Factor (VIF)</strong> is a measure used to detect the presence and severity of multicollinearity by quantifying how much the variance of an estimated regression coefficient increases due to collinearity.</p></li><li><p><strong>Additivity</strong>: This assumption states that the effect of changes in an independent variable X on the dependent variable Y is independent of other variables in the model. Essentially, the model assumes that the relationships between each independent variable and the dependent variable are additive.</p></li><li><p><strong>No Perfect Multicollinearity</strong>: In addition to avoiding high multicollinearity, the model should not have perfect multicollinearity, which occurs when an independent variable is a perfect linear combination of other independent variables. This can lead to computational problems and the inability to estimate the coefficients of the model.</p></li><li><p><strong>Measurement Error</strong>: The model assumes that the independent variables are measured without error. Significant measurement errors in the independent variables can bias the estimated effects of those variables on the dependent variable.</p></li><li><p><strong>Sample Size</strong>: Adequate sample size is important to ensure the reliability of regression results. As a rule of thumb, there should be at least 10-15 observations per predictor variable in the analysis to provide reliable estimates.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-128647-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Understanding and checking these assumptions is crucial for the appropriate application and interpretation of multiple regression analysis. Violations of these assumptions can lead to biased or misleading results, emphasizing the need for careful diagnostic checks before drawing conclusions from a multiple regression model.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "128647",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-128646",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Multiple Regression Methods",
+                  "id": "node-page-128647-h4-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Definition and Overview</h4>",
                   "placement": {
                     "region": "document",
                     "order": 2
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-128646-h2-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>The Mechanics of Multiple Regression</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Delving into the mechanics of multiple regression</strong> reveals how it operates and what preparatory steps are necessary to ensure the accuracy and reliability of its outcomes. This section will cover the multiple regression equation and the pivotal role of data preparation.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>The Multiple Regression Equation</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The multiple regression equation extends the simple linear regression equation to accommodate multiple independent variables. It is formulated as follows:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><code>Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ + ε</code></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ul-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Y</strong> represents the dependent variable we aim to predict.</p></li><li><p><strong>X₁, X₂, ..., Xₙ</strong> are the independent variables (predictors) that influence Y.</p></li><li><p><strong>β₀</strong> is the intercept term, indicating the value of Y when all the independent variables are zero.</p></li><li><p><strong>β₁, β₂, ..., βₙ</strong> are the coefficients for the independent variables, reflecting how much Y changes with a one-unit change in the respective Xᵢ, holding all other variables constant.</p></li><li><p><strong>ε</strong> is the error term, accounting for the difference between the observed and predicted values of Y.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Breaking down the equation step by step:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ol-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Intercept (β₀)</strong>: This is where the line intersects the Y-axis. It represents the predicted value of Y when all X variables are zero.</p></li><li><p><strong>Coefficients (β₁, β₂, ..., βₙ)</strong>: Each coefficient indicates the direction and magnitude of the relationship between the respective independent variable and the dependent variable.</p></li><li><p><strong>Independent Variables (X₁, X₂, ..., Xₙ)</strong>: These are the factors you believe affect your dependent variable. Each Xᵢ has its own coefficient βᵢ that quantifies its unique impact on Y.</p></li><li><p><strong>Error Term (ε)</strong>: This captures all other factors that influence Y but are not included in the model. It&#39;s what remains unexplained by the model.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>Data Preparation</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Handling Categorical Variables via Dummy Coding:</strong> Categorical variables, such as gender or race, need to be converted into a numerical format for inclusion in a multiple regression model. This is achieved through dummy coding, where each category is represented by a binary variable (0 or 1). For a variable with k categories, k-1 dummy variables are created to avoid multicollinearity, with one category (often the most common) serving as the reference group.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Importance of Data Cleaning and Preparation:</strong> The reliability of a multiple regression analysis heavily depends on the quality of the data. Essential steps in data preparation include:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ul-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Cleaning</strong>: Identifying and correcting (or removing) errors and inconsistencies (e.g., outliers, missing values) in the data.</p></li><li><p><strong>Transforming</strong>: Normalizing data or transforming variables to meet the assumptions of linearity and normal distribution of errors.</p></li><li><p><strong>Selecting Variables</strong>: Carefully choose which independent variables to include based on theoretical reasoning and preliminary analysis to avoid overfitting and ensure the model&#39;s interpretability.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Proper data preparation not only enhances the accuracy of the regression model but also ensures that the results are meaningful and applicable to real-world scenarios. This foundational work is crucial for drawing valid conclusions from multiple regression analysis.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>Performing Multiple Regression Analysis</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Performing multiple regression analysis involves a series of systematic steps, from the initial hypothesis formulation to the final interpretation of results. This section outlines these steps and provides insight into analyzing data using software, as well as interpreting the key outputs of multiple regression analysis.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>Steps in Conducting Multiple Regression</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ol-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Hypothesis Formulation</strong>: Begin by clearly defining the research question or hypothesis. Identify the dependent variable you want to explain or predict, and propose independent variables that you hypothesize have an impact on it.</p></li><li><p><strong>Data Collection</strong>: Collect data for all variables identified in the hypothesis. This might involve gathering existing data (secondary data) or conducting surveys and experiments (primary data).</p></li><li><p><strong>Data Preparation</strong>: Prepare the data for analysis, which includes cleaning the data (handling missing values and outliers), coding categorical variables (through dummy coding), and checking for multicollinearity.</p></li><li><p><strong>Data Analysis Using Software</strong>: Multiple regression analysis requires statistical software. A brief overview of popular options includes:</p><ul><li><p><strong>R</strong>: A free software environment for statistical computing and graphics. R is highly flexible and widely used for statistical analysis and data visualization.</p></li><li><p><strong>SPSS (Statistical Package for the Social Sciences)</strong>: A user-friendly software popular in social sciences for performing complex statistical analyses through a GUI, without requiring extensive programming knowledge.</p></li><li><p><strong>Python</strong>: With libraries like pandas for data manipulation and statsmodels for statistical modeling, Python is a powerful tool for conducting multiple regression analysis, especially for those comfortable with coding.</p></li></ul></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2><strong>Interpreting the Results</strong></h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ol-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Understanding Coefficients and Their Significance</strong>:</p><ul><li><p>Each coefficient in the multiple regression output represents the change in the dependent variable for a one-unit change in the corresponding independent variable, holding other variables constant.</p></li><li><p>The significance of these coefficients, often tested through t-tests, indicates whether the relationships observed in the sample data are strong enough to be generalized to the population.</p></li></ul></li><li><p><strong>How to Interpret and Report R-squared and Adjusted R-squared</strong>:</p><ul><li><p><strong>R-squared</strong> indicates the proportion of variance in the dependent variable that is explained by the independent variables in the model. A higher R-squared value suggests a better fit of the model to the data.</p></li><li><p><strong>Adjusted R-squared</strong> adjusts the R-squared value based on the number of predictors in the model, providing a more accurate measure of the model&#39;s explanatory power, especially when comparing models with different numbers of predictors.</p></li></ul></li><li><p><strong>Reading Output from Statistical Software</strong>:</p><ul><li><p>Outputs from statistical software typically include the regression coefficients, their standard errors, t-values, p-values for tests of significance, and confidence intervals.</p></li><li><p>Look for the &quot;Coefficients&quot; table for details on each predictor&#39;s impact on the dependent variable.</p></li><li><p>The &quot;Model Summary&quot; section provides R-squared and Adjusted R-squared values, giving insight into the model&#39;s overall fit.</p></li><li><p>Diagnostic plots (e.g., residuals vs. fitted values) are crucial for checking assumptions like homoscedasticity and normality of residuals.</p></li></ul></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h2-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Prediction</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Prediction with multiple regression involves using a model built from several independent variables to forecast an outcome. This statistical technique allows us to understand the relationship between a dependent variable and two or more independent variables, facilitating the prediction of future events based on historical data.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Interpolation</strong> occurs when we make a prediction within the range of our data points. For example, if we&#39;ve collected weekly sales data for a year, using this model to predict sales for a week within that year is interpolation. It&#39;s generally considered more reliable because it operates within the bounds of observed data.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Extrapolation</strong> involves predicting values outside the range of our data. Using the same sales data example, predicting sales for the year following our data collection period would be extrapolation. This approach carries more risk since it assumes that the patterns observed within our data set will continue beyond its range, which isn&#39;t always the case.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Example of Interpolation:</strong> Imagine a model predicting the temperature based on altitude and humidity levels using data from sea level up to 2,000 meters. Predicting the temperature at 1,500 meters, given a specific humidity level, would be interpolation since it&#39;s within the range of our collected data.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Example of Extrapolation:</strong> Using the same model to predict the temperature at 3,000 meters would be extrapolation. Since our data only goes up to 2,000 meters, this prediction goes beyond the data&#39;s range, introducing uncertainty about its accuracy.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h3-26",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Multiple Regression Model Example</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 26
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-27",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Dataset Overview:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ul-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Size (Square Feet):</strong> Ranges from 1,000 to 3,000 square feet.</p></li><li><p><strong>Distance from City Center (Miles):</strong> Ranges from 1 to 10 miles.</p></li><li><p><strong>House Price (USD):</strong> Dependent variable to be predicted.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The regression model, derived from the dataset, provides the following equation for predicting house prices:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-30",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>House Price=50,000+100×(Size)−5,000×(Distance)</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 30
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-31",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Where:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 31
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-ul-32",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>50,000 USD is the base price of a house.</p></li><li><p>100 USD is the price increase per additional square foot.</p></li><li><p>5,000 USD is the price decrease for each mile further from the city center.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 32
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-h4-33",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Interpolation Example</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 33
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-34",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Suppose we want to predict the price of a house that is 2,000 square feet in size and located 5 miles from the city center. Since both values fall within the observed ranges of the independent variables, this prediction is an example of interpolation.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 34
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-35",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>House Price=50,000+100×2,000−5,000×5</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-36",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>House Price=50,000+200,000−25,000</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-37",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>House Price=225,000 USD</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 37
-                      }
-                    },
-                    {
-                      "id": "node-page-128646-p-38",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The interpolated prediction for the house price is $225,000, which falls within the reliable range of our model.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 38
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "128646",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-128648",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Checking Assumptions",
+                  "id": "node-page-128647-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>What is Multiple Regression?</strong></p>",
                   "placement": {
                     "region": "document",
                     "order": 3
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-128648-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>1. Linearity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Scatterplots</strong>: Create scatterplots to visually inspect the relationship between each independent variable and the dependent variable. This can be done by using the Graphs &gt; Legacy Dialogs &gt; Scatter/Dot.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-h3-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>2. Independence of Errors (No Autocorrelation)</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Durbin-Watson Statistic</strong>: After running a regression analysis (Analyze &gt; Regression &gt; Linear), check the Durbin-Watson statistic in the output to assess the independence of errors. A value between 1.5 and 2.5 typically indicates that there&#39;s no autocorrelation.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-h3-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>3. Homoscedasticity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Residual Plots</strong>: Check for homoscedasticity by examining a plot of the residuals versus the predicted values. This can be done by selecting the option to save residuals when setting up the regression analysis and then creating scatterplots of the saved residuals.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Here are two plots simulated using Python to illustrate examples of homoscedasticity and heteroscedasticity:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>The <strong>Good Example</strong> (top plot) demonstrates homoscedasticity, where the residuals are evenly distributed across all levels of predicted values, indicating consistent variance.</p></li><li><p>The <strong>Bad Example</strong> (bottom plot) shows heteroscedasticity, with residuals spreading out in a pattern that suggests variance increases as the predicted value increases, indicating inconsistent variance.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>These plots mathematically and visually convey how residuals should behave in a well-specified model versus one that may have issues affecting its reliability and efficiency.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>See the next page of the unit for how do do this in SPSS.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-h3-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>4. Normal Distribution of Errors</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Histogram of Residuals</strong>: After saving the residuals from the regression analysis, use Analyze &gt; Descriptive Statistics &gt; Frequencies to create a histogram of residuals to visually assess normality.</p></li><li><p><strong>Normal P-P Plots or Q-Q Plots</strong>: Also accessible from the Frequencies dialog, these plots compare the distribution of residuals to a normal distribution.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>This is also discussed in a later page in this unit.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-h3-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>5. Multicollinearity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-128648-ul-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Variance Inflation Factor (VIF) and Tolerance</strong>: Check VIF and Tolerance in the Coefficients output table after running the regression. High VIF values (VIF &gt; 10 as a common rule of thumb) or very low Tolerance values (below 0.1) indicate multicollinearity problems.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "128648",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-129080",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Checking Heteroscedasticity",
+                  "id": "node-page-128647-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Multiple regression is a statistical technique that models the relationship between two or more independent variables and a single dependent variable. It extends the concept of linear regression by incorporating multiple predictors, allowing for a more detailed and nuanced analysis of how various factors influence the outcome.</p>",
                   "placement": {
                     "region": "document",
                     "order": 4
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129080-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>1. Run the Linear Regression Analysis</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-ol-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Navigate to the Linear Regression dialog</strong>: Go to <strong>Analyze &gt; Regression &gt; Linear</strong>.</p></li><li><p><strong>Select your dependent variable</strong> and <strong>independent(s) variable(s)</strong> for the analysis.</p></li><li><p><strong>Click on the &quot;Statistics&quot; button</strong>: Ensure you select <strong>Estimates</strong>, <strong>Model fit</strong>, and <strong>Covariance matrix</strong>. These options provide useful statistics, but for heteroscedasticity, we&#39;re more interested in the residuals.</p></li><li><p><strong>Before running the model, click on &quot;Plots&quot;</strong>: You&#39;ll be setting up plots to check for heteroscedasticity.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-h3-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>2. Set Up Plots to Check for Heteroscedasticity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-ol-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p>In the &quot;Plots&quot; dialog:</p></li><li><p>Check the option to <strong>&quot;Produce all partial plots&quot;</strong> if you&#39;re also interested in assessing the relationship between the dependent variable and each independent variable, controlling for the others.</p></li><li><p><strong>Click &quot;Continue&quot;</strong> to close the Plots dialog, then <strong>&quot;OK&quot;</strong> to run the regression analysis.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-h3-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>3. Review the Plots for Signs of Heteroscedasticity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>After running the analysis, SPSS will generate several plots among the output. The scatterplot of standardized residuals against standardized predicted values is particularly useful for checking heteroscedasticity:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-ul-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Inspect the scatterplot</strong>: You&#39;re looking for a pattern in the spread of residuals. If the residuals spread randomly around the horizontal axis (zero line) with a roughly constant spread across all levels of predicted values, this suggests <strong>homoscedasticity</strong>.</p></li><li><p><strong>Signs of heteroscedasticity</strong>: If the spread of residuals increases or decreases systematically as the predicted values increase, this indicates heteroscedasticity. Patterns such as a funnel shape (either opening up or closing in as predicted values increase) are a clear sign of this issue.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-h3-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Addressing Heteroscedasticity</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129080-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>If you detect heteroscedasticity, you might consider several strategies to address it, including transforming your dependent variable (e.g., using a logarithmic transformation), using robust regression methods, or applying weighted least squares regression if the nature of the heteroscedasticity can be identified and appropriately weighted.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129080",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-129081",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Checking Normality of Errors",
+                  "id": "node-page-128647-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>The Purpose of Multiple Regression Analysis</strong></p>",
                   "placement": {
                     "region": "document",
                     "order": 5
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129081-p-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To assess the normal distribution of errors (residuals) within the linear regression module in SPSS, you&#39;ll primarily rely on the residual plots generated as part of your regression analysis. Here&#39;s a step-by-step guide to generating and interpreting these plots:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-h3-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>1. Run the Linear Regression Analysis</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-ol-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Open the Linear Regression dialog</strong>: Go to <strong>Analyze &gt; Regression &gt; Linear</strong>.</p></li><li><p><strong>Select your dependent variable</strong> and <strong>independent variable(s)</strong> for the regression analysis.</p></li><li><p>Before running the model, <strong>click on &quot;Plots&quot;</strong> to set up the necessary plots for assessing the normality of residuals.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-h3-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>2. Set Up Plots to Assess Normality</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In the &quot;Plots&quot; dialog:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-ol-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>For the X axis (horizontal)</strong>, you can choose <em>ZPRED</em> (standardized predicted values) or another variable if you&#39;re interested in specific comparisons. For assessing normality, the choice of the X axis is less critical since you&#39;re focused on the distribution of residuals themselves.</p></li><li><p><strong>For the Y axis (vertical)</strong>, select <em>ZRESID</em> (standardized residuals) to focus on the residuals.</p></li><li><p>Additionally, check the option for <strong>&quot;Histogram&quot;</strong> and <strong>&quot;Normal probability plot&quot;</strong>. These are specifically useful for assessing the normality of residuals.</p></li><li><p>Click <strong>&quot;Continue&quot;</strong> to close the Plots dialog, then <strong>&quot;OK&quot;</strong> to run your regression analysis.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-h3-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>3. Review the Histogram and Normal Probability Plot</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-p-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>After running the analysis, SPSS will provide a histogram of residuals and a normal probability plot (P-P or Q-Q plot) among the output, which you can use to assess the normality of residuals:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-ul-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Histogram</strong>: This shows the distribution of standardized residuals. For residuals to be normally distributed, the histogram should resemble a bell curve. SPSS can overlay a normal curve on the histogram, providing a visual reference for assessing normality.</p></li><li><p><strong>Normal Probability Plot (P-P or Q-Q Plot)</strong>: This plot shows how closely the residuals follow a normal distribution. The data points should closely follow the diagonal line if the residuals are normally distributed. Deviations from this line indicate deviations from normality.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-h3-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Interpreting the Results</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-ul-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Normal Distribution of Errors</strong>: If both the histogram and the normal probability plot indicate that the residuals are distributed in a way that closely follows a normal curve, this suggests that the assumption of normally distributed errors is met.</p></li><li><p><strong>Deviations from Normality</strong>: Significant deviations from the expected patterns in these plots might indicate that the residuals do not follow a normal distribution. This can impact the validity of some hypothesis tests that assume normality of residuals.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-h3-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Addressing Non-Normality</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>If your analysis suggests that the residuals are not normally distributed, consider the following strategies:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-ul-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Transforming the Dependent Variable</strong>: Applying a transformation (e.g., logarithmic, square root) to the dependent variable can help achieve normality in residuals.</p></li><li><p><strong>Nonlinear Models</strong>: If the relationship between variables is not linear, fitting a nonlinear model might address the issue.</p></li><li><p><strong>Robust Regression Techniques</strong>: These techniques can provide reliable estimates even when the assumptions of normality are violated.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-129081-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Following these steps will help you utilize SPSS&#39;s capabilities to assess and address the normal distribution of errors in your regression analysis, ensuring more reliable and valid results.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129081",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-129090",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "APA writeup for multiple regression with R example",
+                  "id": "node-page-128647-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The primary purpose of multiple regression analysis is to understand and quantify the relationship between the dependent variable and several independent variables. It aims to:</p>",
                   "placement": {
                     "region": "document",
                     "order": 6
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129090-p-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To blend an R example with APA reporting, let&#39;s first conduct a hypothetical multiple regression analysis in R, then describe how to report the results in APA format, including creating an APA style table using the <code>apaTables</code> package.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-h3-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>R Example: Multiple Regression Analysis</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Assume we have a dataset <code>df</code> with an outcome variable <code>outcome</code> and three predictor variables: <code>predictor1</code>, <code>predictor2</code>, and <code>predictor3</code>. We&#39;ll perform a multiple regression analysis using these variables.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>First, let&#39;s simulate some data for this example:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-code-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code># Load necessary library\nlibrary(apaTables)\n\n# Simulating some data\nset.seed(123) # For reproducibility\ndf &lt;- data.frame(\n  outcome = rnorm(100, mean = 50, sd = 10),\n  predictor1 = rnorm(100, mean = 5, sd = 1.5),\n  predictor2 = rnorm(100, mean = 3, sd = 1),\n  predictor3 = rnorm(100, mean = 4, sd = 1.2)\n)\n\n# Conducting the multiple regression\nmodel &lt;- lm(outcome ~ predictor1 + predictor2 + predictor3, data = df)\nsummary(model)\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>After running the regression, you can create an APA style table for your regression analysis:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-code-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>rCopy code# Generate an APA style table for the regression analysis\napaTables::apa.reg.table(model, filename = &quot;regression_table.doc&quot;, table.number = 1)\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>This code will create a Word document named <code>regression_table.doc</code> containing the regression analysis table formatted according to APA guidelines.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-h3-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Reporting in APA Format</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>When writing your results in APA format, follow these guidelines:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-ol-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Introduction to the Analysis</strong>: Begin with a sentence that introduces the analysis, including the dependent and independent variables.</p><p> &quot;A multiple regression analysis was conducted to examine the impact of three predictors (predictor1, predictor2, and predictor3) on the outcome variable. &quot; </p></li><li><p><strong>Model Summary</strong>: Summarize the overall fit of the model, including <em>R</em><sup>2</sup>, adjusted <em>R</em><sup>2</sup>, and the F-statistic.</p><p>&quot; The model accounted for a significant proportion of variance in the outcome variable, with an <em>R</em><sup>2</sup> of .XX, adjusted  <em>R</em><sup>2</sup> of .XX, <em>F</em>(3, 96) = XX.XX, <em>p</em> &lt; .05. &quot;</p></li><li><p><strong>Coefficients</strong>: Describe the specific contributions of each predictor. For each predictor, report the unstandardized coefficient (B), standard error (SE), standardized coefficient (β), and the significance level.</p><p>&quot;The analysis revealed that predictor1 significantly influenced the outcome, with an unstandardized regression coefficient (<em>b</em>) of XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. Similarly, predictor2 was found to significantly contribute to the model, with a <em>b</em> of -XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. However, predictor3 did not significantly predict the outcome, evidenced by a <em>b</em> of XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. &quot;</p></li><li><p><strong>Conclusion</strong>: Provide a brief conclusion summarizing the findings of the regression analysis.</p><p>&quot;In conclusion, predictor1 and predictor2 were found to significantly impact the outcome variable, while predictor3 did not show a significant effect.&quot;</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-p-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Remember, the values (XX.XX) and statistics (.XX) in the APA reporting example should be replaced with the actual results from your regression analysis. This example provides a structured way to report your regression analysis findings in line with APA guidelines.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-129090-image-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/19/190100B91664C2D89D2E2CFDB63BA25D/Screenshot 2024-04-23 111553.png\" alt=\"Example APA table\" loading=\"lazy\"><figcaption><p>Example APA table</p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129090",
-                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-128647-ul-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>Predict the value of the dependent variable based on the values of the independent variables.</p></li><li><p>Assess the relative importance of each independent variable in explaining variations in the dependent variable.</p></li><li><p>Control for confounding variables to isolate the effect of a particular independent variable of interest.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-128647-h4-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>The Difference Between Simple and Multiple Regression</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Introduction to Simple Regression</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Simple regression is the cornerstone upon which multiple regression is built. In simple regression, there are only two variables: one independent variable (predictor) and one dependent variable (outcome). The relationship between these two variables is described by a straight line, known as the regression line, which is calculated to minimize the distance between the line and the data points.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Expanding to Multiple Independent Variables</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Multiple regression expands on the simple regression model by including two or more independent variables. This expansion allows for a more comprehensive analysis of how various factors together influence the dependent variable. In essence, while simple regression can provide insights into how a single factor affects an outcome, multiple regression offers a multidimensional view, acknowledging that real-world outcomes are often the result of multiple influences.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This progression from simple to multiple regression is crucial for dealing with complex data in fields such as economics, psychology, and the natural sciences, where multiple factors simultaneously affect outcomes. By incorporating multiple variables, researchers can better model reality, leading to more accurate predictions and a deeper understanding of the interactions between variables.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In summary, multiple regression serves as a powerful tool for analysis in situations where the relationship between variables is intricate and influenced by many factors. It builds on the principles of simple regression, providing a more detailed and nuanced understanding of the dynamics at play.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-128647-h3-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Foundations of Multiple Regression</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Understanding the foundations of multiple regression is critical for effectively applying the technique in research. This section delves into key concepts and terminology, followed by an overview of the assumptions underlying multiple regression analysis.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-128647-h4-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Key Concepts and Terminology</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-128647-ul-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Dependent and Independent Variables</strong>: In multiple regression, the <strong>dependent variable</strong> is the outcome or the variable that we are trying to predict or explain. The <strong>independent variables</strong> (also known as predictors or explanatory variables) are the factors that we hypothesize have an impact on the dependent variable.</p></li><li><p><strong>Coefficients</strong>: Each independent variable in a multiple regression model is associated with a coefficient. This coefficient estimates the change in the dependent variable for a one-unit change in the independent variable, holding all other variables constant. It quantifies the strength and direction of the association between each predictor and the outcome.</p></li><li><p><strong>Intercept</strong>: The intercept (often denoted as the constant term) represents the expected value of the dependent variable when all independent variables are set to zero. It provides a baseline from which the influence of predictors can be measured.</p></li><li><p><strong>R-squared (R²)</strong>: R-squared is a statistical measure that represents the proportion of the variance for the dependent variable that&#39;s explained by the independent variables in the model. It ranges from 0 to 1, where a value closer to 1 indicates that the model explains a larger portion of the variance.</p></li><li><p><strong>Adjusted R-squared</strong>: Adjusted R-squared is a modified version of R-squared that adjusts for the number of predictors in the model. It is used to compare the explanatory power of regression models that contain different numbers of independent variables.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-128647-h4-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Assumptions of Multiple Regression</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To ensure the validity of a multiple regression analysis, several key assumptions about the data must be met:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-128647-ul-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Linearity</strong>: The relationship between each independent variable and the dependent variable is assumed to be linear. This can be assessed through scatterplots of observed vs. predicted values or residuals vs. predicted values.</p></li><li><p><strong>Independence of Errors</strong>: The residuals (errors) of the model are assumed to be independent of each other. Serial correlation in the residuals can violate this assumption, particularly in time series data.</p></li><li><p><strong>Homoscedasticity</strong>: This assumption entails that the variance of error terms (residuals) is consistent across all levels of the independent variables. Heteroscedasticity, where the variance of the residuals is unequal across different values of the independent variables, can lead to inefficiency in the estimates.</p></li><li><p><strong>Normal Distribution of Errors</strong>: For inference purposes (such as calculating confidence intervals and conducting hypothesis tests), the residuals should be approximately normally distributed.</p></li><li><p><strong>Multicollinearity</strong>: Refers to the situation where two or more independent variables are highly correlated with each other. This can make it difficult to determine the individual effect of each predictor on the dependent variable. <strong>Variance Inflation Factor (VIF)</strong> is a measure used to detect the presence and severity of multicollinearity by quantifying how much the variance of an estimated regression coefficient increases due to collinearity.</p></li><li><p><strong>Additivity</strong>: This assumption states that the effect of changes in an independent variable X on the dependent variable Y is independent of other variables in the model. Essentially, the model assumes that the relationships between each independent variable and the dependent variable are additive.</p></li><li><p><strong>No Perfect Multicollinearity</strong>: In addition to avoiding high multicollinearity, the model should not have perfect multicollinearity, which occurs when an independent variable is a perfect linear combination of other independent variables. This can lead to computational problems and the inability to estimate the coefficients of the model.</p></li><li><p><strong>Measurement Error</strong>: The model assumes that the independent variables are measured without error. Significant measurement errors in the independent variables can bias the estimated effects of those variables on the dependent variable.</p></li><li><p><strong>Sample Size</strong>: Adequate sample size is important to ensure the reliability of regression results. As a rule of thumb, there should be at least 10-15 observations per predictor variable in the analysis to provide reliable estimates.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-128647-p-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Understanding and checking these assumptions is crucial for the appropriate application and interpretation of multiple regression analysis. Violations of these assumptions can lead to biased or misleading results, emphasizing the need for careful diagnostic checks before drawing conclusions from a multiple regression model.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
                   }
                 }
               ],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
               "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97335",
-                "moduleTitle": "Case C + Q → Q (Multiple regression)",
-                "pageIds": [
-                  "128647",
-                  "128646",
-                  "128648",
-                  "129080",
-                  "129081",
-                  "129090"
-                ]
+                "pageId": "128647",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-128646",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Multiple Regression Methods",
+              "placement": {
+                "region": "document",
+                "order": 2
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-128646-h2-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>The Mechanics of Multiple Regression</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Delving into the mechanics of multiple regression</strong> reveals how it operates and what preparatory steps are necessary to ensure the accuracy and reliability of its outcomes. This section will cover the multiple regression equation and the pivotal role of data preparation.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>The Multiple Regression Equation</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The multiple regression equation extends the simple linear regression equation to accommodate multiple independent variables. It is formulated as follows:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><code>Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ + ε</code></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-128646-ul-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Y</strong> represents the dependent variable we aim to predict.</p></li><li><p><strong>X₁, X₂, ..., Xₙ</strong> are the independent variables (predictors) that influence Y.</p></li><li><p><strong>β₀</strong> is the intercept term, indicating the value of Y when all the independent variables are zero.</p></li><li><p><strong>β₁, β₂, ..., βₙ</strong> are the coefficients for the independent variables, reflecting how much Y changes with a one-unit change in the respective Xᵢ, holding all other variables constant.</p></li><li><p><strong>ε</strong> is the error term, accounting for the difference between the observed and predicted values of Y.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Breaking down the equation step by step:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-128646-ol-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Intercept (β₀)</strong>: This is where the line intersects the Y-axis. It represents the predicted value of Y when all X variables are zero.</p></li><li><p><strong>Coefficients (β₁, β₂, ..., βₙ)</strong>: Each coefficient indicates the direction and magnitude of the relationship between the respective independent variable and the dependent variable.</p></li><li><p><strong>Independent Variables (X₁, X₂, ..., Xₙ)</strong>: These are the factors you believe affect your dependent variable. Each Xᵢ has its own coefficient βᵢ that quantifies its unique impact on Y.</p></li><li><p><strong>Error Term (ε)</strong>: This captures all other factors that influence Y but are not included in the model. It&#39;s what remains unexplained by the model.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>Data Preparation</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Handling Categorical Variables via Dummy Coding:</strong> Categorical variables, such as gender or race, need to be converted into a numerical format for inclusion in a multiple regression model. This is achieved through dummy coding, where each category is represented by a binary variable (0 or 1). For a variable with k categories, k-1 dummy variables are created to avoid multicollinearity, with one category (often the most common) serving as the reference group.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Importance of Data Cleaning and Preparation:</strong> The reliability of a multiple regression analysis heavily depends on the quality of the data. Essential steps in data preparation include:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-128646-ul-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Cleaning</strong>: Identifying and correcting (or removing) errors and inconsistencies (e.g., outliers, missing values) in the data.</p></li><li><p><strong>Transforming</strong>: Normalizing data or transforming variables to meet the assumptions of linearity and normal distribution of errors.</p></li><li><p><strong>Selecting Variables</strong>: Carefully choose which independent variables to include based on theoretical reasoning and preliminary analysis to avoid overfitting and ensure the model&#39;s interpretability.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Proper data preparation not only enhances the accuracy of the regression model but also ensures that the results are meaningful and applicable to real-world scenarios. This foundational work is crucial for drawing valid conclusions from multiple regression analysis.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>Performing Multiple Regression Analysis</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Performing multiple regression analysis involves a series of systematic steps, from the initial hypothesis formulation to the final interpretation of results. This section outlines these steps and provides insight into analyzing data using software, as well as interpreting the key outputs of multiple regression analysis.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>Steps in Conducting Multiple Regression</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-128646-ol-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Hypothesis Formulation</strong>: Begin by clearly defining the research question or hypothesis. Identify the dependent variable you want to explain or predict, and propose independent variables that you hypothesize have an impact on it.</p></li><li><p><strong>Data Collection</strong>: Collect data for all variables identified in the hypothesis. This might involve gathering existing data (secondary data) or conducting surveys and experiments (primary data).</p></li><li><p><strong>Data Preparation</strong>: Prepare the data for analysis, which includes cleaning the data (handling missing values and outliers), coding categorical variables (through dummy coding), and checking for multicollinearity.</p></li><li><p><strong>Data Analysis Using Software</strong>: Multiple regression analysis requires statistical software. A brief overview of popular options includes:</p><ul><li><p><strong>R</strong>: A free software environment for statistical computing and graphics. R is highly flexible and widely used for statistical analysis and data visualization.</p></li><li><p><strong>SPSS (Statistical Package for the Social Sciences)</strong>: A user-friendly software popular in social sciences for performing complex statistical analyses through a GUI, without requiring extensive programming knowledge.</p></li><li><p><strong>Python</strong>: With libraries like pandas for data manipulation and statsmodels for statistical modeling, Python is a powerful tool for conducting multiple regression analysis, especially for those comfortable with coding.</p></li></ul></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2><strong>Interpreting the Results</strong></h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-128646-ol-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Understanding Coefficients and Their Significance</strong>:</p><ul><li><p>Each coefficient in the multiple regression output represents the change in the dependent variable for a one-unit change in the corresponding independent variable, holding other variables constant.</p></li><li><p>The significance of these coefficients, often tested through t-tests, indicates whether the relationships observed in the sample data are strong enough to be generalized to the population.</p></li></ul></li><li><p><strong>How to Interpret and Report R-squared and Adjusted R-squared</strong>:</p><ul><li><p><strong>R-squared</strong> indicates the proportion of variance in the dependent variable that is explained by the independent variables in the model. A higher R-squared value suggests a better fit of the model to the data.</p></li><li><p><strong>Adjusted R-squared</strong> adjusts the R-squared value based on the number of predictors in the model, providing a more accurate measure of the model&#39;s explanatory power, especially when comparing models with different numbers of predictors.</p></li></ul></li><li><p><strong>Reading Output from Statistical Software</strong>:</p><ul><li><p>Outputs from statistical software typically include the regression coefficients, their standard errors, t-values, p-values for tests of significance, and confidence intervals.</p></li><li><p>Look for the &quot;Coefficients&quot; table for details on each predictor&#39;s impact on the dependent variable.</p></li><li><p>The &quot;Model Summary&quot; section provides R-squared and Adjusted R-squared values, giving insight into the model&#39;s overall fit.</p></li><li><p>Diagnostic plots (e.g., residuals vs. fitted values) are crucial for checking assumptions like homoscedasticity and normality of residuals.</p></li></ul></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-128646-h2-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Prediction</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Prediction with multiple regression involves using a model built from several independent variables to forecast an outcome. This statistical technique allows us to understand the relationship between a dependent variable and two or more independent variables, facilitating the prediction of future events based on historical data.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Interpolation</strong> occurs when we make a prediction within the range of our data points. For example, if we&#39;ve collected weekly sales data for a year, using this model to predict sales for a week within that year is interpolation. It&#39;s generally considered more reliable because it operates within the bounds of observed data.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Extrapolation</strong> involves predicting values outside the range of our data. Using the same sales data example, predicting sales for the year following our data collection period would be extrapolation. This approach carries more risk since it assumes that the patterns observed within our data set will continue beyond its range, which isn&#39;t always the case.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Example of Interpolation:</strong> Imagine a model predicting the temperature based on altitude and humidity levels using data from sea level up to 2,000 meters. Predicting the temperature at 1,500 meters, given a specific humidity level, would be interpolation since it&#39;s within the range of our collected data.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Example of Extrapolation:</strong> Using the same model to predict the temperature at 3,000 meters would be extrapolation. Since our data only goes up to 2,000 meters, this prediction goes beyond the data&#39;s range, introducing uncertainty about its accuracy.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                },
+                {
+                  "id": "node-page-128646-h3-26",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Multiple Regression Model Example</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 26
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-27",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Dataset Overview:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 27
+                  }
+                },
+                {
+                  "id": "node-page-128646-ul-28",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Size (Square Feet):</strong> Ranges from 1,000 to 3,000 square feet.</p></li><li><p><strong>Distance from City Center (Miles):</strong> Ranges from 1 to 10 miles.</p></li><li><p><strong>House Price (USD):</strong> Dependent variable to be predicted.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The regression model, derived from the dataset, provides the following equation for predicting house prices:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 29
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-30",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>House Price=50,000+100×(Size)−5,000×(Distance)</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 30
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-31",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Where:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 31
+                  }
+                },
+                {
+                  "id": "node-page-128646-ul-32",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>50,000 USD is the base price of a house.</p></li><li><p>100 USD is the price increase per additional square foot.</p></li><li><p>5,000 USD is the price decrease for each mile further from the city center.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 32
+                  }
+                },
+                {
+                  "id": "node-page-128646-h4-33",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Interpolation Example</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 33
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-34",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Suppose we want to predict the price of a house that is 2,000 square feet in size and located 5 miles from the city center. Since both values fall within the observed ranges of the independent variables, this prediction is an example of interpolation.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 34
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-35",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>House Price=50,000+100×2,000−5,000×5</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 35
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-36",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>House Price=50,000+200,000−25,000</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 36
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-37",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>House Price=225,000 USD</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 37
+                  }
+                },
+                {
+                  "id": "node-page-128646-p-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The interpolated prediction for the house price is $225,000, which falls within the reliable range of our model.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 38
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "128646",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-128648",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Checking Assumptions",
+              "placement": {
+                "region": "document",
+                "order": 3
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-128648-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>1. Linearity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Scatterplots</strong>: Create scatterplots to visually inspect the relationship between each independent variable and the dependent variable. This can be done by using the Graphs &gt; Legacy Dialogs &gt; Scatter/Dot.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-128648-h3-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>2. Independence of Errors (No Autocorrelation)</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Durbin-Watson Statistic</strong>: After running a regression analysis (Analyze &gt; Regression &gt; Linear), check the Durbin-Watson statistic in the output to assess the independence of errors. A value between 1.5 and 2.5 typically indicates that there&#39;s no autocorrelation.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-128648-h3-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>3. Homoscedasticity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Residual Plots</strong>: Check for homoscedasticity by examining a plot of the residuals versus the predicted values. This can be done by selecting the option to save residuals when setting up the regression analysis and then creating scatterplots of the saved residuals.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-128648-p-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Here are two plots simulated using Python to illustrate examples of homoscedasticity and heteroscedasticity:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>The <strong>Good Example</strong> (top plot) demonstrates homoscedasticity, where the residuals are evenly distributed across all levels of predicted values, indicating consistent variance.</p></li><li><p>The <strong>Bad Example</strong> (bottom plot) shows heteroscedasticity, with residuals spreading out in a pattern that suggests variance increases as the predicted value increases, indicating inconsistent variance.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-128648-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>These plots mathematically and visually convey how residuals should behave in a well-specified model versus one that may have issues affecting its reliability and efficiency.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-128648-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>See the next page of the unit for how do do this in SPSS.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-128648-h3-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>4. Normal Distribution of Errors</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Histogram of Residuals</strong>: After saving the residuals from the regression analysis, use Analyze &gt; Descriptive Statistics &gt; Frequencies to create a histogram of residuals to visually assess normality.</p></li><li><p><strong>Normal P-P Plots or Q-Q Plots</strong>: Also accessible from the Frequencies dialog, these plots compare the distribution of residuals to a normal distribution.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-128648-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This is also discussed in a later page in this unit.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-128648-h3-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>5. Multicollinearity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-128648-ul-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Variance Inflation Factor (VIF) and Tolerance</strong>: Check VIF and Tolerance in the Coefficients output table after running the regression. High VIF values (VIF &gt; 10 as a common rule of thumb) or very low Tolerance values (below 0.1) indicate multicollinearity problems.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "128648",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-129080",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Checking Heteroscedasticity",
+              "placement": {
+                "region": "document",
+                "order": 4
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-129080-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>1. Run the Linear Regression Analysis</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-129080-ol-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Navigate to the Linear Regression dialog</strong>: Go to <strong>Analyze &gt; Regression &gt; Linear</strong>.</p></li><li><p><strong>Select your dependent variable</strong> and <strong>independent(s) variable(s)</strong> for the analysis.</p></li><li><p><strong>Click on the &quot;Statistics&quot; button</strong>: Ensure you select <strong>Estimates</strong>, <strong>Model fit</strong>, and <strong>Covariance matrix</strong>. These options provide useful statistics, but for heteroscedasticity, we&#39;re more interested in the residuals.</p></li><li><p><strong>Before running the model, click on &quot;Plots&quot;</strong>: You&#39;ll be setting up plots to check for heteroscedasticity.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-129080-h3-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>2. Set Up Plots to Check for Heteroscedasticity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-129080-ol-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p>In the &quot;Plots&quot; dialog:</p></li><li><p>Check the option to <strong>&quot;Produce all partial plots&quot;</strong> if you&#39;re also interested in assessing the relationship between the dependent variable and each independent variable, controlling for the others.</p></li><li><p><strong>Click &quot;Continue&quot;</strong> to close the Plots dialog, then <strong>&quot;OK&quot;</strong> to run the regression analysis.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129080-h3-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>3. Review the Plots for Signs of Heteroscedasticity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129080-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>After running the analysis, SPSS will generate several plots among the output. The scatterplot of standardized residuals against standardized predicted values is particularly useful for checking heteroscedasticity:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129080-ul-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Inspect the scatterplot</strong>: You&#39;re looking for a pattern in the spread of residuals. If the residuals spread randomly around the horizontal axis (zero line) with a roughly constant spread across all levels of predicted values, this suggests <strong>homoscedasticity</strong>.</p></li><li><p><strong>Signs of heteroscedasticity</strong>: If the spread of residuals increases or decreases systematically as the predicted values increase, this indicates heteroscedasticity. Patterns such as a funnel shape (either opening up or closing in as predicted values increase) are a clear sign of this issue.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129080-h3-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Addressing Heteroscedasticity</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129080-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>If you detect heteroscedasticity, you might consider several strategies to address it, including transforming your dependent variable (e.g., using a logarithmic transformation), using robust regression methods, or applying weighted least squares regression if the nature of the heteroscedasticity can be identified and appropriately weighted.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "129080",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-129081",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Checking Normality of Errors",
+              "placement": {
+                "region": "document",
+                "order": 5
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-129081-p-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To assess the normal distribution of errors (residuals) within the linear regression module in SPSS, you&#39;ll primarily rely on the residual plots generated as part of your regression analysis. Here&#39;s a step-by-step guide to generating and interpreting these plots:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-129081-h3-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>1. Run the Linear Regression Analysis</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-129081-ol-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Open the Linear Regression dialog</strong>: Go to <strong>Analyze &gt; Regression &gt; Linear</strong>.</p></li><li><p><strong>Select your dependent variable</strong> and <strong>independent variable(s)</strong> for the regression analysis.</p></li><li><p>Before running the model, <strong>click on &quot;Plots&quot;</strong> to set up the necessary plots for assessing the normality of residuals.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-129081-h3-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>2. Set Up Plots to Assess Normality</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129081-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In the &quot;Plots&quot; dialog:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129081-ol-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>For the X axis (horizontal)</strong>, you can choose <em>ZPRED</em> (standardized predicted values) or another variable if you&#39;re interested in specific comparisons. For assessing normality, the choice of the X axis is less critical since you&#39;re focused on the distribution of residuals themselves.</p></li><li><p><strong>For the Y axis (vertical)</strong>, select <em>ZRESID</em> (standardized residuals) to focus on the residuals.</p></li><li><p>Additionally, check the option for <strong>&quot;Histogram&quot;</strong> and <strong>&quot;Normal probability plot&quot;</strong>. These are specifically useful for assessing the normality of residuals.</p></li><li><p>Click <strong>&quot;Continue&quot;</strong> to close the Plots dialog, then <strong>&quot;OK&quot;</strong> to run your regression analysis.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129081-h3-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>3. Review the Histogram and Normal Probability Plot</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129081-p-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>After running the analysis, SPSS will provide a histogram of residuals and a normal probability plot (P-P or Q-Q plot) among the output, which you can use to assess the normality of residuals:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129081-ul-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Histogram</strong>: This shows the distribution of standardized residuals. For residuals to be normally distributed, the histogram should resemble a bell curve. SPSS can overlay a normal curve on the histogram, providing a visual reference for assessing normality.</p></li><li><p><strong>Normal Probability Plot (P-P or Q-Q Plot)</strong>: This plot shows how closely the residuals follow a normal distribution. The data points should closely follow the diagonal line if the residuals are normally distributed. Deviations from this line indicate deviations from normality.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-129081-h3-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Interpreting the Results</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-129081-ul-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Normal Distribution of Errors</strong>: If both the histogram and the normal probability plot indicate that the residuals are distributed in a way that closely follows a normal curve, this suggests that the assumption of normally distributed errors is met.</p></li><li><p><strong>Deviations from Normality</strong>: Significant deviations from the expected patterns in these plots might indicate that the residuals do not follow a normal distribution. This can impact the validity of some hypothesis tests that assume normality of residuals.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-129081-h3-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Addressing Non-Normality</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-129081-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>If your analysis suggests that the residuals are not normally distributed, consider the following strategies:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-129081-ul-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Transforming the Dependent Variable</strong>: Applying a transformation (e.g., logarithmic, square root) to the dependent variable can help achieve normality in residuals.</p></li><li><p><strong>Nonlinear Models</strong>: If the relationship between variables is not linear, fitting a nonlinear model might address the issue.</p></li><li><p><strong>Robust Regression Techniques</strong>: These techniques can provide reliable estimates even when the assumptions of normality are violated.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-129081-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Following these steps will help you utilize SPSS&#39;s capabilities to assess and address the normal distribution of errors in your regression analysis, ensuring more reliable and valid results.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "129081",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-129090",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "APA writeup for multiple regression with R example",
+              "placement": {
+                "region": "document",
+                "order": 6
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-129090-p-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To blend an R example with APA reporting, let&#39;s first conduct a hypothetical multiple regression analysis in R, then describe how to report the results in APA format, including creating an APA style table using the <code>apaTables</code> package.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-129090-h3-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>R Example: Multiple Regression Analysis</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Assume we have a dataset <code>df</code> with an outcome variable <code>outcome</code> and three predictor variables: <code>predictor1</code>, <code>predictor2</code>, and <code>predictor3</code>. We&#39;ll perform a multiple regression analysis using these variables.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>First, let&#39;s simulate some data for this example:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129090-code-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code># Load necessary library\nlibrary(apaTables)\n\n# Simulating some data\nset.seed(123) # For reproducibility\ndf &lt;- data.frame(\n  outcome = rnorm(100, mean = 50, sd = 10),\n  predictor1 = rnorm(100, mean = 5, sd = 1.5),\n  predictor2 = rnorm(100, mean = 3, sd = 1),\n  predictor3 = rnorm(100, mean = 4, sd = 1.2)\n)\n\n# Conducting the multiple regression\nmodel &lt;- lm(outcome ~ predictor1 + predictor2 + predictor3, data = df)\nsummary(model)\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>After running the regression, you can create an APA style table for your regression analysis:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129090-code-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>rCopy code# Generate an APA style table for the regression analysis\napaTables::apa.reg.table(model, filename = &quot;regression_table.doc&quot;, table.number = 1)\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This code will create a Word document named <code>regression_table.doc</code> containing the regression analysis table formatted according to APA guidelines.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129090-h3-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Reporting in APA Format</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>When writing your results in APA format, follow these guidelines:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-129090-ol-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Introduction to the Analysis</strong>: Begin with a sentence that introduces the analysis, including the dependent and independent variables.</p><p> &quot;A multiple regression analysis was conducted to examine the impact of three predictors (predictor1, predictor2, and predictor3) on the outcome variable. &quot; </p></li><li><p><strong>Model Summary</strong>: Summarize the overall fit of the model, including <em>R</em><sup>2</sup>, adjusted <em>R</em><sup>2</sup>, and the F-statistic.</p><p>&quot; The model accounted for a significant proportion of variance in the outcome variable, with an <em>R</em><sup>2</sup> of .XX, adjusted  <em>R</em><sup>2</sup> of .XX, <em>F</em>(3, 96) = XX.XX, <em>p</em> &lt; .05. &quot;</p></li><li><p><strong>Coefficients</strong>: Describe the specific contributions of each predictor. For each predictor, report the unstandardized coefficient (B), standard error (SE), standardized coefficient (β), and the significance level.</p><p>&quot;The analysis revealed that predictor1 significantly influenced the outcome, with an unstandardized regression coefficient (<em>b</em>) of XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. Similarly, predictor2 was found to significantly contribute to the model, with a <em>b</em> of -XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. However, predictor3 did not significantly predict the outcome, evidenced by a <em>b</em> of XX.XX, 95% <em>CI</em> [XX.XX, XX.XX]. &quot;</p></li><li><p><strong>Conclusion</strong>: Provide a brief conclusion summarizing the findings of the regression analysis.</p><p>&quot;In conclusion, predictor1 and predictor2 were found to significantly impact the outcome variable, while predictor3 did not show a significant effect.&quot;</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-129090-p-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Remember, the values (XX.XX) and statistics (.XX) in the APA reporting example should be replaced with the actual results from your regression analysis. This example provides a structured way to report your regression analysis findings in line with APA guidelines.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-129090-image-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/19/190100B91664C2D89D2E2CFDB63BA25D/Screenshot 2024-04-23 111553.png\" alt=\"Example APA table\" loading=\"lazy\"><figcaption><p>Example APA table</p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "129090",
+                "purpose": "foundation"
               }
             }
-          }
-        ]
+          ],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97335",
+            "moduleTitle": "Case C + Q → Q (Multiple regression)",
+            "pageIds": [
+              "128647",
+              "128646",
+              "128648",
+              "129080",
+              "129081",
+              "129090"
+            ]
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }

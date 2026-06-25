@@ -4,56 +4,73 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "spearman-s-rank-order-correlation",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-41-spearman-s-rank-order-correlation",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
-                ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
-              },
-              "nodes": [],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
-              "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97440",
-                "moduleTitle": "Spearman’s Rank-Order Correlation",
-                "pageIds": []
-              }
+            "stimulusKC": "spearman-s-rank-order-correlation-sparc-page",
+            "clusterKC": "spearman-s-rank-order-correlation",
+            "textStimulus": "SPARC Intro Stats - Module 41 - Spearman’s Rank-Order Correlation",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
             }
           }
-        ]
+        ],
+        "clusterKC": "spearman-s-rank-order-correlation"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-41-spearman-s-rank-order-correlation",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-41-spearman-s-rank-order-correlation",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
+                ],
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97440",
+            "moduleTitle": "Spearman’s Rank-Order Correlation",
+            "pageIds": []
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }

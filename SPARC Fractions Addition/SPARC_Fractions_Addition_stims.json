@@ -350,60 +350,6 @@
               },
               "children": [
                 {
-                  "id": "node-sum-left-top",
-                  "nodeType": "atomic",
-                  "atomType": "fraction-box",
-                  "position": "top",
-                  "value": "",
-                  "readOnly": true,
-                  "expected": "2",
-                  "inputMode": "numeric",
-                  "maxlength": 2
-                },
-                {
-                  "id": "node-sum-left-bottom",
-                  "nodeType": "atomic",
-                  "atomType": "fraction-box",
-                  "position": "bottom",
-                  "value": "12",
-                  "readOnly": true,
-                  "expected": "12"
-                },
-                {
-                  "id": "node-sum-plus",
-                  "nodeType": "atomic",
-                  "atomType": "operator",
-                  "value": "+"
-                },
-                {
-                  "id": "node-sum-right-top",
-                  "nodeType": "atomic",
-                  "atomType": "fraction-box",
-                  "position": "top",
-                  "value": "",
-                  "readOnly": true,
-                  "expected": "3",
-                  "inputMode": "numeric",
-                  "maxlength": 2
-                },
-                {
-                  "id": "node-sum-right-bottom",
-                  "nodeType": "atomic",
-                  "atomType": "fraction-box",
-                  "position": "bottom",
-                  "value": "",
-                  "readOnly": true,
-                  "expected": "12",
-                  "inputMode": "numeric",
-                  "maxlength": 2
-                },
-                {
-                  "id": "node-sum-equals",
-                  "nodeType": "atomic",
-                  "atomType": "operator",
-                  "value": "="
-                },
-                {
                   "id": "node-sum-result-top",
                   "nodeType": "atomic",
                   "atomType": "fraction-input",
@@ -422,18 +368,7 @@
                   "expected": "12",
                   "inputMode": "numeric",
                   "maxlength": 2
-                }
-              ]
-            },
-            {
-              "id": "node-group-final-answer",
-              "nodeType": "group",
-              "groupType": "equation-row",
-              "placement": {
-                "region": "workspace",
-                "order": 5
-              },
-              "children": [
+                },
                 {
                   "id": "node-final-equals",
                   "nodeType": "atomic",

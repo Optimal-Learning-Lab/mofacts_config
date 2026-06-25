@@ -4,790 +4,807 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "k-means-clustering",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-34-k-means-clustering",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
+            "stimulusKC": "k-means-clustering-sparc-page",
+            "clusterKC": "k-means-clustering",
+            "textStimulus": "SPARC Intro Stats - Module 34 - K-means Clustering",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ],
+        "clusterKC": "k-means-clustering"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-34-k-means-clustering",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-34-k-means-clustering",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
                 ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "id": "node-page-128394",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "K-means",
+              "placement": {
+                "region": "document",
+                "order": 1
               },
-              "nodes": [
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
                 {
-                  "id": "node-page-128394",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "K-means",
+                  "id": "node-page-128394-h1-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h1> Clustering and the K-means Algorithm</h1>",
                   "placement": {
                     "region": "document",
                     "order": 1
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-128394-h1-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h1> Clustering and the K-means Algorithm</h1>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Clustering is an unsupervised learning technique used to group a set of objects in such a way that objects in the same group, or cluster, are more similar to each other than to those in different groups. This technique is widely used across various disciplines, such as marketing for customer segmentation, in bioinformatics for gene expression analysis, and in computer vision for image segmentation.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>K-means clustering is a popular and straightforward algorithm in unsupervised machine learning. It is used for grouping data into distinct clusters, where each group contains data points that are similar to each other. This method aims to partition the data into a specified number of clusters (K) such that each data point belongs to the cluster with the nearest mean value, resulting in compact and distinct groups. This algorithm is particularly effective for exploratory data analysis, pattern recognition, and image segmentation. The simplicity of K-means makes it a widely used technique for data partitioning across various domains. </p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h3-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>K-means Clustering</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Overview of K-means Algorithm</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>K-means is one of the simplest and most commonly used clustering algorithms. It is designed to partition a set of <em>n</em> observations into <em>k</em> clusters, where each observation belongs to the cluster with the nearest mean. This results in a partitioning of the data space into Voronoi cells.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Key Concepts</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ol-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Centroids</strong>: Each cluster is represented by a centroid, which is the mean of all points within the cluster. The centroids serve as the center of gravity for the clusters.</p></li><li><p><strong>Distance Metrics</strong>: The standard metric used in k-means is the Euclidean distance, although other distance measures can be used depending on the nature of the data. The choice of distance metric affects the shape of the clusters formed by the algorithm. In the context of k-means clustering, the Euclidean distance between two points <strong>x</strong> and <strong>y</strong>, which are vectors in a <em>d</em>-dimensional space, is used to calculate the similarity and assign points to clusters. Here, <em>xi</em>​ and <em>yi</em>​ are the coordinates of points <strong>x</strong> and <strong>y</strong> in the <em>i</em>-th dimension, respectively. The sum of the squared differences between the coordinates of the two points is taken over all dimensions, and the square root of this sum gives the Euclidean distance between the two points. This distance forms the basis for clustering in the k-means algorithm, where each point is assigned to the cluster with the nearest centroid, defined in terms of minimal Euclidean distance.</p><figure><img src=\"d(\\mathbf{x}, \\mathbf{y}) = \\sqrt{\\sum_{i=1}^{n} (x_i - y_i)^2}\" alt=\"\"></figure></li><li><p><strong>Objective Function</strong>: The k-means algorithm aims to minimize the total within-cluster variance, or the squared Euclidean distance between each point and its centroid. This objective function is often referred to as the inertia of the clusters.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Steps in the K-means Procedure</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ol-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Initialization of Centroids</strong>: The initial placement of centroids is crucial as it can affect the convergence and outcome of the algorithm. Techniques like the k-means++ algorithm help in placing the initial centroids far apart from each other, improving the chances of finding a global optimum.</p></li><li><p><strong>Assignment of Data Points to Clusters</strong>: In each iteration, every point is assigned to the nearest cluster by calculating its distance to each centroid.</p></li><li><p><strong>Updating Centroids</strong>: After all points have been assigned to clusters, the centroids are recalculated as the mean of all points in each cluster. This step often involves recomputing the centroid to reflect the new assignments.</p></li><li><p><strong>Repeating Steps 2 and 3</strong>: These steps are repeated until the centroids stabilize and do not move significantly, signaling convergence. Alternatively, the algorithm can be stopped after a fixed number of iterations or when the decrease in the objective function becomes trivial, indicating minimal improvement.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h3-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Selection of K in K-Means Clustering</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The selection of K, the number of clusters, is a crucial first step in the K-means clustering algorithm. The choice of K significantly influences the clustering results, and there is no one-size-fits-all answer. Selecting the right number of clusters is both an art and a science, involving a balance of domain knowledge, statistical measures, and practical considerations.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Considerations for Selecting K</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ol-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Domain Knowledge</strong>: Understanding the dataset and the context of the problem can provide insights into a reasonable range for K. For instance, in market segmentation, prior knowledge about customer categories can guide the selection.</p></li><li><p><strong>Elbow Method</strong>: This is a graphical method where the sum of squared distances of samples to their nearest cluster center is plotted against the number of clusters. The point where the rate of decrease sharply changes, resembling an &#39;elbow&#39;, is considered a good estimate for K.</p></li><li><p><strong>Silhouette Analysis</strong>: This technique evaluates the separation distance between the resulting clusters. Higher silhouette scores indicate better-defined clusters, and this can help in choosing an optimal K.</p></li><li><p><strong>Statistical Methods</strong>: Techniques like the Gap Statistic compare the total within intra-cluster variation for different values of K with their expected values under null reference distribution.</p></li><li><p><strong>Cross-validation</strong>: Some methods involve dividing the data into subsets, performing clustering, and validating the stability of the clusters across subsets.</p></li><li><p><strong>Practicality</strong>: Often, the choice of K is also influenced by practical constraints like computational cost, especially for very large datasets.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h2-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>The Elbow Method in Detail</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The Elbow Method is a heuristic used in cluster analysis, particularly in the algorithm of k-means, to determine the optimal number of clusters (k). The method is based on plotting the sum of squared distances (SSD) of samples to their nearest cluster center as a function of the number of clusters. This graph helps to visualize the point at which increasing the number of clusters no longer provides significant improvement in within-cluster variation, which is indicative of a good cluster solution.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Why Use the Elbow Method?</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The primary goal of clustering is to partition data into groups or clusters such that the total intra-cluster variation (or total within-cluster sum of square (WSS)) is minimized. However, as the number of clusters increases, the WSS will naturally decrease, but there comes a point where adding more clusters does not lead to a better modeling of the data. The Elbow Method helps to identify this point, thus facilitating a more informed decision about the appropriate number of clusters to use.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>How to Implement the Elbow Method</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ol-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Compute Clustering for Different Values of K</strong>: Perform k-means clustering on the dataset for a range of k values (e.g., 1 to 10). For each k, the k-means algorithm will partition the data into k clusters and compute the cluster centers.</p></li><li><p><strong>Calculate the Sum of Squared Distances</strong>: For each cluster solution, calculate the sum of squared distances of samples to their nearest cluster center. This is often called within-cluster sum of squares (WCSS).</p></li><li><p><strong>Plot the Results</strong>: Plot the number of clusters (k) on the x-axis and the corresponding WCSS on the y-axis.</p></li><li><p><strong>Identify the Elbow Point</strong>: Look for the point in the plot where the WCSS begins to decrease at a slower rate. This point resembles an &quot;elbow&quot; in the curve, hence the name. The k value at this point is considered as a good number of clusters to use.</p></li><li><p>﻿</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/54/54461154C97ACC652F3B3B63298AABA2/Elbow_Method_Plot.png\" alt=\"Elbow shows 4 clusters is optimal.\" loading=\"lazy\"><figcaption><p>Elbow shows 4 clusters is optimal.</p></figcaption></figure></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Application and Limitations</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The Elbow Method is widely used due to its simplicity and effectiveness in many practical scenarios. However, it has limitations:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ul-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Subjectivity in Identifying the Elbow Point</strong>: Sometimes the elbow might not be very clear, and different users might choose different points as the elbow.</p></li><li><p><strong>Sensitivity to Scale</strong>: The method can be sensitive to the scale of the data, and different scaling might lead to different elbows.</p></li><li><p><strong>Does Not Fit All Datasets</strong>: In some cases, the decrease in WCSS might be relatively linear, and no clear elbow is observed, making it difficult to choose k.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h2-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Challenges in Selecting K</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-ul-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Subjectivity</strong>: There is often no absolute &#39;right&#39; number of clusters as it can vary based on the specific objectives of the analysis.</p></li><li><p><strong>Sensitivity</strong>: K-means can be sensitive to the initial choice of centroids, leading to different clustering results.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h3-26",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Initialization in K-Means Clustering</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 26
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-27",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Random Initialization</strong>: This straightforward method selects K data points from the dataset at random to serve as initial centroids (cluster centers). Although easy to implement, it can lead to variability in clustering results and sometimes result in suboptimal clusters.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>K-means++</strong>: This technique enhances random initialization. It starts by selecting a single centroid randomly from the data points, then each subsequent centroid is chosen among the remaining data points with a probability proportional to its square distance from the nearest existing centroid. This approach tends to distribute initial centroids more effectively, leading to improved clustering outcomes.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Forgy and Random Partition Methods</strong>: The Forgy method initializes by randomly selecting centroids directly from the dataset. In contrast, the Random Partition method initially assigns each data point to a random cluster, then calculates the initial centroids based on this assignment. Both have unique impacts on the clustering process.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-30",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Impact on Convergence and Consistency</strong>: The initialization phase significantly influences the algorithm&#39;s convergence rate and the consistency of the results. Poor initialization might lead to longer convergence times or convergence to local optima. To mitigate this, the algorithm might need to be run multiple times, with the best result being chosen.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 30
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-31",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Balancing Efficiency and Quality</strong>: Some methods, like K-means++, offer a compromise between computational demand and the likelihood of finding a more optimal clustering solution. This is particularly important for large datasets where computational efficiency becomes a key consideration.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 31
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-32",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Challenges and Sensitivity</strong>: Initialization methods can be sensitive to outliers, and choosing the best method often depends on the dataset&#39;s characteristics. It&#39;s crucial to consider the size, dimensionality, and inherent clustering structure of the dataset to make an informed decision on the initialization strategy.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 32
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-h3-33",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>The Assignment Step in K-Means Clustering</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 33
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-34",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Assignment of Data Points to Clusters</strong>: Following the initialization of centroids, the next step is the assignment of each data point in the dataset to a cluster. This assignment is based on the proximity of the data point to the centroids.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 34
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-35",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Distance Metric</strong>: The most commonly used distance metric in K-means is the Euclidean distance. Each data point is assigned to the cluster whose centroid is closest to it in terms of this Euclidean distance. However, other distance metrics can be used depending on the nature of the data and the specific requirements of the analysis.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-36",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Creation of Clusters</strong>: This step results in the formation of preliminary clusters. Each cluster is defined by the data points that are closest to its centroid. At this stage, the clusters are still rough and will be refined in subsequent steps of the algorithm.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-37",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Impact on Cluster Shape and Size</strong>: The choice of distance metric can affect the shape and size of the clusters. For instance, Euclidean distance tends to produce more spherical clusters. If the data has a different natural structure, a different metric might be more appropriate.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 37
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-38",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Dynamic Process</strong>: The assignment step is not a one-time process. It is repeated iteratively in conjunction with the update step (centroid recomputation). After each iteration, the assignment of data points can change, leading to a continuous refinement of the clusters.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 38
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-39",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Assignment Stability</strong>: As the algorithm iterates, the assignment of data points to clusters starts to stabilize. This stabilization indicates that the algorithm is converging and the clusters are becoming more defined and meaningful.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 39
-                      }
-                    },
-                    {
-                      "id": "node-page-128394-p-40",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Handling Ambiguities</strong>: In cases where a data point is equidistant to multiple centroids, specific rules or tie-breakers are applied, such as assigning the point to the first or the least populous cluster.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 40
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "128394",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-128395",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Example of K-Means",
+                  "id": "node-page-128394-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Clustering is an unsupervised learning technique used to group a set of objects in such a way that objects in the same group, or cluster, are more similar to each other than to those in different groups. This technique is widely used across various disciplines, such as marketing for customer segmentation, in bioinformatics for gene expression analysis, and in computer vision for image segmentation.</p>",
                   "placement": {
                     "region": "document",
                     "order": 2
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-128395-h3-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Step 1: Install and Load Necessary Packages</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Before we begin, we need to ensure that all necessary packages are installed and loaded. This includes <code>MASS</code> for generating multivariate normal distributions and <code>ggplot2</code> for advanced plotting capabilities.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>R Code:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-code-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>if (!require(&quot;MASS&quot;)) install.packages(&quot;MASS&quot;)\nif (!require(&quot;ggplot2&quot;)) install.packages(&quot;ggplot2&quot;)\nlibrary(MASS)\nlibrary(ggplot2)\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Explanation:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-ul-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><code><strong>MASS</strong></code><strong> package</strong>: Contains functions for statistical methods, including <code>mvrnorm</code> for generating multivariate normal distributions, which we&#39;ll use to create synthetic data resembling real-world datasets.</p></li><li><p><code><strong>ggplot2</strong></code><strong> package</strong>: A powerful plotting system in R, known for its ability to create complex plots from data in a data frame. We&#39;ll use it to visualize both the generated data and the results of the k-means clustering.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-h3-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Step 2: Generate Synthetic Data</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>We&#39;ll create synthetic data that consists of four distinct clusters. Each cluster will be generated from a multivariate normal distribution with specified means and a covariance matrix.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>R Code:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-code-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code># Set seed for reproducibility\nset.seed(0)\n\n# Define means for four clusters\nmeans &lt;- matrix(c(2, 3, 8, 10, 5, 10, 10, 3), ncol = 2, byrow = TRUE)\n\n# Define covariance matrix\nsigma &lt;- matrix(c(0.6, 0, 0, 0.6), ncol = 2)\n\n# Generate data for each cluster\ncluster1 &lt;- mvrnorm(75, mu = means[1,], Sigma = sigma)\ncluster2 &lt;- mvrnorm(75, mu = means[2,], Sigma = sigma)\ncluster3 &lt;- mvrnorm(75, mu = means[3,], Sigma = sigma)\ncluster4 &lt;- mvrnorm(75, mu = means[4,], Sigma = sigma)\ndata &lt;- rbind(cluster1, cluster2, cluster3, cluster4)\n\n# Convert data into a dataframe\ndf &lt;- data.frame(x = data[,1], y = data[,2])\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Explanation:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-ul-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Random Seed</strong>: Setting a seed for reproducibility ensures that the same data is generated each time the code is run, which is crucial for consistent results during experimentation and testing.</p></li><li><p><strong>Cluster Parameters</strong>: We define the means and covariance for the clusters, aiming for distinct clusters that are easily separable, which makes the demonstration of k-means more illustrative.</p></li><li><p><strong>Data Generation</strong>: Using <code>mvrnorm</code> to generate 75 observations per cluster ensures a balanced dataset. The data for each cluster is then combined into a single data frame for analysis.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-h3-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Step 3: Visualize the Generated Data</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Visualizing the generated data helps in understanding the initial distribution of points and the task at hand for the clustering algorithm.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>R Code:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-code-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>ggplot(df, aes(x, y)) + geom_point() + ggtitle(&quot;Generated Data&quot;) + theme_minimal()\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Explanation:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-ul-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Visualization</strong>: Using <code>ggplot2</code> to plot the data points provides a visual inspection of the clusters. This step is critical to confirm that the data generation part has successfully created separable clusters, which is what we expect k-means to identify.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-h3-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Step 4: Apply the K-means Algorithm</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Now, we apply the k-means clustering algorithm to identify and group data points into clusters based on their similarity.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>R Code:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-code-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code># Apply k-means clustering\nset.seed(0)  # Ensure reproducibility\nkmeans_result &lt;- kmeans(df, centers = 4, nstart = 20)\ndf$cluster &lt;- as.factor(kmeans_result$cluster)\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Explanation:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-ul-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>K-means Function</strong>: We use R&#39;s built-in <code>kmeans</code> function, specifying four clusters. The <code>nstart</code> parameter is set to 20 to run the algorithm multiple times with different initial centroids, enhancing the likelihood of a good solution.</p></li><li><p><strong>Assigning Clusters</strong>: Each point is assigned a cluster label, which will be used in the final visualization to differentiate the clusters.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-h3-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Step 5: Visualize the Clusters with Centroids</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-26",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The final visualization illustrates the effectiveness of k-means clustering by showing grouped data points and their centroids.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 26
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-p-27",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>R Code:</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-code-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code># Create a data frame for centroids with correct column names\ncentroids_df &lt;- data.frame(x = kmeans_result$centers[,1], y = kmeans_result$centers[,2])\n\n# Plot the clustering results\nggplot(df, aes(x, y, color = cluster)) + \n  geom_point() + \n  geom_point(data\n</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-128395-image-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/46/463F483E39846C252494AB26902964D3/Rplot.png\" alt=\"\" loading=\"lazy\"></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "128395",
-                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>K-means clustering is a popular and straightforward algorithm in unsupervised machine learning. It is used for grouping data into distinct clusters, where each group contains data points that are similar to each other. This method aims to partition the data into a specified number of clusters (K) such that each data point belongs to the cluster with the nearest mean value, resulting in compact and distinct groups. This algorithm is particularly effective for exploratory data analysis, pattern recognition, and image segmentation. The simplicity of K-means makes it a widely used technique for data partitioning across various domains. </p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-128394-h3-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>K-means Clustering</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Overview of K-means Algorithm</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>K-means is one of the simplest and most commonly used clustering algorithms. It is designed to partition a set of <em>n</em> observations into <em>k</em> clusters, where each observation belongs to the cluster with the nearest mean. This results in a partitioning of the data space into Voronoi cells.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Key Concepts</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-128394-ol-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Centroids</strong>: Each cluster is represented by a centroid, which is the mean of all points within the cluster. The centroids serve as the center of gravity for the clusters.</p></li><li><p><strong>Distance Metrics</strong>: The standard metric used in k-means is the Euclidean distance, although other distance measures can be used depending on the nature of the data. The choice of distance metric affects the shape of the clusters formed by the algorithm. In the context of k-means clustering, the Euclidean distance between two points <strong>x</strong> and <strong>y</strong>, which are vectors in a <em>d</em>-dimensional space, is used to calculate the similarity and assign points to clusters. Here, <em>xi</em>​ and <em>yi</em>​ are the coordinates of points <strong>x</strong> and <strong>y</strong> in the <em>i</em>-th dimension, respectively. The sum of the squared differences between the coordinates of the two points is taken over all dimensions, and the square root of this sum gives the Euclidean distance between the two points. This distance forms the basis for clustering in the k-means algorithm, where each point is assigned to the cluster with the nearest centroid, defined in terms of minimal Euclidean distance.</p><figure><img src=\"d(\\mathbf{x}, \\mathbf{y}) = \\sqrt{\\sum_{i=1}^{n} (x_i - y_i)^2}\" alt=\"\"></figure></li><li><p><strong>Objective Function</strong>: The k-means algorithm aims to minimize the total within-cluster variance, or the squared Euclidean distance between each point and its centroid. This objective function is often referred to as the inertia of the clusters.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Steps in the K-means Procedure</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-128394-ol-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Initialization of Centroids</strong>: The initial placement of centroids is crucial as it can affect the convergence and outcome of the algorithm. Techniques like the k-means++ algorithm help in placing the initial centroids far apart from each other, improving the chances of finding a global optimum.</p></li><li><p><strong>Assignment of Data Points to Clusters</strong>: In each iteration, every point is assigned to the nearest cluster by calculating its distance to each centroid.</p></li><li><p><strong>Updating Centroids</strong>: After all points have been assigned to clusters, the centroids are recalculated as the mean of all points in each cluster. This step often involves recomputing the centroid to reflect the new assignments.</p></li><li><p><strong>Repeating Steps 2 and 3</strong>: These steps are repeated until the centroids stabilize and do not move significantly, signaling convergence. Alternatively, the algorithm can be stopped after a fixed number of iterations or when the decrease in the objective function becomes trivial, indicating minimal improvement.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-128394-h3-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Selection of K in K-Means Clustering</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The selection of K, the number of clusters, is a crucial first step in the K-means clustering algorithm. The choice of K significantly influences the clustering results, and there is no one-size-fits-all answer. Selecting the right number of clusters is both an art and a science, involving a balance of domain knowledge, statistical measures, and practical considerations.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Considerations for Selecting K</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-128394-ol-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Domain Knowledge</strong>: Understanding the dataset and the context of the problem can provide insights into a reasonable range for K. For instance, in market segmentation, prior knowledge about customer categories can guide the selection.</p></li><li><p><strong>Elbow Method</strong>: This is a graphical method where the sum of squared distances of samples to their nearest cluster center is plotted against the number of clusters. The point where the rate of decrease sharply changes, resembling an &#39;elbow&#39;, is considered a good estimate for K.</p></li><li><p><strong>Silhouette Analysis</strong>: This technique evaluates the separation distance between the resulting clusters. Higher silhouette scores indicate better-defined clusters, and this can help in choosing an optimal K.</p></li><li><p><strong>Statistical Methods</strong>: Techniques like the Gap Statistic compare the total within intra-cluster variation for different values of K with their expected values under null reference distribution.</p></li><li><p><strong>Cross-validation</strong>: Some methods involve dividing the data into subsets, performing clustering, and validating the stability of the clusters across subsets.</p></li><li><p><strong>Practicality</strong>: Often, the choice of K is also influenced by practical constraints like computational cost, especially for very large datasets.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-128394-h2-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>The Elbow Method in Detail</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The Elbow Method is a heuristic used in cluster analysis, particularly in the algorithm of k-means, to determine the optimal number of clusters (k). The method is based on plotting the sum of squared distances (SSD) of samples to their nearest cluster center as a function of the number of clusters. This graph helps to visualize the point at which increasing the number of clusters no longer provides significant improvement in within-cluster variation, which is indicative of a good cluster solution.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Why Use the Elbow Method?</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The primary goal of clustering is to partition data into groups or clusters such that the total intra-cluster variation (or total within-cluster sum of square (WSS)) is minimized. However, as the number of clusters increases, the WSS will naturally decrease, but there comes a point where adding more clusters does not lead to a better modeling of the data. The Elbow Method helps to identify this point, thus facilitating a more informed decision about the appropriate number of clusters to use.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>How to Implement the Elbow Method</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-128394-ol-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Compute Clustering for Different Values of K</strong>: Perform k-means clustering on the dataset for a range of k values (e.g., 1 to 10). For each k, the k-means algorithm will partition the data into k clusters and compute the cluster centers.</p></li><li><p><strong>Calculate the Sum of Squared Distances</strong>: For each cluster solution, calculate the sum of squared distances of samples to their nearest cluster center. This is often called within-cluster sum of squares (WCSS).</p></li><li><p><strong>Plot the Results</strong>: Plot the number of clusters (k) on the x-axis and the corresponding WCSS on the y-axis.</p></li><li><p><strong>Identify the Elbow Point</strong>: Look for the point in the plot where the WCSS begins to decrease at a slower rate. This point resembles an &quot;elbow&quot; in the curve, hence the name. The k value at this point is considered as a good number of clusters to use.</p></li><li><p>﻿</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/54/54461154C97ACC652F3B3B63298AABA2/Elbow_Method_Plot.png\" alt=\"Elbow shows 4 clusters is optimal.\" loading=\"lazy\"><figcaption><p>Elbow shows 4 clusters is optimal.</p></figcaption></figure></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Application and Limitations</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The Elbow Method is widely used due to its simplicity and effectiveness in many practical scenarios. However, it has limitations:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-128394-ul-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Subjectivity in Identifying the Elbow Point</strong>: Sometimes the elbow might not be very clear, and different users might choose different points as the elbow.</p></li><li><p><strong>Sensitivity to Scale</strong>: The method can be sensitive to the scale of the data, and different scaling might lead to different elbows.</p></li><li><p><strong>Does Not Fit All Datasets</strong>: In some cases, the decrease in WCSS might be relatively linear, and no clear elbow is observed, making it difficult to choose k.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-128394-h2-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Challenges in Selecting K</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-128394-ul-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Subjectivity</strong>: There is often no absolute &#39;right&#39; number of clusters as it can vary based on the specific objectives of the analysis.</p></li><li><p><strong>Sensitivity</strong>: K-means can be sensitive to the initial choice of centroids, leading to different clustering results.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                },
+                {
+                  "id": "node-page-128394-h3-26",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Initialization in K-Means Clustering</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 26
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-27",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Random Initialization</strong>: This straightforward method selects K data points from the dataset at random to serve as initial centroids (cluster centers). Although easy to implement, it can lead to variability in clustering results and sometimes result in suboptimal clusters.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 27
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-28",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>K-means++</strong>: This technique enhances random initialization. It starts by selecting a single centroid randomly from the data points, then each subsequent centroid is chosen among the remaining data points with a probability proportional to its square distance from the nearest existing centroid. This approach tends to distribute initial centroids more effectively, leading to improved clustering outcomes.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Forgy and Random Partition Methods</strong>: The Forgy method initializes by randomly selecting centroids directly from the dataset. In contrast, the Random Partition method initially assigns each data point to a random cluster, then calculates the initial centroids based on this assignment. Both have unique impacts on the clustering process.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 29
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-30",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Impact on Convergence and Consistency</strong>: The initialization phase significantly influences the algorithm&#39;s convergence rate and the consistency of the results. Poor initialization might lead to longer convergence times or convergence to local optima. To mitigate this, the algorithm might need to be run multiple times, with the best result being chosen.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 30
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-31",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Balancing Efficiency and Quality</strong>: Some methods, like K-means++, offer a compromise between computational demand and the likelihood of finding a more optimal clustering solution. This is particularly important for large datasets where computational efficiency becomes a key consideration.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 31
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-32",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Challenges and Sensitivity</strong>: Initialization methods can be sensitive to outliers, and choosing the best method often depends on the dataset&#39;s characteristics. It&#39;s crucial to consider the size, dimensionality, and inherent clustering structure of the dataset to make an informed decision on the initialization strategy.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 32
+                  }
+                },
+                {
+                  "id": "node-page-128394-h3-33",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>The Assignment Step in K-Means Clustering</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 33
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-34",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Assignment of Data Points to Clusters</strong>: Following the initialization of centroids, the next step is the assignment of each data point in the dataset to a cluster. This assignment is based on the proximity of the data point to the centroids.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 34
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-35",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Distance Metric</strong>: The most commonly used distance metric in K-means is the Euclidean distance. Each data point is assigned to the cluster whose centroid is closest to it in terms of this Euclidean distance. However, other distance metrics can be used depending on the nature of the data and the specific requirements of the analysis.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 35
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-36",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Creation of Clusters</strong>: This step results in the formation of preliminary clusters. Each cluster is defined by the data points that are closest to its centroid. At this stage, the clusters are still rough and will be refined in subsequent steps of the algorithm.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 36
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-37",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Impact on Cluster Shape and Size</strong>: The choice of distance metric can affect the shape and size of the clusters. For instance, Euclidean distance tends to produce more spherical clusters. If the data has a different natural structure, a different metric might be more appropriate.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 37
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Dynamic Process</strong>: The assignment step is not a one-time process. It is repeated iteratively in conjunction with the update step (centroid recomputation). After each iteration, the assignment of data points can change, leading to a continuous refinement of the clusters.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 38
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-39",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Assignment Stability</strong>: As the algorithm iterates, the assignment of data points to clusters starts to stabilize. This stabilization indicates that the algorithm is converging and the clusters are becoming more defined and meaningful.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 39
+                  }
+                },
+                {
+                  "id": "node-page-128394-p-40",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Handling Ambiguities</strong>: In cases where a data point is equidistant to multiple centroids, specific rules or tie-breakers are applied, such as assigning the point to the first or the least populous cluster.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 40
                   }
                 }
               ],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
               "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97436",
-                "moduleTitle": "K-means Clustering",
-                "pageIds": [
-                  "128394",
-                  "128395"
-                ]
+                "pageId": "128394",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-128395",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Example of K-Means",
+              "placement": {
+                "region": "document",
+                "order": 2
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-128395-h3-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Step 1: Install and Load Necessary Packages</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Before we begin, we need to ensure that all necessary packages are installed and loaded. This includes <code>MASS</code> for generating multivariate normal distributions and <code>ggplot2</code> for advanced plotting capabilities.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>R Code:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-128395-code-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>if (!require(&quot;MASS&quot;)) install.packages(&quot;MASS&quot;)\nif (!require(&quot;ggplot2&quot;)) install.packages(&quot;ggplot2&quot;)\nlibrary(MASS)\nlibrary(ggplot2)\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Explanation:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-128395-ul-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><code><strong>MASS</strong></code><strong> package</strong>: Contains functions for statistical methods, including <code>mvrnorm</code> for generating multivariate normal distributions, which we&#39;ll use to create synthetic data resembling real-world datasets.</p></li><li><p><code><strong>ggplot2</strong></code><strong> package</strong>: A powerful plotting system in R, known for its ability to create complex plots from data in a data frame. We&#39;ll use it to visualize both the generated data and the results of the k-means clustering.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-128395-h3-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Step 2: Generate Synthetic Data</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>We&#39;ll create synthetic data that consists of four distinct clusters. Each cluster will be generated from a multivariate normal distribution with specified means and a covariance matrix.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>R Code:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-128395-code-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code># Set seed for reproducibility\nset.seed(0)\n\n# Define means for four clusters\nmeans &lt;- matrix(c(2, 3, 8, 10, 5, 10, 10, 3), ncol = 2, byrow = TRUE)\n\n# Define covariance matrix\nsigma &lt;- matrix(c(0.6, 0, 0, 0.6), ncol = 2)\n\n# Generate data for each cluster\ncluster1 &lt;- mvrnorm(75, mu = means[1,], Sigma = sigma)\ncluster2 &lt;- mvrnorm(75, mu = means[2,], Sigma = sigma)\ncluster3 &lt;- mvrnorm(75, mu = means[3,], Sigma = sigma)\ncluster4 &lt;- mvrnorm(75, mu = means[4,], Sigma = sigma)\ndata &lt;- rbind(cluster1, cluster2, cluster3, cluster4)\n\n# Convert data into a dataframe\ndf &lt;- data.frame(x = data[,1], y = data[,2])\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Explanation:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-128395-ul-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Random Seed</strong>: Setting a seed for reproducibility ensures that the same data is generated each time the code is run, which is crucial for consistent results during experimentation and testing.</p></li><li><p><strong>Cluster Parameters</strong>: We define the means and covariance for the clusters, aiming for distinct clusters that are easily separable, which makes the demonstration of k-means more illustrative.</p></li><li><p><strong>Data Generation</strong>: Using <code>mvrnorm</code> to generate 75 observations per cluster ensures a balanced dataset. The data for each cluster is then combined into a single data frame for analysis.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-128395-h3-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Step 3: Visualize the Generated Data</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Visualizing the generated data helps in understanding the initial distribution of points and the task at hand for the clustering algorithm.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>R Code:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-128395-code-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>ggplot(df, aes(x, y)) + geom_point() + ggtitle(&quot;Generated Data&quot;) + theme_minimal()\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Explanation:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-128395-ul-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Visualization</strong>: Using <code>ggplot2</code> to plot the data points provides a visual inspection of the clusters. This step is critical to confirm that the data generation part has successfully created separable clusters, which is what we expect k-means to identify.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-128395-h3-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Step 4: Apply the K-means Algorithm</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Now, we apply the k-means clustering algorithm to identify and group data points into clusters based on their similarity.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>R Code:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-128395-code-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code># Apply k-means clustering\nset.seed(0)  # Ensure reproducibility\nkmeans_result &lt;- kmeans(df, centers = 4, nstart = 20)\ndf$cluster &lt;- as.factor(kmeans_result$cluster)\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Explanation:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-128395-ul-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>K-means Function</strong>: We use R&#39;s built-in <code>kmeans</code> function, specifying four clusters. The <code>nstart</code> parameter is set to 20 to run the algorithm multiple times with different initial centroids, enhancing the likelihood of a good solution.</p></li><li><p><strong>Assigning Clusters</strong>: Each point is assigned a cluster label, which will be used in the final visualization to differentiate the clusters.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-128395-h3-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Step 5: Visualize the Clusters with Centroids</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-26",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The final visualization illustrates the effectiveness of k-means clustering by showing grouped data points and their centroids.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 26
+                  }
+                },
+                {
+                  "id": "node-page-128395-p-27",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>R Code:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 27
+                  }
+                },
+                {
+                  "id": "node-page-128395-code-28",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code># Create a data frame for centroids with correct column names\ncentroids_df &lt;- data.frame(x = kmeans_result$centers[,1], y = kmeans_result$centers[,2])\n\n# Plot the clustering results\nggplot(df, aes(x, y, color = cluster)) + \n  geom_point() + \n  geom_point(data\n</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-128395-image-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/46/463F483E39846C252494AB26902964D3/Rplot.png\" alt=\"\" loading=\"lazy\"></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 29
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "128395",
+                "purpose": "foundation"
               }
             }
-          }
-        ]
+          ],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97436",
+            "moduleTitle": "K-means Clustering",
+            "pageIds": [
+              "128394",
+              "128395"
+            ]
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }

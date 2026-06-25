@@ -4,971 +4,988 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sparc-intro-stats-variables",
+        "clustername": "case-c-q-c-logistic-multiple-regression",
         "stims": [
           {
             "stimulusid": 0,
-            "display": {
-              "type": "sparc",
-              "documentId": "sparc-intro-stats-module-31-case-c-q-c-logistic-multiple-regression",
-              "schema": "tutorscript-sparc/1.0",
-              "unitType": "sparc-intro-stats-variables",
-              "layout": {
-                "orientation": "document",
-                "zones": [
-                  {
-                    "id": "document",
-                    "role": "contiguous-page",
-                    "region": "center",
-                    "flow": "vertical",
-                    "accepts": [
-                      "group",
-                      "atomic"
-                    ],
-                    "ordered": true
-                  }
+            "stimulusKC": "case-c-q-c-logistic-multiple-regression-sparc-page",
+            "clusterKC": "case-c-q-c-logistic-multiple-regression",
+            "textStimulus": "SPARC Intro Stats - Module 31 - Case C + Q → C (Logistic multiple regression)",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ],
+        "clusterKC": "case-c-q-c-logistic-multiple-regression"
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-intro-stats-module-31-case-c-q-c-logistic-multiple-regression",
+        "display": {
+          "type": "sparc",
+          "documentId": "sparc-intro-stats-module-31-case-c-q-c-logistic-multiple-regression",
+          "schema": "tutorscript-sparc/1.0",
+          "unitType": "sparc-intro-stats-variables",
+          "layout": {
+            "orientation": "document",
+            "zones": [
+              {
+                "id": "document",
+                "role": "contiguous-page",
+                "region": "center",
+                "flow": "vertical",
+                "accepts": [
+                  "group",
+                  "atomic"
                 ],
-                "regions": {
-                  "document": {
-                    "anchor": "center",
-                    "flow": "vertical",
-                    "width": "100%"
-                  }
-                }
+                "ordered": true
+              }
+            ],
+            "regions": {
+              "document": {
+                "anchor": "center",
+                "flow": "vertical",
+                "width": "100%"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "id": "node-page-129541",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Introduction to Logistic Regression",
+              "placement": {
+                "region": "document",
+                "order": 1
               },
-              "nodes": [
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
                 {
-                  "id": "node-page-129541",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Introduction to Logistic Regression",
+                  "id": "node-page-129541-h2-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Introduction to Logistic Regression</h2>",
                   "placement": {
                     "region": "document",
                     "order": 1
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129541-h2-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Introduction to Logistic Regression</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Welcome to the unit on logistic regression, a powerful statistical technique used to model and analyze binary outcomes. Building upon the concepts you&#39;ve learned in the previous unit on multiple regression, logistic regression extends the ideas to situations where the dependent variable is categorical, specifically with two possible outcomes (binary).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>While multiple regression is used to predict continuous outcomes, logistic regression is employed when the dependent variable is dichotomous, such as yes/no, true/false, or success/failure. This technique allows us to estimate the probability of an event occurring based on one or more independent variables, which can be continuous or categorical.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In this unit, we will delve into the key concepts and assumptions underlying logistic regression, as well as its application in various fields, such as healthcare, marketing, and social sciences. You will learn how to interpret the coefficients, assess model fit, and evaluate the predictive power of logistic regression models.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>We will also discuss the similarities and differences between logistic regression and multiple regression, highlighting the unique challenges and considerations when dealing with binary outcomes. Throughout the unit, we will use real-world examples and hands-on exercises to reinforce your understanding and help you develop practical skills in applying logistic regression to your own research problems.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>By the end of this unit, you will have a solid grasp of logistic regression and be able to confidently use this technique to analyze and predict binary outcomes in your academic and professional endeavors. Let&#39;s dive in and explore the world of logistic regression!</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>The Logistic Regression Equation</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In logistic regression, the prediction function operates on principles that closely resemble those of multiple regression, albeit with a distinctive transformation to accommodate binary outcomes. Let&#39;s delve into the details. The logistic regression equation models the relationship between the predictor variables and the log-odds of the dependent variable being in a particular category (1 for success, 0 for failure):</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><em></em><img src=\"\\text{logit}(p) = \\ln\\left(\\frac{p}{1-p}\\right) = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 + \\ldots + \\beta_nX_n\" alt=\"\">​</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Where:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-ul-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><em>p</em> is the probability of the dependent variable equaling &quot;1&quot; (success).</p></li><li><p><em>β</em><sub>0</sub>​,<em>β</em><sub>1</sub>​,…,<em>β</em><sub><em>n</em></sub>​ are the coefficients of the model.</p></li><li><p><em>X</em><sub>1</sub>​,<em>X</em><sub>2</sub>​,…,<em>X</em><sub><em>n</em></sub><sub>​</sub> are the independent variables.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h2-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Reporting Coefficients</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Normally we convert coefficients to the odds ratio and interpret that. In the context of Logistic Regression (LR), when reporting and interpreting the model&#39;s coefficients, it&#39;s standard practice to convert these coefficients into odds ratios for easier interpretation. This section explains how to report and interpret these coefficients as odds ratios, along with an example for clarity.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Conversion of Coefficients to Odds Ratios</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The coefficients in a logistic regression model represent the change in the log odds of the dependent variable for a one-unit increase in the predictor variable. Since the raw coefficients are in log odds, they can be difficult to interpret directly. Therefore, we exponentiate the coefficients to convert them into odds ratios (ORs), which describe how the odds of the outcome change with a one-unit increase in the predictor variable.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>How to Interpret Odds Ratios</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-ol-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Odds Ratios Greater Than 1</strong>: An OR greater than 1 indicates that as the predictor variable increases, the odds of the outcome occurring increase. For example, an OR of 2 means that a one-unit increase in the predictor variable doubles the odds of the outcome occurring.</p></li><li><p><strong>Odds Ratios Less Than 1</strong>: An OR less than 1 indicates that as the predictor variable increases, the odds of the outcome occurring decrease. For example, an OR of 0.5 suggests that a one-unit increase in the predictor variable halves the odds of the outcome occurring.</p></li><li><p><strong>Odds Ratios Equal to 1</strong>: An OR of exactly 1 indicates no change in the odds of the outcome occurring with a one-unit increase in the predictor variable. This suggests the predictor variable has no effect on the outcome.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Reporting Odds Ratios: A Structured Approach</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>When reporting odds ratios derived from logistic regression coefficients, it&#39;s important to follow a structured approach for clarity and comprehension. Here&#39;s a template for reporting:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-ul-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>State the Predictor and Outcome</strong>: Clearly identify the predictor variable and the outcome variable.</p></li><li><p><strong>Report the Odds Ratio</strong>: Present the odds ratio for the predictor variable.</p></li><li><p><strong>Interpret the Odds Ratio</strong>: Explain what the odds ratio means in the context of your analysis. Include whether the predictor increases or decreases the odds of the outcome, and by how much.</p></li><li><p><strong>Provide Confidence Intervals</strong>: If possible, include the 95% confidence intervals for the odds ratio to give an indication of the precision of your estimates.</p></li><li><p><strong>Contextualize with Examples</strong>: If applicable, provide an example to help contextualize the magnitude of the odds ratio.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Example</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Suppose you have a logistic regression model predicting the likelihood of developing a certain health condition based on daily fruit intake (servings per day). The coefficient for daily fruit intake is 0.3. Exponentiating this coefficient gives an odds ratio of <em>e</em><sup><sub>0.3</sub></sup>≈1.35.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Reporting</strong>: In our analysis, we found that for each additional serving of fruit consumed daily, the odds of developing the health condition increase by a factor of 1.35, or 35%. This suggests a positive association between fruit intake and the likelihood of this health condition. The 95% confidence interval for this odds ratio is (1.10, 1.65), indicating our estimate is precise and significantly different from 1.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>By converting the logistic regression coefficients to odds ratios and following a structured approach to reporting, researchers can provide clear, interpretable, and valuable insights into the relationships between predictors and outcomes in their studies.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Transformation via the Sigmoid Function</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-26",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>To convert the log-odds (literally the log of the odds) to a probability (ensuring the output is between 0 and 1), we apply the sigmoid function:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 26
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-27",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Here, <em>z</em> is the linear combination of predictors, or <em>β</em><sub>0</sub>​+<em>β</em><sub>1</sub>​<em>X</em><sub>1</sub>​+<em>β</em><sub>2</sub>​<em>X</em><sub>2</sub>​+…+<em>β</em><sub><em>n</em></sub>​<em>X</em><sub><em>n</em></sub>​.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-image-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0C/0C0626BDE45FB2B4398B621B0B471DC4/logistic_transformation_hi_res.png\" alt=\"\" loading=\"lazy\"></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Error Minimization: Log Loss</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-30",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Logistic regression minimizes the discrepancy between observed outcomes and predicted probabilities by minimizing a cost function, typically the log loss for binary outcomes:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 30
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-31",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Where:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 31
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-ul-32",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><em>N</em> is the number of observations.</p></li><li><p><em>y</em><sub><em>i</em></sub>​ is the actual outcome.</p></li><li><p><em>p</em><sub><em>i</em></sub>​ is the predicted probability of <em>y</em><sub><em>i</em></sub><sub>​  </sub>being 1.</p></li><li><p><em>L</em>(<em>β</em>) is the log loss; the cost function logistic regression aims to minimize.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 32
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-33",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>A cost function, in the context of machine learning and statistics, is a mathematical formula used to measure the error or discrepancy between predicted outcomes and actual outcomes. It quantifies the difference for an algorithm across the entire dataset. The purpose of a cost function is to be minimized during the training process, guiding the optimization of the algorithm&#39;s parameters towards the most accurate predictions possible.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 33
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-34",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In logistic regression, specifically, the cost function often used is the log loss, also known as binary cross-entropy. This cost function is suitable for binary classification tasks. It measures the performance of a classification model whose output is a probability value between 0 and 1. The cost increases as the predicted probability diverges from the actual label, aiming to penalize wrong predictions more severely. By minimizing this cost, logistic regression adjusts its weights to improve the accuracy of its predictions, effectively fitting the model to the data.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 34
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h3-35",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Minimization Process</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-36",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The process of minimizing the log loss involves using optimization algorithms, such as Gradient Descent, which iteratively adjust the <em>β</em> coefficients to reduce the log loss, improving the model&#39;s predictive accuracy.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-37",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>This foundational framework allows logistic regression to predict binary outcomes effectively and provides insights into the influence of each predictor variable on the probability of success.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 37
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-h2-38",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h2>Assumptions of Logistic Regression</h2>",
-                      "placement": {
-                        "region": "document",
-                        "order": 38
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-p-39",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Logistic regression is a popular statistical method used for predicting binary outcomes based on one or more independent variables. To ensure the validity and reliability of the logistic regression model, several assumptions must be met. These assumptions are as follows:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 39
-                      }
-                    },
-                    {
-                      "id": "node-page-129541-ol-40",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p>Binary Dependent Variable: The dependent variable in logistic regression must be binary or dichotomous, meaning it can only take on two possible values, typically coded as 0 and 1. Examples include yes/no, success/failure, or presence/absence.</p></li><li><p>Independence of Observations: The observations in the dataset should be independent of each other. In other words, the outcome of one observation should not influence the outcome of another observation. Violating this assumption can lead to biased and unreliable results.</p></li><li><p>Linearity in the Logit: Logistic regression assumes a linear relationship between the independent variables and the log odds (logit) of the dependent variable. The logit is the natural logarithm of the odds ratio. This assumption can be checked by examining the interaction terms between the independent variables and their log transformations.</p></li><li><p>No Multicollinearity: The independent variables should not be highly correlated with each other. Multicollinearity can affect the interpretation and stability of the model coefficients. It can be detected by calculating the variance inflation factor (VIF) for each independent variable.</p></li><li><p>Large Sample Size: Logistic regression requires a relatively large sample size to achieve stable and reliable results. A general rule of thumb is to have at least 10 events per independent variable in the model. Insufficient sample size can lead to biased estimates and decreased power to detect significant relationships.</p></li><li><p>No Outliers or Influential Observations in predictors: Logistic regression is sensitive to outliers and influential observations. Outliers are data points that are far from the majority of the data, while influential observations are data points that have a disproportionate impact on the model coefficients. These observations should be identified and handled appropriately, such as through data transformation or removal.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 40
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129541",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-129924",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Example 1 APA Writeup for MLR",
+                  "id": "node-page-129541-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Welcome to the unit on logistic regression, a powerful statistical technique used to model and analyze binary outcomes. Building upon the concepts you&#39;ve learned in the previous unit on multiple regression, logistic regression extends the ideas to situations where the dependent variable is categorical, specifically with two possible outcomes (binary).</p>",
                   "placement": {
                     "region": "document",
                     "order": 2
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129924-p-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>We&#39;ll use a hypothetical study investigating the effect of a new study technique on passing an exam (pass/fail), with hours studied as an additional predictor.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Dataset Description</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The dataset consists of 100 students with the following variables:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-ul-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Pass</strong>: Whether the student passed the exam (1) or not (0). (Binary outcome)</p></li><li><p><strong>Technique</strong>: Whether the student used the new study technique (1) or not (0). (Binary predictor)</p></li><li><p><strong>Hours_Studied</strong>: Number of hours the student studied for the exam. (Continuous predictor)</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Research Question</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Does the use of the new study technique predict the likelihood of passing the exam, controlling for hours studied?</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Statistical Analysis</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h4-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Logistic Regression Formula</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>log(<em>p/(1-p)</em>​)=<em>β</em><sub>0</sub>​+<em>β</em><sub>1</sub>​(Technique)+<em>β</em><sub>2</sub>​(Hours_Studied)</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Where:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-ul-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><em>p</em> is the probability of passing the exam.</p></li><li><p><em>β</em><sub>0​</sub> is the intercept.</p></li><li><p><em>β</em><sub>1​ </sub>and <em>β</em><sub>2​</sub> are the coefficients for Technique and Hours_Studied, respectively.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h4-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Odds Ratio Calculation</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The odds ratio (OR) for a predictor can be calculated as <em>e</em><sup><em>β</em></sup>, where <em>β</em> is the coefficient of the predictor.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Example Calculation</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Let&#39;s assume the logistic regression analysis yields the following coefficients:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-ul-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>Intercept (<em>β</em><sub>0</sub>​): -3</p></li><li><p>Technique (<em>β</em><sub>1​</sub>): 1.5</p></li><li><p>Hours_Studied (<em>β</em><sub>2</sub>​): 0.2</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h4-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h4>Odds Ratios</h4>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-ul-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Technique</strong>: <em>OR</em>=<em>e</em><sup>1.5</sup>≈4.48</p></li><li><p><strong>Hours_Studied</strong>: <em>OR</em>=<em>e</em><sup>0.2</sup>≈1.22</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>Interpretation</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-ul-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p><strong>Technique</strong>: The odds of passing the exam are about 4.48 times higher for students who use the new study technique compared to those who do not, controlling for hours studied.</p></li><li><p><strong>Hours_Studied</strong>: For each additional hour studied, the odds of passing the exam increase by a factor of 1.22, holding the study technique constant.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-h3-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<h3>APA-Style Reporting</h3>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In a logistic regression analysis examining the impact of a novel study technique and hours studied on the likelihood of passing an exam among 100 students, the use of the new study technique (coded as 1 for use and 0 for non-use) was found to be a significant predictor of exam success. Specifically, employing the new study technique was associated with a substantial increase in the odds of passing the exam, with an odds ratio (OR) of 4.48, 95% CI [2.56, 7.82], p &lt; .001. This indicates that students who used the technique were approximately 4.5 times more likely to pass the exam compared to those who did not use the technique, controlling for hours studied.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Furthermore, the number of hours studied also significantly predicted exam success, with an OR of 1.22, 95% CI [1.10, 1.35], p &lt; .01 for each additional hour of study. This finding suggests that, independent of the study technique used, each additional hour of study was associated with a 22% increase in the odds of passing the exam.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-24",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The model fit was evaluated using the Hosmer-Lemeshow test, which was not significant (χ²(8) = 5.67, p = .682), indicating a good fit between the model and the observed data. The Nagelkerke R² value was 0.62, suggesting that approximately 62% of the variance in exam success could be explained by the study technique and hours studied.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 24
-                      }
-                    },
-                    {
-                      "id": "node-page-129924-p-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Overall, these results underscore the effectiveness of the new study technique in enhancing exam performance, highlighting its potential as a valuable tool for students. Additionally, the positive association between hours studied and exam success reinforces the importance of dedicated study time. Future research might explore the mechanisms through which the study technique facilitates learning, as well as potential interactions between study duration and technique efficacy.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129924",
-                    "purpose": "foundation"
                   }
                 },
                 {
-                  "id": "node-page-129973",
-                  "nodeType": "group",
-                  "groupType": "section",
-                  "label": "Example 2 of APA Writeup for MLR with R code",
+                  "id": "node-page-129541-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>While multiple regression is used to predict continuous outcomes, logistic regression is employed when the dependent variable is dichotomous, such as yes/no, true/false, or success/failure. This technique allows us to estimate the probability of an event occurring based on one or more independent variables, which can be continuous or categorical.</p>",
                   "placement": {
                     "region": "document",
                     "order": 3
-                  },
-                  "layout": {
-                    "visualPreset": "section",
-                    "density": "comfortable"
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-129973-p-1",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Predicting Depression Severity using Multiple Logistic Regression</strong></p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 1
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-2",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Introduction: Depression is a prevalent mental health disorder that affects millions of people worldwide. This study aims to investigate the factors that contribute to the severity of depression using multiple logistic regression. By identifying the key predictors of depression severity, mental health professionals can develop targeted interventions and treatment plans to help individuals manage their symptoms effectively.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 2
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-3",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Method: Data Simulation: The data for this study was simulated using R to represent a hypothetical dataset of 500 individuals. The dataset includes the following variables:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 3
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-ul-4",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>Depression_Severity: Binary variable indicating whether an individual has severe depression (1) or not (0)</p></li><li><p>Age: The individual&#39;s age in years</p></li><li><p>Social_Support: A continuous variable representing the level of social support (on a scale of 1-10)</p></li><li><p>Stress_Level: A continuous variable representing the level of perceived stress (on a scale of 1-10)</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 4
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-5",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>R code for data simulation:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 5
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-code-6",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>set.seed(123)\nn &lt;- 500\nAge &lt;- round(runif(n, 18, 65))\nSocial_Support &lt;- round(rnorm(n, 5, 2), 1)\nStress_Level &lt;- round(rnorm(n, 5, 2), 1)\nDepression_Severity &lt;- rbinom(n, 1, exp(-2 + 0.05*Age - 0.4*Social_Support + 0.6*Stress_Level) / (1 + exp(-2 + 0.05*Age - 0.4*Social_Support + 0.6*Stress_Level)))\ndf &lt;- data.frame(Depression_Severity, Age, Social_Support, Stress_Level)</code></pre></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 6
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Analysis: A multiple logistic regression model was fitted to the simulated data using R&#39;s glm() function with the binomial family. The model included Age, Social_Support, and Stress_Level as predictor variables and Depression_Severity as the binary outcome variable.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-8",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>R code for multiple logistic regression:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-code-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>model &lt;- glm(Depression_Severity ~ Age + Social_Support + Stress_Level, data = df, family = binomial)\nsummary(model)</code></pre><figcaption><p></p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 9
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-code-10",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><pre><code>glm(formula = Depression_Severity ~ Age + Social_Support + Stress_Level, family = binomial, data = df)\n\nDeviance Residuals:\n    Min       1Q   Median       3Q      Max  \n-2.6495  -0.6845  -0.3437   0.5618   2.7405  \n\nCoefficients:\n               Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -1.97023    0.59175  -3.329 0.000871 ***\nAge             0.05232    0.00976   5.361 8.27e-08 ***\nSocial_Support -0.41972    0.05987  -7.010 2.38e-12 ***\nStress_Level    0.60283    0.06104   9.876  &lt; 2e-16 ***\n---\nSignif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 679.03  on 499  degrees of freedom\nResidual deviance: 469.89  on 496  degrees of freedom\nAIC: 477.89\n\nNumber of Fisher Scoring iterations: 5</code></pre><figcaption><p>R results</p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Results: Before interpreting the results, the assumptions of multiple logistic regression were checked. The linearity assumption was assessed using the Box-Tidwell test, which indicated that the assumption was met (p &gt; .05 for all interactions between predictors and their log-transformations). The absence of multicollinearity was confirmed by examining the variance inflation factors (VIFs), all of which were below 2, indicating no significant multicollinearity.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The overall model fit was assessed using the likelihood ratio test, which compared the full model to a null model with no predictors. The test was significant (χ²(3) = 209.14, p &lt; .001), indicating that the full model fit the data better than the null model. McFadden&#39;s pseudo R-squared value for the model was 0.31, suggesting that the model explained approximately 31% of the variance in depression severity.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The results of the multiple logistic regression analysis are presented in Table 1. All three predictor variables (Age, Social_Support, and Stress_Level) were statistically significant (p &lt; .001). The coefficients suggest that:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-ul-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ul><li><p>For every one-year increase in Age, the odds of having severe depression increase by a factor of exp(0.05) = 1.05, holding other variables constant.</p></li><li><p>For every one-unit increase in Social_Support, the odds of having severe depression decrease by a factor of exp(-0.42) = 0.66, holding other variables constant.</p></li><li><p>For every one-unit increase in Stress_Level, the odds of having severe depression increase by a factor of exp(0.60) = 1.83, holding other variables constant.</p></li></ul>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The classification accuracy of the model was assessed using a confusion matrix. The model correctly classified 78.6% of the cases, with a sensitivity of 0.76 and a specificity of 0.81. The area under the receiver operating characteristic (ROC) curve was 0.85, indicating good discriminatory power of the model.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Table 1 Multiple Logistic Regression Coefficients Predicting Depression Severity</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 16
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-table-17",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<table><tr><th>Predictor</th><th>B</th><th>SE</th><th>OR</th><th>95% CI</th><th>p</th></tr><tr><td>(Intercept)</td><td>-1.97</td><td>0.59</td><td>0.14</td><td>[0.04, 0.45]</td><td>&lt; .001</td></tr><tr><td>Age</td><td>0.05</td><td>0.01</td><td>1.05</td><td>[1.03, 1.07]</td><td>&lt; .001</td></tr><tr><td>Social_Support</td><td>-0.42</td><td>0.06</td><td>0.66</td><td>[0.58, 0.74]</td><td>&lt; .001</td></tr><tr><td>Stress_Level</td><td>0.60</td><td>0.06</td><td>1.83</td><td>[1.62, 2.06]</td><td>&lt; .001</td></tr><tr><td>Note. B = unstandardized regression coefficient; SE = standard error of the coefficient; OR = odds ratio; CI = confidence interval; p = p-value.</td><td></td><td></td><td></td><td></td><td><p></p></td></tr></table>",
-                      "placement": {
-                        "region": "document",
-                        "order": 17
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-18",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Discussion: The multiple logistic regression analysis reveals that age, social support, and stress level are significant predictors of depression severity. The results suggest that older individuals and those with higher stress levels are more likely to experience severe depression, while individuals with higher levels of social support are less likely to have severe depression.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 18
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-19",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>These findings have important implications for mental health professionals. To help individuals manage depression severity, interventions should focus on reducing stress levels and promoting social support. Additionally, mental health professionals should be aware that older individuals may be at a higher risk for severe depression and may require additional support and resources.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 19
-                      }
-                    },
-                    {
-                      "id": "node-page-129973-p-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Conclusion: This study demonstrates the application of multiple logistic regression in predicting depression severity using simulated data. The results highlight the importance of considering multiple factors when developing interventions and treatment plans for individuals with depression. By understanding the key predictors of depression severity, mental health professionals can tailor their approaches to better meet the needs of their clients and improve treatment outcomes.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    }
-                  ],
-                  "source": {
-                    "pageId": "129973",
-                    "purpose": "foundation"
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In this unit, we will delve into the key concepts and assumptions underlying logistic regression, as well as its application in various fields, such as healthcare, marketing, and social sciences. You will learn how to interpret the coefficients, assess model fit, and evaluate the predictive power of logistic regression models.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>We will also discuss the similarities and differences between logistic regression and multiple regression, highlighting the unique challenges and considerations when dealing with binary outcomes. Throughout the unit, we will use real-world examples and hands-on exercises to reinforce your understanding and help you develop practical skills in applying logistic regression to your own research problems.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>By the end of this unit, you will have a solid grasp of logistic regression and be able to confidently use this technique to analyze and predict binary outcomes in your academic and professional endeavors. Let&#39;s dive in and explore the world of logistic regression!</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>The Logistic Regression Equation</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In logistic regression, the prediction function operates on principles that closely resemble those of multiple regression, albeit with a distinctive transformation to accommodate binary outcomes. Let&#39;s delve into the details. The logistic regression equation models the relationship between the predictor variables and the log-odds of the dependent variable being in a particular category (1 for success, 0 for failure):</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><em></em><img src=\"\\text{logit}(p) = \\ln\\left(\\frac{p}{1-p}\\right) = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 + \\ldots + \\beta_nX_n\" alt=\"\">​</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Where:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-129541-ul-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><em>p</em> is the probability of the dependent variable equaling &quot;1&quot; (success).</p></li><li><p><em>β</em><sub>0</sub>​,<em>β</em><sub>1</sub>​,…,<em>β</em><sub><em>n</em></sub>​ are the coefficients of the model.</p></li><li><p><em>X</em><sub>1</sub>​,<em>X</em><sub>2</sub>​,…,<em>X</em><sub><em>n</em></sub><sub>​</sub> are the independent variables.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-129541-h2-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Reporting Coefficients</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Normally we convert coefficients to the odds ratio and interpret that. In the context of Logistic Regression (LR), when reporting and interpreting the model&#39;s coefficients, it&#39;s standard practice to convert these coefficients into odds ratios for easier interpretation. This section explains how to report and interpret these coefficients as odds ratios, along with an example for clarity.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Conversion of Coefficients to Odds Ratios</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The coefficients in a logistic regression model represent the change in the log odds of the dependent variable for a one-unit increase in the predictor variable. Since the raw coefficients are in log odds, they can be difficult to interpret directly. Therefore, we exponentiate the coefficients to convert them into odds ratios (ORs), which describe how the odds of the outcome change with a one-unit increase in the predictor variable.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>How to Interpret Odds Ratios</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-129541-ol-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p><strong>Odds Ratios Greater Than 1</strong>: An OR greater than 1 indicates that as the predictor variable increases, the odds of the outcome occurring increase. For example, an OR of 2 means that a one-unit increase in the predictor variable doubles the odds of the outcome occurring.</p></li><li><p><strong>Odds Ratios Less Than 1</strong>: An OR less than 1 indicates that as the predictor variable increases, the odds of the outcome occurring decrease. For example, an OR of 0.5 suggests that a one-unit increase in the predictor variable halves the odds of the outcome occurring.</p></li><li><p><strong>Odds Ratios Equal to 1</strong>: An OR of exactly 1 indicates no change in the odds of the outcome occurring with a one-unit increase in the predictor variable. This suggests the predictor variable has no effect on the outcome.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Reporting Odds Ratios: A Structured Approach</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>When reporting odds ratios derived from logistic regression coefficients, it&#39;s important to follow a structured approach for clarity and comprehension. Here&#39;s a template for reporting:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-129541-ul-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>State the Predictor and Outcome</strong>: Clearly identify the predictor variable and the outcome variable.</p></li><li><p><strong>Report the Odds Ratio</strong>: Present the odds ratio for the predictor variable.</p></li><li><p><strong>Interpret the Odds Ratio</strong>: Explain what the odds ratio means in the context of your analysis. Include whether the predictor increases or decreases the odds of the outcome, and by how much.</p></li><li><p><strong>Provide Confidence Intervals</strong>: If possible, include the 95% confidence intervals for the odds ratio to give an indication of the precision of your estimates.</p></li><li><p><strong>Contextualize with Examples</strong>: If applicable, provide an example to help contextualize the magnitude of the odds ratio.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Example</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Suppose you have a logistic regression model predicting the likelihood of developing a certain health condition based on daily fruit intake (servings per day). The coefficient for daily fruit intake is 0.3. Exponentiating this coefficient gives an odds ratio of <em>e</em><sup><sub>0.3</sub></sup>≈1.35.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Reporting</strong>: In our analysis, we found that for each additional serving of fruit consumed daily, the odds of developing the health condition increase by a factor of 1.35, or 35%. This suggests a positive association between fruit intake and the likelihood of this health condition. The 95% confidence interval for this odds ratio is (1.10, 1.65), indicating our estimate is precise and significantly different from 1.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>By converting the logistic regression coefficients to odds ratios and following a structured approach to reporting, researchers can provide clear, interpretable, and valuable insights into the relationships between predictors and outcomes in their studies.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Transformation via the Sigmoid Function</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-26",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>To convert the log-odds (literally the log of the odds) to a probability (ensuring the output is between 0 and 1), we apply the sigmoid function:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 26
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-27",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Here, <em>z</em> is the linear combination of predictors, or <em>β</em><sub>0</sub>​+<em>β</em><sub>1</sub>​<em>X</em><sub>1</sub>​+<em>β</em><sub>2</sub>​<em>X</em><sub>2</sub>​+…+<em>β</em><sub><em>n</em></sub>​<em>X</em><sub><em>n</em></sub>​.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 27
+                  }
+                },
+                {
+                  "id": "node-page-129541-image-28",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0C/0C0626BDE45FB2B4398B621B0B471DC4/logistic_transformation_hi_res.png\" alt=\"\" loading=\"lazy\"></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Error Minimization: Log Loss</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 29
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-30",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Logistic regression minimizes the discrepancy between observed outcomes and predicted probabilities by minimizing a cost function, typically the log loss for binary outcomes:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 30
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-31",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Where:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 31
+                  }
+                },
+                {
+                  "id": "node-page-129541-ul-32",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><em>N</em> is the number of observations.</p></li><li><p><em>y</em><sub><em>i</em></sub>​ is the actual outcome.</p></li><li><p><em>p</em><sub><em>i</em></sub>​ is the predicted probability of <em>y</em><sub><em>i</em></sub><sub>​  </sub>being 1.</p></li><li><p><em>L</em>(<em>β</em>) is the log loss; the cost function logistic regression aims to minimize.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 32
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-33",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>A cost function, in the context of machine learning and statistics, is a mathematical formula used to measure the error or discrepancy between predicted outcomes and actual outcomes. It quantifies the difference for an algorithm across the entire dataset. The purpose of a cost function is to be minimized during the training process, guiding the optimization of the algorithm&#39;s parameters towards the most accurate predictions possible.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 33
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-34",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In logistic regression, specifically, the cost function often used is the log loss, also known as binary cross-entropy. This cost function is suitable for binary classification tasks. It measures the performance of a classification model whose output is a probability value between 0 and 1. The cost increases as the predicted probability diverges from the actual label, aiming to penalize wrong predictions more severely. By minimizing this cost, logistic regression adjusts its weights to improve the accuracy of its predictions, effectively fitting the model to the data.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 34
+                  }
+                },
+                {
+                  "id": "node-page-129541-h3-35",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Minimization Process</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 35
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-36",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The process of minimizing the log loss involves using optimization algorithms, such as Gradient Descent, which iteratively adjust the <em>β</em> coefficients to reduce the log loss, improving the model&#39;s predictive accuracy.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 36
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-37",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This foundational framework allows logistic regression to predict binary outcomes effectively and provides insights into the influence of each predictor variable on the probability of success.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 37
+                  }
+                },
+                {
+                  "id": "node-page-129541-h2-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h2>Assumptions of Logistic Regression</h2>",
+                  "placement": {
+                    "region": "document",
+                    "order": 38
+                  }
+                },
+                {
+                  "id": "node-page-129541-p-39",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Logistic regression is a popular statistical method used for predicting binary outcomes based on one or more independent variables. To ensure the validity and reliability of the logistic regression model, several assumptions must be met. These assumptions are as follows:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 39
+                  }
+                },
+                {
+                  "id": "node-page-129541-ol-40",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ol><li><p>Binary Dependent Variable: The dependent variable in logistic regression must be binary or dichotomous, meaning it can only take on two possible values, typically coded as 0 and 1. Examples include yes/no, success/failure, or presence/absence.</p></li><li><p>Independence of Observations: The observations in the dataset should be independent of each other. In other words, the outcome of one observation should not influence the outcome of another observation. Violating this assumption can lead to biased and unreliable results.</p></li><li><p>Linearity in the Logit: Logistic regression assumes a linear relationship between the independent variables and the log odds (logit) of the dependent variable. The logit is the natural logarithm of the odds ratio. This assumption can be checked by examining the interaction terms between the independent variables and their log transformations.</p></li><li><p>No Multicollinearity: The independent variables should not be highly correlated with each other. Multicollinearity can affect the interpretation and stability of the model coefficients. It can be detected by calculating the variance inflation factor (VIF) for each independent variable.</p></li><li><p>Large Sample Size: Logistic regression requires a relatively large sample size to achieve stable and reliable results. A general rule of thumb is to have at least 10 events per independent variable in the model. Insufficient sample size can lead to biased estimates and decreased power to detect significant relationships.</p></li><li><p>No Outliers or Influential Observations in predictors: Logistic regression is sensitive to outliers and influential observations. Outliers are data points that are far from the majority of the data, while influential observations are data points that have a disproportionate impact on the model coefficients. These observations should be identified and handled appropriately, such as through data transformation or removal.</p></li></ol>",
+                  "placement": {
+                    "region": "document",
+                    "order": 40
                   }
                 }
               ],
-              "behavior": {
-                "steps": []
-              },
-              "response": {
-                "gradingMode": "production-rules",
-                "intentByNode": []
-              },
-              "productionRules": [],
               "source": {
-                "conversion": "OLI flat JSON export to SPARC document page",
-                "moduleId": "97342",
-                "moduleTitle": "Case C + Q → C (Logistic multiple regression)",
-                "pageIds": [
-                  "129541",
-                  "129924",
-                  "129973"
-                ]
+                "pageId": "129541",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-129924",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Example 1 APA Writeup for MLR",
+              "placement": {
+                "region": "document",
+                "order": 2
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-129924-p-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>We&#39;ll use a hypothetical study investigating the effect of a new study technique on passing an exam (pass/fail), with hours studied as an additional predictor.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Dataset Description</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The dataset consists of 100 students with the following variables:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-129924-ul-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Pass</strong>: Whether the student passed the exam (1) or not (0). (Binary outcome)</p></li><li><p><strong>Technique</strong>: Whether the student used the new study technique (1) or not (0). (Binary predictor)</p></li><li><p><strong>Hours_Studied</strong>: Number of hours the student studied for the exam. (Continuous predictor)</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Research Question</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Does the use of the new study technique predict the likelihood of passing the exam, controlling for hours studied?</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Statistical Analysis</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129924-h4-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Logistic Regression Formula</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>log(<em>p/(1-p)</em>​)=<em>β</em><sub>0</sub>​+<em>β</em><sub>1</sub>​(Technique)+<em>β</em><sub>2</sub>​(Hours_Studied)</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Where:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-129924-ul-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><em>p</em> is the probability of passing the exam.</p></li><li><p><em>β</em><sub>0​</sub> is the intercept.</p></li><li><p><em>β</em><sub>1​ </sub>and <em>β</em><sub>2​</sub> are the coefficients for Technique and Hours_Studied, respectively.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-129924-h4-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Odds Ratio Calculation</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The odds ratio (OR) for a predictor can be calculated as <em>e</em><sup><em>β</em></sup>, where <em>β</em> is the coefficient of the predictor.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Example Calculation</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Let&#39;s assume the logistic regression analysis yields the following coefficients:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-129924-ul-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>Intercept (<em>β</em><sub>0</sub>​): -3</p></li><li><p>Technique (<em>β</em><sub>1​</sub>): 1.5</p></li><li><p>Hours_Studied (<em>β</em><sub>2</sub>​): 0.2</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-129924-h4-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Odds Ratios</h4>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-129924-ul-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Technique</strong>: <em>OR</em>=<em>e</em><sup>1.5</sup>≈4.48</p></li><li><p><strong>Hours_Studied</strong>: <em>OR</em>=<em>e</em><sup>0.2</sup>≈1.22</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>Interpretation</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-129924-ul-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p><strong>Technique</strong>: The odds of passing the exam are about 4.48 times higher for students who use the new study technique compared to those who do not, controlling for hours studied.</p></li><li><p><strong>Hours_Studied</strong>: For each additional hour studied, the odds of passing the exam increase by a factor of 1.22, holding the study technique constant.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-129924-h3-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h3>APA-Style Reporting</h3>",
+                  "placement": {
+                    "region": "document",
+                    "order": 21
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-22",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>In a logistic regression analysis examining the impact of a novel study technique and hours studied on the likelihood of passing an exam among 100 students, the use of the new study technique (coded as 1 for use and 0 for non-use) was found to be a significant predictor of exam success. Specifically, employing the new study technique was associated with a substantial increase in the odds of passing the exam, with an odds ratio (OR) of 4.48, 95% CI [2.56, 7.82], p &lt; .001. This indicates that students who used the technique were approximately 4.5 times more likely to pass the exam compared to those who did not use the technique, controlling for hours studied.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 22
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-23",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Furthermore, the number of hours studied also significantly predicted exam success, with an OR of 1.22, 95% CI [1.10, 1.35], p &lt; .01 for each additional hour of study. This finding suggests that, independent of the study technique used, each additional hour of study was associated with a 22% increase in the odds of passing the exam.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 23
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-24",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The model fit was evaluated using the Hosmer-Lemeshow test, which was not significant (χ²(8) = 5.67, p = .682), indicating a good fit between the model and the observed data. The Nagelkerke R² value was 0.62, suggesting that approximately 62% of the variance in exam success could be explained by the study technique and hours studied.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-129924-p-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Overall, these results underscore the effectiveness of the new study technique in enhancing exam performance, highlighting its potential as a valuable tool for students. Additionally, the positive association between hours studied and exam success reinforces the importance of dedicated study time. Future research might explore the mechanisms through which the study technique facilitates learning, as well as potential interactions between study duration and technique efficacy.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 25
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "129924",
+                "purpose": "foundation"
+              }
+            },
+            {
+              "id": "node-page-129973",
+              "nodeType": "group",
+              "groupType": "section",
+              "label": "Example 2 of APA Writeup for MLR with R code",
+              "placement": {
+                "region": "document",
+                "order": 3
+              },
+              "layout": {
+                "visualPreset": "section",
+                "density": "comfortable"
+              },
+              "children": [
+                {
+                  "id": "node-page-129973-p-1",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Predicting Depression Severity using Multiple Logistic Regression</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 1
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-2",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Introduction: Depression is a prevalent mental health disorder that affects millions of people worldwide. This study aims to investigate the factors that contribute to the severity of depression using multiple logistic regression. By identifying the key predictors of depression severity, mental health professionals can develop targeted interventions and treatment plans to help individuals manage their symptoms effectively.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 2
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-3",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Method: Data Simulation: The data for this study was simulated using R to represent a hypothetical dataset of 500 individuals. The dataset includes the following variables:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 3
+                  }
+                },
+                {
+                  "id": "node-page-129973-ul-4",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>Depression_Severity: Binary variable indicating whether an individual has severe depression (1) or not (0)</p></li><li><p>Age: The individual&#39;s age in years</p></li><li><p>Social_Support: A continuous variable representing the level of social support (on a scale of 1-10)</p></li><li><p>Stress_Level: A continuous variable representing the level of perceived stress (on a scale of 1-10)</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 4
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-5",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>R code for data simulation:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 5
+                  }
+                },
+                {
+                  "id": "node-page-129973-code-6",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>set.seed(123)\nn &lt;- 500\nAge &lt;- round(runif(n, 18, 65))\nSocial_Support &lt;- round(rnorm(n, 5, 2), 1)\nStress_Level &lt;- round(rnorm(n, 5, 2), 1)\nDepression_Severity &lt;- rbinom(n, 1, exp(-2 + 0.05*Age - 0.4*Social_Support + 0.6*Stress_Level) / (1 + exp(-2 + 0.05*Age - 0.4*Social_Support + 0.6*Stress_Level)))\ndf &lt;- data.frame(Depression_Severity, Age, Social_Support, Stress_Level)</code></pre></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 6
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-7",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Analysis: A multiple logistic regression model was fitted to the simulated data using R&#39;s glm() function with the binomial family. The model included Age, Social_Support, and Stress_Level as predictor variables and Depression_Severity as the binary outcome variable.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 7
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-8",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>R code for multiple logistic regression:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 8
+                  }
+                },
+                {
+                  "id": "node-page-129973-code-9",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>model &lt;- glm(Depression_Severity ~ Age + Social_Support + Stress_Level, data = df, family = binomial)\nsummary(model)</code></pre><figcaption><p></p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 9
+                  }
+                },
+                {
+                  "id": "node-page-129973-code-10",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<figure><pre><code>glm(formula = Depression_Severity ~ Age + Social_Support + Stress_Level, family = binomial, data = df)\n\nDeviance Residuals:\n    Min       1Q   Median       3Q      Max  \n-2.6495  -0.6845  -0.3437   0.5618   2.7405  \n\nCoefficients:\n               Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -1.97023    0.59175  -3.329 0.000871 ***\nAge             0.05232    0.00976   5.361 8.27e-08 ***\nSocial_Support -0.41972    0.05987  -7.010 2.38e-12 ***\nStress_Level    0.60283    0.06104   9.876  &lt; 2e-16 ***\n---\nSignif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 679.03  on 499  degrees of freedom\nResidual deviance: 469.89  on 496  degrees of freedom\nAIC: 477.89\n\nNumber of Fisher Scoring iterations: 5</code></pre><figcaption><p>R results</p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 10
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-11",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Results: Before interpreting the results, the assumptions of multiple logistic regression were checked. The linearity assumption was assessed using the Box-Tidwell test, which indicated that the assumption was met (p &gt; .05 for all interactions between predictors and their log-transformations). The absence of multicollinearity was confirmed by examining the variance inflation factors (VIFs), all of which were below 2, indicating no significant multicollinearity.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The overall model fit was assessed using the likelihood ratio test, which compared the full model to a null model with no predictors. The test was significant (χ²(3) = 209.14, p &lt; .001), indicating that the full model fit the data better than the null model. McFadden&#39;s pseudo R-squared value for the model was 0.31, suggesting that the model explained approximately 31% of the variance in depression severity.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 12
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-13",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The results of the multiple logistic regression analysis are presented in Table 1. All three predictor variables (Age, Social_Support, and Stress_Level) were statistically significant (p &lt; .001). The coefficients suggest that:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 13
+                  }
+                },
+                {
+                  "id": "node-page-129973-ul-14",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>For every one-year increase in Age, the odds of having severe depression increase by a factor of exp(0.05) = 1.05, holding other variables constant.</p></li><li><p>For every one-unit increase in Social_Support, the odds of having severe depression decrease by a factor of exp(-0.42) = 0.66, holding other variables constant.</p></li><li><p>For every one-unit increase in Stress_Level, the odds of having severe depression increase by a factor of exp(0.60) = 1.83, holding other variables constant.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The classification accuracy of the model was assessed using a confusion matrix. The model correctly classified 78.6% of the cases, with a sensitivity of 0.76 and a specificity of 0.81. The area under the receiver operating characteristic (ROC) curve was 0.85, indicating good discriminatory power of the model.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Table 1 Multiple Logistic Regression Coefficients Predicting Depression Severity</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 16
+                  }
+                },
+                {
+                  "id": "node-page-129973-table-17",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<table><tr><th>Predictor</th><th>B</th><th>SE</th><th>OR</th><th>95% CI</th><th>p</th></tr><tr><td>(Intercept)</td><td>-1.97</td><td>0.59</td><td>0.14</td><td>[0.04, 0.45]</td><td>&lt; .001</td></tr><tr><td>Age</td><td>0.05</td><td>0.01</td><td>1.05</td><td>[1.03, 1.07]</td><td>&lt; .001</td></tr><tr><td>Social_Support</td><td>-0.42</td><td>0.06</td><td>0.66</td><td>[0.58, 0.74]</td><td>&lt; .001</td></tr><tr><td>Stress_Level</td><td>0.60</td><td>0.06</td><td>1.83</td><td>[1.62, 2.06]</td><td>&lt; .001</td></tr><tr><td>Note. B = unstandardized regression coefficient; SE = standard error of the coefficient; OR = odds ratio; CI = confidence interval; p = p-value.</td><td></td><td></td><td></td><td></td><td><p></p></td></tr></table>",
+                  "placement": {
+                    "region": "document",
+                    "order": 17
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-18",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Discussion: The multiple logistic regression analysis reveals that age, social support, and stress level are significant predictors of depression severity. The results suggest that older individuals and those with higher stress levels are more likely to experience severe depression, while individuals with higher levels of social support are less likely to have severe depression.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 18
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-19",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>These findings have important implications for mental health professionals. To help individuals manage depression severity, interventions should focus on reducing stress levels and promoting social support. Additionally, mental health professionals should be aware that older individuals may be at a higher risk for severe depression and may require additional support and resources.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 19
+                  }
+                },
+                {
+                  "id": "node-page-129973-p-20",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Conclusion: This study demonstrates the application of multiple logistic regression in predicting depression severity using simulated data. The results highlight the importance of considering multiple factors when developing interventions and treatment plans for individuals with depression. By understanding the key predictors of depression severity, mental health professionals can tailor their approaches to better meet the needs of their clients and improve treatment outcomes.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                }
+              ],
+              "source": {
+                "pageId": "129973",
+                "purpose": "foundation"
               }
             }
-          }
-        ]
+          ],
+          "behavior": {
+            "steps": []
+          },
+          "response": {
+            "gradingMode": "production-rules",
+            "intentByNode": []
+          },
+          "productionRules": [],
+          "source": {
+            "conversion": "OLI flat JSON export to SPARC document page",
+            "moduleId": "97342",
+            "moduleTitle": "Case C + Q → C (Logistic multiple regression)",
+            "pageIds": [
+              "129541",
+              "129924",
+              "129973"
+            ]
+          },
+          "clusterTargets": [
+            {
+              "clusterIndex": 0
+            }
+          ]
+        }
       }
     ]
   }
