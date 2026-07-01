@@ -1,256 +1,2062 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Correlation Causation",
+      "sourceTdfFile": "AutoTutor_Correlation_Causation_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Correlation_Causation_stims.json",
+      "sourceScriptId": "correlation_causation_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 5,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.correlation-causation-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.correlation-causation-001.kc.e1.stim",
+            "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+            "responseKC": "autotutor.correlation-causation-001.kc.e1.response",
+            "text": "A correlation shows that two variables are related or vary together, not that one causes the other.",
+            "textStimulus": "A correlation shows that two variables are related or vary together, not that one causes the other.",
             "display": {
-              "text": "A study finds that people who exercise more also report lower stress. What can a correlation like this tell us, and what would we need before claiming exercise causes lower stress?"
+              "type": "text",
+              "text": "A correlation shows that two variables are related or vary together, not that one causes the other."
             },
-            "autoTutor": {
-              "id": "correlation_causation_001",
-              "topic": "Correlation vs. causation",
-              "learningGoal": "Distinguish association from causal inference, including direction, confounding, and the role of research design without dismissing correlation as useless.",
-              "idealAnswer": "The correlation says exercise and stress vary together in the data, but by itself it does not show that exercise causes lower stress. The direction could be reversed, or another variable could affect both exercise and stress. Stronger causal claims need a design or evidence that addresses alternatives, such as random assignment, temporal order, control of confounders, or converging causal evidence. Correlation can still be useful for prediction and as a clue to investigate.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "association not cause",
-                  "proposition": "A correlation shows that two variables are related or vary together, not that one causes the other.",
-                  "acceptableVariants": [
-                    "It shows association, not causation.",
-                    "The variables move together in the data."
-                  ],
-                  "commonPartialAnswers": [
-                    "They are connected.",
-                    "There is a relationship."
-                  ],
-                  "hints": [
-                    "What exactly does correlation measure?",
-                    "Does a relationship alone identify a cause?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What exactly does correlation measure?",
-                      "target": "Correlation establishes association but not causation by itself"
-                    }
-                  ],
-                  "assertion": "Correlation establishes association but not causation by itself.",
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_NATURE"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "direction ambiguity",
-                  "proposition": "The causal direction may be A causing B, B causing A, both, or neither.",
-                  "acceptableVariants": [
-                    "Stress might change exercise rather than exercise changing stress.",
-                    "The arrow of causation is not known from the correlation alone."
-                  ],
-                  "commonPartialAnswers": [
-                    "It could go either way.",
-                    "Maybe stress affects exercise."
-                  ],
-                  "hints": [
-                    "Could lower stress lead people to exercise more instead?",
-                    "What causal arrow is still uncertain?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Could lower stress lead people to exercise more instead?",
-                      "target": "A correlation alone does not determine causal direction"
-                    }
-                  ],
-                  "assertion": "A correlation alone does not determine causal direction.",
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_MIT"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "third-variable confounding",
-                  "proposition": "A third variable may influence both correlated variables and produce a noncausal association.",
-                  "acceptableVariants": [
-                    "Sleep, income, health, or schedule could affect both.",
-                    "A confounder might explain the relationship."
-                  ],
-                  "commonPartialAnswers": [
-                    "Something else could be involved.",
-                    "There may be another factor."
-                  ],
-                  "hints": [
-                    "What other variable could affect both exercise and stress?",
-                    "How could a common cause create the observed correlation?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What other variable could affect both exercise and stress?",
-                      "target": "A confounding variable can create or distort a correlation"
-                    }
-                  ],
-                  "assertion": "A confounding variable can create or distort a correlation.",
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_MIT"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "causal design evidence",
-                  "proposition": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
-                  "acceptableVariants": [
-                    "An experiment would help.",
-                    "We need design features that rule out confounding and reverse causation."
-                  ],
-                  "commonPartialAnswers": [
-                    "More research is needed.",
-                    "A controlled study would be better."
-                  ],
-                  "hints": [
-                    "What kind of evidence would make the causal claim stronger?",
-                    "How could the study rule out other explanations?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What kind of evidence would make the causal claim stronger?",
-                      "target": "Causal inference requires research design or evidence that rules out plausible alternatives"
-                    }
-                  ],
-                  "assertion": "Causal inference requires research design or evidence that rules out plausible alternatives.",
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_NATURE",
-                    "CORR_FRONTIERS"
-                  ]
-                },
-                {
-                  "id": "E5",
-                  "label": "correlation still useful",
-                  "proposition": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
-                  "acceptableVariants": [
-                    "It is a clue, not proof.",
-                    "It can predict or motivate experiments."
-                  ],
-                  "commonPartialAnswers": [
-                    "It matters but is not enough.",
-                    "It can be useful."
-                  ],
-                  "hints": [
-                    "Should we ignore the correlation entirely?",
-                    "What can correlation do even without proving cause?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Should we ignore the correlation entirely?",
-                      "target": "Correlation is useful evidence, but it is not sufficient causal proof by itself"
-                    }
-                  ],
-                  "assertion": "Correlation is useful evidence, but it is not sufficient causal proof by itself.",
-                  "sourceSupport": [
-                    "CORR_FRONTIERS",
-                    "CORR_NATURE"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "causal-overclaim",
-                  "misconception": "If two variables are correlated, one must cause the other.",
-                  "detectionCues": [
-                    "says exercise causes stress reduction solely because correlated",
-                    "uses correlation as proof"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2",
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "Association alone does not rule out reverse causation or third variables.",
-                  "repairQuestion": "Name one alternative explanation for the exercise-stress correlation besides exercise causing lower stress.",
-                  "repairCriteria": "Repaired when the learner gives reverse causation or a third-variable explanation.",
-                  "acceptableRepairAnswers": [
-                    "Less stressed people may exercise more.",
-                    "Sleep or health could affect both."
-                  ],
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_FRONTIERS"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "correlation-useless overcorrection",
-                  "misconception": "Because correlation is not causation, a correlation tells us nothing useful.",
-                  "detectionCues": [
-                    "says correlation is meaningless",
-                    "dismisses all correlational evidence"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E5"
-                  ],
-                  "correction": "Correlation can be valuable for prediction and for generating hypotheses, even when it does not prove cause.",
-                  "repairQuestion": "What is one useful thing a correlation can do even if it does not prove causation?",
-                  "repairCriteria": "Repaired when the learner mentions prediction, description, screening, or hypothesis generation.",
-                  "acceptableRepairAnswers": [
-                    "It can help predict.",
-                    "It can point to something worth studying experimentally."
-                  ],
-                  "sourceSupport": [
-                    "CORR_FRONTIERS",
-                    "CORR_NATURE"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "control-equals-proof",
-                  "misconception": "Adding a few statistical controls automatically proves causation.",
-                  "detectionCues": [
-                    "claims controlled regression proves cause",
-                    "treats measured controls as eliminating all confounds"
-                  ],
-                  "contrastWithExpectations": [
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "Controls help only for variables measured well and modeled appropriately; unmeasured confounding or design problems can remain.",
-                  "repairQuestion": "Why might statistical controls improve but not automatically prove a causal claim?",
-                  "repairCriteria": "Repaired when the learner says controls may miss unmeasured or poorly measured confounders or that design still matters.",
-                  "acceptableRepairAnswers": [
-                    "There could be unmeasured confounders.",
-                    "Controls help but do not replace a good design."
-                  ],
-                  "sourceSupport": [
-                    "CORR_JMP",
-                    "CORR_NATURE"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [
-                  "E5"
-                ],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Correlation is evidence of association, not by itself proof of cause. Causal claims require ruling out plausible alternatives such as reverse causation and confounding through design, timing, controls, or converging evidence. Correlations are still useful for prediction and hypothesis generation."
+            "response": {
+              "correctResponse": "Correlation establishes association but not causation by itself."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "correlation_causation_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.correlation-causation-001.kc.e2.stim",
+            "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+            "responseKC": "autotutor.correlation-causation-001.kc.e2.response",
+            "text": "The causal direction may be A causing B, B causing A, both, or neither.",
+            "textStimulus": "The causal direction may be A causing B, B causing A, both, or neither.",
+            "display": {
+              "type": "text",
+              "text": "The causal direction may be A causing B, B causing A, both, or neither."
+            },
+            "response": {
+              "correctResponse": "A correlation alone does not determine causal direction."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "correlation_causation_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.correlation-causation-001.kc.e3.stim",
+            "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+            "responseKC": "autotutor.correlation-causation-001.kc.e3.response",
+            "text": "A third variable may influence both correlated variables and produce a noncausal association.",
+            "textStimulus": "A third variable may influence both correlated variables and produce a noncausal association.",
+            "display": {
+              "type": "text",
+              "text": "A third variable may influence both correlated variables and produce a noncausal association."
+            },
+            "response": {
+              "correctResponse": "A confounding variable can create or distort a correlation."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "correlation_causation_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.correlation-causation-001.kc.e4.stim",
+            "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+            "responseKC": "autotutor.correlation-causation-001.kc.e4.response",
+            "text": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
+            "textStimulus": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
+            "display": {
+              "type": "text",
+              "text": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs."
+            },
+            "response": {
+              "correctResponse": "Causal inference requires research design or evidence that rules out plausible alternatives."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "correlation_causation_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.correlation-causation-001.kc.e5.stim",
+            "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+            "responseKC": "autotutor.correlation-causation-001.kc.e5.response",
+            "text": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
+            "textStimulus": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
+            "display": {
+              "type": "text",
+              "text": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation."
+            },
+            "response": {
+              "correctResponse": "Correlation is useful evidence, but it is not sufficient causal proof by itself."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "correlation_causation_001",
+              "expectationId": "E5"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-correlation-causation",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-correlation-causation-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A study finds that people who exercise more also report lower stress. What can a correlation like this tell us, and what would we need before claiming exercise causes lower stress?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "A correlation shows that two variables are related or vary together, not that one causes the other.",
+              "stimulusKC": "autotutor.correlation-causation-001.kc.e1.stim",
+              "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+              "KCId": "autotutor.correlation-causation-001.kc.e1.stim",
+              "KCDefault": "autotutor.correlation-causation-001.kc.e1.stim",
+              "KCCluster": "autotutor.correlation-causation-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "The causal direction may be A causing B, B causing A, both, or neither.",
+              "stimulusKC": "autotutor.correlation-causation-001.kc.e2.stim",
+              "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+              "KCId": "autotutor.correlation-causation-001.kc.e2.stim",
+              "KCDefault": "autotutor.correlation-causation-001.kc.e2.stim",
+              "KCCluster": "autotutor.correlation-causation-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "A third variable may influence both correlated variables and produce a noncausal association.",
+              "stimulusKC": "autotutor.correlation-causation-001.kc.e3.stim",
+              "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+              "KCId": "autotutor.correlation-causation-001.kc.e3.stim",
+              "KCDefault": "autotutor.correlation-causation-001.kc.e3.stim",
+              "KCCluster": "autotutor.correlation-causation-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
+              "stimulusKC": "autotutor.correlation-causation-001.kc.e4.stim",
+              "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+              "KCId": "autotutor.correlation-causation-001.kc.e4.stim",
+              "KCDefault": "autotutor.correlation-causation-001.kc.e4.stim",
+              "KCCluster": "autotutor.correlation-causation-001.kc.e4"
+            },
+            {
+              "clusterIndex": 4,
+              "label": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
+              "stimulusKC": "autotutor.correlation-causation-001.kc.e5.stim",
+              "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+              "KCId": "autotutor.correlation-causation-001.kc.e5.stim",
+              "KCDefault": "autotutor.correlation-causation-001.kc.e5.stim",
+              "KCCluster": "autotutor.correlation-causation-001.kc.e5"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "correlation_causation_001",
+                "topic": "Correlation vs. causation",
+                "sourceLessonName": "AutoTutor Correlation Causation",
+                "sourceUnitName": "Correlation Causation AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "sourceScriptId": "correlation_causation_001",
+                "sourceId": "E1",
+                "label": "association not cause",
+                "assertion": "Correlation establishes association but not causation by itself.",
+                "proposition": "A correlation shows that two variables are related or vary together, not that one causes the other."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "hint",
+                "text": "What exactly does correlation measure?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "hint",
+                "text": "Does a relationship alone identify a cause?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "prompt",
+                "text": "What exactly does correlation measure?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about association not cause."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about association not cause."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "elaborate",
+                "text": "Correlation establishes association but not causation by itself."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "summary",
+                "text": "Correlation establishes association but not causation by itself."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports association not cause."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address association not cause."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing association not cause; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward association not cause."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on association not cause: A correlation shows that two variables are related or vary together, not that one causes the other."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "sourceScriptId": "correlation_causation_001",
+                "sourceId": "E2",
+                "label": "direction ambiguity",
+                "assertion": "A correlation alone does not determine causal direction.",
+                "proposition": "The causal direction may be A causing B, B causing A, both, or neither."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "hint",
+                "text": "Could lower stress lead people to exercise more instead?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "hint",
+                "text": "What causal arrow is still uncertain?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "prompt",
+                "text": "Could lower stress lead people to exercise more instead?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about direction ambiguity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about direction ambiguity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "elaborate",
+                "text": "A correlation alone does not determine causal direction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "summary",
+                "text": "A correlation alone does not determine causal direction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports direction ambiguity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address direction ambiguity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing direction ambiguity; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward direction ambiguity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on direction ambiguity: The causal direction may be A causing B, B causing A, both, or neither."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "sourceScriptId": "correlation_causation_001",
+                "sourceId": "E3",
+                "label": "third-variable confounding",
+                "assertion": "A confounding variable can create or distort a correlation.",
+                "proposition": "A third variable may influence both correlated variables and produce a noncausal association."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "hint",
+                "text": "What other variable could affect both exercise and stress?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "hint",
+                "text": "How could a common cause create the observed correlation?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "prompt",
+                "text": "What other variable could affect both exercise and stress?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about third-variable confounding."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about third-variable confounding."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "elaborate",
+                "text": "A confounding variable can create or distort a correlation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "summary",
+                "text": "A confounding variable can create or distort a correlation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports third-variable confounding."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address third-variable confounding."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing third-variable confounding; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward third-variable confounding."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on third-variable confounding: A third variable may influence both correlated variables and produce a noncausal association."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "sourceScriptId": "correlation_causation_001",
+                "sourceId": "E4",
+                "label": "causal design evidence",
+                "assertion": "Causal inference requires research design or evidence that rules out plausible alternatives.",
+                "proposition": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "hint",
+                "text": "What kind of evidence would make the causal claim stronger?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "hint",
+                "text": "How could the study rule out other explanations?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "prompt",
+                "text": "What kind of evidence would make the causal claim stronger?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about causal design evidence."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about causal design evidence."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "elaborate",
+                "text": "Causal inference requires research design or evidence that rules out plausible alternatives."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "summary",
+                "text": "Causal inference requires research design or evidence that rules out plausible alternatives."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports causal design evidence."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address causal design evidence."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing causal design evidence; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward causal design evidence."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on causal design evidence: Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "sourceScriptId": "correlation_causation_001",
+                "sourceId": "E5",
+                "label": "correlation still useful",
+                "assertion": "Correlation is useful evidence, but it is not sufficient causal proof by itself.",
+                "proposition": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "hint",
+                "text": "Should we ignore the correlation entirely?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "hint",
+                "text": "What can correlation do even without proving cause?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "prompt",
+                "text": "Should we ignore the correlation entirely?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "pump",
+                "text": "Say more about correlation still useful."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about correlation still useful."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "elaborate",
+                "text": "Correlation is useful evidence, but it is not sufficient causal proof by itself."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "summary",
+                "text": "Correlation is useful evidence, but it is not sufficient causal proof by itself."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "positive_feedback",
+                "text": "That supports correlation still useful."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "negative_feedback",
+                "text": "That does not yet address correlation still useful."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing correlation still useful; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward correlation still useful."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "action": "neutral_feedback",
+                "text": "Focus on correlation still useful: Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e1",
+                "description": "A correlation shows that two variables are related or vary together, not that one causes the other.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e2",
+                "description": "The causal direction may be A causing B, B causing A, both, or neither.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e3",
+                "description": "A third variable may influence both correlated variables and produce a noncausal association.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e4",
+                "description": "Causal claims need evidence that addresses alternatives, such as random assignment, temporal order, controls, or converging designs.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.correlation-causation-001.kc.e5",
+                "description": "Correlation can still support prediction, description, and hypothesis generation even when it does not prove causation.",
+                "centrality": 0,
+                "sourceId": "E5"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "causal-overclaim",
+                "description": "If two variables are correlated, one must cause the other.",
+                "repair": "Association alone does not rule out reverse causation or third variables.",
+                "repairQuestion": "Name one alternative explanation for the exercise-stress correlation besides exercise causing lower stress.",
+                "repairCriteria": "Repaired when the learner gives reverse causation or a third-variable explanation."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "correlation-useless overcorrection",
+                "description": "Because correlation is not causation, a correlation tells us nothing useful.",
+                "repair": "Correlation can be valuable for prediction and for generating hypotheses, even when it does not prove cause.",
+                "repairQuestion": "What is one useful thing a correlation can do even if it does not prove causation?",
+                "repairCriteria": "Repaired when the learner mentions prediction, description, screening, or hypothesis generation."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "control-equals-proof",
+                "description": "Adding a few statistical controls automatically proves causation.",
+                "repair": "Controls help only for variables measured well and modeled appropriately; unmeasured confounding or design problems can remain.",
+                "repairQuestion": "Why might statistical controls improve but not automatically prove a causal claim?",
+                "repairCriteria": "Repaired when the learner says controls may miss unmeasured or poorly measured confounders or that design still matters."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Correlation is evidence of association, not by itself proof of cause. Causal claims require ruling out plausible alternatives such as reverse causation and confounding through design, timing, controls, or converging evidence. Correlations are still useful for prediction and hypothesis generation."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

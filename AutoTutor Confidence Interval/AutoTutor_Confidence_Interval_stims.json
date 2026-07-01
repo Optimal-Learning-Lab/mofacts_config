@@ -1,176 +1,1738 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Confidence Interval",
+      "sourceTdfFile": "AutoTutor_Confidence_Interval_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Confidence_Interval_stims.json",
+      "sourceScriptId": "stats_confidence_interval_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 3,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e1.stim",
+            "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+            "responseKC": "autotutor.stats-confidence-interval-001.kc.e1.response",
+            "text": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
+            "textStimulus": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
             "display": {
-              "text": "A researcher reports a 95% confidence interval of [42, 50] for a population mean. What does the 95% mean?"
+              "type": "text",
+              "text": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time."
             },
-            "autoTutor": {
-              "id": "stats_confidence_interval_001",
-              "topic": "Confidence intervals",
-              "learningGoal": "Explain what a confidence interval means without incorrectly saying that there is a 95% probability the fixed population parameter is inside one already-computed interval.",
-              "idealAnswer": "The 95% is a confidence level for the method. If we repeatedly took random samples from the same population and computed intervals the same way, about 95% of those intervals would contain the true population mean. For this particular interval, the population mean is fixed, so the interval either contains it or it does not.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "repeated-sampling setup",
-                  "proposition": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
-                  "acceptableVariants": [
-                    "If we repeated the study many times and made a new interval each time.",
-                    "The 95% is about what would happen across repeated samples using the same method."
-                  ],
-                  "commonPartialAnswers": [
-                    "It means we are 95% confident.",
-                    "It means the interval is usually right."
-                  ],
-                  "hints": [
-                    "Think about repeating the whole study, not just looking at this one reported interval.",
-                    "What would change from one repetition of the study to the next?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "To interpret the 95%, imagine taking many repeated random samples and computing...",
-                      "target": "a new interval from each sample"
-                    }
-                  ],
-                  "assertion": "The 95% is interpreted across repeated random samples using the same interval-building method."
-                },
-                {
-                  "id": "E2",
-                  "label": "long-run coverage",
-                  "proposition": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
-                  "acceptableVariants": [
-                    "About 95% of those intervals would capture the true mean.",
-                    "The method produces intervals that contain the population mean about 95% of the time in the long run."
-                  ],
-                  "commonPartialAnswers": [
-                    "The interval captures 95%.",
-                    "95% of the results are in the interval."
-                  ],
-                  "hints": [
-                    "In the repeated-study picture, what proportion of the new intervals should succeed?",
-                    "What are the intervals trying to contain?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Over many repeated samples, about 95% of the computed intervals would...",
-                      "target": "contain the true population mean"
-                    }
-                  ],
-                  "assertion": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean."
-                },
-                {
-                  "id": "E3",
-                  "label": "fixed-parameter distinction",
-                  "proposition": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
-                  "acceptableVariants": [
-                    "The true mean is either between 42 and 50 or it is not.",
-                    "For this specific interval, the parameter is not random."
-                  ],
-                  "commonPartialAnswers": [
-                    "There is a 95% chance the mean is in this interval.",
-                    "The mean probably falls between 42 and 50."
-                  ],
-                  "hints": [
-                    "Once the interval has been computed, is the true population mean changing?",
-                    "For this specific interval, can the parameter be partly inside it?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "For this already-computed interval, the true mean is either inside it or...",
-                      "target": "not inside it"
-                    }
-                  ],
-                  "assertion": "For this specific computed interval, the population mean is either contained or not contained."
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "posterior-probability misconception",
-                  "misconception": "There is a 95% probability that the true mean lies inside this specific interval.",
-                  "detectionCues": [
-                    "The student says there is a 95% chance the mean is between 42 and 50.",
-                    "The student treats the fixed parameter as random after the interval is computed."
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2",
-                    "E3"
-                  ],
-                  "correction": "That sounds natural, but in the usual frequentist interpretation it is not quite right. The 95% describes the long-run reliability of the method, not the probability that this fixed interval contains the fixed mean.",
-                  "repairQuestion": "If we repeated the same sampling and interval-construction process many times, what proportion of the newly computed intervals would contain the true population mean?",
-                  "repairCriteria": "Mark this misconception repaired when the learner says, in any wording, that repeated or newly computed intervals would sometimes contain the true population mean and about 95% would contain it in the long run. If the tutor's repair question just referred to newly computed intervals, pronouns such as they, them, it, each one, or repetitions may refer to those intervals and should be interpreted in that context. Do not require the learner to restate the fixed-parameter distinction to repair this misconception; that is a separate expectation.",
-                  "acceptableRepairAnswers": [
-                    "About 95% of the new intervals would contain the true population mean.",
-                    "Sometimes the newly computed interval would contain the mean and sometimes not, and in the long run about 95% would contain it.",
-                    "The repeated intervals would contain the population mean about 95% of the time.",
-                    "They would either contain the true mean or not because the mean is fixed, and about 95% of repetitions would contain it."
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "individual-values misconception",
-                  "misconception": "The interval means 95% of individual observations fall between 42 and 50.",
-                  "detectionCues": [
-                    "The student says 95% of people, scores, or data points are in this range.",
-                    "The student confuses a confidence interval with a prediction interval or distribution range."
-                  ],
-                  "contrastWithExpectations": [
-                    "E2",
-                    "E3"
-                  ],
-                  "correction": "This interval is about uncertainty in the population mean, not the spread of individual observations.",
-                  "repairQuestion": "Is this confidence interval estimating individual observations, or is it estimating the population mean?",
-                  "repairCriteria": "Mark this misconception repaired when the learner identifies the population mean as the target of the interval, or clearly rejects individual observations/scores/data points as the target. Do not require a full long-run coverage explanation to repair this misconception.",
-                  "acceptableRepairAnswers": [
-                    "It is estimating the population mean.",
-                    "It is about the population mean, not individual scores.",
-                    "The interval is for the mean of the population, not for 95% of observations."
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "sample-statistics-inside-interval misconception",
-                  "misconception": "The interval means 95% of sample means, future sample means, or future confidence intervals will fall between 42 and 50.",
-                  "detectionCues": [
-                    "The student says 95% of sample averages would be between 42 and 50.",
-                    "The student says 95% of future intervals will be inside this interval.",
-                    "The student treats [42, 50] as a range for repeated sample statistics rather than a range for the population mean."
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2"
-                  ],
-                  "correction": "The 95% is not about future sample means or future intervals landing inside [42, 50]. It is about how often intervals built the same way contain the true population mean.",
-                  "repairQuestion": "In the repeated-sampling picture, is each new interval trying to fall inside [42, 50], or trying to contain the true population mean?",
-                  "repairCriteria": "Mark this misconception repaired when the learner says each new interval is trying to contain the true population mean, or clearly rejects the idea that new intervals or future sample means must fall inside [42, 50].",
-                  "acceptableRepairAnswers": [
-                    "Each new interval is trying to contain the true population mean.",
-                    "The new intervals do not have to fall inside [42, 50]; they are trying to capture the mean.",
-                    "It is about whether intervals contain the population mean, not whether future means land between 42 and 50."
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3"
-                ],
-                "optionalExpectations": [],
-                "ifStudentIsClose": "Ask a prompt targeting the missing phrase or distinction.",
-                "ifStudentIsWrong": "Identify the misconception, give a brief correction, and ask the repair question.",
-                "ifStudentIsStuck": "Use a hint before giving the assertion.",
-                "completionRule": "Complete when the learner has expressed the repeated-sampling setup, the long-run coverage idea, and the fixed-parameter distinction."
-              },
-              "summary": "A 95% confidence interval means that if we repeatedly sampled from the same population and built intervals the same way, about 95% of those intervals would contain the true population mean. For this particular interval, the true mean is fixed, so it is either inside the interval or it is not."
+            "response": {
+              "correctResponse": "The 95% is interpreted across repeated random samples using the same interval-building method."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stats_confidence_interval_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e2.stim",
+            "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+            "responseKC": "autotutor.stats-confidence-interval-001.kc.e2.response",
+            "text": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+            "textStimulus": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+            "display": {
+              "type": "text",
+              "text": "About 95% of the intervals produced by that repeated procedure would contain the true population mean."
+            },
+            "response": {
+              "correctResponse": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stats_confidence_interval_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e3.stim",
+            "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+            "responseKC": "autotutor.stats-confidence-interval-001.kc.e3.response",
+            "text": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+            "textStimulus": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+            "display": {
+              "type": "text",
+              "text": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not."
+            },
+            "response": {
+              "correctResponse": "For this specific computed interval, the population mean is either contained or not contained."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stats_confidence_interval_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-confidence-interval",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-stats-confidence-interval-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A researcher reports a 95% confidence interval of [42, 50] for a population mean. What does the 95% mean?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
+              "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e1.stim",
+              "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+              "KCId": "autotutor.stats-confidence-interval-001.kc.e1.stim",
+              "KCDefault": "autotutor.stats-confidence-interval-001.kc.e1.stim",
+              "KCCluster": "autotutor.stats-confidence-interval-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+              "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e2.stim",
+              "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+              "KCId": "autotutor.stats-confidence-interval-001.kc.e2.stim",
+              "KCDefault": "autotutor.stats-confidence-interval-001.kc.e2.stim",
+              "KCCluster": "autotutor.stats-confidence-interval-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+              "stimulusKC": "autotutor.stats-confidence-interval-001.kc.e3.stim",
+              "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+              "KCId": "autotutor.stats-confidence-interval-001.kc.e3.stim",
+              "KCDefault": "autotutor.stats-confidence-interval-001.kc.e3.stim",
+              "KCCluster": "autotutor.stats-confidence-interval-001.kc.e3"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "stats_confidence_interval_001",
+                "topic": "Confidence intervals",
+                "sourceLessonName": "AutoTutor Confidence Interval",
+                "sourceUnitName": "Confidence Interval AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 3,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "sourceScriptId": "stats_confidence_interval_001",
+                "sourceId": "E1",
+                "label": "repeated-sampling setup",
+                "assertion": "The 95% is interpreted across repeated random samples using the same interval-building method.",
+                "proposition": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "hint",
+                "text": "Think about repeating the whole study, not just looking at this one reported interval."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "hint",
+                "text": "What would change from one repetition of the study to the next?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "prompt",
+                "text": "To interpret the 95%, imagine taking many repeated random samples and computing..."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about repeated-sampling setup."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about repeated-sampling setup."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "elaborate",
+                "text": "The 95% is interpreted across repeated random samples using the same interval-building method."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "summary",
+                "text": "The 95% is interpreted across repeated random samples using the same interval-building method."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports repeated-sampling setup."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address repeated-sampling setup."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing repeated-sampling setup; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward repeated-sampling setup."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on repeated-sampling setup: Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "sourceScriptId": "stats_confidence_interval_001",
+                "sourceId": "E2",
+                "label": "long-run coverage",
+                "assertion": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean.",
+                "proposition": "About 95% of the intervals produced by that repeated procedure would contain the true population mean."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "hint",
+                "text": "In the repeated-study picture, what proportion of the new intervals should succeed?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "hint",
+                "text": "What are the intervals trying to contain?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "prompt",
+                "text": "Over many repeated samples, about 95% of the computed intervals would..."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about long-run coverage."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about long-run coverage."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "elaborate",
+                "text": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "summary",
+                "text": "Across repeated samples, about 95% of the intervals made this way would contain the true population mean."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports long-run coverage."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address long-run coverage."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing long-run coverage; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward long-run coverage."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on long-run coverage: About 95% of the intervals produced by that repeated procedure would contain the true population mean."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "sourceScriptId": "stats_confidence_interval_001",
+                "sourceId": "E3",
+                "label": "fixed-parameter distinction",
+                "assertion": "For this specific computed interval, the population mean is either contained or not contained.",
+                "proposition": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "hint",
+                "text": "Once the interval has been computed, is the true population mean changing?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "hint",
+                "text": "For this specific interval, can the parameter be partly inside it?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "prompt",
+                "text": "For this already-computed interval, the true mean is either inside it or..."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about fixed-parameter distinction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about fixed-parameter distinction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "elaborate",
+                "text": "For this specific computed interval, the population mean is either contained or not contained."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "summary",
+                "text": "For this specific computed interval, the population mean is either contained or not contained."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports fixed-parameter distinction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address fixed-parameter distinction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing fixed-parameter distinction; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward fixed-parameter distinction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on fixed-parameter distinction: For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
+                "description": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
+                "description": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
+                "description": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "posterior-probability misconception",
+                "description": "There is a 95% probability that the true mean lies inside this specific interval.",
+                "repair": "That sounds natural, but in the usual frequentist interpretation it is not quite right. The 95% describes the long-run reliability of the method, not the probability that this fixed interval contains the fixed mean.",
+                "repairQuestion": "If we repeated the same sampling and interval-construction process many times, what proportion of the newly computed intervals would contain the true population mean?",
+                "repairCriteria": "Mark this misconception repaired when the learner says, in any wording, that repeated or newly computed intervals would sometimes contain the true population mean and about 95% would contain it in the long run. If the tutor's repair question just referred to newly computed intervals, pronouns such as they, them, it, each one, or repetitions may refer to those intervals and should be interpreted in that context. Do not require the learner to restate the fixed-parameter distinction to repair this misconception; that is a separate expectation."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "individual-values misconception",
+                "description": "The interval means 95% of individual observations fall between 42 and 50.",
+                "repair": "This interval is about uncertainty in the population mean, not the spread of individual observations.",
+                "repairQuestion": "Is this confidence interval estimating individual observations, or is it estimating the population mean?",
+                "repairCriteria": "Mark this misconception repaired when the learner identifies the population mean as the target of the interval, or clearly rejects individual observations/scores/data points as the target. Do not require a full long-run coverage explanation to repair this misconception."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "sample-statistics-inside-interval misconception",
+                "description": "The interval means 95% of sample means, future sample means, or future confidence intervals will fall between 42 and 50.",
+                "repair": "The 95% is not about future sample means or future intervals landing inside [42, 50]. It is about how often intervals built the same way contain the true population mean.",
+                "repairQuestion": "In the repeated-sampling picture, is each new interval trying to fall inside [42, 50], or trying to contain the true population mean?",
+                "repairCriteria": "Mark this misconception repaired when the learner says each new interval is trying to contain the true population mean, or clearly rejects the idea that new intervals or future sample means must fall inside [42, 50]."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "A 95% confidence interval means that if we repeatedly sampled from the same population and built intervals the same way, about 95% of those intervals would contain the true population mean. For this particular interval, the true mean is fixed, so it is either inside the interval or it is not."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

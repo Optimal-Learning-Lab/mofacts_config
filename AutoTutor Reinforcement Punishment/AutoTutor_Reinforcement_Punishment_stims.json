@@ -1,223 +1,1900 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Reinforcement Punishment",
+      "sourceTdfFile": "AutoTutor_Reinforcement_Punishment_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Reinforcement_Punishment_stims.json",
+      "sourceScriptId": "reinforcement_punishment_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 4,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e1.stim",
+            "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+            "responseKC": "autotutor.reinforcement-punishment-001.kc.e1.response",
+            "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
+            "textStimulus": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
             "display": {
-              "text": "In operant conditioning, how do you tell whether a consequence is reinforcement or punishment, and what do positive and negative mean in those terms?"
+              "type": "text",
+              "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
             },
-            "autoTutor": {
-              "id": "reinforcement_punishment_001",
-              "topic": "Reinforcement vs. punishment",
-              "learningGoal": "Classify operant consequences by behavioral effect and stimulus change, especially distinguishing negative reinforcement from punishment.",
-              "idealAnswer": "First ask what happens to the target behavior: reinforcement increases it, while punishment decreases it. Then ask whether a stimulus is added or removed: positive means added, negative means removed. Positive reinforcement adds something to increase behavior, negative reinforcement removes something to increase behavior, positive punishment adds something to decrease behavior, and negative punishment removes something to decrease behavior. Negative reinforcement is not punishment because its effect is to increase behavior.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "effect dimension",
-                  "proposition": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-                  "acceptableVariants": [
-                    "Reinforcement makes behavior more likely, punishment less likely.",
-                    "Look at whether the behavior goes up or down."
-                  ],
-                  "commonPartialAnswers": [
-                    "Reinforcement is reward; punishment is penalty.",
-                    "It changes behavior."
-                  ],
-                  "hints": [
-                    "What happens to the behavior after the consequence?",
-                    "Which term means the behavior becomes more likely?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What happens to the behavior after the consequence?",
-                      "target": "Reinforcement increases behavior; punishment decreases behavior"
-                    }
-                  ],
-                  "assertion": "Reinforcement increases behavior; punishment decreases behavior.",
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_SIMPLY"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "positive-negative dimension",
-                  "proposition": "Positive means a stimulus is added; negative means a stimulus is removed.",
-                  "acceptableVariants": [
-                    "Positive is adding, negative is taking away.",
-                    "They do not mean good and bad here."
-                  ],
-                  "commonPartialAnswers": [
-                    "Positive is good; negative is bad.",
-                    "Something is added or removed."
-                  ],
-                  "hints": [
-                    "In this technical vocabulary, what does positive mean?",
-                    "Does negative mean unpleasant, or removed?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "In this technical vocabulary, what does positive mean?",
-                      "target": "In operant conditioning, positive means added and negative means removed"
-                    }
-                  ],
-                  "assertion": "In operant conditioning, positive means added and negative means removed.",
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_IHS"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "negative reinforcement",
-                  "proposition": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-                  "acceptableVariants": [
-                    "Buckling a seatbelt stops the beep and makes buckling more likely.",
-                    "Escape or avoidance can reinforce behavior."
-                  ],
-                  "commonPartialAnswers": [
-                    "It is removing something bad.",
-                    "It makes you do it more."
-                  ],
-                  "hints": [
-                    "If the seatbelt beep stops when you buckle up, what behavior increases?",
-                    "Why is this reinforcement rather than punishment?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "If the seatbelt beep stops when you buckle up, what behavior increases?",
-                      "target": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus"
-                    }
-                  ],
-                  "assertion": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus.",
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_IHS"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "four-cell classification",
-                  "proposition": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-                  "acceptableVariants": [
-                    "Add to increase, remove to increase, add to decrease, remove to decrease.",
-                    "Use a two-question grid: added/removed and behavior up/down."
-                  ],
-                  "commonPartialAnswers": [
-                    "There are four types.",
-                    "Positive and negative can apply to both."
-                  ],
-                  "hints": [
-                    "How would you classify adding a reprimand to reduce texting?",
-                    "How would you classify removing a toy to reduce misbehavior?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "How would you classify adding a reprimand to reduce texting?",
-                      "target": "Operant consequences are classified by crossing added/removed with increase/decrease"
-                    }
-                  ],
-                  "assertion": "Operant consequences are classified by crossing added/removed with increase/decrease.",
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_SIMPLY"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "negative-reinforcement-punishment",
-                  "misconception": "Negative reinforcement means punishment or a bad consequence.",
-                  "detectionCues": [
-                    "equates negative reinforcement with punishment",
-                    "says negative reinforcement decreases behavior"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2",
-                    "E3"
-                  ],
-                  "correction": "Negative reinforcement is still reinforcement; it increases behavior by removing something.",
-                  "repairQuestion": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?",
-                  "repairCriteria": "Repaired when the learner says reinforcement because the behavior increases and the aversive stimulus is removed.",
-                  "acceptableRepairAnswers": [
-                    "It is negative reinforcement because buckling increases and the beep is removed.",
-                    "Reinforcement, since the behavior goes up."
-                  ],
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_IHS"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "positive-good-negative-bad",
-                  "misconception": "Positive means pleasant/good and negative means unpleasant/bad.",
-                  "detectionCues": [
-                    "uses good/bad instead of added/removed",
-                    "calls scolding negative because it feels bad"
-                  ],
-                  "contrastWithExpectations": [
-                    "E2",
-                    "E4"
-                  ],
-                  "correction": "In this vocabulary, positive and negative refer to adding or removing a stimulus, not moral value or pleasantness.",
-                  "repairQuestion": "What does positive mean in positive punishment?",
-                  "repairCriteria": "Repaired when the learner says a stimulus is added, even if it is unpleasant.",
-                  "acceptableRepairAnswers": [
-                    "It means something is added.",
-                    "Positive punishment adds an aversive stimulus."
-                  ],
-                  "sourceSupport": [
-                    "REINF_OPENSTAX",
-                    "REINF_SIMPLY"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "intention-over-effect",
-                  "misconception": "A consequence is reinforcement if the teacher intended it as a reward, regardless of what happens to behavior.",
-                  "detectionCues": [
-                    "classifies by adult intention",
-                    "ignores whether behavior increased or decreased"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E4"
-                  ],
-                  "correction": "Operant labels depend on the behavior's observed future change, not only the giver's intention.",
-                  "repairQuestion": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?",
-                  "repairCriteria": "Repaired when the learner says classification depends on whether the behavior actually increases or decreases.",
-                  "acceptableRepairAnswers": [
-                    "No, you have to see the behavior increase.",
-                    "The effect on future behavior matters."
-                  ],
-                  "sourceSupport": [
-                    "REINF_OPENSTAX"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Reinforcement and punishment are defined by behavioral effect: increase versus decrease. Positive and negative mean adding versus removing a stimulus. The common trap is treating negative reinforcement as punishment; it is reinforcement because it increases the behavior that removes or avoids an aversive condition."
+            "response": {
+              "correctResponse": "Reinforcement increases behavior; punishment decreases behavior."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "reinforcement_punishment_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e2.stim",
+            "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+            "responseKC": "autotutor.reinforcement-punishment-001.kc.e2.response",
+            "text": "Positive means a stimulus is added; negative means a stimulus is removed.",
+            "textStimulus": "Positive means a stimulus is added; negative means a stimulus is removed.",
+            "display": {
+              "type": "text",
+              "text": "Positive means a stimulus is added; negative means a stimulus is removed."
+            },
+            "response": {
+              "correctResponse": "In operant conditioning, positive means added and negative means removed."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "reinforcement_punishment_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e3.stim",
+            "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+            "responseKC": "autotutor.reinforcement-punishment-001.kc.e3.response",
+            "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
+            "textStimulus": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
+            "display": {
+              "type": "text",
+              "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
+            },
+            "response": {
+              "correctResponse": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "reinforcement_punishment_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e4.stim",
+            "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+            "responseKC": "autotutor.reinforcement-punishment-001.kc.e4.response",
+            "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
+            "textStimulus": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
+            "display": {
+              "type": "text",
+              "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
+            },
+            "response": {
+              "correctResponse": "Operant consequences are classified by crossing added/removed with increase/decrease."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "reinforcement_punishment_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-reinforcement-punishment",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-reinforcement-punishment-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "In operant conditioning, how do you tell whether a consequence is reinforcement or punishment, and what do positive and negative mean in those terms?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
+              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e1.stim",
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+              "KCId": "autotutor.reinforcement-punishment-001.kc.e1.stim",
+              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e1.stim",
+              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "Positive means a stimulus is added; negative means a stimulus is removed.",
+              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e2.stim",
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+              "KCId": "autotutor.reinforcement-punishment-001.kc.e2.stim",
+              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e2.stim",
+              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
+              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e3.stim",
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+              "KCId": "autotutor.reinforcement-punishment-001.kc.e3.stim",
+              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e3.stim",
+              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
+              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e4.stim",
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+              "KCId": "autotutor.reinforcement-punishment-001.kc.e4.stim",
+              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e4.stim",
+              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e4"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "reinforcement_punishment_001",
+                "topic": "Reinforcement vs. punishment",
+                "sourceLessonName": "AutoTutor Reinforcement Punishment",
+                "sourceUnitName": "Reinforcement Punishment AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "sourceScriptId": "reinforcement_punishment_001",
+                "sourceId": "E1",
+                "label": "effect dimension",
+                "assertion": "Reinforcement increases behavior; punishment decreases behavior.",
+                "proposition": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "hint",
+                "text": "What happens to the behavior after the consequence?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "hint",
+                "text": "Which term means the behavior becomes more likely?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "prompt",
+                "text": "What happens to the behavior after the consequence?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about effect dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about effect dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "elaborate",
+                "text": "Reinforcement increases behavior; punishment decreases behavior."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "summary",
+                "text": "Reinforcement increases behavior; punishment decreases behavior."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports effect dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address effect dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing effect dimension; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward effect dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on effect dimension: Reinforcement increases the future likelihood of a behavior; punishment decreases it."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "sourceScriptId": "reinforcement_punishment_001",
+                "sourceId": "E2",
+                "label": "positive-negative dimension",
+                "assertion": "In operant conditioning, positive means added and negative means removed.",
+                "proposition": "Positive means a stimulus is added; negative means a stimulus is removed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "hint",
+                "text": "In this technical vocabulary, what does positive mean?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "hint",
+                "text": "Does negative mean unpleasant, or removed?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "prompt",
+                "text": "In this technical vocabulary, what does positive mean?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about positive-negative dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about positive-negative dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "elaborate",
+                "text": "In operant conditioning, positive means added and negative means removed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "summary",
+                "text": "In operant conditioning, positive means added and negative means removed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports positive-negative dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address positive-negative dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing positive-negative dimension; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward positive-negative dimension."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on positive-negative dimension: Positive means a stimulus is added; negative means a stimulus is removed."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "sourceScriptId": "reinforcement_punishment_001",
+                "sourceId": "E3",
+                "label": "negative reinforcement",
+                "assertion": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus.",
+                "proposition": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "hint",
+                "text": "If the seatbelt beep stops when you buckle up, what behavior increases?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "hint",
+                "text": "Why is this reinforcement rather than punishment?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "prompt",
+                "text": "If the seatbelt beep stops when you buckle up, what behavior increases?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about negative reinforcement."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about negative reinforcement."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "elaborate",
+                "text": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "summary",
+                "text": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports negative reinforcement."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address negative reinforcement."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing negative reinforcement; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward negative reinforcement."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on negative reinforcement: Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "sourceScriptId": "reinforcement_punishment_001",
+                "sourceId": "E4",
+                "label": "four-cell classification",
+                "assertion": "Operant consequences are classified by crossing added/removed with increase/decrease.",
+                "proposition": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "hint",
+                "text": "How would you classify adding a reprimand to reduce texting?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "hint",
+                "text": "How would you classify removing a toy to reduce misbehavior?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "prompt",
+                "text": "How would you classify adding a reprimand to reduce texting?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about four-cell classification."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about four-cell classification."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "elaborate",
+                "text": "Operant consequences are classified by crossing added/removed with increase/decrease."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "summary",
+                "text": "Operant consequences are classified by crossing added/removed with increase/decrease."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports four-cell classification."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address four-cell classification."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing four-cell classification; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward four-cell classification."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on four-cell classification: The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "description": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "description": "Positive means a stimulus is added; negative means a stimulus is removed.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "description": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "description": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "negative-reinforcement-punishment",
+                "description": "Negative reinforcement means punishment or a bad consequence.",
+                "repair": "Negative reinforcement is still reinforcement; it increases behavior by removing something.",
+                "repairQuestion": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?",
+                "repairCriteria": "Repaired when the learner says reinforcement because the behavior increases and the aversive stimulus is removed."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "positive-good-negative-bad",
+                "description": "Positive means pleasant/good and negative means unpleasant/bad.",
+                "repair": "In this vocabulary, positive and negative refer to adding or removing a stimulus, not moral value or pleasantness.",
+                "repairQuestion": "What does positive mean in positive punishment?",
+                "repairCriteria": "Repaired when the learner says a stimulus is added, even if it is unpleasant."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "intention-over-effect",
+                "description": "A consequence is reinforcement if the teacher intended it as a reward, regardless of what happens to behavior.",
+                "repair": "Operant labels depend on the behavior's observed future change, not only the giver's intention.",
+                "repairQuestion": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?",
+                "repairCriteria": "Repaired when the learner says classification depends on whether the behavior actually increases or decreases."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Reinforcement and punishment are defined by behavioral effect: increase versus decrease. Positive and negative mean adding versus removing a stimulus. The common trap is treating negative reinforcement as punishment; it is reinforcement because it increases the behavior that removes or avoids an aversive condition."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

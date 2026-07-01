@@ -686,6 +686,180 @@
               }
             }
           ],
+          "derivedFacts": [
+            {
+              "id": "fractions.valid-converted-numerator.lcd",
+              "when": [
+                {
+                  "factType": "fraction-source",
+                  "slots": {
+                    "fraction": {
+                      "type": "bind",
+                      "variable": "fraction"
+                    },
+                    "numerator": {
+                      "type": "bind",
+                      "variable": "n"
+                    },
+                    "denominator": {
+                      "type": "bind",
+                      "variable": "d"
+                    }
+                  }
+                },
+                {
+                  "factType": "problem",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "fraction-addition"
+                    },
+                    "firstDenominator": {
+                      "type": "bind",
+                      "variable": "d1"
+                    },
+                    "secondDenominator": {
+                      "type": "bind",
+                      "variable": "d2"
+                    }
+                  }
+                }
+              ],
+              "fact": {
+                "factType": "valid-converted-numerator",
+                "slots": {
+                  "path": {
+                    "type": "literal",
+                    "value": "lcd"
+                  },
+                  "fraction": {
+                    "type": "variable",
+                    "name": "fraction"
+                  },
+                  "value": {
+                    "type": "function",
+                    "name": "multiply",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "n"
+                      },
+                      {
+                        "type": "function",
+                        "name": "divide",
+                        "args": [
+                          {
+                            "type": "function",
+                            "name": "lcm",
+                            "args": [
+                              {
+                                "type": "variable",
+                                "name": "d1"
+                              },
+                              {
+                                "type": "variable",
+                                "name": "d2"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "variable",
+                            "name": "d"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "id": "fractions.valid-converted-numerator.product",
+              "when": [
+                {
+                  "factType": "fraction-source",
+                  "slots": {
+                    "fraction": {
+                      "type": "bind",
+                      "variable": "fraction"
+                    },
+                    "numerator": {
+                      "type": "bind",
+                      "variable": "n"
+                    },
+                    "denominator": {
+                      "type": "bind",
+                      "variable": "d"
+                    }
+                  }
+                },
+                {
+                  "factType": "problem",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "fraction-addition"
+                    },
+                    "firstDenominator": {
+                      "type": "bind",
+                      "variable": "d1"
+                    },
+                    "secondDenominator": {
+                      "type": "bind",
+                      "variable": "d2"
+                    }
+                  }
+                }
+              ],
+              "fact": {
+                "factType": "valid-converted-numerator",
+                "slots": {
+                  "path": {
+                    "type": "literal",
+                    "value": "product"
+                  },
+                  "fraction": {
+                    "type": "variable",
+                    "name": "fraction"
+                  },
+                  "value": {
+                    "type": "function",
+                    "name": "multiply",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "n"
+                      },
+                      {
+                        "type": "function",
+                        "name": "divide",
+                        "args": [
+                          {
+                            "type": "function",
+                            "name": "multiply",
+                            "args": [
+                              {
+                                "type": "variable",
+                                "name": "d1"
+                              },
+                              {
+                                "type": "variable",
+                                "name": "d2"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "variable",
+                            "name": "d"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
           "behavior": {
             "schema": "sparc-behavior/1.0",
             "source": {
@@ -8943,10 +9117,163 @@
                 }
               ]
             },
-{
+            {
+              "id": "fractions.buggy-convert-numerator.not-valid-for-any-supported-denominator",
+              "module": "fraction-addition",
+              "salience": 25,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "documentId": {
+                      "type": "bind",
+                      "variable": "documentId"
+                    },
+                    "selection": {
+                      "type": "bind",
+                      "variable": "selection"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextArea"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "convertedNumerator"
+                    }
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "selection": {
+                      "type": "bound",
+                      "variable": "selection"
+                    },
+                    "node": {
+                      "type": "bind",
+                      "variable": "numNode"
+                    },
+                    "role": {
+                      "type": "literal",
+                      "value": "converted-numerator"
+                    },
+                    "fraction": {
+                      "type": "bind",
+                      "variable": "fraction"
+                    }
+                  }
+                },
+                {
+                  "factType": "valid-converted-numerator",
+                  "slots": {
+                    "path": {
+                      "type": "literal",
+                      "value": "lcd"
+                    },
+                    "fraction": {
+                      "type": "bound",
+                      "variable": "fraction"
+                    },
+                    "value": {
+                      "type": "bind",
+                      "variable": "lcdNumerator"
+                    }
+                  }
+                },
+                {
+                  "factType": "valid-converted-numerator",
+                  "slots": {
+                    "path": {
+                      "type": "literal",
+                      "value": "product"
+                    },
+                    "fraction": {
+                      "type": "bound",
+                      "variable": "fraction"
+                    },
+                    "value": {
+                      "type": "bind",
+                      "variable": "productNumerator"
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "function",
+                    "name": "add",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "convertedNumerator"
+                      },
+                      {
+                        "type": "literal",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "variable",
+                    "name": "lcdNumerator"
+                  }
+                },
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "function",
+                    "name": "add",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "convertedNumerator"
+                      },
+                      {
+                        "type": "literal",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "variable",
+                    "name": "productNumerator"
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "buggy"
+                },
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "documentId": {
+                        "type": "variable",
+                        "name": "documentId"
+                      },
+                      "nodeId": {
+                        "type": "variable",
+                        "name": "numNode"
+                      }
+                    },
+                    "key": "correctness",
+                    "value": {
+                      "type": "literal",
+                      "value": "buggy"
+                    }
+                  }
+                }
+              ]
+            },
+            {
               "id": "fractions.buggy-convert-pair.on-numerator-change",
               "module": "fraction-addition",
-              "salience": 45,
+              "salience": 25,
               "when": [
                 {
                   "factType": "interface-event",
@@ -9151,7 +9478,7 @@
             {
               "id": "fractions.buggy-convert-pair.on-denominator-change",
               "module": "fraction-addition",
-              "salience": 45,
+              "salience": 25,
               "when": [
                 {
                   "factType": "interface-event",
@@ -9357,7 +9684,6 @@
               "id": "fractions.convert-numerator",
               "module": "fraction-addition",
               "salience": 10,
-            
               "when": [
                 {
                   "factType": "interface-event",
@@ -9710,6 +10036,208 @@
                     "value": {
                       "type": "literal",
                       "value": "unknown"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fractions.buggy-convert-denominators.mismatch",
+              "module": "fraction-addition",
+              "salience": 25,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "documentId": {
+                      "type": "bind",
+                      "variable": "documentId"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextArea"
+                    }
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "fraction": {
+                      "type": "literal",
+                      "value": "first"
+                    },
+                    "role": {
+                      "type": "literal",
+                      "value": "converted-denominator"
+                    },
+                    "node": {
+                      "type": "bind",
+                      "variable": "firstDenNode"
+                    }
+                  }
+                },
+                {
+                  "factType": "node-role",
+                  "slots": {
+                    "fraction": {
+                      "type": "literal",
+                      "value": "second"
+                    },
+                    "role": {
+                      "type": "literal",
+                      "value": "converted-denominator"
+                    },
+                    "node": {
+                      "type": "bind",
+                      "variable": "secondDenNode"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "documentId": {
+                      "type": "bound",
+                      "variable": "documentId"
+                    },
+                    "node": {
+                      "type": "bound",
+                      "variable": "firstDenNode"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
+                      "type": "bind",
+                      "variable": "firstDenominator"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "documentId": {
+                      "type": "bound",
+                      "variable": "documentId"
+                    },
+                    "node": {
+                      "type": "bound",
+                      "variable": "secondDenNode"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
+                      "type": "bind",
+                      "variable": "secondDenominator"
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "variable",
+                    "name": "firstDenominator"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": ""
+                  }
+                },
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "variable",
+                    "name": "secondDenominator"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": ""
+                  }
+                },
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "function",
+                    "name": "add",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "firstDenominator"
+                      },
+                      {
+                        "type": "literal",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "function",
+                    "name": "add",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "secondDenominator"
+                      },
+                      {
+                        "type": "literal",
+                        "value": 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "buggy"
+                },
+                {
+                  "type": "message",
+                  "messageType": "buggy",
+                  "message": "Denominators must match."
+                },
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "documentId": {
+                        "type": "variable",
+                        "name": "documentId"
+                      },
+                      "nodeId": {
+                        "type": "variable",
+                        "name": "firstDenNode"
+                      }
+                    },
+                    "key": "correctness",
+                    "value": {
+                      "type": "literal",
+                      "value": "buggy"
+                    }
+                  }
+                },
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "documentId": {
+                        "type": "variable",
+                        "name": "documentId"
+                      },
+                      "nodeId": {
+                        "type": "variable",
+                        "name": "secondDenNode"
+                      }
+                    },
+                    "key": "correctness",
+                    "value": {
+                      "type": "literal",
+                      "value": "buggy"
                     }
                   }
                 }
@@ -10826,4 +11354,3 @@
     ]
   }
 }
-

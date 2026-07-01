@@ -1,222 +1,1900 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Stock Shorting",
+      "sourceTdfFile": "AutoTutor_Stock_Shorting_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Stock_Shorting_stims.json",
+      "sourceScriptId": "stock_shorting_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 4,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.stock-shorting-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.stock-shorting-001.kc.e1.stim",
+            "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+            "responseKC": "autotutor.stock-shorting-001.kc.e1.response",
+            "text": "A short seller sells shares they have borrowed rather than shares they already own.",
+            "textStimulus": "A short seller sells shares they have borrowed rather than shares they already own.",
             "display": {
-              "text": "Imagine someone says, 'I shorted 100 shares because I think the price will fall.' What is the basic short-selling transaction, and how can it make or lose money?"
+              "type": "text",
+              "text": "A short seller sells shares they have borrowed rather than shares they already own."
             },
-            "autoTutor": {
-              "id": "stock_shorting_001",
-              "topic": "Stock shorting",
-              "learningGoal": "Explain short selling as borrowing and selling shares, then later buying shares to return them, with profit from price declines and potentially large losses from price increases.",
-              "idealAnswer": "In a short sale, the trader borrows shares, sells them now, and later must buy shares back to return to the lender. The trader profits if the buyback price is lower than the sale price, before costs and margin requirements. The trader loses if the price rises, because buying back the shares costs more. The maximum gain is bounded because a stock cannot fall below zero, while losses can be very large because the price can keep rising.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "borrow-and-sell transaction",
-                  "proposition": "A short seller sells shares they have borrowed rather than shares they already own.",
-                  "acceptableVariants": [
-                    "They borrow stock and sell it in the market.",
-                    "The seller does not start by owning the shares."
-                  ],
-                  "commonPartialAnswers": [
-                    "They sell a stock first.",
-                    "They bet against a stock."
-                  ],
-                  "hints": [
-                    "Where do the shares come from before they are sold?",
-                    "Does the short seller own the shares outright at the start?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Where do the shares come from before they are sold?",
-                      "target": "A standard short sale begins by borrowing shares and selling them"
-                    }
-                  ],
-                  "assertion": "A standard short sale begins by borrowing shares and selling them.",
-                  "sourceSupport": [
-                    "SHORT_SEC_REGSHO",
-                    "SHORT_CRS"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "must buy to return",
-                  "proposition": "The short seller later must buy equivalent shares to return to the lender.",
-                  "acceptableVariants": [
-                    "They cover the short by buying shares back.",
-                    "They have an obligation to replace the borrowed stock."
-                  ],
-                  "commonPartialAnswers": [
-                    "They buy it later.",
-                    "They close the trade."
-                  ],
-                  "hints": [
-                    "What has to happen to the borrowed shares?",
-                    "How does the trader close the short position?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What has to happen to the borrowed shares?",
-                      "target": "Closing a short position requires buying shares to return the borrowed shares"
-                    }
-                  ],
-                  "assertion": "Closing a short position requires buying shares to return the borrowed shares.",
-                  "sourceSupport": [
-                    "SHORT_SEC_REGSHO",
-                    "SHORT_SCHWAB"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "profit from decline",
-                  "proposition": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
-                  "acceptableVariants": [
-                    "Sell high, buy back lower.",
-                    "If the stock falls, the short seller can cover for less."
-                  ],
-                  "commonPartialAnswers": [
-                    "They make money if it falls.",
-                    "They are betting it goes down."
-                  ],
-                  "hints": [
-                    "Which price needs to be lower: the sale price or the buyback price?",
-                    "Why does a price decline help the short seller?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Which price needs to be lower: the sale price or the buyback price?",
-                      "target": "A short seller profits when the stock can be bought back for less than it was sold for"
-                    }
-                  ],
-                  "assertion": "A short seller profits when the stock can be bought back for less than it was sold for.",
-                  "sourceSupport": [
-                    "SHORT_SCHWAB",
-                    "SHORT_BANKRATE"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "asymmetric risk",
-                  "proposition": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
-                  "acceptableVariants": [
-                    "The most you can gain is roughly the sale proceeds, but losses are not capped the same way.",
-                    "A short squeeze or price rise can force costly covering."
-                  ],
-                  "commonPartialAnswers": [
-                    "Shorting is risky.",
-                    "You can lose a lot."
-                  ],
-                  "hints": [
-                    "How low can a stock price go, and how high can it rise?",
-                    "What happens if the stock rises after the short sale?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "How low can a stock price go, and how high can it rise?",
-                      "target": "Short selling has bounded upside and potentially very large downside"
-                    }
-                  ],
-                  "assertion": "Short selling has bounded upside and potentially very large downside.",
-                  "sourceSupport": [
-                    "SHORT_SCHWAB",
-                    "SHORT_BANKRATE"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "ordinary-sale misconception",
-                  "misconception": "Short selling means selling shares you already own because you expect a decline.",
-                  "detectionCues": [
-                    "describes it as a normal sale of owned stock",
-                    "omits borrowing and returning"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2"
-                  ],
-                  "correction": "Selling owned shares exits a long position; short selling creates an obligation because borrowed shares must be returned.",
-                  "repairQuestion": "What makes a short sale different from simply selling stock you already own?",
-                  "repairCriteria": "Repaired when the learner mentions borrowed shares or the later duty to return equivalent shares.",
-                  "acceptableRepairAnswers": [
-                    "You borrow the shares first.",
-                    "You have to buy shares later and return them."
-                  ],
-                  "sourceSupport": [
-                    "SHORT_SEC_REGSHO",
-                    "SHORT_CRS"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "risk-capped misconception",
-                  "misconception": "Short selling can only lose the amount originally received from selling the shares.",
-                  "detectionCues": [
-                    "says maximum loss is sale proceeds",
-                    "claims risk is limited because the trader did not buy shares"
-                  ],
-                  "contrastWithExpectations": [
-                    "E4"
-                  ],
-                  "correction": "The buyback price can exceed the sale price by a lot, so losses can exceed the original proceeds.",
-                  "repairQuestion": "If shares are sold short at $80 and later cost $200 to buy back, what happens?",
-                  "repairCriteria": "Repaired when the learner says the short seller loses money because covering costs more than the sale proceeds.",
-                  "acceptableRepairAnswers": [
-                    "They lose $120 per share before costs.",
-                    "They must buy back at a higher price, so the loss can be large."
-                  ],
-                  "sourceSupport": [
-                    "SHORT_SCHWAB",
-                    "SHORT_BANKRATE"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "illegal-manipulation misconception",
-                  "misconception": "All short selling is illegal market manipulation.",
-                  "detectionCues": [
-                    "calls any short sale illegal",
-                    "equates shorting with spreading false rumors"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E3"
-                  ],
-                  "correction": "Ordinary short selling is regulated and can be used for speculation, hedging, or liquidity. Manipulative conduct such as spreading false rumors is a separate problem.",
-                  "repairQuestion": "How is a regulated short sale different from manipulative short-and-distort behavior?",
-                  "repairCriteria": "Repaired when the learner distinguishes ordinary regulated borrowing/selling from illegal manipulation or false rumors.",
-                  "acceptableRepairAnswers": [
-                    "Shorting itself can be legal; manipulation is the illegal part.",
-                    "Borrowing and selling is different from spreading false rumors."
-                  ],
-                  "sourceSupport": [
-                    "SHORT_SEC_REGSHO",
-                    "SHORT_CRS"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Short selling reverses the usual buy-then-sell order: borrow shares, sell them, then buy replacement shares to return. Falling prices can create profit; rising prices create losses and margin pressure. Ordinary short selling is regulated and distinct from manipulative rumor-driven trading."
+            "response": {
+              "correctResponse": "A standard short sale begins by borrowing shares and selling them."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stock_shorting_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.stock-shorting-001.kc.e2.stim",
+            "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+            "responseKC": "autotutor.stock-shorting-001.kc.e2.response",
+            "text": "The short seller later must buy equivalent shares to return to the lender.",
+            "textStimulus": "The short seller later must buy equivalent shares to return to the lender.",
+            "display": {
+              "type": "text",
+              "text": "The short seller later must buy equivalent shares to return to the lender."
+            },
+            "response": {
+              "correctResponse": "Closing a short position requires buying shares to return the borrowed shares."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stock_shorting_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.stock-shorting-001.kc.e3.stim",
+            "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+            "responseKC": "autotutor.stock-shorting-001.kc.e3.response",
+            "text": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+            "textStimulus": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+            "display": {
+              "type": "text",
+              "text": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
+            },
+            "response": {
+              "correctResponse": "A short seller profits when the stock can be bought back for less than it was sold for."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stock_shorting_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.stock-shorting-001.kc.e4.stim",
+            "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+            "responseKC": "autotutor.stock-shorting-001.kc.e4.response",
+            "text": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+            "textStimulus": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+            "display": {
+              "type": "text",
+              "text": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
+            },
+            "response": {
+              "correctResponse": "Short selling has bounded upside and potentially very large downside."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "stock_shorting_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-stock-shorting",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-stock-shorting-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "Imagine someone says, 'I shorted 100 shares because I think the price will fall.' What is the basic short-selling transaction, and how can it make or lose money?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "A short seller sells shares they have borrowed rather than shares they already own.",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e1.stim",
+              "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+              "KCId": "autotutor.stock-shorting-001.kc.e1.stim",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e1.stim",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "The short seller later must buy equivalent shares to return to the lender.",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e2.stim",
+              "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+              "KCId": "autotutor.stock-shorting-001.kc.e2.stim",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e2.stim",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e3.stim",
+              "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+              "KCId": "autotutor.stock-shorting-001.kc.e3.stim",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e3.stim",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e4.stim",
+              "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+              "KCId": "autotutor.stock-shorting-001.kc.e4.stim",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e4.stim",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e4"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "stock_shorting_001",
+                "topic": "Stock shorting",
+                "sourceLessonName": "AutoTutor Stock Shorting",
+                "sourceUnitName": "Stock Shorting AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "sourceScriptId": "stock_shorting_001",
+                "sourceId": "E1",
+                "label": "borrow-and-sell transaction",
+                "assertion": "A standard short sale begins by borrowing shares and selling them.",
+                "proposition": "A short seller sells shares they have borrowed rather than shares they already own."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "hint",
+                "text": "Where do the shares come from before they are sold?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "hint",
+                "text": "Does the short seller own the shares outright at the start?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "prompt",
+                "text": "Where do the shares come from before they are sold?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about borrow-and-sell transaction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about borrow-and-sell transaction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "elaborate",
+                "text": "A standard short sale begins by borrowing shares and selling them."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "summary",
+                "text": "A standard short sale begins by borrowing shares and selling them."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports borrow-and-sell transaction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address borrow-and-sell transaction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing borrow-and-sell transaction; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward borrow-and-sell transaction."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on borrow-and-sell transaction: A short seller sells shares they have borrowed rather than shares they already own."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "sourceScriptId": "stock_shorting_001",
+                "sourceId": "E2",
+                "label": "must buy to return",
+                "assertion": "Closing a short position requires buying shares to return the borrowed shares.",
+                "proposition": "The short seller later must buy equivalent shares to return to the lender."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "hint",
+                "text": "What has to happen to the borrowed shares?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "hint",
+                "text": "How does the trader close the short position?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "prompt",
+                "text": "What has to happen to the borrowed shares?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about must buy to return."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about must buy to return."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "elaborate",
+                "text": "Closing a short position requires buying shares to return the borrowed shares."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "summary",
+                "text": "Closing a short position requires buying shares to return the borrowed shares."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports must buy to return."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address must buy to return."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing must buy to return; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward must buy to return."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on must buy to return: The short seller later must buy equivalent shares to return to the lender."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "sourceScriptId": "stock_shorting_001",
+                "sourceId": "E3",
+                "label": "profit from decline",
+                "assertion": "A short seller profits when the stock can be bought back for less than it was sold for.",
+                "proposition": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "hint",
+                "text": "Which price needs to be lower: the sale price or the buyback price?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "hint",
+                "text": "Why does a price decline help the short seller?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "prompt",
+                "text": "Which price needs to be lower: the sale price or the buyback price?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about profit from decline."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about profit from decline."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "elaborate",
+                "text": "A short seller profits when the stock can be bought back for less than it was sold for."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "summary",
+                "text": "A short seller profits when the stock can be bought back for less than it was sold for."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports profit from decline."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address profit from decline."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing profit from decline; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward profit from decline."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on profit from decline: Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "sourceScriptId": "stock_shorting_001",
+                "sourceId": "E4",
+                "label": "asymmetric risk",
+                "assertion": "Short selling has bounded upside and potentially very large downside.",
+                "proposition": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "hint",
+                "text": "How low can a stock price go, and how high can it rise?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "hint",
+                "text": "What happens if the stock rises after the short sale?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "prompt",
+                "text": "How low can a stock price go, and how high can it rise?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about asymmetric risk."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about asymmetric risk."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "elaborate",
+                "text": "Short selling has bounded upside and potentially very large downside."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "summary",
+                "text": "Short selling has bounded upside and potentially very large downside."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports asymmetric risk."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address asymmetric risk."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing asymmetric risk; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward asymmetric risk."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on asymmetric risk: Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+                "description": "A short seller sells shares they have borrowed rather than shares they already own.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+                "description": "The short seller later must buy equivalent shares to return to the lender.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+                "description": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+                "description": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "ordinary-sale misconception",
+                "description": "Short selling means selling shares you already own because you expect a decline.",
+                "repair": "Selling owned shares exits a long position; short selling creates an obligation because borrowed shares must be returned.",
+                "repairQuestion": "What makes a short sale different from simply selling stock you already own?",
+                "repairCriteria": "Repaired when the learner mentions borrowed shares or the later duty to return equivalent shares."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "risk-capped misconception",
+                "description": "Short selling can only lose the amount originally received from selling the shares.",
+                "repair": "The buyback price can exceed the sale price by a lot, so losses can exceed the original proceeds.",
+                "repairQuestion": "If shares are sold short at $80 and later cost $200 to buy back, what happens?",
+                "repairCriteria": "Repaired when the learner says the short seller loses money because covering costs more than the sale proceeds."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "illegal-manipulation misconception",
+                "description": "All short selling is illegal market manipulation.",
+                "repair": "Ordinary short selling is regulated and can be used for speculation, hedging, or liquidity. Manipulative conduct such as spreading false rumors is a separate problem.",
+                "repairQuestion": "How is a regulated short sale different from manipulative short-and-distort behavior?",
+                "repairCriteria": "Repaired when the learner distinguishes ordinary regulated borrowing/selling from illegal manipulation or false rumors."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Short selling reverses the usual buy-then-sell order: borrow shares, sell them, then buy replacement shares to return. Falling prices can create profit; rising prices create losses and margin pressure. Ordinary short selling is regulated and distinct from manipulative rumor-driven trading."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

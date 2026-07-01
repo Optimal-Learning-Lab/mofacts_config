@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Correlation Causation",
-      "name": "autotutor_correlation_causation",
+      "lessonname": "SPARC Session Correlation Causation",
+      "name": "sparc-session-correlation-causation",
       "stimulusfile": "AutoTutor_Correlation_Causation_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "statistics",
-        "causal-reasoning"
-      ]
+        "causal-reasoning",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Correlation Causation"
     },
     "unit": [
       {
-        "unitname": "Correlation Causation AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 4,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Correlation Causation SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-correlation-causation"
         }
       }
     ]

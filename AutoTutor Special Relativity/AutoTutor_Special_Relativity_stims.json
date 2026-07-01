@@ -1,254 +1,2062 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Special Relativity",
+      "sourceTdfFile": "AutoTutor_Special_Relativity_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Special_Relativity_stims.json",
+      "sourceScriptId": "special_relativity_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 5,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.special-relativity-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.special-relativity-001.kc.e1.stim",
+            "clusterKC": "autotutor.special-relativity-001.kc.e1",
+            "responseKC": "autotutor.special-relativity-001.kc.e1.response",
+            "text": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
+            "textStimulus": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
             "display": {
-              "text": "Two spaceships pass each other at a constant high relative speed. How does special relativity change what each inertial observer can say about time and simultaneity?"
+              "type": "text",
+              "text": "Special relativity compares inertial frames moving at constant velocity relative to one another."
             },
-            "autoTutor": {
-              "id": "special_relativity_001",
-              "topic": "Special relativity",
-              "learningGoal": "Explain special relativity for inertial frames as invariant light speed plus frame-dependent measurements of time and simultaneity, without treating effects as mere illusion or one-sided slowness.",
-              "idealAnswer": "Special relativity applies to inertial frames moving at constant velocity relative to each other. All inertial observers measure the same speed of light, so they do not agree on all separate measurements of time and space. Each observer can find the other's moving clock time-dilated for appropriately defined events, meaning the moving clock has less elapsed proper time between events on its own worldline than the coordinate time assigned in the observer's frame. Observers can also disagree about whether distant events are simultaneous. These are real frame-dependent measurements, not just visual delay or mechanical clock defects.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "inertial-frame scope",
-                  "proposition": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
-                  "acceptableVariants": [
-                    "It is about non-accelerating reference frames.",
-                    "The spaceships can each be treated as inertial if they pass at constant speed."
-                  ],
-                  "commonPartialAnswers": [
-                    "Different frames.",
-                    "Moving observers."
-                  ],
-                  "hints": [
-                    "What kind of reference frames are being compared?",
-                    "Is acceleration central to this basic setup?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What kind of reference frames are being compared?",
-                      "target": "Special relativity's basic postulates apply to inertial reference frames"
-                    }
-                  ],
-                  "assertion": "Special relativity's basic postulates apply to inertial reference frames.",
-                  "sourceSupport": [
-                    "REL_OPENSTAX_CONSEQ",
-                    "REL_OPENSTAX_TIME"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "invariant light speed",
-                  "proposition": "All inertial observers measure light in vacuum as having the same speed.",
-                  "acceptableVariants": [
-                    "The speed of light is not simply added to the spaceship speed.",
-                    "Both frames measure c for light."
-                  ],
-                  "commonPartialAnswers": [
-                    "Light speed is constant.",
-                    "c is the same."
-                  ],
-                  "hints": [
-                    "If one ship shines a light, does the other measure c plus the ship speed?",
-                    "What measurement is invariant across inertial frames?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "If one ship shines a light, does the other measure c plus the ship speed?",
-                      "target": "The speed of light in vacuum is invariant for inertial observers"
-                    }
-                  ],
-                  "assertion": "The speed of light in vacuum is invariant for inertial observers.",
-                  "sourceSupport": [
-                    "REL_OPENSTAX_CONSEQ",
-                    "REL_EINSTEIN_ONLINE"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "time dilation as frame-dependent elapsed time",
-                  "proposition": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
-                  "acceptableVariants": [
-                    "Moving clocks tick slower relative to that frame.",
-                    "Proper time is shortest along the moving clock's own path between the events in this setup."
-                  ],
-                  "commonPartialAnswers": [
-                    "Time slows down.",
-                    "Moving clocks run slow."
-                  ],
-                  "hints": [
-                    "Which clock is moving relative to the observer's frame?",
-                    "What two event times are being compared?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Which clock is moving relative to the observer's frame?",
-                      "target": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events"
-                    }
-                  ],
-                  "assertion": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events.",
-                  "sourceSupport": [
-                    "REL_OPENSTAX_TIME",
-                    "REL_OPENSTAX_CONSEQ"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "relativity of simultaneity",
-                  "proposition": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
-                  "acceptableVariants": [
-                    "There is no absolute simultaneity for spatially separated events.",
-                    "Observers can disagree on whether far-apart events happen at the same time."
-                  ],
-                  "commonPartialAnswers": [
-                    "Simultaneity changes.",
-                    "Same time depends on frame."
-                  ],
-                  "hints": [
-                    "Can two separated flashes be simultaneous for everyone?",
-                    "What happens to 'now' at a distance across moving frames?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Can two separated flashes be simultaneous for everyone?",
-                      "target": "Simultaneity for distant events is frame-dependent in special relativity"
-                    }
-                  ],
-                  "assertion": "Simultaneity for distant events is frame-dependent in special relativity.",
-                  "sourceSupport": [
-                    "REL_VOKOS",
-                    "REL_EINSTEIN_ONLINE"
-                  ]
-                },
-                {
-                  "id": "E5",
-                  "label": "not illusion or broken clocks",
-                  "proposition": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
-                  "acceptableVariants": [
-                    "It is not just what it looks like after light travel time.",
-                    "Good clocks really record different elapsed times when compared after different paths."
-                  ],
-                  "commonPartialAnswers": [
-                    "It is real.",
-                    "It is not an illusion."
-                  ],
-                  "hints": [
-                    "Could correcting for light travel time remove special relativity?",
-                    "Are the clocks malfunctioning?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Could correcting for light travel time remove special relativity?",
-                      "target": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions"
-                    }
-                  ],
-                  "assertion": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions.",
-                  "sourceSupport": [
-                    "REL_OPENSTAX_CONSEQ",
-                    "REL_VOKOS"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "absolute-time misconception",
-                  "misconception": "There is one universal time and one universal simultaneity that all observers must agree on.",
-                  "detectionCues": [
-                    "insists one frame has the real time",
-                    "denies relativity of simultaneity"
-                  ],
-                  "contrastWithExpectations": [
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "Special relativity rejects absolute simultaneity for distant events; different inertial frames can assign different times consistently.",
-                  "repairQuestion": "Can two distant events be simultaneous in one inertial frame but not in another?",
-                  "repairCriteria": "Repaired when the learner says yes, simultaneity of distant events can differ by frame.",
-                  "acceptableRepairAnswers": [
-                    "Yes, simultaneity can be frame-dependent.",
-                    "Different inertial frames may disagree about distant simultaneity."
-                  ],
-                  "sourceSupport": [
-                    "REL_VOKOS",
-                    "REL_EINSTEIN_ONLINE"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "visual-delay misconception",
-                  "misconception": "Time dilation is only an illusion caused by signal travel time or looking at moving clocks.",
-                  "detectionCues": [
-                    "says it only appears slow",
-                    "claims correction for light delay removes the effect"
-                  ],
-                  "contrastWithExpectations": [
-                    "E3",
-                    "E5"
-                  ],
-                  "correction": "Light travel delay is separate from the relativistic coordinate effect; after correcting observations, inertial frames still compute time dilation.",
-                  "repairQuestion": "If observers correct for light-travel time, does special-relativistic time dilation disappear?",
-                  "repairCriteria": "Repaired when the learner says no, time dilation remains as a frame-dependent measurement, not mere viewing delay.",
-                  "acceptableRepairAnswers": [
-                    "No, it is not just visual delay.",
-                    "Correcting for signal travel time does not remove the relativistic time difference."
-                  ],
-                  "sourceSupport": [
-                    "REL_OPENSTAX_TIME",
-                    "REL_OPENSTAX_CONSEQ"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "one-sided moving-clock misconception",
-                  "misconception": "Only one spaceship is really moving, so only its clock really slows in all frames.",
-                  "detectionCues": [
-                    "selects one absolute moving observer",
-                    "denies reciprocity between inertial frames"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "In inertial relative motion, each frame may treat itself as at rest and the other as moving; resolving reunion comparisons requires the full path and often acceleration or frame changes.",
-                  "repairQuestion": "During constant relative motion, can each inertial observer consistently describe the other ship as moving?",
-                  "repairCriteria": "Repaired when the learner says yes, motion is relative between inertial frames and each can use its own frame consistently.",
-                  "acceptableRepairAnswers": [
-                    "Yes, each can regard itself as at rest.",
-                    "During inertial motion each sees the other as moving relative to them."
-                  ],
-                  "sourceSupport": [
-                    "REL_OPENSTAX_CONSEQ",
-                    "REL_VOKOS"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [
-                  "E5"
-                ],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Special relativity says the laws of physics and the speed of light are the same in inertial frames. As a result, elapsed time and simultaneity are frame-dependent: moving clocks are time-dilated for defined event pairs, and distant simultaneity is not absolute. These effects are not illusions, broken clocks, or simple visual-delay artifacts."
+            "response": {
+              "correctResponse": "Special relativity's basic postulates apply to inertial reference frames."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "special_relativity_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.special-relativity-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.special-relativity-001.kc.e2.stim",
+            "clusterKC": "autotutor.special-relativity-001.kc.e2",
+            "responseKC": "autotutor.special-relativity-001.kc.e2.response",
+            "text": "All inertial observers measure light in vacuum as having the same speed.",
+            "textStimulus": "All inertial observers measure light in vacuum as having the same speed.",
+            "display": {
+              "type": "text",
+              "text": "All inertial observers measure light in vacuum as having the same speed."
+            },
+            "response": {
+              "correctResponse": "The speed of light in vacuum is invariant for inertial observers."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "special_relativity_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.special-relativity-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.special-relativity-001.kc.e3.stim",
+            "clusterKC": "autotutor.special-relativity-001.kc.e3",
+            "responseKC": "autotutor.special-relativity-001.kc.e3.response",
+            "text": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
+            "textStimulus": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
+            "display": {
+              "type": "text",
+              "text": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame."
+            },
+            "response": {
+              "correctResponse": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "special_relativity_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.special-relativity-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.special-relativity-001.kc.e4.stim",
+            "clusterKC": "autotutor.special-relativity-001.kc.e4",
+            "responseKC": "autotutor.special-relativity-001.kc.e4.response",
+            "text": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
+            "textStimulus": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
+            "display": {
+              "type": "text",
+              "text": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame."
+            },
+            "response": {
+              "correctResponse": "Simultaneity for distant events is frame-dependent in special relativity."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "special_relativity_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.special-relativity-001.kc.e5",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.special-relativity-001.kc.e5.stim",
+            "clusterKC": "autotutor.special-relativity-001.kc.e5",
+            "responseKC": "autotutor.special-relativity-001.kc.e5.response",
+            "text": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
+            "textStimulus": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
+            "display": {
+              "type": "text",
+              "text": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments."
+            },
+            "response": {
+              "correctResponse": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "special_relativity_001",
+              "expectationId": "E5"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-special-relativity",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-special-relativity-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "Two spaceships pass each other at a constant high relative speed. How does special relativity change what each inertial observer can say about time and simultaneity?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
+              "stimulusKC": "autotutor.special-relativity-001.kc.e1.stim",
+              "clusterKC": "autotutor.special-relativity-001.kc.e1",
+              "KCId": "autotutor.special-relativity-001.kc.e1.stim",
+              "KCDefault": "autotutor.special-relativity-001.kc.e1.stim",
+              "KCCluster": "autotutor.special-relativity-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "All inertial observers measure light in vacuum as having the same speed.",
+              "stimulusKC": "autotutor.special-relativity-001.kc.e2.stim",
+              "clusterKC": "autotutor.special-relativity-001.kc.e2",
+              "KCId": "autotutor.special-relativity-001.kc.e2.stim",
+              "KCDefault": "autotutor.special-relativity-001.kc.e2.stim",
+              "KCCluster": "autotutor.special-relativity-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
+              "stimulusKC": "autotutor.special-relativity-001.kc.e3.stim",
+              "clusterKC": "autotutor.special-relativity-001.kc.e3",
+              "KCId": "autotutor.special-relativity-001.kc.e3.stim",
+              "KCDefault": "autotutor.special-relativity-001.kc.e3.stim",
+              "KCCluster": "autotutor.special-relativity-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
+              "stimulusKC": "autotutor.special-relativity-001.kc.e4.stim",
+              "clusterKC": "autotutor.special-relativity-001.kc.e4",
+              "KCId": "autotutor.special-relativity-001.kc.e4.stim",
+              "KCDefault": "autotutor.special-relativity-001.kc.e4.stim",
+              "KCCluster": "autotutor.special-relativity-001.kc.e4"
+            },
+            {
+              "clusterIndex": 4,
+              "label": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
+              "stimulusKC": "autotutor.special-relativity-001.kc.e5.stim",
+              "clusterKC": "autotutor.special-relativity-001.kc.e5",
+              "KCId": "autotutor.special-relativity-001.kc.e5.stim",
+              "KCDefault": "autotutor.special-relativity-001.kc.e5.stim",
+              "KCCluster": "autotutor.special-relativity-001.kc.e5"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "special_relativity_001",
+                "topic": "Special relativity",
+                "sourceLessonName": "AutoTutor Special Relativity",
+                "sourceUnitName": "Special Relativity AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "sourceScriptId": "special_relativity_001",
+                "sourceId": "E1",
+                "label": "inertial-frame scope",
+                "assertion": "Special relativity's basic postulates apply to inertial reference frames.",
+                "proposition": "Special relativity compares inertial frames moving at constant velocity relative to one another."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "hint",
+                "text": "What kind of reference frames are being compared?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "hint",
+                "text": "Is acceleration central to this basic setup?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "prompt",
+                "text": "What kind of reference frames are being compared?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about inertial-frame scope."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about inertial-frame scope."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "elaborate",
+                "text": "Special relativity's basic postulates apply to inertial reference frames."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "summary",
+                "text": "Special relativity's basic postulates apply to inertial reference frames."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports inertial-frame scope."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address inertial-frame scope."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing inertial-frame scope; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward inertial-frame scope."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on inertial-frame scope: Special relativity compares inertial frames moving at constant velocity relative to one another."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "sourceScriptId": "special_relativity_001",
+                "sourceId": "E2",
+                "label": "invariant light speed",
+                "assertion": "The speed of light in vacuum is invariant for inertial observers.",
+                "proposition": "All inertial observers measure light in vacuum as having the same speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "hint",
+                "text": "If one ship shines a light, does the other measure c plus the ship speed?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "hint",
+                "text": "What measurement is invariant across inertial frames?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "prompt",
+                "text": "If one ship shines a light, does the other measure c plus the ship speed?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about invariant light speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about invariant light speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "elaborate",
+                "text": "The speed of light in vacuum is invariant for inertial observers."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "summary",
+                "text": "The speed of light in vacuum is invariant for inertial observers."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports invariant light speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address invariant light speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing invariant light speed; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward invariant light speed."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on invariant light speed: All inertial observers measure light in vacuum as having the same speed."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "sourceScriptId": "special_relativity_001",
+                "sourceId": "E3",
+                "label": "time dilation as frame-dependent elapsed time",
+                "assertion": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events.",
+                "proposition": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "hint",
+                "text": "Which clock is moving relative to the observer's frame?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "hint",
+                "text": "What two event times are being compared?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "prompt",
+                "text": "Which clock is moving relative to the observer's frame?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about time dilation as frame-dependent elapsed time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about time dilation as frame-dependent elapsed time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "elaborate",
+                "text": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "summary",
+                "text": "Time dilation compares proper time on a clock with coordinate time in another inertial frame for specified events."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports time dilation as frame-dependent elapsed time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address time dilation as frame-dependent elapsed time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing time dilation as frame-dependent elapsed time; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward time dilation as frame-dependent elapsed time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on time dilation as frame-dependent elapsed time: For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "sourceScriptId": "special_relativity_001",
+                "sourceId": "E4",
+                "label": "relativity of simultaneity",
+                "assertion": "Simultaneity for distant events is frame-dependent in special relativity.",
+                "proposition": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "hint",
+                "text": "Can two separated flashes be simultaneous for everyone?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "hint",
+                "text": "What happens to 'now' at a distance across moving frames?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "prompt",
+                "text": "Can two separated flashes be simultaneous for everyone?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about relativity of simultaneity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about relativity of simultaneity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "elaborate",
+                "text": "Simultaneity for distant events is frame-dependent in special relativity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "summary",
+                "text": "Simultaneity for distant events is frame-dependent in special relativity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports relativity of simultaneity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address relativity of simultaneity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing relativity of simultaneity; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward relativity of simultaneity."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on relativity of simultaneity: Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "sourceScriptId": "special_relativity_001",
+                "sourceId": "E5",
+                "label": "not illusion or broken clocks",
+                "assertion": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions.",
+                "proposition": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "hint",
+                "text": "Could correcting for light travel time remove special relativity?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "hint",
+                "text": "Are the clocks malfunctioning?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "prompt",
+                "text": "Could correcting for light travel time remove special relativity?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "pump",
+                "text": "Say more about not illusion or broken clocks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about not illusion or broken clocks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "elaborate",
+                "text": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "summary",
+                "text": "Time dilation and simultaneity differences are physical frame-dependent measurements, not optical illusions."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "positive_feedback",
+                "text": "That supports not illusion or broken clocks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "negative_feedback",
+                "text": "That does not yet address not illusion or broken clocks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing not illusion or broken clocks; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward not illusion or broken clocks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "action": "neutral_feedback",
+                "text": "Focus on not illusion or broken clocks: Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e1",
+                "description": "Special relativity compares inertial frames moving at constant velocity relative to one another.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e2",
+                "description": "All inertial observers measure light in vacuum as having the same speed.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e3",
+                "description": "For defined event pairs, an observer measures a moving clock as having less elapsed proper time than the coordinate time in that observer's frame.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e4",
+                "description": "Distant events that are simultaneous in one inertial frame may not be simultaneous in another moving inertial frame.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.special-relativity-001.kc.e5",
+                "description": "Relativistic time effects are not merely visual delays, perception errors, or defective clocks; they are coordinate measurements confirmed by experiments.",
+                "centrality": 0,
+                "sourceId": "E5"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "absolute-time misconception",
+                "description": "There is one universal time and one universal simultaneity that all observers must agree on.",
+                "repair": "Special relativity rejects absolute simultaneity for distant events; different inertial frames can assign different times consistently.",
+                "repairQuestion": "Can two distant events be simultaneous in one inertial frame but not in another?",
+                "repairCriteria": "Repaired when the learner says yes, simultaneity of distant events can differ by frame."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "visual-delay misconception",
+                "description": "Time dilation is only an illusion caused by signal travel time or looking at moving clocks.",
+                "repair": "Light travel delay is separate from the relativistic coordinate effect; after correcting observations, inertial frames still compute time dilation.",
+                "repairQuestion": "If observers correct for light-travel time, does special-relativistic time dilation disappear?",
+                "repairCriteria": "Repaired when the learner says no, time dilation remains as a frame-dependent measurement, not mere viewing delay."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "one-sided moving-clock misconception",
+                "description": "Only one spaceship is really moving, so only its clock really slows in all frames.",
+                "repair": "In inertial relative motion, each frame may treat itself as at rest and the other as moving; resolving reunion comparisons requires the full path and often acceleration or frame changes.",
+                "repairQuestion": "During constant relative motion, can each inertial observer consistently describe the other ship as moving?",
+                "repairCriteria": "Repaired when the learner says yes, motion is relative between inertial frames and each can use its own frame consistently."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Special relativity says the laws of physics and the speed of light are the same in inertial frames. As a result, elapsed time and simultaneity are frame-dependent: moving clocks are time-dilated for defined event pairs, and distant simultaneity is not absolute. These effects are not illusions, broken clocks, or simple visual-delay artifacts."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

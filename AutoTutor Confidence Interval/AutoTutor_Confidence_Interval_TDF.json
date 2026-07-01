@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Confidence Interval",
-      "name": "autotutor_confidence_interval",
+      "lessonname": "SPARC Session Confidence Interval",
+      "name": "sparc-session-confidence-interval",
       "stimulusfile": "AutoTutor_Confidence_Interval_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "statistics",
-        "confidence-intervals"
-      ]
+        "confidence-intervals",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Confidence Interval"
     },
     "unit": [
       {
-        "unitname": "Confidence Interval AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 3,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Confidence Interval SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-confidence-interval"
         }
       }
     ]

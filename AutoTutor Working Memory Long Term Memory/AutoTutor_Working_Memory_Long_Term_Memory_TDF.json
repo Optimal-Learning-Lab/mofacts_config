@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Working Memory Long Term Memory",
-      "name": "autotutor_working_memory_long_term_memory",
+      "lessonname": "SPARC Session Working Memory Long Term Memory",
+      "name": "sparc-session-working-memory-long-term-memory",
       "stimulusfile": "AutoTutor_Working_Memory_Long_Term_Memory_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "psychology",
-        "memory"
-      ]
+        "memory",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Working Memory Long Term Memory"
     },
     "unit": [
       {
-        "unitname": "Working Memory Long-Term Memory AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 4,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Working Memory Long-Term Memory SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-working-memory-long-term-memory"
         }
       }
     ]

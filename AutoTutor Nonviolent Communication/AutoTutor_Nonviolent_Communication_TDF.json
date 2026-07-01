@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Nonviolent Communication",
-      "name": "autotutor_nonviolent_communication",
+      "lessonname": "SPARC Session Nonviolent Communication",
+      "name": "sparc-session-nonviolent-communication",
       "stimulusfile": "AutoTutor_Nonviolent_Communication_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "communication",
-        "nonviolent-communication"
-      ]
+        "nonviolent-communication",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Nonviolent Communication"
     },
     "unit": [
       {
-        "unitname": "Nonviolent Communication AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 6,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Nonviolent Communication SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-nonviolent-communication"
         }
       }
     ]

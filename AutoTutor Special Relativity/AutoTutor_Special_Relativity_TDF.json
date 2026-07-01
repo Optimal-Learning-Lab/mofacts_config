@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Special Relativity",
-      "name": "autotutor_special_relativity",
+      "lessonname": "SPARC Session Special Relativity",
+      "name": "sparc-session-special-relativity",
       "stimulusfile": "AutoTutor_Special_Relativity_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "physics",
-        "special-relativity"
-      ]
+        "special-relativity",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Special Relativity"
     },
     "unit": [
       {
-        "unitname": "Special Relativity AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 4,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Special Relativity SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-special-relativity"
         }
       }
     ]

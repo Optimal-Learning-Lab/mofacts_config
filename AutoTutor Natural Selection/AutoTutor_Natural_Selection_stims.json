@@ -1,255 +1,2062 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Natural Selection",
+      "sourceTdfFile": "AutoTutor_Natural_Selection_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Natural_Selection_stims.json",
+      "sourceScriptId": "natural_selection_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 5,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.natural-selection-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.natural-selection-001.kc.e1.stim",
+            "clusterKC": "autotutor.natural-selection-001.kc.e1",
+            "responseKC": "autotutor.natural-selection-001.kc.e1.response",
+            "text": "Individuals in the population already vary in the trait before selection acts.",
+            "textStimulus": "Individuals in the population already vary in the trait before selection acts.",
             "display": {
-              "text": "A drought leaves mostly hard seeds on an island, and birds with slightly deeper beaks leave more offspring. How would natural selection explain beak changes in the population over generations?"
+              "type": "text",
+              "text": "Individuals in the population already vary in the trait before selection acts."
             },
-            "autoTutor": {
-              "id": "natural_selection_001",
-              "topic": "Natural selection",
-              "learningGoal": "Explain natural selection as non-teleological change in heritable trait frequencies caused by differential reproductive success in an environment.",
-              "idealAnswer": "Natural selection starts with variation among individuals, such as some birds already having deeper beaks. If that variation is heritable and deeper beaks help birds survive or reproduce when hard seeds are common, those birds leave more offspring. Across generations, alleles or traits associated with deeper beaks become more common in the population. The population evolves; individual birds do not change their beaks because they need to, and selection has no goal or intention.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "existing variation",
-                  "proposition": "Individuals in the population already vary in the trait before selection acts.",
-                  "acceptableVariants": [
-                    "Some birds already have deeper or shallower beaks.",
-                    "Selection works on variation that is present."
-                  ],
-                  "commonPartialAnswers": [
-                    "Birds are different.",
-                    "There is variation."
-                  ],
-                  "hints": [
-                    "Do all birds start with identical beaks?",
-                    "Does selection create the variation from scratch?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Do all birds start with identical beaks?",
-                      "target": "Natural selection acts on existing variation among individuals"
-                    }
-                  ],
-                  "assertion": "Natural selection acts on existing variation among individuals.",
-                  "sourceSupport": [
-                    "SEL_OPENSTAX",
-                    "SEL_GREGORY"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "heritability",
-                  "proposition": "The relevant variation must be heritable for trait frequencies to change across generations.",
-                  "acceptableVariants": [
-                    "Beak differences need a genetic component.",
-                    "Offspring tend to inherit the trait."
-                  ],
-                  "commonPartialAnswers": [
-                    "It gets passed on.",
-                    "Genes matter."
-                  ],
-                  "hints": [
-                    "Why must offspring resemble parents for evolution to occur?",
-                    "Would an acquired injury to a beak be inherited?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Why must offspring resemble parents for evolution to occur?",
-                      "target": "Only heritable variation can produce evolutionary change by natural selection"
-                    }
-                  ],
-                  "assertion": "Only heritable variation can produce evolutionary change by natural selection.",
-                  "sourceSupport": [
-                    "SEL_OPENSTAX_POP",
-                    "SEL_OPENSTAX"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "differential reproductive success",
-                  "proposition": "Individuals with traits better suited to the environment leave more surviving offspring.",
-                  "acceptableVariants": [
-                    "Deeper-beaked birds reproduce more under hard-seed conditions.",
-                    "Fitness means reproductive contribution, not just strength."
-                  ],
-                  "commonPartialAnswers": [
-                    "They survive better.",
-                    "They are more fit."
-                  ],
-                  "hints": [
-                    "What does 'fit' mean in evolutionary terms?",
-                    "Which birds contribute more to the next generation?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What does 'fit' mean in evolutionary terms?",
-                      "target": "Selection occurs when trait differences affect survival or reproductive success"
-                    }
-                  ],
-                  "assertion": "Selection occurs when trait differences affect survival or reproductive success.",
-                  "sourceSupport": [
-                    "SEL_OPENSTAX",
-                    "SEL_GREGORY"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "population-level change",
-                  "proposition": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
-                  "acceptableVariants": [
-                    "The population has more deeper-beaked birds later.",
-                    "Allele frequencies shift over generations."
-                  ],
-                  "commonPartialAnswers": [
-                    "The species changes.",
-                    "More birds have the trait."
-                  ],
-                  "hints": [
-                    "Who evolves: an individual bird or the population over generations?",
-                    "What changes after several generations?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Who evolves: an individual bird or the population over generations?",
-                      "target": "Evolution by natural selection is a change in population trait or allele frequencies across generations"
-                    }
-                  ],
-                  "assertion": "Evolution by natural selection is a change in population trait or allele frequencies across generations.",
-                  "sourceSupport": [
-                    "SEL_OPENSTAX",
-                    "SEL_OPENSTAX_POP"
-                  ]
-                },
-                {
-                  "id": "E5",
-                  "label": "no need or goal",
-                  "proposition": "Natural selection is not intentional and does not make individuals change because they need to.",
-                  "acceptableVariants": [
-                    "Birds do not decide to grow better beaks.",
-                    "Evolution has no goal of improvement."
-                  ],
-                  "commonPartialAnswers": [
-                    "It is not on purpose.",
-                    "They do not try to adapt."
-                  ],
-                  "hints": [
-                    "Does the drought make an individual bird intentionally grow a deeper beak?",
-                    "Is natural selection aiming at perfection?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Does the drought make an individual bird intentionally grow a deeper beak?",
-                      "target": "Natural selection has no foresight, intention, or goal"
-                    }
-                  ],
-                  "assertion": "Natural selection has no foresight, intention, or goal.",
-                  "sourceSupport": [
-                    "SEL_GREGORY",
-                    "SEL_SMITHSONIAN",
-                    "SEL_OPENSTAX"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "need-based individual change",
-                  "misconception": "Individual birds grow deeper beaks during their lives because they need them.",
-                  "detectionCues": [
-                    "says birds adapt their beaks in response to need",
-                    "describes individual transformation as evolution"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2",
-                    "E4",
-                    "E5"
-                  ],
-                  "correction": "Selection changes populations across generations by sorting existing heritable variation, not by need-driven change in individuals.",
-                  "repairQuestion": "In the drought example, what changes during an individual bird's life and what changes across generations?",
-                  "repairCriteria": "Repaired when the learner says individuals do not evolve their beaks from need; populations change over generations.",
-                  "acceptableRepairAnswers": [
-                    "Individuals with deeper beaks leave more offspring, so the population changes.",
-                    "The bird does not grow a new beak because it needs one."
-                  ],
-                  "sourceSupport": [
-                    "SEL_GREGORY",
-                    "SEL_SMITHSONIAN"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "survival-only fitness",
-                  "misconception": "Natural selection is only about which individuals survive, not whether they reproduce.",
-                  "detectionCues": [
-                    "defines fitness as strength or survival only",
-                    "omits offspring"
-                  ],
-                  "contrastWithExpectations": [
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "Survival matters because it can affect reproductive contribution, but evolutionary fitness is about leaving offspring or genes in the next generation.",
-                  "repairQuestion": "Why is reproduction essential in natural selection?",
-                  "repairCriteria": "Repaired when the learner connects fitness to offspring or contribution to the next generation.",
-                  "acceptableRepairAnswers": [
-                    "The trait spreads only if they leave more offspring.",
-                    "Fitness is reproductive success."
-                  ],
-                  "sourceSupport": [
-                    "SEL_OPENSTAX",
-                    "SEL_GREGORY"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "progress misconception",
-                  "misconception": "Natural selection always makes organisms more advanced, perfect, or complex.",
-                  "detectionCues": [
-                    "says evolution aims to improve species",
-                    "uses goal-directed progress language"
-                  ],
-                  "contrastWithExpectations": [
-                    "E5"
-                  ],
-                  "correction": "Selection favors traits in a particular environment; it has no general direction toward perfection or complexity.",
-                  "repairQuestion": "Why might a trait be favored in one environment but not another?",
-                  "repairCriteria": "Repaired when the learner says selection is environment-specific and not goal-directed progress.",
-                  "acceptableRepairAnswers": [
-                    "It depends on the environment.",
-                    "Evolution has no goal of perfection."
-                  ],
-                  "sourceSupport": [
-                    "SEL_OPENSTAX",
-                    "SEL_GREGORY"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [
-                  "E5"
-                ],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Natural selection requires existing heritable variation, environmental differences in survival or reproduction, and resulting changes in trait or allele frequencies across generations. It acts through individuals' reproductive success but evolution is a population-level outcome. It is not need-based, intentional, or goal-directed."
+            "response": {
+              "correctResponse": "Natural selection acts on existing variation among individuals."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "natural_selection_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.natural-selection-001.kc.e2.stim",
+            "clusterKC": "autotutor.natural-selection-001.kc.e2",
+            "responseKC": "autotutor.natural-selection-001.kc.e2.response",
+            "text": "The relevant variation must be heritable for trait frequencies to change across generations.",
+            "textStimulus": "The relevant variation must be heritable for trait frequencies to change across generations.",
+            "display": {
+              "type": "text",
+              "text": "The relevant variation must be heritable for trait frequencies to change across generations."
+            },
+            "response": {
+              "correctResponse": "Only heritable variation can produce evolutionary change by natural selection."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "natural_selection_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.natural-selection-001.kc.e3.stim",
+            "clusterKC": "autotutor.natural-selection-001.kc.e3",
+            "responseKC": "autotutor.natural-selection-001.kc.e3.response",
+            "text": "Individuals with traits better suited to the environment leave more surviving offspring.",
+            "textStimulus": "Individuals with traits better suited to the environment leave more surviving offspring.",
+            "display": {
+              "type": "text",
+              "text": "Individuals with traits better suited to the environment leave more surviving offspring."
+            },
+            "response": {
+              "correctResponse": "Selection occurs when trait differences affect survival or reproductive success."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "natural_selection_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.natural-selection-001.kc.e4.stim",
+            "clusterKC": "autotutor.natural-selection-001.kc.e4",
+            "responseKC": "autotutor.natural-selection-001.kc.e4.response",
+            "text": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+            "textStimulus": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+            "display": {
+              "type": "text",
+              "text": "Over generations, the advantageous heritable trait or allele becomes more common in the population."
+            },
+            "response": {
+              "correctResponse": "Evolution by natural selection is a change in population trait or allele frequencies across generations."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "natural_selection_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e5",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.natural-selection-001.kc.e5.stim",
+            "clusterKC": "autotutor.natural-selection-001.kc.e5",
+            "responseKC": "autotutor.natural-selection-001.kc.e5.response",
+            "text": "Natural selection is not intentional and does not make individuals change because they need to.",
+            "textStimulus": "Natural selection is not intentional and does not make individuals change because they need to.",
+            "display": {
+              "type": "text",
+              "text": "Natural selection is not intentional and does not make individuals change because they need to."
+            },
+            "response": {
+              "correctResponse": "Natural selection has no foresight, intention, or goal."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "natural_selection_001",
+              "expectationId": "E5"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-natural-selection",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-natural-selection-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A drought leaves mostly hard seeds on an island, and birds with slightly deeper beaks leave more offspring. How would natural selection explain beak changes in the population over generations?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Individuals in the population already vary in the trait before selection acts.",
+              "stimulusKC": "autotutor.natural-selection-001.kc.e1.stim",
+              "clusterKC": "autotutor.natural-selection-001.kc.e1",
+              "KCId": "autotutor.natural-selection-001.kc.e1.stim",
+              "KCDefault": "autotutor.natural-selection-001.kc.e1.stim",
+              "KCCluster": "autotutor.natural-selection-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "The relevant variation must be heritable for trait frequencies to change across generations.",
+              "stimulusKC": "autotutor.natural-selection-001.kc.e2.stim",
+              "clusterKC": "autotutor.natural-selection-001.kc.e2",
+              "KCId": "autotutor.natural-selection-001.kc.e2.stim",
+              "KCDefault": "autotutor.natural-selection-001.kc.e2.stim",
+              "KCCluster": "autotutor.natural-selection-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "Individuals with traits better suited to the environment leave more surviving offspring.",
+              "stimulusKC": "autotutor.natural-selection-001.kc.e3.stim",
+              "clusterKC": "autotutor.natural-selection-001.kc.e3",
+              "KCId": "autotutor.natural-selection-001.kc.e3.stim",
+              "KCDefault": "autotutor.natural-selection-001.kc.e3.stim",
+              "KCCluster": "autotutor.natural-selection-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+              "stimulusKC": "autotutor.natural-selection-001.kc.e4.stim",
+              "clusterKC": "autotutor.natural-selection-001.kc.e4",
+              "KCId": "autotutor.natural-selection-001.kc.e4.stim",
+              "KCDefault": "autotutor.natural-selection-001.kc.e4.stim",
+              "KCCluster": "autotutor.natural-selection-001.kc.e4"
+            },
+            {
+              "clusterIndex": 4,
+              "label": "Natural selection is not intentional and does not make individuals change because they need to.",
+              "stimulusKC": "autotutor.natural-selection-001.kc.e5.stim",
+              "clusterKC": "autotutor.natural-selection-001.kc.e5",
+              "KCId": "autotutor.natural-selection-001.kc.e5.stim",
+              "KCDefault": "autotutor.natural-selection-001.kc.e5.stim",
+              "KCCluster": "autotutor.natural-selection-001.kc.e5"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "natural_selection_001",
+                "topic": "Natural selection",
+                "sourceLessonName": "AutoTutor Natural Selection",
+                "sourceUnitName": "Natural Selection AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "sourceScriptId": "natural_selection_001",
+                "sourceId": "E1",
+                "label": "existing variation",
+                "assertion": "Natural selection acts on existing variation among individuals.",
+                "proposition": "Individuals in the population already vary in the trait before selection acts."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "hint",
+                "text": "Do all birds start with identical beaks?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "hint",
+                "text": "Does selection create the variation from scratch?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "prompt",
+                "text": "Do all birds start with identical beaks?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about existing variation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about existing variation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "elaborate",
+                "text": "Natural selection acts on existing variation among individuals."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "summary",
+                "text": "Natural selection acts on existing variation among individuals."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports existing variation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address existing variation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing existing variation; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward existing variation."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on existing variation: Individuals in the population already vary in the trait before selection acts."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "sourceScriptId": "natural_selection_001",
+                "sourceId": "E2",
+                "label": "heritability",
+                "assertion": "Only heritable variation can produce evolutionary change by natural selection.",
+                "proposition": "The relevant variation must be heritable for trait frequencies to change across generations."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "hint",
+                "text": "Why must offspring resemble parents for evolution to occur?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "hint",
+                "text": "Would an acquired injury to a beak be inherited?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "prompt",
+                "text": "Why must offspring resemble parents for evolution to occur?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about heritability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about heritability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "elaborate",
+                "text": "Only heritable variation can produce evolutionary change by natural selection."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "summary",
+                "text": "Only heritable variation can produce evolutionary change by natural selection."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports heritability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address heritability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing heritability; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward heritability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on heritability: The relevant variation must be heritable for trait frequencies to change across generations."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "sourceScriptId": "natural_selection_001",
+                "sourceId": "E3",
+                "label": "differential reproductive success",
+                "assertion": "Selection occurs when trait differences affect survival or reproductive success.",
+                "proposition": "Individuals with traits better suited to the environment leave more surviving offspring."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "hint",
+                "text": "What does 'fit' mean in evolutionary terms?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "hint",
+                "text": "Which birds contribute more to the next generation?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "prompt",
+                "text": "What does 'fit' mean in evolutionary terms?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about differential reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about differential reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "elaborate",
+                "text": "Selection occurs when trait differences affect survival or reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "summary",
+                "text": "Selection occurs when trait differences affect survival or reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports differential reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address differential reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing differential reproductive success; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward differential reproductive success."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on differential reproductive success: Individuals with traits better suited to the environment leave more surviving offspring."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "sourceScriptId": "natural_selection_001",
+                "sourceId": "E4",
+                "label": "population-level change",
+                "assertion": "Evolution by natural selection is a change in population trait or allele frequencies across generations.",
+                "proposition": "Over generations, the advantageous heritable trait or allele becomes more common in the population."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "hint",
+                "text": "Who evolves: an individual bird or the population over generations?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "hint",
+                "text": "What changes after several generations?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "prompt",
+                "text": "Who evolves: an individual bird or the population over generations?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about population-level change."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about population-level change."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "elaborate",
+                "text": "Evolution by natural selection is a change in population trait or allele frequencies across generations."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "summary",
+                "text": "Evolution by natural selection is a change in population trait or allele frequencies across generations."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports population-level change."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address population-level change."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing population-level change; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward population-level change."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on population-level change: Over generations, the advantageous heritable trait or allele becomes more common in the population."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "sourceScriptId": "natural_selection_001",
+                "sourceId": "E5",
+                "label": "no need or goal",
+                "assertion": "Natural selection has no foresight, intention, or goal.",
+                "proposition": "Natural selection is not intentional and does not make individuals change because they need to."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "hint",
+                "text": "Does the drought make an individual bird intentionally grow a deeper beak?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "hint",
+                "text": "Is natural selection aiming at perfection?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "prompt",
+                "text": "Does the drought make an individual bird intentionally grow a deeper beak?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "pump",
+                "text": "Say more about no need or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about no need or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "elaborate",
+                "text": "Natural selection has no foresight, intention, or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "summary",
+                "text": "Natural selection has no foresight, intention, or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "positive_feedback",
+                "text": "That supports no need or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "negative_feedback",
+                "text": "That does not yet address no need or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing no need or goal; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward no need or goal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "action": "neutral_feedback",
+                "text": "Focus on no need or goal: Natural selection is not intentional and does not make individuals change because they need to."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "description": "Individuals in the population already vary in the trait before selection acts.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "description": "The relevant variation must be heritable for trait frequencies to change across generations.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "description": "Individuals with traits better suited to the environment leave more surviving offspring.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "description": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "description": "Natural selection is not intentional and does not make individuals change because they need to.",
+                "centrality": 0,
+                "sourceId": "E5"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "need-based individual change",
+                "description": "Individual birds grow deeper beaks during their lives because they need them.",
+                "repair": "Selection changes populations across generations by sorting existing heritable variation, not by need-driven change in individuals.",
+                "repairQuestion": "In the drought example, what changes during an individual bird's life and what changes across generations?",
+                "repairCriteria": "Repaired when the learner says individuals do not evolve their beaks from need; populations change over generations."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "survival-only fitness",
+                "description": "Natural selection is only about which individuals survive, not whether they reproduce.",
+                "repair": "Survival matters because it can affect reproductive contribution, but evolutionary fitness is about leaving offspring or genes in the next generation.",
+                "repairQuestion": "Why is reproduction essential in natural selection?",
+                "repairCriteria": "Repaired when the learner connects fitness to offspring or contribution to the next generation."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "progress misconception",
+                "description": "Natural selection always makes organisms more advanced, perfect, or complex.",
+                "repair": "Selection favors traits in a particular environment; it has no general direction toward perfection or complexity.",
+                "repairQuestion": "Why might a trait be favored in one environment but not another?",
+                "repairCriteria": "Repaired when the learner says selection is environment-specific and not goal-directed progress."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Natural selection requires existing heritable variation, environmental differences in survival or reproduction, and resulting changes in trait or allele frequencies across generations. It acts through individuals' reproductive success but evolution is a population-level outcome. It is not need-based, intentional, or goal-directed."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

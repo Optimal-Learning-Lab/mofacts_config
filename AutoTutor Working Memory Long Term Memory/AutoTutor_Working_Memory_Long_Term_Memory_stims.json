@@ -1,224 +1,1900 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Working Memory Long Term Memory",
+      "sourceTdfFile": "AutoTutor_Working_Memory_Long_Term_Memory_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Working_Memory_Long_Term_Memory_stims.json",
+      "sourceScriptId": "working_memory_ltm_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 4,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e1.stim",
+            "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+            "responseKC": "autotutor.working-memory-ltm-001.kc.e1.response",
+            "text": "Working memory holds and manipulates a small amount of information for an ongoing task.",
+            "textStimulus": "Working memory holds and manipulates a small amount of information for an ongoing task.",
             "display": {
-              "text": "When you hold a verification code in mind long enough to type it, but remember your childhood address years later, what is the difference between working memory and long-term memory?"
+              "type": "text",
+              "text": "Working memory holds and manipulates a small amount of information for an ongoing task."
             },
-            "autoTutor": {
-              "id": "working_memory_ltm_001",
-              "topic": "Working memory vs. long-term memory",
-              "learningGoal": "Explain working memory as limited active use of information and long-term memory as durable stored knowledge that can be retrieved back into working memory.",
-              "idealAnswer": "Working memory is the limited mental workspace used to hold and manipulate information for a current task, like keeping a code active while typing it. Long-term memory is durable stored knowledge and experiences, such as an old address or vocabulary. Information in long-term memory is not automatically active; when you use it, you retrieve it into working memory. Learning depends partly on managing working-memory limits while building and retrieving long-term knowledge.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "working-memory active workspace",
-                  "proposition": "Working memory holds and manipulates a small amount of information for an ongoing task.",
-                  "acceptableVariants": [
-                    "It is the mental workspace for current thinking.",
-                    "It lets you keep information active while using it."
-                  ],
-                  "commonPartialAnswers": [
-                    "Short-term memory.",
-                    "Temporary memory."
-                  ],
-                  "hints": [
-                    "What are you doing with the verification code while typing it?",
-                    "Is working memory passive storage or active use?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What are you doing with the verification code while typing it?",
-                      "target": "Working memory is limited active maintenance and manipulation for current cognition"
-                    }
-                  ],
-                  "assertion": "Working memory is limited active maintenance and manipulation for current cognition.",
-                  "sourceSupport": [
-                    "MEM_OPENSTAX_NEURO",
-                    "MEM_COWAN"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "long-term durable store",
-                  "proposition": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
-                  "acceptableVariants": [
-                    "It holds information over long periods.",
-                    "It stores facts, episodes, and learned skills."
-                  ],
-                  "commonPartialAnswers": [
-                    "Old memories.",
-                    "Permanent memory."
-                  ],
-                  "hints": [
-                    "Where would a childhood address or vocabulary word be stored?",
-                    "What makes long-term memory different in time scale?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Where would a childhood address or vocabulary word be stored?",
-                      "target": "Long-term memory is durable storage for knowledge and experiences"
-                    }
-                  ],
-                  "assertion": "Long-term memory is durable storage for knowledge and experiences.",
-                  "sourceSupport": [
-                    "MEM_OPENSTAX_NEURO",
-                    "MEM_GATHERCOLE_ALLOWAY"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "retrieval into working memory",
-                  "proposition": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
-                  "acceptableVariants": [
-                    "You bring stored knowledge into mind to work with it.",
-                    "Recall makes long-term information active."
-                  ],
-                  "commonPartialAnswers": [
-                    "You remember it.",
-                    "It comes back."
-                  ],
-                  "hints": [
-                    "When solving a problem with a known formula, where is the formula while you use it?",
-                    "Does stored knowledge help without being brought into current attention?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "When solving a problem with a known formula, where is the formula while you use it?",
-                      "target": "Using long-term knowledge requires retrieving it into working memory"
-                    }
-                  ],
-                  "assertion": "Using long-term knowledge requires retrieving it into working memory.",
-                  "sourceSupport": [
-                    "MEM_UMN",
-                    "MEM_COWAN"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "capacity and learning load",
-                  "proposition": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
-                  "acceptableVariants": [
-                    "Too many new elements can overload the workspace.",
-                    "Prior knowledge can chunk information and reduce load."
-                  ],
-                  "commonPartialAnswers": [
-                    "Working memory is small.",
-                    "Long-term memory helps learning."
-                  ],
-                  "hints": [
-                    "Why can too many new steps overwhelm a learner?",
-                    "How can prior knowledge make a task easier?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Why can too many new steps overwhelm a learner?",
-                      "target": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks"
-                    }
-                  ],
-                  "assertion": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks.",
-                  "sourceSupport": [
-                    "MEM_GATHERCOLE_ALLOWAY",
-                    "MEM_UMN"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "storage-size misconception",
-                  "misconception": "Working memory is just a smaller hard drive where temporary memories sit until moved unchanged into long-term memory.",
-                  "detectionCues": [
-                    "describes memory as simple file transfer",
-                    "treats working memory as passive storage only"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E3",
-                    "E4"
-                  ],
-                  "correction": "Working memory is active use and attention, not merely a passive staging folder.",
-                  "repairQuestion": "What makes working memory 'working' when you solve a mental arithmetic problem?",
-                  "repairCriteria": "Repaired when the learner says information is actively held, manipulated, or attended to for a task.",
-                  "acceptableRepairAnswers": [
-                    "You use and manipulate the information.",
-                    "It is active attention for the current task."
-                  ],
-                  "sourceSupport": [
-                    "MEM_COWAN",
-                    "MEM_OPENSTAX_NEURO"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "automatic-transfer misconception",
-                  "misconception": "Everything held briefly in working memory automatically becomes long-term memory.",
-                  "detectionCues": [
-                    "says all short-term contents are saved",
-                    "ignores encoding and retrieval"
-                  ],
-                  "contrastWithExpectations": [
-                    "E2",
-                    "E4"
-                  ],
-                  "correction": "Many working-memory contents fade when no longer needed; durable learning requires encoding, practice, or meaningful connection.",
-                  "repairQuestion": "Why might you forget a verification code seconds after using it?",
-                  "repairCriteria": "Repaired when the learner says temporary information can be discarded or not encoded into long-term memory.",
-                  "acceptableRepairAnswers": [
-                    "It was not encoded or practiced.",
-                    "Working memory can drop it after the task."
-                  ],
-                  "sourceSupport": [
-                    "MEM_OPENSTAX_NEURO",
-                    "MEM_GATHERCOLE_ALLOWAY"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "long-term-always-conscious misconception",
-                  "misconception": "If something is in long-term memory, it is constantly present in conscious thought.",
-                  "detectionCues": [
-                    "says long-term memories are always active",
-                    "confuses storage with current awareness"
-                  ],
-                  "contrastWithExpectations": [
-                    "E2",
-                    "E3"
-                  ],
-                  "correction": "Long-term memory can be stored without being active; retrieval brings it into working memory when needed.",
-                  "repairQuestion": "Where is your childhood address before someone asks for it?",
-                  "repairCriteria": "Repaired when the learner says it is stored in long-term memory but not active until retrieved.",
-                  "acceptableRepairAnswers": [
-                    "It is stored but not in mind until retrieved.",
-                    "You bring it into working memory when asked."
-                  ],
-                  "sourceSupport": [
-                    "MEM_UMN",
-                    "MEM_COWAN"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Working memory is a small, active workspace for current thinking; long-term memory is durable storage of knowledge and experiences. Remembered knowledge must be retrieved into working memory to be used. Working-memory limits matter for learning, and long-term knowledge can reduce load by organizing information into meaningful chunks."
+            "response": {
+              "correctResponse": "Working memory is limited active maintenance and manipulation for current cognition."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "working_memory_ltm_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e2.stim",
+            "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+            "responseKC": "autotutor.working-memory-ltm-001.kc.e2.response",
+            "text": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
+            "textStimulus": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
+            "display": {
+              "type": "text",
+              "text": "Long-term memory stores knowledge, skills, and experiences more durably than working memory."
+            },
+            "response": {
+              "correctResponse": "Long-term memory is durable storage for knowledge and experiences."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "working_memory_ltm_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e3.stim",
+            "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+            "responseKC": "autotutor.working-memory-ltm-001.kc.e3.response",
+            "text": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
+            "textStimulus": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
+            "display": {
+              "type": "text",
+              "text": "Long-term memories must be retrieved or activated into working memory to be used in the moment."
+            },
+            "response": {
+              "correctResponse": "Using long-term knowledge requires retrieving it into working memory."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "working_memory_ltm_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e4.stim",
+            "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+            "responseKC": "autotutor.working-memory-ltm-001.kc.e4.response",
+            "text": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
+            "textStimulus": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
+            "display": {
+              "type": "text",
+              "text": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
+            },
+            "response": {
+              "correctResponse": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "working_memory_ltm_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-working-memory-long-term-memory",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-working-memory-ltm-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "When you hold a verification code in mind long enough to type it, but remember your childhood address years later, what is the difference between working memory and long-term memory?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Working memory holds and manipulates a small amount of information for an ongoing task.",
+              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e1.stim",
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+              "KCId": "autotutor.working-memory-ltm-001.kc.e1.stim",
+              "KCDefault": "autotutor.working-memory-ltm-001.kc.e1.stim",
+              "KCCluster": "autotutor.working-memory-ltm-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
+              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e2.stim",
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+              "KCId": "autotutor.working-memory-ltm-001.kc.e2.stim",
+              "KCDefault": "autotutor.working-memory-ltm-001.kc.e2.stim",
+              "KCCluster": "autotutor.working-memory-ltm-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
+              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e3.stim",
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+              "KCId": "autotutor.working-memory-ltm-001.kc.e3.stim",
+              "KCDefault": "autotutor.working-memory-ltm-001.kc.e3.stim",
+              "KCCluster": "autotutor.working-memory-ltm-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
+              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e4.stim",
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+              "KCId": "autotutor.working-memory-ltm-001.kc.e4.stim",
+              "KCDefault": "autotutor.working-memory-ltm-001.kc.e4.stim",
+              "KCCluster": "autotutor.working-memory-ltm-001.kc.e4"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "working_memory_ltm_001",
+                "topic": "Working memory vs. long-term memory",
+                "sourceLessonName": "AutoTutor Working Memory Long Term Memory",
+                "sourceUnitName": "Working Memory Long-Term Memory AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "sourceScriptId": "working_memory_ltm_001",
+                "sourceId": "E1",
+                "label": "working-memory active workspace",
+                "assertion": "Working memory is limited active maintenance and manipulation for current cognition.",
+                "proposition": "Working memory holds and manipulates a small amount of information for an ongoing task."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "hint",
+                "text": "What are you doing with the verification code while typing it?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "hint",
+                "text": "Is working memory passive storage or active use?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "prompt",
+                "text": "What are you doing with the verification code while typing it?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about working-memory active workspace."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about working-memory active workspace."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "elaborate",
+                "text": "Working memory is limited active maintenance and manipulation for current cognition."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "summary",
+                "text": "Working memory is limited active maintenance and manipulation for current cognition."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports working-memory active workspace."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address working-memory active workspace."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing working-memory active workspace; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward working-memory active workspace."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on working-memory active workspace: Working memory holds and manipulates a small amount of information for an ongoing task."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "sourceScriptId": "working_memory_ltm_001",
+                "sourceId": "E2",
+                "label": "long-term durable store",
+                "assertion": "Long-term memory is durable storage for knowledge and experiences.",
+                "proposition": "Long-term memory stores knowledge, skills, and experiences more durably than working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "hint",
+                "text": "Where would a childhood address or vocabulary word be stored?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "hint",
+                "text": "What makes long-term memory different in time scale?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "prompt",
+                "text": "Where would a childhood address or vocabulary word be stored?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about long-term durable store."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about long-term durable store."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "elaborate",
+                "text": "Long-term memory is durable storage for knowledge and experiences."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "summary",
+                "text": "Long-term memory is durable storage for knowledge and experiences."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports long-term durable store."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address long-term durable store."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing long-term durable store; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward long-term durable store."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on long-term durable store: Long-term memory stores knowledge, skills, and experiences more durably than working memory."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "sourceScriptId": "working_memory_ltm_001",
+                "sourceId": "E3",
+                "label": "retrieval into working memory",
+                "assertion": "Using long-term knowledge requires retrieving it into working memory.",
+                "proposition": "Long-term memories must be retrieved or activated into working memory to be used in the moment."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "hint",
+                "text": "When solving a problem with a known formula, where is the formula while you use it?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "hint",
+                "text": "Does stored knowledge help without being brought into current attention?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "prompt",
+                "text": "When solving a problem with a known formula, where is the formula while you use it?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about retrieval into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about retrieval into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "elaborate",
+                "text": "Using long-term knowledge requires retrieving it into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "summary",
+                "text": "Using long-term knowledge requires retrieving it into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports retrieval into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address retrieval into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing retrieval into working memory; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward retrieval into working memory."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on retrieval into working memory: Long-term memories must be retrieved or activated into working memory to be used in the moment."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "sourceScriptId": "working_memory_ltm_001",
+                "sourceId": "E4",
+                "label": "capacity and learning load",
+                "assertion": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks.",
+                "proposition": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "hint",
+                "text": "Why can too many new steps overwhelm a learner?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "hint",
+                "text": "How can prior knowledge make a task easier?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "prompt",
+                "text": "Why can too many new steps overwhelm a learner?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about capacity and learning load."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about capacity and learning load."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "elaborate",
+                "text": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "summary",
+                "text": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports capacity and learning load."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address capacity and learning load."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing capacity and learning load; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward capacity and learning load."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on capacity and learning load: Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
+                "description": "Working memory holds and manipulates a small amount of information for an ongoing task.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
+                "description": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
+                "description": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
+                "description": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "storage-size misconception",
+                "description": "Working memory is just a smaller hard drive where temporary memories sit until moved unchanged into long-term memory.",
+                "repair": "Working memory is active use and attention, not merely a passive staging folder.",
+                "repairQuestion": "What makes working memory 'working' when you solve a mental arithmetic problem?",
+                "repairCriteria": "Repaired when the learner says information is actively held, manipulated, or attended to for a task."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "automatic-transfer misconception",
+                "description": "Everything held briefly in working memory automatically becomes long-term memory.",
+                "repair": "Many working-memory contents fade when no longer needed; durable learning requires encoding, practice, or meaningful connection.",
+                "repairQuestion": "Why might you forget a verification code seconds after using it?",
+                "repairCriteria": "Repaired when the learner says temporary information can be discarded or not encoded into long-term memory."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "long-term-always-conscious misconception",
+                "description": "If something is in long-term memory, it is constantly present in conscious thought.",
+                "repair": "Long-term memory can be stored without being active; retrieval brings it into working memory when needed.",
+                "repairQuestion": "Where is your childhood address before someone asks for it?",
+                "repairCriteria": "Repaired when the learner says it is stored in long-term memory but not active until retrieved."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Working memory is a small, active workspace for current thinking; long-term memory is durable storage of knowledge and experiences. Remembered knowledge must be retrieved into working memory to be used. Working-memory limits matter for learning, and long-term knowledge can reduce load by organizing information into meaningful chunks."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }

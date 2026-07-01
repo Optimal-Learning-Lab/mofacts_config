@@ -1,28 +1,27 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "AutoTutor Compound Interest",
-      "name": "autotutor_compound_interest",
+      "lessonname": "SPARC Session Compound Interest",
+      "name": "sparc-session-compound-interest",
       "stimulusfile": "AutoTutor_Compound_Interest_stims.json",
-      "userselect": "true",
+      "userselect": "false",
       "openRouterApiKey": "",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
         "autotutor",
         "finance",
-        "compound-interest"
-      ]
+        "compound-interest",
+        "sparc-session",
+        "autotutor-converted"
+      ],
+      "sourceAutoTutorLessonName": "AutoTutor Compound Interest"
     },
     "unit": [
       {
-        "unitname": "Compound Interest AutoTutor",
-        "autotutorsession": {
-          "cluster": 0,
-          "maxTurns": 25,
-          "graduation": {
-            "requiredExpectationCount": 4,
-            "maxActiveMisconceptions": 0
-          }
+        "unitname": "Compound Interest SPARC Session",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-session-compound-interest"
         }
       }
     ]

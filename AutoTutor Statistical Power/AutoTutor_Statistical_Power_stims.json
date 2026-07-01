@@ -1,253 +1,2062 @@
 {
   "setspec": {
+    "sourceAutoTutorConversion": {
+      "converter": "convertAutoTutorToSparc.cjs",
+      "sourcePackageName": "AutoTutor Statistical Power",
+      "sourceTdfFile": "AutoTutor_Statistical_Power_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Statistical_Power_stims.json",
+      "sourceScriptId": "statistical_power_001",
+      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 5,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    },
     "clusters": [
       {
+        "clusterKC": "autotutor.statistical-power-001.kc.e1",
         "stims": [
           {
+            "stimulusKC": "autotutor.statistical-power-001.kc.e1.stim",
+            "clusterKC": "autotutor.statistical-power-001.kc.e1",
+            "responseKC": "autotutor.statistical-power-001.kc.e1.response",
+            "text": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
+            "textStimulus": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
             "display": {
-              "text": "A researcher says a planned study has 80% power to detect a specific effect size at alpha .05. What does that mean, and what does it not mean?"
+              "type": "text",
+              "text": "Power is the probability that a test rejects the null if a specified alternative effect is truly present."
             },
-            "autoTutor": {
-              "id": "statistical_power_001",
-              "topic": "Statistical power",
-              "learningGoal": "Interpret statistical power as a pre-study probability of rejecting the null for a specified effect size and test, not as the probability a specific result is true.",
-              "idealAnswer": "Statistical power is the probability that the planned test will reject the null hypothesis if a specified alternative effect is truly present. So 80% power means that, under that assumed effect size, alpha, sample size, variability, and analysis plan, repeated studies would produce statistically significant results about 80% of the time. Power depends on the effect size one wants to detect, sample size, variability, alpha, and the test. It does not mean an obtained significant result has an 80% chance of being true, and post-hoc power based on the observed result is not a magic explanation.",
-              "expectations": [
-                {
-                  "id": "E1",
-                  "label": "conditional detection probability",
-                  "proposition": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
-                  "acceptableVariants": [
-                    "It is the chance of detecting a real effect of a chosen size.",
-                    "It is 1 minus the Type II error rate for that alternative."
-                  ],
-                  "commonPartialAnswers": [
-                    "Chance to find an effect.",
-                    "Probability of significance."
-                  ],
-                  "hints": [
-                    "Power is conditional on what being true?",
-                    "What event counts as detection in a significance test?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Power is conditional on what being true?",
-                      "target": "Statistical power is the probability of rejection under a specified true alternative"
-                    }
-                  ],
-                  "assertion": "Statistical power is the probability of rejection under a specified true alternative.",
-                  "sourceSupport": [
-                    "POW_NCBI_STATPEARLS",
-                    "POW_GREENLAND"
-                  ]
-                },
-                {
-                  "id": "E2",
-                  "label": "specified effect and test",
-                  "proposition": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
-                  "acceptableVariants": [
-                    "80% power is not free-floating; it is for a chosen minimum effect and design.",
-                    "Changing sample size, alpha, or effect size changes power."
-                  ],
-                  "commonPartialAnswers": [
-                    "It depends on sample size.",
-                    "It depends on the design."
-                  ],
-                  "hints": [
-                    "Can a study have one power value without naming an effect size?",
-                    "What design choices affect power?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Can a study have one power value without naming an effect size?",
-                      "target": "Power must be tied to a specified effect size and testing plan"
-                    }
-                  ],
-                  "assertion": "Power must be tied to a specified effect size and testing plan.",
-                  "sourceSupport": [
-                    "POW_GREENLAND",
-                    "POW_SCRIBBR"
-                  ]
-                },
-                {
-                  "id": "E3",
-                  "label": "long-run repeated-study meaning",
-                  "proposition": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
-                  "acceptableVariants": [
-                    "In the long run, about 80 out of 100 such studies detect that effect.",
-                    "It is a repeated-sampling design probability."
-                  ],
-                  "commonPartialAnswers": [
-                    "80% chance of significant.",
-                    "It works 80% of the time."
-                  ],
-                  "hints": [
-                    "What would happen over many repeats if the assumed effect were real?",
-                    "Does power describe one completed result or a design's long-run behavior?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "What would happen over many repeats if the assumed effect were real?",
-                      "target": "Power describes long-run detection frequency for a design under an assumed effect"
-                    }
-                  ],
-                  "assertion": "Power describes long-run detection frequency for a design under an assumed effect.",
-                  "sourceSupport": [
-                    "POW_GREENLAND",
-                    "POW_SCRIBBR"
-                  ]
-                },
-                {
-                  "id": "E4",
-                  "label": "not truth probability",
-                  "proposition": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
-                  "acceptableVariants": [
-                    "It does not mean an 80% chance the finding is real.",
-                    "It is not posterior probability."
-                  ],
-                  "commonPartialAnswers": [
-                    "The result is probably true.",
-                    "80% confidence in the hypothesis."
-                  ],
-                  "hints": [
-                    "Does power condition on the effect being true, or tell us whether it is true?",
-                    "What would be wrong with saying a significant result has 80% chance of being real?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Does power condition on the effect being true, or tell us whether it is true?",
-                      "target": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses"
-                    }
-                  ],
-                  "assertion": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses.",
-                  "sourceSupport": [
-                    "POW_GREENLAND",
-                    "POW_APS"
-                  ]
-                },
-                {
-                  "id": "E5",
-                  "label": "sample size and effect tradeoff",
-                  "proposition": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
-                  "acceptableVariants": [
-                    "Small effects need more data.",
-                    "Increasing sample size usually increases the chance to detect the effect."
-                  ],
-                  "commonPartialAnswers": [
-                    "More participants helps.",
-                    "Small effects are harder."
-                  ],
-                  "hints": [
-                    "Why does detecting a small effect require more data?",
-                    "What happens to power when sample size increases, all else equal?"
-                  ],
-                  "prompts": [
-                    {
-                      "stem": "Why does detecting a small effect require more data?",
-                      "target": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal"
-                    }
-                  ],
-                  "assertion": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal.",
-                  "sourceSupport": [
-                    "POW_SCRIBBR",
-                    "POW_NCBI_STATPEARLS"
-                  ]
-                }
-              ],
-              "misconceptions": [
-                {
-                  "id": "M1",
-                  "label": "truth-probability misconception",
-                  "misconception": "80% power means there is an 80% chance the hypothesis or significant result is true.",
-                  "detectionCues": [
-                    "says result has 80% probability of being true",
-                    "treats power as confidence in the claim"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E4"
-                  ],
-                  "correction": "Power assumes a specified effect is true and asks how often the test detects it; it does not tell whether the effect is true.",
-                  "repairQuestion": "In a power calculation, is the specified effect assumed or concluded?",
-                  "repairCriteria": "Repaired when the learner says the effect is assumed for the calculation, not proven or assigned 80% truth probability.",
-                  "acceptableRepairAnswers": [
-                    "It is assumed for planning.",
-                    "Power does not say the hypothesis is 80% true."
-                  ],
-                  "sourceSupport": [
-                    "POW_GREENLAND",
-                    "POW_APS"
-                  ]
-                },
-                {
-                  "id": "M2",
-                  "label": "effect-free power",
-                  "misconception": "A study simply has 80% power in general, without specifying an effect size or test.",
-                  "detectionCues": [
-                    "omits effect size",
-                    "talks about generic power detached from design"
-                  ],
-                  "contrastWithExpectations": [
-                    "E2"
-                  ],
-                  "correction": "Power is always for a specified effect size, alpha, sample size, variability, and analysis plan.",
-                  "repairQuestion": "What information is missing if someone only says 'this study has 80% power'?",
-                  "repairCriteria": "Repaired when the learner names the needed effect size and design/test conditions.",
-                  "acceptableRepairAnswers": [
-                    "We need the effect size and test.",
-                    "Power depends on alpha, sample size, variability, and analysis."
-                  ],
-                  "sourceSupport": [
-                    "POW_GREENLAND",
-                    "POW_SCRIBBR"
-                  ]
-                },
-                {
-                  "id": "M3",
-                  "label": "post-hoc-excuse misconception",
-                  "misconception": "After a nonsignificant result, observed post-hoc power proves there was no effect or proves the study failed only because of low power.",
-                  "detectionCues": [
-                    "uses post-hoc power as decisive explanation",
-                    "equates nonsignificance with no effect because power was high"
-                  ],
-                  "contrastWithExpectations": [
-                    "E1",
-                    "E2",
-                    "E3"
-                  ],
-                  "correction": "Power is most useful before data collection for a meaningful effect size. A nonsignificant result must be interpreted with design, interval estimates, assumptions, and uncertainty.",
-                  "repairQuestion": "Why is power analysis usually more informative before the study than after seeing the result?",
-                  "repairCriteria": "Repaired when the learner says power is a planning tool tied to assumed effects and observed results need confidence intervals or uncertainty, not just post-hoc power.",
-                  "acceptableRepairAnswers": [
-                    "It is for planning around an assumed effect.",
-                    "Afterward you should look at estimates and uncertainty."
-                  ],
-                  "sourceSupport": [
-                    "POW_APS",
-                    "POW_GREENLAND"
-                  ]
-                }
-              ],
-              "dialogPolicy": {
-                "allowAnyOrder": true,
-                "requiredExpectations": [
-                  "E1",
-                  "E2",
-                  "E3",
-                  "E4"
-                ],
-                "optionalExpectations": [
-                  "E5"
-                ],
-                "ifStudentIsClose": "Ask a prompt targeting the missing atomic expectation without implying there is a hidden exact wording.",
-                "ifStudentIsWrong": "Name the active misconception briefly, give the correction, and ask the authored repair question.",
-                "ifStudentIsStuck": "Offer a hint first; if needed, give the assertion and ask the learner to restate it in their own words.",
-                "completionRule": "Complete when required expectations are covered and active misconceptions are repaired or absent within graduation limits."
-              },
-              "summary": "Power is a design property: the probability of detecting a specified true effect with a specified test and alpha. It depends on sample size, effect size, variability, alpha, and design. It is not the probability that a hypothesis or result is true, and it must be tied to a meaningful effect size."
+            "response": {
+              "correctResponse": "Statistical power is the probability of rejection under a specified true alternative."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "statistical_power_001",
+              "expectationId": "E1"
             }
           }
         ]
+      },
+      {
+        "clusterKC": "autotutor.statistical-power-001.kc.e2",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.statistical-power-001.kc.e2.stim",
+            "clusterKC": "autotutor.statistical-power-001.kc.e2",
+            "responseKC": "autotutor.statistical-power-001.kc.e2.response",
+            "text": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
+            "textStimulus": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
+            "display": {
+              "type": "text",
+              "text": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan."
+            },
+            "response": {
+              "correctResponse": "Power must be tied to a specified effect size and testing plan."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "statistical_power_001",
+              "expectationId": "E2"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.statistical-power-001.kc.e3",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.statistical-power-001.kc.e3.stim",
+            "clusterKC": "autotutor.statistical-power-001.kc.e3",
+            "responseKC": "autotutor.statistical-power-001.kc.e3.response",
+            "text": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
+            "textStimulus": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
+            "display": {
+              "type": "text",
+              "text": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time."
+            },
+            "response": {
+              "correctResponse": "Power describes long-run detection frequency for a design under an assumed effect."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "statistical_power_001",
+              "expectationId": "E3"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.statistical-power-001.kc.e4",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.statistical-power-001.kc.e4.stim",
+            "clusterKC": "autotutor.statistical-power-001.kc.e4",
+            "responseKC": "autotutor.statistical-power-001.kc.e4.response",
+            "text": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
+            "textStimulus": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
+            "display": {
+              "type": "text",
+              "text": "Power is not the probability that the research hypothesis is true or that a significant result is true."
+            },
+            "response": {
+              "correctResponse": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "statistical_power_001",
+              "expectationId": "E4"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.statistical-power-001.kc.e5",
+        "stims": [
+          {
+            "stimulusKC": "autotutor.statistical-power-001.kc.e5.stim",
+            "clusterKC": "autotutor.statistical-power-001.kc.e5",
+            "responseKC": "autotutor.statistical-power-001.kc.e5.response",
+            "text": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
+            "textStimulus": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
+            "display": {
+              "type": "text",
+              "text": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power."
+            },
+            "response": {
+              "correctResponse": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal."
+            },
+            "parameter": "0,0.8",
+            "sourceAutoTutor": {
+              "scriptId": "statistical_power_001",
+              "expectationId": "E5"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-statistical-power",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/1.0",
+          "documentId": "sparc-autotutor-statistical-power-001",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A researcher says a planned study has 80% power to detect a specific effect size at alpha .05. What does that mean, and what does it not mean?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
+              "stimulusKC": "autotutor.statistical-power-001.kc.e1.stim",
+              "clusterKC": "autotutor.statistical-power-001.kc.e1",
+              "KCId": "autotutor.statistical-power-001.kc.e1.stim",
+              "KCDefault": "autotutor.statistical-power-001.kc.e1.stim",
+              "KCCluster": "autotutor.statistical-power-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
+              "stimulusKC": "autotutor.statistical-power-001.kc.e2.stim",
+              "clusterKC": "autotutor.statistical-power-001.kc.e2",
+              "KCId": "autotutor.statistical-power-001.kc.e2.stim",
+              "KCDefault": "autotutor.statistical-power-001.kc.e2.stim",
+              "KCCluster": "autotutor.statistical-power-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
+              "stimulusKC": "autotutor.statistical-power-001.kc.e3.stim",
+              "clusterKC": "autotutor.statistical-power-001.kc.e3",
+              "KCId": "autotutor.statistical-power-001.kc.e3.stim",
+              "KCDefault": "autotutor.statistical-power-001.kc.e3.stim",
+              "KCCluster": "autotutor.statistical-power-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
+              "stimulusKC": "autotutor.statistical-power-001.kc.e4.stim",
+              "clusterKC": "autotutor.statistical-power-001.kc.e4",
+              "KCId": "autotutor.statistical-power-001.kc.e4.stim",
+              "KCDefault": "autotutor.statistical-power-001.kc.e4.stim",
+              "KCCluster": "autotutor.statistical-power-001.kc.e4"
+            },
+            {
+              "clusterIndex": 4,
+              "label": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
+              "stimulusKC": "autotutor.statistical-power-001.kc.e5.stim",
+              "clusterKC": "autotutor.statistical-power-001.kc.e5",
+              "KCId": "autotutor.statistical-power-001.kc.e5.stim",
+              "KCDefault": "autotutor.statistical-power-001.kc.e5.stim",
+              "KCCluster": "autotutor.statistical-power-001.kc.e5"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-converter",
+                "sourceScriptId": "statistical_power_001",
+                "topic": "Statistical power",
+                "sourceLessonName": "AutoTutor Statistical Power",
+                "sourceUnitName": "Statistical Power AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "sourceScriptId": "statistical_power_001",
+                "sourceId": "E1",
+                "label": "conditional detection probability",
+                "assertion": "Statistical power is the probability of rejection under a specified true alternative.",
+                "proposition": "Power is the probability that a test rejects the null if a specified alternative effect is truly present."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "hint",
+                "text": "Power is conditional on what being true?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "hint",
+                "text": "What event counts as detection in a significance test?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "prompt",
+                "text": "Power is conditional on what being true?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "pump",
+                "text": "Say more about conditional detection probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about conditional detection probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "elaborate",
+                "text": "Statistical power is the probability of rejection under a specified true alternative."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "summary",
+                "text": "Statistical power is the probability of rejection under a specified true alternative."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "positive_feedback",
+                "text": "That supports conditional detection probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "negative_feedback",
+                "text": "That does not yet address conditional detection probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing conditional detection probability; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward conditional detection probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "action": "neutral_feedback",
+                "text": "Focus on conditional detection probability: Power is the probability that a test rejects the null if a specified alternative effect is truly present."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "sourceScriptId": "statistical_power_001",
+                "sourceId": "E2",
+                "label": "specified effect and test",
+                "assertion": "Power must be tied to a specified effect size and testing plan.",
+                "proposition": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "hint",
+                "text": "Can a study have one power value without naming an effect size?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "hint",
+                "text": "What design choices affect power?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "prompt",
+                "text": "Can a study have one power value without naming an effect size?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "pump",
+                "text": "Say more about specified effect and test."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about specified effect and test."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "elaborate",
+                "text": "Power must be tied to a specified effect size and testing plan."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "summary",
+                "text": "Power must be tied to a specified effect size and testing plan."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "positive_feedback",
+                "text": "That supports specified effect and test."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "negative_feedback",
+                "text": "That does not yet address specified effect and test."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing specified effect and test; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward specified effect and test."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "action": "neutral_feedback",
+                "text": "Focus on specified effect and test: A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "sourceScriptId": "statistical_power_001",
+                "sourceId": "E3",
+                "label": "long-run repeated-study meaning",
+                "assertion": "Power describes long-run detection frequency for a design under an assumed effect.",
+                "proposition": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "hint",
+                "text": "What would happen over many repeats if the assumed effect were real?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "hint",
+                "text": "Does power describe one completed result or a design's long-run behavior?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "prompt",
+                "text": "What would happen over many repeats if the assumed effect were real?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "pump",
+                "text": "Say more about long-run repeated-study meaning."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about long-run repeated-study meaning."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "elaborate",
+                "text": "Power describes long-run detection frequency for a design under an assumed effect."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "summary",
+                "text": "Power describes long-run detection frequency for a design under an assumed effect."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "positive_feedback",
+                "text": "That supports long-run repeated-study meaning."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "negative_feedback",
+                "text": "That does not yet address long-run repeated-study meaning."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing long-run repeated-study meaning; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward long-run repeated-study meaning."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "action": "neutral_feedback",
+                "text": "Focus on long-run repeated-study meaning: An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "sourceScriptId": "statistical_power_001",
+                "sourceId": "E4",
+                "label": "not truth probability",
+                "assertion": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses.",
+                "proposition": "Power is not the probability that the research hypothesis is true or that a significant result is true."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "hint",
+                "text": "Does power condition on the effect being true, or tell us whether it is true?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "hint",
+                "text": "What would be wrong with saying a significant result has 80% chance of being real?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "prompt",
+                "text": "Does power condition on the effect being true, or tell us whether it is true?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "pump",
+                "text": "Say more about not truth probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about not truth probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "elaborate",
+                "text": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "summary",
+                "text": "Power conditions on an assumed effect; it does not assign truth probability to hypotheses."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "positive_feedback",
+                "text": "That supports not truth probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "negative_feedback",
+                "text": "That does not yet address not truth probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing not truth probability; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward not truth probability."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "action": "neutral_feedback",
+                "text": "Focus on not truth probability: Power is not the probability that the research hypothesis is true or that a significant result is true."
+              }
+            },
+            {
+              "factType": "learningTarget.source",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "sourceScriptId": "statistical_power_001",
+                "sourceId": "E5",
+                "label": "sample size and effect tradeoff",
+                "assertion": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal.",
+                "proposition": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "hint",
+                "text": "Why does detecting a small effect require more data?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "hint",
+                "text": "What happens to power when sample size increases, all else equal?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "prompt",
+                "text": "Why does detecting a small effect require more data?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "pump",
+                "text": "Say more about sample size and effect tradeoff."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "positive_pump",
+                "text": "Good start. Add more detail about sample size and effect tradeoff."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "elaborate",
+                "text": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "summary",
+                "text": "Power increases with sample size for a fixed effect and decreases when the target effect is smaller, all else equal."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "positive_feedback",
+                "text": "That supports sample size and effect tradeoff."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "negative_feedback",
+                "text": "That does not yet address sample size and effect tradeoff."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "positive_neutral_feedback",
+                "text": "You are partly addressing sample size and effect tradeoff; keep going."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "negative_neutral_feedback",
+                "text": "Let's redirect toward sample size and effect tradeoff."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "learningTarget",
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "action": "neutral_feedback",
+                "text": "Focus on sample size and effect tradeoff: Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power."
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e1",
+                "description": "Power is the probability that a test rejects the null if a specified alternative effect is truly present.",
+                "centrality": 0,
+                "sourceId": "E1"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e2",
+                "description": "A power value is defined for a particular effect size, alpha level, sample size, variability, and statistical test or analysis plan.",
+                "centrality": 0,
+                "sourceId": "E2"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e3",
+                "description": "An 80% power statement means that repeated studies under the assumed conditions would reject the null about 80% of the time.",
+                "centrality": 0,
+                "sourceId": "E3"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e4",
+                "description": "Power is not the probability that the research hypothesis is true or that a significant result is true.",
+                "centrality": 0,
+                "sourceId": "E4"
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.statistical-power-001.kc.e5",
+                "description": "Larger samples generally increase power for a given effect, while smaller target effects require larger samples to detect with the same power.",
+                "centrality": 0,
+                "sourceId": "E5"
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M1",
+                "label": "truth-probability misconception",
+                "description": "80% power means there is an 80% chance the hypothesis or significant result is true.",
+                "repair": "Power assumes a specified effect is true and asks how often the test detects it; it does not tell whether the effect is true.",
+                "repairQuestion": "In a power calculation, is the specified effect assumed or concluded?",
+                "repairCriteria": "Repaired when the learner says the effect is assumed for the calculation, not proven or assigned 80% truth probability."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M2",
+                "label": "effect-free power",
+                "description": "A study simply has 80% power in general, without specifying an effect size or test.",
+                "repair": "Power is always for a specified effect size, alpha, sample size, variability, and analysis plan.",
+                "repairQuestion": "What information is missing if someone only says 'this study has 80% power'?",
+                "repairCriteria": "Repaired when the learner names the needed effect size and design/test conditions."
+              }
+            },
+            {
+              "factType": "diagnostic.misconceptionSource",
+              "slots": {
+                "id": "M3",
+                "label": "post-hoc-excuse misconception",
+                "description": "After a nonsignificant result, observed post-hoc power proves there was no effect or proves the study failed only because of low power.",
+                "repair": "Power is most useful before data collection for a meaningful effect size. A nonsignificant result must be interpreted with design, interval estimates, assumptions, and uncertainty.",
+                "repairQuestion": "Why is power analysis usually more informative before the study than after seeing the result?",
+                "repairCriteria": "Repaired when the learner says power is a planning tool tied to assumed effects and observed results need confidence intervals or uncertainty, not just post-hoc power."
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "completion",
+                "action": "summary",
+                "text": "Power is a design property: the probability of detecting a specified true effect with a specified test and alpha. It depends on sample size, effect size, variability, alpha, and design. It is not the probability that a hypothesis or result is true, and it must be tied to a meaningful effect size."
+              }
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "dialogue.move.paper-rule-08-summary",
+              "module": "dialogue.move-selection",
+              "salience": 100,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "session.turnState",
+                      "slots": {
+                        "turnCount": {
+                          "type": "range",
+                          "min": 8
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-08-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-04-splice",
+              "module": "dialogue.move-selection",
+              "salience": 95,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentVerbosity",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.badAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-04-splice"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-06-hint",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-06-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-07-hint",
+              "module": "dialogue.move-selection",
+              "salience": 88,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.studentAbility",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "HIGH"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
+                    },
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-07-hint"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-09-elaborate",
+              "module": "dialogue.move-selection",
+              "salience": 70,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "type": "any",
+                      "conditions": [
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "HIGH"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "selector.goodAnswerMatch",
+                          "slots": {
+                            "band": {
+                              "type": "literal",
+                              "value": "VERY_HIGH"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "elaborate"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-09-elaborate"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-03-positive-pump",
+              "module": "dialogue.move-selection",
+              "salience": 68,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "VERY_HIGH"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "HIGH"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "positive_pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-03-positive-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-05-prompt",
+              "module": "dialogue.move-selection",
+              "salience": 66,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "selector.studentVerbosity",
+                  "slots": {
+                    "band": {
+                      "type": "literal",
+                      "value": "LOW"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-05-prompt"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-01-pump",
+              "module": "dialogue.move-selection",
+              "salience": 64,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    },
+                    "streakCount": {
+                      "type": "literal",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-01-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.paper-rule-02-pump",
+              "module": "dialogue.move-selection",
+              "salience": 62,
+              "when": [
+                {
+                  "factType": "learningTarget.selected",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bind",
+                      "variable": "targetClusterKC"
+                    }
+                  }
+                },
+                {
+                  "factType": "learnerResponse.contribution",
+                  "slots": {
+                    "type": {
+                      "type": "literal",
+                      "value": "assertion"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.currentExpectationCoverage",
+                      "slots": {
+                        "clusterKC": {
+                          "type": "bound",
+                          "variable": "targetClusterKC"
+                        },
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "NONE"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "LOW"
+                        }
+                      }
+                    },
+                    {
+                      "factType": "selector.goodAnswerMatch",
+                      "slots": {
+                        "band": {
+                          "type": "literal",
+                          "value": "MEDIUM"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learningTarget"
+                      },
+                      "clusterKC": {
+                        "type": "variable",
+                        "name": "targetClusterKC"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "paper-rule-02-pump"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "paper-dialogue-move-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.generated-completion-summary",
+              "module": "dialogue.move-selection",
+              "salience": 110,
+              "when": [
+                {
+                  "factType": "dialogue.completionSelected"
+                },
+                {
+                  "factType": "controller.completionState",
+                  "slots": {
+                    "completed": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "summary"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "generated-completion-summary"
+                      },
+                      "templateVersion": {
+                        "type": "literal",
+                        "value": "generated-dialogue-policy-v1"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   }
