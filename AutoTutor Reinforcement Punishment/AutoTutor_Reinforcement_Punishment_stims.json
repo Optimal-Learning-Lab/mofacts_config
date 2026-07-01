@@ -1,24 +1,5 @@
 {
   "setspec": {
-    "sourceAutoTutorConversion": {
-      "converter": "convertAutoTutorToSparc.cjs",
-      "sourcePackageName": "AutoTutor Reinforcement Punishment",
-      "sourceTdfFile": "AutoTutor_Reinforcement_Punishment_TDF.json",
-      "sourceStimulusFile": "AutoTutor_Reinforcement_Punishment_stims.json",
-      "sourceScriptId": "reinforcement_punishment_001",
-      "moveRuleTemplateVersion": "paper-dialogue-move-v1",
-      "expectationRelationshipProvenance": null,
-      "relationshipValidation": {
-        "valid": true,
-        "sourceShape": "generated-at-upload",
-        "sourceRelationshipCount": 0,
-        "resolvedRelationshipCount": 0,
-        "generatedClusterCount": 4,
-        "relationshipProvenance": null,
-        "generatedRelationships": false,
-        "relationshipGenerationRequired": true
-      }
-    },
     "clusters": [
       {
         "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
@@ -208,7 +189,7 @@
             {
               "factType": "dialogue.source",
               "slots": {
-                "sourceKind": "autotutor-converter",
+                "sourceKind": "autotutor-sparc-package",
                 "sourceScriptId": "reinforcement_punishment_001",
                 "topic": "Reinforcement vs. punishment",
                 "sourceLessonName": "AutoTutor Reinforcement Punishment",
@@ -790,6 +771,33 @@
             {
               "factType": "dialogue.moveContent",
               "slots": {
+                "targetType": "misconception",
+                "id": "M1",
+                "action": "splice",
+                "text": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "misconception",
+                "id": "M2",
+                "action": "splice",
+                "text": "What does positive mean in positive punishment?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
+                "targetType": "misconception",
+                "id": "M3",
+                "action": "splice",
+                "text": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?"
+              }
+            },
+            {
+              "factType": "dialogue.moveContent",
+              "slots": {
                 "targetType": "completion",
                 "action": "summary",
                 "text": "Reinforcement and punishment are defined by behavioral effect: increase versus decrease. Positive and negative mean adding versus removing a stimulus. The common trap is treating negative reinforcement as punishment; it is reinforcement because it increases the behavior that removes or avoids an aversive condition."
@@ -857,10 +865,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-08-summary"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -981,27 +985,19 @@
                   ]
                 },
                 {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.badAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "HIGH"
-                        }
-                      }
+                  "factType": "diagnostic.misconceptionScore",
+                  "slots": {
+                    "id": {
+                      "type": "bound",
+                      "variable": "misconceptionId"
                     },
-                    {
-                      "factType": "selector.badAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "VERY_HIGH"
-                        }
-                      }
+                    "confidence": {
+                      "type": "range",
+                      "min": 0.67,
+                      "max": 1,
+                      "maxInclusive": true
                     }
-                  ]
+                  }
                 }
               ],
               "then": [
@@ -1026,10 +1022,68 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-04-splice"
-                      },
-                      "templateVersion": {
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.move.misconception-repair-splice",
+              "module": "dialogue.move-selection",
+              "salience": 94,
+              "when": [
+                {
+                  "factType": "diagnostic.misconceptionSelected",
+                  "slots": {
+                    "id": {
+                      "type": "bind",
+                      "variable": "misconceptionId"
+                    }
+                  }
+                },
+                {
+                  "factType": "diagnostic.misconceptionScore",
+                  "slots": {
+                    "id": {
+                      "type": "bound",
+                      "variable": "misconceptionId"
+                    },
+                    "confidence": {
+                      "type": "range",
+                      "min": 0.2,
+                      "max": 1,
+                      "maxInclusive": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
                         "type": "literal",
-                        "value": "paper-dialogue-move-v1"
+                        "value": "misconception"
+                      },
+                      "id": {
+                        "type": "variable",
+                        "name": "misconceptionId"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "splice"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.move.misconception-repair-splice"
                       }
                     }
                   }
@@ -1089,29 +1143,6 @@
                       "value": "LOW"
                     }
                   }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
                 }
               ],
               "then": [
@@ -1136,10 +1167,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-06-hint"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1208,29 +1235,6 @@
                       "value": "LOW"
                     }
                   }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
                 }
               ],
               "then": [
@@ -1255,10 +1259,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-07-hint"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1284,45 +1284,17 @@
                   }
                 },
                 {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
+                  "factType": "selector.currentExpectationCoverage",
+                  "slots": {
+                    "clusterKC": {
+                      "type": "bound",
+                      "variable": "targetClusterKC"
                     },
-                    {
-                      "type": "any",
-                      "conditions": [
-                        {
-                          "factType": "selector.goodAnswerMatch",
-                          "slots": {
-                            "band": {
-                              "type": "literal",
-                              "value": "HIGH"
-                            }
-                          }
-                        },
-                        {
-                          "factType": "selector.goodAnswerMatch",
-                          "slots": {
-                            "band": {
-                              "type": "literal",
-                              "value": "VERY_HIGH"
-                            }
-                          }
-                        }
-                      ]
+                    "band": {
+                      "type": "literal",
+                      "value": "MEDIUM"
                     }
-                  ]
+                  }
                 }
               ],
               "then": [
@@ -1347,10 +1319,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-09-elaborate"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1387,29 +1355,6 @@
                       "value": 1
                     }
                   }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "HIGH"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "VERY_HIGH"
-                        }
-                      }
-                    }
-                  ]
                 },
                 {
                   "type": "any",
@@ -1465,10 +1410,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-03-positive-pump"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1532,29 +1473,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "NONE"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    }
-                  ]
                 }
               ],
               "then": [
@@ -1579,10 +1497,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-05-prompt"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1650,38 +1564,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "NONE"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
                 }
               ],
               "then": [
@@ -1706,10 +1588,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-01-pump"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1773,38 +1651,6 @@
                       }
                     }
                   ]
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "NONE"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.goodAnswerMatch",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
                 }
               ],
               "then": [
@@ -1829,10 +1675,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "paper-rule-02-pump"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "paper-dialogue-move-v1"
                       }
                     }
                   }
@@ -1879,10 +1721,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "generated-completion-summary"
-                      },
-                      "templateVersion": {
-                        "type": "literal",
-                        "value": "generated-dialogue-policy-v1"
                       }
                     }
                   }
@@ -1896,6 +1734,23 @@
           ]
         }
       }
-    ]
+    ],
+    "sourceAutoTutorSparcPackage": {
+      "sourcePackageName": "AutoTutor Reinforcement Punishment",
+      "sourceTdfFile": "AutoTutor_Reinforcement_Punishment_TDF.json",
+      "sourceStimulusFile": "AutoTutor_Reinforcement_Punishment_stims.json",
+      "sourceScriptId": "reinforcement_punishment_001",
+      "expectationRelationshipProvenance": null,
+      "relationshipValidation": {
+        "valid": true,
+        "sourceShape": "generated-at-upload",
+        "sourceRelationshipCount": 0,
+        "resolvedRelationshipCount": 0,
+        "generatedClusterCount": 4,
+        "relationshipProvenance": null,
+        "generatedRelationships": false,
+        "relationshipGenerationRequired": true
+      }
+    }
   }
 }
