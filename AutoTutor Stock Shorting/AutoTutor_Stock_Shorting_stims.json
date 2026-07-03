@@ -5,23 +5,8 @@
         "clusterKC": "autotutor.stock-shorting-001.kc.e1",
         "stims": [
           {
-            "stimulusKC": "autotutor.stock-shorting-001.kc.e1.stim",
             "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-            "responseKC": "autotutor.stock-shorting-001.kc.e1.response",
-            "text": "A short seller sells shares they have borrowed rather than shares they already own.",
-            "textStimulus": "A short seller sells shares they have borrowed rather than shares they already own.",
-            "display": {
-              "type": "text",
-              "text": "A short seller sells shares they have borrowed rather than shares they already own."
-            },
-            "response": {
-              "correctResponse": "A standard short sale begins by borrowing shares and selling them."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "stock_shorting_001",
-              "expectationId": "E1"
-            }
+            "text": "A short seller sells shares they have borrowed rather than shares they already own."
           }
         ]
       },
@@ -29,23 +14,8 @@
         "clusterKC": "autotutor.stock-shorting-001.kc.e2",
         "stims": [
           {
-            "stimulusKC": "autotutor.stock-shorting-001.kc.e2.stim",
             "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-            "responseKC": "autotutor.stock-shorting-001.kc.e2.response",
-            "text": "The short seller later must buy equivalent shares to return to the lender.",
-            "textStimulus": "The short seller later must buy equivalent shares to return to the lender.",
-            "display": {
-              "type": "text",
-              "text": "The short seller later must buy equivalent shares to return to the lender."
-            },
-            "response": {
-              "correctResponse": "Closing a short position requires buying shares to return the borrowed shares."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "stock_shorting_001",
-              "expectationId": "E2"
-            }
+            "text": "The short seller later must buy equivalent shares to return to the lender."
           }
         ]
       },
@@ -53,23 +23,8 @@
         "clusterKC": "autotutor.stock-shorting-001.kc.e3",
         "stims": [
           {
-            "stimulusKC": "autotutor.stock-shorting-001.kc.e3.stim",
             "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-            "responseKC": "autotutor.stock-shorting-001.kc.e3.response",
-            "text": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
-            "textStimulus": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
-            "display": {
-              "type": "text",
-              "text": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
-            },
-            "response": {
-              "correctResponse": "A short seller profits when the stock can be bought back for less than it was sold for."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "stock_shorting_001",
-              "expectationId": "E3"
-            }
+            "text": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
           }
         ]
       },
@@ -77,23 +32,8 @@
         "clusterKC": "autotutor.stock-shorting-001.kc.e4",
         "stims": [
           {
-            "stimulusKC": "autotutor.stock-shorting-001.kc.e4.stim",
             "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-            "responseKC": "autotutor.stock-shorting-001.kc.e4.response",
-            "text": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
-            "textStimulus": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
-            "display": {
-              "type": "text",
-              "text": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
-            },
-            "response": {
-              "correctResponse": "Short selling has bounded upside and potentially very large downside."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "stock_shorting_001",
-              "expectationId": "E4"
-            }
+            "text": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
           }
         ]
       }
@@ -150,39 +90,19 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "label": "A short seller sells shares they have borrowed rather than shares they already own.",
-              "stimulusKC": "autotutor.stock-shorting-001.kc.e1.stim",
-              "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-              "KCId": "autotutor.stock-shorting-001.kc.e1.stim",
-              "KCDefault": "autotutor.stock-shorting-001.kc.e1.stim",
-              "KCCluster": "autotutor.stock-shorting-001.kc.e1"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "label": "The short seller later must buy equivalent shares to return to the lender.",
-              "stimulusKC": "autotutor.stock-shorting-001.kc.e2.stim",
-              "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-              "KCId": "autotutor.stock-shorting-001.kc.e2.stim",
-              "KCDefault": "autotutor.stock-shorting-001.kc.e2.stim",
-              "KCCluster": "autotutor.stock-shorting-001.kc.e2"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "label": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
-              "stimulusKC": "autotutor.stock-shorting-001.kc.e3.stim",
-              "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-              "KCId": "autotutor.stock-shorting-001.kc.e3.stim",
-              "KCDefault": "autotutor.stock-shorting-001.kc.e3.stim",
-              "KCCluster": "autotutor.stock-shorting-001.kc.e3"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "label": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
-              "stimulusKC": "autotutor.stock-shorting-001.kc.e4.stim",
-              "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-              "KCId": "autotutor.stock-shorting-001.kc.e4.stim",
-              "KCDefault": "autotutor.stock-shorting-001.kc.e4.stim",
-              "KCCluster": "autotutor.stock-shorting-001.kc.e4"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [
@@ -224,488 +144,11 @@
               }
             },
             {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "sourceScriptId": "stock_shorting_001",
-                "sourceId": "E1",
-                "label": "borrow-and-sell transaction",
-                "assertion": "A standard short sale begins by borrowing shares and selling them.",
-                "proposition": "A short seller sells shares they have borrowed rather than shares they already own."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "hint",
-                "text": "Where do the shares come from before they are sold?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "hint",
-                "text": "Does the short seller own the shares outright at the start?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "prompt",
-                "text": "Where do the shares come from before they are sold?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "pump",
-                "text": "Say more about borrow-and-sell transaction."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about borrow-and-sell transaction."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "elaborate",
-                "text": "A standard short sale begins by borrowing shares and selling them."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "summary",
-                "text": "A standard short sale begins by borrowing shares and selling them."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "positive_feedback",
-                "text": "That supports borrow-and-sell transaction."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "negative_feedback",
-                "text": "That does not yet address borrow-and-sell transaction."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing borrow-and-sell transaction; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward borrow-and-sell transaction."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e1",
-                "action": "neutral_feedback",
-                "text": "Focus on borrow-and-sell transaction: A short seller sells shares they have borrowed rather than shares they already own."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "sourceScriptId": "stock_shorting_001",
-                "sourceId": "E2",
-                "label": "must buy to return",
-                "assertion": "Closing a short position requires buying shares to return the borrowed shares.",
-                "proposition": "The short seller later must buy equivalent shares to return to the lender."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "hint",
-                "text": "What has to happen to the borrowed shares?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "hint",
-                "text": "How does the trader close the short position?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "prompt",
-                "text": "What has to happen to the borrowed shares?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "pump",
-                "text": "Say more about must buy to return."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about must buy to return."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "elaborate",
-                "text": "Closing a short position requires buying shares to return the borrowed shares."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "summary",
-                "text": "Closing a short position requires buying shares to return the borrowed shares."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "positive_feedback",
-                "text": "That supports must buy to return."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "negative_feedback",
-                "text": "That does not yet address must buy to return."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing must buy to return; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward must buy to return."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e2",
-                "action": "neutral_feedback",
-                "text": "Focus on must buy to return: The short seller later must buy equivalent shares to return to the lender."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "sourceScriptId": "stock_shorting_001",
-                "sourceId": "E3",
-                "label": "profit from decline",
-                "assertion": "A short seller profits when the stock can be bought back for less than it was sold for.",
-                "proposition": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "hint",
-                "text": "Which price needs to be lower: the sale price or the buyback price?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "hint",
-                "text": "Why does a price decline help the short seller?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "prompt",
-                "text": "Which price needs to be lower: the sale price or the buyback price?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "pump",
-                "text": "Say more about profit from decline."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about profit from decline."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "elaborate",
-                "text": "A short seller profits when the stock can be bought back for less than it was sold for."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "summary",
-                "text": "A short seller profits when the stock can be bought back for less than it was sold for."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "positive_feedback",
-                "text": "That supports profit from decline."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "negative_feedback",
-                "text": "That does not yet address profit from decline."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing profit from decline; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward profit from decline."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e3",
-                "action": "neutral_feedback",
-                "text": "Focus on profit from decline: Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "sourceScriptId": "stock_shorting_001",
-                "sourceId": "E4",
-                "label": "asymmetric risk",
-                "assertion": "Short selling has bounded upside and potentially very large downside.",
-                "proposition": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "hint",
-                "text": "How low can a stock price go, and how high can it rise?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "hint",
-                "text": "What happens if the stock rises after the short sale?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "prompt",
-                "text": "How low can a stock price go, and how high can it rise?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "pump",
-                "text": "Say more about asymmetric risk."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about asymmetric risk."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "elaborate",
-                "text": "Short selling has bounded upside and potentially very large downside."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "summary",
-                "text": "Short selling has bounded upside and potentially very large downside."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "positive_feedback",
-                "text": "That supports asymmetric risk."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "negative_feedback",
-                "text": "That does not yet address asymmetric risk."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing asymmetric risk; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward asymmetric risk."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.stock-shorting-001.kc.e4",
-                "action": "neutral_feedback",
-                "text": "Focus on asymmetric risk: Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising."
-              }
-            },
-            {
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.stock-shorting-001.kc.e1",
                 "description": "A short seller sells shares they have borrowed rather than shares they already own.",
-                "centrality": 0,
-                "sourceId": "E1"
+                "centrality": 0
               }
             },
             {
@@ -713,8 +156,7 @@
               "slots": {
                 "clusterKC": "autotutor.stock-shorting-001.kc.e2",
                 "description": "The short seller later must buy equivalent shares to return to the lender.",
-                "centrality": 0,
-                "sourceId": "E2"
+                "centrality": 0
               }
             },
             {
@@ -722,8 +164,7 @@
               "slots": {
                 "clusterKC": "autotutor.stock-shorting-001.kc.e3",
                 "description": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
-                "centrality": 0,
-                "sourceId": "E3"
+                "centrality": 0
               }
             },
             {
@@ -731,76 +172,7 @@
               "slots": {
                 "clusterKC": "autotutor.stock-shorting-001.kc.e4",
                 "description": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
-                "centrality": 0,
-                "sourceId": "E4"
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M1",
-                "label": "ordinary-sale misconception",
-                "description": "Short selling means selling shares you already own because you expect a decline.",
-                "repair": "Selling owned shares exits a long position; short selling creates an obligation because borrowed shares must be returned.",
-                "repairQuestion": "What makes a short sale different from simply selling stock you already own?",
-                "repairCriteria": "Repaired when the learner mentions borrowed shares or the later duty to return equivalent shares."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M2",
-                "label": "risk-capped misconception",
-                "description": "Short selling can only lose the amount originally received from selling the shares.",
-                "repair": "The buyback price can exceed the sale price by a lot, so losses can exceed the original proceeds.",
-                "repairQuestion": "If shares are sold short at $80 and later cost $200 to buy back, what happens?",
-                "repairCriteria": "Repaired when the learner says the short seller loses money because covering costs more than the sale proceeds."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M3",
-                "label": "illegal-manipulation misconception",
-                "description": "All short selling is illegal market manipulation.",
-                "repair": "Ordinary short selling is regulated and can be used for speculation, hedging, or liquidity. Manipulative conduct such as spreading false rumors is a separate problem.",
-                "repairQuestion": "How is a regulated short sale different from manipulative short-and-distort behavior?",
-                "repairCriteria": "Repaired when the learner distinguishes ordinary regulated borrowing/selling from illegal manipulation or false rumors."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M1",
-                "action": "splice",
-                "text": "What makes a short sale different from simply selling stock you already own?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M2",
-                "action": "splice",
-                "text": "If shares are sold short at $80 and later cost $200 to buy back, what happens?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M3",
-                "action": "splice",
-                "text": "How is a regulated short sale different from manipulative short-and-distort behavior?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "completion",
-                "action": "summary",
-                "text": "Short selling reverses the usual buy-then-sell order: borrow shares, sell them, then buy replacement shares to return. Falling prices can create profit; rising prices create losses and margin pressure. Ordinary short selling is regulated and distinct from manipulative rumor-driven trading."
+                "centrality": 0
               }
             }
           ],
@@ -1348,7 +720,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1526,7 +898,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1617,7 +989,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     }
                   }
                 },
@@ -1731,26 +1103,25 @@
                 }
               ]
             }
-          ]
+          ],
+          "misconceptionTable": {
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "Short selling means selling shares you already own because you expect a decline."
+              },
+              {
+                "id": "M2",
+                "text": "Short selling can only lose the amount originally received from selling the shares."
+              },
+              {
+                "id": "M3",
+                "text": "All short selling is illegal market manipulation."
+              }
+            ]
+          }
         }
       }
-    ],
-    "sourceAutoTutorSparcPackage": {
-      "sourcePackageName": "AutoTutor Stock Shorting",
-      "sourceTdfFile": "AutoTutor_Stock_Shorting_TDF.json",
-      "sourceStimulusFile": "AutoTutor_Stock_Shorting_stims.json",
-      "sourceScriptId": "stock_shorting_001",
-      "expectationRelationshipProvenance": null,
-      "relationshipValidation": {
-        "valid": true,
-        "sourceShape": "generated-at-upload",
-        "sourceRelationshipCount": 0,
-        "resolvedRelationshipCount": 0,
-        "generatedClusterCount": 4,
-        "relationshipProvenance": null,
-        "generatedRelationships": false,
-        "relationshipGenerationRequired": true
-      }
-    }
+    ]
   }
 }

@@ -5,23 +5,8 @@
         "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
         "stims": [
           {
-            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e1.stim",
             "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-            "responseKC": "autotutor.working-memory-ltm-001.kc.e1.response",
-            "text": "Working memory holds and manipulates a small amount of information for an ongoing task.",
-            "textStimulus": "Working memory holds and manipulates a small amount of information for an ongoing task.",
-            "display": {
-              "type": "text",
-              "text": "Working memory holds and manipulates a small amount of information for an ongoing task."
-            },
-            "response": {
-              "correctResponse": "Working memory is limited active maintenance and manipulation for current cognition."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "working_memory_ltm_001",
-              "expectationId": "E1"
-            }
+            "text": "Working memory holds and manipulates a small amount of information for an ongoing task."
           }
         ]
       },
@@ -29,23 +14,8 @@
         "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
         "stims": [
           {
-            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e2.stim",
             "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-            "responseKC": "autotutor.working-memory-ltm-001.kc.e2.response",
-            "text": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
-            "textStimulus": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
-            "display": {
-              "type": "text",
-              "text": "Long-term memory stores knowledge, skills, and experiences more durably than working memory."
-            },
-            "response": {
-              "correctResponse": "Long-term memory is durable storage for knowledge and experiences."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "working_memory_ltm_001",
-              "expectationId": "E2"
-            }
+            "text": "Long-term memory stores knowledge, skills, and experiences more durably than working memory."
           }
         ]
       },
@@ -53,23 +23,8 @@
         "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
         "stims": [
           {
-            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e3.stim",
             "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-            "responseKC": "autotutor.working-memory-ltm-001.kc.e3.response",
-            "text": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
-            "textStimulus": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
-            "display": {
-              "type": "text",
-              "text": "Long-term memories must be retrieved or activated into working memory to be used in the moment."
-            },
-            "response": {
-              "correctResponse": "Using long-term knowledge requires retrieving it into working memory."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "working_memory_ltm_001",
-              "expectationId": "E3"
-            }
+            "text": "Long-term memories must be retrieved or activated into working memory to be used in the moment."
           }
         ]
       },
@@ -77,23 +32,8 @@
         "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
         "stims": [
           {
-            "stimulusKC": "autotutor.working-memory-ltm-001.kc.e4.stim",
             "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-            "responseKC": "autotutor.working-memory-ltm-001.kc.e4.response",
-            "text": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
-            "textStimulus": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
-            "display": {
-              "type": "text",
-              "text": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
-            },
-            "response": {
-              "correctResponse": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "working_memory_ltm_001",
-              "expectationId": "E4"
-            }
+            "text": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
           }
         ]
       }
@@ -150,39 +90,19 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "label": "Working memory holds and manipulates a small amount of information for an ongoing task.",
-              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e1.stim",
-              "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-              "KCId": "autotutor.working-memory-ltm-001.kc.e1.stim",
-              "KCDefault": "autotutor.working-memory-ltm-001.kc.e1.stim",
-              "KCCluster": "autotutor.working-memory-ltm-001.kc.e1"
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "label": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
-              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e2.stim",
-              "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-              "KCId": "autotutor.working-memory-ltm-001.kc.e2.stim",
-              "KCDefault": "autotutor.working-memory-ltm-001.kc.e2.stim",
-              "KCCluster": "autotutor.working-memory-ltm-001.kc.e2"
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "label": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
-              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e3.stim",
-              "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-              "KCId": "autotutor.working-memory-ltm-001.kc.e3.stim",
-              "KCDefault": "autotutor.working-memory-ltm-001.kc.e3.stim",
-              "KCCluster": "autotutor.working-memory-ltm-001.kc.e3"
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "label": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
-              "stimulusKC": "autotutor.working-memory-ltm-001.kc.e4.stim",
-              "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-              "KCId": "autotutor.working-memory-ltm-001.kc.e4.stim",
-              "KCDefault": "autotutor.working-memory-ltm-001.kc.e4.stim",
-              "KCCluster": "autotutor.working-memory-ltm-001.kc.e4"
+              "clusterKC": "autotutor.working-memory-ltm-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [
@@ -224,488 +144,11 @@
               }
             },
             {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "sourceScriptId": "working_memory_ltm_001",
-                "sourceId": "E1",
-                "label": "working-memory active workspace",
-                "assertion": "Working memory is limited active maintenance and manipulation for current cognition.",
-                "proposition": "Working memory holds and manipulates a small amount of information for an ongoing task."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "hint",
-                "text": "What are you doing with the verification code while typing it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "hint",
-                "text": "Is working memory passive storage or active use?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "prompt",
-                "text": "What are you doing with the verification code while typing it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "pump",
-                "text": "Say more about working-memory active workspace."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about working-memory active workspace."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "elaborate",
-                "text": "Working memory is limited active maintenance and manipulation for current cognition."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "summary",
-                "text": "Working memory is limited active maintenance and manipulation for current cognition."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "positive_feedback",
-                "text": "That supports working-memory active workspace."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "negative_feedback",
-                "text": "That does not yet address working-memory active workspace."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing working-memory active workspace; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward working-memory active workspace."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
-                "action": "neutral_feedback",
-                "text": "Focus on working-memory active workspace: Working memory holds and manipulates a small amount of information for an ongoing task."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "sourceScriptId": "working_memory_ltm_001",
-                "sourceId": "E2",
-                "label": "long-term durable store",
-                "assertion": "Long-term memory is durable storage for knowledge and experiences.",
-                "proposition": "Long-term memory stores knowledge, skills, and experiences more durably than working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "hint",
-                "text": "Where would a childhood address or vocabulary word be stored?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "hint",
-                "text": "What makes long-term memory different in time scale?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "prompt",
-                "text": "Where would a childhood address or vocabulary word be stored?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "pump",
-                "text": "Say more about long-term durable store."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about long-term durable store."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "elaborate",
-                "text": "Long-term memory is durable storage for knowledge and experiences."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "summary",
-                "text": "Long-term memory is durable storage for knowledge and experiences."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "positive_feedback",
-                "text": "That supports long-term durable store."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "negative_feedback",
-                "text": "That does not yet address long-term durable store."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing long-term durable store; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward long-term durable store."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
-                "action": "neutral_feedback",
-                "text": "Focus on long-term durable store: Long-term memory stores knowledge, skills, and experiences more durably than working memory."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "sourceScriptId": "working_memory_ltm_001",
-                "sourceId": "E3",
-                "label": "retrieval into working memory",
-                "assertion": "Using long-term knowledge requires retrieving it into working memory.",
-                "proposition": "Long-term memories must be retrieved or activated into working memory to be used in the moment."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "hint",
-                "text": "When solving a problem with a known formula, where is the formula while you use it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "hint",
-                "text": "Does stored knowledge help without being brought into current attention?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "prompt",
-                "text": "When solving a problem with a known formula, where is the formula while you use it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "pump",
-                "text": "Say more about retrieval into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about retrieval into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "elaborate",
-                "text": "Using long-term knowledge requires retrieving it into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "summary",
-                "text": "Using long-term knowledge requires retrieving it into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "positive_feedback",
-                "text": "That supports retrieval into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "negative_feedback",
-                "text": "That does not yet address retrieval into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing retrieval into working memory; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward retrieval into working memory."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
-                "action": "neutral_feedback",
-                "text": "Focus on retrieval into working memory: Long-term memories must be retrieved or activated into working memory to be used in the moment."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "sourceScriptId": "working_memory_ltm_001",
-                "sourceId": "E4",
-                "label": "capacity and learning load",
-                "assertion": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks.",
-                "proposition": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "hint",
-                "text": "Why can too many new steps overwhelm a learner?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "hint",
-                "text": "How can prior knowledge make a task easier?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "prompt",
-                "text": "Why can too many new steps overwhelm a learner?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "pump",
-                "text": "Say more about capacity and learning load."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about capacity and learning load."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "elaborate",
-                "text": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "summary",
-                "text": "Working-memory limits shape learning, while long-term knowledge can organize information into chunks."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "positive_feedback",
-                "text": "That supports capacity and learning load."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "negative_feedback",
-                "text": "That does not yet address capacity and learning load."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing capacity and learning load; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward capacity and learning load."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
-                "action": "neutral_feedback",
-                "text": "Focus on capacity and learning load: Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge."
-              }
-            },
-            {
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.working-memory-ltm-001.kc.e1",
                 "description": "Working memory holds and manipulates a small amount of information for an ongoing task.",
-                "centrality": 0,
-                "sourceId": "E1"
+                "centrality": 0
               }
             },
             {
@@ -713,8 +156,7 @@
               "slots": {
                 "clusterKC": "autotutor.working-memory-ltm-001.kc.e2",
                 "description": "Long-term memory stores knowledge, skills, and experiences more durably than working memory.",
-                "centrality": 0,
-                "sourceId": "E2"
+                "centrality": 0
               }
             },
             {
@@ -722,8 +164,7 @@
               "slots": {
                 "clusterKC": "autotutor.working-memory-ltm-001.kc.e3",
                 "description": "Long-term memories must be retrieved or activated into working memory to be used in the moment.",
-                "centrality": 0,
-                "sourceId": "E3"
+                "centrality": 0
               }
             },
             {
@@ -731,76 +172,7 @@
               "slots": {
                 "clusterKC": "autotutor.working-memory-ltm-001.kc.e4",
                 "description": "Working memory is capacity-limited, so learning improves when tasks reduce unnecessary load and connect new information to long-term knowledge.",
-                "centrality": 0,
-                "sourceId": "E4"
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M1",
-                "label": "storage-size misconception",
-                "description": "Working memory is just a smaller hard drive where temporary memories sit until moved unchanged into long-term memory.",
-                "repair": "Working memory is active use and attention, not merely a passive staging folder.",
-                "repairQuestion": "What makes working memory 'working' when you solve a mental arithmetic problem?",
-                "repairCriteria": "Repaired when the learner says information is actively held, manipulated, or attended to for a task."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M2",
-                "label": "automatic-transfer misconception",
-                "description": "Everything held briefly in working memory automatically becomes long-term memory.",
-                "repair": "Many working-memory contents fade when no longer needed; durable learning requires encoding, practice, or meaningful connection.",
-                "repairQuestion": "Why might you forget a verification code seconds after using it?",
-                "repairCriteria": "Repaired when the learner says temporary information can be discarded or not encoded into long-term memory."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M3",
-                "label": "long-term-always-conscious misconception",
-                "description": "If something is in long-term memory, it is constantly present in conscious thought.",
-                "repair": "Long-term memory can be stored without being active; retrieval brings it into working memory when needed.",
-                "repairQuestion": "Where is your childhood address before someone asks for it?",
-                "repairCriteria": "Repaired when the learner says it is stored in long-term memory but not active until retrieved."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M1",
-                "action": "splice",
-                "text": "What makes working memory 'working' when you solve a mental arithmetic problem?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M2",
-                "action": "splice",
-                "text": "Why might you forget a verification code seconds after using it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M3",
-                "action": "splice",
-                "text": "Where is your childhood address before someone asks for it?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "completion",
-                "action": "summary",
-                "text": "Working memory is a small, active workspace for current thinking; long-term memory is durable storage of knowledge and experiences. Remembered knowledge must be retrieved into working memory to be used. Working-memory limits matter for learning, and long-term knowledge can reduce load by organizing information into meaningful chunks."
+                "centrality": 0
               }
             }
           ],
@@ -1348,7 +720,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1526,7 +898,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1617,7 +989,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     }
                   }
                 },
@@ -1731,26 +1103,25 @@
                 }
               ]
             }
-          ]
+          ],
+          "misconceptionTable": {
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "Working memory is just a smaller hard drive where temporary memories sit until moved unchanged into long-term memory."
+              },
+              {
+                "id": "M2",
+                "text": "Everything held briefly in working memory automatically becomes long-term memory."
+              },
+              {
+                "id": "M3",
+                "text": "If something is in long-term memory, it is constantly present in conscious thought."
+              }
+            ]
+          }
         }
       }
-    ],
-    "sourceAutoTutorSparcPackage": {
-      "sourcePackageName": "AutoTutor Working Memory Long Term Memory",
-      "sourceTdfFile": "AutoTutor_Working_Memory_Long_Term_Memory_TDF.json",
-      "sourceStimulusFile": "AutoTutor_Working_Memory_Long_Term_Memory_stims.json",
-      "sourceScriptId": "working_memory_ltm_001",
-      "expectationRelationshipProvenance": null,
-      "relationshipValidation": {
-        "valid": true,
-        "sourceShape": "generated-at-upload",
-        "sourceRelationshipCount": 0,
-        "resolvedRelationshipCount": 0,
-        "generatedClusterCount": 4,
-        "relationshipProvenance": null,
-        "generatedRelationships": false,
-        "relationshipGenerationRequired": true
-      }
-    }
+    ]
   }
 }

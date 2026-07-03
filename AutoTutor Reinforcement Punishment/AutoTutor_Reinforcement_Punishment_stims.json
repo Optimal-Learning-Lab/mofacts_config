@@ -5,23 +5,8 @@
         "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
         "stims": [
           {
-            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e1.stim",
             "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-            "responseKC": "autotutor.reinforcement-punishment-001.kc.e1.response",
-            "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-            "textStimulus": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-            "display": {
-              "type": "text",
-              "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
-            },
-            "response": {
-              "correctResponse": "Reinforcement increases behavior; punishment decreases behavior."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "reinforcement_punishment_001",
-              "expectationId": "E1"
-            }
+            "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
           }
         ]
       },
@@ -29,23 +14,8 @@
         "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
         "stims": [
           {
-            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e2.stim",
             "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-            "responseKC": "autotutor.reinforcement-punishment-001.kc.e2.response",
-            "text": "Positive means a stimulus is added; negative means a stimulus is removed.",
-            "textStimulus": "Positive means a stimulus is added; negative means a stimulus is removed.",
-            "display": {
-              "type": "text",
-              "text": "Positive means a stimulus is added; negative means a stimulus is removed."
-            },
-            "response": {
-              "correctResponse": "In operant conditioning, positive means added and negative means removed."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "reinforcement_punishment_001",
-              "expectationId": "E2"
-            }
+            "text": "Positive means a stimulus is added; negative means a stimulus is removed."
           }
         ]
       },
@@ -53,23 +23,8 @@
         "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
         "stims": [
           {
-            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e3.stim",
             "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-            "responseKC": "autotutor.reinforcement-punishment-001.kc.e3.response",
-            "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-            "textStimulus": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-            "display": {
-              "type": "text",
-              "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
-            },
-            "response": {
-              "correctResponse": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "reinforcement_punishment_001",
-              "expectationId": "E3"
-            }
+            "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
           }
         ]
       },
@@ -77,23 +32,8 @@
         "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
         "stims": [
           {
-            "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e4.stim",
             "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-            "responseKC": "autotutor.reinforcement-punishment-001.kc.e4.response",
-            "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-            "textStimulus": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-            "display": {
-              "type": "text",
-              "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
-            },
-            "response": {
-              "correctResponse": "Operant consequences are classified by crossing added/removed with increase/decrease."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "reinforcement_punishment_001",
-              "expectationId": "E4"
-            }
+            "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
           }
         ]
       }
@@ -150,39 +90,19 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "label": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e1.stim",
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e1.stim",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e1.stim",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e1"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "label": "Positive means a stimulus is added; negative means a stimulus is removed.",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e2.stim",
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e2.stim",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e2.stim",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e2"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "label": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e3.stim",
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e3.stim",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e3.stim",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e3"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "label": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e4.stim",
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e4.stim",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e4.stim",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e4"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [
@@ -224,488 +144,11 @@
               }
             },
             {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "sourceScriptId": "reinforcement_punishment_001",
-                "sourceId": "E1",
-                "label": "effect dimension",
-                "assertion": "Reinforcement increases behavior; punishment decreases behavior.",
-                "proposition": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "hint",
-                "text": "What happens to the behavior after the consequence?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "hint",
-                "text": "Which term means the behavior becomes more likely?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "prompt",
-                "text": "What happens to the behavior after the consequence?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "pump",
-                "text": "Say more about effect dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about effect dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "elaborate",
-                "text": "Reinforcement increases behavior; punishment decreases behavior."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "summary",
-                "text": "Reinforcement increases behavior; punishment decreases behavior."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "positive_feedback",
-                "text": "That supports effect dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "negative_feedback",
-                "text": "That does not yet address effect dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing effect dimension; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward effect dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-                "action": "neutral_feedback",
-                "text": "Focus on effect dimension: Reinforcement increases the future likelihood of a behavior; punishment decreases it."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "sourceScriptId": "reinforcement_punishment_001",
-                "sourceId": "E2",
-                "label": "positive-negative dimension",
-                "assertion": "In operant conditioning, positive means added and negative means removed.",
-                "proposition": "Positive means a stimulus is added; negative means a stimulus is removed."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "hint",
-                "text": "In this technical vocabulary, what does positive mean?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "hint",
-                "text": "Does negative mean unpleasant, or removed?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "prompt",
-                "text": "In this technical vocabulary, what does positive mean?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "pump",
-                "text": "Say more about positive-negative dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about positive-negative dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "elaborate",
-                "text": "In operant conditioning, positive means added and negative means removed."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "summary",
-                "text": "In operant conditioning, positive means added and negative means removed."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "positive_feedback",
-                "text": "That supports positive-negative dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "negative_feedback",
-                "text": "That does not yet address positive-negative dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing positive-negative dimension; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward positive-negative dimension."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-                "action": "neutral_feedback",
-                "text": "Focus on positive-negative dimension: Positive means a stimulus is added; negative means a stimulus is removed."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "sourceScriptId": "reinforcement_punishment_001",
-                "sourceId": "E3",
-                "label": "negative reinforcement",
-                "assertion": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus.",
-                "proposition": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "hint",
-                "text": "If the seatbelt beep stops when you buckle up, what behavior increases?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "hint",
-                "text": "Why is this reinforcement rather than punishment?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "prompt",
-                "text": "If the seatbelt beep stops when you buckle up, what behavior increases?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "pump",
-                "text": "Say more about negative reinforcement."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about negative reinforcement."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "elaborate",
-                "text": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "summary",
-                "text": "Negative reinforcement increases behavior by removing or avoiding an aversive stimulus."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "positive_feedback",
-                "text": "That supports negative reinforcement."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "negative_feedback",
-                "text": "That does not yet address negative reinforcement."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing negative reinforcement; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward negative reinforcement."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-                "action": "neutral_feedback",
-                "text": "Focus on negative reinforcement: Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "sourceScriptId": "reinforcement_punishment_001",
-                "sourceId": "E4",
-                "label": "four-cell classification",
-                "assertion": "Operant consequences are classified by crossing added/removed with increase/decrease.",
-                "proposition": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "hint",
-                "text": "How would you classify adding a reprimand to reduce texting?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "hint",
-                "text": "How would you classify removing a toy to reduce misbehavior?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "prompt",
-                "text": "How would you classify adding a reprimand to reduce texting?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "pump",
-                "text": "Say more about four-cell classification."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about four-cell classification."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "elaborate",
-                "text": "Operant consequences are classified by crossing added/removed with increase/decrease."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "summary",
-                "text": "Operant consequences are classified by crossing added/removed with increase/decrease."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "positive_feedback",
-                "text": "That supports four-cell classification."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "negative_feedback",
-                "text": "That does not yet address four-cell classification."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing four-cell classification; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward four-cell classification."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-                "action": "neutral_feedback",
-                "text": "Focus on four-cell classification: The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
-              }
-            },
-            {
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
                 "description": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-                "centrality": 0,
-                "sourceId": "E1"
+                "centrality": 0
               }
             },
             {
@@ -713,8 +156,7 @@
               "slots": {
                 "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
                 "description": "Positive means a stimulus is added; negative means a stimulus is removed.",
-                "centrality": 0,
-                "sourceId": "E2"
+                "centrality": 0
               }
             },
             {
@@ -722,8 +164,7 @@
               "slots": {
                 "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
                 "description": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-                "centrality": 0,
-                "sourceId": "E3"
+                "centrality": 0
               }
             },
             {
@@ -731,76 +172,7 @@
               "slots": {
                 "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
                 "description": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-                "centrality": 0,
-                "sourceId": "E4"
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M1",
-                "label": "negative-reinforcement-punishment",
-                "description": "Negative reinforcement means punishment or a bad consequence.",
-                "repair": "Negative reinforcement is still reinforcement; it increases behavior by removing something.",
-                "repairQuestion": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?",
-                "repairCriteria": "Repaired when the learner says reinforcement because the behavior increases and the aversive stimulus is removed."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M2",
-                "label": "positive-good-negative-bad",
-                "description": "Positive means pleasant/good and negative means unpleasant/bad.",
-                "repair": "In this vocabulary, positive and negative refer to adding or removing a stimulus, not moral value or pleasantness.",
-                "repairQuestion": "What does positive mean in positive punishment?",
-                "repairCriteria": "Repaired when the learner says a stimulus is added, even if it is unpleasant."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M3",
-                "label": "intention-over-effect",
-                "description": "A consequence is reinforcement if the teacher intended it as a reward, regardless of what happens to behavior.",
-                "repair": "Operant labels depend on the behavior's observed future change, not only the giver's intention.",
-                "repairQuestion": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?",
-                "repairCriteria": "Repaired when the learner says classification depends on whether the behavior actually increases or decreases."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M1",
-                "action": "splice",
-                "text": "If a behavior increases because it turns off an annoying alarm, is that reinforcement or punishment, and why?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M2",
-                "action": "splice",
-                "text": "What does positive mean in positive punishment?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M3",
-                "action": "splice",
-                "text": "If praise is intended as a reward but the behavior decreases, can we call it reinforcement based only on intention?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "completion",
-                "action": "summary",
-                "text": "Reinforcement and punishment are defined by behavioral effect: increase versus decrease. Positive and negative mean adding versus removing a stimulus. The common trap is treating negative reinforcement as punishment; it is reinforcement because it increases the behavior that removes or avoids an aversive condition."
+                "centrality": 0
               }
             }
           ],
@@ -1348,7 +720,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1526,7 +898,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1617,7 +989,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     }
                   }
                 },
@@ -1731,26 +1103,25 @@
                 }
               ]
             }
-          ]
+          ],
+          "misconceptionTable": {
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "Negative reinforcement means punishment or a bad consequence."
+              },
+              {
+                "id": "M2",
+                "text": "Positive means pleasant/good and negative means unpleasant/bad."
+              },
+              {
+                "id": "M3",
+                "text": "A consequence is reinforcement if the teacher intended it as a reward, regardless of what happens to behavior."
+              }
+            ]
+          }
         }
       }
-    ],
-    "sourceAutoTutorSparcPackage": {
-      "sourcePackageName": "AutoTutor Reinforcement Punishment",
-      "sourceTdfFile": "AutoTutor_Reinforcement_Punishment_TDF.json",
-      "sourceStimulusFile": "AutoTutor_Reinforcement_Punishment_stims.json",
-      "sourceScriptId": "reinforcement_punishment_001",
-      "expectationRelationshipProvenance": null,
-      "relationshipValidation": {
-        "valid": true,
-        "sourceShape": "generated-at-upload",
-        "sourceRelationshipCount": 0,
-        "resolvedRelationshipCount": 0,
-        "generatedClusterCount": 4,
-        "relationshipProvenance": null,
-        "generatedRelationships": false,
-        "relationshipGenerationRequired": true
-      }
-    }
+    ]
   }
 }

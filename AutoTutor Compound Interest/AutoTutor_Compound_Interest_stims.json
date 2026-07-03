@@ -5,23 +5,8 @@
         "clusterKC": "autotutor.compound-interest-001.kc.e1",
         "stims": [
           {
-            "stimulusKC": "autotutor.compound-interest-001.kc.e1.stim",
             "clusterKC": "autotutor.compound-interest-001.kc.e1",
-            "responseKC": "autotutor.compound-interest-001.kc.e1.response",
-            "text": "After each compounding period, earned interest is added to the balance or principal.",
-            "textStimulus": "After each compounding period, earned interest is added to the balance or principal.",
-            "display": {
-              "type": "text",
-              "text": "After each compounding period, earned interest is added to the balance or principal."
-            },
-            "response": {
-              "correctResponse": "After each period, compound interest adds earned interest to the balance."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "compound_interest_001",
-              "expectationId": "E1"
-            }
+            "text": "After each compounding period, earned interest is added to the balance or principal."
           }
         ]
       },
@@ -29,23 +14,8 @@
         "clusterKC": "autotutor.compound-interest-001.kc.e2",
         "stims": [
           {
-            "stimulusKC": "autotutor.compound-interest-001.kc.e2.stim",
             "clusterKC": "autotutor.compound-interest-001.kc.e2",
-            "responseKC": "autotutor.compound-interest-001.kc.e2.response",
-            "text": "Later interest is calculated on the original principal plus previously earned interest.",
-            "textStimulus": "Later interest is calculated on the original principal plus previously earned interest.",
-            "display": {
-              "type": "text",
-              "text": "Later interest is calculated on the original principal plus previously earned interest."
-            },
-            "response": {
-              "correctResponse": "Compound interest pays interest on accumulated interest as well as original principal."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "compound_interest_001",
-              "expectationId": "E2"
-            }
+            "text": "Later interest is calculated on the original principal plus previously earned interest."
           }
         ]
       },
@@ -53,23 +23,8 @@
         "clusterKC": "autotutor.compound-interest-001.kc.e3",
         "stims": [
           {
-            "stimulusKC": "autotutor.compound-interest-001.kc.e3.stim",
             "clusterKC": "autotutor.compound-interest-001.kc.e3",
-            "responseKC": "autotutor.compound-interest-001.kc.e3.response",
-            "text": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
-            "textStimulus": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
-            "display": {
-              "type": "text",
-              "text": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
-            },
-            "response": {
-              "correctResponse": "Compounding repeatedly multiplies the balance by a rate factor."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "compound_interest_001",
-              "expectationId": "E3"
-            }
+            "text": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
           }
         ]
       },
@@ -77,23 +32,8 @@
         "clusterKC": "autotutor.compound-interest-001.kc.e4",
         "stims": [
           {
-            "stimulusKC": "autotutor.compound-interest-001.kc.e4.stim",
             "clusterKC": "autotutor.compound-interest-001.kc.e4",
-            "responseKC": "autotutor.compound-interest-001.kc.e4.response",
-            "text": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance.",
-            "textStimulus": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance.",
-            "display": {
-              "type": "text",
-              "text": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance."
-            },
-            "response": {
-              "correctResponse": "Simple interest keeps the original principal as the base; compound interest updates the base."
-            },
-            "parameter": "0,0.8",
-            "sourceAutoTutor": {
-              "scriptId": "compound_interest_001",
-              "expectationId": "E4"
-            }
+            "text": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance."
           }
         ]
       }
@@ -150,39 +90,19 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "label": "After each compounding period, earned interest is added to the balance or principal.",
-              "stimulusKC": "autotutor.compound-interest-001.kc.e1.stim",
-              "clusterKC": "autotutor.compound-interest-001.kc.e1",
-              "KCId": "autotutor.compound-interest-001.kc.e1.stim",
-              "KCDefault": "autotutor.compound-interest-001.kc.e1.stim",
-              "KCCluster": "autotutor.compound-interest-001.kc.e1"
+              "clusterKC": "autotutor.compound-interest-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "label": "Later interest is calculated on the original principal plus previously earned interest.",
-              "stimulusKC": "autotutor.compound-interest-001.kc.e2.stim",
-              "clusterKC": "autotutor.compound-interest-001.kc.e2",
-              "KCId": "autotutor.compound-interest-001.kc.e2.stim",
-              "KCDefault": "autotutor.compound-interest-001.kc.e2.stim",
-              "KCCluster": "autotutor.compound-interest-001.kc.e2"
+              "clusterKC": "autotutor.compound-interest-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "label": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
-              "stimulusKC": "autotutor.compound-interest-001.kc.e3.stim",
-              "clusterKC": "autotutor.compound-interest-001.kc.e3",
-              "KCId": "autotutor.compound-interest-001.kc.e3.stim",
-              "KCDefault": "autotutor.compound-interest-001.kc.e3.stim",
-              "KCCluster": "autotutor.compound-interest-001.kc.e3"
+              "clusterKC": "autotutor.compound-interest-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "label": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance.",
-              "stimulusKC": "autotutor.compound-interest-001.kc.e4.stim",
-              "clusterKC": "autotutor.compound-interest-001.kc.e4",
-              "KCId": "autotutor.compound-interest-001.kc.e4.stim",
-              "KCDefault": "autotutor.compound-interest-001.kc.e4.stim",
-              "KCCluster": "autotutor.compound-interest-001.kc.e4"
+              "clusterKC": "autotutor.compound-interest-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [
@@ -224,488 +144,11 @@
               }
             },
             {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "sourceScriptId": "compound_interest_001",
-                "sourceId": "E1",
-                "label": "interest added to balance",
-                "assertion": "After each period, compound interest adds earned interest to the balance.",
-                "proposition": "After each compounding period, earned interest is added to the balance or principal."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "hint",
-                "text": "What happens to the interest after the first period?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "hint",
-                "text": "Does the next calculation use the old principal only, or the updated balance?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "prompt",
-                "text": "What happens to the interest after the first period?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "pump",
-                "text": "Say more about interest added to balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about interest added to balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "elaborate",
-                "text": "After each period, compound interest adds earned interest to the balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "summary",
-                "text": "After each period, compound interest adds earned interest to the balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "positive_feedback",
-                "text": "That supports interest added to balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "negative_feedback",
-                "text": "That does not yet address interest added to balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing interest added to balance; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward interest added to balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "action": "neutral_feedback",
-                "text": "Focus on interest added to balance: After each compounding period, earned interest is added to the balance or principal."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "sourceScriptId": "compound_interest_001",
-                "sourceId": "E2",
-                "label": "interest on interest",
-                "assertion": "Compound interest pays interest on accumulated interest as well as original principal.",
-                "proposition": "Later interest is calculated on the original principal plus previously earned interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "hint",
-                "text": "For $1,000 at 5%, what amount earns interest in year 2?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "hint",
-                "text": "Why is the second year's interest more than the first year's in annual compounding?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "prompt",
-                "text": "For $1,000 at 5%, what amount earns interest in year 2?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "pump",
-                "text": "Say more about interest on interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about interest on interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "elaborate",
-                "text": "Compound interest pays interest on accumulated interest as well as original principal."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "summary",
-                "text": "Compound interest pays interest on accumulated interest as well as original principal."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "positive_feedback",
-                "text": "That supports interest on interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "negative_feedback",
-                "text": "That does not yet address interest on interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing interest on interest; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward interest on interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "action": "neutral_feedback",
-                "text": "Focus on interest on interest: Later interest is calculated on the original principal plus previously earned interest."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "sourceScriptId": "compound_interest_001",
-                "sourceId": "E3",
-                "label": "multiplicative growth",
-                "assertion": "Compounding repeatedly multiplies the balance by a rate factor.",
-                "proposition": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "hint",
-                "text": "What operation happens each period when you apply a percent rate?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "hint",
-                "text": "Does a fixed 5% rate mean a fixed dollar amount every year?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "prompt",
-                "text": "What operation happens each period when you apply a percent rate?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "pump",
-                "text": "Say more about multiplicative growth."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about multiplicative growth."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "elaborate",
-                "text": "Compounding repeatedly multiplies the balance by a rate factor."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "summary",
-                "text": "Compounding repeatedly multiplies the balance by a rate factor."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "positive_feedback",
-                "text": "That supports multiplicative growth."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "negative_feedback",
-                "text": "That does not yet address multiplicative growth."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing multiplicative growth; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward multiplicative growth."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "action": "neutral_feedback",
-                "text": "Focus on multiplicative growth: Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
-              }
-            },
-            {
-              "factType": "learningTarget.source",
-              "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "sourceScriptId": "compound_interest_001",
-                "sourceId": "E4",
-                "label": "contrast with simple interest",
-                "assertion": "Simple interest keeps the original principal as the base; compound interest updates the base.",
-                "proposition": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "hint",
-                "text": "What amount does simple interest keep using as its base?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "hint",
-                "text": "How does the base for compound interest change?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "prompt",
-                "text": "What amount does simple interest keep using as its base?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "pump",
-                "text": "Say more about contrast with simple interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "positive_pump",
-                "text": "Good start. Add more detail about contrast with simple interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "elaborate",
-                "text": "Simple interest keeps the original principal as the base; compound interest updates the base."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "summary",
-                "text": "Simple interest keeps the original principal as the base; compound interest updates the base."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "positive_feedback",
-                "text": "That supports contrast with simple interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "negative_feedback",
-                "text": "That does not yet address contrast with simple interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "positive_neutral_feedback",
-                "text": "You are partly addressing contrast with simple interest; keep going."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "negative_neutral_feedback",
-                "text": "Let's redirect toward contrast with simple interest."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "learningTarget",
-                "clusterKC": "autotutor.compound-interest-001.kc.e4",
-                "action": "neutral_feedback",
-                "text": "Focus on contrast with simple interest: Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance."
-              }
-            },
-            {
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.compound-interest-001.kc.e1",
                 "description": "After each compounding period, earned interest is added to the balance or principal.",
-                "centrality": 0,
-                "sourceId": "E1"
+                "centrality": 0
               }
             },
             {
@@ -713,8 +156,7 @@
               "slots": {
                 "clusterKC": "autotutor.compound-interest-001.kc.e2",
                 "description": "Later interest is calculated on the original principal plus previously earned interest.",
-                "centrality": 0,
-                "sourceId": "E2"
+                "centrality": 0
               }
             },
             {
@@ -722,8 +164,7 @@
               "slots": {
                 "clusterKC": "autotutor.compound-interest-001.kc.e3",
                 "description": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
-                "centrality": 0,
-                "sourceId": "E3"
+                "centrality": 0
               }
             },
             {
@@ -731,76 +172,7 @@
               "slots": {
                 "clusterKC": "autotutor.compound-interest-001.kc.e4",
                 "description": "Simple interest computes each period's interest only from the original principal, while compound interest uses the updated balance.",
-                "centrality": 0,
-                "sourceId": "E4"
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M1",
-                "label": "linear-growth misconception",
-                "description": "A fixed annual rate means the same dollar amount is added every year.",
-                "repair": "A fixed percent is applied to a changing balance, so the dollar amount can grow.",
-                "repairQuestion": "After the first $50 is added, what balance earns interest in the next year?",
-                "repairCriteria": "Repaired when the learner says the next period uses the updated balance or that the dollar interest can increase because the base increased."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M2",
-                "label": "principal-only misconception",
-                "description": "Compound interest is just interest on the original principal.",
-                "repair": "That describes simple interest. Compound interest includes accumulated interest in the future base.",
-                "repairQuestion": "What part besides the original principal can earn interest in compound interest?",
-                "repairCriteria": "Repaired when the learner identifies accumulated or previous interest as also earning interest."
-              }
-            },
-            {
-              "factType": "diagnostic.misconceptionSource",
-              "slots": {
-                "id": "M3",
-                "label": "frequency-does-not-matter misconception",
-                "description": "Compounding frequency is irrelevant if the annual rate is the same.",
-                "repair": "With the same nominal annual rate, more frequent compounding updates the balance more often, changing the amount unless the rate is already expressed as an effective annual yield.",
-                "repairQuestion": "Why might monthly compounding produce a different balance than annual compounding at the same nominal rate?",
-                "repairCriteria": "Repaired when the learner says the balance is updated more often or the rate is applied across more periods."
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M1",
-                "action": "splice",
-                "text": "After the first $50 is added, what balance earns interest in the next year?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M2",
-                "action": "splice",
-                "text": "What part besides the original principal can earn interest in compound interest?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "misconception",
-                "id": "M3",
-                "action": "splice",
-                "text": "Why might monthly compounding produce a different balance than annual compounding at the same nominal rate?"
-              }
-            },
-            {
-              "factType": "dialogue.moveContent",
-              "slots": {
-                "targetType": "completion",
-                "action": "summary",
-                "text": "Compound interest is interest on the original principal plus accumulated interest. Each compounding period updates the balance, so growth is multiplicative rather than a fixed linear dollar add-on. Simple interest uses only the original principal; compound interest uses the growing balance."
+                "centrality": 0
               }
             }
           ],
@@ -1348,7 +720,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1526,7 +898,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     },
                     "streakCount": {
                       "type": "literal",
@@ -1617,7 +989,7 @@
                   "slots": {
                     "type": {
                       "type": "literal",
-                      "value": "assertion"
+                      "value": "answer"
                     }
                   }
                 },
@@ -1731,26 +1103,25 @@
                 }
               ]
             }
-          ]
+          ],
+          "misconceptionTable": {
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "A fixed annual rate means the same dollar amount is added every year."
+              },
+              {
+                "id": "M2",
+                "text": "Compound interest is just interest on the original principal."
+              },
+              {
+                "id": "M3",
+                "text": "Compounding frequency is irrelevant if the annual rate is the same."
+              }
+            ]
+          }
         }
       }
-    ],
-    "sourceAutoTutorSparcPackage": {
-      "sourcePackageName": "AutoTutor Compound Interest",
-      "sourceTdfFile": "AutoTutor_Compound_Interest_TDF.json",
-      "sourceStimulusFile": "AutoTutor_Compound_Interest_stims.json",
-      "sourceScriptId": "compound_interest_001",
-      "expectationRelationshipProvenance": null,
-      "relationshipValidation": {
-        "valid": true,
-        "sourceShape": "generated-at-upload",
-        "sourceRelationshipCount": 0,
-        "resolvedRelationshipCount": 0,
-        "generatedClusterCount": 4,
-        "relationshipProvenance": null,
-        "generatedRelationships": false,
-        "relationshipGenerationRequired": true
-      }
-    }
+    ]
   }
 }
