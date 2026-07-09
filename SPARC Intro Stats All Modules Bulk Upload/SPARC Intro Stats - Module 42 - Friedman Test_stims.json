@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "friedman-test",
+        "clustername": "Friedman Test Content Completion",
+        "clusterKC": "intro-stats.friedman-test.97441.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "friedman-test-sparc-page",
-            "clusterKC": "friedman-test",
-            "textStimulus": "SPARC Intro Stats - Module 42 - Friedman Test",
+            "stimulusKC": "intro-stats.friedman-test.97441.content-completion",
+            "clusterKC": "intro-stats.friedman-test.97441.content-completion",
+            "textStimulus": "Friedman Test Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97441",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-42-friedman-test",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "friedman-test"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97441-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Friedman Test has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97441"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Friedman Test Content Completion",
+              "stimuliSetId": "sparc:intro-stats.friedman-test.97441.content-completion",
+              "stimulusKC": "intro-stats.friedman-test.97441.content-completion",
+              "clusterKC": "intro-stats.friedman-test.97441.content-completion",
+              "KCId": "intro-stats.friedman-test.97441.content-completion",
+              "KCDefault": "intro-stats.friedman-test.97441.content-completion",
+              "KCCluster": "intro-stats.friedman-test.97441.content-completion",
+              "source": {
+                "activityId": "97441",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-42-friedman-test",
+                "objectives": []
+              }
             }
           ]
         }

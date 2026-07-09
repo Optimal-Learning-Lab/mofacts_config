@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "wilcoxon-signed-rank-test",
+        "clustername": "Wilcoxon Signed-Rank Test Content Completion",
+        "clusterKC": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "wilcoxon-signed-rank-test-sparc-page",
-            "clusterKC": "wilcoxon-signed-rank-test",
-            "textStimulus": "SPARC Intro Stats - Module 39 - Wilcoxon Signed-Rank Test",
+            "stimulusKC": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+            "clusterKC": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+            "textStimulus": "Wilcoxon Signed-Rank Test Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97438",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-39-wilcoxon-signed-rank-test",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "wilcoxon-signed-rank-test"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97438-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Wilcoxon Signed-Rank Test has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97438"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Wilcoxon Signed-Rank Test Content Completion",
+              "stimuliSetId": "sparc:intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "stimulusKC": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "clusterKC": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "KCId": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "KCDefault": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "KCCluster": "intro-stats.wilcoxon-signed-rank-test.97438.content-completion",
+              "source": {
+                "activityId": "97438",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-39-wilcoxon-signed-rank-test",
+                "objectives": []
+              }
             }
           ]
         }

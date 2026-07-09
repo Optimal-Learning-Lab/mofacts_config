@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "mann-whitney-u-test",
+        "clustername": "Mann-Whitney U Test Content Completion",
+        "clusterKC": "intro-stats.mann-whitney-u-test.97437.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "mann-whitney-u-test-sparc-page",
-            "clusterKC": "mann-whitney-u-test",
-            "textStimulus": "SPARC Intro Stats - Module 38 - Mann-Whitney U Test",
+            "stimulusKC": "intro-stats.mann-whitney-u-test.97437.content-completion",
+            "clusterKC": "intro-stats.mann-whitney-u-test.97437.content-completion",
+            "textStimulus": "Mann-Whitney U Test Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97437",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-38-mann-whitney-u-test",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "mann-whitney-u-test"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97437-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Mann-Whitney U Test has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97437"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Mann-Whitney U Test Content Completion",
+              "stimuliSetId": "sparc:intro-stats.mann-whitney-u-test.97437.content-completion",
+              "stimulusKC": "intro-stats.mann-whitney-u-test.97437.content-completion",
+              "clusterKC": "intro-stats.mann-whitney-u-test.97437.content-completion",
+              "KCId": "intro-stats.mann-whitney-u-test.97437.content-completion",
+              "KCDefault": "intro-stats.mann-whitney-u-test.97437.content-completion",
+              "KCCluster": "intro-stats.mann-whitney-u-test.97437.content-completion",
+              "source": {
+                "activityId": "97437",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-38-mann-whitney-u-test",
+                "objectives": []
+              }
             }
           ]
         }

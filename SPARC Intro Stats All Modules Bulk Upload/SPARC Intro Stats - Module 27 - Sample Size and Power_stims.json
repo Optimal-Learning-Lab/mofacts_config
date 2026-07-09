@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "sample-size-and-power",
+        "clustername": "Sample Size and Power Content Completion",
+        "clusterKC": "intro-stats.sample-size-and-power.97432.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "sample-size-and-power-sparc-page",
-            "clusterKC": "sample-size-and-power",
-            "textStimulus": "SPARC Intro Stats - Module 27 - Sample Size and Power",
+            "stimulusKC": "intro-stats.sample-size-and-power.97432.content-completion",
+            "clusterKC": "intro-stats.sample-size-and-power.97432.content-completion",
+            "textStimulus": "Sample Size and Power Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97432",
+              "partId": "content-completion",
+              "pageId": "112996",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "sample-size-and-power"
+        ]
       }
     ],
     "sparcPages": [
@@ -722,7 +728,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Sample Size and Power Content Completion",
+              "stimuliSetId": "sparc:intro-stats.sample-size-and-power.97432.content-completion",
+              "stimulusKC": "intro-stats.sample-size-and-power.97432.content-completion",
+              "clusterKC": "intro-stats.sample-size-and-power.97432.content-completion",
+              "KCId": "intro-stats.sample-size-and-power.97432.content-completion",
+              "KCDefault": "intro-stats.sample-size-and-power.97432.content-completion",
+              "KCCluster": "intro-stats.sample-size-and-power.97432.content-completion",
+              "source": {
+                "activityId": "97432",
+                "partId": "content-completion",
+                "pageId": "112996",
+                "objectives": []
+              }
             }
           ]
         }

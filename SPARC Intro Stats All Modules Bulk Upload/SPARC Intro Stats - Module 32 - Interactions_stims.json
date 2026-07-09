@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "interactions",
+        "clustername": "Interactions Content Completion",
+        "clusterKC": "intro-stats.interactions.97433.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "interactions-sparc-page",
-            "clusterKC": "interactions",
-            "textStimulus": "SPARC Intro Stats - Module 32 - Interactions",
+            "stimulusKC": "intro-stats.interactions.97433.content-completion",
+            "clusterKC": "intro-stats.interactions.97433.content-completion",
+            "textStimulus": "Interactions Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97433",
+              "partId": "content-completion",
+              "pageId": "130780",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "interactions"
+        ]
       }
     ],
     "sparcPages": [
@@ -822,7 +828,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Interactions Content Completion",
+              "stimuliSetId": "sparc:intro-stats.interactions.97433.content-completion",
+              "stimulusKC": "intro-stats.interactions.97433.content-completion",
+              "clusterKC": "intro-stats.interactions.97433.content-completion",
+              "KCId": "intro-stats.interactions.97433.content-completion",
+              "KCDefault": "intro-stats.interactions.97433.content-completion",
+              "KCCluster": "intro-stats.interactions.97433.content-completion",
+              "source": {
+                "activityId": "97433",
+                "partId": "content-completion",
+                "pageId": "130780",
+                "objectives": []
+              }
             }
           ]
         }

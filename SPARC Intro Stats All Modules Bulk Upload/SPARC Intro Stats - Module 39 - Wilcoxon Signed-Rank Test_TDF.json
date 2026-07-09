@@ -9,10 +9,12 @@
     },
     "unit": [
       {
-        "unitname": "Variables SPARC Page",
+        "unitname": "Wilcoxon Signed-Rank Test SPARC Page",
         "sparcsession": {
           "clusterlist": "0",
-          "unitMode": "distance"
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p",
+          "pageId": "sparc-intro-stats-module-39-wilcoxon-signed-rank-test"
         }
       }
     ]

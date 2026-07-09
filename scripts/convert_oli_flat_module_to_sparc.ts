@@ -14,6 +14,7 @@ type ConversionContext = {
   documentId: string;
   stimulusFile: string;
   tdfFile: string;
+  calculateProbability: string;
 };
 
 type CliOptions = {
@@ -23,6 +24,7 @@ type CliOptions = {
   outputRoot: string;
   lessonPrefix: string;
   zip: boolean;
+  calculateProbability: string;
 };
 
 type ConversionResult = {
@@ -39,6 +41,35 @@ type MissingReference = {
   activityId?: string;
   kind: 'page' | 'activity';
 };
+
+type SparcModelTarget = {
+  clusterIndex: number;
+  clusterKC: string;
+  stimulusKC: string;
+  label: string;
+  activityId: string;
+  partId: string;
+  inputId?: string;
+  objectives: string[];
+  pageId: string;
+};
+
+type SparcModelTargetRegistry = {
+  targets: SparcModelTarget[];
+  byKey: Map<string, SparcModelTarget>;
+};
+
+type ModelTargetParams = {
+  activity: JsonRecord;
+  activityId: string;
+  part: JsonRecord;
+  pageId: string;
+  moduleSlug: string;
+  label?: string;
+  inputId?: string;
+};
+
+const DEFAULT_SPARC_CALCULATE_PROBABILITY = 'p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p';
 
 const COVERED_OLI_TYPES = new Set([
   'Activity',
@@ -347,6 +378,92 @@ function safeFileName(value: string): string {
   return value.replace(/[<>:"/\\|?*]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function createModelTargetRegistry(): SparcModelTargetRegistry {
+  return {
+    targets: [],
+    byKey: new Map<string, SparcModelTarget>(),
+  };
+}
+
+function targetKey(params: ModelTargetParams): string {
+  return [
+    params.moduleSlug,
+    params.activityId,
+    nonBlank(params.part.id, 'part.id'),
+    params.inputId || '',
+  ].join('|');
+}
+
+function partObjectives(part: JsonRecord): string[] {
+  return asArray(part.objectives ?? [], 'part.objectives')
+    .map((value) => String(value).trim())
+    .filter(Boolean);
+}
+
+function modelTargetKc(params: ModelTargetParams): string {
+  const partId = slug(nonBlank(params.part.id, 'part.id'));
+  const inputSuffix = params.inputId && slug(params.inputId) !== partId
+    ? `.${slug(params.inputId)}`
+    : '';
+  return `intro-stats.${params.moduleSlug}.${slug(params.activityId)}.${partId}${inputSuffix}`;
+}
+
+function ensureModelTarget(
+  registry: SparcModelTargetRegistry,
+  params: ModelTargetParams,
+): SparcModelTarget {
+  const key = targetKey(params);
+  const existing = registry.byKey.get(key);
+  if (existing) {
+    return existing;
+  }
+  const clusterKC = modelTargetKc(params);
+  const target: SparcModelTarget = {
+    clusterIndex: registry.targets.length,
+    clusterKC,
+    stimulusKC: clusterKC,
+    label: params.label || optionalText(params.activity.title) || params.activityId,
+    activityId: params.activityId,
+    partId: nonBlank(params.part.id, 'part.id'),
+    ...(params.inputId ? { inputId: params.inputId } : {}),
+    objectives: partObjectives(params.part),
+    pageId: params.pageId,
+  };
+  registry.targets.push(target);
+  registry.byKey.set(key, target);
+  return target;
+}
+
+function clusterListForTargets(targets: SparcModelTarget[]): string {
+  if (targets.length === 0) {
+    throw new Error('SPARC conversion produced no model targets.');
+  }
+  return targets.length === 1 ? '0' : `0-${targets.length - 1}`;
+}
+
+function ensureContentCompletionTarget(params: {
+  registry: SparcModelTargetRegistry;
+  moduleId: string;
+  moduleSlug: string;
+  moduleTitle: string;
+  pageId: string;
+}): SparcModelTarget {
+  return ensureModelTarget(params.registry, {
+    activity: {
+      id: params.moduleId,
+      title: params.moduleTitle,
+    },
+    activityId: params.moduleId,
+    part: {
+      id: 'content-completion',
+      objectives: [],
+    },
+    pageId: params.pageId,
+    moduleSlug: params.moduleSlug,
+    label: `${params.moduleTitle} Content Completion`,
+  });
+}
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, '&amp;')
@@ -641,6 +758,7 @@ function ruleForExactResponse(params: {
   outcome: 'correct' | 'incorrect';
   message: string;
   kc: string;
+  clusterIndex: number;
 }): JsonRecord {
   return {
     id: params.id,
@@ -677,6 +795,13 @@ function ruleForExactResponse(params: {
         target: { documentId: variable('documentId'), nodeId: literal(params.feedbackNodeId) },
       },
       { type: 'credit', kc: params.kc },
+      {
+        type: 'model-practice',
+        outcome: params.outcome,
+        clusterIndex: params.clusterIndex,
+        nodeId: params.nodeId,
+        responseValue: variable('input'),
+      },
     ],
   };
 }
@@ -725,6 +850,7 @@ function buildMultipleChoiceExercise(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const activity = params.activity;
   const activityId = nonBlank(activity.id, 'activity.id');
@@ -734,6 +860,14 @@ function buildMultipleChoiceExercise(params: {
   const choiceMap = buildChoiceMap(activity);
   const authoring = asRecord(content.authoring, 'activity.content.authoring');
   const part = asRecord(asArray(authoring.parts, 'activity.content.authoring.parts')[0], 'authoring.parts[0]');
+  const modelTarget = ensureModelTarget(params.modelTargets, {
+    activity,
+    activityId,
+    part,
+    pageId: params.pageId,
+    moduleSlug: params.moduleSlug,
+    label: stem || optionalText(activity.title),
+  });
   const correctResponse = correctResponseForPart(part);
   const correctChoiceId = responseLegacyMatch(correctResponse, `correct legacyMatch for ${activityId}`);
   const feedbackNodeId = `node-${activityId}-feedback`;
@@ -770,11 +904,13 @@ function buildMultipleChoiceExercise(params: {
       outcome: correct ? 'correct' : 'incorrect',
       message: matchedResponse ? feedbackForResponse(matchedResponse) : (correct ? feedbackForResponse(correctResponse) : 'Incorrect.'),
       kc: optionalText(asArray(part.objectives ?? [], 'part.objectives')[0]) || params.moduleSlug,
+      clusterIndex: modelTarget.clusterIndex,
     }));
     return {
       id: nodeId,
       nodeType: 'atomic',
       atomType: 'button',
+      clusterIndex: modelTarget.clusterIndex,
       label,
       value: choiceId,
       expected: correctChoiceId,
@@ -803,6 +939,7 @@ function buildTargetedCataExercise(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const activity = params.activity;
   const activityId = nonBlank(activity.id, 'activity.id');
@@ -816,6 +953,14 @@ function buildTargetedCataExercise(params: {
   const correctTuple = asArray(authoring.correct, 'TargetedCATA authoring.correct');
   const correctIds = new Set(asArray(correctTuple[0], 'TargetedCATA correct ids').map((value) => String(value)));
   const part = asRecord(asArray(authoring.parts, 'activity.content.authoring.parts')[0], 'authoring.parts[0]');
+  const modelTarget = ensureModelTarget(params.modelTargets, {
+    activity,
+    activityId,
+    part,
+    pageId: params.pageId,
+    moduleSlug: params.moduleSlug,
+    label: stem || optionalText(activity.title),
+  });
   const responses = asArray(part.responses, 'TargetedCATA part.responses').filter(isRecord);
   const feedbackNodeId = `node-${activityId}-feedback`;
   const choiceMap = buildChoiceMap(activity);
@@ -841,7 +986,7 @@ function buildTargetedCataExercise(params: {
       groupType: 'checkbox-choice',
       layout: { glue: { mode: 'inline-control' } },
       children: [
-        { id: nodeId, nodeType: 'atomic', atomType: 'checkbox', checked: false, expected },
+        { id: nodeId, nodeType: 'atomic', atomType: 'checkbox', clusterIndex: modelTarget.clusterIndex, checked: false, expected },
         { id: `${rowNodeId}-label`, nodeType: 'atomic', atomType: 'html-block', value: escapeHtml(label) },
       ],
     };
@@ -877,6 +1022,13 @@ function buildTargetedCataExercise(params: {
         target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
       },
       { type: 'credit', kc: responseKc(part, params.moduleSlug) },
+      {
+        type: 'model-practice',
+        outcome,
+        clusterIndex: modelTarget.clusterIndex,
+        nodeId: `node-${activityId}-check`,
+        responseValue: literal(legacyMatch),
+      },
     ];
     params.productionRules.push({
       id: `sparc-intro-stats.${activityId}.${slug(legacyMatch)}.cata-combination`,
@@ -929,6 +1081,13 @@ function buildTargetedCataExercise(params: {
           target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
         },
         { type: 'credit', kc: responseKc(part, params.moduleSlug) },
+        {
+          type: 'model-practice',
+          outcome,
+          clusterIndex: modelTarget.clusterIndex,
+          nodeId: `node-${activityId}-check`,
+          responseValue: literal(''),
+        },
       ],
     });
   }
@@ -941,7 +1100,7 @@ function buildTargetedCataExercise(params: {
     layout: { visualPreset: 'practice-panel', glue: { mode: 'checkbox-list', orientation: 'vertical', feedbackPlacement: 'below-answers' } },
     children: [
       { id: `node-${activityId}-answers`, nodeType: 'group', groupType: 'answer-list', children: checkboxes },
-      { id: `node-${activityId}-check`, nodeType: 'atomic', atomType: 'button', label: 'Check', value: 'check' },
+      { id: `node-${activityId}-check`, nodeType: 'atomic', atomType: 'button', clusterIndex: modelTarget.clusterIndex, label: 'Check', value: 'check' },
       { id: feedbackNodeId, nodeType: 'atomic', atomType: 'message-box', value: '' },
     ],
     source: {
@@ -961,6 +1120,7 @@ function buildDropdownExercise(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const activity = params.activity;
   const activityId = nonBlank(activity.id, 'activity.id');
@@ -981,6 +1141,15 @@ function buildDropdownExercise(params: {
     if (!part) {
       throw new Error(`Input ${inputId} references missing part ${partId}`);
     }
+    const modelTarget = ensureModelTarget(params.modelTargets, {
+      activity,
+      activityId,
+      part,
+      pageId: params.pageId,
+      moduleSlug: params.moduleSlug,
+      label: firstLine || optionalText(activity.title),
+      inputId,
+    });
     const correctResponse = correctResponseForPart(part);
     const correctLegacyMatch = responseLegacyMatch(correctResponse, `correct legacyMatch for ${activityId}:${partId}`);
     const optionIds = asArray(input.choiceIds, 'input.choiceIds').map((value) => String(value));
@@ -1026,6 +1195,7 @@ function buildDropdownExercise(params: {
         outcome,
         message: feedbackForResponse(response),
         kc: responseKc(part, params.moduleSlug),
+        clusterIndex: modelTarget.clusterIndex,
       }));
     }
     children.push({
@@ -1035,7 +1205,7 @@ function buildDropdownExercise(params: {
       layout: { glue: { mode: 'inline-control' } },
       children: [
         { id: `node-${activityId}-label-${inputId}`, nodeType: 'atomic', atomType: 'html-block', value: lineHtml },
-        { id: nodeId, nodeType: 'atomic', atomType: 'dropdown', selected: '', options, expected },
+        { id: nodeId, nodeType: 'atomic', atomType: 'dropdown', clusterIndex: modelTarget.clusterIndex, selected: '', options, expected },
       ],
     });
   }
@@ -1059,6 +1229,7 @@ function buildTextInputExercise(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const activity = params.activity;
   const activityId = nonBlank(activity.id, 'activity.id');
@@ -1077,6 +1248,15 @@ function buildTextInputExercise(params: {
     if (!part) {
       throw new Error(`Input ${inputId} references missing part ${partId}`);
     }
+    const modelTarget = ensureModelTarget(params.modelTargets, {
+      activity,
+      activityId,
+      part,
+      pageId: params.pageId,
+      moduleSlug: params.moduleSlug,
+      label: richTextToPlainText(stemContent).trim() || optionalText(activity.title),
+      inputId,
+    });
     const nodeId = `node-${activityId}-input-${inputId}`;
     const selection = `${activityId}:${inputId}`;
     const responses = asArray(part.responses, 'part.responses').filter(isRecord);
@@ -1115,6 +1295,7 @@ function buildTextInputExercise(params: {
         outcome: responseScoreOutcome(response),
         message: feedbackForResponse(response),
         kc: responseKc(part, params.moduleSlug),
+        clusterIndex: modelTarget.clusterIndex,
       }));
     }
     if (defaultResponse) {
@@ -1154,6 +1335,13 @@ function buildTextInputExercise(params: {
             target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
           },
           { type: 'credit', kc: responseKc(part, params.moduleSlug) },
+          {
+            type: 'model-practice',
+            outcome,
+            clusterIndex: modelTarget.clusterIndex,
+            nodeId,
+            responseValue: variable('input'),
+          },
         ],
       });
     }
@@ -1163,7 +1351,7 @@ function buildTextInputExercise(params: {
       groupType: 'text-input-row',
       layout: { glue: { mode: 'inline-control' } },
       children: [
-        { id: nodeId, nodeType: 'atomic', atomType: 'text-input', value: '', expected: correctResponse ? optionalText(correctResponse.legacyMatch) : '' },
+        { id: nodeId, nodeType: 'atomic', atomType: 'text-input', clusterIndex: modelTarget.clusterIndex, value: '', expected: correctResponse ? optionalText(correctResponse.legacyMatch) : '' },
       ],
     });
   }
@@ -1191,6 +1379,7 @@ function buildShortAnswerExercise(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const activity = params.activity;
   const activityId = nonBlank(activity.id, 'activity.id');
@@ -1199,6 +1388,14 @@ function buildShortAnswerExercise(params: {
   const stem = richTextToHtml(stemContent).trim();
   const authoring = asRecord(content.authoring, 'activity.content.authoring');
   const part = asRecord(asArray(authoring.parts, 'activity.content.authoring.parts')[0], 'authoring.parts[0]');
+  const modelTarget = ensureModelTarget(params.modelTargets, {
+    activity,
+    activityId,
+    part,
+    pageId: params.pageId,
+    moduleSlug: params.moduleSlug,
+    label: richTextToPlainText(stemContent).trim() || optionalText(activity.title),
+  });
   const responses = asArray(part.responses, 'part.responses').filter(isRecord);
   const response = responses.find((candidate) => Number(candidate.score) > 0) || responses[0];
   if (!response) {
@@ -1262,6 +1459,13 @@ function buildShortAnswerExercise(params: {
         target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
       },
       { type: 'credit', kc: responseKc(part, params.moduleSlug) },
+      {
+        type: 'model-practice',
+        outcome,
+        clusterIndex: modelTarget.clusterIndex,
+        nodeId: inputNodeId,
+        responseValue: variable('input'),
+      },
     ],
   });
   return {
@@ -1273,8 +1477,8 @@ function buildShortAnswerExercise(params: {
     layout: { visualPreset: 'practice-panel', glue: { mode: 'short-answer', feedbackPlacement: 'below-answers' } },
     children: [
       { id: `node-${activityId}-stem`, nodeType: 'atomic', atomType: 'html-block', value: stem },
-      { id: inputNodeId, nodeType: 'atomic', atomType: 'text-input', value: '', expected: optionalText(response.rule) || '' },
-      { id: submitNodeId, nodeType: 'atomic', atomType: 'button', label: 'Submit', value: 'submit' },
+      { id: inputNodeId, nodeType: 'atomic', atomType: 'text-input', clusterIndex: modelTarget.clusterIndex, value: '', expected: optionalText(response.rule) || '' },
+      { id: submitNodeId, nodeType: 'atomic', atomType: 'button', clusterIndex: modelTarget.clusterIndex, label: 'Submit', value: 'submit' },
       { id: feedbackNodeId, nodeType: 'atomic', atomType: 'message-box', value: '' },
     ],
     source: { activityId, pageId: params.pageId, oliSubType: activity.subType ?? null },
@@ -1286,13 +1490,12 @@ function buildMissingActivityDiagnostic(params: {
   index: number;
   pageId: string;
   moduleSlug: string;
-  sourceRoot: string;
 }): JsonRecord {
   const html = [
     '<aside class="oli-missing-reference">',
     '<h5>Missing OLI activity file</h5>',
     `<p>The OLI page references activity <code>${escapeHtml(params.activityId)}</code>, but no matching JSON file was found in this export.</p>`,
-    `<p>Module: <code>${escapeHtml(params.moduleSlug)}</code><br>Page: <code>${escapeHtml(params.pageId)}</code><br>Source: <code>${escapeHtml(params.sourceRoot)}</code></p>`,
+    `<p>Module: <code>${escapeHtml(params.moduleSlug)}</code><br>Page: <code>${escapeHtml(params.pageId)}</code></p>`,
     '</aside>',
   ].join('');
   return {
@@ -1319,6 +1522,7 @@ function convertActivityReference(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const contentRoot = contentRootFor(params.sourceRoot);
   const fileIndex = buildJsonFileIndex(contentRoot);
@@ -1356,6 +1560,7 @@ function convertSlateNode(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
   counter: { value: number };
 }): JsonRecord[] {
   if (!isRecord(params.node)) {
@@ -1377,6 +1582,7 @@ function convertSlateNode(params: {
       productionRules: params.productionRules,
       behaviorSteps: params.behaviorSteps,
       responseIntent: params.responseIntent,
+      modelTargets: params.modelTargets,
     })];
   }
   if (type === 'group') {
@@ -1488,6 +1694,7 @@ function convertPage(params: {
   productionRules: JsonRecord[];
   behaviorSteps: JsonRecord[];
   responseIntent: JsonRecord[];
+  modelTargets: SparcModelTargetRegistry;
 }): JsonRecord {
   const pageId = nonBlank(params.page.id, 'page.id');
   const title = nonBlank(params.page.title, 'page.title');
@@ -1505,6 +1712,7 @@ function convertPage(params: {
       productionRules: params.productionRules,
       behaviorSteps: params.behaviorSteps,
       responseIntent: params.responseIntent,
+      modelTargets: params.modelTargets,
       counter,
     }));
   }
@@ -1516,7 +1724,67 @@ function convertPage(params: {
     placement: { region: 'document', order: params.pageIndex },
     layout: { visualPreset: 'section', density: 'comfortable' },
     children,
-    source: { pageId, purpose: params.page.purpose ?? null },
+  source: { pageId, purpose: params.page.purpose ?? null },
+  };
+}
+
+function clusterTargetForModelTarget(target: SparcModelTarget): JsonRecord {
+  return {
+    clusterIndex: target.clusterIndex,
+    label: target.label,
+    stimuliSetId: `sparc:${target.clusterKC}`,
+    stimulusKC: target.stimulusKC,
+    clusterKC: target.clusterKC,
+    KCId: target.stimulusKC,
+    KCDefault: target.stimulusKC,
+    KCCluster: target.clusterKC,
+    source: {
+      activityId: target.activityId,
+      partId: target.partId,
+      ...(target.inputId ? { inputId: target.inputId } : {}),
+      pageId: target.pageId,
+      objectives: target.objectives,
+    },
+  };
+}
+
+function stimulusClusterForModelTarget(target: SparcModelTarget): JsonRecord {
+  return {
+    clusterid: target.clusterIndex,
+    clustername: target.label,
+    clusterKC: target.clusterKC,
+    stims: [{
+      stimulusid: 0,
+      stimulusKC: target.stimulusKC,
+      clusterKC: target.clusterKC,
+      textStimulus: target.label,
+      response: { correctResponse: '__SPARC_COMPLETED__' },
+      source: {
+        activityId: target.activityId,
+        partId: target.partId,
+        ...(target.inputId ? { inputId: target.inputId } : {}),
+        pageId: target.pageId,
+        objectives: target.objectives,
+      },
+    }],
+  };
+}
+
+function emptyModuleNode(params: {
+  moduleTitle: string;
+  moduleId: string;
+  order: number;
+}): JsonRecord {
+  return {
+    id: `node-module-${params.moduleId}-empty-content`,
+    nodeType: 'atomic',
+    atomType: 'html-block',
+    value: `<p>${escapeHtml(params.moduleTitle)} has no convertible OLI page content in this export.</p>`,
+    placement: { region: 'document', order: params.order },
+    source: {
+      conversionIssue: 'empty-oli-module-content',
+      moduleId: params.moduleId,
+    },
   };
 }
 
@@ -1539,6 +1807,7 @@ function convertModule(context: ConversionContext): ConversionResult {
   const productionRules: JsonRecord[] = [];
   const behaviorSteps: JsonRecord[] = [];
   const responseIntent: JsonRecord[] = [];
+  const modelTargets = createModelTargetRegistry();
   const pageNodes = itemRefs.map((pageId, index) => {
     const pagePath = fileIndex.get(pageId);
     if (!pagePath) {
@@ -1554,8 +1823,26 @@ function convertModule(context: ConversionContext): ConversionResult {
       productionRules,
       behaviorSteps,
       responseIntent,
+      modelTargets,
     });
   });
+  if (pageNodes.length === 0) {
+    pageNodes.push(emptyModuleNode({
+      moduleTitle,
+      moduleId: context.moduleId,
+      order: 1,
+    }));
+  }
+  if (modelTargets.targets.length === 0) {
+    ensureContentCompletionTarget({
+      registry: modelTargets,
+      moduleId: context.moduleId,
+      moduleSlug,
+      moduleTitle,
+      pageId: itemRefs[0] || context.documentId,
+    });
+  }
+  const clusterTargets = modelTargets.targets.map(clusterTargetForModelTarget);
   const display: JsonRecord = {
     type: 'sparc',
     documentId: context.documentId,
@@ -1580,24 +1867,11 @@ function convertModule(context: ConversionContext): ConversionResult {
       pageIds: itemRefs,
     },
   };
-  display.clusterTargets = [{ clusterIndex: 0 }];
-  const clusterKC = moduleSlug;
-  const stimulusKC = `${moduleSlug}-sparc-page`;
+  display.clusterTargets = clusterTargets;
   const stimuli = {
     setspec: {
       lessonname: context.lessonName,
-      clusters: [{
-        clusterid: 0,
-        clustername: moduleSlug,
-        clusterKC,
-        stims: [{
-          stimulusid: 0,
-          stimulusKC,
-          clusterKC,
-          textStimulus: context.lessonName,
-          response: { correctResponse: '__SPARC_COMPLETED__' },
-        }],
-      }],
+      clusters: modelTargets.targets.map(stimulusClusterForModelTarget),
       sparcPages: [{
         pageId: context.documentId,
         display,
@@ -1617,8 +1891,10 @@ function convertModule(context: ConversionContext): ConversionResult {
         {
           unitname: `${moduleTitle} SPARC Page`,
           sparcsession: {
-            clusterlist: '0',
+            clusterlist: clusterListForTargets(modelTargets.targets),
             unitMode: 'distance',
+            calculateProbability: context.calculateProbability,
+            pageId: context.documentId,
           },
         },
       ],
@@ -1634,6 +1910,8 @@ function convertModule(context: ConversionContext): ConversionResult {
     },
     counts: {
       pages: pageNodes.length,
+      modelTargets: modelTargets.targets.length,
+      contentCompletionTarget: productionRules.length === 0 && responseIntent.length === 0,
       behaviorSteps: behaviorSteps.length,
       responseIntent: responseIntent.length,
       productionRules: productionRules.length,
@@ -1652,6 +1930,7 @@ function parseArgs(argv: string[]): CliOptions {
     outputRoot: path.join(repoRoot, 'SPARC Intro Stats Variables'),
     lessonPrefix: 'SPARC Intro Stats',
     zip: true,
+    calculateProbability: DEFAULT_SPARC_CALCULATE_PROBABILITY,
   };
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
@@ -1666,6 +1945,11 @@ function parseArgs(argv: string[]): CliOptions {
       options.outputRoot = path.resolve(argv[++index] || '');
     } else if (arg === '--lesson-prefix') {
       options.lessonPrefix = argv[++index] || '';
+    } else if (arg === '--calculate-probability') {
+      options.calculateProbability = argv[++index] || '';
+      if (!options.calculateProbability.trim()) {
+        throw new Error('--calculate-probability requires a non-empty JavaScript function body');
+      }
     } else if (arg === '--no-zip') {
       options.zip = false;
     } else if (arg === '--help' || arg === '-h') {
@@ -1688,6 +1972,8 @@ Options:
   --all-modules          Convert every hierarchy module/container to one flat upload package.
   --output-root <path>   Upload package folder.
   --lesson-prefix <name> Lesson name prefix for generated all-module outputs.
+  --calculate-probability <source>
+                         SPARC adaptive probability function body.
   --no-zip              Write package folders without creating zip files.
 `);
 }
@@ -1705,6 +1991,7 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
       documentId: 'sparc-intro-stats-variables',
       stimulusFile: 'SPARC_Intro_Stats_Variables_stims.json',
       tdfFile: 'SPARC Intro Stats Variables_TDF.json',
+      calculateProbability: options.calculateProbability,
     };
   }
   const moduleNumber = moduleIndex + 1;
@@ -1721,6 +2008,7 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
     documentId: slug(lessonName),
     stimulusFile: `${fileStem}_stims.json`,
     tdfFile: `${fileStem}_TDF.json`,
+    calculateProbability: options.calculateProbability,
   };
 }
 
@@ -1729,6 +2017,18 @@ function writeConversionResult(context: ConversionContext, result: ConversionRes
   writeJson(path.join(context.outputRoot, context.stimulusFile), result.stimuli);
   const notesStem = path.basename(context.tdfFile, '_TDF.json');
   writeJson(path.join(context.auditRoot, `${notesStem}_conversion-notes.json`), result.conversionNotes);
+}
+
+function verifyConversionOutput(outputRoot: string): void {
+  const scriptDir = path.dirname(path.resolve(process.argv[1] || ''));
+  execFileSync(process.execPath, [
+    '--experimental-strip-types',
+    path.join(scriptDir, 'verify_oli_sparc_conversion_output.ts'),
+    '--package-root',
+    outputRoot,
+  ], {
+    stdio: 'inherit',
+  });
 }
 
 function zipConversionOutput(context: ConversionContext): void {
@@ -1757,9 +2057,15 @@ function main(): void {
     lastContext = context;
     const result = convertModule(context);
     writeConversionResult(context, result);
+    if (!options.allModules) {
+      verifyConversionOutput(context.outputRoot);
+    }
     if (options.zip && !options.allModules) {
       zipConversionOutput(context);
     }
+  }
+  if (options.allModules && lastContext) {
+    verifyConversionOutput(lastContext.outputRoot);
   }
   if (options.zip && options.allModules && lastContext) {
     zipConversionOutput(lastContext);

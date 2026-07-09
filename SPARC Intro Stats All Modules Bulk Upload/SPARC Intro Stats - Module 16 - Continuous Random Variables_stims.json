@@ -4,19 +4,27 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "continuous-random-variables",
+        "clustername": "The shaded area in the probability histogram below represents the probability of a male's shoe size being",
+        "clusterKC": "intro-stats.continuous-random-variables.96632.q1-p1",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "continuous-random-variables-sparc-page",
-            "clusterKC": "continuous-random-variables",
-            "textStimulus": "SPARC Intro Stats - Module 16 - Continuous Random Variables",
+            "stimulusKC": "intro-stats.continuous-random-variables.96632.q1-p1",
+            "clusterKC": "intro-stats.continuous-random-variables.96632.q1-p1",
+            "textStimulus": "The shaded area in the probability histogram below represents the probability of a male's shoe size being",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96632",
+              "partId": "q1_p1",
+              "pageId": "97139",
+              "objectives": [
+                "probdistvaluesc"
+              ]
             }
           }
-        ],
-        "clusterKC": "continuous-random-variables"
+        ]
       }
     ],
     "sparcPages": [
@@ -207,6 +215,7 @@
                               "id": "node-96632-choice-Res1",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "at least 12",
                               "value": "Res1",
                               "expected": "Res3"
@@ -215,6 +224,7 @@
                               "id": "node-96632-choice-Res2",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "more than 12",
                               "value": "Res2",
                               "expected": "Res3"
@@ -223,6 +233,7 @@
                               "id": "node-96632-choice-Res3",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "between (and including) 12 and 14",
                               "value": "Res3",
                               "expected": "Res3"
@@ -231,6 +242,7 @@
                               "id": "node-96632-choice-Res4",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "between (not including) 12 and 14",
                               "value": "Res4",
                               "expected": "Res3"
@@ -239,6 +251,7 @@
                               "id": "node-96632-choice-Res5",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "less than 14",
                               "value": "Res5",
                               "expected": "Res3"
@@ -844,6 +857,16 @@
                 {
                   "type": "credit",
                   "kc": "probdistvaluesc"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96632-choice-Res1",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -930,6 +953,16 @@
                 {
                   "type": "credit",
                   "kc": "probdistvaluesc"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96632-choice-Res2",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -1016,6 +1049,16 @@
                 {
                   "type": "credit",
                   "kc": "probdistvaluesc"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96632-choice-Res3",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -1102,6 +1145,16 @@
                 {
                   "type": "credit",
                   "kc": "probdistvaluesc"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96632-choice-Res4",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -1188,6 +1241,16 @@
                 {
                   "type": "credit",
                   "kc": "probdistvaluesc"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96632-choice-Res5",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             }
@@ -1204,7 +1267,22 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "The shaded area in the probability histogram below represents the probability of a male's shoe size being",
+              "stimuliSetId": "sparc:intro-stats.continuous-random-variables.96632.q1-p1",
+              "stimulusKC": "intro-stats.continuous-random-variables.96632.q1-p1",
+              "clusterKC": "intro-stats.continuous-random-variables.96632.q1-p1",
+              "KCId": "intro-stats.continuous-random-variables.96632.q1-p1",
+              "KCDefault": "intro-stats.continuous-random-variables.96632.q1-p1",
+              "KCCluster": "intro-stats.continuous-random-variables.96632.q1-p1",
+              "source": {
+                "activityId": "96632",
+                "partId": "q1_p1",
+                "pageId": "97139",
+                "objectives": [
+                  "probdistvaluesc"
+                ]
+              }
             }
           ]
         }

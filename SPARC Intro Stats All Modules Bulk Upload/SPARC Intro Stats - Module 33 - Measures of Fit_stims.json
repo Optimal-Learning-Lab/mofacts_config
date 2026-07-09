@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "measures-of-fit",
+        "clustername": "Measures of Fit Content Completion",
+        "clusterKC": "intro-stats.measures-of-fit.97431.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "measures-of-fit-sparc-page",
-            "clusterKC": "measures-of-fit",
-            "textStimulus": "SPARC Intro Stats - Module 33 - Measures of Fit",
+            "stimulusKC": "intro-stats.measures-of-fit.97431.content-completion",
+            "clusterKC": "intro-stats.measures-of-fit.97431.content-completion",
+            "textStimulus": "Measures of Fit Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97431",
+              "partId": "content-completion",
+              "pageId": "141803",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "measures-of-fit"
+        ]
       }
     ],
     "sparcPages": [
@@ -581,7 +587,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Measures of Fit Content Completion",
+              "stimuliSetId": "sparc:intro-stats.measures-of-fit.97431.content-completion",
+              "stimulusKC": "intro-stats.measures-of-fit.97431.content-completion",
+              "clusterKC": "intro-stats.measures-of-fit.97431.content-completion",
+              "KCId": "intro-stats.measures-of-fit.97431.content-completion",
+              "KCDefault": "intro-stats.measures-of-fit.97431.content-completion",
+              "KCCluster": "intro-stats.measures-of-fit.97431.content-completion",
+              "source": {
+                "activityId": "97431",
+                "partId": "content-completion",
+                "pageId": "141803",
+                "objectives": []
+              }
             }
           ]
         }

@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "k-means-clustering",
+        "clustername": "K-means Clustering Content Completion",
+        "clusterKC": "intro-stats.k-means-clustering.97436.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "k-means-clustering-sparc-page",
-            "clusterKC": "k-means-clustering",
-            "textStimulus": "SPARC Intro Stats - Module 34 - K-means Clustering",
+            "stimulusKC": "intro-stats.k-means-clustering.97436.content-completion",
+            "clusterKC": "intro-stats.k-means-clustering.97436.content-completion",
+            "textStimulus": "K-means Clustering Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97436",
+              "partId": "content-completion",
+              "pageId": "128394",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "k-means-clustering"
+        ]
       }
     ],
     "sparcPages": [
@@ -801,7 +807,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "K-means Clustering Content Completion",
+              "stimuliSetId": "sparc:intro-stats.k-means-clustering.97436.content-completion",
+              "stimulusKC": "intro-stats.k-means-clustering.97436.content-completion",
+              "clusterKC": "intro-stats.k-means-clustering.97436.content-completion",
+              "KCId": "intro-stats.k-means-clustering.97436.content-completion",
+              "KCDefault": "intro-stats.k-means-clustering.97436.content-completion",
+              "KCCluster": "intro-stats.k-means-clustering.97436.content-completion",
+              "source": {
+                "activityId": "97436",
+                "partId": "content-completion",
+                "pageId": "128394",
+                "objectives": []
+              }
             }
           ]
         }

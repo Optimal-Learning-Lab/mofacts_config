@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "cross-validation",
+        "clustername": "Cross-Validation Content Completion",
+        "clusterKC": "intro-stats.cross-validation.97435.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "cross-validation-sparc-page",
-            "clusterKC": "cross-validation",
-            "textStimulus": "SPARC Intro Stats - Module 35 - Cross-Validation",
+            "stimulusKC": "intro-stats.cross-validation.97435.content-completion",
+            "clusterKC": "intro-stats.cross-validation.97435.content-completion",
+            "textStimulus": "Cross-Validation Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97435",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-35-cross-validation",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "cross-validation"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97435-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Cross-Validation has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97435"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Cross-Validation Content Completion",
+              "stimuliSetId": "sparc:intro-stats.cross-validation.97435.content-completion",
+              "stimulusKC": "intro-stats.cross-validation.97435.content-completion",
+              "clusterKC": "intro-stats.cross-validation.97435.content-completion",
+              "KCId": "intro-stats.cross-validation.97435.content-completion",
+              "KCDefault": "intro-stats.cross-validation.97435.content-completion",
+              "KCCluster": "intro-stats.cross-validation.97435.content-completion",
+              "source": {
+                "activityId": "97435",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-35-cross-validation",
+                "objectives": []
+              }
             }
           ]
         }

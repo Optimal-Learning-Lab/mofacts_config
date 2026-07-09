@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "bootstrapping",
+        "clustername": "Bootstrapping Content Completion",
+        "clusterKC": "intro-stats.bootstrapping.97434.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "bootstrapping-sparc-page",
-            "clusterKC": "bootstrapping",
-            "textStimulus": "SPARC Intro Stats - Module 36 - Bootstrapping",
+            "stimulusKC": "intro-stats.bootstrapping.97434.content-completion",
+            "clusterKC": "intro-stats.bootstrapping.97434.content-completion",
+            "textStimulus": "Bootstrapping Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97434",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-36-bootstrapping",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "bootstrapping"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97434-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Bootstrapping has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97434"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Bootstrapping Content Completion",
+              "stimuliSetId": "sparc:intro-stats.bootstrapping.97434.content-completion",
+              "stimulusKC": "intro-stats.bootstrapping.97434.content-completion",
+              "clusterKC": "intro-stats.bootstrapping.97434.content-completion",
+              "KCId": "intro-stats.bootstrapping.97434.content-completion",
+              "KCDefault": "intro-stats.bootstrapping.97434.content-completion",
+              "KCCluster": "intro-stats.bootstrapping.97434.content-completion",
+              "source": {
+                "activityId": "97434",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-36-bootstrapping",
+                "objectives": []
+              }
             }
           ]
         }

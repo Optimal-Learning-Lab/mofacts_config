@@ -4,19 +4,281 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "case-c-c-chi-squared-test",
+        "clustername": "There are two categorical variables in this problem:* Alcohol risk (none, moderate to severe)* Participation in the 9/11 rescue (yes, no)Which is the explanatory variable and which is the response?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "case-c-c-chi-squared-test-sparc-page",
-            "clusterKC": "case-c-c-chi-squared-test",
-            "textStimulus": "SPARC Intro Stats - Module 28 - Case C→C (Chi-squared test)",
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+            "textStimulus": "There are two categorical variables in this problem:* Alcohol risk (none, moderate to severe)* Participation in the 9/11 rescue (yes, no)Which is the explanatory variable and which is the response?",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96062",
+              "partId": "2947760780",
+              "pageId": "96973",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "case-c-c-chi-squared-test"
+        ]
+      },
+      {
+        "clusterid": 1,
+        "clustername": "Conduct exploratory analysis of the data by calculating the conditional percentages. Summarize your findings. Recall that we calculate the percentages of the response variable for each category of the explanatory variable separately.",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+            "textStimulus": "Conduct exploratory analysis of the data by calculating the conditional percentages. Summarize your findings. Recall that we calculate the percentages of the response variable for each category of the explanatory variable separately.",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96211",
+              "partId": "553781215",
+              "pageId": "96973",
+              "objectives": []
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 2,
+        "clustername": "The expected count of males not driving drunk is:",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+            "textStimulus": "The expected count of males not driving drunk is:",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "95654",
+              "partId": "q1_p1",
+              "pageId": "96930",
+              "objectives": [
+                "computeexpcount"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 3,
+        "clustername": "The expected count of females not driving drunk is:",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+            "textStimulus": "The expected count of females not driving drunk is:",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96115",
+              "partId": "q1_p1",
+              "pageId": "96930",
+              "objectives": [
+                "computeexpcount"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 4,
+        "clustername": "What is the expected count of non-pierced females?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+            "textStimulus": "What is the expected count of non-pierced females?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96233",
+              "partId": "q1_p1",
+              "pageId": "96930",
+              "objectives": [
+                "computeexpcount"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 5,
+        "clustername": "Complete this sentence:\"The expected count that I found in question 1 is the number of non-pierced females that I would expect to see if:\"",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+            "textStimulus": "Complete this sentence:\"The expected count that I found in question 1 is the number of non-pierced females that I would expect to see if:\"",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "95793",
+              "partId": "q1_p1",
+              "pageId": "96930",
+              "objectives": [
+                "hyptest-logic"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 6,
+        "clustername": "What is the contribution of the first cell (pierced females) to the chi-square test statistic?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+            "textStimulus": "What is the contribution of the first cell (pierced females) to the chi-square test statistic?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96314",
+              "partId": "q1_p1",
+              "pageId": "97108",
+              "objectives": [
+                "computechisq"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 7,
+        "clustername": "What is the contribution of the fourth cell (no pierced males) to the chi-squared test statistic?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+            "textStimulus": "What is the contribution of the fourth cell (no pierced males) to the chi-squared test statistic?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96262",
+              "partId": "1046090122",
+              "pageId": "97108",
+              "objectives": []
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 8,
+        "clustername": "What is the chi-square statistic in this case?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+            "textStimulus": "What is the chi-square statistic in this case?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "95949",
+              "partId": "q1_p1",
+              "pageId": "97108",
+              "objectives": [
+                "computechisq"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 9,
+        "clustername": "We are now ready to carry out the significance test, which will assess the significance of the relationship between the risk of alcohol problems and participation in the 9/11 rescue. Which of the following are the appropriate hypotheses for the chi-square test for independence in this case?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+            "textStimulus": "We are now ready to carry out the significance test, which will assess the significance of the relationship between the risk of alcohol problems and participation in the 9/11 rescue. Which of the following are the appropriate hypotheses for the chi-square test for independence in this case?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96300",
+              "partId": "q1_p1",
+              "pageId": "97108",
+              "objectives": [
+                "selecthyp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 10,
+        "clustername": "Are the conditions met under which the chi-square test can be safely used?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+            "textStimulus": "Are the conditions met under which the chi-square test can be safely used?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96248",
+              "partId": "1575270136",
+              "pageId": "97108",
+              "objectives": []
+            }
+          }
+        ]
+      },
+      {
+        "clusterid": 11,
+        "clustername": "A chi-square test regarding the relationship between participation in the 9/11 rescue and risk of alcohol problems among New York firefighters and first responders produced the following results:Based on the p-value results and a significance level of 0.05, which of the following is an appropriate conclusion?",
+        "clusterKC": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+            "clusterKC": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+            "textStimulus": "A chi-square test regarding the relationship between participation in the 9/11 rescue and risk of alcohol problems among New York firefighters and first responders produced the following results:Based on the p-value results and a significance level of 0.05, which of the following is an appropriate conclusion?",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "96602",
+              "partId": "1056735787",
+              "pageId": "96737",
+              "objectives": []
+            }
+          }
+        ]
       }
     ],
     "sparcPages": [
@@ -483,6 +745,7 @@
                               "id": "node-96062-input",
                               "nodeType": "atomic",
                               "atomType": "text-input",
+                              "clusterIndex": 0,
                               "value": "",
                               "expected": "input like {.*}"
                             },
@@ -490,6 +753,7 @@
                               "id": "node-96062-submit",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 0,
                               "label": "Submit",
                               "value": "submit"
                             },
@@ -554,6 +818,7 @@
                               "id": "node-96211-input",
                               "nodeType": "atomic",
                               "atomType": "text-input",
+                              "clusterIndex": 1,
                               "value": "",
                               "expected": "input like {.*}"
                             },
@@ -561,6 +826,7 @@
                               "id": "node-96211-submit",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 1,
                               "label": "Submit",
                               "value": "submit"
                             },
@@ -1132,6 +1398,7 @@
                               "id": "node-95654-choice-A",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 2,
                               "label": "(526 * 138) / 619",
                               "value": "A",
                               "expected": "D"
@@ -1140,6 +1407,7 @@
                               "id": "node-95654-choice-B",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 2,
                               "label": "(93 * 481) / 619",
                               "value": "B",
                               "expected": "D"
@@ -1148,6 +1416,7 @@
                               "id": "node-95654-choice-C",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 2,
                               "label": "(93 * 138) / 619",
                               "value": "C",
                               "expected": "D"
@@ -1156,6 +1425,7 @@
                               "id": "node-95654-choice-D",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 2,
                               "label": "(526 * 481) / 619",
                               "value": "D",
                               "expected": "D"
@@ -1223,6 +1493,7 @@
                               "id": "node-96115-choice-A",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 3,
                               "label": "(526 * 138) / 619",
                               "value": "A",
                               "expected": "A"
@@ -1231,6 +1502,7 @@
                               "id": "node-96115-choice-B",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 3,
                               "label": "(93 * 481) / 619",
                               "value": "B",
                               "expected": "A"
@@ -1239,6 +1511,7 @@
                               "id": "node-96115-choice-C",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 3,
                               "label": "(93 * 138) / 619",
                               "value": "C",
                               "expected": "A"
@@ -1247,6 +1520,7 @@
                               "id": "node-96115-choice-D",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 3,
                               "label": "(526 * 481) / 619",
                               "value": "D",
                               "expected": "A"
@@ -1389,6 +1663,7 @@
                                   "id": "node-96233-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 4,
                                   "label": "414.72",
                                   "value": "A",
                                   "expected": "C"
@@ -1397,6 +1672,7 @@
                                   "id": "node-96233-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 4,
                                   "label": "126.72",
                                   "value": "B",
                                   "expected": "C"
@@ -1405,6 +1681,7 @@
                                   "id": "node-96233-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 4,
                                   "label": "225.28",
                                   "value": "C",
                                   "expected": "C"
@@ -1413,6 +1690,7 @@
                                   "id": "node-96233-choice-D",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 4,
                                   "label": "3,520",
                                   "value": "D",
                                   "expected": "C"
@@ -1421,6 +1699,7 @@
                                   "id": "node-96233-choice-E",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 4,
                                   "label": "64",
                                   "value": "E",
                                   "expected": "C"
@@ -1488,6 +1767,7 @@
                                   "id": "node-95793-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 5,
                                   "label": "(a) gender and piercing were significantly related.",
                                   "value": "A",
                                   "expected": "E"
@@ -1496,6 +1776,7 @@
                                   "id": "node-95793-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 5,
                                   "label": "(b) gender and piercing were independent.",
                                   "value": "B",
                                   "expected": "E"
@@ -1504,6 +1785,7 @@
                                   "id": "node-95793-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 5,
                                   "label": "(c) the null hypothesis were true.",
                                   "value": "C",
                                   "expected": "E"
@@ -1512,6 +1794,7 @@
                                   "id": "node-95793-choice-D",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 5,
                                   "label": "(d) the null hypothesis were rejected.",
                                   "value": "D",
                                   "expected": "E"
@@ -1520,6 +1803,7 @@
                                   "id": "node-95793-choice-E",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 5,
                                   "label": "(e) both (b) and (c) are correct.",
                                   "value": "E",
                                   "expected": "E"
@@ -1999,6 +2283,7 @@
                                   "id": "node-96314-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 6,
                                   "label": "45.16",
                                   "value": "A",
                                   "expected": "B"
@@ -2007,6 +2292,7 @@
                                   "id": "node-96314-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 6,
                                   "label": "62.72",
                                   "value": "B",
                                   "expected": "B"
@@ -2015,6 +2301,7 @@
                                   "id": "node-96314-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 6,
                                   "label": "26.01",
                                   "value": "C",
                                   "expected": "B"
@@ -2023,6 +2310,7 @@
                                   "id": "node-96314-choice-D",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 6,
                                   "label": "40.14",
                                   "value": "D",
                                   "expected": "B"
@@ -2031,6 +2319,7 @@
                                   "id": "node-96314-choice-E",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 6,
                                   "label": "40.64",
                                   "value": "E",
                                   "expected": "B"
@@ -2098,6 +2387,7 @@
                                   "id": "node-96262-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "1.27",
                                   "value": "A",
                                   "expected": "F"
@@ -2106,6 +2396,7 @@
                                   "id": "node-96262-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "90.32",
                                   "value": "B",
                                   "expected": "F"
@@ -2114,6 +2405,7 @@
                                   "id": "node-96262-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "26.01",
                                   "value": "C",
                                   "expected": "F"
@@ -2122,6 +2414,7 @@
                                   "id": "node-96262-choice-D",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "72.25",
                                   "value": "D",
                                   "expected": "F"
@@ -2130,6 +2423,7 @@
                                   "id": "node-96262-choice-E",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "73.9",
                                   "value": "E",
                                   "expected": "F"
@@ -2138,6 +2432,7 @@
                                   "id": "node-96262-choice-F",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 7,
                                   "label": "205.27",
                                   "value": "F",
                                   "expected": "F"
@@ -2205,6 +2500,7 @@
                                   "id": "node-95949-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 8,
                                   "label": "494.949",
                                   "value": "A",
                                   "expected": "A"
@@ -2213,6 +2509,7 @@
                                   "id": "node-95949-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 8,
                                   "label": "1,000",
                                   "value": "B",
                                   "expected": "A"
@@ -2221,6 +2518,7 @@
                                   "id": "node-95949-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 8,
                                   "label": "0.000",
                                   "value": "C",
                                   "expected": "A"
@@ -2369,6 +2667,7 @@
                                   "id": "node-96300-choice-A",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 9,
                                   "label": "A. H0: There is no relationship between the risk of alcohol problems and participation in the 9/11 rescue.Haa: There is a significant relationship between the risk of alcohol problems and participation in the 9/11 rescue.",
                                   "value": "A",
                                   "expected": "C"
@@ -2377,6 +2676,7 @@
                                   "id": "node-96300-choice-B",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 9,
                                   "label": "B. H0: The risk of alcohol problems and participation in the 9/11 rescue are independent.Ha: The risk of alcohol problems and participation in the 9/11 rescue are not independent.",
                                   "value": "B",
                                   "expected": "C"
@@ -2385,6 +2685,7 @@
                                   "id": "node-96300-choice-C",
                                   "nodeType": "atomic",
                                   "atomType": "button",
+                                  "clusterIndex": 9,
                                   "label": "Both A and B are correct.",
                                   "value": "C",
                                   "expected": "C"
@@ -2867,6 +3168,7 @@
                           "id": "node-96248-input",
                           "nodeType": "atomic",
                           "atomType": "text-input",
+                          "clusterIndex": 10,
                           "value": "",
                           "expected": "input like {.*}"
                         },
@@ -2874,6 +3176,7 @@
                           "id": "node-96248-submit",
                           "nodeType": "atomic",
                           "atomType": "button",
+                          "clusterIndex": 10,
                           "label": "Submit",
                           "value": "submit"
                         },
@@ -3408,6 +3711,7 @@
                               "id": "node-96602-choice-A",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 11,
                               "label": "The data provided do not present enough evidence to reject the null hypothesis. Therefore, we can conclude that the risk of alcohol problems among New York firefighters is related to participation in the 9/11 rescue.",
                               "value": "A",
                               "expected": "C"
@@ -3416,6 +3720,7 @@
                               "id": "node-96602-choice-B",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 11,
                               "label": "The data provided do not present enough evidence to reject the null hypothesis. Therefore, we can conclude that the risk of alcohol problems among New York firefighters is not related to participation in the 9/11 rescue.",
                               "value": "B",
                               "expected": "C"
@@ -3424,6 +3729,7 @@
                               "id": "node-96602-choice-C",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 11,
                               "label": "The data provided present enough evidence to reject the null hypothesis. Therefore, we can conclude that the risk of alcohol problems among New York firefighters is related to participation in the 9/11 rescue.",
                               "value": "C",
                               "expected": "C"
@@ -3432,6 +3738,7 @@
                               "id": "node-96602-choice-D",
                               "nodeType": "atomic",
                               "atomType": "button",
+                              "clusterIndex": 11,
                               "label": "The data provided present enough evidence to reject the null hypothesis. Therefore, we can conclude that the risk of alcohol problems among New York firefighters is not related to participation in the 9/11 rescue.",
                               "value": "D",
                               "expected": "C"
@@ -4586,6 +4893,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 0,
+                  "nodeId": "node-96062-input",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -4660,6 +4977,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 1,
+                  "nodeId": "node-96211-input",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -4746,6 +5073,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 2,
+                  "nodeId": "node-95654-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -4832,6 +5169,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 2,
+                  "nodeId": "node-95654-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -4918,6 +5265,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 2,
+                  "nodeId": "node-95654-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5004,6 +5361,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 2,
+                  "nodeId": "node-95654-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5090,6 +5457,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 3,
+                  "nodeId": "node-96115-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5176,6 +5553,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 3,
+                  "nodeId": "node-96115-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5262,6 +5649,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 3,
+                  "nodeId": "node-96115-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5348,6 +5745,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 3,
+                  "nodeId": "node-96115-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5434,6 +5841,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 4,
+                  "nodeId": "node-96233-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5520,6 +5937,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 4,
+                  "nodeId": "node-96233-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5606,6 +6033,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 4,
+                  "nodeId": "node-96233-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5692,6 +6129,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 4,
+                  "nodeId": "node-96233-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5778,6 +6225,16 @@
                 {
                   "type": "credit",
                   "kc": "computeexpcount"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 4,
+                  "nodeId": "node-96233-choice-E",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5864,6 +6321,16 @@
                 {
                   "type": "credit",
                   "kc": "hyptest-logic"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 5,
+                  "nodeId": "node-95793-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -5950,6 +6417,16 @@
                 {
                   "type": "credit",
                   "kc": "hyptest-logic"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 5,
+                  "nodeId": "node-95793-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6036,6 +6513,16 @@
                 {
                   "type": "credit",
                   "kc": "hyptest-logic"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 5,
+                  "nodeId": "node-95793-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6122,6 +6609,16 @@
                 {
                   "type": "credit",
                   "kc": "hyptest-logic"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 5,
+                  "nodeId": "node-95793-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6208,6 +6705,16 @@
                 {
                   "type": "credit",
                   "kc": "hyptest-logic"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 5,
+                  "nodeId": "node-95793-choice-E",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6294,6 +6801,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 6,
+                  "nodeId": "node-96314-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6380,6 +6897,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 6,
+                  "nodeId": "node-96314-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6466,6 +6993,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 6,
+                  "nodeId": "node-96314-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6552,6 +7089,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 6,
+                  "nodeId": "node-96314-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6638,6 +7185,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 6,
+                  "nodeId": "node-96314-choice-E",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6724,6 +7281,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6810,6 +7377,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6896,6 +7473,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -6982,6 +7569,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7068,6 +7665,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-E",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7154,6 +7761,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 7,
+                  "nodeId": "node-96262-choice-F",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7240,6 +7857,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 8,
+                  "nodeId": "node-95949-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7326,6 +7953,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 8,
+                  "nodeId": "node-95949-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7412,6 +8049,16 @@
                 {
                   "type": "credit",
                   "kc": "computechisq"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 8,
+                  "nodeId": "node-95949-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7498,6 +8145,16 @@
                 {
                   "type": "credit",
                   "kc": "selecthyp"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 9,
+                  "nodeId": "node-96300-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7584,6 +8241,16 @@
                 {
                   "type": "credit",
                   "kc": "selecthyp"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 9,
+                  "nodeId": "node-96300-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7670,6 +8337,16 @@
                 {
                   "type": "credit",
                   "kc": "selecthyp"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 9,
+                  "nodeId": "node-96300-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7744,6 +8421,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 10,
+                  "nodeId": "node-96248-input",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7830,6 +8517,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 11,
+                  "nodeId": "node-96602-choice-A",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -7916,6 +8613,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 11,
+                  "nodeId": "node-96602-choice-B",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -8002,6 +8709,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "correct",
+                  "clusterIndex": 11,
+                  "nodeId": "node-96602-choice-C",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             },
@@ -8088,6 +8805,16 @@
                 {
                   "type": "credit",
                   "kc": "case-c-c-chi-squared-test"
+                },
+                {
+                  "type": "model-practice",
+                  "outcome": "incorrect",
+                  "clusterIndex": 11,
+                  "nodeId": "node-96602-choice-D",
+                  "responseValue": {
+                    "type": "variable",
+                    "name": "input"
+                  }
                 }
               ]
             }
@@ -8106,7 +8833,210 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "There are two categorical variables in this problem:* Alcohol risk (none, moderate to severe)* Participation in the 9/11 rescue (yes, no)Which is the explanatory variable and which is the response?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96062.2947760780",
+              "source": {
+                "activityId": "96062",
+                "partId": "2947760780",
+                "pageId": "96973",
+                "objectives": []
+              }
+            },
+            {
+              "clusterIndex": 1,
+              "label": "Conduct exploratory analysis of the data by calculating the conditional percentages. Summarize your findings. Recall that we calculate the percentages of the response variable for each category of the explanatory variable separately.",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96211.553781215",
+              "source": {
+                "activityId": "96211",
+                "partId": "553781215",
+                "pageId": "96973",
+                "objectives": []
+              }
+            },
+            {
+              "clusterIndex": 2,
+              "label": "The expected count of males not driving drunk is:",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.95654.q1-p1",
+              "source": {
+                "activityId": "95654",
+                "partId": "q1_p1",
+                "pageId": "96930",
+                "objectives": [
+                  "computeexpcount"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 3,
+              "label": "The expected count of females not driving drunk is:",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96115.q1-p1",
+              "source": {
+                "activityId": "96115",
+                "partId": "q1_p1",
+                "pageId": "96930",
+                "objectives": [
+                  "computeexpcount"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 4,
+              "label": "What is the expected count of non-pierced females?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96233.q1-p1",
+              "source": {
+                "activityId": "96233",
+                "partId": "q1_p1",
+                "pageId": "96930",
+                "objectives": [
+                  "computeexpcount"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 5,
+              "label": "Complete this sentence:\"The expected count that I found in question 1 is the number of non-pierced females that I would expect to see if:\"",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.95793.q1-p1",
+              "source": {
+                "activityId": "95793",
+                "partId": "q1_p1",
+                "pageId": "96930",
+                "objectives": [
+                  "hyptest-logic"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 6,
+              "label": "What is the contribution of the first cell (pierced females) to the chi-square test statistic?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96314.q1-p1",
+              "source": {
+                "activityId": "96314",
+                "partId": "q1_p1",
+                "pageId": "97108",
+                "objectives": [
+                  "computechisq"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 7,
+              "label": "What is the contribution of the fourth cell (no pierced males) to the chi-squared test statistic?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96262.1046090122",
+              "source": {
+                "activityId": "96262",
+                "partId": "1046090122",
+                "pageId": "97108",
+                "objectives": []
+              }
+            },
+            {
+              "clusterIndex": 8,
+              "label": "What is the chi-square statistic in this case?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.95949.q1-p1",
+              "source": {
+                "activityId": "95949",
+                "partId": "q1_p1",
+                "pageId": "97108",
+                "objectives": [
+                  "computechisq"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 9,
+              "label": "We are now ready to carry out the significance test, which will assess the significance of the relationship between the risk of alcohol problems and participation in the 9/11 rescue. Which of the following are the appropriate hypotheses for the chi-square test for independence in this case?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96300.q1-p1",
+              "source": {
+                "activityId": "96300",
+                "partId": "q1_p1",
+                "pageId": "97108",
+                "objectives": [
+                  "selecthyp"
+                ]
+              }
+            },
+            {
+              "clusterIndex": 10,
+              "label": "Are the conditions met under which the chi-square test can be safely used?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96248.1575270136",
+              "source": {
+                "activityId": "96248",
+                "partId": "1575270136",
+                "pageId": "97108",
+                "objectives": []
+              }
+            },
+            {
+              "clusterIndex": 11,
+              "label": "A chi-square test regarding the relationship between participation in the 9/11 rescue and risk of alcohol problems among New York firefighters and first responders produced the following results:Based on the p-value results and a significance level of 0.05, which of the following is an appropriate conclusion?",
+              "stimuliSetId": "sparc:intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "stimulusKC": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "clusterKC": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "KCId": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "KCDefault": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "KCCluster": "intro-stats.case-c-c-chi-squared-test.96602.1056735787",
+              "source": {
+                "activityId": "96602",
+                "partId": "1056735787",
+                "pageId": "96737",
+                "objectives": []
+              }
             }
           ]
         }

@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "spearman-s-rank-order-correlation",
+        "clustername": "Spearman’s Rank-Order Correlation Content Completion",
+        "clusterKC": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "spearman-s-rank-order-correlation-sparc-page",
-            "clusterKC": "spearman-s-rank-order-correlation",
-            "textStimulus": "SPARC Intro Stats - Module 37 - Spearman’s Rank-Order Correlation",
+            "stimulusKC": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+            "clusterKC": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+            "textStimulus": "Spearman’s Rank-Order Correlation Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97430",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-37-spearman-s-rank-order-correlation",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "spearman-s-rank-order-correlation"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97430-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Spearman’s Rank-Order Correlation has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97430"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Spearman’s Rank-Order Correlation Content Completion",
+              "stimuliSetId": "sparc:intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "stimulusKC": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "clusterKC": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "KCId": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "KCDefault": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "KCCluster": "intro-stats.spearman-s-rank-order-correlation.97430.content-completion",
+              "source": {
+                "activityId": "97430",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-37-spearman-s-rank-order-correlation",
+                "objectives": []
+              }
             }
           ]
         }

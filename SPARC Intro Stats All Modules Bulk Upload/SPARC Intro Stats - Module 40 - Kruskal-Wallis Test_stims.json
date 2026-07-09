@@ -4,19 +4,25 @@
     "clusters": [
       {
         "clusterid": 0,
-        "clustername": "kruskal-wallis-test",
+        "clustername": "Kruskal-Wallis Test Content Completion",
+        "clusterKC": "intro-stats.kruskal-wallis-test.97439.content-completion",
         "stims": [
           {
             "stimulusid": 0,
-            "stimulusKC": "kruskal-wallis-test-sparc-page",
-            "clusterKC": "kruskal-wallis-test",
-            "textStimulus": "SPARC Intro Stats - Module 40 - Kruskal-Wallis Test",
+            "stimulusKC": "intro-stats.kruskal-wallis-test.97439.content-completion",
+            "clusterKC": "intro-stats.kruskal-wallis-test.97439.content-completion",
+            "textStimulus": "Kruskal-Wallis Test Content Completion",
             "response": {
               "correctResponse": "__SPARC_COMPLETED__"
+            },
+            "source": {
+              "activityId": "97439",
+              "partId": "content-completion",
+              "pageId": "sparc-intro-stats-module-40-kruskal-wallis-test",
+              "objectives": []
             }
           }
-        ],
-        "clusterKC": "kruskal-wallis-test"
+        ]
       }
     ],
     "sparcPages": [
@@ -50,7 +56,22 @@
               }
             }
           },
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "node-module-97439-empty-content",
+              "nodeType": "atomic",
+              "atomType": "html-block",
+              "value": "<p>Kruskal-Wallis Test has no convertible OLI page content in this export.</p>",
+              "placement": {
+                "region": "document",
+                "order": 1
+              },
+              "source": {
+                "conversionIssue": "empty-oli-module-content",
+                "moduleId": "97439"
+              }
+            }
+          ],
           "behavior": {
             "steps": []
           },
@@ -67,7 +88,20 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "Kruskal-Wallis Test Content Completion",
+              "stimuliSetId": "sparc:intro-stats.kruskal-wallis-test.97439.content-completion",
+              "stimulusKC": "intro-stats.kruskal-wallis-test.97439.content-completion",
+              "clusterKC": "intro-stats.kruskal-wallis-test.97439.content-completion",
+              "KCId": "intro-stats.kruskal-wallis-test.97439.content-completion",
+              "KCDefault": "intro-stats.kruskal-wallis-test.97439.content-completion",
+              "KCCluster": "intro-stats.kruskal-wallis-test.97439.content-completion",
+              "source": {
+                "activityId": "97439",
+                "partId": "content-completion",
+                "pageId": "sparc-intro-stats-module-40-kruskal-wallis-test",
+                "objectives": []
+              }
             }
           ]
         }
