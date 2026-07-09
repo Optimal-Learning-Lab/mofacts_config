@@ -90,19 +90,43 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "clusterKC": "autotutor.stock-shorting-001.kc.e1"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e1",
+              "label": "A short seller sells shares they have borrowed rather than shares they already own.",
+              "stimuliSetId": "sparc:autotutor.stock-shorting-001.kc.e1",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e1",
+              "KCId": "autotutor.stock-shorting-001.kc.e1",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e1",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "clusterKC": "autotutor.stock-shorting-001.kc.e2"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e2",
+              "label": "The short seller later must buy equivalent shares to return to the lender.",
+              "stimuliSetId": "sparc:autotutor.stock-shorting-001.kc.e2",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e2",
+              "KCId": "autotutor.stock-shorting-001.kc.e2",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e2",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "clusterKC": "autotutor.stock-shorting-001.kc.e3"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e3",
+              "label": "Profit occurs when the later buyback price is lower than the earlier sale price, ignoring costs.",
+              "stimuliSetId": "sparc:autotutor.stock-shorting-001.kc.e3",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e3",
+              "KCId": "autotutor.stock-shorting-001.kc.e3",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e3",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "clusterKC": "autotutor.stock-shorting-001.kc.e4"
+              "clusterKC": "autotutor.stock-shorting-001.kc.e4",
+              "label": "Potential gain is limited by a fall to zero, but losses can be very large because the stock price can keep rising.",
+              "stimuliSetId": "sparc:autotutor.stock-shorting-001.kc.e4",
+              "stimulusKC": "autotutor.stock-shorting-001.kc.e4",
+              "KCId": "autotutor.stock-shorting-001.kc.e4",
+              "KCDefault": "autotutor.stock-shorting-001.kc.e4",
+              "KCCluster": "autotutor.stock-shorting-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [

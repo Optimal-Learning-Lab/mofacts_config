@@ -991,7 +991,6 @@
             }
           ],
           "behavior": {
-            "schema": "sparc-behavior/1.0",
             "source": {
               "format": "CTAT BRD",
               "file": "C:\\dev\\mofacts_config\\prob-stoich-1.brd",
@@ -11805,7 +11804,14 @@
           ],
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "sparc-stoichiometry-prob-stoich-1",
+              "stimuliSetId": "sparc:stoichiometry-prob-stoich-1",
+              "stimulusKC": "stoichiometry-dimensional-analysis",
+              "clusterKC": "stoichiometry-prob-stoich-1",
+              "KCId": "stoichiometry-dimensional-analysis",
+              "KCDefault": "stoichiometry-dimensional-analysis",
+              "KCCluster": "stoichiometry-prob-stoich-1"
             }
           ]
         }

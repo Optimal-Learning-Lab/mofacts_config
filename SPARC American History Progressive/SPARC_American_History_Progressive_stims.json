@@ -110,7 +110,6 @@
             }
           ],
           "behavior": {
-            "schema": "sparc-behavior/1.0",
             "orderPolicy": "progressive",
             "responseFormalism": "SAI",
             "steps": [
@@ -649,7 +648,14 @@
           },
           "clusterTargets": [
             {
-              "clusterIndex": 0
+              "clusterIndex": 0,
+              "label": "sparc-american-history-progressive-example",
+              "stimuliSetId": "sparc:american-history-progressive",
+              "stimulusKC": "american-revolution-opening",
+              "clusterKC": "american-history-progressive",
+              "KCId": "american-revolution-opening",
+              "KCDefault": "american-revolution-opening",
+              "KCCluster": "american-history-progressive"
             }
           ]
         }

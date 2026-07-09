@@ -861,7 +861,6 @@
             }
           ],
           "behavior": {
-            "schema": "sparc-behavior/1.0",
             "source": {
               "format": "CTAT BRD",
               "file": "C:\\dev\\mofacts_config\\1416.brd",
@@ -11737,6 +11736,78 @@
               },
               "key": "visible",
               "value": false
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Cluster 0",
+              "stimuliSetId": "sparc:fractions.lcd",
+              "stimulusKC": "fractions.lcd",
+              "clusterKC": "fractions.lcd",
+              "KCId": "fractions.lcd",
+              "KCDefault": "fractions.lcd",
+              "KCCluster": "fractions.lcd"
+            },
+            {
+              "clusterIndex": 1,
+              "label": "Cluster 1",
+              "stimuliSetId": "sparc:fractions.common-denominator-product",
+              "stimulusKC": "fractions.common-denominator-product",
+              "clusterKC": "fractions.common-denominator-product",
+              "KCId": "fractions.common-denominator-product",
+              "KCDefault": "fractions.common-denominator-product",
+              "KCCluster": "fractions.common-denominator-product"
+            },
+            {
+              "clusterIndex": 2,
+              "label": "Cluster 2",
+              "stimuliSetId": "sparc:fractions.convert-numerator",
+              "stimulusKC": "fractions.convert-numerator",
+              "clusterKC": "fractions.convert-numerator",
+              "KCId": "fractions.convert-numerator",
+              "KCDefault": "fractions.convert-numerator",
+              "KCCluster": "fractions.convert-numerator"
+            },
+            {
+              "clusterIndex": 3,
+              "label": "Cluster 3",
+              "stimuliSetId": "sparc:fractions.add-numerators",
+              "stimulusKC": "fractions.add-numerators",
+              "clusterKC": "fractions.add-numerators",
+              "KCId": "fractions.add-numerators",
+              "KCDefault": "fractions.add-numerators",
+              "KCCluster": "fractions.add-numerators"
+            },
+            {
+              "clusterIndex": 4,
+              "label": "Cluster 4",
+              "stimuliSetId": "sparc:fractions.copy-answer-denominator",
+              "stimulusKC": "fractions.copy-answer-denominator",
+              "clusterKC": "fractions.copy-answer-denominator",
+              "KCId": "fractions.copy-answer-denominator",
+              "KCDefault": "fractions.copy-answer-denominator",
+              "KCCluster": "fractions.copy-answer-denominator"
+            },
+            {
+              "clusterIndex": 5,
+              "label": "Cluster 5",
+              "stimuliSetId": "sparc:fractions.simplify-numerator",
+              "stimulusKC": "fractions.simplify-numerator",
+              "clusterKC": "fractions.simplify-numerator",
+              "KCId": "fractions.simplify-numerator",
+              "KCDefault": "fractions.simplify-numerator",
+              "KCCluster": "fractions.simplify-numerator"
+            },
+            {
+              "clusterIndex": 6,
+              "label": "Cluster 6",
+              "stimuliSetId": "sparc:fractions.simplify-denominator",
+              "stimulusKC": "fractions.simplify-denominator",
+              "clusterKC": "fractions.simplify-denominator",
+              "KCId": "fractions.simplify-denominator",
+              "KCDefault": "fractions.simplify-denominator",
+              "KCCluster": "fractions.simplify-denominator"
             }
           ]
         }
