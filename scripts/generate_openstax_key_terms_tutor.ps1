@@ -142,7 +142,6 @@ $tdfDoc = [ordered]@{
       shuffleclusters = "0-$lastCluster"
       userselect = 'true'
       lfparameter = '0.85'
-      enableAudioPromptAndFeedback = 'true'
       speechAPIKey = 'YOUR_GOOGLE_SPEECH_API_KEY'
       audioInputEnabled = 'true'
       audioPromptMode = 'feedback'
