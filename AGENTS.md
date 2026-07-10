@@ -26,7 +26,5 @@
 - If a file is necessary to complete the task correctly, work in it even if it was not part of the initially expected file set.
 - Do not comment on unrelated local diffs, pre-existing modified files, or surprising worktree state unless they materially conflict with the task or create real risk.
 
-## Required Sync Procedure
-- Before committing or pushing config changes, follow `README-SYNC-SCRIPTS.md`.
-- Use the sync scripts (`sync-config.js` or wrappers) for normal config sync so API keys are stripped in committed content and restored locally after push.
-- If a manual commit or push is explicitly requested by the user, still verify key-safety requirements from `README-SYNC-SCRIPTS.md` before pushing.
+## Commit And Push Procedure
+- Config content does not contain live API keys. Use the normal Git commit and push workflow.
