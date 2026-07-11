@@ -1028,7 +1028,6 @@
         "pageId": "sparc-intro-stats-module-14-discrete-random-variables",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-14-discrete-random-variables",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -8477,9 +8476,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8506,9 +8505,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8527,9 +8526,9 @@
                   "messageType": "feedback",
                   "template": "<p>There are four possible outcomes in this case:</p><p>B—the first child is a boy, and the couple stops having children.</p><p>GB—the first child is a girl and the second is a boy, and then the couple stops having children.</p><p>GGB—the first and second child are girls and the third is a boy, and the couple stops having children.</p><p>GGG—all three children are girls but the couple stops having children for financial reasons.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8561,9 +8560,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8590,9 +8589,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8611,9 +8610,9 @@
                   "messageType": "feedback",
                   "template": "<p>P(B) = 1/2</p><p>P(GB) = 1/2 * 1/2 = 1/4 (using the multiplication principle for independent events)</p><p>P(GGB) = 1/2 * 1/2 * 1/2 = 1/8 (using the multiplication principle for independent events)</p><p>P(GGG) = 1/2 * 1/2 * 1/2 = 1/8 (using the multiplication principle for independent events)</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8645,9 +8644,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8674,9 +8673,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8695,9 +8694,9 @@
                   "messageType": "feedback",
                   "template": "<p>For B, X = 1 (the couple has just one child)</p><p>For GB, X = 2 (the couple has two children)</p><p>For GGB, X = 3 (the couple has three children)</p><p>For GGG, X = 3 (the couple has three children)</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8729,9 +8728,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8758,9 +8757,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8779,9 +8778,9 @@
                   "messageType": "feedback",
                   "template": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/d2/d2dcd109c71c4b3d6573cf10af7ce823/_u4_m3_lbdtutor1d_image1.jpg\" alt=\"\" loading=\"lazy\"></figure><p>Note that P(X = 3) = 1/4 since by the addition principle (for disjoint events):</p><p>P(X = 3) = P(GGB) + P(GGG) = 1/8 + 1/8 = 1/4</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8813,9 +8812,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8854,9 +8853,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8875,9 +8874,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that the possible values that X can take are 0, 1, 2, 3, and 4, the corresponding probabilities are incorrect. In order to find the probability that X takes a certain value, you need to plug that value into the formula. So, for example, P(X = 1) = (1 + 2)(5 - 1) / 50 = 12/50. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8909,9 +8908,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8950,9 +8949,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8971,9 +8970,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that the possible values that X can take are 0, 1, 2, 3, and 4, the corresponding probabilities are incorrect. Note also that your selection is not a legitimate probability distribution, since the sum of the probabilities of all possible values is not 1, as it should be. In order to find the probability that X takes a certain value, you need to plug that value into the formula. So, for example, P(X = 1) = (1 + 2)(5 - 1) / 50 = 12/50. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9005,9 +9004,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9046,9 +9045,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9067,9 +9066,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that X takes the values 0, 1, 2, 3, 4 and not, as your selection suggests: 1, 2, 3, 4, 5. In order to find the probability that X takes a certain value, you need to plug that value into the formula. So, for example, P(X = 1) = (1 + 2)(5 - 1) / 50 = 12/50. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9101,9 +9100,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9142,9 +9141,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9163,9 +9162,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! This is the right probability distribution. In order to find the probability that X takes a certain value, you need to plug that value into the formula. So, for example, P(X = 1) = (1 + 2)(5 - 1) / 50 = 12/50. Note that this is a legitimate probability distribution since all the probabilities are between 0 and 1, and their sum is 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9197,9 +9196,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9238,9 +9237,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9259,9 +9258,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The variable is not children, but people per household. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9293,9 +9292,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9334,9 +9333,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9355,9 +9354,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The variable X (on the horizontal axis) is described above as people per household. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9389,9 +9388,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9430,9 +9429,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9451,9 +9450,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The values for X are 1-5. It is unlikely that the Census only contacted 5 households. No mention is made that the scale is in hundreds or thousands. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9485,9 +9484,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9526,9 +9525,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9547,9 +9546,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The variable X represents what is measured on the horizontal axis. The areas use both axes. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9581,9 +9580,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9622,9 +9621,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9643,9 +9642,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probabilities are measured on the vertical axis. We want the variable measured on the horizontal axis. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9677,9 +9676,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9718,9 +9717,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9739,9 +9738,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The first value for X in the histogram is 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9773,9 +9772,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9814,9 +9813,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9835,9 +9834,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The variable X represents the number of people in a household. To be considered a household, it must have someone in it. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9869,9 +9868,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9921,9 +9920,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9942,9 +9941,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. What is the first value for X in the histogram? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9976,9 +9975,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10017,9 +10016,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10038,9 +10037,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The second value for X in the histogram is 2.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10072,9 +10071,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10113,9 +10112,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10134,9 +10133,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. What is the second value for X in the histogram? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10168,9 +10167,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10209,9 +10208,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10230,9 +10229,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The third value for X in the histogram is 3.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10264,9 +10263,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10305,9 +10304,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10326,9 +10325,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. What is the next value for X in the histogram? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10360,9 +10359,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10401,9 +10400,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10422,9 +10421,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The fourth value for X in the histogram is 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10456,9 +10455,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10497,9 +10496,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10518,9 +10517,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. What is the next value for X in the histogram? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10552,9 +10551,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10593,9 +10592,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10614,9 +10613,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The last value for X in the histogram is 5.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10648,9 +10647,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10689,9 +10688,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10710,9 +10709,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. What is the next value for X in the histogram? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10744,9 +10743,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10785,9 +10784,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10806,9 +10805,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 1. The height of the bar corresponding to X = 1 is .28.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10840,9 +10839,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10881,9 +10880,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10902,9 +10901,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 1. The height of the bar corresponding to X = 1 is .28.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10936,9 +10935,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10988,9 +10987,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11009,9 +11008,9 @@
                   "messageType": "feedback",
                   "template": "<p>What is the height of the bar corresponding to the first value for X? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11043,9 +11042,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11084,9 +11083,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11105,9 +11104,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 2. The height of the bar corresponding to X = 2 is .34.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11139,9 +11138,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11180,9 +11179,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11201,9 +11200,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 2. The height of the bar corresponding to X = 2 is .34.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11235,9 +11234,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11287,9 +11286,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11308,9 +11307,9 @@
                   "messageType": "feedback",
                   "template": "<p>What is the height of the bar corresponding to the second value for X? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11342,9 +11341,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11383,9 +11382,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11404,9 +11403,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 3. The height of the bar corresponding to X = 3 is .18.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11438,9 +11437,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11479,9 +11478,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11500,9 +11499,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 3. The height of the bar corresponding to X = 3 is .18.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11534,9 +11533,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11586,9 +11585,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11607,9 +11606,9 @@
                   "messageType": "feedback",
                   "template": "<p>What is the height of the bar corresponding to the X-value? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11641,9 +11640,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11682,9 +11681,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11703,9 +11702,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 4. The height of the bar corresponding to X = 4 is .14.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11737,9 +11736,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11778,9 +11777,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11799,9 +11798,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 4. The height of the bar corresponding to X = 4 is .14.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11833,9 +11832,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11885,9 +11884,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11906,9 +11905,9 @@
                   "messageType": "feedback",
                   "template": "<p>What is the height of the bar corresponding to the X-value above? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11940,9 +11939,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11981,9 +11980,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12002,9 +12001,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 5. The height of the bar corresponding to X = 5 is .06.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12036,9 +12035,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12077,9 +12076,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12098,9 +12097,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The X-value for this probability is 5. The height of the bar corresponding to X = 5 is .06.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12132,9 +12131,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12184,9 +12183,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12205,9 +12204,9 @@
                   "messageType": "feedback",
                   "template": "<p>What is the height of the bar corresponding to the X-value above? Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12239,9 +12238,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12268,9 +12267,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12289,9 +12288,9 @@
                   "messageType": "feedback",
                   "template": "<p>To be a probability distribution, two conditions must be satisfied.</p><p>1. Each of the probabilities must be between 0 and 1. Certainly .28, .34, .18, .14, and .06 are all between 0 and 1.</p><p>2. The sum of all of the probabilities must equal 1. Indeed, .28 + .34 + .18 + .14 + .06 = 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12323,9 +12322,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12352,9 +12351,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12373,9 +12372,9 @@
                   "messageType": "feedback",
                   "template": "<p>The sum of the areas = 1(.28) + 1(.34) + 1(.18) + 1(.14) + 1(.06) = 1.</p><p>This make sense, since 1(.28) + 1(.34) + 1(.18) + 1(.14) + 1(.06) = .28 + .34 + .18 + .14 + .06, which we already know is equal to 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12407,9 +12406,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12448,9 +12447,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12469,9 +12468,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12503,9 +12502,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12544,9 +12543,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12565,9 +12564,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12599,9 +12598,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12640,9 +12639,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12661,9 +12660,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12695,9 +12694,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12736,9 +12735,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12757,9 +12756,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12791,9 +12790,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12832,9 +12831,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12853,9 +12852,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, P(X=1) = 0.4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12887,9 +12886,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12928,9 +12927,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12949,9 +12948,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12983,9 +12982,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13024,9 +13023,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13045,9 +13044,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13079,9 +13078,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13120,9 +13119,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13141,9 +13140,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13175,9 +13174,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13216,9 +13215,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13237,9 +13236,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 1, P(X = 1). Look at the histogram above. P(X = 1) is represented by the height of the rectangle above the value 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13271,9 +13270,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13312,9 +13311,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13333,9 +13332,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13367,9 +13366,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13408,9 +13407,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13429,9 +13428,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13463,9 +13462,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13504,9 +13503,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13525,9 +13524,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13559,9 +13558,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13600,9 +13599,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13621,9 +13620,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13655,9 +13654,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13696,9 +13695,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13717,9 +13716,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13751,9 +13750,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13792,9 +13791,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13813,9 +13812,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13847,9 +13846,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13888,9 +13887,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13909,9 +13908,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the second possible value that X can take is 2.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13943,9 +13942,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13984,9 +13983,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14005,9 +14004,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14039,9 +14038,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14080,9 +14079,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14101,9 +14100,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14135,9 +14134,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14176,9 +14175,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14197,9 +14196,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14231,9 +14230,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14272,9 +14271,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14293,9 +14292,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14327,9 +14326,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14368,9 +14367,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14389,9 +14388,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14423,9 +14422,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14464,9 +14463,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14485,9 +14484,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14519,9 +14518,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14560,9 +14559,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14581,9 +14580,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14615,9 +14614,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14656,9 +14655,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14677,9 +14676,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14711,9 +14710,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14752,9 +14751,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14773,9 +14772,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14807,9 +14806,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14848,9 +14847,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14869,9 +14868,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed the third possible value that X can take is 3.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14903,9 +14902,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14944,9 +14943,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14965,9 +14964,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In the top row of the probability distribution table, we list all the possible values that X can have, which appear on the horizontal axis of the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14999,9 +14998,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15040,9 +15039,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15061,9 +15060,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15095,9 +15094,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15136,9 +15135,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15157,9 +15156,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good Job! Indeed P(X = 4) = 0.1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15191,9 +15190,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15232,9 +15231,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15253,9 +15252,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15287,9 +15286,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15328,9 +15327,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15349,9 +15348,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15383,9 +15382,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15424,9 +15423,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15445,9 +15444,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15479,9 +15478,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15520,9 +15519,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15541,9 +15540,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15575,9 +15574,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15616,9 +15615,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15637,9 +15636,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15671,9 +15670,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15712,9 +15711,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15733,9 +15732,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15767,9 +15766,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15808,9 +15807,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15829,9 +15828,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This place in the table is the probability that X will get the value 4, P(X = 4). Look at the histogram above. P(X = 4) is represented by the height of the rectangle above the value 4.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15863,9 +15862,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15904,9 +15903,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15925,9 +15924,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This is not a legitimate probability distribution of X. For example, using this formula, we&#39;ll get: P(X = 2) = 2, which is not a number between 0 and 1,as it should be.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15959,9 +15958,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16000,9 +15999,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16021,9 +16020,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Using this formula, we&#39;ll get the following probability distribution: P(X = 1) = 1/4, P(X = 2) = 1/4, P(X = 3) = 1/4, P(X = 4) = 1/4. Even though this is a legitimate probability distribution, this is not the one that is represented by the histogram and table above. The values are right, but the probabilities are not. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16055,9 +16054,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16096,9 +16095,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16117,9 +16116,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Using this formula, we&#39;ll get the following probability distribution: P(X = 1) = 0.1, P(X = 2) = 0.2, P(X = 3) = 0.3, P(X = 4) = 0.4. Even though this is a legitimate probability distribution, this is not the one that is represented by the histogram and table above. The values are right, but the probabilities are not. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16151,9 +16150,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16192,9 +16191,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16213,9 +16212,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Using this formula, we&#39;ll get the following probability distribution: P(X = 0) = 0.5, P(X = 1) = 0.4, P(X = 2) = 0.3, P(X = 3) = 0.2. The values that x can take (0, 1, 2, 3) are not the same as the ones in our distribution above. And even more importantly, note that this is not a legitimate probability distribution, since the sum of all the probabilities is not 1, as it should be. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16247,9 +16246,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16288,9 +16287,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16309,9 +16308,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Using this formula, we&#39;ll get P(X = 1) = (5 - 1) / 10 = 0.4, P(X = 2) = (5 - 2) / 10 = 0.3, P(X = 3) = (5 - 3) / 10 = 0.2, P(X = 4) = (5 - 4) / 10 = 0.1, which is exactly the one represented by the histogram above.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16343,9 +16342,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16384,9 +16383,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16405,9 +16404,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 1 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16439,9 +16438,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16480,9 +16479,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16501,9 +16500,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 1 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16535,9 +16534,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16576,9 +16575,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16597,9 +16596,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 2 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16631,9 +16630,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16672,9 +16671,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16693,9 +16692,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 2 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16727,9 +16726,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16768,9 +16767,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16789,9 +16788,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 3 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16823,9 +16822,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16864,9 +16863,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16885,9 +16884,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 3 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16919,9 +16918,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16960,9 +16959,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16981,9 +16980,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 4 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17015,9 +17014,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17056,9 +17055,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17077,9 +17076,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 4 would be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17111,9 +17110,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17152,9 +17151,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17173,9 +17172,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 5 would not be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17207,9 +17206,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17248,9 +17247,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17269,9 +17268,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 5 would not be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17303,9 +17302,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17344,9 +17343,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17365,9 +17364,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. At most 4 means X is 4 or fewer, so X = 6 would not be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17399,9 +17398,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17440,9 +17439,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17461,9 +17460,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. At most 4 means X is 4 or fewer, so X = 6 would not be included.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17495,9 +17494,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17536,9 +17535,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17557,9 +17556,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that zero is not a possible value for X. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17591,9 +17590,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17632,9 +17631,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17653,9 +17652,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. <strong>No more than</strong> 3 means 3 is the largest value for X. We want X ≤ 3.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17687,9 +17686,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17728,9 +17727,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17749,9 +17748,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You have chosen numbers that are 3 or larger. We want &quot;<strong>no</strong> more than 3.&quot; Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17783,9 +17782,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17824,9 +17823,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17845,9 +17844,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You have chosen numbers that are strictly larger than 3. We want &quot;<strong>no</strong> more than 3.&quot; Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17879,9 +17878,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17920,9 +17919,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17941,9 +17940,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 12/50 is P(X = 1), the probability of exactly one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17975,9 +17974,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18016,9 +18015,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18037,9 +18036,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 22/50 is P(X ≤ 1), the probability of no more than one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18071,9 +18070,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18112,9 +18111,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18133,9 +18132,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 28/50 is P(X &gt; 1), the probability of more than one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18167,9 +18166,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18208,9 +18207,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18229,9 +18228,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The probability of at least one sale is P(X ≥ 1) = P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4) = (12 + 12 + 10 + 6) / 50 = 40/50, (using the addition principle). Alternatively (and more efficiently), you can use complements and the fact that the complementary event of X ≥ 1 is X = 0. Therefore, P(X ≥ 1) = 1 - P(X = 0) = 1 - 10/50 = 40/50.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18263,9 +18262,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18304,9 +18303,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18325,9 +18324,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 10/50 is P(X &lt; 1), which in this case is P(X = 0), the probability of less than one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18359,9 +18358,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18388,9 +18387,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18409,9 +18408,9 @@
                   "messageType": "feedback",
                   "template": "<p>We use the conditional probabilities definition P(B | A) = P(A and B) / P(A) to solve: </p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/34/34a8791068d311786a206a2df5ff8a96/_u4_m3_lbdtutor2b_image1.jpg\" alt=\"\" loading=\"lazy\"></figure><p>(Note that we are treating &quot;X = 1&quot; as event B and &quot;X ≥ 1&quot; as event A.) Our answer indicates that there is a 30% chance that the sale that the salesperson has made is the only one he or she will make during the hour.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18443,9 +18442,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18484,9 +18483,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18505,9 +18504,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(changed majors more than twice) or P(changed majors three or more times) Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18539,9 +18538,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18580,9 +18579,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18601,9 +18600,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(changed majors more than once). We want P(changed majors <strong>at least</strong> once). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18635,9 +18634,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18676,9 +18675,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18697,9 +18696,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(changed majors exactly once). We want P(changed majors <strong>at least</strong> once). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18731,9 +18730,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18772,9 +18771,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18793,9 +18792,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(changed majors at most once). Recall that <strong>at least</strong> means that number or more. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18827,9 +18826,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18868,9 +18867,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18889,9 +18888,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. <strong>At least once</strong> means one or more times. So P(changed majors at least once) = P(X ≥ 1) = P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4) + P(X = 5). This is .37 + .23 + .09 + .02 + .01 = .72. It is a little easier using complements. P(changed majors at least once) = 1 - P(X = 0). This is 1 - .28, which also is .72.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18923,9 +18922,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18964,9 +18963,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18985,9 +18984,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(X &gt; 2). We want P(X is at most 2). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19019,9 +19018,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19060,9 +19059,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19081,9 +19080,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(X = 2). We want P(X is at most 2). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19115,9 +19114,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19156,9 +19155,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19177,9 +19176,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(X ≥ 2) which means at least 2. We want P(X is at most 2) Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19211,9 +19210,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19252,9 +19251,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19273,9 +19272,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. We want P(changed majors at most twice). At most means that number or less. P(X ≤ 2) = P(X = 0) + P(X = 1) + P(X = 2) = .28 + .37 + .23 = .88. We also could have used complements. The complement of at most 2 is more than 2. So, P(X ≤ 2) = 1 - P(X &gt; 2). P(X ≤ 2) = 1 - P(X &gt; 2) = 1 - [ P(X = 3) + P(X = 4) + P(X = 5) ]. The only advantage to using this method is that the numbers (.09 + .02 + .01) are easier to add.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19307,9 +19306,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19348,9 +19347,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19369,9 +19368,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You&#39;ve found P(X &gt; 3). However, it is given that the person changed majors, so we are given that X ≥ 1. We want P(X &gt; 3 | X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19403,9 +19402,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19444,9 +19443,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19465,9 +19464,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! We want P(X &gt; 3 | X ≥ 1) = .03 / .72 = .04.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19499,9 +19498,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19540,9 +19539,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19561,9 +19560,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We want P(X &gt; 3 | X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19595,9 +19594,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19636,9 +19635,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19657,9 +19656,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You found P(the person changed majors). However, we want P(X &gt; 3 | X ≥ 1). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19691,9 +19690,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19732,9 +19731,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19753,9 +19752,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The probability distribution of Y has most of the weight (80%) on the larger values (3, 4), while the distribution of X has most of the weight (70%) on the smaller values (0, 1, 2). Since the mean is an average of the values weighted by their probabilities, we would expect the mean of Y to be larger than the mean of X, which is 1.8.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19787,9 +19786,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19828,9 +19827,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19849,9 +19848,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the probability distribution of Y has most of the weight (80%) on the larger values (3, 4), while the distribution of X has most of the weight (70%) on the smaller values (0, 1, 2). Recall that the mean of a random variable is an average of its values weighted by their corresponding probabilities. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19883,9 +19882,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19924,9 +19923,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19945,9 +19944,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the probability distribution of Y has most of the weight (80%) on the larger values (3, 4), while the distribution of X has most of the weight (70%) on the smaller values (0, 1, 2). Recall that the mean of a random variable is an average of its values weighted by the corresponding probabilities. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19979,9 +19978,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20020,9 +20019,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20041,9 +20040,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Your mistake is probably that you averaged the possible values 0, 1, 2, 3, 4, rather than taking a weighted average of the values (weighted by their corresponding probabilities). Review the definition of the mean of a random variable (on this page), and try again. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20075,9 +20074,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20116,9 +20115,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20137,9 +20136,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Your mistake is probably that you averaged the probabilities rather than taking a weighted average of the values (weighted by their corresponding probabilities). Review the definition of the mean of a random variable (on this page), and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20171,9 +20170,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20212,9 +20211,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20233,9 +20232,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the mean of Y is 0(.05) + 1(.05) + 2(.10) + 3(.75) + 4(.05) = 2.7.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20267,9 +20266,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20308,9 +20307,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20329,9 +20328,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Your mistake is probably that you found the weighted average of the values (weighted by their corresponding probabilities),as you should, but then you divided it by 5, which is incorrect. The division already occurred when the probabilities were determined. The mean of a random variable IS that weighted average. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20363,9 +20362,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20392,9 +20391,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20413,9 +20412,9 @@
                   "messageType": "feedback",
                   "template": "<p>If the package is delivered within 24 hours, the net amount the company gets is the fee they charge minus their cost, or 20 - 14.80 = 5.20.</p><p>If the package is not delivered within 24 hours, they must return the fee. So the net amount the company gets is 20 - 20 - 14.80 = -14.80.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20447,9 +20446,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20476,9 +20475,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20497,9 +20496,9 @@
                   "messageType": "feedback",
                   "template": "<p>Since they deliver within 24 hours with a probability of 0.96, 0.96 corresponds to 5.20.</p><p>Not delivering within 24 hours is the complement of delivering within 24 hours. Thus, the probability corresponding to -14.80 is 1 - 0.96 = 0.04.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20531,9 +20530,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20560,9 +20559,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20581,9 +20580,9 @@
                   "messageType": "feedback",
                   "template": "<p>μ<sub>X</sub> = (5.20)(0.96) + (-14.80)(0.04) = 4.40</p><p>This means that in the long run, each package delivered has an expected gain of $4.40. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20615,9 +20614,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20644,9 +20643,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20665,9 +20664,9 @@
                   "messageType": "feedback",
                   "template": "<p>There are three possibilities that correspond to the three possible values of X in this example. In every case, the insurance company is gaining the amount of the policy cost, which is $1,350.</p><p>• If there is total loss due to fire (which happens with probability .002), the insurance company has to pay the customer $100,000, and therefore the company&#39;s gain is: $1,350 - $100,000.</p><p>• If there is 50% damage due to fire (which happens with probability .008), the insurance company has to pay the customer $50,000, and therefore the company&#39;s gain is: $1,350 - $50,000.</p><p>• If there is no fire (which must happen with the &quot;remaining probability&quot; of 1 - .002 - .008 = .99), the insurance company has to pay nothing, and so is left with the premium gain of $1,350.</p><p>To summarize, the probability distribution of X is:</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/73/735cd5b499ac443e5a3ccb068ca88c80/_u4_m3_lbdtutor3a_image1.jpg\" alt=\"\" loading=\"lazy\"></figure>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20699,9 +20698,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20728,9 +20727,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20749,9 +20748,9 @@
                   "messageType": "feedback",
                   "template": "<p>Using the definition of the mean of a discrete random variable, we will average the possible values weighted by their corresponding probabilities.</p><p>Mean of X = (1,350 - 100,000)(.002) + (1,350 - 50,000)(.008) + 1,350(.99) = 750.</p><p>The expected gain of such a policy is $750. Since the insurance company probably sells a lot of policies of this type, in the majority of them (99%) the company will gain money ($1,350), and in the remaining 1% of them, it will lose (either 1,350 - 100,000 or 1,350 - 5,0000). Averaging over all such policies, the company is going to make about $750 from each such fire insurance policy. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20783,9 +20782,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20812,9 +20811,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20833,9 +20832,9 @@
                   "messageType": "feedback",
                   "template": "<p>Here is the new probability distribution of X:</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/c8/c8b6e7e2361e6dfcb8f5733b03a78ada/_u4_m3_lbdtutor3c_image1.jpg\" alt=\"\" loading=\"lazy\"></figure><p>Note that we updated the probabilities of total loss and 50% damage by tripling them, and the probability of no fire has changed to 1 - .006 - .024 = .97. The company wants to keep the same annual gain from the policy ($750), and the question is, what should the new premium (N) be that will satisfy this? In other words, we need to solve the following equation for N:</p><p>750 = (N - 100,000)(.006) + (N - 50,000)(.024) + N(.97)</p><p>Thus, 750 = N - 600 - 1,200, or N - 1,800.</p><p>And therefore, N = 750 + 1,800 = 2,550.</p><p>In order to account for the added risk that the insurance company is taking by continuing to insure the customer, the premium changes from $1,350 to $2,550.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

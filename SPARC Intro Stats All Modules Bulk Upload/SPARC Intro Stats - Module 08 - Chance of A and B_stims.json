@@ -628,7 +628,6 @@
         "pageId": "sparc-intro-stats-module-08-chance-of-a-and-b",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-08-chance-of-a-and-b",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -4787,9 +4786,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4828,9 +4827,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4849,9 +4848,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. P(A and B)=1 means that events A and B will always happen together. However, if events A and B are disjoint, they can never happen together.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4883,9 +4882,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4924,9 +4923,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4945,9 +4944,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! If events A and B are disjoint, they can never happen together. In other words the event &quot;A and B&quot; can never occur, and thus P(A and B)=0.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4979,9 +4978,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5020,9 +5019,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5041,9 +5040,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. When events A and B are disjoint, P(A) + P(B) is P(A or B), and we&#39;re asking about P(A and B).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5075,9 +5074,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5116,9 +5115,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5137,9 +5136,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is possible for both events to occur at the same time, since it is possible that we happen to choose two people with blood type O, and therefore the events are not disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5171,9 +5170,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5212,9 +5211,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5233,9 +5232,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Since it is possible to choose two people with blood type O, the events are not disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5267,9 +5266,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5308,9 +5307,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5329,9 +5328,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, since the two people were selected simultaneously and at random from a large population, whether or not event A occurs (whether or not one of the people chosen has blood type O) has absolutely no effect on the probability that the other person chosen will have blood type O (the probability that event B will occur). Therefore, the events are independent.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5363,9 +5362,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5404,9 +5403,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5425,9 +5424,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Since the two people were selected simultaneously and at random from a large population, whether or not event A occurs (whether or not the one of the people chosen has blood type O) has absolutely no effect on the probability that the other person chosen will have blood type O (the probability that event B will occur). Therefore, the events are independent.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5459,9 +5458,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5500,9 +5499,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5521,9 +5520,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is possible for both events to occur at the same time (first choose a male and then choose a female), and therefore the events are not disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5555,9 +5554,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5596,9 +5595,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5617,9 +5616,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Since it is possible to first choose a male and then a female, the two events are not disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5651,9 +5650,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5692,9 +5691,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5713,9 +5712,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, whether or not event A occurs (the first student chosen is male) does have an affect on the probability that event B will occur (the second student chosen is female). If A occurs, then P(second student chosen is female)=5/9. If A does not occur (i.e., if the first student chosen is female), then P(second student chosen is female)=4/9. Therefore, the two events are not independent, but rather dependent.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5747,9 +5746,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5788,9 +5787,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5809,9 +5808,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, in this case whether or not event A occurs (the first student chosen is male) does have an affect on the probability that event B will occur (the second student chosen is female). If A occurs, then P(second student chosen is female)=5/9. If A does not occur (i.e., if the first student chosen is female), then P(second student chosen is female)=4/9. Therefore, the two events are not independent, but rather dependent.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5843,9 +5842,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5884,9 +5883,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5905,9 +5904,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! It is impossible for both events to occur at the same time, since the person can be either male or female, but not both.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5939,9 +5938,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5980,9 +5979,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6001,9 +6000,9 @@
                   "messageType": "feedback",
                   "template": "<p>This is not quite right. It is impossible for both events to occur at the same time, since the person can be either male or female, but not both, and therefore the events are disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6035,9 +6034,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6076,9 +6075,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6097,9 +6096,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, if event A occurs (if the person answering is male), it has a very dramatic effect on the probability that event B will occur (the probability that the person answering is female). If event A occurs, the probability that event B will occur becomes 0. Therefore, the two events are NOT independent, but rather dependent. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6131,9 +6130,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6172,9 +6171,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6193,9 +6192,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. indeed, In this case, if event A occurs (if the person answering is male), it has a very dramatic effect on the probability that event B will occur (the probability that the person answering is female). If event A occurs, the probability that event B will occur becomes 0. Therefore, the two events are NOT independent but rather dependent. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6227,9 +6226,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6268,9 +6267,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6289,9 +6288,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. These events are disjoint because they cannot occur at the same time. An individual male cannot be both color blind and not color blind. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6323,9 +6322,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6364,9 +6363,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6385,9 +6384,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. These events are disjoint because they cannot occur at the same time. An individual male cannot be both color blind and not color blind. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6419,9 +6418,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6460,9 +6459,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6481,9 +6480,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The events are disjoint, so they cannot be independent. The occurrence (or not) of event A will affect the probability of B. If A occurs, the P(B) = 0. If A does not occur, then the P(B) = 1. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6515,9 +6514,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6556,9 +6555,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6577,9 +6576,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The events are disjoint, so they must be dependent. The occurrence (or not) of event A will affect the probability of B. If A occurs, the P(B) = 0. If A does not occur, then the P(B) = 1. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6611,9 +6610,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6652,9 +6651,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6673,9 +6672,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. These events can occur simultaneously. If C = colorblind and N = not colorblind, then the sample space for event A is {CN, CC} and the sample space for event B is {CN, NN}. The sample spaces both contain the outcome CN.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6707,9 +6706,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6748,9 +6747,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6769,9 +6768,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. These events can occur simultaneously. If C = colorblind and N = not colorblind, then the sample space for event A is {CN, CC} and the sample space for event B is {CN, NN}. The sample spaces both contain the outcome CN.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6803,9 +6802,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6844,9 +6843,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6865,9 +6864,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Since the men are randomly selected from a large population, we can assume that the events are independent. The first man’s colorblindness does not affect the probability that the second man is (or is not) colorblind.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6899,9 +6898,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6940,9 +6939,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6961,9 +6960,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Since the men are randomly selected from a large population, we can assume that the events are independent. The first man’s colorblindness does not affect the probability that the second man is (or is not) colorblind.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6995,9 +6994,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7024,9 +7023,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7045,9 +7044,9 @@
                   "messageType": "feedback",
                   "template": "<p>Let A be the event that the first person supports the death penalty. Let B be the event that the second person supports the death penalty. </p><p>We want to find P(A and B). Since the two people are chosen at random from a large population, A and B are independent and we can use the Multiplication Rule for Independent Events.</p><p>P(A and B) = P(A) * P(B) = 0.62 * 0.62 = 0.3844</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7079,9 +7078,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7108,9 +7107,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7129,9 +7128,9 @@
                   "messageType": "feedback",
                   "template": "<p>Let A be the event that the person voted for Bush in 2000. Let B be the event that the person voted for Bush in 2004. The question asks us to determine P(A and B). We might be tempted to use the Multiplication Rule for Independent Events and write P(A and B) = P(A)*P(B) = 0.48*0.51 = 0.2448, but this would be incorrect because these events are not independent. If an individual voted for Bush in 2000, it is likely that the individual voted for him in 2004. So we are unable to answer the question with the information given. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7163,9 +7162,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7204,9 +7203,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7225,9 +7224,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. While it is true that having a college degree does not determine a person’s views on the death penalty, having a college degree does make it <em>less likely</em> that a person will support the death penalty. So A and B are dependent events. We cannot use the Multiplication Rule for Independent Events in this situation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7259,9 +7258,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7300,9 +7299,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7321,9 +7320,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. A and B are dependent events because if A occurs (we have selected a person with a college degree), then the probability of B is affected (a smaller chance that the person supports the death penalty.) So we cannot use the Multiplication Rule for Independent Events in this situation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7355,9 +7354,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7396,9 +7395,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7417,9 +7416,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7451,9 +7450,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7492,9 +7491,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7513,9 +7512,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7547,9 +7546,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7588,9 +7587,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7609,9 +7608,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7643,9 +7642,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7684,9 +7683,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7705,9 +7704,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7739,9 +7738,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7780,9 +7779,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7801,9 +7800,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7835,9 +7834,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7876,9 +7875,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7897,9 +7896,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the last comment tells us that: &quot;B or M&quot; is a more general event than &quot;B&quot; and therefore has a larger probability. &quot;B and M&quot; is a more specific event than &quot;B&quot; and therefore has a smaller probability.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7931,9 +7930,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7972,9 +7971,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7993,9 +7992,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job!</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8027,9 +8026,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8068,9 +8067,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8089,9 +8088,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8123,9 +8122,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8164,9 +8163,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8185,9 +8184,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We don&#39;t know that they all have blood type B; we are trying to figure out the probability of this event.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8219,9 +8218,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8260,9 +8259,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8281,9 +8280,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We don&#39;t know that the three are males. Gender is not a factor in this problem.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8315,9 +8314,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8356,9 +8355,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8377,9 +8376,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job!</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8411,9 +8410,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8452,9 +8451,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8473,9 +8472,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The Addition Rule is used when we try to find probability of the type P(A or B).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8507,9 +8506,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8548,9 +8547,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8569,9 +8568,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job!</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8603,9 +8602,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8644,9 +8643,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8665,9 +8664,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job!</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8699,9 +8698,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8740,9 +8739,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8761,9 +8760,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember, we are using the MultiplicationRule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8795,9 +8794,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8836,9 +8835,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8857,9 +8856,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Read on to see why.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8891,9 +8890,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8932,9 +8931,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8953,9 +8952,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Read on to see why.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8987,9 +8986,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9028,9 +9027,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9049,9 +9048,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Read on to see the full solution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9083,9 +9082,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9112,9 +9111,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9133,9 +9132,9 @@
                   "messageType": "feedback",
                   "template": "<p>To get all three the same, either the first and the second and the third are type O, or the first and the second and the third are type A, or the first and the second and the third are type B, or the first and the second and the third are type AB. The probability is:</p><p>(.44 * .44 * .44) + (.42 * .42 * .42) + (.10 * .10 * .10) + (.04 * .04 * .04) = .160336</p><p>About 16% of the time, three randomly chosen people would have the same blood type.</p><p>Click <a href=\"javascript:loadImage(&#39;../../webcontent/flash/images/dig002.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a visual representation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9167,9 +9166,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9196,9 +9195,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9217,9 +9216,9 @@
                   "messageType": "feedback",
                   "template": "<p>There are 4 possible answers and the student chooses one at random, and therefore:</p><p>P(R) = 1/4 = .25, and P(W) = 3/4 = .75</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9251,9 +9250,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9280,9 +9279,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9301,9 +9300,9 @@
                   "messageType": "feedback",
                   "template": "<p>&quot;not L&quot; is the event &quot;the student gets none of the questions right&quot; or in other words, &quot;not L&quot; is the event that the student gets all the questions wrong. And so,</p><p>P(not L) = P(getting all the questions wrong) = P(WWWWWWWWWW) =  .75 * .75 * .75 * .75 * .75 * .75 * .75 * .75 * .75 * .75 = .0563.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9335,9 +9334,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9364,9 +9363,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9385,9 +9384,9 @@
                   "messageType": "feedback",
                   "template": "<p>Using the Complement Rule: P(L) = 1 - P(not L) = 1 - .0563 = .9437. Thus, it is quite likely that the student will get at least one of the questions right. (This also makes intuitive sense.)</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9419,9 +9418,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9460,9 +9459,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9481,9 +9480,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.02 is the probability that a condom will break. But you need to consider all 12 condoms to find the probability that at least one will break out of the 12. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9515,9 +9514,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9556,9 +9555,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9577,9 +9576,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You may have calculated the probability that exactly one condom in the pack breaks, which is (0.02)(0.98) ^ 11. You need to find the probability that AT LEAST one condom in the pack breaks. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9611,9 +9610,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9652,9 +9651,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9673,9 +9672,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(at least one breaks) = 1 − P(none break) = 1 - (0.98) ^ 12 = 0.215</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9707,9 +9706,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9748,9 +9747,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9769,9 +9768,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You may have calculated (0.98) ^ 12, which is the probability that none of the condoms break. You need to use the complement rule to find the probability that at least one breaks. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

@@ -845,7 +845,6 @@
         "pageId": "sparc-intro-stats-module-17-normal-random-variables",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-17-normal-random-variables",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -8340,9 +8339,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8381,9 +8380,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8402,9 +8401,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 9.5 and 12.5 is 0.68. This means that the remaining two tails (below 9.5 and above 12.5) together have a probability of 0.32. What is the probability, then, of just one of the tails&#39; foot length being below 9.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8436,9 +8435,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8477,9 +8476,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8498,9 +8497,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 9.5 and 12.5 is 0.68. This means that the remaining two tails (below 9.5 and above 12.5) together have a probability of 0.32. What is the probability, then, of just one of the tails&#39; foot length being below 9.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8532,9 +8531,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8573,9 +8572,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8594,9 +8593,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The probability that foot length is between 9.5 and 12.5 is 0.68, and therefore the remaining two tails together have probability 1 − 0.68 = 0.32. We conclude, then, that: P(X &lt; 9.5) = 0.32/2 = 0.16.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8628,9 +8627,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8669,9 +8668,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8690,9 +8689,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 9.5 and 12.5 is 0.68. This means that the remaining two tails (below 9.5 and above 12.5) together have a probability of 0.32. What is the probability, then, of just one of the tails&#39; foot length being below 9.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8724,9 +8723,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8765,9 +8764,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8786,9 +8785,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 9.5 and 12.5 is 0.68. This means that the remaining two tails (below 9.5 and above 12.5) together have a probability of 0.32. What is the probability, then, of just one of the tails&#39; foot length being below 9.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8820,9 +8819,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8861,9 +8860,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8882,9 +8881,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The probability that foot length is between 6.5 and 15.5 is 0.997, and therefore the remaining two tails together have probability 1 − 0.997 = 0.003. We conclude, then, that P(X &gt; 15.5) = 0.003/2 = 0.0015.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8916,9 +8915,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8957,9 +8956,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8978,9 +8977,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 6.5 and 15.5 is 0.997. This means that the remaining two tails (below 6.5 and above 15.5) <em>together</em> have a probability of 0.003. What is the probability, then, of just one of the tails&#39; foot length being above 15.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9012,9 +9011,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9053,9 +9052,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9074,9 +9073,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 6.5 and 15.5 is 0.997. This means that the remaining two tails (below 6.5 and above 15.5) <em>together</em> have a probability of 0.003. What is the probability, then, of just one of the tails&#39; foot length being above 15.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9108,9 +9107,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9149,9 +9148,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9170,9 +9169,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 6.5 and 15.5 is 0.997. This means that the remaining two tails (below 6.5 and above 15.5) <strong>together</strong> have a probability of 0.003. What is the probability, then, of just one of the tails&#39; foot length being above 15.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9204,9 +9203,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9245,9 +9244,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9266,9 +9265,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probability that foot length is between 6.5 and 15.5 is 0.997. This means that the remaining two tails (below 6.5 and above 15.5) <strong>together</strong> have a probability of 0.003. What is the probability, then, of just one of the tails&#39; foot length being above 15.5? </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9300,9 +9299,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9341,9 +9340,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9362,9 +9361,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9396,9 +9395,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9437,9 +9436,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9458,9 +9457,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The value that divides the area under the curve into two halves is 11, so P(X &lt; 11) = P(X &gt; 11) = 0.5.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9492,9 +9491,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9533,9 +9532,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9554,9 +9553,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9588,9 +9587,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9629,9 +9628,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9650,9 +9649,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9684,9 +9683,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9725,9 +9724,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9746,9 +9745,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. With probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean (266 − 2 * 16 = 234) and 2 standard deviations above the mean (266 + 2 * 16 = 298). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9780,9 +9779,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9821,9 +9820,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9842,9 +9841,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9876,9 +9875,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9917,9 +9916,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9938,9 +9937,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9972,9 +9971,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10013,9 +10012,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10034,9 +10033,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10068,9 +10067,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10109,9 +10108,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10130,9 +10129,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10164,9 +10163,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10205,9 +10204,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10226,9 +10225,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10260,9 +10259,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10301,9 +10300,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10322,9 +10321,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10356,9 +10355,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10397,9 +10396,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10418,9 +10417,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10452,9 +10451,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10493,9 +10492,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10514,9 +10513,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10548,9 +10547,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10589,9 +10588,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10610,9 +10609,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10644,9 +10643,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10685,9 +10684,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10706,9 +10705,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10740,9 +10739,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10781,9 +10780,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10802,9 +10801,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. With probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean (266 − 2 * 16 = 234) and 2 standard deviations above the mean (266 + 2 * 16 = 298). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10836,9 +10835,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10877,9 +10876,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10898,9 +10897,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that with probability 0.95, a normal random variable will get values that are between 2 standard deviations below the mean and 2 standard deviations above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10932,9 +10931,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10973,9 +10972,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10994,9 +10993,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11028,9 +11027,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11069,9 +11068,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11090,9 +11089,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11124,9 +11123,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11165,9 +11164,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11186,9 +11185,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Sixteen percent of pregnancies last less than 1 standard deviation below the mean, which in this case is 266 − 16 = 250.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11220,9 +11219,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11261,9 +11260,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11282,9 +11281,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11316,9 +11315,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11357,9 +11356,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11378,9 +11377,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11412,9 +11411,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11453,9 +11452,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11474,9 +11473,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11508,9 +11507,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11549,9 +11548,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11570,9 +11569,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 68% of pregnancies last between 250 and 282 days. The remaining 32% of pregnancies must be in the two tails together: either less than 250 days or more than 282 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11604,9 +11603,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11645,9 +11644,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11666,9 +11665,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Since P(218 &lt; X &lt; 314) = 0.997, P(X &gt; 314) = (1 − 0.997)/2 = 0.0015.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11700,9 +11699,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11741,9 +11740,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11762,9 +11761,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note from the figure that it is extremely unlikely for a pregnancy to last more than 314 days. More specifically, there is a probability of 0.997 that a pregnancy will last between 218 and 314 days. This means that there is 1 − 0.997 = 0.003 probability that the length of the pregnancy will be in the two tails: either less than 218 days or more than 314 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11796,9 +11795,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11837,9 +11836,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11858,9 +11857,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note from the figure that it is extremely unlikely for a pregnancy to last more than 314 days. More specifically, there is a probability of 0.997 that a pregnancy will last between 218 and 314 days. This means that there is 1 − 0.997 = 0.003 probability that the length of the pregnancy will be in the two tails: either less than 218 days or more than 314 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11892,9 +11891,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11933,9 +11932,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11954,9 +11953,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note from the figure that it is extremely unlikely for a pregnancy to last more than 314 days. More specifically, there is a probability of 0.997 that a pregnancy will last between 218 and 314 days. This means that there is 1 − 0.997 = 0.003 probability that the length of the pregnancy will be in the two tails: either less than 218 days or more than 314 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11988,9 +11987,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12029,9 +12028,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12050,9 +12049,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note from the figure that it is extremely unlikely for a pregnancy to last more than 314 days. More specifically, there is a probability of 0.997 that a pregnancy will last between 218 and 314 days. This means that there is 1 − 0.997 = 0.003 probability that the length of the pregnancy will be in the two tails: either less than 218 days or more than 314 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12084,9 +12083,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12125,9 +12124,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12146,9 +12145,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note from the figure that it is extremely unlikely for a pregnancy to last more than 314 days. More specifically, there is a probability of 0.997 that a pregnancy will last between 218 and 314 days. This means that there is 1 − 0.997 = 0.003 probability that the length of the pregnancy will be in the two tails: either less than 218 days or more than 314 days. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12180,9 +12179,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12221,9 +12220,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12242,9 +12241,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12276,9 +12275,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12317,9 +12316,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12338,9 +12337,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12372,9 +12371,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12413,9 +12412,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12434,9 +12433,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12468,9 +12467,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12509,9 +12508,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12530,9 +12529,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The value that divides the area under the curve into two halves is 266, so P(X &lt; 266) = P(X &gt; 266) = 0.5. A pregnancy is as likely to last less than 266 days as it is to last more than 266 days.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12564,9 +12563,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12605,9 +12604,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12626,9 +12625,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12660,9 +12659,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12701,9 +12700,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12722,9 +12721,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12756,9 +12755,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12797,9 +12796,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12818,9 +12817,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This value does not divide the area under the curve into two halves.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12852,9 +12851,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12893,9 +12892,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12914,9 +12913,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 22.50 is Tom’s raw score, or the actual amount he earns, per hour. Recall that the z-score of a normal value is (value - mean) / standard deviation. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12948,9 +12947,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12989,9 +12988,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13010,9 +13009,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, Tom&#39;s z-score = (22.50-27)/4 = -1.125</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13044,9 +13043,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13085,9 +13084,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13106,9 +13105,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like you started well by calculating the difference (value - mean) = 22.50 - 27 = 4.50. Recall however that z-score is calculated: (value - mean) / standard deviation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13140,9 +13139,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13181,9 +13180,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13202,9 +13201,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like your mistake is that you calculated: (mean - value) / standard deviation. You switched &quot;mean&quot; and &quot;value.&quot; Note that z-scores are calculated: (value - mean) / standard deviation. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13236,9 +13235,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13277,9 +13276,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13298,9 +13297,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A z-score tells us how many standard deviations above or below the mean the value is. Positive z-scores indicate that the value is above the mean, and negative values indicate that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13332,9 +13331,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13373,9 +13372,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13394,9 +13393,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. A z-score of 1.125 indicates that Tom’s hourly rate of of $22.50 is 1.125 standard deviations below the mean score.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13428,9 +13427,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13469,9 +13468,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13490,9 +13489,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A z-score tells us how many standard deviations above or below the mean the value is. Positive z-scores indicate that the value is above the mean, and negative values indicate that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13524,9 +13523,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13565,9 +13564,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13586,9 +13585,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that a positive z-score indicates that the value is above the mean, and a negative z-score indicates that the value is below the mean.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13620,9 +13619,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13661,9 +13660,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13682,9 +13681,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A positive z-score indicates that the value is above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13716,9 +13715,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13757,9 +13756,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13778,9 +13777,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A positive z-score indicates that the value is above the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13812,9 +13811,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13853,9 +13852,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13874,9 +13873,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that John&#39;s score is above average, his z-score is 2.6 standard deviations above the mean, which is much above average. In particular, from the standard deviation rule, we know that since John&#39;s z-score is more than 2 standard deviations above the mean, his hourly rate is in the highest 2.5% of salaries.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13908,9 +13907,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13949,9 +13948,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13970,9 +13969,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, John&#39;s z-score is 2.6 standard deviations above the mean, which is much above average. In particular, from the standard deviation rule, we know that,since John&#39;s z-score is more than 2 standard deviations above the mean, his hourly rate is in the highest 2.5% of salaries. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14004,9 +14003,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14045,9 +14044,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14066,9 +14065,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, John&#39;s z-score of 2.6 indicates that his salary is 2.6 standard deviations above the mean. Since the mean is $27 and each standard deviation is $4, we get that John&#39;s salary = 27 + 2.6(4) = $37.40.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14100,9 +14099,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14141,9 +14140,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14162,9 +14161,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. John&#39;s z-score of 2.6 indicates that his score is 2.6 standard deviations above the mean. It seems like you added $2.60 to the mean rather than 2.6 standard deviations. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14196,9 +14195,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14237,9 +14236,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14258,9 +14257,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. John&#39;s z-score of 2.6 indicates that his score is 2.6 standard deviations above the mean. It seems like you subtracted 2.6 standard deviations from the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14292,9 +14291,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14333,9 +14332,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14354,9 +14353,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. John&#39;s z-score of 2.6 indicates that his score is 2.6 standard deviations above the mean. It seems like you subtracted $2.60 dollars from the mean instead of adding 2.6 standard deviations to the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14388,9 +14387,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14429,9 +14428,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14450,9 +14449,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that Tom’&#39;s hourly salary ($22.50) is higher than Cindy&#39;s ($18), it makes more sense to compare their z-scores. In other words, it would make more sense to compare their hourly salaries relative to other accountants in their respective companies. Try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14484,9 +14483,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14525,9 +14524,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14546,9 +14545,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct! Indeed, Cindy&#39;s z-score is -2, while Tom’s z-score is (22.50-27) / 4 = -1.125. Cindy’s hourly salary is lower, since she scored 2 standard deviations below the mean, while Tom scored only 1.125 standard deviations below the mean.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14580,9 +14579,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14621,9 +14620,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14642,9 +14641,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In order to decide which score is more impressive, compare the z-scores of both Tom&#39;s and Cindy’s hourly salaries. Bear in mind that each of the hourly salary rates come from a different normal distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14676,9 +14675,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14717,9 +14716,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14738,9 +14737,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 88 is Ron&#39;s raw score. Recall that the z-score of a normal value is (value - mean) / standard deviation. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14772,9 +14771,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14813,9 +14812,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14834,9 +14833,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like you started well by calculating the difference (value - mean) = 88 - 82. Recall however that z-score is calculated: (value - mean) / standard deviation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14868,9 +14867,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -14909,9 +14908,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -14930,9 +14929,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like your mistake is that you calculated: (mean - value) / standard deviation. You switched &quot;mean&quot; and &quot;value.&quot; Note that z-scores are calculated: (value - mean) / standard deviation. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -14964,9 +14963,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15005,9 +15004,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15026,9 +15025,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, Ron&#39;s z-score = (88 - 82) / 5 = 1.2. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15060,9 +15059,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15101,9 +15100,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15122,9 +15121,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A z-score tells us how many standard deviations above or below the mean the value is. Positive z-scores indicate that the value is above the mean, and negative values indicate that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15156,9 +15155,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15197,9 +15196,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15218,9 +15217,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, a z-score of 1.2 indicates that Ron&#39;s score of 88 is 1.2 standard deviations above the mean score.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15252,9 +15251,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15293,9 +15292,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15314,9 +15313,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A z-score tells us how many standard deviations above or below the mean the value is. Positive z-scores indicate that the value is above the mean, and negative values indicate that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15348,9 +15347,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15389,9 +15388,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15410,9 +15409,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that a positive z-score indicates that the value is above the mean, and a negative z-score indicates that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15444,9 +15443,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15485,9 +15484,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15506,9 +15505,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, Dan&#39;s z-score indicates that his score is 2.4 standard deviations below the mean, which is much below average. In particular, from the standard deviation rule, we know that, since Dan&#39;s score is less than 2 standard deviations below the mean, his score is in the lowest 2.5% of scores.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15540,9 +15539,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15581,9 +15580,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15602,9 +15601,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that Dan&#39;s score is below average, his z-score indicates that his score is 2.4 standard deviations below the mean, which is much below average. In particular, from the standard deviation rule, we know that since Dan&#39;s score is less than 2 standard deviations below the mean, his score is in the lowest 2.5% of scores.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15636,9 +15635,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15677,9 +15676,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15698,9 +15697,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A negative z-score indicates that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15732,9 +15731,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15773,9 +15772,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15794,9 +15793,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. A negative z-score indicates that the value is below the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15828,9 +15827,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15869,9 +15868,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15890,9 +15889,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Dan&#39;s z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you added 2.4 standard deviations to the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -15924,9 +15923,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -15965,9 +15964,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -15986,9 +15985,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Dan&#39;s z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you added (rather than subtracted) 2.4 points (rather than standard deviations) to the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16020,9 +16019,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16061,9 +16060,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16082,9 +16081,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, Dan&#39;s z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. Since the mean is 82 and each standard deviation is 5, we get that Dan&#39;s score = 82 - 2.4(5) = 70.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16116,9 +16115,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16157,9 +16156,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16178,9 +16177,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Dan&#39;s z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you subtracted 2.4 points from the mean rather than 2.4 standard deviations. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16212,9 +16211,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16253,9 +16252,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16274,9 +16273,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. While it is true that Ron&#39;s raw score (88) is higher than Julie&#39;s (84), it makes more sense to compare their z-scores. In other words, it would make more sense to compare how they scored relative to other students in their respective classes. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16308,9 +16307,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16349,9 +16348,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16370,9 +16369,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, Ron&#39;s z-score is 1.2, and Julie&#39;s z-score is (84 - 75) / 6 = 1.5. Julie&#39;s score is more impressive, since she scored 1.5 standard deviations above the mean, while Ron scored only 1.2 standard deviations above the mean.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16404,9 +16403,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16445,9 +16444,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16466,9 +16465,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In order to decide which score is more impressive, compare the z-scores of both Ron&#39;s and Julie&#39;s final scores. Bear in mind that each of the raw scores comes from a different normal distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16500,9 +16499,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16529,9 +16528,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16550,9 +16549,9 @@
                   "messageType": "feedback",
                   "template": "<p>Thank you for your response.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16584,9 +16583,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16625,9 +16624,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16646,9 +16645,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, the rule of thumb is satisfied, since np = 100 * 0.75 = 75 &gt; 10 and n(1 − p) = 100 * 0.25 = 25 &gt; 10. Also, visually, it is quite clear that the normal approximation would be very good in this case. The distribution looks essentially normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16680,9 +16679,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16721,9 +16720,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16742,9 +16741,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the rule of thumb is satisfied, since np = 100 * 0.75 = 75 &gt; 10 and n(1 − p) = 100 * 0.25 = 25 &gt; 10. Also, visually, it is quite clear that the normal approximation would be very good in this case. The distribution looks essentially normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16776,9 +16775,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16817,9 +16816,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16838,9 +16837,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The rule of thumb is satisfied, since np = 300 * 0.9 = 270 &gt; 10 and n(1 − p) = 300 * 0.1 = 30 &gt; 10. Also, visually, it is quite clear that the normal approximation would be very good in this case. The distribution looks essentially normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16872,9 +16871,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -16913,9 +16912,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -16934,9 +16933,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the rule of thumb is satisfied, since np = 300 * 0.9 = 270 &gt; 10 and n(1 − p) = 300 * 0.1 = 30 &gt; 10. Also, visually, it is quite clear that the normal approximation would be very good in this case. The distribution looks essentially normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -16968,9 +16967,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17009,9 +17008,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17030,9 +17029,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that np = n(1 − p) = 4 * 0.5 = 2, so the rule of thumb is not satisfied. Visually, although the distribution is symmetric and maybe remotely resembles the normal distribution, it is not &quot;fine&quot; enough for the normal approximation to be appropriate.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17064,9 +17063,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17105,9 +17104,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17126,9 +17125,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. np = n(1 − p) = 4 * 0.5 = 2, so the rule of thumb is not satisfied. Visually, although the distribution is symmetric and maybe remotely resembles the normal distribution, it is not &quot;fine&quot; enough for the normal approximation to be appropriate.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17160,9 +17159,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17201,9 +17200,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17222,9 +17221,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that np = 20 * 0.1 = 2 &lt; 10, so the rule of thumb is not satisfied. Visually, it is quite clear that the normal approximation is not appropriate in this case, since the distribution is skewed to the right.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17256,9 +17255,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17297,9 +17296,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17318,9 +17317,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. np = 20 * 0.1 = 2 &lt; 10, so the rule of thumb is not satisfied. Visually, it is quite clear that the normal approximation is not appropriate in this case, since the distribution is skewed to the right.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17352,9 +17351,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17381,9 +17380,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17402,9 +17401,9 @@
                   "messageType": "feedback",
                   "template": "<p>For example 1: X is binomial with n = 100 and p = .75, and would therefore be approximated by a normal random variable having mean μ = 100 * 0.75 = 75 and standard deviation σ = sqrt(100 * 0.75 * 0.25) = sqrt(18.75) = 4.33. Note that if you look at the histogram, this makes sense. The distribution is indeed centered at 75, and extends approximately 3 standard deviations (3 * 4.33 = 13) on each side of the mean (as we know normal distributions do).</p><p>For example 2: X is binomial with n = 300 and p = .9, and would therefore be approximated by a normal random variable having mean μ = 300 * 0.9 = 270 and standard deviation σ = sqrt(300 * 0.9 * 0.1) = sqrt(27) = 5.2. Note that if you look at the histogram, this makes sense. The distribution is indeed centered at 270, and extends approximately 3 standard deviations (3 * 5.2 = 15.6) on each side of the mean (as we know normal distributions do).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17436,9 +17435,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17465,9 +17464,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17486,9 +17485,9 @@
                   "messageType": "feedback",
                   "template": "<p>X is binomial with n = 225 and p = 0.1. The normal approximation is appropriate, since the rule of thumb is satisfied: np = 225 * 0.1 = 22.5 &gt; 10, and n(1 − p) = 225 * 0.9 = 202.5 &gt; 10.</p><p>We will approximate the binomial random variable X by the random variable Y having a normal distribution with mean μ = 225 * 0.1 = 22.5 and standard deviation σ = √(225 * 0.1 * 0.9) = sqrt(20.25) = 4.5.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17520,9 +17519,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17549,9 +17548,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17570,9 +17569,9 @@
                   "messageType": "feedback",
                   "template": "<p>P(X ≥ 31) ≈ (normal approximation + continuity correction) ≈ P(Y ≥ 30.5) = P(Z ≥ (30.5 - 22.5) / 4.5) = P(Z ≥ 1.78) = (symmetry) = P(Z ≤ -1.78) = (table) = 0.0375.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17604,9 +17603,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17645,9 +17644,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17666,9 +17665,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(Z &lt; 1.05) is just the table&#39;s entry for z = 1.05, which is 0.8531. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17700,9 +17699,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17741,9 +17740,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17762,9 +17761,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We are looking for P(Z &lt; 1.05), which is just the normal table&#39;s entry for z = 1.05. It seems your mistake is either that you looked up −1.05 or that you subtracted the table entry for 1.05 from 1. Try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17796,9 +17795,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17837,9 +17836,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17858,9 +17857,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We are looking for P(Z &lt; 1.05), which is just the normal table&#39;s entry for z = 1.05. It seems that you looked up z = 1.5 in the table by mistake. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17892,9 +17891,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -17933,9 +17932,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -17954,9 +17953,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We are looking for P(Z &lt; 1.05), which is just the normal table&#39;s entry for z = 1.05. It seems you looked up z = −1.5 or z = 1.5 in the table by mistake. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -17988,9 +17987,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18029,9 +18028,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18050,9 +18049,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.9938 is just P(Z &lt; 2.5). Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18084,9 +18083,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18125,9 +18124,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18146,9 +18145,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.0668 is just P(Z &lt; −1.5). Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18180,9 +18179,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18221,9 +18220,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18242,9 +18241,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(−1.5 &lt; Z &lt; 2.5) = P(Z &lt; 2.5) − P(Z &lt; −1.5) = 0.9938 − 0.0668 = 0.9270.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18276,9 +18275,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18317,9 +18316,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18338,9 +18337,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18372,9 +18371,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18413,9 +18412,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18434,9 +18433,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems you were looking at the table entry of 2.54 instead of 2.55. Also remember that the table provides only probabilities of &quot;less than&quot; P(Z &lt; a), and you are asked about P(Z &gt; 2.55). Review part (c) of the last example, and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18468,9 +18467,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18509,9 +18508,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18530,9 +18529,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.9946 is P(Z &lt; 2.55), and we are looking for P(Z &gt; 2.55). Review part (c) of the last example and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18564,9 +18563,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18605,9 +18604,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18626,9 +18625,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems that you know what you&#39;re doing, but you looked up 2.54 (or −2.54) in the table instead of 2.55 (or −2.55).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18660,9 +18659,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18701,9 +18700,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18722,9 +18721,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(Z &gt; 2.55) = P(Z &lt; −2.55) = 0.0054 or, P(Z &gt; 2.55) = 1 − P(Z &lt; 2.55) = 1 − 0.9946 = 0.0054.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18756,9 +18755,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18797,9 +18796,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18818,9 +18817,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems you were working with 0.15 instead of 0.015.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18852,9 +18851,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18893,9 +18892,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -18914,9 +18913,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. −2.17 satisfies P(Z &lt; −2.17) = 0.015, and we are looking for the value of z that satisfies P(Z &gt; z) = 0.015. Review part (b) of the last example, and try again. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -18948,9 +18947,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -18989,9 +18988,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19010,9 +19009,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(Z &gt; 2.17) = 0.015. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19044,9 +19043,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19085,9 +19084,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19106,9 +19105,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that, in this question, you are given the probability and are asked to provide a value, so you start by looking in the body of the table, and find your answer in the margins. It would be very useful for you to review the last example and then try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19140,9 +19139,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19169,9 +19168,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19190,9 +19189,9 @@
                   "messageType": "feedback",
                   "template": "<p>We are given that the random variable X representing the SAT-M score has a normal distribution with a mean of 507 and a standard deviation of 111, and we are asked to find P(X &gt; 700). The z-score of 700 is (700 − 507)/111 = 1.74 (rounded), and therefore:</p><p>P(X &gt; 700) = P(Z &gt; 1.74) = (by symmetry) P(Z &lt; −1.74) = (using the table) 0.0409.</p><p>We conclude that roughly 4.1% of the students score above 700 on the SAT-M.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19224,9 +19223,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19253,9 +19252,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19274,9 +19273,9 @@
                   "messageType": "feedback",
                   "template": "<p>We need to find P(400 &lt; X &lt; 600), where X is a normal random variable with a mean of 507 and a standard deviation of 111.</p><p>The z-score of 400 is (400 − 507)/111 = −0.96 (rounded).</p><p>The z-score of 600 is (600 − 507)/111 = 0.84 (rounded), and therefore,</p><p>P(400 &lt; X &lt; 600) = P(−0.96 &lt; Z &lt; 0.84) = P(Z &lt; 0.84) − P(Z &lt; −0.96) = (table) 0.7995 − 0.1685 = 0.6310.</p><p>We conclude that roughly 63.1% of the students score between 400 and 600.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19308,9 +19307,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19349,9 +19348,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19370,9 +19369,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember, we are looking for the probability that will allow us to determine the score for the top 2% of the SAT-M scores. This value will give us the probability to get a score that reflects where 98% of the scores fall above, rather than below. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19404,9 +19403,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19445,9 +19444,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19466,9 +19465,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. We are looking for the value x, so that P(X &gt; x) = 0.02. The same value also satisfies P(X &lt; x) = 0.98. This way of posing the problem works best for us, since our table is set up to work with &quot;less than&quot; rather than &quot;greater than.&quot;</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19500,9 +19499,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19541,9 +19540,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19562,9 +19561,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is possible to determine, from the problem, the value needed to use with the normal table, in order to solve this problem. Recall that our normal table only works with &quot;less than&quot; probabilities, so we need to rephrase our problem accordingly. Remember, looking for the SAT-M score that 2% of students scored higher than is the same as looking for the SAT-M score that 98% of the students scored lower than. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19596,9 +19595,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19637,9 +19636,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19658,9 +19657,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. −2.05 is the z-score associated with a probability of 0.02 and therefore is the z-score of the value that marks the bottom 2%. You are looking for the z-score associated with a probability of 0.98 (which marks the top 2%)</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19692,9 +19691,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19733,9 +19732,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19754,9 +19753,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.8365 is the table probability associated with a a z-score of 0.98. You need to work with the table in the reverse order in this case. You are looking for the z-score that is associated with a table probability of 0.98.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19788,9 +19787,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19829,9 +19828,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19850,9 +19849,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems you found the z-score associated with the probability closest to 0.098. You are looking for a probability closest to 0.98</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19884,9 +19883,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -19925,9 +19924,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -19946,9 +19945,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The closest probability of 0.98 is 0.9798. Looking at the margins, we see that this probability corresponds to a z-score of 2.05. This means that in order to be in the top 2% of SAT-M scores (and thus be considered for the engineering school) a student must score more than 2.05 standard deviations above the mean.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -19980,9 +19979,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20021,9 +20020,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20042,9 +20041,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.9798 is the closest probability to 0.98 in the body of the table, however you are asked to find the z-score associated with this probability. The z-score is obtained by looking at the margins of the table that correspond to this probability value. Please try again</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20076,9 +20075,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20117,9 +20116,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20138,9 +20137,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. In order to be in the top 2% of SAT-M scores (and thus be considered for the engineering school) a student must score more than 2.05 standard deviations above the mean. 2.05 standard deviations above the mean is a score of 507 + 2.05(111) = 734.55. Since SAT-M scores are whole numbers, we conclude that in order to be considered for the engineering school a student must have an SAT-M score of at least 735.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20172,9 +20171,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20213,9 +20212,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20234,9 +20233,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It looks like you calculated the value with the incorrect z score (−2.05 instead of +2.05). Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20268,9 +20267,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20309,9 +20308,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20330,9 +20329,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It looks like you used the probability (0.9798), instead of the z score in the formula. Remember, the standard deviation needs to be multiplied by the z-score, before it is added to the mean. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -20364,9 +20363,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -20405,9 +20404,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -20426,9 +20425,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You are looking for the score that is 2.05 standard deviations above the mean. It seems like used 111 as the mean and 507 as the mean, but mistake.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

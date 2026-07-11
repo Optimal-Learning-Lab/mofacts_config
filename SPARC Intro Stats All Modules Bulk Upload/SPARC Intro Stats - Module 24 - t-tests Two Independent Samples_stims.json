@@ -282,7 +282,6 @@
         "pageId": "sparc-intro-stats-module-24-t-tests-two-independent-samples",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-24-t-tests-two-independent-samples",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -4442,9 +4441,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4483,9 +4482,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4504,9 +4503,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. In the two-sample case, the null hypothesis is always H<sub>0</sub>: mu1 − mu2 = 0 (which can also be written as H<sub>0</sub>: mu1 = mu2).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4538,9 +4537,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4579,9 +4578,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4600,9 +4599,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that in the two-sample case the null hypothesis is always H<sub>0</sub>: mu1 − mu2 = 0 (which can also be written as H<sub>0</sub>: mu1 = mu2).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4634,9 +4633,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4675,9 +4674,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4696,9 +4695,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that in the two-sample case the null hypothesis is always H<sub>0</sub>: mu1 − mu2 = 0 (which can also be written as H<sub>0</sub>: mu1 = mu2).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4730,9 +4729,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4771,9 +4770,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4792,9 +4791,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that in the two-sample case the null hypothesis is always H<sub>0</sub>: mu1 − mu2 = 0 (which can also be written as H<sub>0</sub>: mu1 = mu2).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4826,9 +4825,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4867,9 +4866,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4888,9 +4887,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. H<sub>0</sub>: mu1 − mu2 = 0 claims that the mean pregnancy length of women who smoke is equal to that of women who do not smoke. In other words, the null hypothesis claims that pregnancy length is not affected by whether or not the woman smokes during pregnancy.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4922,9 +4921,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4963,9 +4962,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4984,9 +4983,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, H<sub>0</sub>: mu1 − mu2 = 0 claims that the mean pregnancy length of women who smoke is equal to that of women who do not smoke. In other words, the null hypothesis claims that pregnancy length is not affected by whether or not the woman smokes during pregnancy.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5018,9 +5017,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5059,9 +5058,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5080,9 +5079,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that your choice is the null hypothesis, and we are asking for the alternative hypothesis.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5114,9 +5113,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5155,9 +5154,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5176,9 +5175,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, we want to test the claim that the mean pregnancy length of women who smoke (mu1) is smaller than the mean pregnancy length of women who do not smoke (mu2). Therefore, the alternative hypothesis in this case is H<sub>a</sub>: mu1 &lt; mu2 or H<sub>a</sub>: mu1 − mu2 &lt; 0.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5210,9 +5209,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5251,9 +5250,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5272,9 +5271,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We want to test the claim that the mean pregnancy length of women who smoke (mu1) is smaller than the mean pregnancy length of women who do not smoke (mu2). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5306,9 +5305,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5347,9 +5346,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5368,9 +5367,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. We want to test the claim that the mean pregnancy length of women who smoke (mu1) is smaller than the mean pregnancy length of women who do not smoke (mu2). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5402,9 +5401,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5443,9 +5442,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5464,9 +5463,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, H<sub>a</sub>: mu1 − mu2 &lt; 0 claims that the mean pregnancy length of women who smoke is smaller than that of women who do not smoke. This means that pregnancy length is affected by whether or not the woman smokes during pregnancy.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5498,9 +5497,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5539,9 +5538,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5560,9 +5559,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. H<sub>a</sub>: mu1 − mu2 &lt; 0 claims that the mean pregnancy length of women who smoke is smaller than that of women who do not smoke. This means that pregnancy length is affected by whether or not the woman smokes during pregnancy.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5594,9 +5593,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5635,9 +5634,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5656,9 +5655,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 150 is the sample size of sample 1, the sample of females.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5690,9 +5689,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5731,9 +5730,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5752,9 +5751,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5786,9 +5785,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5827,9 +5826,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5848,9 +5847,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5882,9 +5881,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5923,9 +5922,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5944,9 +5943,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5978,9 +5977,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6019,9 +6018,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6040,9 +6039,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6074,9 +6073,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6115,9 +6114,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6136,9 +6135,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6170,9 +6169,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6211,9 +6210,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6232,9 +6231,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6266,9 +6265,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6307,9 +6306,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6328,9 +6327,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 85 is the sample size of sample 2, the sample of males.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6362,9 +6361,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6403,9 +6402,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6424,9 +6423,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6458,9 +6457,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6499,9 +6498,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6520,9 +6519,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6554,9 +6553,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6595,9 +6594,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6616,9 +6615,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6650,9 +6649,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6691,9 +6690,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6712,9 +6711,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6746,9 +6745,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6787,9 +6786,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6808,9 +6807,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6842,9 +6841,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6883,9 +6882,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6904,9 +6903,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6938,9 +6937,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6979,9 +6978,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7000,9 +6999,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 10.73 is the sample mean importance score in sample 1, the sample of females.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7034,9 +7033,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7075,9 +7074,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7096,9 +7095,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7130,9 +7129,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7171,9 +7170,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7192,9 +7191,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7226,9 +7225,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7267,9 +7266,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7288,9 +7287,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7322,9 +7321,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7363,9 +7362,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7384,9 +7383,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7418,9 +7417,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7459,9 +7458,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7480,9 +7479,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7514,9 +7513,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7555,9 +7554,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7576,9 +7575,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7610,9 +7609,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7651,9 +7650,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7672,9 +7671,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 13.33 is the sample mean importance score in sample 2, the sample of males.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7706,9 +7705,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7747,9 +7746,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7768,9 +7767,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7802,9 +7801,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7843,9 +7842,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7864,9 +7863,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7898,9 +7897,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7939,9 +7938,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7960,9 +7959,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7994,9 +7993,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8035,9 +8034,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8056,9 +8055,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8090,9 +8089,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8131,9 +8130,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8152,9 +8151,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8186,9 +8185,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8227,9 +8226,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8248,9 +8247,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8282,9 +8281,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8323,9 +8322,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8344,9 +8343,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 4.25 is the sample standard deviation of sample 1, the sample of females.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8378,9 +8377,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8419,9 +8418,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8440,9 +8439,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8474,9 +8473,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8515,9 +8514,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8536,9 +8535,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8570,9 +8569,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8611,9 +8610,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8632,9 +8631,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8666,9 +8665,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8707,9 +8706,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8728,9 +8727,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8762,9 +8761,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8803,9 +8802,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8824,9 +8823,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8858,9 +8857,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8899,9 +8898,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8920,9 +8919,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Ask for a hint and try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8954,9 +8953,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8995,9 +8994,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9016,9 +9015,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. 4.02 is the sample standard deviation of sample 2, the sample of males.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9050,9 +9049,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9091,9 +9090,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9112,9 +9111,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 0 falls outside the 95% confidence interval for μ<sub>1</sub> - μ<sub>2</sub>, which means that H<sub>o</sub> can be rejected in favor of the two-sided alternative hypothesis. On the other hand, the p-value is large (.289) indicating that H<sub>o</sub> cannot be rejected.... Something is wrong here.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9146,9 +9145,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9187,9 +9186,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9208,9 +9207,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 0 falls inside the 95% confidence interval for μ<sub>1</sub> - μ<sub>2</sub>, which means that H<sub>o</sub> cannot be rejected. On the other hand, the p-value is small, (.003) indicating that H<sub>o</sub> can be rejected.... Something is wrong here.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9242,9 +9241,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9283,9 +9282,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9304,9 +9303,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, this is the correct output, since it is the only one out of the three in which both the confidence interval and p-value lead us to the same conclusion (as it should be). Note that 0 falls inside the 95% confidence interval for μ<sub>1</sub> - μ<sub>2</sub>, which means that H<sub>o</sub> cannot be rejected. Also, the p-value is large (.223) indicating that H<sub>o</sub> cannot be rejected. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

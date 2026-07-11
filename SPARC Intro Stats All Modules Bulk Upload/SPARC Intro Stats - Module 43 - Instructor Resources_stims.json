@@ -514,7 +514,6 @@
         "pageId": "sparc-intro-stats-module-43-instructor-resources",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-43-instructor-resources",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -6685,9 +6684,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6726,9 +6725,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6747,9 +6746,9 @@
                   "messageType": "feedback",
                   "template": "<p>Even though it is difficult to &quot;let go&quot; of your original choice, it turns out that this is not the best strategy to take. Read on for an explanation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6781,9 +6780,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6822,9 +6821,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6843,9 +6842,9 @@
                   "messageType": "feedback",
                   "template": "<p>Switching is indeed the best strategy. Can you figure out why this is the case? Read on for an explanation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6877,9 +6876,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6918,9 +6917,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6939,9 +6938,9 @@
                   "messageType": "feedback",
                   "template": "<p>This is the intuition of most people. There are two doors. One hides a prize behind it and one doesn&#39;t, so the chances of winning are the same (50%) with either selection. But actually, this is not the best strategy. Read on for an explanation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6973,9 +6972,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7014,9 +7013,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7035,9 +7034,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You are confusing values and probabilities. To calculate standard deviation, we look at the squared deviation between the values of X and its mean, and weigh each of those deviations by the corresponding probability. Also, you have used a mean of 2, instead of 2.7. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7069,9 +7068,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7110,9 +7109,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7131,9 +7130,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job!</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7165,9 +7164,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7206,9 +7205,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7227,9 +7226,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Your mistake is that you are averaging the squared deviations twice. First you multiply each one by the corresponding weight (probability), which is the right thing to do, but then dividing again by 5 - 1 is wrong. You might be confusing the standard deviation of a random variable with the formula for s—the sample standard deviation, which we introduced in the Exploratory Data Analysis unit. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7261,9 +7260,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7302,9 +7301,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7323,9 +7322,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You are almost right, though. Your choice just considers the deviations, instead of the squared deviations, as it should. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7357,9 +7356,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7398,9 +7397,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7419,9 +7418,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is true that the probability distribution is centered at 3, but what is a typical distance between this mean and the values that the random variable W can have?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7453,9 +7452,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7494,9 +7493,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7515,9 +7514,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the probability distribution of the random variable W is centered at the mean of 3, and the typical distance between the values that W can have (1,5) and the mean 3 is 2.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7549,9 +7548,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7590,9 +7589,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7611,9 +7610,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 4? Is the typical distance between the center of the distribution and the values that W can assume really 1?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7645,9 +7644,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7686,9 +7685,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7707,9 +7706,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 4?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7741,9 +7740,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7782,9 +7781,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7803,9 +7802,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 3?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7837,9 +7836,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7878,9 +7877,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7899,9 +7898,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 3? Is the typical distance between the center of the distribution and the values that X can assume really 2?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -7933,9 +7932,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -7974,9 +7973,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -7995,9 +7994,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the probability distribution of the random variable X is centered at the mean of 4, and the typical distance between the values that X can have and the mean is 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8029,9 +8028,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8070,9 +8069,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8091,9 +8090,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is true that the probability distribution is centered at 4, but is the typical distance between the center of the distribution and the values that X can assume really 2?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8125,9 +8124,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8166,9 +8165,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8187,9 +8186,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the probability distribution of the random variable Y is centered at the mean of 3, and the typical distance between the values that Y can have and the mean is 1.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8221,9 +8220,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8262,9 +8261,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8283,9 +8282,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is true that the probability distribution is centered at 3, but is the typical distance between this mean and the values that the random variable Y can have really 2?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8317,9 +8316,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8358,9 +8357,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8379,9 +8378,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 4?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8413,9 +8412,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8454,9 +8453,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8475,9 +8474,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 4? Is the typical distance between the center of the distribution and the values that Y can assume really 2?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8509,9 +8508,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8550,9 +8549,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8571,9 +8570,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 3? Is the typical distance between the center of the distribution and the values that Z can assume really 1?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8605,9 +8604,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8646,9 +8645,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8667,9 +8666,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Is the probability distribution really centered at 3?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8701,9 +8700,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8742,9 +8741,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8763,9 +8762,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It is true that the probability distribution is centered at 4, but is the typical distance between the center of the distribution and the values that Z can assume really 1?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8797,9 +8796,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8838,9 +8837,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8859,9 +8858,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, the probability distribution of the random variable Z is centered at the mean of 4, and the typical distance between the values that Z can have and the mean is 2.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8893,9 +8892,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -8934,9 +8933,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -8955,9 +8954,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 75% of the time, Y will get the value 3, which is very close to its mean (2.7). On the other hand, only 25% of time will X get the value 2, which is very close to its mean (1.8). Try again, and read the explanation below.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -8989,9 +8988,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9030,9 +9029,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9051,9 +9050,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Note that 75% of the time, Y will get the value 3, which is very close to its mean (2.7). On the other hand, only 25% of time will X get the value 2, which is very close to its mean (1.8).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9085,9 +9084,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9126,9 +9125,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9147,9 +9146,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that 75% of the time, Y will get the value 3, which is very close to its mean (2.7). On the other hand, only 25% of time will X get the value 2, which is very close to its mean (1.8). Try again, and read the explanation below.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9181,9 +9180,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9222,9 +9221,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9243,9 +9242,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The probabilities of the values that are further from the mean are larger in Xavier&#39;s distribution than in Yves&#39;, making them more likely.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9277,9 +9276,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9318,9 +9317,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9339,9 +9338,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The probabilities of the values that are further from the mean are larger in Xavier&#39;s distribution than in Yves&#39;, making them more likely.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9373,9 +9372,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9414,9 +9413,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9435,9 +9434,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. When it is more likely (probable) to find values further from the mean, it is more likely that the standard deviation will be larger.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9469,9 +9468,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9510,9 +9509,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9531,9 +9530,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. When it is more likely (probable) to find values further from the mean, it is more likely that the standard deviation will be larger.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9565,9 +9564,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9606,9 +9605,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9627,9 +9626,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. This distribution has the largest spread relative to the mean, with higher relative frequencies that are further from the mean than the other distributions.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9661,9 +9660,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9702,9 +9701,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9723,9 +9722,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This distribution has the second largest standard deviation. Look for one with lower relative frequency near the mean and higher relative frequency further from the mean. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9757,9 +9756,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9798,9 +9797,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9819,9 +9818,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This distribution has the third largest standard deviation. Look for one with the lowest relative frequency near the mean and higher relative frequencies further from the mean. Please try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9853,9 +9852,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9894,9 +9893,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9915,9 +9914,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. This distribution has the smallest standard deviation. It has the highest relative frequency near the mean, which makes the standard deviation small.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -9949,9 +9948,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -9978,9 +9977,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -9999,9 +9998,9 @@
                   "messageType": "feedback",
                   "template": "<p> Since the mean is 1.23 and the standard deviation is 1.08, two changes is less than 1 standard deviation above the mean. </p><p> 1.23 + 1.08 = 2.31</p><p>So, John&#39;s behavior is not unusual at all. In fact, it is quite ordinary.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10033,9 +10032,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10074,9 +10073,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10095,9 +10094,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You are probably confusing the two types of costs. There is a $3 charge per car (regardless of the number of people in the car), plus $.50 for each person in the car. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10129,9 +10128,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10170,9 +10169,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10191,9 +10190,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. There is a $3 charge per car (regardless of the number of people in the car), plus $.50 for each person in the car.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10225,9 +10224,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10266,9 +10265,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10287,9 +10286,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the charge per car is $3 regardless of the number of people in the car. This is a fixed cost and therefore should not be multiplied by X. Only the $.50 charge is applied to each person in the car. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10321,9 +10320,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10362,9 +10361,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10383,9 +10382,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. According to your answer, the amount of money collected from a car is fixed at $3.50, and is not a random variable. Note that this is not the case. There is a fixed charge of $3 per car, but in addition there is $.50 charge for each person in the car, the number of which is expressed by the random variable X. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10417,9 +10416,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10458,9 +10457,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10479,9 +10478,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. While your mean is correct, the variance 3.60 isn’t. It appears that for σ<sup>2</sup><sub>3 + 0.50X</sub>, you calculated 3 + 0.50 * 1.2 = 3.60, but you forgot to square 0.50.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10513,9 +10512,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10554,9 +10553,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10575,9 +10574,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. While the variance is correct, there is a problem with your mean. It seems like what you did is μ<sub>3+0.50X</sub> = 0.50 * 2.7 = 1.35, but you forgot include the flat rate of $3 in the calculation of the mean. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10609,9 +10608,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10650,9 +10649,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10671,9 +10670,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. While the variance is correct, there is a problem with your mean. It seems like your mistake is the following: μ<sub>3+0.50X</sub> = 3.50μ<sub>X</sub> = 3.50 * 2.7 = 9.45. Note that 3 is a flat rate and should not be summed with the price per person ($0.50) before multiplying by μX.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10705,9 +10704,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10746,9 +10745,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10767,9 +10766,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, μ<sub>3+50X</sub> = 3 + 0.50 * μ<sub>X</sub> = 3 + 0.50 * 2.7 = 4.35, and σ<sup>2</sup><sub>3+0.50X</sub> = 0.50<sup>2</sup> * σ<sup>2</sup><sub>X</sub> = 0.25 * 1.2 = 0.30. Therefore, the standard deviation is sqrt(0.30). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10801,9 +10800,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10842,9 +10841,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10863,9 +10862,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. While your mean is correct, the variance 0.60 isn’t. Your mistake is that you forgot to square the 0.50. In other words, it seems like what you did is μ<sup>2</sup><sub>3+0.50X</sub> = 0.50 * σ<sup>2</sup><sub>X</sub> = 0.50 * 1.2 = 0.60. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10897,9 +10896,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -10938,9 +10937,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -10959,9 +10958,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You need to consider the mean number of computers manufactured per day, μ<sub>x</sub> = 120 when calculating the cost.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -10993,9 +10992,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11034,9 +11033,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11055,9 +11054,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>x</sub>. It seems you used the variance σ<sup>2</sup><sub>x</sub> = 36 instead of the mean μ<sub>x</sub> = 120.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11089,9 +11088,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11130,9 +11129,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11151,9 +11150,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>x</sub>. The transformation you used was 15X. However, you forgot about the constant cost of $500 to manufacture monitors. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11185,9 +11184,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11226,9 +11225,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11247,9 +11246,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Let T be the total cost of manufacturing monitors for a day. T is composed of two parts: the fixed cost of $500 (regardless of the number of monitors) and $15 for every monitor made. The total cost can be written as T = 500 + 15X. To find the mean of T you use the rule of means: μ<sub>(a+bX)</sub> = a + b μ<sub>x</sub> = 500 + 15(120) = 2300.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11281,9 +11280,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11322,9 +11321,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11343,9 +11342,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that since Z = X + Y, μ<sub>Z</sub> = μ<sub>x</sub> + μ<sub>y</sub>. 18 is μ<sub>y</sub>. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11377,9 +11376,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11418,9 +11417,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11439,9 +11438,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that since Z = X + Y, μ<sub>Z</sub> = μ<sub>x</sub> + μ<sub>y</sub>. 23 is μ<sub>x</sub>. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11473,9 +11472,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11514,9 +11513,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11535,9 +11534,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Recall that since Z = X + Y, μ<sub>Z</sub> = μ<sub>x</sub> + μ<sub>y</sub> = 23 + 18 = 41.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11569,9 +11568,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11610,9 +11609,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11631,9 +11630,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Recall that since Z = X + Y, μ<sub>Z</sub> = μ<sub>x</sub> + μ<sub>y</sub>. It appears you included the standard deviations in your sum. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11665,9 +11664,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11706,9 +11705,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11727,9 +11726,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. T = X + Y, and therefore μ<sub>T</sub> = μ<sub>X</sub> + μ<sub>Y</sub>. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11761,9 +11760,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11802,9 +11801,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11823,9 +11822,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. T = X + Y, and therefore μ<sub>T</sub> = μ<sub>X</sub> + μ<sub>Y</sub>. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11857,9 +11856,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11898,9 +11897,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -11919,9 +11918,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. T = X + Y, and therefore μ<sub>T</sub> = μ<sub>X</sub> + μ<sub>Y</sub>. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -11953,9 +11952,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -11994,9 +11993,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12015,9 +12014,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, since T = X + Y, μ<sub>T</sub> = μ<sub>X</sub> + μ<sub>Y</sub> = 25 + 35 = 60.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12049,9 +12048,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12090,9 +12089,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12111,9 +12110,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like you are adding σ<sub>T</sub> and σ<sub>Y</sub>, which is wrong. Note that the rule says that if X and Y are two independent random variables then: σ<sup>2</sup><sub>X+Y</sub> = σ<sup>2</sup><sub>X</sub> + σ<sup>2</sup><sub>Y</sub>, and then to find the standard deviation of X + Y, you&#39;ll take the square root. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12145,9 +12144,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12186,9 +12185,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12207,9 +12206,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You are using the right rule, σ<sup>2</sup><sub>X+Y</sub> = σ<sup>2</sup><sub>X</sub> + σ<sup>2</sup><sub>Y</sub>, which gives you the variance of T. Note, however that we are asking you to find the standard deviation of T. Try again.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12241,9 +12240,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12282,9 +12281,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12303,9 +12302,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It seems like you are adding the two standard deviations and then taking a square root of that, which is wrong. Note that the rule says that if X and Y are two independent random variables then: σ<sup>2</sup><sub>X+Y</sub> = σ<sup>2</sup><sub>X</sub> + σ<sup>2</sup><sub>Y</sub>, and then to find the standard deviation of X+Y, you&#39;ll take the square root. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12337,9 +12336,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12378,9 +12377,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12399,9 +12398,9 @@
                   "messageType": "feedback",
                   "template": "<p>Good job! Indeed, since X and Y are independent: σ<sup>2</sup><sub>T</sub> = σ<sup>2</sup><sub>X+Y</sub> = σ<sup>2</sup><sub>X</sub> + σ<sup>2</sup><sub>Y</sub> = 25 + 64 = 89. Therefore σ<sub>T</sub> is the square root of 89.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12433,9 +12432,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12474,9 +12473,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12495,9 +12494,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. When the results are &quot;not statistically significant,&quot; it means we don’t have sufficient evidence to reject the null hypothesis, because any difference in the study was probably just by chance. In fact, the p-value is the probability of that chance difference, and a p-value of .214 is considerably larger than the traditional .05 level below which we would begin to reject the null hypothesis.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12529,9 +12528,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12570,9 +12569,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12591,9 +12590,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember that &quot;not statistically significant&quot; means we don’t have sufficient evidence to reject the null hypothesis, because any difference in the study was probably just by chance. In fact, the p-value is the probability of that chance difference, and notice that the p-value of .214 is considerably larger than the traditional .05 level below which we would begin to reject the null hypothesis.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12625,9 +12624,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12666,9 +12665,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12687,9 +12686,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember that we never &quot;accept&quot; the null hypothesis. Although it’s true that the lack of statistical significance in the study indicates we don’t have sufficient evidence to reject the null hypothesis, that doesn’t mean the null has been proved true. It means the study might not have been sensitive enough, so the null hypothesis should be remain the default conclusion until more evidence is gathered.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12721,9 +12720,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12762,9 +12761,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12783,9 +12782,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. We never &quot;accept&quot; the null hypothesis. In the case of the study described, the lack of statistical significance means there wasn’t sufficiently surprising evidence against the null, so the null hypothesis should merely remain the default conclusion until more evidence is gathered.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12817,9 +12816,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12858,9 +12857,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12879,9 +12878,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Remember that we never &quot;prove&quot; the null hypothesis. Although it’s true that the lack of statistical significance in the study indicates we don’t have sufficient evidence to reject the null hypothesis, that doesn’t mean the null is true; the alternative hypothesis might actually be true, and it might simply be that the study wasn’t sensitive enough to detect a real difference.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -12913,9 +12912,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -12954,9 +12953,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -12975,9 +12974,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. We never &quot;prove&quot; the null hypothesis. In the case of the study described, the lack of statistical significance in the study indicates we don’t have sufficient evidence to reject the null hypothesis, but that doesn’t mean the null is true; the alternative hypothesis might actually be true, and it might simply be that the study wasn’t sensitive enough to detect a real difference.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13009,9 +13008,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13050,9 +13049,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13071,9 +13070,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Even though the null hypothesis can’t be rejected by this study, the alternative hypothesis might actually be true; the study might simply not have been sensitive enough to detect the difference.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -13105,9 +13104,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -13146,9 +13145,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -13167,9 +13166,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. It’s true that the null hypothesis can’t be rejected by this study, because the relatively large p-value meant the results of the study weren’t statistically significant. But remember that when we &quot;don’t reject the null hypothesis,&quot; the alternative hypothesis might actually be true; the study might simply not have been sensitive enough to detect the difference.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

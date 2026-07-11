@@ -11,7 +11,7 @@ type ConversionContext = {
   outputRoot: string;
   auditRoot: string;
   lessonName: string;
-  documentId: string;
+  sparcPageId: string;
   stimulusFile: string;
   tdfFile: string;
   calculateProbability: string;
@@ -767,7 +767,7 @@ function ruleForExactResponse(params: {
     when: [{
       factType: 'interface-event',
       slots: {
-        documentId: bind('documentId'),
+        pageKey: bind('pageKey'),
         selection: literal(params.selection),
         action: literal(params.action),
         input: bind('input'),
@@ -783,7 +783,7 @@ function ruleForExactResponse(params: {
       {
         type: 'write-state',
         write: {
-          target: { documentId: variable('documentId'), nodeId: literal(params.nodeId) },
+          target: { pageKey: variable('pageKey'), nodeId: literal(params.nodeId) },
           key: 'correctness',
           value: literal(params.outcome),
         },
@@ -792,7 +792,7 @@ function ruleForExactResponse(params: {
         type: 'message',
         messageType: 'feedback',
         template: params.message,
-        target: { documentId: variable('documentId'), nodeId: literal(params.feedbackNodeId) },
+        target: { pageKey: variable('pageKey'), nodeId: literal(params.feedbackNodeId) },
       },
       { type: 'credit', kc: params.kc },
       {
@@ -1009,7 +1009,7 @@ function buildTargetedCataExercise(params: {
         return {
           type: 'write-state',
           write: {
-            target: { documentId: variable('documentId'), nodeId: literal(nodeId) },
+            target: { pageKey: variable('pageKey'), nodeId: literal(nodeId) },
             key: 'correctness',
             value: literal(selected === expected ? 'correct' : 'incorrect'),
           },
@@ -1019,7 +1019,7 @@ function buildTargetedCataExercise(params: {
         type: 'message',
         messageType: 'feedback',
         template: feedbackForResponse(response),
-        target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
+        target: { pageKey: variable('pageKey'), nodeId: literal(feedbackNodeId) },
       },
       { type: 'credit', kc: responseKc(part, params.moduleSlug) },
       {
@@ -1037,7 +1037,7 @@ function buildTargetedCataExercise(params: {
       when: choiceEntries.map(([choiceId]) => ({
         factType: 'interface-event',
         slots: {
-          documentId: bind('documentId'),
+          pageKey: bind('pageKey'),
           selection: literal(`${activityId}:${choiceId}`),
           action: literal('UpdateCheckbox'),
           input: literal(selectedIds.has(choiceId)),
@@ -1057,7 +1057,7 @@ function buildTargetedCataExercise(params: {
       when: choiceEntries.map(([choiceId]) => ({
         factType: 'interface-event',
         slots: {
-          documentId: bind('documentId'),
+          pageKey: bind('pageKey'),
           selection: literal(`${activityId}:${choiceId}`),
           action: literal('UpdateCheckbox'),
           input: literal(false),
@@ -1069,7 +1069,7 @@ function buildTargetedCataExercise(params: {
         ...choiceEntries.map(([choiceId]) => ({
           type: 'write-state',
           write: {
-            target: { documentId: variable('documentId'), nodeId: literal(nonBlank(checkboxNodeIdByChoice.get(choiceId), `checkbox node for ${choiceId}`)) },
+            target: { pageKey: variable('pageKey'), nodeId: literal(nonBlank(checkboxNodeIdByChoice.get(choiceId), `checkbox node for ${choiceId}`)) },
             key: 'correctness',
             value: literal(correctIds.has(choiceId) ? 'incorrect' : 'correct'),
           },
@@ -1078,7 +1078,7 @@ function buildTargetedCataExercise(params: {
           type: 'message',
           messageType: 'feedback',
           template: feedbackForResponse(defaultResponse),
-          target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
+          target: { pageKey: variable('pageKey'), nodeId: literal(feedbackNodeId) },
         },
         { type: 'credit', kc: responseKc(part, params.moduleSlug) },
         {
@@ -1307,7 +1307,7 @@ function buildTextInputExercise(params: {
         when: [{
           factType: 'interface-event',
           slots: {
-            documentId: bind('documentId'),
+            pageKey: bind('pageKey'),
             selection: literal(selection),
             action: literal('UpdateTextField'),
             input: bind('input'),
@@ -1323,7 +1323,7 @@ function buildTextInputExercise(params: {
           {
             type: 'write-state',
             write: {
-              target: { documentId: variable('documentId'), nodeId: literal(nodeId) },
+              target: { pageKey: variable('pageKey'), nodeId: literal(nodeId) },
               key: 'correctness',
               value: literal(outcome),
             },
@@ -1332,7 +1332,7 @@ function buildTextInputExercise(params: {
             type: 'message',
             messageType: 'feedback',
             template: feedbackForResponse(defaultResponse),
-            target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
+            target: { pageKey: variable('pageKey'), nodeId: literal(feedbackNodeId) },
           },
           { type: 'credit', kc: responseKc(part, params.moduleSlug) },
           {
@@ -1435,7 +1435,7 @@ function buildShortAnswerExercise(params: {
     when: [{
       factType: 'interface-event',
       slots: {
-        documentId: bind('documentId'),
+        pageKey: bind('pageKey'),
         selection: literal(submitSelection),
         action: literal('ButtonPressed'),
         input: bind('input'),
@@ -1447,7 +1447,7 @@ function buildShortAnswerExercise(params: {
       {
         type: 'write-state',
         write: {
-          target: { documentId: variable('documentId'), nodeId: literal(inputNodeId) },
+          target: { pageKey: variable('pageKey'), nodeId: literal(inputNodeId) },
           key: 'correctness',
           value: literal(outcome),
         },
@@ -1456,7 +1456,7 @@ function buildShortAnswerExercise(params: {
         type: 'message',
         messageType: 'feedback',
         template: feedbackForResponse(response),
-        target: { documentId: variable('documentId'), nodeId: literal(feedbackNodeId) },
+        target: { pageKey: variable('pageKey'), nodeId: literal(feedbackNodeId) },
       },
       { type: 'credit', kc: responseKc(part, params.moduleSlug) },
       {
@@ -1839,13 +1839,12 @@ function convertModule(context: ConversionContext): ConversionResult {
       moduleId: context.moduleId,
       moduleSlug,
       moduleTitle,
-      pageId: itemRefs[0] || context.documentId,
+      pageId: itemRefs[0] || context.sparcPageId,
     });
   }
   const clusterTargets = modelTargets.targets.map(clusterTargetForModelTarget);
   const display: JsonRecord = {
     type: 'sparc',
-    documentId: context.documentId,
     schema: 'tutorscript-sparc/1.0',
     unitType: 'sparc-intro-stats-variables',
     layout: {
@@ -1873,7 +1872,7 @@ function convertModule(context: ConversionContext): ConversionResult {
       lessonname: context.lessonName,
       clusters: modelTargets.targets.map(stimulusClusterForModelTarget),
       sparcPages: [{
-        pageId: context.documentId,
+        pageId: context.sparcPageId,
         display,
       }],
     },
@@ -1894,7 +1893,7 @@ function convertModule(context: ConversionContext): ConversionResult {
             clusterlist: clusterListForTargets(modelTargets.targets),
             unitMode: 'distance',
             calculateProbability: context.calculateProbability,
-            pageId: context.documentId,
+            pageId: context.sparcPageId,
           },
         },
       ],
@@ -1988,7 +1987,7 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
       outputRoot: options.outputRoot,
       auditRoot: `${options.outputRoot} Conversion Audit`,
       lessonName: 'SPARC Intro Stats Variables',
-      documentId: 'sparc-intro-stats-variables',
+      sparcPageId: 'sparc-intro-stats-variables',
       stimulusFile: 'SPARC_Intro_Stats_Variables_stims.json',
       tdfFile: 'SPARC Intro Stats Variables_TDF.json',
       calculateProbability: options.calculateProbability,
@@ -2005,7 +2004,7 @@ function contextForModule(options: CliOptions, moduleId: string, moduleIndex: nu
     outputRoot: options.outputRoot,
     auditRoot: `${options.outputRoot} Conversion Audit`,
     lessonName,
-    documentId: slug(lessonName),
+    sparcPageId: slug(lessonName),
     stimulusFile: `${fileStem}_stims.json`,
     tdfFile: `${fileStem}_TDF.json`,
     calculateProbability: options.calculateProbability,

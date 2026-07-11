@@ -246,7 +246,6 @@
         "pageId": "sparc-intro-stats-module-22-t-tests-one-sample",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-22-t-tests-one-sample",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -4084,9 +4083,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4125,9 +4124,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4146,9 +4145,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely. In particular, under the t distribution, it is more likely to get values that are above 3 than under the Z distribution. Visually, you can see that the t distribution has heavier tails and, therefore, the area under the t distribution to the right of 3 is larger than the area to the right of 3 under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4180,9 +4179,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4221,9 +4220,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4242,9 +4241,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely. In particular, under the t distribution it is more likely to get values that are above 3 than under the Z distribution. Visually, you can see that the t distribution has heavier tails and, therefore, the area under the t distribution to the right of 3 is larger than the area to the right of 3 under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4276,9 +4275,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4317,9 +4316,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4338,9 +4337,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely. In particular, under the t distribution it is more likely to get values that are above 3 than under the Z distribution. Visually, you can see that the t distribution has heavier tails and, therefore, the area under the t distribution to the right of 3 is larger than the area to the right of 3 under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4372,9 +4371,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4413,9 +4412,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4434,9 +4433,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, since the t distribution has heavier tails, the area under the t distribution to the right of 1.645 would be larger than 0.05. (click <a href=\"javascript:loadImage(&#39;../../../webcontent/inline_assessment/dig001.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a picture of this). The 95th percentile of the t distribution, therefore, must be to the right of, or larger than, 1.645.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4468,9 +4467,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4509,9 +4508,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4530,9 +4529,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Since the t distribution has heavier tails, the area under the t distribution to the right of 1.645 would be larger than 0.05. Click <a href=\"javascript:loadImage(&#39;../../../webcontent/inline_assessment/dig001.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a picture of this, and try again. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4564,9 +4563,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4605,9 +4604,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4626,9 +4625,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Since the t distribution has heavier tails, the area under the t distribution to the right of 1.645 would be larger than 0.05. Click <a href=\"javascript:loadImage(&#39;../../../webcontent/inline_assessment/dig001.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a picture of this, and try again. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4660,9 +4659,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4701,9 +4700,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4722,9 +4721,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely on the t distribution. In particular, getting values of less than a score of −2 is more likely with the t distribution than with the Z distribution. Visually, this is because the t distribution has &quot;fatter tails&quot; and, thus, there is more area to the left of −2 under the t distribution than under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4756,9 +4755,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4797,9 +4796,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4818,9 +4817,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely on the t distribution. In particular, getting values of less than a score of −2 is more likely with the t distribution than with the Z distribution. Visually, this is because the t distribution has &quot;fatter tails&quot; and, thus, there is more area to the left of −2 under the t distribution than under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4852,9 +4851,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4893,9 +4892,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4914,9 +4913,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Indeed, the t distribution is more spread out than the Z distribution and, therefore, values that are further away from the mean (0) are more likely on the t distribution. In particular, getting values of less than a score of −2 is more likely with the t distribution than with the Z distribution. Visually, this is because the t distribution has &quot;fatter tails&quot; and, thus, there is more area to the left of −2 under the t distribution than under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4948,9 +4947,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4989,9 +4988,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5010,9 +5009,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The t distribution is more spread out than the Z distribution and therefore the tail probabilities above 1 and below −1 are larger under the t distribution. As a result, the probability of getting values between −1 and 1 is <strong>smaller</strong> under the t distribution than it is under the Z distribution. Visually, the figure above shows that the area between the two blue lines is smaller under the t distribution compared to the area under the Z distribution.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5044,9 +5043,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5085,9 +5084,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5106,9 +5105,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The t distribution is more spread out than the Z distribution and therefore the tail probabilities of above 1 and below −1 are <strong>larger</strong> under the t distribution. What does mean about the probability of getting values between −1 and 1? This can be visualized in the figure above. Compare the area between the two blue lines under the Z distribution (which we know is roughly 0.68) to that under the t distribution. Which is larger?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5140,9 +5139,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5181,9 +5180,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5202,9 +5201,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The t distribution is more spread out than the Z distribution and therefore the tail probabilities of above 1 and below −1 are <strong>larger</strong> under the t distribution. What does mean about the probability of getting values between −1 and 1? This can be visualized in the figure above. Compare the area between the two blue lines under the Z distribution (which we know is roughly 0.68) to that under the t distribution. Are they the same? If not, which one is larger?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5236,9 +5235,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5277,9 +5276,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5298,9 +5297,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The problem description does not assume that the population standard deviation is known, and, therefore, the t-test is used.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5332,9 +5331,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5373,9 +5372,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5394,9 +5393,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 3.214 is the sample standard deviation (s). Read the problem description again. Is the population standard deviation assumed to be known?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5428,9 +5427,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5469,9 +5468,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5490,9 +5489,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.287 is the standard error of the sample mean, (s/√(n) = 3.214/√(125) = 0.287). Read the problem description again. Is the population standard deviation assumed to be known?</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5524,9 +5523,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5565,9 +5564,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5586,9 +5585,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that since the p-value is 0.09, at the 0.05 significance level, H<sub>0</sub> cannot be rejected. Recall that this means that the null value, 12.5, is a plausible value for the population, and, therefore, must be included in the 95% confidence interval. 12.375 leaves 12.5 out of the confidence interval.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5620,9 +5619,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5661,9 +5660,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5682,9 +5681,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Since, based on the p-value, we cannot reject H<sub>0</sub> at the 0.05 significance level, the 95% confidence interval must include 12.5 as a plausible value. Also the sample mean 12.008 is exactly the midpoint between 11.439 (the lower limit of the confidence interval) and 12.577, as it should be.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5716,9 +5715,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5757,9 +5756,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5778,9 +5777,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Based on the p-value, we cannot reject H<sub>0</sub> at the 0.05 significance level, and, therefore, the confidence interval must include 12.5 as a plausible value. While it is true that 13.439 does create an interval that includes 12.5, it still cannot be the upper limit of the confidence interval, since the sample mean, 12.008, is not the midpoint of the confidence interval (as it should be) in this choice.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5812,9 +5811,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5853,9 +5852,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5874,9 +5873,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the p-value of the one-sided test is 0.09/2 = 0.045 (half the p-value of the two-sided test), and therefore, at the 0.05 significance level, H<sub>0</sub> can be rejected. However, even when H<sub>0</sub> cannot be rejected, we can never conclude that H<sub>0</sub> is true.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5908,9 +5907,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5949,9 +5948,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5970,9 +5969,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that the p-value of the one-sided test is 0.09/2 = 0.045 (half the p-value of the two-sided test), and, therefore, at the 0.05 significance level, H<sub>0</sub> can be rejected.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6004,9 +6003,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6045,9 +6044,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6066,9 +6065,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Note that this question refers to testing: (H<sub>0</sub> : μ = 12.5) vs. (H<sub>a</sub> : μ &lt; 12.5). </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6100,9 +6099,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6141,9 +6140,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6162,9 +6161,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6196,9 +6195,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6237,9 +6236,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6258,9 +6257,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. In this case, sigma (the population standard deviation) is unknown; the only standard deviation available was the sample standard deviation (it says &quot;computed for the sample&quot;), so the test could not be a z-test. Then, even though the sample size is relatively small (only five boards tested), the t-test is justified, because the population is known to be normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6292,9 +6291,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6333,9 +6332,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6354,9 +6353,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, notice that sigma (the population standard deviation) is unknown; the only standard deviation available was the sample standard deviation (it says &quot;computed for the sample&quot;), so the test could not be a z-test. So the only possibility is a t-test. In this case, the t-test is justified even though the sample size is relatively small (only five boards tested), because the population is known to be normal.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6388,9 +6387,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6429,9 +6428,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6450,9 +6449,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. If the standard deviation was still only for the sample, so that sigma is still unknown, then the z-test would still not be justified. Furthermore, the z-test might not even be a good approximation, since a sample size of 15 is only of relatively &quot;moderate&quot; size, not relatively large.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6484,9 +6483,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6525,9 +6524,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6546,9 +6545,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. If the standard deviation had been for the population (so that sigma had been known), then a z-test would be justified despite the small sample size.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6580,9 +6579,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6621,9 +6620,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6642,9 +6641,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, although the sample size is relatively small (only 9 boards) and although sigma is unknown, notice that the population can be reasonably assumed to be normal (because the data distribution is reasonably unimodal and symmetric). So in this case, a t-test would be justified. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6676,9 +6675,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6717,9 +6716,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6738,9 +6737,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, although sigma is unknown, and although the population cannot be assumed to be normal in shape (since the data distribution shows severe skewness), notice that the sample size is reasonably large. So in this case, a t-test would be justified.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6772,9 +6771,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6813,9 +6812,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6834,9 +6833,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. In this case, although the population cannot be assumed to be normal in shape (since the data distribution shows severe skewness), notice that sigma is known, and notice that the sample size is greater than 30. So in this case, by the Central Limit Theorem, a z-test would be justified. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6868,9 +6867,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6909,9 +6908,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6930,9 +6929,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. In this case, the sample size is relatively small (only 9 boards), sigma is unknown, and the population cannot be reasonably assumed to vary normally (because the data distribution is noticeably skewed). So in this case, nether the z-test nor the t-test would be justified to conduct formal statistical inference. (A different sort of test called a &quot;non-parametric&quot; test might be justified, but that is beyond the scope of this course.)</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",

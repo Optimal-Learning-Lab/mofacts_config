@@ -377,7 +377,6 @@
         "pageId": "sparc-intro-stats-module-09-chance-of-a-or-b",
         "display": {
           "type": "sparc",
-          "documentId": "sparc-intro-stats-module-09-chance-of-a-or-b",
           "schema": "tutorscript-sparc/1.0",
           "unitType": "sparc-intro-stats-variables",
           "layout": {
@@ -3936,9 +3935,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -3965,9 +3964,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -3986,9 +3985,9 @@
                   "messageType": "feedback",
                   "template": "<p>i. Here are the possible outcomes in each of the events:</p><p>A={BGB, GGB, BGG, GGG}</p><p>C={BBB, GGG}</p><p>ii. The two events overlap; they have the outcome GGG in common.</p><p>iii. Based on ii, the events are not disjoint since, they can happen together, if the couple ends up having three girls. </p><p>Click <a href=\"javascript:loadImage(&#39;../../webcontent/flash/images/lbd002.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a visual representation of these two events.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4020,9 +4019,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4049,9 +4048,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4070,9 +4069,9 @@
                   "messageType": "feedback",
                   "template": "<p>i. Here are the possible outcomes in each of the events:</p><p>A={GBB, BGB, BBG}</p><p>C={BGG, GBG, GGB}</p><p>ii. The events do not overlap; they have no outcome in common.</p><p>iii. Based on ii, the events are disjoint—they can never occur together.</p><p>Click <a href=\"javascript:loadImage(&#39;../../webcontent/flash/images/lbd003.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a visual representation of these events:</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4104,9 +4103,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4145,9 +4144,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4166,9 +4165,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The sample space for event A is {GB, BG, GGB}. The sample space for event C is {GGB, BBG, BBB, GGG}. The outcome GGB is in both sample spaces.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4200,9 +4199,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4241,9 +4240,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4262,9 +4261,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The events A and C are not disjoint because the outcome GGB is in both sample spaces. The sample space for event A is {GB, BG, GGB}. The sample space for event C is {GGB, BBG, BBB, GGG}.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4296,9 +4295,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4337,9 +4336,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4358,9 +4357,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. Events A and D are disjoint because their sample spaces do not share any outcomes. The sample space for event A is {GB, BG, GGB}. The sample space for event D is {BBB, GGG}.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4392,9 +4391,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4433,9 +4432,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4454,9 +4453,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The sample space for event A is {GB, BG, GGB}. The sample space for event D is {BBB, GGG}. The sample spaces do not overlap.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4488,9 +4487,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4529,9 +4528,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4550,9 +4549,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The sample space for event C is {GGB, BBG, BBB, GGG}. The sample space for event D is {BBB, GGG}. Both sample spaces contain the outcomes BBB and GGG, so the events are not disjoint.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4584,9 +4583,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4625,9 +4624,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4646,9 +4645,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The events C and D are not disjoint because their sample spaces both contain the outcomes BBB and GGG. The sample space for event C is {GGB, BBG, BBB, GGG}. The sample space for event D is {BBB, GGG}.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4680,9 +4679,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4721,9 +4720,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4742,9 +4741,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 0.085 is the probability that a randomly selected adult attended high school but did not graduate. The event “has not graduated from high school” is composed of two outcomes from the table. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4776,9 +4775,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4817,9 +4816,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4838,9 +4837,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(has not graduated from high school) = P(“no high school” or “some high school”) = 0.063 + 0.085 = 0.148. We can add these probabilities since the events “no high school” and “some high school” are disjoint. These events are disjoint because the table describes the highest level of educational attainment for an individual.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4872,9 +4871,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4913,9 +4912,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -4934,9 +4933,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The events “no high school” and “some high school” are disjoint because the table describes the <em>highest</em> level of educational attainment. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -4968,9 +4967,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -4997,9 +4996,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5018,9 +5017,9 @@
                   "messageType": "feedback",
                   "template": "<p>To be a potential donor for patient 1, who has blood type A, a person must have blood type A or O. Therefore:</p><p>P(D1) = P(A or O) = P(A) + P(O) = .42 + .44 = .86. </p><p>Note that in this case we can safely use the addition rule for disjoint events since the events A and O are disjoint because we are presuming that a person cannot have more than one blood type.</p><p>Similarly, to be a potential donor for patient 2, who has blood type B, a person must have blood type B or O. Therefore:</p><p>P(D2) = P(B) + P(O) = .10 + .44 = .54.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5052,9 +5051,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5081,9 +5080,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5102,9 +5101,9 @@
                   "messageType": "feedback",
                   "template": "<p>Events D1 and D2 are not disjoint, they are overlapping, sharing the outcome O. In other words, D1 and D2 can occur at the same time if a donor has blood type O. Click <a href=\"javascript:loadImage(&#39;../../webcontent/flash/images/lbd005.gif&#39;)\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to see a visual representation.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5136,9 +5135,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5165,9 +5164,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5186,9 +5185,9 @@
                   "messageType": "feedback",
                   "template": "<p>If we wrongly apply the addition rule for disjoint events in order to find P(D1 or D2) we&#39;ll get:</p><p>P(D1 or D2) = P(D1) + P(D2) = .86 + .54 = 1.4</p><p>The answer is wrong for certain, since we got a probability that is greater than 1. This proves the danger of incorrectly applying the addition rule for disjoint events when it is not appropriate to do so.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5220,9 +5219,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5249,9 +5248,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5270,9 +5269,9 @@
                   "messageType": "feedback",
                   "template": "<p>Our answer: P(among the top three favorite colors) = P(Silver or White or Black).</p><p>Since the three events, Silver, White and Black, are disjoint (since for the purposes of our example a car can have just one color), we can apply the Addition Rule for Disjoint Events (extended to three disjoint events) and get:</p><p>P(among the top three colors) = P(Silver) + P(White) + P(Black) = 0.202 + 0.184 + 0.116 = 0.502.</p><p>In other words, of the top 10 favorite car colors in the country, the three most popular colors comprised 50.2%.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5304,9 +5303,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5345,9 +5344,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5366,9 +5365,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You may have used the General Addition Rule P(A or B) = P(A) + P(B) − P(A and B) but calculated P(A and B) incorrectly by multiplying P(A) * P(B). This is incorrect because A and B are not independent in this situation. P(A and B) is given as 0.20, which is not equal to P(A) * P(B) = 0.45 * 0.30 = 0.135. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5400,9 +5399,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5441,9 +5440,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5462,9 +5461,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(at least one stop) = P(A or B). Since the events are not disjoint, we must use the General Addition Rule. P(A or B) = 0.45 + 0.30 − 0.20 = 0.55</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5496,9 +5495,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5537,9 +5536,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5558,9 +5557,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. P(at least one stop) = P(A or B) but the events are not disjoint. So P (A or B) is not equal to P(A) + P(B). You need to use the General Addition Rule. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5592,9 +5591,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5633,9 +5632,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5654,9 +5653,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Adding all three probabilities is incorrect since P(A) = 0.45 and P(B) = 0.30 both include the situation in which Fred stops at both lights. So P(A and B) = 0.20 has to be subtracted as shown in the General Addition Rule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5688,9 +5687,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5729,9 +5728,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5750,9 +5749,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The event “admitted to at least one of the two colleges” means admitted to College A or College B or both. You may have interpreted all of these “or” statements as meaning “addition” and calculated P(A) + P(B) + P(A and B), but this is incorrect because P(A and B) is included in P(A), as well as P(B). So P(A and B) is subtracted from P(A) + P(B) as shown in the General Addition Rule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5784,9 +5783,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5825,9 +5824,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5846,9 +5845,9 @@
                   "messageType": "feedback",
                   "template": "<p>Not quite right. P(admitted to at least one college) = P(A or B), but the events are not disjoint. So P(A or B) is not equal to P(A) + P(B). You need to use the General Addition Rule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5880,9 +5879,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -5921,9 +5920,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -5942,9 +5941,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(admitted to at least one college) = P(A or B). Since the events are not disjoint, we must use the General Addition Rule. P(A or B) = 0.10 + 0.75 − 0.05 = 0.80</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -5976,9 +5975,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6017,9 +6016,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6038,9 +6037,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. You may have used the General Addition Rule P(A or B) = P(A) + P(B) − P(A and B) but calculated P(A and B) incorrectly by multiplying P(A) * P(B). This is incorrect because A and B are not independent in this situation. P(A and B) is given as 0.05, which is not equal to P(A) * P(B) = 0.10 * 0.75 = 0.075.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6072,9 +6071,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6101,9 +6100,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6122,9 +6121,9 @@
                   "messageType": "feedback",
                   "template": "<p>Since D and B are independent, we can use the Multiplication Rule for Independent Events (rule 5) as follows:</p><p>P(D and B) = P(D) * P(B) = .95 * .4 = .38. In other words, if there is a fire, there is a 38% chance that both alarms will go off.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6156,9 +6155,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6185,9 +6184,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6206,9 +6205,9 @@
                   "messageType": "feedback",
                   "template": "<p>P(smoke is detected) = P(D or B)</p><p>= P(D) + P(B) - P(D and B)</p><p>= 0.95 + 0.40 - 0.38</p><p>= 0.97</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6240,9 +6239,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6281,9 +6280,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6302,9 +6301,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. The events are independent because the two strangers are randomly selected from a large population. So the probability that the first stranger shares your birth month does not affect the probability that the second stranger shares your birth month.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6336,9 +6335,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6377,9 +6376,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6398,9 +6397,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. The events are independent because the two strangers are randomly selected from a large population. So the probability that the first stranger shares your birth month does not affect the probability that the second stranger shares your birth month. </p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6432,9 +6431,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6473,9 +6472,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6494,9 +6493,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. 1/12 * 1/12 = 1/144 is the probability that both strangers share your birth month. The probability that at least one stranger shares your birth month is P(A or B). Since the events are not disjoint, we must use the General Addition Rule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6528,9 +6527,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6569,9 +6568,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6590,9 +6589,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. Adding all three probabilities is incorrect since P(A) = 1/12 and P(B) = 1/12 both include the situation in which both strangers share your birth month. So P(A and B) = (1/12)(1/12) has to be subtracted as shown in the General Addition Rule.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6624,9 +6623,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6665,9 +6664,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6686,9 +6685,9 @@
                   "messageType": "feedback",
                   "template": "<p>Correct. P(at least one stranger shares your birth month) = P(A or B). Since the events are not disjoint, we must use the General Addition Rule. Since the events are independent, P(A and B) = P(A)*P(B). So P(A or B) = 1/12 + 1/12 – (1/12)(1/12) = 0.1597 or about 0.16.</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
@@ -6720,9 +6719,9 @@
                 {
                   "factType": "interface-event",
                   "slots": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "bind",
-                      "variable": "documentId"
+                      "variable": "pageKey"
                     },
                     "selection": {
                       "type": "literal",
@@ -6761,9 +6760,9 @@
                   "type": "write-state",
                   "write": {
                     "target": {
-                      "documentId": {
+                      "pageKey": {
                         "type": "variable",
-                        "name": "documentId"
+                        "name": "pageKey"
                       },
                       "nodeId": {
                         "type": "literal",
@@ -6782,9 +6781,9 @@
                   "messageType": "feedback",
                   "template": "<p>Incorrect. P(at least one stranger shares your birth month) = P(A or B). We are given P(A) and P(B). Since the events are independent, P(A and B) = P(A) * P(B). So we use the General Addition Rule to find P(A or B).</p>",
                   "target": {
-                    "documentId": {
+                    "pageKey": {
                       "type": "variable",
-                      "name": "documentId"
+                      "name": "pageKey"
                     },
                     "nodeId": {
                       "type": "literal",
