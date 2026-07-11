@@ -43,7 +43,7 @@
         "pageId": "sparc-session-reinforcement-punishment",
         "display": {
           "type": "sparc",
-          "schema": "tutorscript-sparc/1.0",
+          "schema": "tutorscript-sparc/2.0",
           "unitType": "sparc-autotutor-dialogue",
           "layout": {
             "layoutMode": "document",
@@ -89,43 +89,19 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
-              "label": "Reinforcement increases the future likelihood of a behavior; punishment decreases it.",
-              "stimuliSetId": "sparc:autotutor.reinforcement-punishment-001.kc.e1",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e1",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e1",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e1",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e1"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1"
             },
             {
               "clusterIndex": 1,
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
-              "label": "Positive means a stimulus is added; negative means a stimulus is removed.",
-              "stimuliSetId": "sparc:autotutor.reinforcement-punishment-001.kc.e2",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e2",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e2",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e2",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e2"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2"
             },
             {
               "clusterIndex": 2,
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
-              "label": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal.",
-              "stimuliSetId": "sparc:autotutor.reinforcement-punishment-001.kc.e3",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e3",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e3",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e3",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e3"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3"
             },
             {
               "clusterIndex": 3,
-              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
-              "label": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment.",
-              "stimuliSetId": "sparc:autotutor.reinforcement-punishment-001.kc.e4",
-              "stimulusKC": "autotutor.reinforcement-punishment-001.kc.e4",
-              "KCId": "autotutor.reinforcement-punishment-001.kc.e4",
-              "KCDefault": "autotutor.reinforcement-punishment-001.kc.e4",
-              "KCCluster": "autotutor.reinforcement-punishment-001.kc.e4"
+              "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4"
             }
           ],
           "workingMemoryFacts": [
@@ -201,889 +177,9 @@
           ],
           "productionRules": [
             {
-              "id": "dialogue.move.paper-rule-08-summary",
+              "id": "dialogue.completion.summary",
               "module": "dialogue.move-selection",
               "salience": 100,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "HIGH"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "session.turnState",
-                      "slots": {
-                        "turnCount": {
-                          "type": "range",
-                          "min": 8
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "summary"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-08-summary"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-04-splice",
-              "module": "dialogue.move-selection",
-              "salience": 95,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "diagnostic.misconceptionSelected",
-                  "slots": {
-                    "id": {
-                      "type": "bind",
-                      "variable": "misconceptionId"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "VERY_LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.studentVerbosity",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.studentVerbosity",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "factType": "diagnostic.misconceptionScore",
-                  "slots": {
-                    "id": {
-                      "type": "bound",
-                      "variable": "misconceptionId"
-                    },
-                    "confidence": {
-                      "type": "range",
-                      "min": 0.67,
-                      "max": 1,
-                      "maxInclusive": true
-                    }
-                  }
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "splice"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-04-splice"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.misconception-repair-splice",
-              "module": "dialogue.move-selection",
-              "salience": 94,
-              "when": [
-                {
-                  "factType": "diagnostic.misconceptionSelected",
-                  "slots": {
-                    "id": {
-                      "type": "bind",
-                      "variable": "misconceptionId"
-                    }
-                  }
-                },
-                {
-                  "factType": "diagnostic.misconceptionScore",
-                  "slots": {
-                    "id": {
-                      "type": "bound",
-                      "variable": "misconceptionId"
-                    },
-                    "confidence": {
-                      "type": "range",
-                      "min": 0.2,
-                      "max": 1,
-                      "maxInclusive": true
-                    }
-                  }
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "misconception"
-                      },
-                      "id": {
-                        "type": "variable",
-                        "name": "misconceptionId"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "splice"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "dialogue.move.misconception-repair-splice"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-06-hint",
-              "module": "dialogue.move-selection",
-              "salience": 90,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "HIGH"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "factType": "selector.currentExpectationCoverage",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bound",
-                      "variable": "targetClusterKC"
-                    },
-                    "band": {
-                      "type": "literal",
-                      "value": "LOW"
-                    }
-                  }
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "hint"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-06-hint"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-07-hint",
-              "module": "dialogue.move-selection",
-              "salience": 88,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "VERY_LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.studentAbility",
-                      "slots": {
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "factType": "selector.studentVerbosity",
-                  "slots": {
-                    "band": {
-                      "type": "literal",
-                      "value": "HIGH"
-                    }
-                  }
-                },
-                {
-                  "factType": "selector.currentExpectationCoverage",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bound",
-                      "variable": "targetClusterKC"
-                    },
-                    "band": {
-                      "type": "literal",
-                      "value": "LOW"
-                    }
-                  }
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "hint"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-07-hint"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-09-elaborate",
-              "module": "dialogue.move-selection",
-              "salience": 70,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "selector.currentExpectationCoverage",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bound",
-                      "variable": "targetClusterKC"
-                    },
-                    "band": {
-                      "type": "literal",
-                      "value": "MEDIUM"
-                    }
-                  }
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "elaborate"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-09-elaborate"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-03-positive-pump",
-              "module": "dialogue.move-selection",
-              "salience": 68,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "learnerResponse.contribution",
-                  "slots": {
-                    "type": {
-                      "type": "literal",
-                      "value": "answer"
-                    },
-                    "streakCount": {
-                      "type": "literal",
-                      "value": 1
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "HIGH"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "positive_pump"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-03-positive-pump"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-05-prompt",
-              "module": "dialogue.move-selection",
-              "salience": 66,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "selector.studentVerbosity",
-                  "slots": {
-                    "band": {
-                      "type": "literal",
-                      "value": "LOW"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "prompt"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-05-prompt"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-01-pump",
-              "module": "dialogue.move-selection",
-              "salience": 64,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "learnerResponse.contribution",
-                  "slots": {
-                    "type": {
-                      "type": "literal",
-                      "value": "answer"
-                    },
-                    "streakCount": {
-                      "type": "literal",
-                      "value": 1
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "pump"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-01-pump"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.paper-rule-02-pump",
-              "module": "dialogue.move-selection",
-              "salience": 62,
-              "when": [
-                {
-                  "factType": "learningTarget.selected",
-                  "slots": {
-                    "clusterKC": {
-                      "type": "bind",
-                      "variable": "targetClusterKC"
-                    }
-                  }
-                },
-                {
-                  "factType": "learnerResponse.contribution",
-                  "slots": {
-                    "type": {
-                      "type": "literal",
-                      "value": "answer"
-                    }
-                  }
-                },
-                {
-                  "type": "any",
-                  "conditions": [
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "LOW"
-                        }
-                      }
-                    },
-                    {
-                      "factType": "selector.currentExpectationCoverage",
-                      "slots": {
-                        "clusterKC": {
-                          "type": "bound",
-                          "variable": "targetClusterKC"
-                        },
-                        "band": {
-                          "type": "literal",
-                          "value": "MEDIUM"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "then": [
-                {
-                  "type": "assert-fact",
-                  "persist": true,
-                  "fact": {
-                    "factType": "controller.selectedAction",
-                    "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learningTarget"
-                      },
-                      "clusterKC": {
-                        "type": "variable",
-                        "name": "targetClusterKC"
-                      },
-                      "action": {
-                        "type": "literal",
-                        "value": "pump"
-                      },
-                      "sourceRuleId": {
-                        "type": "literal",
-                        "value": "paper-rule-02-pump"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
-                }
-              ]
-            },
-            {
-              "id": "dialogue.move.generated-completion-summary",
-              "module": "dialogue.move-selection",
-              "salience": 110,
               "when": [
                 {
                   "factType": "dialogue.completionSelected"
@@ -1109,13 +205,865 @@
                         "type": "literal",
                         "value": "completion"
                       },
+                      "targetId": {
+                        "type": "literal",
+                        "value": "completion"
+                      },
                       "action": {
                         "type": "literal",
                         "value": "summary"
                       },
                       "sourceRuleId": {
                         "type": "literal",
-                        "value": "generated-completion-summary"
+                        "value": "dialogue.completion.summary"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.scaffold.pump",
+              "module": "dialogue.move-selection",
+              "salience": 0,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "factType": "scaffold.state",
+                      "slots": {
+                        "targetKey": {
+                          "type": "bound",
+                          "variable": "targetKey"
+                        },
+                        "focusEpisodeId": {
+                          "type": "bound",
+                          "variable": "focusEpisodeId"
+                        },
+                        "stage": {
+                          "type": "literal",
+                          "value": "ELICIT"
+                        }
+                      }
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "PUMP"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "ASSERTION"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "variable",
+                        "name": "targetKind"
+                      },
+                      "targetId": {
+                        "type": "variable",
+                        "name": "targetId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.scaffold.pump"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "literal",
+                        "value": "PUMP"
+                      },
+                      "lastAction": {
+                        "type": "literal",
+                        "value": "pump"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.scaffold.prompt",
+              "module": "dialogue.move-selection",
+              "salience": 0,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "PUMP"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "PROMPT"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "variable",
+                        "name": "targetKind"
+                      },
+                      "targetId": {
+                        "type": "variable",
+                        "name": "targetId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.scaffold.prompt"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "literal",
+                        "value": "PROMPT"
+                      },
+                      "lastAction": {
+                        "type": "literal",
+                        "value": "prompt"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.scaffold.hint",
+              "module": "dialogue.move-selection",
+              "salience": 0,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "PROMPT"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "HINT"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "variable",
+                        "name": "targetKind"
+                      },
+                      "targetId": {
+                        "type": "variable",
+                        "name": "targetId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.scaffold.hint"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "literal",
+                        "value": "HINT"
+                      },
+                      "lastAction": {
+                        "type": "literal",
+                        "value": "hint"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.scaffold.assertion",
+              "module": "dialogue.move-selection",
+              "salience": 0,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "type": "any",
+                  "conditions": [
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "HINT"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": true
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "ASSERTION"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "addressed": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": false
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
+                              "value": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "variable",
+                        "name": "targetKind"
+                      },
+                      "targetId": {
+                        "type": "variable",
+                        "name": "targetId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "assertion"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.scaffold.assertion"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "literal",
+                        "value": "ASSERTION"
+                      },
+                      "lastAction": {
+                        "type": "literal",
+                        "value": "assertion"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
                       }
                     }
                   }
@@ -1127,7 +1075,36 @@
               ]
             }
           ],
-          "misconceptionTable": {
+          "instructionalController": {
+            "adapterId": "sparc-autotutor-v1",
+            "policyId": "progressive-scaffolding-v1",
+            "policyVersion": 1,
+            "parameters": {
+              "minimumProgress": 0.05,
+              "progressResponse": "deescalate",
+              "nonAddressingResponse": "hold",
+              "postAssertionResponse": "cycle-to-pump"
+            }
+          },
+          "autoTutorTargets": {
+            "expectations": [
+              {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e1",
+                "text": "Reinforcement increases the future likelihood of a behavior; punishment decreases it."
+              },
+              {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e2",
+                "text": "Positive means a stimulus is added; negative means a stimulus is removed."
+              },
+              {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e3",
+                "text": "Negative reinforcement removes or avoids an aversive stimulus and increases the behavior that produced that removal."
+              },
+              {
+                "clusterKC": "autotutor.reinforcement-punishment-001.kc.e4",
+                "text": "The four categories combine stimulus change and behavioral effect: positive reinforcement, negative reinforcement, positive punishment, negative punishment."
+              }
+            ],
             "misconceptions": [
               {
                 "id": "M1",

@@ -1282,10 +1282,10 @@ function buildTextInputExercise(params: {
       expected: correctResponse ? optionalText(correctResponse.legacyMatch) : '',
       type: optionalText(input.inputType) === 'numeric' ? 'numeric-input' : 'text-input',
     });
-    for (const response of exactResponses) {
+    for (const [responseIndex, response] of exactResponses.entries()) {
       const legacyMatch = nonBlank(response.legacyMatch, `legacyMatch for ${activityId}:${inputId}`);
       params.productionRules.push(ruleForExactResponse({
-        id: `sparc-intro-stats.${activityId}.${inputId}.${slug(legacyMatch)}.text-input`,
+        id: `sparc-intro-stats.${activityId}.${inputId}.${slug(legacyMatch)}.${responseIndex}.text-input`,
         module: params.moduleSlug,
         selection,
         action: 'UpdateTextField',
@@ -1788,6 +1788,16 @@ function emptyModuleNode(params: {
   };
 }
 
+function uniqueProductionRuleIds(rules: readonly JsonRecord[]): JsonRecord[] {
+  const occurrences = new Map<string, number>();
+  return rules.map((rule) => {
+    const id = nonBlank(rule.id, 'production rule id');
+    const occurrence = (occurrences.get(id) ?? 0) + 1;
+    occurrences.set(id, occurrence);
+    return occurrence === 1 ? rule : { ...rule, id: `${id}.variant-${occurrence}` };
+  });
+}
+
 function convertModule(context: ConversionContext): ConversionResult {
   const contentRoot = contentRootFor(context.sourceRoot);
   const fileIndex = buildJsonFileIndex(contentRoot);
@@ -1845,7 +1855,7 @@ function convertModule(context: ConversionContext): ConversionResult {
   const clusterTargets = modelTargets.targets.map(clusterTargetForModelTarget);
   const display: JsonRecord = {
     type: 'sparc',
-    schema: 'tutorscript-sparc/1.0',
+    schema: 'tutorscript-sparc/2.0',
     unitType: 'sparc-intro-stats-variables',
     layout: {
       orientation: 'document',
@@ -1858,7 +1868,7 @@ function convertModule(context: ConversionContext): ConversionResult {
       gradingMode: 'production-rules',
       intentByNode: responseIntent,
     },
-    productionRules,
+    productionRules: uniqueProductionRuleIds(productionRules),
     source: {
       conversion: 'OLI flat JSON export to SPARC document page',
       moduleId: context.moduleId,

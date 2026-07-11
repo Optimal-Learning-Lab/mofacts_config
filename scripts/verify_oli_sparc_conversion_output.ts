@@ -215,8 +215,8 @@ function verifyPackageFile(packageRoot: string, tdfFile: string): {
   if (display.type !== 'sparc') {
     throw new Error(`${stimFile} display.type must be "sparc"`);
   }
-  if (display.schema !== 'tutorscript-sparc/1.0') {
-    throw new Error(`${stimFile} display.schema must be "tutorscript-sparc/1.0"`);
+  if (display.schema !== 'tutorscript-sparc/2.0') {
+    throw new Error(`${stimFile} display.schema must be "tutorscript-sparc/2.0"`);
   }
   const nodes = asArray(display.nodes, `${stimFile} display.nodes`);
   if (nodes.length === 0) {
@@ -225,6 +225,15 @@ function verifyPackageFile(packageRoot: string, tdfFile: string): {
   const clusterIndices = assertClusterTargets({ display, clusters, label: stimFile });
   const nodesById = collectNodesById(nodes);
   const rules = asArray(display.productionRules, `${stimFile} display.productionRules`);
+  const ruleIds = new Set<string>();
+  for (const [index, ruleValue] of rules.entries()) {
+    const rule = asRecord(ruleValue, `${stimFile} display.productionRules[${index}]`);
+    const ruleId = nonBlank(rule.id, `${stimFile} display.productionRules[${index}].id`);
+    if (ruleIds.has(ruleId)) {
+      throw new Error(`${stimFile} declares duplicate production rule id ${ruleId}`);
+    }
+    ruleIds.add(ruleId);
+  }
   const modelPracticeEffects = collectModelPracticeEffects(rules, stimFile);
   for (const [index, effect] of modelPracticeEffects.entries()) {
     const clusterIndex = Number(effect.clusterIndex);
