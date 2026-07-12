@@ -109,7 +109,7 @@ Example:
 https://commons.wikimedia.org/wiki/Special:Redirect/file/Afghanistan_in_its_region.svg
 ```
 
-Using URLs in `imgSrc` is usually enough. The original SVG files do not need to be downloaded unless offline packaging or local editing is required.
+External URLs can be used in `imgSrc` when their delivery is reliable. For content that must not depend on a third-party image host at lesson runtime, store a rendered image beside the stimulus JSON and reference its local filename. Wiki World Maps uses bundled 1280-pixel WebP renderings because Wikimedia Commons intermittently rejects direct cross-site SVG requests.
 
 ## Step 3: Design The Stimulus File
 
@@ -194,6 +194,8 @@ Design rules:
 ## Step 4: Design The TDF File
 
 The TDF connects the lesson metadata, instructions, stimulus file, and cluster list.
+
+Do not put placeholder values in `speechAPIKey`, `textToSpeechAPIKey`, or `openRouterApiKey`. Omit these fields when the lesson should use the server's admin-level provider keys. MoFaCTS rejects malformed provider keys during TDF and package upload so that a placeholder cannot shadow working admin configuration.
 
 Common fields to verify:
 
@@ -350,6 +352,7 @@ Before calling a new system complete:
 - The stimulus file parses as JSON.
 - Both JSON files are UTF-8 without BOM.
 - The TDF `stimulusfile` matches the real stimulus filename.
+- Provider API-key fields are omitted unless the TDF intentionally supplies valid lesson-specific keys.
 - Cluster ids are contiguous and included in the TDF cluster list.
 - The instructions explain the task clearly.
 - The instructions credit the source and license.
