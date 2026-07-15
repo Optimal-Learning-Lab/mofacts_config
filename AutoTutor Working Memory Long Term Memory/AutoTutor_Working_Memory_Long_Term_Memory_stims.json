@@ -227,6 +227,264 @@
               ]
             },
             {
+              "id": "dialogue.question.defer",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "factType": "scaffold.state",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bound",
+                      "variable": "targetKey"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bound",
+                      "variable": "focusEpisodeId"
+                    },
+                    "stage": {
+                      "type": "bind",
+                      "variable": "questionStage"
+                    },
+                    "lastAction": {
+                      "type": "bind",
+                      "variable": "questionLastAction"
+                    }
+                  }
+                },
+                {
+                  "factType": "dialogue.learnerQuestion",
+                  "slots": {
+                    "contentFocused": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learnerQuestion"
+                      },
+                      "targetId": {
+                        "type": "literal",
+                        "value": "learner-question"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "question-deferral"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.question.defer"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "variable",
+                        "name": "questionStage"
+                      },
+                      "lastAction": {
+                        "type": "variable",
+                        "name": "questionLastAction"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
+              "id": "dialogue.question.scope-refusal",
+              "module": "dialogue.move-selection",
+              "salience": 90,
+              "when": [
+                {
+                  "factType": "instructionalTarget.active",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bind",
+                      "variable": "targetKey"
+                    },
+                    "targetKind": {
+                      "type": "bind",
+                      "variable": "targetKind"
+                    },
+                    "targetId": {
+                      "type": "bind",
+                      "variable": "targetId"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bind",
+                      "variable": "focusEpisodeId"
+                    },
+                    "status": {
+                      "type": "literal",
+                      "value": "active"
+                    }
+                  }
+                },
+                {
+                  "factType": "scaffold.state",
+                  "slots": {
+                    "targetKey": {
+                      "type": "bound",
+                      "variable": "targetKey"
+                    },
+                    "focusEpisodeId": {
+                      "type": "bound",
+                      "variable": "focusEpisodeId"
+                    },
+                    "stage": {
+                      "type": "bind",
+                      "variable": "questionStage"
+                    },
+                    "lastAction": {
+                      "type": "bind",
+                      "variable": "questionLastAction"
+                    }
+                  }
+                },
+                {
+                  "factType": "dialogue.learnerQuestion",
+                  "slots": {
+                    "contentFocused": {
+                      "type": "literal",
+                      "value": false
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "fact": {
+                    "factType": "controller.selectedAction",
+                    "slots": {
+                      "targetType": {
+                        "type": "literal",
+                        "value": "learnerQuestion"
+                      },
+                      "targetId": {
+                        "type": "literal",
+                        "value": "learner-question"
+                      },
+                      "action": {
+                        "type": "literal",
+                        "value": "question-scope-refusal"
+                      },
+                      "sourceRuleId": {
+                        "type": "literal",
+                        "value": "dialogue.question.scope-refusal"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "assert-fact",
+                  "persist": true,
+                  "identitySlots": [
+                    "focusEpisodeId"
+                  ],
+                  "fact": {
+                    "factType": "scaffold.state",
+                    "slots": {
+                      "focusEpisodeId": {
+                        "type": "variable",
+                        "name": "focusEpisodeId"
+                      },
+                      "targetKey": {
+                        "type": "variable",
+                        "name": "targetKey"
+                      },
+                      "stage": {
+                        "type": "variable",
+                        "name": "questionStage"
+                      },
+                      "lastAction": {
+                        "type": "variable",
+                        "name": "questionLastAction"
+                      },
+                      "policyId": {
+                        "type": "literal",
+                        "value": "progressive-scaffolding-v1"
+                      },
+                      "policyVersion": {
+                        "type": "literal",
+                        "value": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "terminate-production-phase",
+                  "reason": "move-selected"
+                }
+              ]
+            },
+            {
               "id": "dialogue.scaffold.pump",
               "module": "dialogue.move-selection",
               "salience": 0,
@@ -289,10 +547,6 @@
                             "focusEpisodeId": {
                               "type": "bound",
                               "variable": "focusEpisodeId"
-                            },
-                            "stage": {
-                              "type": "literal",
-                              "value": "PUMP"
                             }
                           }
                         },
@@ -302,49 +556,6 @@
                             "targetKey": {
                               "type": "bound",
                               "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": false
-                            },
-                            "madeProgress": {
-                              "type": "literal",
-                              "value": false
-                            },
-                            "newlyResolved": {
-                              "type": "literal",
-                              "value": false
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "all",
-                      "conditions": [
-                        {
-                          "factType": "scaffold.state",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "focusEpisodeId": {
-                              "type": "bound",
-                              "variable": "focusEpisodeId"
-                            }
-                          }
-                        },
-                        {
-                          "factType": "learningObservation.targetProgress",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": true
                             },
                             "madeProgress": {
                               "type": "literal",
@@ -384,10 +595,6 @@
                             "targetKey": {
                               "type": "bound",
                               "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": true
                             },
                             "madeProgress": {
                               "type": "literal",
@@ -540,53 +747,6 @@
                               "type": "bound",
                               "variable": "targetKey"
                             },
-                            "addressed": {
-                              "type": "literal",
-                              "value": true
-                            },
-                            "madeProgress": {
-                              "type": "literal",
-                              "value": false
-                            },
-                            "newlyResolved": {
-                              "type": "literal",
-                              "value": false
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "all",
-                      "conditions": [
-                        {
-                          "factType": "scaffold.state",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "focusEpisodeId": {
-                              "type": "bound",
-                              "variable": "focusEpisodeId"
-                            },
-                            "stage": {
-                              "type": "literal",
-                              "value": "PROMPT"
-                            }
-                          }
-                        },
-                        {
-                          "factType": "learningObservation.targetProgress",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": false
-                            },
                             "madeProgress": {
                               "type": "literal",
                               "value": false
@@ -738,53 +898,6 @@
                               "type": "bound",
                               "variable": "targetKey"
                             },
-                            "addressed": {
-                              "type": "literal",
-                              "value": true
-                            },
-                            "madeProgress": {
-                              "type": "literal",
-                              "value": false
-                            },
-                            "newlyResolved": {
-                              "type": "literal",
-                              "value": false
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "all",
-                      "conditions": [
-                        {
-                          "factType": "scaffold.state",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "focusEpisodeId": {
-                              "type": "bound",
-                              "variable": "focusEpisodeId"
-                            },
-                            "stage": {
-                              "type": "literal",
-                              "value": "HINT"
-                            }
-                          }
-                        },
-                        {
-                          "factType": "learningObservation.targetProgress",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": false
-                            },
                             "madeProgress": {
                               "type": "literal",
                               "value": false
@@ -935,53 +1048,6 @@
                             "targetKey": {
                               "type": "bound",
                               "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": true
-                            },
-                            "madeProgress": {
-                              "type": "literal",
-                              "value": false
-                            },
-                            "newlyResolved": {
-                              "type": "literal",
-                              "value": false
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "all",
-                      "conditions": [
-                        {
-                          "factType": "scaffold.state",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "focusEpisodeId": {
-                              "type": "bound",
-                              "variable": "focusEpisodeId"
-                            },
-                            "stage": {
-                              "type": "literal",
-                              "value": "ASSERTION"
-                            }
-                          }
-                        },
-                        {
-                          "factType": "learningObservation.targetProgress",
-                          "slots": {
-                            "targetKey": {
-                              "type": "bound",
-                              "variable": "targetKey"
-                            },
-                            "addressed": {
-                              "type": "literal",
-                              "value": false
                             },
                             "madeProgress": {
                               "type": "literal",

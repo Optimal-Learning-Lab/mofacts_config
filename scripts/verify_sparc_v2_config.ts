@@ -38,6 +38,8 @@ function main(): void {
   };
   const expectedRuleIds = [
     'dialogue.completion.summary',
+    'dialogue.question.defer',
+    'dialogue.question.scope-refusal',
     'dialogue.scaffold.pump',
     'dialogue.scaffold.prompt',
     'dialogue.scaffold.hint',
@@ -96,7 +98,7 @@ function main(): void {
       }
       const ruleIds = display.productionRules.filter(isRecord).map((rule) => rule.id);
       if (JSON.stringify(ruleIds) !== JSON.stringify(expectedRuleIds)) {
-        throw new Error(`${filePath} does not contain the canonical five production rules`);
+        throw new Error(`${filePath} does not contain the canonical seven production rules`);
       }
       const serializedRules = JSON.stringify(display.productionRules);
       for (const retired of ['paper-rule-', 'misconception-repair-splice', 'positive_pump', 'elaborate', 'splice']) {
