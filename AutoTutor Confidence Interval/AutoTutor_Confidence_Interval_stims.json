@@ -268,18 +268,10 @@
               "then": [
                 {
                   "type": "assert-fact",
-                  "persist": true,
+                  "persist": false,
                   "fact": {
-                    "factType": "controller.selectedAction",
+                    "factType": "dialogue.responseModifier",
                     "slots": {
-                      "targetType": {
-                        "type": "literal",
-                        "value": "learnerQuestion"
-                      },
-                      "targetId": {
-                        "type": "literal",
-                        "value": "learner-question"
-                      },
                       "action": {
                         "type": "literal",
                         "value": "question-deferral"
@@ -293,43 +285,36 @@
                 },
                 {
                   "type": "assert-fact",
-                  "persist": true,
-                  "identitySlots": [
-                    "focusEpisodeId"
-                  ],
+                  "persist": false,
                   "fact": {
-                    "factType": "scaffold.state",
+                    "factType": "learningObservation.targetProgress",
                     "slots": {
-                      "focusEpisodeId": {
-                        "type": "variable",
-                        "name": "focusEpisodeId"
-                      },
                       "targetKey": {
                         "type": "variable",
                         "name": "targetKey"
                       },
-                      "stage": {
+                      "targetKind": {
                         "type": "variable",
-                        "name": "questionStage"
+                        "name": "targetKind"
                       },
-                      "lastAction": {
+                      "targetId": {
                         "type": "variable",
-                        "name": "questionLastAction"
+                        "name": "targetId"
                       },
-                      "policyId": {
+                      "madeProgress": {
                         "type": "literal",
-                        "value": "progressive-scaffolding-v1"
+                        "value": false
                       },
-                      "policyVersion": {
+                      "newlyResolved": {
                         "type": "literal",
-                        "value": 1
+                        "value": false
+                      },
+                      "observationKind": {
+                        "type": "literal",
+                        "value": "learner-question-no-progress"
                       }
                     }
                   }
-                },
-                {
-                  "type": "terminate-production-phase",
-                  "reason": "move-selected"
                 }
               ]
             },
@@ -1124,7 +1109,7 @@
             "policyId": "progressive-scaffolding-v1",
             "policyVersion": 1,
             "parameters": {
-              "minimumProgress": 0.05,
+              "minimumProgress": 0.3,
               "progressResponse": "deescalate",
               "nonAddressingResponse": "hold",
               "postAssertionResponse": "cycle-to-pump"
