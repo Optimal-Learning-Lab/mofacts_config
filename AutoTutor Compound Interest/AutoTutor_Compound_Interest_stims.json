@@ -2,38 +2,29 @@
   "setspec": {
     "clusters": [
       {
-        "clusterKC": "autotutor.compound-interest-001.kc.e1",
+        "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
         "stims": [
           {
-            "clusterKC": "autotutor.compound-interest-001.kc.e1",
-            "text": "After each compounding period, earned interest is added to the balance or principal."
+            "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+            "text": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest."
           }
         ]
       },
       {
-        "clusterKC": "autotutor.compound-interest-001.kc.e2",
+        "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
         "stims": [
           {
-            "clusterKC": "autotutor.compound-interest-001.kc.e2",
-            "text": "Later interest is calculated on the original principal plus previously earned interest."
+            "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+            "text": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed."
           }
         ]
       },
       {
-        "clusterKC": "autotutor.compound-interest-001.kc.e3",
+        "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
         "stims": [
           {
-            "clusterKC": "autotutor.compound-interest-001.kc.e3",
-            "text": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
-          }
-        ]
-      },
-      {
-        "clusterKC": "autotutor.compound-interest-001.kc.e4-frequency",
-        "stims": [
-          {
-            "clusterKC": "autotutor.compound-interest-001.kc.e4-frequency",
-            "text": "At the same nominal annual rate, adding interest more frequently produces a different—and generally higher—ending balance."
+            "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+            "text": "At the same nominal annual rate (the annual rate is divided across the compounding periods) and over the same length of time, more frequent compounding generally produces a higher ending balance because earned interest is added sooner and begins earning interest sooner."
           }
         ]
       }
@@ -62,12 +53,11 @@
                   "nodeType": "atomic",
                   "atomType": "dialogue-utterance",
                   "speaker": "tutor",
-                  "value": "Suppose $1,000 earns 5% interest each year and the interest is left in the account. In your own words, how does compound interest make the balance grow over time?",
+                  "value": "Suppose $1,000 earns 5% interest each year and the interest is left in the account. In your own words, explain how compound interest makes the balance grow over time and how splitting that same 5% annual rate across more frequent compounding periods would affect the ending balance.",
                   "clusterIndices": [
                     0,
                     1,
-                    2,
-                    3
+                    2
                   ]
                 }
               ]
@@ -89,19 +79,15 @@
           "clusterTargets": [
             {
               "clusterIndex": 0,
-              "clusterKC": "autotutor.compound-interest-001.kc.e1"
+              "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism"
             },
             {
               "clusterIndex": 1,
-              "clusterKC": "autotutor.compound-interest-001.kc.e2"
+              "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence"
             },
             {
               "clusterIndex": 2,
-              "clusterKC": "autotutor.compound-interest-001.kc.e3"
-            },
-            {
-              "clusterIndex": 3,
-              "clusterKC": "autotutor.compound-interest-001.kc.e4-frequency"
+              "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect"
             }
           ],
           "workingMemoryFacts": [
@@ -137,7 +123,7 @@
             {
               "factType": "dialogue.graduation",
               "slots": {
-                "requiredTargetCount": 4,
+                "requiredTargetCount": 3,
                 "maxActiveMisconceptions": 0,
                 "maxTurns": 25
               }
@@ -145,32 +131,24 @@
             {
               "factType": "kcGraph.node",
               "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "description": "After each compounding period, earned interest is added to the balance or principal.",
+                "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+                "description": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest.",
                 "centrality": 0
               }
             },
             {
               "factType": "kcGraph.node",
               "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "description": "Later interest is calculated on the original principal plus previously earned interest.",
+                "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+                "description": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed.",
                 "centrality": 0
               }
             },
             {
               "factType": "kcGraph.node",
               "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "description": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase.",
-                "centrality": 0
-              }
-            },
-            {
-              "factType": "kcGraph.node",
-              "slots": {
-                "clusterKC": "autotutor.compound-interest-001.kc.e4-frequency",
-                "description": "At the same nominal annual rate, adding interest more frequently produces a different—and generally higher—ending balance.",
+                "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+                "description": "At the same nominal annual rate (the annual rate is divided across the compounding periods) and over the same length of time, more frequent compounding generally produces a higher ending balance because earned interest is added sooner and begins earning interest sooner.",
                 "centrality": 0
               }
             }
@@ -301,39 +279,6 @@
                       "sourceRuleId": {
                         "type": "literal",
                         "value": "dialogue.question.defer"
-                      }
-                    }
-                  }
-                },
-                {
-                  "type": "assert-fact",
-                  "persist": false,
-                  "fact": {
-                    "factType": "learningObservation.targetProgress",
-                    "slots": {
-                      "targetKey": {
-                        "type": "variable",
-                        "name": "targetKey"
-                      },
-                      "targetKind": {
-                        "type": "variable",
-                        "name": "targetKind"
-                      },
-                      "targetId": {
-                        "type": "variable",
-                        "name": "targetId"
-                      },
-                      "madeProgress": {
-                        "type": "literal",
-                        "value": false
-                      },
-                      "newlyResolved": {
-                        "type": "literal",
-                        "value": false
-                      },
-                      "observationKind": {
-                        "type": "literal",
-                        "value": "learner-question-no-progress"
                       }
                     }
                   }
@@ -1131,7 +1076,7 @@
             "policyId": "progressive-scaffolding-v1",
             "policyVersion": 1,
             "parameters": {
-              "minimumProgress": 0.3,
+              "minimumProgress": 0.2,
               "progressResponse": "deescalate",
               "nonAddressingResponse": "hold",
               "postAssertionResponse": "cycle-to-pump"
@@ -1140,20 +1085,16 @@
           "autoTutorTargets": {
             "expectations": [
               {
-                "clusterKC": "autotutor.compound-interest-001.kc.e1",
-                "text": "After each compounding period, earned interest is added to the balance or principal."
+                "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+                "text": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest."
               },
               {
-                "clusterKC": "autotutor.compound-interest-001.kc.e2",
-                "text": "Later interest is calculated on the original principal plus previously earned interest."
+                "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+                "text": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed."
               },
               {
-                "clusterKC": "autotutor.compound-interest-001.kc.e3",
-                "text": "Compound growth applies a rate repeatedly, so the balance follows a multiplicative or exponential pattern rather than a fixed dollar increase."
-              },
-              {
-                "clusterKC": "autotutor.compound-interest-001.kc.e4-frequency",
-                "text": "At the same nominal annual rate, adding interest more frequently produces a different—and generally higher—ending balance."
+                "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+                "text": "At the same nominal annual rate (the annual rate is divided across the compounding periods) and over the same length of time, more frequent compounding generally produces a higher ending balance because earned interest is added sooner and begins earning interest sooner."
               }
             ],
             "misconceptions": [
@@ -1163,11 +1104,11 @@
               },
               {
                 "id": "M2",
-                "text": "Compound interest is just interest on the original principal."
+                "text": "Later interest is calculated only on the original principal, even when earned interest remains in the account."
               },
               {
                 "id": "M3",
-                "text": "The frequency of compounding—shorter or longer intervals between interest additions—makes no difference to the ending balance."
+                "text": "When the same nominal annual rate is divided across compounding periods over the same length of time, compounding frequency makes no difference to the ending balance."
               }
             ]
           }
