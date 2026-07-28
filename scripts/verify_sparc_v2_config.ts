@@ -93,12 +93,36 @@ function main(): void {
       ) {
         throw new Error(`${filePath} has an invalid AutoTutor instructionalController`);
       }
+      const controllerParameters = isRecord(controller.parameters) ? controller.parameters : {};
+      if ('postAssertionResponse' in controllerParameters) {
+        throw new Error(`${filePath} contains obsolete postAssertionResponse metadata; assertion persistence belongs to the production rule`);
+      }
       if (!Array.isArray(display.productionRules)) {
         throw new Error(`${filePath} is missing AutoTutor productionRules`);
       }
       const ruleIds = display.productionRules.filter(isRecord).map((rule) => rule.id);
       if (JSON.stringify(ruleIds) !== JSON.stringify(expectedRuleIds)) {
         throw new Error(`${filePath} does not contain the canonical seven production rules`);
+      }
+      const assertionRule = display.productionRules
+        .filter(isRecord)
+        .find((rule) => rule.id === 'dialogue.scaffold.assertion');
+      const assertionWhen = assertionRule && Array.isArray(assertionRule.when) ? assertionRule.when : [];
+      const assertionSelector = isRecord(assertionWhen[1]) ? assertionWhen[1] : {};
+      const assertionConditions = Array.isArray(assertionSelector.conditions) ? assertionSelector.conditions : [];
+      const repeatsAssertion = assertionConditions.filter(isRecord).some((condition) => {
+        const slots = isRecord(condition.slots) ? condition.slots : {};
+        const stage = isRecord(slots.stage) ? slots.stage : {};
+        return condition.factType === 'scaffold.state' && stage.value === 'ASSERTION';
+      });
+      if (!repeatsAssertion) {
+        throw new Error(`${filePath} assertion production is not the default unresolved-target continuation`);
+      }
+      const pumpRule = display.productionRules
+        .filter(isRecord)
+        .find((rule) => rule.id === 'dialogue.scaffold.pump');
+      if (JSON.stringify(pumpRule?.when).includes('ASSERTION')) {
+        throw new Error(`${filePath} pump production must not handle the assertion stage`);
       }
       const serializedRules = JSON.stringify(display.productionRules);
       for (const retired of ['paper-rule-', 'misconception-repair-splice', 'positive_pump', 'elaborate', 'splice']) {

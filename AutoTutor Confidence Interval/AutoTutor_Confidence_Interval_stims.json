@@ -282,39 +282,6 @@
                       }
                     }
                   }
-                },
-                {
-                  "type": "assert-fact",
-                  "persist": false,
-                  "fact": {
-                    "factType": "learningObservation.targetProgress",
-                    "slots": {
-                      "targetKey": {
-                        "type": "variable",
-                        "name": "targetKey"
-                      },
-                      "targetKind": {
-                        "type": "variable",
-                        "name": "targetKind"
-                      },
-                      "targetId": {
-                        "type": "variable",
-                        "name": "targetId"
-                      },
-                      "madeProgress": {
-                        "type": "literal",
-                        "value": false
-                      },
-                      "newlyResolved": {
-                        "type": "literal",
-                        "value": false
-                      },
-                      "observationKind": {
-                        "type": "literal",
-                        "value": "learner-question-no-progress"
-                      }
-                    }
-                  }
                 }
               ]
             },
@@ -510,6 +477,10 @@
                             "focusEpisodeId": {
                               "type": "bound",
                               "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "PUMP"
                             }
                           }
                         },
@@ -548,7 +519,7 @@
                             },
                             "stage": {
                               "type": "literal",
-                              "value": "ASSERTION"
+                              "value": "PROMPT"
                             }
                           }
                         },
@@ -561,7 +532,46 @@
                             },
                             "madeProgress": {
                               "type": "literal",
+                              "value": true
+                            },
+                            "newlyResolved": {
+                              "type": "literal",
                               "value": false
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "all",
+                      "conditions": [
+                        {
+                          "factType": "scaffold.state",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "focusEpisodeId": {
+                              "type": "bound",
+                              "variable": "focusEpisodeId"
+                            },
+                            "stage": {
+                              "type": "literal",
+                              "value": "HINT"
+                            }
+                          }
+                        },
+                        {
+                          "factType": "learningObservation.targetProgress",
+                          "slots": {
+                            "targetKey": {
+                              "type": "bound",
+                              "variable": "targetKey"
+                            },
+                            "madeProgress": {
+                              "type": "literal",
+                              "value": true
                             },
                             "newlyResolved": {
                               "type": "literal",
@@ -1023,6 +1033,23 @@
                           }
                         }
                       ]
+                    },
+                    {
+                      "factType": "scaffold.state",
+                      "slots": {
+                        "targetKey": {
+                          "type": "bound",
+                          "variable": "targetKey"
+                        },
+                        "focusEpisodeId": {
+                          "type": "bound",
+                          "variable": "focusEpisodeId"
+                        },
+                        "stage": {
+                          "type": "literal",
+                          "value": "ASSERTION"
+                        }
+                      }
                     }
                   ]
                 }
@@ -1111,8 +1138,7 @@
             "parameters": {
               "minimumProgress": 0.3,
               "progressResponse": "deescalate",
-              "nonAddressingResponse": "hold",
-              "postAssertionResponse": "cycle-to-pump"
+              "nonAddressingResponse": "hold"
             }
           },
           "autoTutorTargets": {
