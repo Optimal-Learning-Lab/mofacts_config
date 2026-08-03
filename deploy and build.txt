@@ -10,11 +10,6 @@ MoFaCTS deploy/build cheat sheet
 #
 # Architecture reminders:
 # - App deploy and MCP sidecar deploy are separate tasks.
-# - H5P content is uploaded as content packages. The H5P tester .h5p files in
-#   this repo bundle their required H5P libraries; do not seed H5P libraries
-#   during app deploy.
-# - The remote /h5p-content and /h5p-libraries directories are runtime storage
-#   mounts used by the app after packages are uploaded.
 
 # Operator-local inputs. Keep these in the private config repo, not the public
 # app repo. These paths are intentionally convenient for this workstation.
@@ -24,8 +19,14 @@ $SidecarDir = Join-Path $MofactsRoot "mofacts-mcp-sidecar"
 $OperatorRoot = Join-Path $env:USERPROFILE "OneDrive\Desktop"
 $ActiveProjectsRoot = Join-Path $env:USERPROFILE "OneDrive\Active projects"
 $LocalSettingsPath = Join-Path $OperatorRoot "settings.local.json"
+$StageEnvPath = Join-Path $OperatorRoot ".env.staging"
+$StageSettingsPath = Join-Path $OperatorRoot "settingsstaging.json"
+$ProdEnvPath = Join-Path $OperatorRoot ".env.production"
+$ProdSettingsPath = Join-Path $OperatorRoot "settings.json"
 $StageKey = Join-Path $OperatorRoot "mykey.pem"
 $ProdKey = Join-Path $OperatorRoot "prodkey.pem"
+$StageReplicaKey = Join-Path $OperatorRoot "staging-mongodb-keyfile"
+$ProdReplicaKey = Join-Path $OperatorRoot "production-mongodb-keyfile"
 $StageHost = "ubuntu@44.253.109.187"
 $ProdHost = "ubuntu@52.89.109.53"
 $SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
@@ -35,33 +36,26 @@ $SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
 # Local app loops
 # ---------------------------------------------------------------------------
 
-# Fast local UI/app loop at http://localhost:3200.
+# The only local app loop, at http://localhost:3200. This command starts the
+# source-watching Meteor/Rspack hotfix server; edits rebuild and reload automatically.
 cd $DeployDir
 if (!(Test-Path $LocalSettingsPath)) { throw "Missing local settings file: $LocalSettingsPath" }
-.\hotfix-dev.ps1 start -SettingsPath $LocalSettingsPath
-.\hotfix-dev.ps1 status
-
-# Production-shaped local app-code verification without pushing an image.
-cd $DeployDir
+if (!(Test-Path .\local-secrets\mongodb-keyfile)) { .\New-MongoReplicaSetKeyfile.ps1 }
 .\hotfix-local.ps1
+.\hotfix-local.ps1 status
 
-# Full local Docker image check at http://localhost:3100.
-# Use only when you deliberately want to verify the Docker image path.
+# Optional release-image build check. This does not start a second local server.
+# Use it only when a full Docker image build has been explicitly authorized.
 cd $DeployDir
-docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml build --no-cache mofacts
-docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml up -d mofacts
+docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml config --quiet
+docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml build mofacts
 
 
 # ---------------------------------------------------------------------------
 # Local MCP sidecar
 # ---------------------------------------------------------------------------
 
-# MCP sidecar pointed at the normal hotfix-dev app on http://localhost:3200.
-cd $SidecarDir
-docker compose -f docker-compose.yml -f docker-compose.hotfix-dev.yml down --remove-orphans
-docker compose -f docker-compose.yml -f docker-compose.hotfix-dev.yml up --build
-
-# MCP sidecar pointed at the Dockerized local app on http://localhost:3100.
+# MCP sidecar pointed at the canonical localhost app on http://localhost:3200.
 cd $SidecarDir
 docker compose -f docker-compose.yml -f docker-compose.local-server.yml down --remove-orphans
 docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --build
@@ -71,27 +65,55 @@ docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --bui
 # Staging app deploy
 # ---------------------------------------------------------------------------
 
+# FROZEN ENVIRONMENT: do not run this staging section during the Meteor 3.5
+# production upgrade. This server is in active graduate-student use and remains
+# unchanged until the owner explicitly unfreezes it.
+
 cd $DeployDir
 
 if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
+if (!(Test-Path $StageReplicaKey)) { throw "Missing staging MongoDB replica-set keyfile: $StageReplicaKey" }
 if (!(Test-Path .\docker-compose-staging.yml)) { throw "Missing staging compose file" }
-if (!(Test-Path .\.env.staging)) { throw "Missing staging env file" }
-if (!(Test-Path .\settingsstaging.json)) { throw "Missing staging settings file" }
+if (!(Test-Path $StageEnvPath)) { throw "Missing staging env file: $StageEnvPath" }
+if (!(Test-Path $StageSettingsPath)) { throw "Missing staging settings file: $StageSettingsPath" }
 if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
 if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
 
-# Build and push the staging app image.
-docker compose --env-file .\.env.staging build --no-cache mofacts
-docker compose --env-file .\.env.staging push mofacts
+$RequiredStagingEnv = @(
+  "METEOR_SETTINGS_HOST_PATH",
+  "MOFACTS_ENV_FILE_HOST_PATH",
+  "ROOT_URL",
+  "MONGO_URL",
+  "EXPECTED_MONGO_DB_NAME",
+  "MONGO_INITDB_ROOT_USERNAME",
+  "MONGO_INITDB_ROOT_PASSWORD",
+  "MOFACTS_MONGO_APP_USERNAME",
+  "MOFACTS_MONGO_APP_PASSWORD",
+  "MOFACTS_MONGO_REPLICA_SET_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_MEMBER",
+  "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
+  "REDIS_URL"
+)
+$StagingEnvKeys = Select-String -Path $StageEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$MissingStagingEnv = $RequiredStagingEnv | Where-Object { $StagingEnvKeys -notcontains $_ }
+if ($MissingStagingEnv) { throw "Missing staging env keys: $($MissingStagingEnv -join ', ')" }
+
+# Validate the exact staging definition, then build and push that app image.
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml config --quiet
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml build --no-cache mofacts
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml push mofacts
 
 # Create the runtime filesystem required by the compose mounts.
-ssh -i $StageKey $StageHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts /mofactsAssets_override /dynamic-assets /h5p-content /h5p-libraries && sudo chown -R ubuntu:ubuntu /var/www/mofacts"
+ssh -i $StageKey $StageHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
 
 # Copy app runtime inputs.
 scp -i $StageKey .\docker-compose-staging.yml "${StageHost}:/var/www/mofacts/docker-compose.yaml"
-scp -i $StageKey .\.env.staging "${StageHost}:/var/www/mofacts/.env"
-scp -i $StageKey .\settingsstaging.json "${StageHost}:/var/www/mofacts/settingsstaging.json"
-ssh -i $StageKey $StageHost "chmod 600 /var/www/mofacts/settingsstaging.json"
+scp -i $StageKey $StageEnvPath "${StageHost}:/var/www/mofacts/.env"
+scp -i $StageKey $StageSettingsPath "${StageHost}:/var/www/mofacts/settingsstaging.json"
+scp -i $StageKey .\mongo-init\01-create-mofacts-app-user.js "${StageHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
+scp -i $StageKey .\mongodb\* "${StageHost}:/var/www/mofacts/mongodb/"
+scp -i $StageKey $StageReplicaKey "${StageHost}:/tmp/staging-mongodb-keyfile"
+ssh -i $StageKey $StageHost "sudo install -o root -g root -m 600 /tmp/staging-mongodb-keyfile /etc/mofacts/mongodb-keyfile && rm -f /tmp/staging-mongodb-keyfile && chmod 600 /var/www/mofacts/settingsstaging.json && chmod 755 /var/www/mofacts/mongodb/*.sh"
 
 # Install Memphis SAML cert/key.
 scp -i $StageKey "$SamlDir\memphis-saml-public-cert.pem" "${StageHost}:/tmp/memphis-saml-public-cert.pem"
@@ -99,7 +121,8 @@ scp -i $StageKey "$SamlDir\memphis-saml-private-key.pem" "${StageHost}:/tmp/memp
 ssh -i $StageKey $StageHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
 
 # Preflight and start the app stack.
-ssh -i $StageKey $StageHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settingsstaging.json && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && test -d /h5p-content && test -d /h5p-libraries"
+ssh -i $StageKey $StageHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settingsstaging.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml config --quiet"
+if ((Read-Host "Confirm staging is already a replica set or its conversion is approved; type STAGING-TOPOLOGY-READY") -cne "STAGING-TOPOLOGY-READY") { throw "Staging topology not confirmed" }
 ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build"
 
 
@@ -135,15 +158,17 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 cd $DeployDir
 
 if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
+if (!(Test-Path $ProdReplicaKey)) { throw "Missing production MongoDB replica-set keyfile: $ProdReplicaKey" }
 if (!(Test-Path .\docker-compose.yml)) { throw "Missing production compose file" }
-if (!(Test-Path .\.env.production)) { throw "Missing production env file" }
-if (!(Test-Path .\settings.json)) { throw "Missing production settings file" }
+if (!(Test-Path $ProdEnvPath)) { throw "Missing production env file: $ProdEnvPath" }
+if (!(Test-Path $ProdSettingsPath)) { throw "Missing production settings file: $ProdSettingsPath" }
 if (!(Test-Path .\mongo-init\01-create-mofacts-app-user.js)) { throw "Missing Mongo app-user init script" }
 if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
 if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
 
 $RequiredProductionEnv = @(
   "METEOR_SETTINGS_HOST_PATH",
+  "MOFACTS_ENV_FILE_HOST_PATH",
   "ROOT_URL",
   "MONGO_URL",
   "EXPECTED_MONGO_DB_NAME",
@@ -151,36 +176,95 @@ $RequiredProductionEnv = @(
   "MONGO_INITDB_ROOT_PASSWORD",
   "MOFACTS_MONGO_APP_USERNAME",
   "MOFACTS_MONGO_APP_PASSWORD",
+  "MOFACTS_MONGO_REPLICA_SET_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_MEMBER",
+  "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
+  "MOFACTS_BACKUP_HOST_PATH",
   "REDIS_URL"
 )
-$ProductionEnvKeys = Select-String -Path .\.env.production -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$ProductionEnvKeys = Select-String -Path $ProdEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
 $MissingProductionEnv = $RequiredProductionEnv | Where-Object { $ProductionEnvKeys -notcontains $_ }
 if ($MissingProductionEnv) { throw "Missing production env keys: $($MissingProductionEnv -join ', ')" }
-$ProductionMongoUrl = (Select-String -Path .\.env.production -Pattern "^MONGO_URL=" | Select-Object -First 1).Line
-if ($ProductionMongoUrl -notmatch "\?[^#]*authSource=MoFACT-meteor3") { throw "Production MONGO_URL must include ?authSource=MoFACT-meteor3" }
+# The app's MongoDB driver validates the opaque URI, selected database,
+# authentication, and topology during startup. Do not parse or print the URI.
+# Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
+# installed path /etc/mofacts/mongodb-keyfile, choose the immutable replica-set
+# name/member, and update MONGO_URL to the same set identity and authSource.
 
-# Build and push the production app image.
-docker compose --env-file .\.env.production build --no-cache mofacts
-docker compose --env-file .\.env.production push mofacts
+# Validate the exact production definition, then build and push that app image.
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml config --quiet
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache mofacts
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
 
 # Create the runtime filesystem required by the compose mounts.
-ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /mofactsAssets_override /dynamic-assets /h5p-content /h5p-libraries && sudo chown -R ubuntu:ubuntu /var/www/mofacts"
+ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
 
 # Copy app runtime inputs.
 scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts/docker-compose.yaml"
-scp -i $ProdKey .\.env.production "${ProdHost}:/var/www/mofacts/.env"
-scp -i $ProdKey .\settings.json "${ProdHost}:/var/www/mofacts/settings.json"
+scp -i $ProdKey $ProdEnvPath "${ProdHost}:/var/www/mofacts/.env"
+scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
 scp -i $ProdKey .\mongo-init\01-create-mofacts-app-user.js "${ProdHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
-ssh -i $ProdKey $ProdHost "chmod 600 /var/www/mofacts/settings.json"
+scp -i $ProdKey .\mongodb\* "${ProdHost}:/var/www/mofacts/mongodb/"
+scp -i $ProdKey .\backup-self-hosted.sh "${ProdHost}:/var/www/mofacts/backup-self-hosted.sh"
+scp -i $ProdKey .\restore-self-hosted.sh "${ProdHost}:/var/www/mofacts/restore-self-hosted.sh"
+scp -i $ProdKey $ProdReplicaKey "${ProdHost}:/tmp/production-mongodb-keyfile"
+ssh -i $ProdKey $ProdHost "sudo install -o root -g root -m 600 /tmp/production-mongodb-keyfile /etc/mofacts/mongodb-keyfile && rm -f /tmp/production-mongodb-keyfile && chmod 600 /var/www/mofacts/settings.json && chmod 755 /var/www/mofacts/mongodb/*.sh /var/www/mofacts/backup-self-hosted.sh /var/www/mofacts/restore-self-hosted.sh"
 
 # Install Memphis SAML cert/key.
 scp -i $ProdKey "$SamlDir\memphis-saml-public-cert.pem" "${ProdHost}:/tmp/memphis-saml-public-cert.pem"
 scp -i $ProdKey "$SamlDir\memphis-saml-private-key.pem" "${ProdHost}:/tmp/memphis-saml-private-key.pem"
 ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
 
-# Preflight and start the app stack.
-ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && test -d /h5p-content && test -d /h5p-libraries"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build"
+# Preflight the complete production configuration without starting or replacing services.
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml config --quiet"
+
+# ONE-TIME EXISTING-VOLUME REPLICA-SET CONVERSION.
+# Do not paste this block during an ordinary later app deployment. Before
+# continuing, the protected-backup rehearsal must already have succeeded and
+# every external writer must be identified. This block keeps the existing
+# production server and Docker volume; it does not create a second authority.
+if ((Read-Host "Type CONVERT-PRODUCTION-TO-REPLICA-SET to enter the approved maintenance window") -cne "CONVERT-PRODUCTION-TO-REPLICA-SET") { throw "Production conversion cancelled" }
+
+# Stop the app and the known production MCP sidecar. Stop and verify any other
+# external writer separately before taking the final backup.
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml stop mofacts"
+ssh -i $ProdKey $ProdHost "if test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml; then cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down; fi"
+if ((Read-Host "After verifying every production writer is stopped, type ALL-PRODUCTION-WRITERS-STOPPED") -cne "ALL-PRODUCTION-WRITERS-STOPPED") { throw "Writer-stop verification cancelled" }
+
+# Create the final stopped-writer backup. Keep it encrypted/access-restricted,
+# copy it off-server, verify its manifest, and prove restore in the protected
+# rehearsal environment before allowing the topology change below.
+$ProdBackupStamp = [DateTime]::UtcNow.ToString("yyyyMMdd-HHmmss")
+$ProdBackupPath = "/backups/mofacts-pre-replica-set-$ProdBackupStamp"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo env ENV_FILE=.env COMPOSE_FILE=docker-compose.yaml ./backup-self-hosted.sh $ProdBackupPath"
+if ((Read-Host "After the final backup is verified off-server and its restore has passed, type FINAL-PRODUCTION-BACKUP-VERIFIED") -cne "FINAL-PRODUCTION-BACKUP-VERIFIED") { throw "Backup verification not confirmed; production remains stopped" }
+
+# Convert the existing data-bearing MongoDB service in place, run the
+# idempotent initializer, and require a healthy writable replica-set member.
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d mongodb mongodb-replica-init && sudo docker compose --env-file .env -f docker-compose.yaml wait mongodb-replica-init && sudo docker compose --env-file .env -f docker-compose.yaml up -d --wait mongodb && sudo docker compose --env-file .env -f docker-compose.yaml ps mongodb mongodb-replica-init"
+
+# Before starting the app, compare users/roles, collections, indexes/options,
+# representative records, and external assets with the protected preflight.
+if ((Read-Host "After continuity and writable-primary checks pass, type PRODUCTION-REPLICA-SET-VERIFIED") -cne "PRODUCTION-REPLICA-SET-VERIFIED") { throw "Replica-set verification not confirmed; production remains stopped" }
+
+# Deploy this source-built image with the production Compose contract. The base
+# production configuration intentionally starts with polling; Change Streams
+# are enabled only by the separately reviewed Phase 5B configuration change.
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+
+# Recovery boundary: before the converted application accepts its first write,
+# the approved last-good standalone/config procedure may still be used. After
+# any write, keep the replica set authoritative and recover forward; never start
+# the same data as a concurrent standalone database.
+#
+# This cheat sheet does not silently enable production Change Streams. The
+# tracked base Compose file remains polling for Phase 5A. Apply Phase 5B only
+# after its production configuration change has been reviewed and authorized;
+# do not hand-edit the remote Compose file.
+
+# For ordinary later production app deployments after the one-time conversion,
+# use only the preceding build/push/copy/preflight steps and this final pull/up
+# command. Do not repeat the conversion block.
 
 
 # ---------------------------------------------------------------------------
