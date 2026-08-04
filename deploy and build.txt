@@ -155,6 +155,11 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 # Production app deploy
 # ---------------------------------------------------------------------------
 
+$ProdReleaseCommit = "2d292a1a714d2b89daea4ec07fe69f8810cdee58"
+$ProdImageRepository = "ppavlikmemphis/mofacts-mini"
+$ProdImageTag = "prod-2d292a1a"
+$ProdImageDigest = "sha256:c834eb0af90de048929c382ba2ec9c742c150f9b54ca8677f1c07024be2d79e1"
+
 cd $DeployDir
 
 if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
@@ -182,11 +187,23 @@ $RequiredProductionEnv = @(
   "MOFACTS_MONGO_REPLICA_SET_MEMBER",
   "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
   "MOFACTS_BACKUP_HOST_PATH",
-  "REDIS_URL"
+  "REDIS_URL",
+  "DOCKER_REGISTRY",
+  "IMAGE_NAME",
+  "IMAGE_TAG"
 )
 $ProductionEnvKeys = Select-String -Path $ProdEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
 $MissingProductionEnv = $RequiredProductionEnv | Where-Object { $ProductionEnvKeys -notcontains $_ }
 if ($MissingProductionEnv) { throw "Missing production env keys: $($MissingProductionEnv -join ', ')" }
+$ProductionEnvValues = @{}
+Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" } | ForEach-Object {
+  $Name, $Value = $_ -split "=", 2
+  $ProductionEnvValues[$Name] = $Value
+}
+if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
+if ($ProductionEnvValues['IMAGE_TAG'] -ne $ProdImageTag) { throw "Production image tag does not match the recorded release" }
+if ((git -C $MofactsRoot status --porcelain)) { throw "MoFaCTS working tree must be clean before the production build" }
+if ((git -C $MofactsRoot rev-parse HEAD).Trim() -ne $ProdReleaseCommit) { throw "MoFaCTS HEAD does not match the recorded production release commit" }
 # The app's MongoDB driver validates the opaque URI, selected database,
 # authentication, and topology during startup. Do not parse or print the URI.
 # Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
@@ -197,6 +214,8 @@ if ($MissingProductionEnv) { throw "Missing production env keys: $($MissingProdu
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml config --quiet
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache mofacts
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
+$PublishedImageManifest = docker buildx imagetools inspect "$($ProdImageRepository):$ProdImageTag" --format '{{json .Manifest}}' | ConvertFrom-Json
+if ($PublishedImageManifest.digest -ne $ProdImageDigest) { throw "Published production image digest does not match the recorded release" }
 
 # Create the runtime filesystem required by the compose mounts.
 ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
