@@ -25,6 +25,7 @@ $StageEnvPath = Join-Path $OperatorRoot ".env.staging"
 $StageSettingsPath = Join-Path $OperatorRoot "settingsstaging.json"
 $ProdEnvPath = Join-Path $OperatorRoot ".env.production"
 $ProdSettingsPath = Join-Path $OperatorRoot "settings.json"
+$ProdReleaseRecordPath = Join-Path $OperatorRoot "mofacts-production-release.json"
 $ProdMcpEnvPath = Join-Path $OperatorRoot "mofacts-mcp-production.env"
 $StageKey = Join-Path $OperatorRoot "mykey.pem"
 $ProdKey = Join-Path $OperatorRoot "prodkey.pem"
@@ -158,10 +159,7 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 # Production app deploy
 # ---------------------------------------------------------------------------
 
-$ProdReleaseCommit = "2d292a1a714d2b89daea4ec07fe69f8810cdee58"
 $ProdImageRepository = "ppavlikmemphis/mofacts-mini"
-$ProdImageTag = "prod-2d292a1a"
-$ProdImageDigest = "sha256:c834eb0af90de048929c382ba2ec9c742c150f9b54ca8677f1c07024be2d79e1"
 
 cd $DeployDir
 
@@ -174,6 +172,13 @@ if (!(Test-Path $ProdSettingsPath)) { throw "Missing production settings file: $
 if (!(Test-Path .\mongo-init\01-create-mofacts-app-user.js)) { throw "Missing Mongo app-user init script" }
 if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
 if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
+$ProdReleaseCommit = (git -C $MofactsRoot rev-parse HEAD).Trim()
+$ProdReleaseShortCommit = (git -C $MofactsRoot rev-parse --short=12 HEAD).Trim()
+$ProdWorkingTreeDirty = [bool](git -C $MofactsRoot status --porcelain)
+$ProdBuildStamp = [DateTime]::UtcNow.ToString('yyyyMMddHHmmssZ')
+$ProdImageTag = if ($ProdWorkingTreeDirty) { "prod-local-$ProdBuildStamp-$ProdReleaseShortCommit" } else { "prod-$ProdReleaseShortCommit" }
+if ($ProdReleaseCommit -notmatch '^[0-9a-f]{40}$') { throw "Could not identify the exact local MoFaCTS release commit" }
+$env:IMAGE_TAG = $ProdImageTag
 
 $RequiredProductionEnv = @(
   "METEOR_SETTINGS_HOST_PATH",
@@ -206,11 +211,8 @@ Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" }
   $ProductionEnvValues[$Name] = $Value
 }
 if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
-if ($ProductionEnvValues['IMAGE_TAG'] -ne $ProdImageTag) { throw "Production image tag does not match the recorded release" }
 if ($ProductionEnvValues['MOFACTS_CHANGE_STREAMS_ENABLED'] -ne 'true') { throw "Production Change Streams must be explicitly enabled" }
 if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams,polling') { throw "Production reactivity order must be changeStreams,polling" }
-if ((git -C $MofactsRoot status --porcelain)) { throw "MoFaCTS working tree must be clean before the production build" }
-if ((git -C $MofactsRoot rev-parse HEAD).Trim() -ne $ProdReleaseCommit) { throw "MoFaCTS HEAD does not match the recorded production release commit" }
 # The app's MongoDB driver validates the opaque URI, selected database,
 # authentication, and topology during startup. Do not parse or print the URI.
 # Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
@@ -222,7 +224,20 @@ docker compose --env-file $ProdEnvPath -f .\docker-compose.yml -f $ProdChangeStr
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache mofacts
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
 $PublishedImageManifest = docker buildx imagetools inspect "$($ProdImageRepository):$ProdImageTag" --format '{{json .Manifest}}' | ConvertFrom-Json
-if ($PublishedImageManifest.digest -ne $ProdImageDigest) { throw "Published production image digest does not match the recorded release" }
+$ProdImageDigest = $PublishedImageManifest.digest
+if ($ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$') { throw "Registry did not return an immutable production image digest" }
+
+# Only after the push succeeds, keep the authoritative production environment
+# pointed at the published image. This changes IMAGE_TAG and preserves all
+# secret values in the Desktop file.
+$ProdEnvText = Get-Content -LiteralPath $ProdEnvPath -Raw
+if ($ProdEnvText -notmatch '(?m)^IMAGE_TAG=') { throw "Production env file has no IMAGE_TAG entry" }
+$ProdEnvText = [regex]::Replace($ProdEnvText, '(?m)^IMAGE_TAG=.*$', "IMAGE_TAG=$ProdImageTag")
+Set-Content -LiteralPath $ProdEnvPath -Value $ProdEnvText -NoNewline
+Write-Host "Published release commit: $ProdReleaseCommit"
+Write-Host "Included uncommitted local changes: $ProdWorkingTreeDirty"
+Write-Host "Published image: $($ProdImageRepository):$ProdImageTag"
+Write-Host "Published digest: $ProdImageDigest"
 
 # Create the runtime filesystem required by the compose mounts.
 ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
@@ -247,56 +262,28 @@ ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAss
 # Preflight the complete production configuration without starting or replacing services.
 ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
 
-# ONE-TIME EXISTING-VOLUME REPLICA-SET CONVERSION.
-# Do not paste this block during an ordinary later app deployment. Before
-# continuing, the protected-backup rehearsal must already have succeeded and
-# every external writer must be identified. This block keeps the existing
-# production server and Docker volume; it does not create a second authority.
-if ((Read-Host "Type CONVERT-PRODUCTION-TO-REPLICA-SET to enter the approved maintenance window") -cne "CONVERT-PRODUCTION-TO-REPLICA-SET") { throw "Production conversion cancelled" }
-
-# Stop the app and the known production MCP sidecar. Stop and verify any other
-# external writer separately before taking the final backup.
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml stop mofacts"
-ssh -i $ProdKey $ProdHost "if test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml; then cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml down; fi"
-if ((Read-Host "After verifying every production writer is stopped, type ALL-PRODUCTION-WRITERS-STOPPED") -cne "ALL-PRODUCTION-WRITERS-STOPPED") { throw "Writer-stop verification cancelled" }
-
-# Create the final stopped-writer backup. Keep it encrypted/access-restricted,
-# copy it off-server, verify its manifest, and prove restore in the protected
-# rehearsal environment before allowing the topology change below.
-$ProdBackupStamp = [DateTime]::UtcNow.ToString("yyyyMMdd-HHmmss")
-$ProdBackupPath = "/backups/mofacts-pre-replica-set-$ProdBackupStamp"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo env ENV_FILE=.env COMPOSE_FILE=docker-compose.yaml ./backup-self-hosted.sh $ProdBackupPath"
-if ((Read-Host "After the final backup is verified off-server and its restore has passed, type FINAL-PRODUCTION-BACKUP-VERIFIED") -cne "FINAL-PRODUCTION-BACKUP-VERIFIED") { throw "Backup verification not confirmed; production remains stopped" }
-
-# Convert the existing data-bearing MongoDB service in place, run the
-# idempotent initializer, and require a healthy writable replica-set member.
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d mongodb mongodb-replica-init && sudo docker compose --env-file .env -f docker-compose.yaml wait mongodb-replica-init && sudo docker compose --env-file .env -f docker-compose.yaml up -d --wait mongodb && sudo docker compose --env-file .env -f docker-compose.yaml ps mongodb mongodb-replica-init"
-
-# Before starting the app, compare users/roles, collections, indexes/options,
-# representative records, and external assets with the protected preflight.
-if ((Read-Host "After continuity and writable-primary checks pass, type PRODUCTION-REPLICA-SET-VERIFIED") -cne "PRODUCTION-REPLICA-SET-VERIFIED") { throw "Replica-set verification not confirmed; production remains stopped" }
-
-# Deploy this source-built image with the production Compose contract. The base
-# production configuration intentionally starts with polling; Change Streams
-# are enabled only by the separately reviewed Phase 5B configuration change.
+# Deploy this source-built image with the existing production replica set and
+# the production Change Streams overlay. This is the ordinary app deployment;
+# it does not repeat the completed database-topology conversion.
 ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
 
-# Recovery boundary: before the converted application accepts its first write,
-# the approved last-good standalone/config procedure may still be used. After
-# any write, keep the replica set authoritative and recover forward; never start
-# the same data as a concurrent standalone database.
-#
+# Automatically record the successfully deployed immutable release beside the
+# authoritative Desktop inputs. No commit, tag, or digest needs manual entry.
+[ordered]@{
+  deployedAtUtc = [DateTime]::UtcNow.ToString('o')
+  baseCommit = $ProdReleaseCommit
+  includedUncommittedLocalChanges = $ProdWorkingTreeDirty
+  image = "$($ProdImageRepository):$ProdImageTag"
+  tag = $ProdImageTag
+  digest = $ProdImageDigest
+} | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
+
 # Production Change Streams are owned by the private production overlay and
 # authoritative Desktop environment. Keep the test-only qualification flag
 # false. To restore the reviewed polling configuration, set
 # MOFACTS_CHANGE_STREAMS_ENABLED=false and METEOR_REACTIVITY_ORDER=polling in
 # the authoritative environment and deploy the base Compose file without the
 # production Change Streams overlay. Keep the replica set authoritative.
-
-# For ordinary later production app deployments after the one-time conversion,
-# use only the preceding build/push/copy/preflight steps and this final pull/up
-# command. Do not repeat the conversion block.
-
 
 # ---------------------------------------------------------------------------
 # Production MCP sidecar deploy
@@ -341,7 +328,7 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compos
 
 # App checks.
 ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
 
 # MCP checks.
 ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml ps"
