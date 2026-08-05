@@ -14,8 +14,10 @@ MoFaCTS deploy/build cheat sheet
 # Operator-local inputs. Keep these in the private config repo, not the public
 # app repo. These paths are intentionally convenient for this workstation.
 $MofactsRoot = "C:\dev\MoFaCTS"
+$ConfigRoot = "C:\dev\mofacts_config"
 $DeployDir = Join-Path $MofactsRoot "deploy"
 $SidecarDir = Join-Path $MofactsRoot "mofacts-mcp-sidecar"
+$ProdChangeStreamsComposePath = Join-Path $ConfigRoot "docker-compose.production-change-streams.yml"
 $OperatorRoot = Join-Path $env:USERPROFILE "OneDrive\Desktop"
 $ActiveProjectsRoot = Join-Path $env:USERPROFILE "OneDrive\Active projects"
 $LocalSettingsPath = Join-Path $OperatorRoot "settings.local.json"
@@ -23,6 +25,7 @@ $StageEnvPath = Join-Path $OperatorRoot ".env.staging"
 $StageSettingsPath = Join-Path $OperatorRoot "settingsstaging.json"
 $ProdEnvPath = Join-Path $OperatorRoot ".env.production"
 $ProdSettingsPath = Join-Path $OperatorRoot "settings.json"
+$ProdMcpEnvPath = Join-Path $OperatorRoot "mofacts-mcp-production.env"
 $StageKey = Join-Path $OperatorRoot "mykey.pem"
 $ProdKey = Join-Path $OperatorRoot "prodkey.pem"
 $StageReplicaKey = Join-Path $OperatorRoot "staging-mongodb-keyfile"
@@ -165,6 +168,7 @@ cd $DeployDir
 if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
 if (!(Test-Path $ProdReplicaKey)) { throw "Missing production MongoDB replica-set keyfile: $ProdReplicaKey" }
 if (!(Test-Path .\docker-compose.yml)) { throw "Missing production compose file" }
+if (!(Test-Path $ProdChangeStreamsComposePath)) { throw "Missing production Change Streams compose overlay: $ProdChangeStreamsComposePath" }
 if (!(Test-Path $ProdEnvPath)) { throw "Missing production env file: $ProdEnvPath" }
 if (!(Test-Path $ProdSettingsPath)) { throw "Missing production settings file: $ProdSettingsPath" }
 if (!(Test-Path .\mongo-init\01-create-mofacts-app-user.js)) { throw "Missing Mongo app-user init script" }
@@ -177,6 +181,7 @@ $RequiredProductionEnv = @(
   "ROOT_URL",
   "MONGO_URL",
   "EXPECTED_MONGO_DB_NAME",
+  "MOFACTS_CHANGE_STREAMS_ENABLED",
   "METEOR_REACTIVITY_ORDER",
   "DDP_TRANSPORT",
   "MONGO_INITDB_ROOT_USERNAME",
@@ -202,6 +207,8 @@ Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" }
 }
 if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
 if ($ProductionEnvValues['IMAGE_TAG'] -ne $ProdImageTag) { throw "Production image tag does not match the recorded release" }
+if ($ProductionEnvValues['MOFACTS_CHANGE_STREAMS_ENABLED'] -ne 'true') { throw "Production Change Streams must be explicitly enabled" }
+if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams,polling') { throw "Production reactivity order must be changeStreams,polling" }
 if ((git -C $MofactsRoot status --porcelain)) { throw "MoFaCTS working tree must be clean before the production build" }
 if ((git -C $MofactsRoot rev-parse HEAD).Trim() -ne $ProdReleaseCommit) { throw "MoFaCTS HEAD does not match the recorded production release commit" }
 # The app's MongoDB driver validates the opaque URI, selected database,
@@ -211,7 +218,7 @@ if ((git -C $MofactsRoot rev-parse HEAD).Trim() -ne $ProdReleaseCommit) { throw 
 # name/member, and update MONGO_URL to the same set identity and authSource.
 
 # Validate the exact production definition, then build and push that app image.
-docker compose --env-file $ProdEnvPath -f .\docker-compose.yml config --quiet
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml -f $ProdChangeStreamsComposePath config --quiet
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache mofacts
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
 $PublishedImageManifest = docker buildx imagetools inspect "$($ProdImageRepository):$ProdImageTag" --format '{{json .Manifest}}' | ConvertFrom-Json
@@ -222,6 +229,7 @@ ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose versio
 
 # Copy app runtime inputs.
 scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts/docker-compose.yaml"
+scp -i $ProdKey $ProdChangeStreamsComposePath "${ProdHost}:/var/www/mofacts/docker-compose.change-streams.yaml"
 scp -i $ProdKey $ProdEnvPath "${ProdHost}:/var/www/mofacts/.env"
 scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
 scp -i $ProdKey .\mongo-init\01-create-mofacts-app-user.js "${ProdHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
@@ -237,7 +245,7 @@ scp -i $ProdKey "$SamlDir\memphis-saml-private-key.pem" "${ProdHost}:/tmp/memphi
 ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
 
 # Preflight the complete production configuration without starting or replacing services.
-ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml config --quiet"
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
 
 # ONE-TIME EXISTING-VOLUME REPLICA-SET CONVERSION.
 # Do not paste this block during an ordinary later app deployment. Before
@@ -249,7 +257,7 @@ if ((Read-Host "Type CONVERT-PRODUCTION-TO-REPLICA-SET to enter the approved mai
 # Stop the app and the known production MCP sidecar. Stop and verify any other
 # external writer separately before taking the final backup.
 ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml stop mofacts"
-ssh -i $ProdKey $ProdHost "if test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml; then cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down; fi"
+ssh -i $ProdKey $ProdHost "if test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml; then cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml down; fi"
 if ((Read-Host "After verifying every production writer is stopped, type ALL-PRODUCTION-WRITERS-STOPPED") -cne "ALL-PRODUCTION-WRITERS-STOPPED") { throw "Writer-stop verification cancelled" }
 
 # Create the final stopped-writer backup. Keep it encrypted/access-restricted,
@@ -271,17 +279,19 @@ if ((Read-Host "After continuity and writable-primary checks pass, type PRODUCTI
 # Deploy this source-built image with the production Compose contract. The base
 # production configuration intentionally starts with polling; Change Streams
 # are enabled only by the separately reviewed Phase 5B configuration change.
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
 
 # Recovery boundary: before the converted application accepts its first write,
 # the approved last-good standalone/config procedure may still be used. After
 # any write, keep the replica set authoritative and recover forward; never start
 # the same data as a concurrent standalone database.
 #
-# This cheat sheet does not silently enable production Change Streams. The
-# tracked base Compose file remains polling for Phase 5A. Apply Phase 5B only
-# after its production configuration change has been reviewed and authorized;
-# do not hand-edit the remote Compose file.
+# Production Change Streams are owned by the private production overlay and
+# authoritative Desktop environment. Keep the test-only qualification flag
+# false. To restore the reviewed polling configuration, set
+# MOFACTS_CHANGE_STREAMS_ENABLED=false and METEOR_REACTIVITY_ORDER=polling in
+# the authoritative environment and deploy the base Compose file without the
+# production Change Streams overlay. Keep the replica set authoritative.
 
 # For ordinary later production app deployments after the one-time conversion,
 # use only the preceding build/push/copy/preflight steps and this final pull/up
@@ -295,10 +305,22 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file
 cd $SidecarDir
 
 if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
+if (!(Test-Path $ProdMcpEnvPath)) { throw "Missing production MCP environment file: $ProdMcpEnvPath" }
+$RequiredProductionMcpEnv = @(
+  "BASE_URL",
+  "MONGO_URI",
+  "DB_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_NAME"
+)
+$ProductionMcpEnvKeys = Select-String -Path $ProdMcpEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$MissingProductionMcpEnv = $RequiredProductionMcpEnv | Where-Object { $ProductionMcpEnvKeys -notcontains $_ }
+if ($MissingProductionMcpEnv) { throw "Missing production MCP env keys: $($MissingProductionMcpEnv -join ', ')" }
 ssh -i $ProdKey $ProdHost "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
 
 scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts-mcp-sidecar/docker-compose.yml"
 scp -i $ProdKey .\docker-compose.remote-server.yml "${ProdHost}:/var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml"
+scp -i $ProdKey $ProdMcpEnvPath "${ProdHost}:/tmp/mofacts-mcp-production.env"
+ssh -i $ProdKey $ProdHost "sudo install -o root -g root -m 600 /tmp/mofacts-mcp-production.env /var/www/mofacts-mcp-sidecar/.env && rm -f /tmp/mofacts-mcp-production.env"
 ssh -i $ProdKey $ProdHost "rm -rf /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp && mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src"
 
 scp -i $ProdKey .\services\playwright-mcp\Dockerfile "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile"
@@ -309,8 +331,8 @@ scp -i $ProdKey .\services\mongo-mcp\package.json "${ProdHost}:/var/www/mofacts-
 scp -i $ProdKey .\services\mongo-mcp\package-lock.json "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package-lock.json"
 scp -i $ProdKey -r .\services\mongo-mcp\src\* "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/src/"
 
-ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml up -d --build"
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml && sudo test -f /var/www/mofacts-mcp-sidecar/.env && sudo stat -c '%U:%G:%a' /var/www/mofacts-mcp-sidecar/.env | grep -qx 'root:root:600' && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp && cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml config --quiet"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml up -d --build"
 
 
 # ---------------------------------------------------------------------------
@@ -323,8 +345,8 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file
 
 # MCP checks.
 ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml ps"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml ps"
 
 # Stop MCP sidecars.
 ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml down"
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod -f docker-compose.yml -f docker-compose.remote-server.yml down"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml down"
