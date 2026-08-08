@@ -186,7 +186,6 @@ $RequiredProductionEnv = @(
   "ROOT_URL",
   "MONGO_URL",
   "EXPECTED_MONGO_DB_NAME",
-  "MOFACTS_CHANGE_STREAMS_ENABLED",
   "METEOR_REACTIVITY_ORDER",
   "DDP_TRANSPORT",
   "MONGO_INITDB_ROOT_USERNAME",
@@ -211,8 +210,7 @@ Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" }
   $ProductionEnvValues[$Name] = $Value
 }
 if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
-if ($ProductionEnvValues['MOFACTS_CHANGE_STREAMS_ENABLED'] -ne 'true') { throw "Production Change Streams must be explicitly enabled" }
-if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams,polling') { throw "Production reactivity order must be changeStreams,polling" }
+if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams') { throw "Production reactivity order must be changeStreams" }
 # The app's MongoDB driver validates the opaque URI, selected database,
 # authentication, and topology during startup. Do not parse or print the URI.
 # Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
@@ -280,10 +278,9 @@ ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file
 
 # Production Change Streams are owned by the private production overlay and
 # authoritative Desktop environment. Keep the test-only qualification flag
-# false. To restore the reviewed polling configuration, set
-# MOFACTS_CHANGE_STREAMS_ENABLED=false and METEOR_REACTIVITY_ORDER=polling in
-# the authoritative environment and deploy the base Compose file without the
-# production Change Streams overlay. Keep the replica set authoritative.
+# false. Change Streams are the only supported reactive driver. If startup or
+# qualification fails, stop and repair the owning incompatibility; do not
+# switch the application to polling. Keep the replica set authoritative.
 
 # ---------------------------------------------------------------------------
 # Production MCP sidecar deploy
