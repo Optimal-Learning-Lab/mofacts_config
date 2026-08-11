@@ -36,17 +36,7 @@ function main(): void {
     'sparc-progressive-chapter': 1,
     'sparc-stoichiometry-dimensional-analysis': 1,
   };
-  const expectedRuleIds = [
-    'dialogue.completion.summary',
-    'dialogue.question.defer',
-    'dialogue.question.scope-refusal',
-    'dialogue.scaffold.pump',
-    'dialogue.scaffold.prompt',
-    'dialogue.scaffold.hint',
-    'dialogue.scaffold.assertion',
-  ];
   const counts: Record<string, number> = {};
-  const autoTutorRuleShapes = new Set<string>();
   let displayCount = 0;
   for (const filePath of jsonFiles(configRoot)) {
     let document: unknown;
@@ -97,38 +87,18 @@ function main(): void {
       if ('postAssertionResponse' in controllerParameters) {
         throw new Error(`${filePath} contains obsolete postAssertionResponse metadata; assertion persistence belongs to the production rule`);
       }
-      if (!Array.isArray(display.productionRules)) {
-        throw new Error(`${filePath} is missing AutoTutor productionRules`);
+      if ('productionRules' in display) {
+        throw new Error(`${filePath} contains AutoTutor productionRules; progressive-scaffolding-v1 is runtime-owned`);
       }
-      const ruleIds = display.productionRules.filter(isRecord).map((rule) => rule.id);
-      if (JSON.stringify(ruleIds) !== JSON.stringify(expectedRuleIds)) {
-        throw new Error(`${filePath} does not contain the canonical seven production rules`);
+      const workingMemoryFacts = Array.isArray(display.workingMemoryFacts)
+        ? display.workingMemoryFacts.filter(isRecord)
+        : [];
+      const dialogueThresholds = workingMemoryFacts.find((fact) => fact.factType === 'dialogue.thresholds');
+      const thresholdSlots = dialogueThresholds && isRecord(dialogueThresholds.slots) ? dialogueThresholds.slots : {};
+      const misconceptionThreshold = Number(thresholdSlots.misconceptionThreshold);
+      if (!Number.isFinite(misconceptionThreshold) || misconceptionThreshold < 0 || misconceptionThreshold > 1) {
+        throw new Error(`${filePath} requires dialogue.thresholds.misconceptionThreshold from 0 to 1`);
       }
-      const assertionRule = display.productionRules
-        .filter(isRecord)
-        .find((rule) => rule.id === 'dialogue.scaffold.assertion');
-      const assertionWhen = assertionRule && Array.isArray(assertionRule.when) ? assertionRule.when : [];
-      const assertionSelector = isRecord(assertionWhen[1]) ? assertionWhen[1] : {};
-      const assertionConditions = Array.isArray(assertionSelector.conditions) ? assertionSelector.conditions : [];
-      const repeatsAssertion = assertionConditions.filter(isRecord).some((condition) => {
-        const slots = isRecord(condition.slots) ? condition.slots : {};
-        const stage = isRecord(slots.stage) ? slots.stage : {};
-        return condition.factType === 'scaffold.state' && stage.value === 'ASSERTION';
-      });
-      if (!repeatsAssertion) {
-        throw new Error(`${filePath} assertion production is not the default unresolved-target continuation`);
-      }
-      const pumpRule = display.productionRules
-        .filter(isRecord)
-        .find((rule) => rule.id === 'dialogue.scaffold.pump');
-      if (JSON.stringify(pumpRule?.when).includes('ASSERTION')) {
-        throw new Error(`${filePath} pump production must not handle the assertion stage`);
-      }
-      const serializedRules = JSON.stringify(display.productionRules);
-      for (const retired of ['paper-rule-', 'misconception-repair-splice', 'positive_pump', 'elaborate', 'splice']) {
-        if (serializedRules.includes(retired)) throw new Error(`${filePath} still references retired move ${retired}`);
-      }
-      autoTutorRuleShapes.add(serializedRules);
     }
   }
   if (displayCount !== 56) throw new Error(`Expected 56 SPARC displays, found ${displayCount}`);
@@ -140,10 +110,7 @@ function main(): void {
   if (Object.keys(counts).length !== Object.keys(expectedCounts).length) {
     throw new Error(`SPARC unit inventory contains an unexpected unit type: ${JSON.stringify(counts)}`);
   }
-  if (autoTutorRuleShapes.size !== 1) {
-    throw new Error(`Expected one canonical AutoTutor rule shape, found ${autoTutorRuleShapes.size}`);
-  }
-  console.log(JSON.stringify({ configRoot, displayCount, counts, autoTutorRuleShapes: autoTutorRuleShapes.size }, null, 2));
+  console.log(JSON.stringify({ configRoot, displayCount, counts, autoTutorRules: 'runtime-owned' }, null, 2));
 }
 
 main();
