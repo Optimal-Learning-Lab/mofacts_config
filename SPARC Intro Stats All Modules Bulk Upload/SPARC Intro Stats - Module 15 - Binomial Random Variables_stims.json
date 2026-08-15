@@ -1230,6 +1230,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95772-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p> What is the value of the <em>n</em> parameter of the binomial random variable X?</p>"
+                        },
+                        {
                           "id": "node-95772-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1303,6 +1309,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95777-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p> What is the value of the <em>p</em> parameter of the binomial random variable X? </p>"
+                        },
                         {
                           "id": "node-95777-answers",
                           "nodeType": "group",
@@ -1400,6 +1412,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-96012-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>There are 6 members in a family (2 parents and 4 children). Let X be the number of family members who have blue eyes. </p>"
+                        },
+                        {
                           "id": "node-96012-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1465,6 +1483,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95955-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>There are 30 people at a party, 12 of which are males. Out of the 30 people at the party, 5 are selected at random to participate in a game. Let X be the number of females that were selected (out of the 5). </p>"
+                        },
                         {
                           "id": "node-95955-answers",
                           "nodeType": "group",
@@ -1532,6 +1556,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95970-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>It is known that roughly 8% of males have some sort of color vision deficiency (also known as color-blindness). A random sample of 1,000 males was selected. Let X be the number of males out of the sample that are color-blind. </p>"
+                        },
+                        {
                           "id": "node-95970-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1598,6 +1628,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95576-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>A multiple-choice quiz has 15 problems, each with 5 possible answers, only one of which is correct. A student who does not attend lectures has no clue, and uses an independent random guess to answer each of the problems. The random variable X is the number of questions the student got right.</p>"
+                        },
+                        {
                           "id": "node-95576-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1653,6 +1689,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95731-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>In the previous question (the one about the multiple-choice quiz), the random variable X is binomial with parameters: </p>"
+                        },
                         {
                           "id": "node-95731-answers",
                           "nodeType": "group",
@@ -2245,6 +2287,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95788-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>You conduct a random experiment in which you toss a coin 10 times. How many possible outcomes with exactly 6 heads are there in this random experiment?</p>"
+                        },
                         {
                           "id": "node-95788-answers",
                           "nodeType": "group",
@@ -3235,6 +3283,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-95448-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>The mean and standard deviation of X are:</p>"
+                            },
+                            {
                               "id": "node-95448-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -3430,6 +3484,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95518-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Change the value of p to 0.2, and set n all the way to the left to n=10. </p><p>What is the shape of the distribution? </p>"
+                        },
+                        {
                           "id": "node-95518-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -3572,6 +3632,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96679-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Change the value of p to 0.8, and set n all the way to the left to n=10.</p><p>What is the shape of the distribution? </p>"
+                        },
                         {
                           "id": "node-96679-answers",
                           "nodeType": "group",
@@ -8240,6 +8306,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96261.short-answer-input",
+              "module": "binomial-random-variables",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96261:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96261.short-answer-submit",
               "module": "binomial-random-variables",
               "salience": 30,
@@ -8260,8 +8361,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96261-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -8318,7 +8440,7 @@
                   "nodeId": "node-96261-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]
@@ -8612,6 +8734,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.95573.short-answer-input",
+              "module": "binomial-random-variables",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95573:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.95573.short-answer-submit",
               "module": "binomial-random-variables",
               "salience": 30,
@@ -8632,8 +8789,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95573-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -8690,7 +8868,7 @@
                   "nodeId": "node-95573-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

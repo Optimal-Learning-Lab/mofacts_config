@@ -311,27 +311,27 @@
                       "id": "node-page-96693-p-3",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>All the students in a certain high school were surveyed, then classified according to gender and whether they had either of their ears pierced:</p>",
                       "placement": {
                         "region": "document",
                         "order": 3
                       }
                     },
                     {
-                      "id": "node-page-96693-p-4",
+                      "id": "node-page-96693-image-4",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>All the students in a certain high school were surveyed, then classified according to gender and whether they had either of their ears pierced:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0dca28191076883769239972b556c7c7/image001.gif\" alt=\"A table of the data. The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is given in &quot;Row, Column: Value&quot; format:         Male, Pierced: 36;         Male, Not Pierced: 144;         Male, Total: 180;         Female, Pierced: 288;         Female, Not Pierced: 32;         Female, Total: 320;         Total, Pierced: 324;         Total, Not Pierced: 176;         Total, Total: 500;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 4
                       }
                     },
                     {
-                      "id": "node-page-96693-image-5",
+                      "id": "node-page-96693-p-5",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0dca28191076883769239972b556c7c7/image001.gif\" alt=\"A table of the data. The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is given in &quot;Row, Column: Value&quot; format:         Male, Pierced: 36;         Male, Not Pierced: 144;         Male, Total: 180;         Female, Pierced: 288;         Female, Not Pierced: 32;         Female, Total: 320;         Total, Pierced: 324;         Total, Not Pierced: 176;         Total, Total: 500;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>(Note that this is a two-way table of counts that was first introduced when we talked about the relationship between two categorical variables. It is not surprising that we are using it again in this example, since we indeed have two categorical variables here: <strong>Gender:</strong> M or F (in our notation, &quot;not M&quot;), and <strong>Pierced:</strong> Yes or No)</p>",
                       "placement": {
                         "region": "document",
                         "order": 5
@@ -341,27 +341,27 @@
                       "id": "node-page-96693-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(Note that this is a two-way table of counts that was first introduced when we talked about the relationship between two categorical variables. It is not surprising that we are using it again in this example, since we indeed have two categorical variables here: <strong>Gender:</strong> M or F (in our notation, &quot;not M&quot;), and <strong>Pierced:</strong> Yes or No)</p>",
+                      "value": "<p>Suppose a student is selected at random from the school. Let <strong>M</strong> and <strong>not M</strong> denote the events of being male and female, respectively, and <strong>E</strong> and <strong>not E</strong> denote the events of having ears pierced or not, respectively. We&#39;ll start by asking what will seem like simple questions, and we&#39;ll build our way to conditional probability:</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
                       }
                     },
                     {
-                      "id": "node-page-96693-p-7",
+                      "id": "node-page-96693-ol-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Suppose a student is selected at random from the school. Let <strong>M</strong> and <strong>not M</strong> denote the events of being male and female, respectively, and <strong>E</strong> and <strong>not E</strong> denote the events of having ears pierced or not, respectively. We&#39;ll start by asking what will seem like simple questions, and we&#39;ll build our way to conditional probability:</p>",
+                      "value": "<ol><li><p>What is the probability that the student has one or both ears pierced?</p><p>Since a student is chosen at random from the group of 500 students, out of which 324 are pierced,</p><p>P(E) = 324/500 = .648</p></li><li><p>What is the probability that the student is male?</p><p>Since a student is chosen at random from the group of 500 students, out of which 180 are male,</p><p>P(M) = 180/500 = .36</p></li><li><p>What is the probability that the student is male and has ear(s) pierced? </p><p>Since a student is chosen at random from the group of 500 students out of which 36 are male and have their ear(s) pierced, P(M and E) = 36/500 = .072</p><p>Now something new:</p></li><li><p><strong>Given</strong> that the student that was chosen is male, what is the probability that he has one or both ears pierced?</p><p>At this point, new notation is required, to express the probability of a certain event given that another event holds. We will write &quot;the probability of having one or both ears pierced (E) , given that a student is male (M)&quot; as <strong>P(E | M).</strong></p></li></ol>",
                       "placement": {
                         "region": "document",
                         "order": 7
                       }
                     },
                     {
-                      "id": "node-page-96693-ol-8",
+                      "id": "node-page-96693-p-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<ol><li><p>What is the probability that the student has one or both ears pierced?</p><p>Since a student is chosen at random from the group of 500 students, out of which 324 are pierced,</p><p>P(E) = 324/500 = .648</p></li><li><p>What is the probability that the student is male?</p><p>Since a student is chosen at random from the group of 500 students, out of which 180 are male,</p><p>P(M) = 180/500 = .36</p></li><li><p>What is the probability that the student is male and has ear(s) pierced? </p><p>Since a student is chosen at random from the group of 500 students out of which 36 are male and have their ear(s) pierced, P(M and E) = 36/500 = .072</p><p>Now something new:</p></li><li><p><strong>Given</strong> that the student that was chosen is male, what is the probability that he has one or both ears pierced?</p><p>At this point, new notation is required, to express the probability of a certain event given that another event holds. We will write &quot;the probability of having one or both ears pierced (E) , given that a student is male (M)&quot; as <strong>P(E | M).</strong></p></li></ol>",
+                      "value": "<p>A word about this new notation: The event whose probability we seek (in this case E) is written first, the vertical line stands for the word &quot;given&quot; or &quot;conditioned on,&quot; and the event that is given (in this case M) is written after the &quot;|&quot; sign.</p>",
                       "placement": {
                         "region": "document",
                         "order": 8
@@ -371,7 +371,7 @@
                       "id": "node-page-96693-p-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A word about this new notation: The event whose probability we seek (in this case E) is written first, the vertical line stands for the word &quot;given&quot; or &quot;conditioned on,&quot; and the event that is given (in this case M) is written after the &quot;|&quot; sign.</p>",
+                      "value": "<p>We call this probability the <strong>conditional probability</strong> of having one or both ears pierced, given that a student is male: it assesses the probability of having pierced ears under the condition of being male. Now to solve for the probability, we observe that choosing from only the males in the school essentially alters the sample space S from all students in the school to all male students in the school. The total number of possible outcomes is no longer 500, but has changed to 180. Out of those 180 males, 36 have ear(s) pierced, and thus:</p>",
                       "placement": {
                         "region": "document",
                         "order": 9
@@ -381,20 +381,10 @@
                       "id": "node-page-96693-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>We call this probability the <strong>conditional probability</strong> of having one or both ears pierced, given that a student is male: it assesses the probability of having pierced ears under the condition of being male. Now to solve for the probability, we observe that choosing from only the males in the school essentially alters the sample space S from all students in the school to all male students in the school. The total number of possible outcomes is no longer 500, but has changed to 180. Out of those 180 males, 36 have ear(s) pierced, and thus:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-96693-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>P(E | M) = 36/180 = .20.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 11
+                        "order": 10
                       }
                     }
                   ],
@@ -542,6 +532,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-95496-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Which of the following represents the probability that a randomly chosen female has pierced ears? In other words, what is the conditional probability that a randomly chosen student has pierced ears, given that this student is female? </p>"
+                            },
+                            {
                               "id": "node-95496-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -615,6 +611,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95887-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Which of the following represents the probability that a randomly chosen student is a non-pierced male? </p>"
+                            },
                             {
                               "id": "node-95887-answers",
                               "nodeType": "group",
@@ -690,6 +692,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96001-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>P(not E | not M) represents the probability that:</p>"
+                            },
+                            {
                               "id": "node-96001-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -763,6 +771,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95991-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is P(not E | not M), the probability that a randomly chosen female does not have pierced ears?</p>"
+                            },
                             {
                               "id": "node-95991-answers",
                               "nodeType": "group",
@@ -1000,7 +1014,7 @@
                       "id": "node-page-96703-p-30",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>On the &quot;Information for the Patient&quot; label of a certain antidepressant, it is claimed that based on some clinical trials, there is a 14% chance of experiencing sleeping problems known as insomnia (denote this event by I), there is a 26% chance of experiencing headache (denote this event by<strong>H</strong>), and there is a 5% chance of experiencing both side effects (<strong>I and H</strong>).</p>",
                       "placement": {
                         "region": "document",
                         "order": 30
@@ -1010,7 +1024,7 @@
                       "id": "node-page-96703-p-31",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>On the &quot;Information for the Patient&quot; label of a certain antidepressant, it is claimed that based on some clinical trials, there is a 14% chance of experiencing sleeping problems known as insomnia (denote this event by I), there is a 26% chance of experiencing headache (denote this event by<strong>H</strong>), and there is a 5% chance of experiencing both side effects (<strong>I and H</strong>).</p>",
+                      "value": "<p>(a) Suppose that the patient experiences insomnia; what is the probability that the patient will also experience headache?</p>",
                       "placement": {
                         "region": "document",
                         "order": 31
@@ -1020,7 +1034,7 @@
                       "id": "node-page-96703-p-32",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(a) Suppose that the patient experiences insomnia; what is the probability that the patient will also experience headache?</p>",
+                      "value": "<p>Since we know (or it is given) that the patient experienced insomnia, we are looking for P(H | I). According to the definition of conditional probability:</p>",
                       "placement": {
                         "region": "document",
                         "order": 32
@@ -1030,7 +1044,7 @@
                       "id": "node-page-96703-p-33",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Since we know (or it is given) that the patient experienced insomnia, we are looking for P(H | I). According to the definition of conditional probability:</p>",
+                      "value": "<p>P(H | I) = P(H and I) / P(I) = .05/.14 = .357.</p>",
                       "placement": {
                         "region": "document",
                         "order": 33
@@ -1040,7 +1054,7 @@
                       "id": "node-page-96703-p-34",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(H | I) = P(H and I) / P(I) = .05/.14 = .357.</p>",
+                      "value": "<p>(b) Suppose the drug induces headache in a patient; what is the probability that it also induces insomnia? </p>",
                       "placement": {
                         "region": "document",
                         "order": 34
@@ -1050,7 +1064,7 @@
                       "id": "node-page-96703-p-35",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(b) Suppose the drug induces headache in a patient; what is the probability that it also induces insomnia? </p>",
+                      "value": "<p>Here, we are given that the patient experienced headache, so we are looking for P(I | H). </p>",
                       "placement": {
                         "region": "document",
                         "order": 35
@@ -1060,20 +1074,10 @@
                       "id": "node-page-96703-p-36",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Here, we are given that the patient experienced headache, so we are looking for P(I | H). </p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
-                      }
-                    },
-                    {
-                      "id": "node-page-96703-p-37",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>Using the definition P(I | H) = P(I and H) / P(H) = .05/.26 = .1923.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 37
+                        "order": 36
                       }
                     }
                   ],
@@ -1083,10 +1087,20 @@
                   }
                 },
                 {
-                  "id": "node-page-96703-h1-38",
+                  "id": "node-page-96703-h1-37",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h1>Comment</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 37
+                  }
+                },
+                {
+                  "id": "node-page-96703-p-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Note that the answers to (a) and (b) above are different. In general, P(A | B) does not equal P(B | A). We&#39;ll come back and illustrate this point later in this module.</p>",
                   "placement": {
                     "region": "document",
                     "order": 38
@@ -1096,24 +1110,14 @@
                   "id": "node-page-96703-p-39",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>Note that the answers to (a) and (b) above are different. In general, P(A | B) does not equal P(B | A). We&#39;ll come back and illustrate this point later in this module.</p>",
+                  "value": "<p>The purpose of the following activity is to give you guided practice in using the definition of conditional probability, and teach you how the Complement Rule works with conditional probability.</p>",
                   "placement": {
                     "region": "document",
                     "order": 39
                   }
                 },
                 {
-                  "id": "node-page-96703-p-40",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The purpose of the following activity is to give you guided practice in using the definition of conditional probability, and teach you how the Complement Rule works with conditional probability.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 40
-                  }
-                },
-                {
-                  "id": "node-page-96703-group-41",
+                  "id": "node-page-96703-group-40",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -1124,14 +1128,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 41
+                    "order": 40
                   },
                   "children": [
                     {
-                      "id": "node-page-96703-h1-42",
+                      "id": "node-page-96703-h1-41",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Learn By Doing</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 41
+                      }
+                    },
+                    {
+                      "id": "node-page-96703-p-42",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall the delivery services example:</p>",
                       "placement": {
                         "region": "document",
                         "order": 42
@@ -1141,34 +1155,24 @@
                       "id": "node-page-96703-p-43",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Recall the delivery services example:</p>",
+                      "value": "<p>It is vital that a certain document reach its destination within one day. To maximize the chances of on-time delivery, two copies of the document are sent using two services, service A and service B, and the following probability table summarizes the chances of on-time delivery:</p>",
                       "placement": {
                         "region": "document",
                         "order": 43
                       }
                     },
                     {
-                      "id": "node-page-96703-p-44",
+                      "id": "node-page-96703-image-44",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>It is vital that a certain document reach its destination within one day. To maximize the chances of on-time delivery, two copies of the document are sent using two services, service A and service B, and the following probability table summarizes the chances of on-time delivery:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/5b/5b04cb28b9e930be49facfeb59048011/lbd001.gif\" alt=\"A table. The column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;A,&quot; &quot;not A,&quot; and &quot;Total.&quot; Here is the cell data in &quot;Row, Column: Value&quot; format:         A,B : .75;         A, not B: .15;         A, Total: .90;         not A, B: .05;         not A, not B: .05;         not A, Total: .10;         Total, B: .80;         Total, not B: .20;         Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 44
                       }
                     },
                     {
-                      "id": "node-page-96703-image-45",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/5b/5b04cb28b9e930be49facfeb59048011/lbd001.gif\" alt=\"A table. The column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;A,&quot; &quot;not A,&quot; and &quot;Total.&quot; Here is the cell data in &quot;Row, Column: Value&quot; format:         A,B : .75;         A, not B: .15;         A, Total: .90;         not A, B: .05;         not A, not B: .05;         not A, Total: .10;         Total, B: .80;         Total, not B: .20;         Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 45
-                      }
-                    },
-                    {
-                      "id": "node-page-96703-group-46",
+                      "id": "node-page-96703-group-45",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1179,7 +1183,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 46
+                        "order": 45
                       },
                       "children": [
                         {
@@ -1189,7 +1193,7 @@
                           "label": "If the document has reached its destination on time through service A, what is the probability that it will also reach its destination through service B? When you answer, first write down the conditional probability we are looking for, and then find it using the definition of conditional probability: P(B | A) = P(A and B) / P(A).",
                           "placement": {
                             "region": "document",
-                            "order": 47
+                            "order": 46
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1241,7 +1245,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96703-group-48",
+                      "id": "node-page-96703-group-47",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1252,7 +1256,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 48
+                        "order": 47
                       },
                       "children": [
                         {
@@ -1262,7 +1266,7 @@
                           "label": "If service A has failed to deliver the document on time, what is the probability that it has arrived on time using service B? (Again, as before, first write down the conditional probability that you are asked to find, and then apply the definition of conditional probability to find it.)",
                           "placement": {
                             "region": "document",
-                            "order": 49
+                            "order": 48
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1314,7 +1318,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96703-group-50",
+                      "id": "node-page-96703-group-49",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1325,7 +1329,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 50
+                        "order": 49
                       },
                       "children": [
                         {
@@ -1335,7 +1339,7 @@
                           "label": "If service A delivered the document on time, what is the probability that it was not delivered on time using service B?",
                           "placement": {
                             "region": "document",
-                            "order": 51
+                            "order": 50
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1393,7 +1397,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96703-group-52",
+                  "id": "node-page-96703-group-51",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -1404,41 +1408,41 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 52
+                    "order": 51
                   },
                   "children": [
                     {
-                      "id": "node-page-96703-h1-53",
+                      "id": "node-page-96703-h1-52",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Did I Get This?</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 52
+                      }
+                    },
+                    {
+                      "id": "node-page-96703-p-53",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall the smoke alarms example from the previous module. A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. Use this two-way table to answer the following:</p>",
                       "placement": {
                         "region": "document",
                         "order": 53
                       }
                     },
                     {
-                      "id": "node-page-96703-p-54",
+                      "id": "node-page-96703-image-54",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Recall the smoke alarms example from the previous module. A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. Use this two-way table to answer the following:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f6/f6bb346975fa2435956cc4a0fbb2c313/dig002.gif\" alt=\"A table, in which the column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot; and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:         D, B: .38;         D, not B: .57;         D, Total: .95;         not D, B: .02;         not D, not B: .03;         not D, Total: .05;         Total, B: .40;         Total, not B: .60;         Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 54
                       }
                     },
                     {
-                      "id": "node-page-96703-image-55",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f6/f6bb346975fa2435956cc4a0fbb2c313/dig002.gif\" alt=\"A table, in which the column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot; and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:         D, B: .38;         D, not B: .57;         D, Total: .95;         not D, B: .02;         not D, not B: .03;         not D, Total: .05;         Total, B: .40;         Total, not B: .60;         Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 55
-                      }
-                    },
-                    {
-                      "id": "node-page-96703-group-56",
+                      "id": "node-page-96703-group-55",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1449,7 +1453,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 56
+                        "order": 55
                       },
                       "children": [
                         {
@@ -1459,7 +1463,7 @@
                           "label": "The fraction 0.38/0.95 represents:",
                           "placement": {
                             "region": "document",
-                            "order": 57
+                            "order": 56
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1470,6 +1474,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95684-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>The fraction 0.38/0.95 represents:</p>"
+                            },
                             {
                               "id": "node-95684-answers",
                               "nodeType": "group",
@@ -1542,7 +1552,7 @@
                           "label": "The fraction 0.57/0.60 represents:",
                           "placement": {
                             "region": "document",
-                            "order": 58
+                            "order": 57
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1553,6 +1563,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95702-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>The fraction 0.57/0.60 represents:</p>"
+                            },
                             {
                               "id": "node-95702-answers",
                               "nodeType": "group",
@@ -1625,7 +1641,7 @@
                           "label": "The probability 0.57 represents:",
                           "placement": {
                             "region": "document",
-                            "order": 59
+                            "order": 58
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1636,6 +1652,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96272-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>The probability 0.57 represents:</p>"
+                            },
                             {
                               "id": "node-96272-answers",
                               "nodeType": "group",
@@ -3969,6 +3991,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.95717.short-answer-input",
+              "module": "conditional-probability",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95717:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.95717.short-answer-submit",
               "module": "conditional-probability",
               "salience": 30,
@@ -3989,8 +4046,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95717-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4047,8 +4125,43 @@
                   "nodeId": "node-95717-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95743.short-answer-input",
+              "module": "conditional-probability",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95743:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4073,8 +4186,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95743-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4131,8 +4265,43 @@
                   "nodeId": "node-95743-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95420.short-answer-input",
+              "module": "conditional-probability",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95420:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4157,8 +4326,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95420-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4215,7 +4405,7 @@
                   "nodeId": "node-95420-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

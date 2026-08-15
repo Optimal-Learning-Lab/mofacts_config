@@ -531,6 +531,21 @@ function richTextToPlainText(value: unknown): string {
   return parts.join('');
 }
 
+function inputReferenceIds(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.flatMap(inputReferenceIds);
+  }
+  if (!isRecord(value)) {
+    return [];
+  }
+  if (optionalText(value.type) === 'input_ref') {
+    return [nonBlank(value.input ?? value.id, 'input_ref input')];
+  }
+  return Object.values(value).flatMap((child) => (
+    child && typeof child === 'object' ? inputReferenceIds(child) : []
+  ));
+}
+
 function wrapInlineHtml(node: JsonRecord, content: string): string {
   let html = content;
   if (node.strong === true) {
@@ -735,6 +750,11 @@ function withoutLeadingTitleBlock(node: JsonRecord, title: string): JsonRecord {
   return node;
 }
 
+function isMeaninglessTitleParagraph(node: JsonRecord): boolean {
+  return optionalText(node.type) === 'p'
+    && richTextToPlainText(node).trim().toLowerCase() === 'title';
+}
+
 function literal(value: unknown): JsonRecord {
   return { type: 'literal', value };
 }
@@ -745,6 +765,10 @@ function variable(name: string): JsonRecord {
 
 function bind(variableName: string): JsonRecord {
   return { type: 'bind', variable: variableName };
+}
+
+function bound(variableName: string): JsonRecord {
+  return { type: 'bound', variable: variableName };
 }
 
 function ruleForExactResponse(params: {
@@ -857,6 +881,7 @@ function buildMultipleChoiceExercise(params: {
   const content = asRecord(activity.content, 'activity.content');
   const stemContent = asRecord(content.stem, 'activity.content.stem').content;
   const stem = richTextToPlainText(stemContent).trim();
+  const stemHtml = richTextToHtml(stemContent).trim();
   const choiceMap = buildChoiceMap(activity);
   const authoring = asRecord(content.authoring, 'activity.content.authoring');
   const part = asRecord(asArray(authoring.parts, 'activity.content.authoring.parts')[0], 'authoring.parts[0]');
@@ -924,6 +949,7 @@ function buildMultipleChoiceExercise(params: {
     placement: { region: 'document', order: params.index },
     layout: { visualPreset: 'practice-panel', glue: { mode: 'multiple-choice', answerPlacement: 'below-prompt', feedbackPlacement: 'below-answers' } },
     children: [
+      ...(stemHtml ? [{ id: `node-${activityId}-prompt`, nodeType: 'atomic', atomType: 'html-block', value: stemHtml }] : []),
       { id: `node-${activityId}-answers`, nodeType: 'group', groupType: 'answer-list', children: choices },
       { id: feedbackNodeId, nodeType: 'atomic', atomType: 'message-box', value: '' },
     ],
@@ -1130,9 +1156,26 @@ function buildDropdownExercise(params: {
   const choices = buildChoiceMap(activity);
   const parts = asArray(asRecord(content.authoring, 'activity.content.authoring').parts, 'authoring.parts').filter(isRecord);
   const partById = new Map(parts.map((part) => [nonBlank(part.id, 'part.id'), part]));
-  const feedbackNodeId = `node-${activityId}-feedback`;
   const children: JsonRecord[] = [];
+  const rowByInputId = new Map<string, JsonRecord>();
+  const feedbackByInputId = new Map<string, JsonRecord>();
   const firstLine = richTextToPlainText(stemContent[0]).trim();
+  const embeddedInputRefs = stemContent.flatMap(inputReferenceIds);
+  const usesEmbeddedInputRefs = optionalText(activity.subType) === 'oli_multi_input';
+  if (usesEmbeddedInputRefs) {
+    const inputIds = new Set(inputs.map((input) => nonBlank(input.id, 'input.id')));
+    for (const inputId of inputIds) {
+      const referenceCount = embeddedInputRefs.filter((candidate) => candidate === inputId).length;
+      if (referenceCount !== 1) {
+        throw new Error(`Activity ${activityId} input ${inputId} must have exactly one authored input_ref; found ${referenceCount}`);
+      }
+    }
+    for (const inputRef of embeddedInputRefs) {
+      if (!inputIds.has(inputRef)) {
+        throw new Error(`Activity ${activityId} stem references unknown input ${inputRef}`);
+      }
+    }
+  }
   for (let i = 0; i < inputs.length; i += 1) {
     const input = inputs[i];
     const inputId = nonBlank(input.id, 'input.id');
@@ -1158,8 +1201,12 @@ function buildDropdownExercise(params: {
       : `${partId}_${correctLegacyMatch}`;
     const options = ['', ...optionIds.map((choiceId) => nonBlank(choices.get(choiceId), `choice label ${choiceId}`))];
     const expected = nonBlank(choices.get(correctChoiceId), `expected label ${correctChoiceId}`);
-    const lineHtml = richTextToHtml(stemContent[i + 1]).trim();
+    const referencedStemBlock = usesEmbeddedInputRefs
+      ? stemContent.find((block) => inputReferenceIds(block).includes(inputId))
+      : stemContent[i + 1];
+    const lineHtml = richTextToHtml(referencedStemBlock).trim();
     const nodeId = `node-${activityId}-input-${inputId}`;
+    const feedbackNodeId = `node-${activityId}-feedback-${inputId}`;
     const selection = `${activityId}:${inputId}`;
     params.behaviorSteps.push({
       id: `behavior-${activityId}-${inputId}`,
@@ -1198,7 +1245,7 @@ function buildDropdownExercise(params: {
         clusterIndex: modelTarget.clusterIndex,
       }));
     }
-    children.push({
+    rowByInputId.set(inputId, {
       id: `node-${activityId}-row-${inputId}`,
       nodeType: 'group',
       groupType: 'dropdown-row',
@@ -1208,6 +1255,39 @@ function buildDropdownExercise(params: {
         { id: nodeId, nodeType: 'atomic', atomType: 'dropdown', clusterIndex: modelTarget.clusterIndex, selected: '', options, expected },
       ],
     });
+    feedbackByInputId.set(inputId, { id: feedbackNodeId, nodeType: 'atomic', atomType: 'message-box', value: '' });
+  }
+  if (usesEmbeddedInputRefs) {
+    for (const [blockIndex, stemBlock] of stemContent.entries()) {
+      const inputRefs = inputReferenceIds(stemBlock);
+      if (inputRefs.length === 0) {
+        const html = richTextToHtml(stemBlock).trim();
+        if (html) {
+          children.push({
+            id: `node-${activityId}-context-${blockIndex + 1}`,
+            nodeType: 'atomic',
+            atomType: 'html-block',
+            value: html,
+          });
+        }
+        continue;
+      }
+      for (const [refIndex, inputRef] of inputRefs.entries()) {
+        const row = asRecord(rowByInputId.get(inputRef), `dropdown row ${activityId}:${inputRef}`);
+        if (refIndex > 0) {
+          row.children = asArray(row.children, `dropdown row children ${activityId}:${inputRef}`)
+            .filter((child) => !isRecord(child) || optionalText(child.atomType) !== 'html-block');
+        }
+        children.push(row);
+        children.push(asRecord(feedbackByInputId.get(inputRef), `dropdown feedback ${activityId}:${inputRef}`));
+      }
+    }
+  } else {
+    for (const input of inputs) {
+      const inputId = nonBlank(input.id, 'input.id');
+      children.push(asRecord(rowByInputId.get(inputId), `dropdown row ${activityId}:${inputId}`));
+      children.push(asRecord(feedbackByInputId.get(inputId), `dropdown feedback ${activityId}:${inputId}`));
+    }
   }
   return {
     id: `node-${activityId}`,
@@ -1216,7 +1296,7 @@ function buildDropdownExercise(params: {
     label: firstLine || optionalText(activity.title),
     placement: { region: 'document', order: params.index },
     layout: { visualPreset: 'practice-panel', glue: { mode: 'dropdown-list', orientation: 'vertical', feedbackPlacement: 'below-answers' } },
-    children: [...children, { id: feedbackNodeId, nodeType: 'atomic', atomType: 'message-box', value: '' }],
+    children,
     source: { activityId, pageId: params.pageId, oliSubType: activity.subType ?? null },
   };
 }
@@ -1401,6 +1481,10 @@ function buildShortAnswerExercise(params: {
   if (!response) {
     throw new Error(`No authored response for short-answer activity ${activityId}`);
   }
+  const authoredRule = nonBlank(response.rule, `short-answer response rule ${activityId}`);
+  if (authoredRule !== 'input like {.*}') {
+    throw new Error(`Unsupported short-answer response rule for ${activityId}: ${authoredRule}`);
+  }
   const inputNodeId = `node-${activityId}-input`;
   const submitNodeId = `node-${activityId}-submit`;
   const feedbackNodeId = `node-${activityId}-feedback`;
@@ -1429,6 +1513,24 @@ function buildShortAnswerExercise(params: {
   });
   const outcome = responseScoreOutcome(response);
   params.productionRules.push({
+    id: `sparc-intro-stats.${activityId}.short-answer-input`,
+    module: params.moduleSlug,
+    salience: outcome === 'correct' ? 30 : 20,
+    when: [{
+      factType: 'interface-event',
+      slots: {
+        pageKey: bind('pageKey'),
+        selection: literal(`${activityId}:input`),
+        action: literal('UpdateTextField'),
+        input: bind('learnerInput'),
+      },
+    }],
+    tests: [],
+    then: [
+      { type: 'classify', outcome },
+    ],
+  });
+  params.productionRules.push({
     id: `sparc-intro-stats.${activityId}.short-answer-submit`,
     module: params.moduleSlug,
     salience: outcome === 'correct' ? 30 : 20,
@@ -1438,7 +1540,15 @@ function buildShortAnswerExercise(params: {
         pageKey: bind('pageKey'),
         selection: literal(submitSelection),
         action: literal('ButtonPressed'),
-        input: bind('input'),
+        input: literal('submit'),
+      },
+    }, {
+      factType: 'interface-state',
+      slots: {
+        pageKey: bound('pageKey'),
+        node: literal(inputNodeId),
+        key: literal('value'),
+        value: bind('learnerInput'),
       },
     }],
     tests: [],
@@ -1464,7 +1574,7 @@ function buildShortAnswerExercise(params: {
         outcome,
         clusterIndex: modelTarget.clusterIndex,
         nodeId: inputNodeId,
-        responseValue: variable('input'),
+        responseValue: variable('learnerInput'),
       },
     ],
   });
@@ -1567,6 +1677,9 @@ function convertSlateNode(params: {
     return [];
   }
   const type = optionalText(params.node.type);
+  if (isMeaninglessTitleParagraph(params.node)) {
+    return [];
+  }
   if (type === 'activity-reference') {
     const activityId = String(params.node.activity_id ?? '').trim();
     if (!activityId) {
@@ -1619,11 +1732,12 @@ function convertSlateNode(params: {
         source: { oliType: 'alternatives' },
       }];
     }
-    const convertedChildren = groupChildren.flatMap((child) => convertSlateNode({ ...params, node: child }));
+    const purpose = optionalText(params.node.purpose);
+    const convertedChildren = groupChildren
+      .flatMap((child) => convertSlateNode({ ...params, node: child }));
     if (convertedChildren.length === 0) {
       return [];
     }
-    const purpose = optionalText(params.node.purpose);
     return [{
       id: `${params.idPrefix}-group-${groupOrder}`,
       nodeType: 'group',

@@ -1389,6 +1389,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95654-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>The expected count of males not driving drunk is:</p>"
+                        },
+                        {
                           "id": "node-95654-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1483,6 +1489,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96115-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>The expected count of females not driving drunk is:</p>"
+                        },
                         {
                           "id": "node-96115-answers",
                           "nodeType": "group",
@@ -1654,6 +1666,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96233-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is the expected count of non-pierced females?</p>"
+                            },
+                            {
                               "id": "node-96233-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1757,6 +1775,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95793-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Complete this sentence:</p><p>&quot;The expected count that I found in question 1 is the number of non-pierced females that I would expect to see if:&quot;</p>"
+                            },
                             {
                               "id": "node-95793-answers",
                               "nodeType": "group",
@@ -2274,6 +2298,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96314-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is the contribution of the first cell (pierced females) to the chi-square test statistic?</p>"
+                            },
+                            {
                               "id": "node-96314-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -2377,6 +2407,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96262-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is the contribution of the fourth cell (no pierced males) to the chi-squared test statistic? </p>"
+                            },
                             {
                               "id": "node-96262-answers",
                               "nodeType": "group",
@@ -2490,6 +2526,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95949-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is the chi-square statistic in this case?</p>"
+                            },
                             {
                               "id": "node-95949-answers",
                               "nodeType": "group",
@@ -2657,6 +2699,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96300-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>We are now ready to carry out the significance test, which will assess the significance of the relationship between the risk of alcohol problems and participation in the 9/11 rescue. Which of the following are the appropriate hypotheses for the chi-square test for independence in this case?</p>"
+                            },
                             {
                               "id": "node-96300-answers",
                               "nodeType": "group",
@@ -3701,6 +3749,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96602-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>A chi-square test regarding the relationship between participation in the 9/11 rescue and risk of alcohol problems among New York firefighters and first responders produced the following results:</p><p>Based on the p-value results and a significance level of 0.05, which of the following is an appropriate conclusion?</p>"
+                        },
                         {
                           "id": "node-96602-answers",
                           "nodeType": "group",
@@ -4822,6 +4876,41 @@
           },
           "productionRules": [
             {
+              "id": "sparc-intro-stats.96062.short-answer-input",
+              "module": "case-c-c-chi-squared-test",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96062:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96062.short-answer-submit",
               "module": "case-c-c-chi-squared-test",
               "salience": 30,
@@ -4842,8 +4931,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96062-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4900,8 +5010,43 @@
                   "nodeId": "node-96062-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96211.short-answer-input",
+              "module": "case-c-c-chi-squared-test",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96211:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4926,8 +5071,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96211-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4984,7 +5150,7 @@
                   "nodeId": "node-96211-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]
@@ -8350,6 +8516,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96248.short-answer-input",
+              "module": "case-c-c-chi-squared-test",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96248:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96248.short-answer-submit",
               "module": "case-c-c-chi-squared-test",
               "salience": 30,
@@ -8370,8 +8571,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96248-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -8428,7 +8650,7 @@
                   "nodeId": "node-96248-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

@@ -1031,6 +1031,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-95637-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>In order to test the effectiveness of a new drug in reducing cholesterol level, a random sample of 45 patients who have a higher than normal cholesterol level was chosen. The cholesterol level of each of the patients was measured and recorded before and then after taking the new drug for a period of 6 weeks, and the differences (before − after) were calculated. The appropriate set of hypotheses, in this case, is:</p>"
+                            },
+                            {
                               "id": "node-95637-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1126,6 +1132,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96509-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A publishing company wanted to test whether typing speed differs when using word processor A or word processor B. The typing speeds (in words per minute) are recorded for a random sample of 25 typists using word processor A, and for another (different) random sample of 25 typists using word processor B. The appropriate set of hypotheses in this case is:</p>"
+                            },
+                            {
                               "id": "node-96509-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1220,6 +1232,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96000-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A publishing company wanted to test whether typing speed differs when using word processor A or word processor B. A random sample of 25 typists was selected and the typing speeds (in words per minute) were recorded for each typist when using word processor A and then when using word processor B. (Which word processor is used first is determined for each secretary by a coin flip).</p>"
+                            },
                             {
                               "id": "node-96000-answers",
                               "nodeType": "group",
@@ -1963,6 +1981,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95993-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>As we saw, the p-value of the test H<sub>0</sub>: μ<sub>d</sub> = 0 vs. H<sub>a</sub>: μ<sub>d</sub> ≠ 0 is 0.074. This means that if we had carried out the one-sided test H<sub>0</sub>: μ<sub>d</sub> = 0 vs. H<sub>a</sub>: μ<sub>d</sub> &lt; 0, the p-value would have been:</p>"
+                        },
                         {
                           "id": "node-95993-answers",
                           "nodeType": "group",
@@ -4637,6 +4661,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96673.short-answer-input",
+              "module": "t-tests-matched-pairs-two-dependent-samples",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96673:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96673.short-answer-submit",
               "module": "t-tests-matched-pairs-two-dependent-samples",
               "salience": 30,
@@ -4657,8 +4716,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96673-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4715,8 +4795,43 @@
                   "nodeId": "node-96673-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95834.short-answer-input",
+              "module": "t-tests-matched-pairs-two-dependent-samples",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95834:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4741,8 +4856,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95834-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4799,7 +4935,7 @@
                   "nodeId": "node-95834-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

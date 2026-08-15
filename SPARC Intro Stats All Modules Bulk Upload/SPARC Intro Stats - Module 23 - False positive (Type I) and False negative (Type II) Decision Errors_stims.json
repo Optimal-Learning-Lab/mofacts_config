@@ -492,6 +492,12 @@
                               ]
                             },
                             {
+                              "id": "node-95650-feedback-dropAreaA",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95650-row-dropAreaB",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -523,6 +529,12 @@
                                   "expected": "correctDecision1"
                                 }
                               ]
+                            },
+                            {
+                              "id": "node-95650-feedback-dropAreaB",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
                             },
                             {
                               "id": "node-95650-row-dropAreaC",
@@ -558,6 +570,12 @@
                               ]
                             },
                             {
+                              "id": "node-95650-feedback-dropAreaC",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95650-row-dropAreaD",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -591,7 +609,7 @@
                               ]
                             },
                             {
-                              "id": "node-95650-feedback",
+                              "id": "node-95650-feedback-dropAreaD",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -848,7 +866,7 @@
                                   "id": "node-95521-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": ""
+                                  "value": "<p>What type of error could the researchers have made? </p>"
                                 },
                                 {
                                   "id": "node-95521-input-A",
@@ -867,7 +885,7 @@
                               ]
                             },
                             {
-                              "id": "node-95521-feedback",
+                              "id": "node-95521-feedback-A",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -942,7 +960,7 @@
                                   "id": "node-95910-label-B",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": ""
+                                  "value": "<p>Given this conclusion, which type of error is a possibility? </p>"
                                 },
                                 {
                                   "id": "node-95910-input-B",
@@ -961,7 +979,7 @@
                               ]
                             },
                             {
-                              "id": "node-95910-feedback",
+                              "id": "node-95910-feedback-B",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1073,6 +1091,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95775-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What type of error is possible here?</p>"
+                            },
                             {
                               "id": "node-95775-answers",
                               "nodeType": "group",
@@ -1188,7 +1212,7 @@
                               "id": "node-96087-label-A",
                               "nodeType": "atomic",
                               "atomType": "html-block",
-                              "value": ""
+                              "value": "<p>A researcher looks at the mean salaries of male and female electricians and decides based on the evidence that there is no difference between the two groups. The researcher could have made a  in drawing this conclusion. </p>"
                             },
                             {
                               "id": "node-96087-input-A",
@@ -1206,7 +1230,7 @@
                           ]
                         },
                         {
-                          "id": "node-96087-feedback",
+                          "id": "node-96087-feedback-A",
                           "nodeType": "atomic",
                           "atomType": "message-box",
                           "value": ""
@@ -1630,6 +1654,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-95942-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Given the type of error made in this situation, what could researchers do to reduce the risk of this error?</p>"
+                            },
+                            {
                               "id": "node-95942-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1713,6 +1743,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-95641-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>A researcher looks at the mean salaries of male and female electricians and decides based on the evidence that there is no difference between the two groups. Given that there was a failure to reject the null hypothesis, it is possible that a type II error was made.</p><p>Given the type of error made in this situation, what could researchers do to reduce the risk of this error?</p>"
+                        },
+                        {
                           "id": "node-95641-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -1768,6 +1804,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95607-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Which of the following statements is true regarding reducing the likelihood of type I and type II errors?</p>"
+                        },
                         {
                           "id": "node-95607-answers",
                           "nodeType": "group",
@@ -2581,7 +2623,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaA"
                     }
                   }
                 },
@@ -2677,7 +2719,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaA"
                     }
                   }
                 },
@@ -2773,7 +2815,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaA"
                     }
                   }
                 },
@@ -2869,7 +2911,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaA"
                     }
                   }
                 },
@@ -2965,7 +3007,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaB"
                     }
                   }
                 },
@@ -3061,7 +3103,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaB"
                     }
                   }
                 },
@@ -3157,7 +3199,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaB"
                     }
                   }
                 },
@@ -3253,7 +3295,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaB"
                     }
                   }
                 },
@@ -3349,7 +3391,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaC"
                     }
                   }
                 },
@@ -3445,7 +3487,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaC"
                     }
                   }
                 },
@@ -3541,7 +3583,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaC"
                     }
                   }
                 },
@@ -3637,7 +3679,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaC"
                     }
                   }
                 },
@@ -3733,7 +3775,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaD"
                     }
                   }
                 },
@@ -3829,7 +3871,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaD"
                     }
                   }
                 },
@@ -3925,7 +3967,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaD"
                     }
                   }
                 },
@@ -4021,7 +4063,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95650-feedback"
+                      "value": "node-95650-feedback-dropAreaD"
                     }
                   }
                 },
@@ -4117,7 +4159,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95521-feedback"
+                      "value": "node-95521-feedback-A"
                     }
                   }
                 },
@@ -4213,7 +4255,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95521-feedback"
+                      "value": "node-95521-feedback-A"
                     }
                   }
                 },
@@ -4309,7 +4351,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95521-feedback"
+                      "value": "node-95521-feedback-A"
                     }
                   }
                 },
@@ -4405,7 +4447,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95910-feedback"
+                      "value": "node-95910-feedback-B"
                     }
                   }
                 },
@@ -4501,7 +4543,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95910-feedback"
+                      "value": "node-95910-feedback-B"
                     }
                   }
                 },
@@ -4597,7 +4639,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95910-feedback"
+                      "value": "node-95910-feedback-B"
                     }
                   }
                 },
@@ -5077,7 +5119,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96087-feedback"
+                      "value": "node-96087-feedback-A"
                     }
                   }
                 },
@@ -5173,7 +5215,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96087-feedback"
+                      "value": "node-96087-feedback-A"
                     }
                   }
                 },
@@ -5190,6 +5232,41 @@
                     "type": "variable",
                     "name": "input"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96455.short-answer-input",
+              "module": "false-positive-type-i-and-false-negative-type-ii-decision-errors",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96455:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -5214,8 +5291,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96455-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -5272,8 +5370,43 @@
                   "nodeId": "node-96455-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96563.short-answer-input",
+              "module": "false-positive-type-i-and-false-negative-type-ii-decision-errors",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96563:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -5298,8 +5431,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96563-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -5356,7 +5510,7 @@
                   "nodeId": "node-96563-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

@@ -291,27 +291,27 @@
                       "id": "node-page-97056-p-3",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Consider again the two-way table for all 500 students in a particular high school, classified according to gender and whether or not they have one or both ears pierced.</p>",
                       "placement": {
                         "region": "document",
                         "order": 3
                       }
                     },
                     {
-                      "id": "node-page-97056-p-4",
+                      "id": "node-page-97056-image-4",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Consider again the two-way table for all 500 students in a particular high school, classified according to gender and whether or not they have one or both ears pierced.</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0dca28191076883769239972b556c7c7/image001.gif\" alt=\"The same table of the data for piercings. The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is given in &quot;Row, Column:         Value&quot; format:         Male, Pierced: 36;         Male, Not Pierced: 144;         Male, Total: 180;         Female, Pierced: 288;         Female, Not Pierced: 32;         Female, Total: 320;         Total, Pierced: 324;         Total, Not Pierced: 176;         Total, Total: 500;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 4
                       }
                     },
                     {
-                      "id": "node-page-97056-image-5",
+                      "id": "node-page-97056-p-5",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0dca28191076883769239972b556c7c7/image001.gif\" alt=\"The same table of the data for piercings. The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is given in &quot;Row, Column:         Value&quot; format:         Male, Pierced: 36;         Male, Not Pierced: 144;         Male, Total: 180;         Female, Pierced: 288;         Female, Not Pierced: 32;         Female, Total: 320;         Total, Pierced: 324;         Total, Not Pierced: 176;         Total, Total: 500;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>Would you expect those two variables to be related? That is, would you expect having pierced ears to depend on whether the student is male or female? Or, to put it yet another way, would knowing a student&#39;s gender affect the probability that the student&#39;s ears are pierced? To answer this, we may compare the overall probability of having pierced ears to the conditional probability of having pierced ears, given that a student is male. Our intuition would tell us that the latter should be lower: male students tend not to have their ears pierced, whereas female students do. Indeed, for students in general, the probability of having pierced ears (event E) is P(E) = 324/500 = .648. But the probability of having pierced ears given that a student is male is only P(E | M) = 36/180 = .20.</p>",
                       "placement": {
                         "region": "document",
                         "order": 5
@@ -321,7 +321,7 @@
                       "id": "node-page-97056-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Would you expect those two variables to be related? That is, would you expect having pierced ears to depend on whether the student is male or female? Or, to put it yet another way, would knowing a student&#39;s gender affect the probability that the student&#39;s ears are pierced? To answer this, we may compare the overall probability of having pierced ears to the conditional probability of having pierced ears, given that a student is male. Our intuition would tell us that the latter should be lower: male students tend not to have their ears pierced, whereas female students do. Indeed, for students in general, the probability of having pierced ears (event E) is P(E) = 324/500 = .648. But the probability of having pierced ears given that a student is male is only P(E | M) = 36/180 = .20.</p>",
+                      "value": "<p>As we anticipated, P(E | M) is lower than P(E). The probability of a student having pierced ears changes (in this case, gets lower) when we know that the student is male, and therefore the events E and M are dependent. (If E and M were independent, knowing or not knowing that the student is male would not have made a difference ... but it did.)</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
@@ -331,7 +331,7 @@
                       "id": "node-page-97056-p-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>As we anticipated, P(E | M) is lower than P(E). The probability of a student having pierced ears changes (in this case, gets lower) when we know that the student is male, and therefore the events E and M are dependent. (If E and M were independent, knowing or not knowing that the student is male would not have made a difference ... but it did.)</p>",
+                      "value": "<p>This example illustrates that one method for determining whether two events are independent is to compare <strong>P(B | A)</strong> and <strong>P(B)</strong>.</p>",
                       "placement": {
                         "region": "document",
                         "order": 7
@@ -341,20 +341,10 @@
                       "id": "node-page-97056-p-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>This example illustrates that one method for determining whether two events are independent is to compare <strong>P(B | A)</strong> and <strong>P(B)</strong>.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 8
-                      }
-                    },
-                    {
-                      "id": "node-page-97056-p-9",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>If the two are <strong>equal</strong> (i.e., knowing or not knowing whether A has occurred has no effect on the probability of B occurring) then the two events are <strong>independent</strong>. Otherwise, if the <strong>probability changes</strong> depending on whether we know that A has occurred or not, then the two events are <strong>not independent</strong>. Similarly, using the same reasoning, we can compare <strong>P(A | B)</strong> and <strong>P(A)</strong>.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 9
+                        "order": 8
                       }
                     }
                   ],
@@ -364,7 +354,7 @@
                   }
                 },
                 {
-                  "id": "node-page-97056-group-10",
+                  "id": "node-page-97056-group-9",
                   "nodeType": "group",
                   "groupType": "oli-example",
                   "layout": {
@@ -375,14 +365,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 10
+                    "order": 9
                   },
                   "children": [
+                    {
+                      "id": "node-page-97056-p-10",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall the side effects example. On the &quot;Information for the Patient&quot; label of a certain antidepressant it is claimed that based on some clinical trials, there is a 14% chance of experiencing sleeping problems known as insomnia (denote this event by <strong>I</strong>), there is a 26% chance of experiencing headache (denote this event by <strong>H</strong>), and there is a 5% chance of experiencing both side effects (<strong>I and H</strong>).</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 10
+                      }
+                    },
                     {
                       "id": "node-page-97056-p-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Are the two side effects independent of each other? </p>",
                       "placement": {
                         "region": "document",
                         "order": 11
@@ -392,7 +392,7 @@
                       "id": "node-page-97056-p-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Recall the side effects example. On the &quot;Information for the Patient&quot; label of a certain antidepressant it is claimed that based on some clinical trials, there is a 14% chance of experiencing sleeping problems known as insomnia (denote this event by <strong>I</strong>), there is a 26% chance of experiencing headache (denote this event by <strong>H</strong>), and there is a 5% chance of experiencing both side effects (<strong>I and H</strong>).</p>",
+                      "value": "<p>To check whether the two side effects are independent, let&#39;s compare P(H | I) and P(H).</p>",
                       "placement": {
                         "region": "document",
                         "order": 12
@@ -402,7 +402,7 @@
                       "id": "node-page-97056-p-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Are the two side effects independent of each other? </p>",
+                      "value": "<p>In the previous part of this module, we found that <strong>P(H | I)</strong> = P(H and I) / P(I) = .05/.14 = <strong>.357</strong>, while <strong>P(H) = .26. </strong>Knowing that a patient experienced insomnia increases the likelihood that he/she will also experience headache from .26 to .357. The conclusion, therefore is that the two side effects are not independent, they are dependent.</p>",
                       "placement": {
                         "region": "document",
                         "order": 13
@@ -412,30 +412,10 @@
                       "id": "node-page-97056-p-14",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>To check whether the two side effects are independent, let&#39;s compare P(H | I) and P(H).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-97056-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In the previous part of this module, we found that <strong>P(H | I)</strong> = P(H and I) / P(I) = .05/.14 = <strong>.357</strong>, while <strong>P(H) = .26. </strong>Knowing that a patient experienced insomnia increases the likelihood that he/she will also experience headache from .26 to .357. The conclusion, therefore is that the two side effects are not independent, they are dependent.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-97056-p-16",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>Alternatively, we could have compared P(I | H) to P(I). <strong>P(I) = .14</strong>, and previously we found that <strong>P(I | H)</strong> = P(I and H) / P(H) = .05/.26 = <strong>.1923</strong>, and again, since the two are not equal, we can conclude that the two side effects I and H are dependent.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 16
+                        "order": 14
                       }
                     }
                   ],
@@ -445,7 +425,7 @@
                   }
                 },
                 {
-                  "id": "node-page-97056-group-17",
+                  "id": "node-page-97056-group-15",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -456,51 +436,51 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 17
+                    "order": 15
                   },
                   "children": [
                     {
-                      "id": "node-page-97056-h1-18",
+                      "id": "node-page-97056-h1-16",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Did I Get This?</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-97056-p-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Recall again the smoke alarms example.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-97056-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. </p>",
                       "placement": {
                         "region": "document",
                         "order": 18
                       }
                     },
                     {
-                      "id": "node-page-97056-p-19",
+                      "id": "node-page-97056-image-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Recall again the smoke alarms example.</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f6/f6bb346975fa2435956cc4a0fbb2c313/dig002.gif\" alt=\"A table, in which the column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot; and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:             D, B: .38;             D, not B: .57;             D, Total: .95;             not D, B: .02;             not D, not B: .03;             not D, Total: .05;             Total, B: .40;             Total, not B: .60;             Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 19
                       }
                     },
                     {
-                      "id": "node-page-97056-p-20",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. </p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 20
-                      }
-                    },
-                    {
-                      "id": "node-page-97056-image-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f6/f6bb346975fa2435956cc4a0fbb2c313/dig002.gif\" alt=\"A table, in which the column headings are &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot; and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:             D, B: .38;             D, not B: .57;             D, Total: .95;             not D, B: .02;             not D, not B: .03;             not D, Total: .05;             Total, B: .40;             Total, not B: .60;             Total, Total: 1.00;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-97056-group-22",
+                      "id": "node-page-97056-group-20",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -511,7 +491,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 22
+                        "order": 20
                       },
                       "children": [
                         {
@@ -521,7 +501,7 @@
                           "label": "In order to check whether the events B and D are independent or not, (i.e., check whether the two smoke alarms detect smoke independently of each other) we need to compare:",
                           "placement": {
                             "region": "document",
-                            "order": 23
+                            "order": 21
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -532,6 +512,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95651-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>In order to check whether the events B and D are independent or not, (i.e., check whether the two smoke alarms detect smoke independently of each other) we need to compare: </p>"
+                            },
                             {
                               "id": "node-95651-answers",
                               "nodeType": "group",
@@ -595,7 +581,7 @@
                           "label": "Using the table, we find that P(D | B) is equal to:",
                           "placement": {
                             "region": "document",
-                            "order": 24
+                            "order": 22
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -606,6 +592,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95537-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Using the table, we find that P(D | B) is equal to: </p>"
+                            },
                             {
                               "id": "node-95537-answers",
                               "nodeType": "group",
@@ -660,7 +652,7 @@
                           "label": "From the table, we also see that P(D) is equal to:",
                           "placement": {
                             "region": "document",
-                            "order": 25
+                            "order": 23
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -671,6 +663,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96047-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>From the table, we also see that P(D) is equal to:</p>"
+                            },
                             {
                               "id": "node-96047-answers",
                               "nodeType": "group",
@@ -734,7 +732,7 @@
                           "label": "From our answers to questions 1, 2 and 3, we can conclude that the events B and D are:",
                           "placement": {
                             "region": "document",
-                            "order": 26
+                            "order": 24
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -745,6 +743,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95403-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>From our answers to questions 1, 2 and 3, we can conclude that the events B and D are: </p>"
+                            },
                             {
                               "id": "node-95403-answers",
                               "nodeType": "group",
@@ -944,6 +948,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96339-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>In order to check whether the events B and D are independent or not, (i.e., check whether the two smoke alarms detect smoke independently of each other) we need to compare: </p>"
+                            },
+                            {
                               "id": "node-96339-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1018,6 +1028,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-95485-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Using the table we find that P(D | B) is equal to: </p>"
+                            },
+                            {
                               "id": "node-95485-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1083,6 +1099,12 @@
                           },
                           "children": [
                             {
+                              "id": "node-96225-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Using the table, we also find that P(D | not B) is equal to: </p>"
+                            },
+                            {
                               "id": "node-96225-answers",
                               "nodeType": "group",
                               "groupType": "answer-list",
@@ -1147,6 +1169,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95797-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>From the answers to the previous questions, you can conclude that the events B and D are: </p>"
+                            },
                             {
                               "id": "node-95797-answers",
                               "nodeType": "group",
@@ -1226,27 +1254,27 @@
                       "id": "node-page-96726-p-17",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>A group of 100 college students were surveyed about their gender and whether they had decided on a major. </p>",
                       "placement": {
                         "region": "document",
                         "order": 17
                       }
                     },
                     {
-                      "id": "node-page-96726-p-18",
+                      "id": "node-page-96726-image-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A group of 100 college students were surveyed about their gender and whether they had decided on a major. </p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/71/718132a559e474ed6041b91e3b161405/image004.gif\" alt=\"A table. The column headings are &quot;Decided,&quot; &quot;Undecided,&quot; and &quot;Total.&quot; The rows are &quot;Female,&quot; &quot;Male,&quot; and &quot;Total.&quot; Here is the data in the table in &quot;Row, Column: Value&quot; format.     Female, Decided: 27;     Female, Undecided: 33;     Female, Total: 60;     Male, Decided: 18;     Male, Undecided: 22;     Male, Total: 40;     Total, Decided: 45;     Total, Undecided: 55;     Total, Total: 100;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 18
                       }
                     },
                     {
-                      "id": "node-page-96726-image-19",
+                      "id": "node-page-96726-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/71/718132a559e474ed6041b91e3b161405/image004.gif\" alt=\"A table. The column headings are &quot;Decided,&quot; &quot;Undecided,&quot; and &quot;Total.&quot; The rows are &quot;Female,&quot; &quot;Male,&quot; and &quot;Total.&quot; Here is the data in the table in &quot;Row, Column: Value&quot; format.     Female, Decided: 27;     Female, Undecided: 33;     Female, Total: 60;     Male, Decided: 18;     Male, Undecided: 22;     Male, Total: 40;     Total, Decided: 45;     Total, Undecided: 55;     Total, Total: 100;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>Offhand, we wouldn&#39;t necessarily have any compelling reason to expect that deciding on a major would depend on a student&#39;s gender. We can check for independence by comparing the overall probability of being decided to the probability of being decided given that a student is female:</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -1256,7 +1284,7 @@
                       "id": "node-page-96726-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Offhand, we wouldn&#39;t necessarily have any compelling reason to expect that deciding on a major would depend on a student&#39;s gender. We can check for independence by comparing the overall probability of being decided to the probability of being decided given that a student is female:</p>",
+                      "value": "<p>P(D) = 45/100 = .45 and P(D | F) = 27/60 = .45. </p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -1266,7 +1294,7 @@
                       "id": "node-page-96726-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(D) = 45/100 = .45 and P(D | F) = 27/60 = .45. </p>",
+                      "value": "<p>The fact that the two are equal tells us that, as we might expect, deciding on a major is independent of gender. Note from the comment that these must also equal P(D | M), which is 18/40 = .45.</p>",
                       "placement": {
                         "region": "document",
                         "order": 21
@@ -1276,47 +1304,47 @@
                       "id": "node-page-96726-p-22",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>The fact that the two are equal tells us that, as we might expect, deciding on a major is independent of gender. Note from the comment that these must also equal P(D | M), which is 18/40 = .45.</p>",
+                      "value": "<p>Now let&#39;s approach the issue of independence in a different way: first, we may note that the overall probability of being decided is 45/100 = .45. </p>",
                       "placement": {
                         "region": "document",
                         "order": 22
                       }
                     },
                     {
-                      "id": "node-page-96726-p-23",
+                      "id": "node-page-96726-image-23",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Now let&#39;s approach the issue of independence in a different way: first, we may note that the overall probability of being decided is 45/100 = .45. </p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/c9/c98e8451b7277e8c414a404af29cbaf1/image005.gif\" alt=\"The same table as the previous. Cells will  be named in &quot;{Row, Column: Value}&quot; format.             The {Total, Decided: 45} and {Total, Total: 100} cells have been highlighted because they are the cells used to derive the overall probability of being decided.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 23
                       }
                     },
                     {
-                      "id": "node-page-96726-image-24",
+                      "id": "node-page-96726-p-24",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/c9/c98e8451b7277e8c414a404af29cbaf1/image005.gif\" alt=\"The same table as the previous. Cells will  be named in &quot;{Row, Column: Value}&quot; format.             The {Total, Decided: 45} and {Total, Total: 100} cells have been highlighted because they are the cells used to derive the overall probability of being decided.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>And the overall probability of being female is 60/100 = .60. </p>",
                       "placement": {
                         "region": "document",
                         "order": 24
                       }
                     },
                     {
-                      "id": "node-page-96726-p-25",
+                      "id": "node-page-96726-image-25",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>And the overall probability of being female is 60/100 = .60. </p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/2a/2a687a7004256c339cdb1662533b47c5/image006.gif\" alt=\"The same table again except cells {Female, Total: 60} and {Total, Total: 100} have been highlighted because those cells are used to calculate the probability of being female.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 25
                       }
                     },
                     {
-                      "id": "node-page-96726-image-26",
+                      "id": "node-page-96726-p-26",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/2a/2a687a7004256c339cdb1662533b47c5/image006.gif\" alt=\"The same table again except cells {Female, Total: 60} and {Total, Total: 100} have been highlighted because those cells are used to calculate the probability of being female.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>If being decided is independent of gender, then 45% of the 60% of the class who are female should have a decided major; in other words, the probability of being female and decided should equal the probability of being female multiplied by the probability of being decided. If the events F and D are independent, we should have P(F and D) = P(F) * P(D).</p>",
                       "placement": {
                         "region": "document",
                         "order": 26
@@ -1326,20 +1354,10 @@
                       "id": "node-page-96726-p-27",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>If being decided is independent of gender, then 45% of the 60% of the class who are female should have a decided major; in other words, the probability of being female and decided should equal the probability of being female multiplied by the probability of being decided. If the events F and D are independent, we should have P(F and D) = P(F) * P(D).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 27
-                      }
-                    },
-                    {
-                      "id": "node-page-96726-p-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>In fact, P(F and D) = 27/100 = .27 = P(F) * P(D) = .45 * .60. This confirms our alternate verification of independence.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 28
+                        "order": 27
                       }
                     }
                   ],
@@ -1349,10 +1367,20 @@
                   }
                 },
                 {
-                  "id": "node-page-96726-p-29",
+                  "id": "node-page-96726-p-28",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>In general, another method for checking the independence of events A and B is to compare P(A and B) to P(A) * P(B). If the two are equal, then A and B are independent, otherwise the two are not independent.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 28
+                  }
+                },
+                {
+                  "id": "node-page-96726-p-29",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Let&#39;s summarize all the possible methods we&#39;ve seen for checking the independence of events in one rule:</p>",
                   "placement": {
                     "region": "document",
                     "order": 29
@@ -1362,7 +1390,7 @@
                   "id": "node-page-96726-p-30",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>Let&#39;s summarize all the possible methods we&#39;ve seen for checking the independence of events in one rule:</p>",
+                  "value": "<p>Two events A and B are independent if any one of the following hold:</p>",
                   "placement": {
                     "region": "document",
                     "order": 30
@@ -1372,7 +1400,7 @@
                   "id": "node-page-96726-p-31",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>Two events A and B are independent if any one of the following hold:</p>",
+                  "value": "<p>P(B | A) = P(B)</p>",
                   "placement": {
                     "region": "document",
                     "order": 31
@@ -1382,7 +1410,7 @@
                   "id": "node-page-96726-p-32",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>P(B | A) = P(B)</p>",
+                  "value": "<p>P(A | B) = P(A)</p>",
                   "placement": {
                     "region": "document",
                     "order": 32
@@ -1392,7 +1420,7 @@
                   "id": "node-page-96726-p-33",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>P(A | B) = P(A)</p>",
+                  "value": "<p>P(B | A) = P(B | not A)</p>",
                   "placement": {
                     "region": "document",
                     "order": 33
@@ -1402,27 +1430,27 @@
                   "id": "node-page-96726-p-34",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>P(B | A) = P(B | not A)</p>",
+                  "value": "<p>P(A and B) = P(A) * P(B)</p>",
                   "placement": {
                     "region": "document",
                     "order": 34
                   }
                 },
                 {
-                  "id": "node-page-96726-p-35",
+                  "id": "node-page-96726-h1-35",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>P(A and B) = P(A) * P(B)</p>",
+                  "value": "<h1>Comment</h1>",
                   "placement": {
                     "region": "document",
                     "order": 35
                   }
                 },
                 {
-                  "id": "node-page-96726-h1-36",
+                  "id": "node-page-96726-p-36",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<h1>Comment</h1>",
+                  "value": "<p>These various equalities turn out to be equivalent, so that if one equality holds, all are equal, and if one equality does not hold, all are not equal. (This is the case for the same reason that knowing one of the values P(A and B), P(A and not B), P(not A and B), or P(not A and not B), along with P(A) and P(B), allows you to determine the remaining cells of a two-way probability table.)</p>",
                   "placement": {
                     "region": "document",
                     "order": 36
@@ -1432,7 +1460,7 @@
                   "id": "node-page-96726-p-37",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>These various equalities turn out to be equivalent, so that if one equality holds, all are equal, and if one equality does not hold, all are not equal. (This is the case for the same reason that knowing one of the values P(A and B), P(A and not B), P(not A and B), or P(not A and not B), along with P(A) and P(B), allows you to determine the remaining cells of a two-way probability table.)</p>",
+                  "value": "<p>Therefore, in order to check whether events A and B are independent or not, it is sufficient to check only whether one of the four equalities holds—whichever is easiest for you.</p>",
                   "placement": {
                     "region": "document",
                     "order": 37
@@ -1442,24 +1470,14 @@
                   "id": "node-page-96726-p-38",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>Therefore, in order to check whether events A and B are independent or not, it is sufficient to check only whether one of the four equalities holds—whichever is easiest for you.</p>",
+                  "value": "<p>The purpose of the next activity is to practice checking the independence of two events using the four different possible methods that we&#39;ve provided, and see that all of them will lead us to the same conclusion, regardless of which of the four methods we use.</p>",
                   "placement": {
                     "region": "document",
                     "order": 38
                   }
                 },
                 {
-                  "id": "node-page-96726-p-39",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The purpose of the next activity is to practice checking the independence of two events using the four different possible methods that we&#39;ve provided, and see that all of them will lead us to the same conclusion, regardless of which of the four methods we use.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 39
-                  }
-                },
-                {
-                  "id": "node-page-96726-group-40",
+                  "id": "node-page-96726-group-39",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -1470,7 +1488,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 40
+                    "order": 39
                   },
                   "children": [
                     {
@@ -1480,7 +1498,7 @@
                       "label": "Recall the delivery services example:It is vital that a certain document reach its destination within one day. To maximize the chances of on-time delivery, two copies of the document are sent using two services, service A and service B, and the following probability table summarizes the chances of on-time delivery: Are the delivery times of the two services independent? In other words, are the events A and B independent? Common sense would say that there will be some degree of dependence between A and B, since the reasons that would cause one service to be delayed (like bad weather, airport delays, etc), would most likely also affect the other service, and cause it to be delayed too. Let's review the four possible methods that we can use to check whether events A and B are independent:Two events A and B are independent if any one of the following hold:P(B | A) = P(B)P(A | B) = P(A)P(B | A) = P(B | not A) P(A and B) = P(A) * P(B)Use the four different methods to check whether events A and B are independent, and see that indeed all four are leading you to the same conclusion.",
                       "placement": {
                         "region": "document",
-                        "order": 41
+                        "order": 40
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -1526,43 +1544,43 @@
                       }
                     },
                     {
-                      "id": "node-page-96726-h3-42",
+                      "id": "node-page-96726-h3-41",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h3>Continuous Example: Height and Grades</h3>",
+                      "placement": {
+                        "region": "document",
+                        "order": 41
+                      }
+                    },
+                    {
+                      "id": "node-page-96726-p-42",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Now, let&#39;s consider height (how tall you are) and grades (your score in a test, say out of 100). Both of these are not just categories like &quot;sunny&quot; or &quot;A&quot;; they can be any number within a range.</p>",
                       "placement": {
                         "region": "document",
                         "order": 42
                       }
                     },
                     {
-                      "id": "node-page-96726-p-43",
+                      "id": "node-page-96726-ol-43",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Now, let&#39;s consider height (how tall you are) and grades (your score in a test, say out of 100). Both of these are not just categories like &quot;sunny&quot; or &quot;A&quot;; they can be any number within a range.</p>",
+                      "value": "<ol><li><p><strong>Independence</strong>: If your height and your test scores are independent, it means that knowing how tall someone is won&#39;t help us guess their test score. No matter how tall or short you are, it doesn&#39;t affect your chances of scoring high or low on a test.</p></li><li><p><strong>Dependence</strong>: On the other hand, if they are dependent, knowing your height might give us some clue about your test score. For example, if taller people always got better grades (this is just a hypothetical example!), then height and test scores would be dependent.</p></li><li><p><strong>Conditional Independence</strong>: This one is a bit trickier. Let&#39;s say your height and your test scores don&#39;t have anything to do with each other if we only look at people of the same age. So, among all 9th graders, being tall doesn&#39;t make you more or less likely to get a good grade. But if we look at people of all ages, maybe there&#39;s a connection. In this case, we would say that height and test scores are &quot;conditionally independent&quot; based on age.</p></li></ol>",
                       "placement": {
                         "region": "document",
                         "order": 43
                       }
                     },
                     {
-                      "id": "node-page-96726-ol-44",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<ol><li><p><strong>Independence</strong>: If your height and your test scores are independent, it means that knowing how tall someone is won&#39;t help us guess their test score. No matter how tall or short you are, it doesn&#39;t affect your chances of scoring high or low on a test.</p></li><li><p><strong>Dependence</strong>: On the other hand, if they are dependent, knowing your height might give us some clue about your test score. For example, if taller people always got better grades (this is just a hypothetical example!), then height and test scores would be dependent.</p></li><li><p><strong>Conditional Independence</strong>: This one is a bit trickier. Let&#39;s say your height and your test scores don&#39;t have anything to do with each other if we only look at people of the same age. So, among all 9th graders, being tall doesn&#39;t make you more or less likely to get a good grade. But if we look at people of all ages, maybe there&#39;s a connection. In this case, we would say that height and test scores are &quot;conditionally independent&quot; based on age.</p></li></ol>",
-                      "placement": {
-                        "region": "document",
-                        "order": 44
-                      }
-                    },
-                    {
-                      "id": "node-page-96726-p-45",
+                      "id": "node-page-96726-p-44",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>So, even when we&#39;re talking about things that aren&#39;t just categories—like height and test scores—the idea of &quot;independence&quot; still means the same thing: knowing about one doesn&#39;t help us guess about the other.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 45
+                        "order": 44
                       }
                     }
                   ],
@@ -1572,33 +1590,33 @@
                   }
                 },
                 {
-                  "id": "node-page-96726-h1-46",
+                  "id": "node-page-96726-h1-45",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h1>Checkpoint</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 45
+                  }
+                },
+                {
+                  "id": "node-page-96726-p-46",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>",
                   "placement": {
                     "region": "document",
                     "order": 46
                   }
                 },
                 {
-                  "id": "node-page-96726-p-47",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 47
-                  }
-                },
-                {
-                  "id": "node-page-96726-page-link-48",
+                  "id": "node-page-96726-page-link-47",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<a data-oli-page-link=\"96865\" href=\"#96865\"> </a>",
                   "placement": {
                     "region": "document",
-                    "order": 48
+                    "order": 47
                   }
                 }
               ],
@@ -4441,6 +4459,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96223.short-answer-input",
+              "module": "independence",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96223:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96223.short-answer-submit",
               "module": "independence",
               "salience": 30,
@@ -4461,8 +4514,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96223-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4519,7 +4593,7 @@
                   "nodeId": "node-96223-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

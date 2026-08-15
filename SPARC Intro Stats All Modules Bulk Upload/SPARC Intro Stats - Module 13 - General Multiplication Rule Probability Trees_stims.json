@@ -315,7 +315,7 @@
                       "id": "node-page-97081-p-4",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club, diamond, heart, and spade, where the first card is replaced before the second card is picked. What is the probability of picking a club and then a diamond? Because the sampling is done with replacement, whether or not a diamond is picked on the second selection is independent of whether or not a club has been picked on the first selection. Rule 5, the multiplication rule for independent events, tells us that: </p>",
                       "placement": {
                         "region": "document",
                         "order": 4
@@ -325,7 +325,7 @@
                       "id": "node-page-97081-p-5",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club, diamond, heart, and spade, where the first card is replaced before the second card is picked. What is the probability of picking a club and then a diamond? Because the sampling is done with replacement, whether or not a diamond is picked on the second selection is independent of whether or not a club has been picked on the first selection. Rule 5, the multiplication rule for independent events, tells us that: </p>",
+                      "value": "<p>P(C1 and D2) = P(C1) * P(D2) = 1/4 * 1/4 = 1/16. </p>",
                       "placement": {
                         "region": "document",
                         "order": 5
@@ -335,30 +335,20 @@
                       "id": "node-page-97081-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(C1 and D2) = P(C1) * P(D2) = 1/4 * 1/4 = 1/16. </p>",
+                      "value": "<p>[Here we denote the event &quot;club picked on first selection&quot; as C1 and the event &quot;diamond picked on second selection&quot; as D2.] The display below shows that 1/4 of the time we&#39;ll pick a club first, and of these times, 1/4 will result in a diamond on the second pick: 1/4 * 1/4 = 1/16 of the selections will have a club first and then a diamond.</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
                       }
                     },
                     {
-                      "id": "node-page-97081-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>[Here we denote the event &quot;club picked on first selection&quot; as C1 and the event &quot;diamond picked on second selection&quot; as D2.] The display below shows that 1/4 of the time we&#39;ll pick a club first, and of these times, 1/4 will result in a diamond on the second pick: 1/4 * 1/4 = 1/16 of the selections will have a club first and then a diamond.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-97081-image-8",
+                      "id": "node-page-97081-image-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/de/def9882c92f507330ceba8e803a0a45a/image007.gif\" alt=\"All of the suit possibilities of picking one card, then replacing it and picking a second card. These possibilities are:     SC, SD, SH, SS,     HC, HD, HH, HS,     DC, DD, DH, DS,     CC, CD, CH, CS. Note that 1/4 of these have C picked first (the last 4, out of 16 total). Out of these, only one is CD, which is 1/4 of all of the possibilities with C picked first.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
-                        "order": 8
+                        "order": 7
                       }
                     }
                   ],
@@ -368,7 +358,7 @@
                   }
                 },
                 {
-                  "id": "node-page-97081-group-9",
+                  "id": "node-page-97081-group-8",
                   "nodeType": "group",
                   "groupType": "oli-example",
                   "layout": {
@@ -379,47 +369,37 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 9
+                    "order": 8
                   },
                   "children": [
+                    {
+                      "id": "node-page-97081-p-9",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club, diamond, heart, and spade, without replacing the first card before the second card is picked. What is the probability of picking a club and then a diamond? The probability in this case is not 1/4 * 1/4 = 1/16; because the sampling is done without replacement, so whether or not a diamond is picked on the second selection <strong>does</strong> depend on what was picked on the first selection. (For instance, if a diamond was picked on the first selection, the probability of another diamond is zero!) As in the example above, 1/4 of the time we&#39;ll pick a club first. But since the club has been removed, 1/3 of these selections with a club first will have a diamond second. The probability of a club and then a diamond is 1/4*1/3=1/12; this is the probability of getting a club first, multiplied by the probability of getting a diamond second, given that a club was picked first. Using the notation of conditional probabilities, we can write</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 9
+                      }
+                    },
                     {
                       "id": "node-page-97081-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>P(C1 and D2) = P(C1) * P(D2 | C1) = 1/4 * 1/3 = 1/12.</p>",
                       "placement": {
                         "region": "document",
                         "order": 10
                       }
                     },
                     {
-                      "id": "node-page-97081-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club, diamond, heart, and spade, without replacing the first card before the second card is picked. What is the probability of picking a club and then a diamond? The probability in this case is not 1/4 * 1/4 = 1/16; because the sampling is done without replacement, so whether or not a diamond is picked on the second selection <strong>does</strong> depend on what was picked on the first selection. (For instance, if a diamond was picked on the first selection, the probability of another diamond is zero!) As in the example above, 1/4 of the time we&#39;ll pick a club first. But since the club has been removed, 1/3 of these selections with a club first will have a diamond second. The probability of a club and then a diamond is 1/4*1/3=1/12; this is the probability of getting a club first, multiplied by the probability of getting a diamond second, given that a club was picked first. Using the notation of conditional probabilities, we can write</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 11
-                      }
-                    },
-                    {
-                      "id": "node-page-97081-p-12",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>P(C1 and D2) = P(C1) * P(D2 | C1) = 1/4 * 1/3 = 1/12.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 12
-                      }
-                    },
-                    {
-                      "id": "node-page-97081-image-13",
+                      "id": "node-page-97081-image-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/6a/6a0c415a48f0d4c96f99ad05704912c9/image008.gif\" alt=\"All of the suit possibilities of picking one card then a second card, without replacing any cards. These possibilities are:         SC, SD, SH,         HC, HD, HS,         DC, DH, DS,         CD, CH, CS. Note that 1/4 of these have C picked first (the last 3, out of 12 total). Out of         these, only one is CD. CD is 1/3 of all of the possibilities with C picked first.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
-                        "order": 13
+                        "order": 11
                       }
                     }
                   ],
@@ -429,33 +409,33 @@
                   }
                 },
                 {
-                  "id": "node-page-97081-p-14",
+                  "id": "node-page-97081-p-12",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>For independent events A and B, we had the rule P(A and B) = P(A) * P(B). Due to independence, to find the probability of both, we could multiply the probability of A by the simple probability of B, because the occurrence of A would have no effect on the probability of B occurring. Now, for events A and B that may be dependent, to find the probability of both, we multiply the probability of A by the conditional probability of B, taking into account that A has occurred. Thus, our general multiplication rule is stated as follows:</p>",
                   "placement": {
                     "region": "document",
-                    "order": 14
+                    "order": 12
                   }
                 },
                 {
-                  "id": "node-page-97081-h5-15",
+                  "id": "node-page-97081-h5-13",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h5><strong>Rule</strong></h5>",
                   "placement": {
                     "region": "document",
-                    "order": 15
+                    "order": 13
                   }
                 },
                 {
-                  "id": "node-page-97081-p-16",
+                  "id": "node-page-97081-p-14",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p><strong>The General Multiplication Rule: </strong>For any two events A and B, <strong>P(A and B) = P(A) * P(B | A)</strong></p>",
                   "placement": {
                     "region": "document",
-                    "order": 16
+                    "order": 14
                   }
                 }
               ],
@@ -582,6 +562,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-96269-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Are the events Q1 = &quot;first pick was a quarter&quot; and Q2 = &quot;second pick was a quarter&quot; independent? </p>"
+                        },
+                        {
                           "id": "node-96269-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -637,6 +623,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95919-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>What is the probability of getting a quarter both times, P(Q1 and Q2)? </p>"
+                        },
                         {
                           "id": "node-95919-answers",
                           "nodeType": "group",
@@ -711,6 +703,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95484-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>What is the probability of getting a quarter and then a nickel, P(Q1 and N2)? </p>"
+                        },
                         {
                           "id": "node-95484-answers",
                           "nodeType": "group",
@@ -802,7 +800,7 @@
                       "id": "node-page-97011-p-14",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>In a certain region, one in every thousand people (0.001) of all individuals are infected by the HIV virus that causes AIDS. Tests for presence of the virus are fairly accurate but not perfect. If someone actually has HIV, the probability of testing positive is .95. Let <strong>H</strong> denote the event of having HIV, and <strong>T</strong> the event of testing positive. </p>",
                       "placement": {
                         "region": "document",
                         "order": 14
@@ -812,7 +810,7 @@
                       "id": "node-page-97011-p-15",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>In a certain region, one in every thousand people (0.001) of all individuals are infected by the HIV virus that causes AIDS. Tests for presence of the virus are fairly accurate but not perfect. If someone actually has HIV, the probability of testing positive is .95. Let <strong>H</strong> denote the event of having HIV, and <strong>T</strong> the event of testing positive. </p>",
+                      "value": "<p>(a) Express the information that is given in the problem in terms of the events H and T.</p>",
                       "placement": {
                         "region": "document",
                         "order": 15
@@ -822,7 +820,7 @@
                       "id": "node-page-97011-p-16",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(a) Express the information that is given in the problem in terms of the events H and T.</p>",
+                      "value": "<p>&quot;one in every thousand people (0.001) of all individuals are infected with HIV&quot; → <strong>P(H) = .001</strong></p>",
                       "placement": {
                         "region": "document",
                         "order": 16
@@ -832,7 +830,7 @@
                       "id": "node-page-97011-p-17",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>&quot;one in every thousand people (0.001) of all individuals are infected with HIV&quot; → <strong>P(H) = .001</strong></p>",
+                      "value": "<p>&quot;If someone actually has HIV, the probability of testing positive is .95&quot; → <strong>P(T | H) = .95</strong></p>",
                       "placement": {
                         "region": "document",
                         "order": 17
@@ -842,7 +840,7 @@
                       "id": "node-page-97011-p-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>&quot;If someone actually has HIV, the probability of testing positive is .95&quot; → <strong>P(T | H) = .95</strong></p>",
+                      "value": "<p>(b) Use the General Multiplication Rule to find the probability that someone chosen at random from the population has HIV and tests positive.</p>",
                       "placement": {
                         "region": "document",
                         "order": 18
@@ -852,7 +850,7 @@
                       "id": "node-page-97011-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(b) Use the General Multiplication Rule to find the probability that someone chosen at random from the population has HIV and tests positive.</p>",
+                      "value": "<p><strong>P(H and T)</strong> = P(H) * P(T | H) = .001*.95 = .00095.</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -862,7 +860,7 @@
                       "id": "node-page-97011-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p><strong>P(H and T)</strong> = P(H) * P(T | H) = .001*.95 = .00095.</p>",
+                      "value": "<p>(c) If someone has HIV, what is the probability of testing negative? Here we need to find P(not T | H).</p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -872,20 +870,10 @@
                       "id": "node-page-97011-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(c) If someone has HIV, what is the probability of testing negative? Here we need to find P(not T | H).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-97011-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>Recall from an activity earlier in this module that the Complement Rule works with conditional probabilities as long as we condition on the same event, therefore: <strong>P(not T | H)</strong> = 1 - P(T | H) = 1 - .95 = .05.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 22
+                        "order": 21
                       }
                     }
                   ],
@@ -895,17 +883,17 @@
                   }
                 },
                 {
-                  "id": "node-page-97011-p-23",
+                  "id": "node-page-97011-p-22",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>The purpose of the next activity is to give you guided practice in expressing information in terms of conditional probabilities, and in using the General Multiplication Rule.</p>",
                   "placement": {
                     "region": "document",
-                    "order": 23
+                    "order": 22
                   }
                 },
                 {
-                  "id": "node-page-97011-group-24",
+                  "id": "node-page-97011-group-23",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -916,14 +904,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 24
+                    "order": 23
                   },
                   "children": [
                     {
-                      "id": "node-page-97011-h1-25",
+                      "id": "node-page-97011-h1-24",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Learn By Doing</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 24
+                      }
+                    },
+                    {
+                      "id": "node-page-97011-p-25",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>An overheating engine can quickly cause serious damage to a car, and therefore a dashboard red warning light is supposed to come on if that happens. </p>",
                       "placement": {
                         "region": "document",
                         "order": 25
@@ -933,7 +931,7 @@
                       "id": "node-page-97011-p-26",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>An overheating engine can quickly cause serious damage to a car, and therefore a dashboard red warning light is supposed to come on if that happens. </p>",
+                      "value": "<p>In a certain model car, there is a 3% chance that the engine will overheat (event H).</p>",
                       "placement": {
                         "region": "document",
                         "order": 26
@@ -943,24 +941,14 @@
                       "id": "node-page-97011-p-27",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>In a certain model car, there is a 3% chance that the engine will overheat (event H).</p>",
+                      "value": "<p>The probability of the warning light showing up (event W) when it should (i.e., when the engine is really overheating) is 0.98. However, 1% of the time the warning light appears for no apparent reason (i.e., when the engine temperature is normal).</p>",
                       "placement": {
                         "region": "document",
                         "order": 27
                       }
                     },
                     {
-                      "id": "node-page-97011-p-28",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The probability of the warning light showing up (event W) when it should (i.e., when the engine is really overheating) is 0.98. However, 1% of the time the warning light appears for no apparent reason (i.e., when the engine temperature is normal).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 28
-                      }
-                    },
-                    {
-                      "id": "node-page-97011-group-29",
+                      "id": "node-page-97011-group-28",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -971,7 +959,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 29
+                        "order": 28
                       },
                       "children": [
                         {
@@ -981,7 +969,7 @@
                           "label": "Express all the information that is given in the problem in terms of probabilities involving the events H and W (note that some of the information involves conditional probabilities).",
                           "placement": {
                             "region": "document",
-                            "order": 30
+                            "order": 29
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1033,7 +1021,7 @@
                       }
                     },
                     {
-                      "id": "node-page-97011-group-31",
+                      "id": "node-page-97011-group-30",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1044,7 +1032,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 31
+                        "order": 30
                       },
                       "children": [
                         {
@@ -1054,7 +1042,7 @@
                           "label": "Use the General Multiplication Rule to find the probability that the engine is overheating and a warning shows up.",
                           "placement": {
                             "region": "document",
-                            "order": 32
+                            "order": 31
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1106,7 +1094,7 @@
                       }
                     },
                     {
-                      "id": "node-page-97011-group-33",
+                      "id": "node-page-97011-group-32",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1117,7 +1105,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 33
+                        "order": 32
                       },
                       "children": [
                         {
@@ -1127,7 +1115,7 @@
                           "label": "Use the General Multiplication Rule to find the probability of the event that the engine is not overheating and a warning light shows up.",
                           "placement": {
                             "region": "document",
-                            "order": 34
+                            "order": 33
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1179,7 +1167,7 @@
                       }
                     },
                     {
-                      "id": "node-page-97011-group-35",
+                      "id": "node-page-97011-group-34",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1190,7 +1178,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 35
+                        "order": 34
                       },
                       "children": [
                         {
@@ -1200,7 +1188,7 @@
                           "label": "How likely is the dangerous event that no warning light shows up when the engine is overheating? In other words, given that the engine is overheating, how likely is it that we will not get a warning?",
                           "placement": {
                             "region": "document",
-                            "order": 36
+                            "order": 35
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1306,7 +1294,7 @@
                       "id": "node-page-96804-p-3",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>A sales representative tells his friend that the probability of landing a major contract by the end of the week, resulting in a large commission, is .4. If the commission comes through, the probability that he will indulge in a weekend vacation in Bermuda is .9. Even if the commission doesn&#39;t come through, he may still go to Bermuda, but only with probability .3.</p>",
                       "placement": {
                         "region": "document",
                         "order": 3
@@ -1316,7 +1304,7 @@
                       "id": "node-page-96804-p-4",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A sales representative tells his friend that the probability of landing a major contract by the end of the week, resulting in a large commission, is .4. If the commission comes through, the probability that he will indulge in a weekend vacation in Bermuda is .9. Even if the commission doesn&#39;t come through, he may still go to Bermuda, but only with probability .3.</p>",
+                      "value": "<p>First, let&#39;s identify the given probabilities for events involving <strong>C</strong> (the commission comes through) and <strong>V</strong> (the sales rep takes a Bermuda vacation):</p>",
                       "placement": {
                         "region": "document",
                         "order": 4
@@ -1326,7 +1314,7 @@
                       "id": "node-page-96804-p-5",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>First, let&#39;s identify the given probabilities for events involving <strong>C</strong> (the commission comes through) and <strong>V</strong> (the sales rep takes a Bermuda vacation):</p>",
+                      "value": "<p>P(C) = .4 [and so P(not C) = .6],</p>",
                       "placement": {
                         "region": "document",
                         "order": 5
@@ -1336,7 +1324,7 @@
                       "id": "node-page-96804-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(C) = .4 [and so P(not C) = .6],</p>",
+                      "value": "<p>P(V | C) = .9 [and so P(not V | C) = .1], and</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
@@ -1346,7 +1334,7 @@
                       "id": "node-page-96804-p-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(V | C) = .9 [and so P(not V | C) = .1], and</p>",
+                      "value": "<p>P(V | not C) = .3 [and so P(not V | not C) = .7.]</p>",
                       "placement": {
                         "region": "document",
                         "order": 7
@@ -1356,7 +1344,7 @@
                       "id": "node-page-96804-p-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(V | not C) = .3 [and so P(not V | not C) = .7.]</p>",
+                      "value": "<p>There are two stages in the problem. First, the sales rep will either get the commission or not.</p>",
                       "placement": {
                         "region": "document",
                         "order": 8
@@ -1366,7 +1354,7 @@
                       "id": "node-page-96804-p-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>There are two stages in the problem. First, the sales rep will either get the commission or not.</p>",
+                      "value": "<p>Second, based on what happened in the first stage, the sales rep will either take the Bermuda vacation or not.</p>",
                       "placement": {
                         "region": "document",
                         "order": 9
@@ -1376,20 +1364,10 @@
                       "id": "node-page-96804-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Second, based on what happened in the first stage, the sales rep will either take the Bermuda vacation or not.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 10
-                      }
-                    },
-                    {
-                      "id": "node-page-96804-p-11",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>We follow exactly the same reasoning when we build the probability tree.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 11
+                        "order": 10
                       }
                     }
                   ],
@@ -1399,10 +1377,20 @@
                   }
                 },
                 {
-                  "id": "node-page-96804-youtube-12",
+                  "id": "node-page-96804-youtube-11",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<figure class=\"oli-embed\"><iframe src=\"https://www.youtube-nocookie.com/embed/PVQszIj-X_A\" title=\"youtube\" width=\"100%\" height=\"360\" loading=\"lazy\" allowfullscreen></iframe><figcaption><p> </p></figcaption></figure>",
+                  "placement": {
+                    "region": "document",
+                    "order": 11
+                  }
+                },
+                {
+                  "id": "node-page-96804-p-12",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>There are two important things to note here:</p>",
                   "placement": {
                     "region": "document",
                     "order": 12
@@ -1412,64 +1400,54 @@
                   "id": "node-page-96804-p-13",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>There are two important things to note here:</p>",
+                  "value": "<p>1. The probabilities in the <strong>first branch-off are non-conditional probabilities</strong> P(C) = .4, P(not C) = .6. However, the probabilities that appear in the <strong>second branch-off are conditional probabilities. </strong>The top two branches assume that C occurred: P(V | C) = .9, P(not V | C) = .1. The bottom two branches assume that not C occurred: P(V | not C) = .3, P(not V | not C) = .7</p>",
                   "placement": {
                     "region": "document",
                     "order": 13
                   }
                 },
                 {
-                  "id": "node-page-96804-p-14",
+                  "id": "node-page-96804-image-14",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>1. The probabilities in the <strong>first branch-off are non-conditional probabilities</strong> P(C) = .4, P(not C) = .6. However, the probabilities that appear in the <strong>second branch-off are conditional probabilities. </strong>The top two branches assume that C occurred: P(V | C) = .9, P(not V | C) = .1. The bottom two branches assume that not C occurred: P(V | not C) = .3, P(not V | not C) = .7</p>",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/27/27e4d1d8e88a07ac8f11c03ccae45923/image009.gif\" alt=\"A probability tree. The bottom of the tree (where there is the trunk) represents the first event (in this case, getting the commission). From there, two branches (lines) are drawn. This is the branch-off. One branch is represents getting the commission and the other represents not getting the commission. Each of these branches lead to a point. At both of these points is the second event (going to a vacation). Each of these points has two branches. These  represent either going on vacation or not going on vacation. Notice that this tree has two levels of points, one for each event. We will be naming paths through the tree  with the notation &quot;{first branch-off:  probability of branch-off; second branch-off: probability of  branch-off; ...}&quot;. Each branch-off represents the path we take when we need to take a branch, and  the probability for taking that branch is provided. This probability tree demonstrates how branches map to probabilities.     {C: .4} represents P(C);     {not C: .6} represents P(not C);     {C: .4; V: .9} represents P(V|C);     {C: .4; not V: .1} represents P(not V|C);     {not C: .6; V: .3} represents P(V|not C);     {not C: .6; not V: .7} represents P(not V|not C);\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                   "placement": {
                     "region": "document",
                     "order": 14
                   }
                 },
                 {
-                  "id": "node-page-96804-image-15",
+                  "id": "node-page-96804-p-15",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/27/27e4d1d8e88a07ac8f11c03ccae45923/image009.gif\" alt=\"A probability tree. The bottom of the tree (where there is the trunk) represents the first event (in this case, getting the commission). From there, two branches (lines) are drawn. This is the branch-off. One branch is represents getting the commission and the other represents not getting the commission. Each of these branches lead to a point. At both of these points is the second event (going to a vacation). Each of these points has two branches. These  represent either going on vacation or not going on vacation. Notice that this tree has two levels of points, one for each event. We will be naming paths through the tree  with the notation &quot;{first branch-off:  probability of branch-off; second branch-off: probability of  branch-off; ...}&quot;. Each branch-off represents the path we take when we need to take a branch, and  the probability for taking that branch is provided. This probability tree demonstrates how branches map to probabilities.     {C: .4} represents P(C);     {not C: .6} represents P(not C);     {C: .4; V: .9} represents P(V|C);     {C: .4; not V: .1} represents P(not V|C);     {not C: .6; V: .3} represents P(V|not C);     {not C: .6; not V: .7} represents P(not V|not C);\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                  "value": "<p>2. The second thing to note is that probabilities of branches that branch out from the same point always add up to one.</p>",
                   "placement": {
                     "region": "document",
                     "order": 15
                   }
                 },
                 {
-                  "id": "node-page-96804-p-16",
+                  "id": "node-page-96804-image-16",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>2. The second thing to note is that probabilities of branches that branch out from the same point always add up to one.</p>",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/81/8146bfde4668b54a2d638978078ac162/image010.gif\" alt=\"A probability tree demonstrating the rule. For the point intersecting C, we have the branches {C, .4} and {C, .6}. Note that .4 + .6 = 1. For the point intersecting {C: .4, V: .9} and {C: .4, not V: .1}, note that the probabilities for V and not V add up to 1 (.9 + .1 = 1). For the last point intersecting {not C: .6, V: .3} and {not C: .6, not V: .7}, note that the probabilities for V and not V add up to 1 (.3 + .7 = 1)\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                   "placement": {
                     "region": "document",
                     "order": 16
                   }
                 },
                 {
-                  "id": "node-page-96804-image-17",
+                  "id": "node-page-96804-p-17",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/81/8146bfde4668b54a2d638978078ac162/image010.gif\" alt=\"A probability tree demonstrating the rule. For the point intersecting C, we have the branches {C, .4} and {C, .6}. Note that .4 + .6 = 1. For the point intersecting {C: .4, V: .9} and {C: .4, not V: .1}, note that the probabilities for V and not V add up to 1 (.9 + .1 = 1). For the last point intersecting {not C: .6, V: .3} and {not C: .6, not V: .7}, note that the probabilities for V and not V add up to 1 (.3 + .7 = 1)\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                  "value": "<p>The following &quot;bare&quot; tree is missing the appropriate probabilities in each of its branches. Complete them.</p>",
                   "placement": {
                     "region": "document",
                     "order": 17
                   }
                 },
                 {
-                  "id": "node-page-96804-p-18",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The following &quot;bare&quot; tree is missing the appropriate probabilities in each of its branches. Complete them.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 18
-                  }
-                },
-                {
-                  "id": "node-page-96804-group-19",
+                  "id": "node-page-96804-group-18",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -1480,7 +1458,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 19
+                    "order": 18
                   },
                   "children": [
                     {
@@ -1490,7 +1468,7 @@
                       "label": "Consider again the following example:An overheating engine can quickly cause serious damage to a car, and therefore a dashboard red warning light is supposed to come on if that happens. In a certain model car, there is a 3% chance of the engine overheating (event H). The probability of the warning light showing up (event W) when it should (i.e., when the engine is really overheating) is 0.98, however, 1% of the time the warning light appears for no apparent reason (i.e., when the engine temperature is normal).In an activity in the previous part we identified the information that this problem provides:P(H) = .03P(W | H) = .98P(W | not H) = .01Which of the following is a correct representation of the given information in a probability tree?",
                       "placement": {
                         "region": "document",
-                        "order": 20
+                        "order": 19
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -1501,6 +1479,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96425-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Consider again the following example:</p><p>An overheating engine can quickly cause serious damage to a car, and therefore a dashboard red warning light is supposed to come on if that happens. In a certain model car, there is a 3% chance of the engine overheating (event H). The probability of the warning light showing up (event W) when it should (i.e., when the engine is really overheating) is 0.98, however, 1% of the time the warning light appears for no apparent reason (i.e., when the engine temperature is normal).</p><p>In an activity in the previous part we identified the information that this problem provides:</p><p>P(H) = .03</p><p>P(W | H) = .98</p><p>P(W | not H) = .01</p><p>Which of the following is a correct representation of the given information in a probability tree?</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/b1/b1e03d3545068a663fd6bfba791a7f8b/_u4_m2_digtutor6a_image1.gif\" alt=\"four different probability trees\" loading=\"lazy\"><figcaption>four different probability trees</figcaption></figure>"
+                        },
                         {
                           "id": "node-96425-answers",
                           "nodeType": "group",
@@ -1964,7 +1948,7 @@
                       "id": "node-page-97020-p-3",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Polygraph (lie-detector) tests are often routinely administered to employees or prospective employees in sensitive positions. A National Research Council study in 2002, headed by Stephen Fienberg from CMU, found that lie detector results are &quot;better than chance, but well below perfection.&quot; Typically, the test may conclude someone is a spy 80% of the time when he or she actually is a spy, but 16% of the time the test will conclude someone is a spy when he or she is not.</p>",
                       "placement": {
                         "region": "document",
                         "order": 3
@@ -1974,7 +1958,7 @@
                       "id": "node-page-97020-p-4",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Polygraph (lie-detector) tests are often routinely administered to employees or prospective employees in sensitive positions. A National Research Council study in 2002, headed by Stephen Fienberg from CMU, found that lie detector results are &quot;better than chance, but well below perfection.&quot; Typically, the test may conclude someone is a spy 80% of the time when he or she actually is a spy, but 16% of the time the test will conclude someone is a spy when he or she is not.</p>",
+                      "value": "<p>Let us assume that 1 in 1,000, or .001, of the employees in a certain highly classified workplace are actual spies.</p>",
                       "placement": {
                         "region": "document",
                         "order": 4
@@ -1984,7 +1968,7 @@
                       "id": "node-page-97020-p-5",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let us assume that 1 in 1,000, or .001, of the employees in a certain highly classified workplace are actual spies.</p>",
+                      "value": "<p>Let <strong>S</strong> be the event of being a spy, and <strong>D</strong> be the event of the polygraph detecting the employee to be a spy. </p>",
                       "placement": {
                         "region": "document",
                         "order": 5
@@ -1994,7 +1978,7 @@
                       "id": "node-page-97020-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let <strong>S</strong> be the event of being a spy, and <strong>D</strong> be the event of the polygraph detecting the employee to be a spy. </p>",
+                      "value": "<p>Let&#39;s first express the information using probability notations involving events S and D.</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
@@ -2004,27 +1988,27 @@
                       "id": "node-page-97020-p-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let&#39;s first express the information using probability notations involving events S and D.</p>",
+                      "value": "<p>We are given:</p>",
                       "placement": {
                         "region": "document",
                         "order": 7
                       }
                     },
                     {
-                      "id": "node-page-97020-p-8",
+                      "id": "node-page-97020-ul-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>We are given:</p>",
+                      "value": "<ul><li><p>1 in 1,000, or 0.001, of the employees are actual spies → <strong>P(S) = 0.001</strong></p></li><li><p>The test may conclude someone is a spy 80% of the time when he or she actually is a spy → <strong>P(D | S) = 0.80</strong></p></li><li><p>16% of the time, the test will conclude someone is a spy when he or she is not → <strong>P(D | not S) = 0.16</strong></p></li></ul>",
                       "placement": {
                         "region": "document",
                         "order": 8
                       }
                     },
                     {
-                      "id": "node-page-97020-ul-9",
+                      "id": "node-page-97020-p-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<ul><li><p>1 in 1,000, or 0.001, of the employees are actual spies → <strong>P(S) = 0.001</strong></p></li><li><p>The test may conclude someone is a spy 80% of the time when he or she actually is a spy → <strong>P(D | S) = 0.80</strong></p></li><li><p>16% of the time, the test will conclude someone is a spy when he or she is not → <strong>P(D | not S) = 0.16</strong></p></li></ul>",
+                      "value": "<p>(a) Let&#39;s create a tree diagram for this problem, starting, as usual, with the event for which a nonconditional probability is given, S. It also makes sense that we start with S, since the natural order is that first a person becomes a spy, and then he/she is either detected or not.</p>",
                       "placement": {
                         "region": "document",
                         "order": 9
@@ -2034,47 +2018,47 @@
                       "id": "node-page-97020-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(a) Let&#39;s create a tree diagram for this problem, starting, as usual, with the event for which a nonconditional probability is given, S. It also makes sense that we start with S, since the natural order is that first a person becomes a spy, and then he/she is either detected or not.</p>",
+                      "value": "<p>Note that marked in red are the probabilities that are given, and the rest are completed using the Complement Rule as explained earlier.</p>",
                       "placement": {
                         "region": "document",
                         "order": 10
                       }
                     },
                     {
-                      "id": "node-page-97020-p-11",
+                      "id": "node-page-97020-image-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Note that marked in red are the probabilities that are given, and the rest are completed using the Complement Rule as explained earlier.</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/d0/d0b272afe1834c34738d6326e44b165e/image014.gif\" alt=\"A probability tree. We will be naming paths through the tree with the notation &quot;{first branch-off: probability of branch-off; second branch-off: probability of branch-off; ...}&quot;. Here is the tree:         {S: 0.001 (red), D: 0.80 (red)};         {S: 0.001 (red), not D: 0.20};         {not S: 0.999, D: 0.16 (red)};         {not S: 0.999, not D: 0.84};\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 11
                       }
                     },
                     {
-                      "id": "node-page-97020-image-12",
+                      "id": "node-page-97020-p-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/d0/d0b272afe1834c34738d6326e44b165e/image014.gif\" alt=\"A probability tree. We will be naming paths through the tree with the notation &quot;{first branch-off: probability of branch-off; second branch-off: probability of branch-off; ...}&quot;. Here is the tree:         {S: 0.001 (red), D: 0.80 (red)};         {S: 0.001 (red), not D: 0.20};         {not S: 0.999, D: 0.16 (red)};         {not S: 0.999, not D: 0.84};\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>(b) What is the probability that a randomly chosen employee is not a spy, and the test does not detect the employee as one? In other words, what is P(not S and not D)?</p>",
                       "placement": {
                         "region": "document",
                         "order": 12
                       }
                     },
                     {
-                      "id": "node-page-97020-p-13",
+                      "id": "node-page-97020-image-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(b) What is the probability that a randomly chosen employee is not a spy, and the test does not detect the employee as one? In other words, what is P(not S and not D)?</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/ef/ef961442c71201148dcc44e887cefbfa/image015.gif\" alt=\"In the probability tree we take the path {not S: 0.999, not D: 0.84}.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 13
                       }
                     },
                     {
-                      "id": "node-page-97020-image-14",
+                      "id": "node-page-97020-p-14",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/ef/ef961442c71201148dcc44e887cefbfa/image015.gif\" alt=\"In the probability tree we take the path {not S: 0.999, not D: 0.84}.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>P(not S and not D) = P(not S) * P(not D | not S) = 0.999 * 0.84 = 0.83916</p>",
                       "placement": {
                         "region": "document",
                         "order": 14
@@ -2084,27 +2068,27 @@
                       "id": "node-page-97020-p-15",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(not S and not D) = P(not S) * P(not D | not S) = 0.999 * 0.84 = 0.83916</p>",
+                      "value": "<p>(c) What is the probability that a randomly chosen employee <strong>is</strong> a spy, and the test does <strong>not</strong> detect the employee as one? (This would be an incorrect conclusion.) In other words, what is P(S and not D)?</p>",
                       "placement": {
                         "region": "document",
                         "order": 15
                       }
                     },
                     {
-                      "id": "node-page-97020-p-16",
+                      "id": "node-page-97020-image-16",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(c) What is the probability that a randomly chosen employee <strong>is</strong> a spy, and the test does <strong>not</strong> detect the employee as one? (This would be an incorrect conclusion.) In other words, what is P(S and not D)?</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/14/14047e4080fa4607f76a016e1e2cf88a/image016.gif\" alt=\"In the probability tree we take the path {S: 0.001, not D: 0.20}.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 16
                       }
                     },
                     {
-                      "id": "node-page-97020-image-17",
+                      "id": "node-page-97020-p-17",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/14/14047e4080fa4607f76a016e1e2cf88a/image016.gif\" alt=\"In the probability tree we take the path {S: 0.001, not D: 0.20}.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>P(S and not D) = P(S) * P(not D | S) = 0.001 * 0.20 = 0.0002</p>",
                       "placement": {
                         "region": "document",
                         "order": 17
@@ -2114,7 +2098,7 @@
                       "id": "node-page-97020-p-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(S and not D) = P(S) * P(not D | S) = 0.001 * 0.20 = 0.0002</p>",
+                      "value": "<p>(d) Suppose the polygraph detects a spy; are you convinced that the employee is actually a spy? Find the probability of an employee actually being a spy, given that the test claims he or she is. In other words, find P(S | D).</p>",
                       "placement": {
                         "region": "document",
                         "order": 18
@@ -2124,7 +2108,7 @@
                       "id": "node-page-97020-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>(d) Suppose the polygraph detects a spy; are you convinced that the employee is actually a spy? Find the probability of an employee actually being a spy, given that the test claims he or she is. In other words, find P(S | D).</p>",
+                      "value": "<p>Applying Bayes Rule, we have</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -2134,7 +2118,7 @@
                       "id": "node-page-97020-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Applying Bayes Rule, we have</p>",
+                      "value": "<p>P(S | D) = P(S) * P(D | S) / [P(S) * P(D | S) + P(not S) * P(D | not S)]</p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -2144,7 +2128,7 @@
                       "id": "node-page-97020-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(S | D) = P(S) * P(D | S) / [P(S) * P(D | S) + P(not S) * P(D | not S)]</p>",
+                      "value": "<p>= 0.001 * 0.80/[0.001 * 0.80 + 0.999 * 0.16] = 0.0008/0.16064 = 0.005</p>",
                       "placement": {
                         "region": "document",
                         "order": 21
@@ -2154,30 +2138,20 @@
                       "id": "node-page-97020-p-22",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>= 0.001 * 0.80/[0.001 * 0.80 + 0.999 * 0.16] = 0.0008/0.16064 = 0.005</p>",
+                      "value": "<p>The study&#39;s conclusion, that more accurate tests than the traditional polygraph are sorely needed, is supported by our answer to part (d): if someone is detected as being a spy, the probability is only 0.005, or half of one percent, that he or she actually is one.</p>",
                       "placement": {
                         "region": "document",
                         "order": 22
                       }
                     },
                     {
-                      "id": "node-page-97020-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>The study&#39;s conclusion, that more accurate tests than the traditional polygraph are sorely needed, is supported by our answer to part (d): if someone is detected as being a spy, the probability is only 0.005, or half of one percent, that he or she actually is one.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-97020-image-24",
+                      "id": "node-page-97020-image-23",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/d6/d60cee038af28600f5e1ee56e81c885b/image017.gif\" alt=\"In order to calculate P(S | D), we attempt to calculate P(S | D) = P(S and D)/P(D). First, we note that P(S and D) comes from the tree path {S: 0.001, D: 0.80}, so P(S and D) =  P(S) and P(D|S) = 0.001 * 0.80 = 0.0008. We also note that P(not S and D) comes from the tree path {not S: 0.999, D: 0.16 }, so P(not S and D) = P(not S) and P(D | not S) = 0.999 * 0.16 = 0.15984. So, now we can calculate P(D) = P(S and D) or P(not S and D) = 0.0008 + 0.15984 = 0.16064. Now, we can calculate P(S | D) = P(S and D)/P(D) = 0.0008/0.16064 = 0.005.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
-                        "order": 24
+                        "order": 23
                       }
                     }
                   ],
@@ -2187,10 +2161,20 @@
                   }
                 },
                 {
-                  "id": "node-page-97020-h1-25",
+                  "id": "node-page-97020-h1-24",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h1>Comment</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 24
+                  }
+                },
+                {
+                  "id": "node-page-97020-p-25",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>This example helps to highlight how different P(B | A) may be from P(A | B): the probability of being detected, given that an employee is a spy, is P(D | S) = 0.80. In contrast, the probability of being a spy, given that an employee has been detected by the polygraph, is P(S | D) = 0.005.</p>",
                   "placement": {
                     "region": "document",
                     "order": 25
@@ -2200,24 +2184,14 @@
                   "id": "node-page-97020-p-26",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>This example helps to highlight how different P(B | A) may be from P(A | B): the probability of being detected, given that an employee is a spy, is P(D | S) = 0.80. In contrast, the probability of being a spy, given that an employee has been detected by the polygraph, is P(S | D) = 0.005.</p>",
+                  "value": "<p>The purpose of the next activity is to give you guided practice in using the information displayed in probability trees in order to answer real-life problems.</p>",
                   "placement": {
                     "region": "document",
                     "order": 26
                   }
                 },
                 {
-                  "id": "node-page-97020-p-27",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The purpose of the next activity is to give you guided practice in using the information displayed in probability trees in order to answer real-life problems.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 27
-                  }
-                },
-                {
-                  "id": "node-page-97020-group-28",
+                  "id": "node-page-97020-group-27",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -2228,14 +2202,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 28
+                    "order": 27
                   },
                   "children": [
                     {
-                      "id": "node-page-97020-h1-29",
+                      "id": "node-page-97020-h1-28",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Learn By Doing</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 28
+                      }
+                    },
+                    {
+                      "id": "node-page-97020-p-29",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>Let&#39;s consider the engine overheating example again, where H is the event that the engine overheats and W is the event that a warning light turns on. We are given that:</p>",
                       "placement": {
                         "region": "document",
                         "order": 29
@@ -2245,7 +2229,7 @@
                       "id": "node-page-97020-p-30",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let&#39;s consider the engine overheating example again, where H is the event that the engine overheats and W is the event that a warning light turns on. We are given that:</p>",
+                      "value": "<p>P(H) = 0.03</p>",
                       "placement": {
                         "region": "document",
                         "order": 30
@@ -2255,7 +2239,7 @@
                       "id": "node-page-97020-p-31",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(H) = 0.03</p>",
+                      "value": "<p>P(W | H) = 0.98</p>",
                       "placement": {
                         "region": "document",
                         "order": 31
@@ -2265,7 +2249,7 @@
                       "id": "node-page-97020-p-32",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(W | H) = 0.98</p>",
+                      "value": "<p>P(W | not H) = 0.01</p>",
                       "placement": {
                         "region": "document",
                         "order": 32
@@ -2275,34 +2259,24 @@
                       "id": "node-page-97020-p-33",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(W | not H) = 0.01</p>",
+                      "value": "<p>and in a previous activity we displayed the information using a probability tree:</p>",
                       "placement": {
                         "region": "document",
                         "order": 33
                       }
                     },
                     {
-                      "id": "node-page-97020-p-34",
+                      "id": "node-page-97020-image-34",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>and in a previous activity we displayed the information using a probability tree:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/94/9460d710fd959de184159e723da91266/lbd002.gif\" alt=\"Here is the probability tree with paths through the tree shown in &quot;{ 1st branch-off: probability of 1st branch off, 2nd branch-off: probability of 2nd branch off}&quot;:             {H: 0.03, W: 0.98};             {H: 0.03, not W: 0.02};             {not H: 0.97, W: 0.01};             {not H: 0.97, not W: 0.99};\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 34
                       }
                     },
                     {
-                      "id": "node-page-97020-image-35",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/94/9460d710fd959de184159e723da91266/lbd002.gif\" alt=\"Here is the probability tree with paths through the tree shown in &quot;{ 1st branch-off: probability of 1st branch off, 2nd branch-off: probability of 2nd branch off}&quot;:             {H: 0.03, W: 0.98};             {H: 0.03, not W: 0.02};             {not H: 0.97, W: 0.01};             {not H: 0.97, not W: 0.99};\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-97020-group-36",
+                      "id": "node-page-97020-group-35",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -2313,7 +2287,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 36
+                        "order": 35
                       },
                       "children": [
                         {
@@ -2323,7 +2297,7 @@
                           "label": "What is the probability that the warning light shows up, P(W)? (Recall from previous examples that you need to consider two possibilities here, since a W branch can be reached in two ways. Either the engine is overheated and the warning light is on, or the engine is not overheated and the warning light is on.)",
                           "placement": {
                             "region": "document",
-                            "order": 37
+                            "order": 36
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -2375,7 +2349,7 @@
                       }
                     },
                     {
-                      "id": "node-page-97020-group-38",
+                      "id": "node-page-97020-group-37",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -2386,7 +2360,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 38
+                        "order": 37
                       },
                       "children": [
                         {
@@ -2396,7 +2370,7 @@
                           "label": "When a driver notices that the warning light is on, how worried does he or she need to be? In other words, given that the warning light is on, how likely is it that the engine is really overheating? Use the definition of conditional probability, and the information you obtained in the previous question, to find P(H | W).",
                           "placement": {
                             "region": "document",
-                            "order": 39
+                            "order": 38
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -3937,6 +3911,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.95912.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95912:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.95912.short-answer-submit",
               "module": "general-multiplication-rule-probability-trees",
               "salience": 30,
@@ -3957,8 +3966,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95912-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4015,8 +4045,43 @@
                   "nodeId": "node-95912-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96558.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96558:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4041,8 +4106,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96558-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4099,8 +4185,43 @@
                   "nodeId": "node-96558-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95681.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95681:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4125,8 +4246,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95681-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4183,8 +4325,43 @@
                   "nodeId": "node-95681-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95928.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95928:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4209,8 +4386,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95928-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4267,7 +4465,7 @@
                   "nodeId": "node-95928-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]
@@ -4657,6 +4855,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96572.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96572:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96572.short-answer-submit",
               "module": "general-multiplication-rule-probability-trees",
               "salience": 30,
@@ -4677,8 +4910,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96572-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4735,8 +4989,43 @@
                   "nodeId": "node-96572-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96440.short-answer-input",
+              "module": "general-multiplication-rule-probability-trees",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96440:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -4761,8 +5050,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96440-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -4819,7 +5129,7 @@
                   "nodeId": "node-96440-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

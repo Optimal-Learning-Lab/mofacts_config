@@ -772,6 +772,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-96527-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>In the previous section we learned about disjoint events, which are events that can never happen together. This means that if A and B are disjoint, then P(A and B) must be:</p>"
+                        },
+                        {
                           "id": "node-96527-answers",
                           "nodeType": "group",
                           "groupType": "answer-list",
@@ -893,7 +899,7 @@
                       "id": "node-page-97142-p-16",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>A woman&#39;s pocket contains two quarters and two nickels. She randomly extracts one of the coins and, after looking at it, replaces it before picking a second coin.</p>",
                       "placement": {
                         "region": "document",
                         "order": 16
@@ -903,7 +909,7 @@
                       "id": "node-page-97142-p-17",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A woman&#39;s pocket contains two quarters and two nickels. She randomly extracts one of the coins and, after looking at it, replaces it before picking a second coin.</p>",
+                      "value": "<p>Let Q1 be the event that the first coin is a quarter and Q2 be the event that the second coin is a quarter.</p>",
                       "placement": {
                         "region": "document",
                         "order": 17
@@ -913,7 +919,7 @@
                       "id": "node-page-97142-p-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let Q1 be the event that the first coin is a quarter and Q2 be the event that the second coin is a quarter.</p>",
+                      "value": "<p>Are Q1 and Q2 independent events? <strong>Y</strong> Why?</p>",
                       "placement": {
                         "region": "document",
                         "order": 18
@@ -923,40 +929,30 @@
                       "id": "node-page-97142-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Are Q1 and Q2 independent events? <strong>Y</strong> Why?</p>",
+                      "value": "<p>Since the first coin that was selected is <strong>replaced</strong>, whether or not Q1 occurred (i.e., whether the first coin was a quarter) has no effect on the probability that the second coin will be a quarter, P(Q2). In either case (whether Q1 occurred or not), when sheis selecting the second coin, she has in her pocket:</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
                       }
                     },
                     {
-                      "id": "node-page-97142-p-20",
+                      "id": "node-page-97142-image-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Since the first coin that was selected is <strong>replaced</strong>, whether or not Q1 occurred (i.e., whether the first coin was a quarter) has no effect on the probability that the second coin will be a quarter, P(Q2). In either case (whether Q1 occurred or not), when sheis selecting the second coin, she has in her pocket:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0d54efaef943ac55ec7de1b05e0c0813/image020.gif\" alt=\"The coins in the woman&#39;s pocket. There are 2 Quarters and 2 Nickels.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 20
                       }
                     },
                     {
-                      "id": "node-page-97142-image-21",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/0d/0d54efaef943ac55ec7de1b05e0c0813/image020.gif\" alt=\"The coins in the woman&#39;s pocket. There are 2 Quarters and 2 Nickels.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-97142-p-22",
+                      "id": "node-page-97142-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>and therefore the P(Q2)=2/4=1/2 regardless of whether Q1 occurred.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 22
+                        "order": 21
                       }
                     }
                   ],
@@ -966,7 +962,7 @@
                   }
                 },
                 {
-                  "id": "node-page-97142-group-23",
+                  "id": "node-page-97142-group-22",
                   "nodeType": "group",
                   "groupType": "oli-example",
                   "layout": {
@@ -977,14 +973,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 23
+                    "order": 22
                   },
                   "children": [
+                    {
+                      "id": "node-page-97142-p-23",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>A woman&#39;s pocket contains two quarters and two nickels. She randomly extracts one of the coins, and <strong>without placing</strong> it back into her pocket, she picks a second coin. As before, let Q1 be the event that the first coin is a quarter, and Q2 be the event that the second coin is a quarter.</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 23
+                      }
+                    },
                     {
                       "id": "node-page-97142-p-24",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Are Q1 and Q2 independent events? <strong>N</strong> Q1 and Q2 are <strong>not independent</strong>. They are <strong>dependent.</strong> Why?</p>",
                       "placement": {
                         "region": "document",
                         "order": 24
@@ -994,7 +1000,7 @@
                       "id": "node-page-97142-p-25",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A woman&#39;s pocket contains two quarters and two nickels. She randomly extracts one of the coins, and <strong>without placing</strong> it back into her pocket, she picks a second coin. As before, let Q1 be the event that the first coin is a quarter, and Q2 be the event that the second coin is a quarter.</p>",
+                      "value": "<p>Since the first coin that was selected is <strong>not replaced,</strong> whether Q1 occurred (i.e., whether the first coin was a quarter) <strong>does affect</strong> the probability that the second coin is a quarter, P(Q2).</p>",
                       "placement": {
                         "region": "document",
                         "order": 25
@@ -1004,17 +1010,17 @@
                       "id": "node-page-97142-p-26",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Are Q1 and Q2 independent events? <strong>N</strong> Q1 and Q2 are <strong>not independent</strong>. They are <strong>dependent.</strong> Why?</p>",
+                      "value": "<p>If Q1 occurred (i.e., the first coin was a quarter), then when the womanis selecting the second coin, she has in her pocket:</p>",
                       "placement": {
                         "region": "document",
                         "order": 26
                       }
                     },
                     {
-                      "id": "node-page-97142-p-27",
+                      "id": "node-page-97142-image-27",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Since the first coin that was selected is <strong>not replaced,</strong> whether Q1 occurred (i.e., whether the first coin was a quarter) <strong>does affect</strong> the probability that the second coin is a quarter, P(Q2).</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/cd/cd7b0240eba480fdae4e127da0a57819/image021.gif\" alt=\"One Quarter and Two Nickels\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 27
@@ -1024,7 +1030,7 @@
                       "id": "node-page-97142-p-28",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>If Q1 occurred (i.e., the first coin was a quarter), then when the womanis selecting the second coin, she has in her pocket:</p>",
+                      "value": "<p>In this case, P(Q2)=1/3. However, if Q1 has not occurred (i.e., the first coin was not a quarter, but a nickel), then when the woman is selecting the second coin, she has in her pocket:</p>",
                       "placement": {
                         "region": "document",
                         "order": 28
@@ -1034,7 +1040,7 @@
                       "id": "node-page-97142-image-29",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/cd/cd7b0240eba480fdae4e127da0a57819/image021.gif\" alt=\"One Quarter and Two Nickels\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/67/6741840698ab676c119c2d26d1a0e933/image022.gif\" alt=\"Two Quarters and One Nickel.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 29
@@ -1044,37 +1050,48 @@
                       "id": "node-page-97142-p-30",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>In this case, P(Q2)=1/3. However, if Q1 has not occurred (i.e., the first coin was not a quarter, but a nickel), then when the woman is selecting the second coin, she has in her pocket:</p>",
+                      "value": "<p>In this case, P(Q2)=2/3.</p>",
                       "placement": {
                         "region": "document",
                         "order": 30
                       }
                     },
                     {
-                      "id": "node-page-97142-image-31",
+                      "id": "node-page-97142-p-31",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/67/6741840698ab676c119c2d26d1a0e933/image022.gif\" alt=\"Two Quarters and One Nickel.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>In these last two examples, we could actually have done some calculation in order to check whether or not the two events are independent or not. Sometimes we can just use common sense to guide us as to whether two events are independent. Here is an example.</p>",
                       "placement": {
                         "region": "document",
                         "order": 31
                       }
-                    },
-                    {
-                      "id": "node-page-97142-p-32",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>In this case, P(Q2)=2/3.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 32
-                      }
-                    },
+                    }
+                  ],
+                  "source": {
+                    "oliType": "group",
+                    "purpose": "example"
+                  }
+                },
+                {
+                  "id": "node-page-97142-group-32",
+                  "nodeType": "group",
+                  "groupType": "oli-example",
+                  "layout": {
+                    "visualPreset": "example",
+                    "glue": {
+                      "mode": "example"
+                    }
+                  },
+                  "placement": {
+                    "region": "document",
+                    "order": 32
+                  },
+                  "children": [
                     {
                       "id": "node-page-97142-p-33",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>In these last two examples, we could actually have done some calculation in order to check whether or not the two events are independent or not. Sometimes we can just use common sense to guide us as to whether two events are independent. Here is an example.</p>",
+                      "value": "<p>A family has 4 children, two of whom are selected at random. Let B1 be the event that one child has blue eyes, and B2 be the event that the other chosen child has blue eyes. In this case, B1 and B2 are not independent, since we know that eye color is hereditary, so whether or not one child is blue-eyed will increase or decrease the chances that the other child has blue eyes, respectively.</p>",
                       "placement": {
                         "region": "document",
                         "order": 33
@@ -1105,20 +1122,10 @@
                       "id": "node-page-97142-p-35",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Two people are selected at random from all people in the United States. Let B1 be the event that one of the people has blue eyes and B2 be the event that the other person has blue eyes. In this case, since they were chosen at random, whether one of them has blue eyes has no effect on the likelihood that the other one has blue eyes, and therefore B1 and B2 are independent. On the other hand...</p>",
                       "placement": {
                         "region": "document",
                         "order": 35
-                      }
-                    },
-                    {
-                      "id": "node-page-97142-p-36",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>A family has 4 children, two of whom are selected at random. Let B1 be the event that one child has blue eyes, and B2 be the event that the other chosen child has blue eyes. In this case, B1 and B2 are not independent, since we know that eye color is hereditary, so whether or not one child is blue-eyed will increase or decrease the chances that the other child has blue eyes, respectively.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 36
                       }
                     }
                   ],
@@ -1128,51 +1135,50 @@
                   }
                 },
                 {
-                  "id": "node-page-97142-group-37",
-                  "nodeType": "group",
-                  "groupType": "oli-example",
-                  "layout": {
-                    "visualPreset": "example",
-                    "glue": {
-                      "mode": "example"
-                    }
-                  },
+                  "id": "node-page-97142-p-36",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p><strong>Note:</strong></p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 36
+                  }
+                },
+                {
+                  "id": "node-page-97142-p-37",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>We can generalize what we learned in the last example and say that when two individuals are selected at random from a large population (like in the example, the entire U.S.) any event associated with one individual is independent of any event associated with the other individual. The fact that the two are chosen from a large population is key to the independence.</p>",
                   "placement": {
                     "region": "document",
                     "order": 37
-                  },
-                  "children": [
-                    {
-                      "id": "node-page-97142-p-38",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Title</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 38
-                      }
-                    },
-                    {
-                      "id": "node-page-97142-p-39",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Two people are selected at random from all people in the United States. Let B1 be the event that one of the people has blue eyes and B2 be the event that the other person has blue eyes. In this case, since they were chosen at random, whether one of them has blue eyes has no effect on the likelihood that the other one has blue eyes, and therefore B1 and B2 are independent. On the other hand...</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 39
-                      }
-                    }
-                  ],
-                  "source": {
-                    "oliType": "group",
-                    "purpose": "example"
+                  }
+                },
+                {
+                  "id": "node-page-97142-p-38",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>If we were to change the example to: There are 10 people in a room, 4 of which have blue eyes. Two people are chosen at random. Let B1 be the event that the first person has blue eyes and let B2 be the event that the second person has blue eyes. In this case, since the two are chosen from a group of only 10 (rather than a large population) the events B1 and B2 are not independent. Clearly, whether or not the first person has blue eyes (i.e., whether or not B1 occurs) does have an effect on whether B2 occurs. You will get more practice on this point in the activities below the next comment. </p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 38
+                  }
+                },
+                {
+                  "id": "node-page-97142-h1-39",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h1>Comment</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 39
                   }
                 },
                 {
                   "id": "node-page-97142-p-40",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p><strong>Note:</strong></p>",
+                  "value": "<p>It is quite common for students to initially get confused about the distinction between the idea of <strong>disjoint events</strong> and the idea of <strong>independent events</strong>. The purpose of this comment (and the activity that follows it) is to help students develop more understanding about these very different ideas. </p>",
                   "placement": {
                     "region": "document",
                     "order": 40
@@ -1182,7 +1188,7 @@
                   "id": "node-page-97142-p-41",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>We can generalize what we learned in the last example and say that when two individuals are selected at random from a large population (like in the example, the entire U.S.) any event associated with one individual is independent of any event associated with the other individual. The fact that the two are chosen from a large population is key to the independence.</p>",
+                  "value": "<p>The idea of <strong>disjoint events</strong> is about whether or not it is possible for the events to occur at the same time (see the examples on page 3 of the Probability Rules section).</p>",
                   "placement": {
                     "region": "document",
                     "order": 41
@@ -1192,17 +1198,17 @@
                   "id": "node-page-97142-p-42",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>If we were to change the example to: There are 10 people in a room, 4 of which have blue eyes. Two people are chosen at random. Let B1 be the event that the first person has blue eyes and let B2 be the event that the second person has blue eyes. In this case, since the two are chosen from a group of only 10 (rather than a large population) the events B1 and B2 are not independent. Clearly, whether or not the first person has blue eyes (i.e., whether or not B1 occurs) does have an effect on whether B2 occurs. You will get more practice on this point in the activities below the next comment. </p>",
+                  "value": "<p>The idea of <strong>independent events</strong> is about whether or not the events affect each other in the sense that the occurrence of one event affects the probability of the occurrence of the other (see the examples above).</p>",
                   "placement": {
                     "region": "document",
                     "order": 42
                   }
                 },
                 {
-                  "id": "node-page-97142-h1-43",
+                  "id": "node-page-97142-p-43",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<h1>Comment</h1>",
+                  "value": "<p>The following activity deals with the distinction between these concepts.</p>",
                   "placement": {
                     "region": "document",
                     "order": 43
@@ -1212,54 +1218,14 @@
                   "id": "node-page-97142-p-44",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>It is quite common for students to initially get confused about the distinction between the idea of <strong>disjoint events</strong> and the idea of <strong>independent events</strong>. The purpose of this comment (and the activity that follows it) is to help students develop more understanding about these very different ideas. </p>",
+                  "value": "<p>The purpose of this activity is to help you strengthen your understanding about the concepts of disjoint events and independent events, and the distinction between them.</p>",
                   "placement": {
                     "region": "document",
                     "order": 44
                   }
                 },
                 {
-                  "id": "node-page-97142-p-45",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The idea of <strong>disjoint events</strong> is about whether or not it is possible for the events to occur at the same time (see the examples on page 3 of the Probability Rules section).</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 45
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-46",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The idea of <strong>independent events</strong> is about whether or not the events affect each other in the sense that the occurrence of one event affects the probability of the occurrence of the other (see the examples above).</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 46
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-47",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The following activity deals with the distinction between these concepts.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 47
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-48",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>The purpose of this activity is to help you strengthen your understanding about the concepts of disjoint events and independent events, and the distinction between them.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 48
-                  }
-                },
-                {
-                  "id": "node-page-97142-group-49",
+                  "id": "node-page-97142-group-45",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -1270,21 +1236,21 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 49
+                    "order": 45
                   },
                   "children": [
                     {
-                      "id": "node-page-97142-p-50",
+                      "id": "node-page-97142-p-46",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>In each of the following questions, you are presented with a random experiment and two events related to it. You are asked to decide whether the events are disjoint or not, and whether the events are independent or not.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 50
+                        "order": 46
                       }
                     },
                     {
-                      "id": "node-page-97142-group-51",
+                      "id": "node-page-97142-group-47",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1295,7 +1261,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 51
+                        "order": 47
                       },
                       "children": [
                         {
@@ -1305,7 +1271,7 @@
                           "label": "Two people are selected simultaneously and at random from a very large population, and their blood type is checked.",
                           "placement": {
                             "region": "document",
-                            "order": 52
+                            "order": 48
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1316,6 +1282,24 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96078-context-1",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Two people are selected simultaneously and at random from a very large population, and their blood type is checked.</p>"
+                            },
+                            {
+                              "id": "node-96078-context-2",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A—person 1 has blood type O</p>"
+                            },
+                            {
+                              "id": "node-96078-context-3",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>B—person 2 has blood type O</p>"
+                            },
                             {
                               "id": "node-96078-row-A",
                               "nodeType": "group",
@@ -1330,7 +1314,7 @@
                                   "id": "node-96078-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>A—person 1 has blood type O</p>"
+                                  "value": "<p>(a) The two events are: </p>"
                                 },
                                 {
                                   "id": "node-96078-input-A",
@@ -1348,6 +1332,12 @@
                               ]
                             },
                             {
+                              "id": "node-96078-feedback-A",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-96078-row-B",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -1361,7 +1351,7 @@
                                   "id": "node-96078-label-B",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>B—person 2 has blood type O</p>"
+                                  "value": "<p>(b) The two events are: </p>"
                                 },
                                 {
                                   "id": "node-96078-input-B",
@@ -1379,7 +1369,7 @@
                               ]
                             },
                             {
-                              "id": "node-96078-feedback",
+                              "id": "node-96078-feedback-B",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1398,7 +1388,7 @@
                           "label": "A seminar class consists of five male students and 5 female students. Two of the 10 students are chosen at random for a role-playing exercise.",
                           "placement": {
                             "region": "document",
-                            "order": 53
+                            "order": 49
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1409,6 +1399,24 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95525-context-1",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A seminar class consists of five male students and 5 female students. Two of the 10 students are chosen at random for a role-playing exercise.</p>"
+                            },
+                            {
+                              "id": "node-95525-context-2",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A—the first chosen is male</p>"
+                            },
+                            {
+                              "id": "node-95525-context-3",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>B—the second chosen is female</p>"
+                            },
                             {
                               "id": "node-95525-row-A",
                               "nodeType": "group",
@@ -1423,7 +1431,7 @@
                                   "id": "node-95525-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>A—the first chosen is male</p>"
+                                  "value": "<p>(a) The events are: </p>"
                                 },
                                 {
                                   "id": "node-95525-input-A",
@@ -1441,6 +1449,12 @@
                               ]
                             },
                             {
+                              "id": "node-95525-feedback-A",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95525-row-B",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -1454,7 +1468,7 @@
                                   "id": "node-95525-label-B",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>B—the second chosen is female</p>"
+                                  "value": "<p>(b) The events are: </p>"
                                 },
                                 {
                                   "id": "node-95525-input-B",
@@ -1472,7 +1486,7 @@
                               ]
                             },
                             {
-                              "id": "node-95525-feedback",
+                              "id": "node-95525-feedback-B",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1491,7 +1505,7 @@
                           "label": "A telemarketer is calling a randomly chosen phone number.",
                           "placement": {
                             "region": "document",
-                            "order": 54
+                            "order": 50
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1502,6 +1516,24 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96579-context-1",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A telemarketer is calling a randomly chosen phone number.</p>"
+                            },
+                            {
+                              "id": "node-96579-context-2",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>A—the person answering the phone is male</p>"
+                            },
+                            {
+                              "id": "node-96579-context-3",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>B—the person answering the phone is female</p>"
+                            },
                             {
                               "id": "node-96579-row-A",
                               "nodeType": "group",
@@ -1516,7 +1548,7 @@
                                   "id": "node-96579-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>A—the person answering the phone is male</p>"
+                                  "value": "<p>(a) The two events are: </p>"
                                 },
                                 {
                                   "id": "node-96579-input-A",
@@ -1534,6 +1566,12 @@
                               ]
                             },
                             {
+                              "id": "node-96579-feedback-A",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-96579-row-B",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -1547,7 +1585,7 @@
                                   "id": "node-96579-label-B",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>B—the person answering the phone is female</p>"
+                                  "value": "<p>(b) The two events are: </p>"
                                 },
                                 {
                                   "id": "node-96579-input-B",
@@ -1565,7 +1603,7 @@
                               ]
                             },
                             {
-                              "id": "node-96579-feedback",
+                              "id": "node-96579-feedback-B",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1590,20 +1628,60 @@
                   }
                 },
                 {
-                  "id": "node-page-97142-p-55",
+                  "id": "node-page-97142-p-51",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>Let’s summarize the three parts of the activity:</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 51
+                  }
+                },
+                {
+                  "id": "node-page-97142-ul-52",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<ul><li><p>In Example 1: A and B are <strong>not disjoint</strong> and <strong>independent</strong></p></li><li><p>In Example 2: A and B are <strong>not disjoint</strong> and <strong>not independent</strong></p></li><li><p>In Example 3: A and B are <strong>disjoint</strong> and <strong>not independent</strong>.</p></li></ul>",
+                  "placement": {
+                    "region": "document",
+                    "order": 52
+                  }
+                },
+                {
+                  "id": "node-page-97142-p-53",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Why did we leave out the case when the events are disjoint and independent? The reason is that this case DOES NOT EXIST!</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 53
+                  }
+                },
+                {
+                  "id": "node-page-97142-table-54",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<table><tr><td><p> </p></td><td><p><strong>A and B Independent</strong></p></td><td><p><strong>A and B Not Independent</strong></p></td></tr><tr><td><p><strong>A and B Disjoint</strong></p></td><td><p><strong>DOES NOT EXIST</strong></p></td><td><p>Example 3</p></td></tr><tr><td><p><strong>A and B Not Disjoint</strong></p></td><td><p>Example 1</p></td><td><p>Example 2</p></td></tr></table>",
+                  "placement": {
+                    "region": "document",
+                    "order": 54
+                  }
+                },
+                {
+                  "id": "node-page-97142-p-55",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>If events are <strong>disjoint</strong> then they <strong>must be not independent (dependent)</strong></p>",
                   "placement": {
                     "region": "document",
                     "order": 55
                   }
                 },
                 {
-                  "id": "node-page-97142-ul-56",
+                  "id": "node-page-97142-p-56",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<ul><li><p>In Example 1: A and B are <strong>not disjoint</strong> and <strong>independent</strong></p></li><li><p>In Example 2: A and B are <strong>not disjoint</strong> and <strong>not independent</strong></p></li><li><p>In Example 3: A and B are <strong>disjoint</strong> and <strong>not independent</strong>.</p></li></ul>",
+                  "value": "<p>Why is that?</p>",
                   "placement": {
                     "region": "document",
                     "order": 56
@@ -1613,54 +1691,14 @@
                   "id": "node-page-97142-p-57",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>Why did we leave out the case when the events are disjoint and independent? The reason is that this case DOES NOT EXIST!</p>",
+                  "value": "<p>Recall: A and B disjoint means that they cannot happen together. In other words, A and B disjoint implies that if event A occurs then B does not and vice versa. Well… if that’s the case, knowing that event A has occurred dramatically changes the likelihood that event B occurs – that likelihood is <img src=\"&lt;m:math xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; overflow=&quot;scroll&quot;&gt;&lt;m:mrow&gt;&lt;m:mn&gt;0&lt;/m:mn&gt;&lt;/m:mrow&gt;&lt;/m:math&gt;\" alt=\"\">. This implies that A and B are not independent.</p>",
                   "placement": {
                     "region": "document",
                     "order": 57
                   }
                 },
                 {
-                  "id": "node-page-97142-table-58",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<table><tr><td><p> </p></td><td><p><strong>A and B Independent</strong></p></td><td><p><strong>A and B Not Independent</strong></p></td></tr><tr><td><p><strong>A and B Disjoint</strong></p></td><td><p><strong>DOES NOT EXIST</strong></p></td><td><p>Example 3</p></td></tr><tr><td><p><strong>A and B Not Disjoint</strong></p></td><td><p>Example 1</p></td><td><p>Example 2</p></td></tr></table>",
-                  "placement": {
-                    "region": "document",
-                    "order": 58
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-59",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>If events are <strong>disjoint</strong> then they <strong>must be not independent (dependent)</strong></p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 59
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-60",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>Why is that?</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 60
-                  }
-                },
-                {
-                  "id": "node-page-97142-p-61",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>Recall: A and B disjoint means that they cannot happen together. In other words, A and B disjoint implies that if event A occurs then B does not and vice versa. Well… if that’s the case, knowing that event A has occurred dramatically changes the likelihood that event B occurs – that likelihood is <img src=\"&lt;m:math xmlns:m=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot; overflow=&quot;scroll&quot;&gt;&lt;m:mrow&gt;&lt;m:mn&gt;0&lt;/m:mn&gt;&lt;/m:mrow&gt;&lt;/m:math&gt;\" alt=\"\">. This implies that A and B are not independent.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 61
-                  }
-                },
-                {
-                  "id": "node-page-97142-group-62",
+                  "id": "node-page-97142-group-58",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -1671,11 +1709,11 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 62
+                    "order": 58
                   },
                   "children": [
                     {
-                      "id": "node-page-97142-group-63",
+                      "id": "node-page-97142-group-59",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1686,7 +1724,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 63
+                        "order": 59
                       },
                       "children": [
                         {
@@ -1696,7 +1734,7 @@
                           "label": "Roughly 7% of American males in U.S. have some sort of color blindness.",
                           "placement": {
                             "region": "document",
-                            "order": 64
+                            "order": 60
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1707,6 +1745,36 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96453-context-1",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Roughly 7% of American males in U.S. have some sort of color blindness.</p>"
+                            },
+                            {
+                              "id": "node-96453-context-2",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Suppose that a medical researcher selects one American male at random.</p>"
+                            },
+                            {
+                              "id": "node-96453-context-3",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p><strong>Let A represent the event ’the selected male is color blind’.</strong></p>"
+                            },
+                            {
+                              "id": "node-96453-context-4",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p><strong>Let B represent the event ’the selected male is not color blind’.</strong></p>"
+                            },
+                            {
+                              "id": "node-96453-context-5",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Determine whether A and B are disjoint or independent.</p>"
+                            },
                             {
                               "id": "node-96453-row-A",
                               "nodeType": "group",
@@ -1721,7 +1789,7 @@
                                   "id": "node-96453-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p>Suppose that a medical researcher selects one American male at random.</p>"
+                                  "value": "<p>A and B are </p>"
                                 },
                                 {
                                   "id": "node-96453-input-A",
@@ -1739,7 +1807,7 @@
                               ]
                             },
                             {
-                              "id": "node-96453-feedback",
+                              "id": "node-96453-feedback-A",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1758,7 +1826,7 @@
                           "label": "A and B are",
                           "placement": {
                             "region": "document",
-                            "order": 65
+                            "order": 61
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1783,7 +1851,7 @@
                                   "id": "node-96045-label-B",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": ""
+                                  "value": "<p>A and B are </p>"
                                 },
                                 {
                                   "id": "node-96045-input-B",
@@ -1801,7 +1869,7 @@
                               ]
                             },
                             {
-                              "id": "node-96045-feedback",
+                              "id": "node-96045-feedback-B",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1820,7 +1888,7 @@
                       }
                     },
                     {
-                      "id": "node-page-97142-group-66",
+                      "id": "node-page-97142-group-62",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1831,7 +1899,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 66
+                        "order": 62
                       },
                       "children": [
                         {
@@ -1841,7 +1909,7 @@
                           "label": "Now, suppose the medical researcher selects two American males at random.",
                           "placement": {
                             "region": "document",
-                            "order": 67
+                            "order": 63
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1852,6 +1920,30 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95815-context-1",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Now, suppose the medical researcher selects two American males at random.</p>"
+                            },
+                            {
+                              "id": "node-95815-context-2",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p><strong>Let A represent the event &quot;the first male is color blind.&quot;</strong></p>"
+                            },
+                            {
+                              "id": "node-95815-context-3",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p><strong>Let B represent the event &quot;the second male is not colorblind.&quot;</strong></p>"
+                            },
+                            {
+                              "id": "node-95815-context-4",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Determine whether A and B are disjoint or independent.</p>"
+                            },
                             {
                               "id": "node-95815-row-C",
                               "nodeType": "group",
@@ -1866,7 +1958,7 @@
                                   "id": "node-95815-label-C",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": "<p><strong>Let A represent the event &quot;the first male is color blind.&quot;</strong></p>"
+                                  "value": "<p>A and B are </p>"
                                 },
                                 {
                                   "id": "node-95815-input-C",
@@ -1884,7 +1976,7 @@
                               ]
                             },
                             {
-                              "id": "node-95815-feedback",
+                              "id": "node-95815-feedback-C",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1903,7 +1995,7 @@
                           "label": "A and B are",
                           "placement": {
                             "region": "document",
-                            "order": 68
+                            "order": 64
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1928,7 +2020,7 @@
                                   "id": "node-95959-label-D",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": ""
+                                  "value": "<p>A and B are </p>"
                                 },
                                 {
                                   "id": "node-95959-input-D",
@@ -1946,7 +2038,7 @@
                               ]
                             },
                             {
-                              "id": "node-95959-feedback",
+                              "id": "node-95959-feedback-D",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -1971,13 +2063,13 @@
                   }
                 },
                 {
-                  "id": "node-page-97142-p-69",
+                  "id": "node-page-97142-p-65",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>Now that we understand the idea of independent events, we can finally get to the rule. As mentioned before, Rule 5 actually has two versions, one for finding P(A and B) in the special case in which the events A and B are independent, and a more general version for use when the events are not necessarily independent. We will first present the version of the multiplication rule that is restricted to independent events, and in the later we will revisit the rule and present the more general version.</p>",
                   "placement": {
                     "region": "document",
-                    "order": 69
+                    "order": 65
                   }
                 }
               ],
@@ -2059,27 +2151,27 @@
                       "id": "node-page-96938-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Recall the blood type example:</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
                       }
                     },
                     {
-                      "id": "node-page-96938-p-7",
+                      "id": "node-page-96938-image-7",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Recall the blood type example:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/17/17fdf894e1953b32bf9743f0faf60916/image011.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: 0.42;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 7
                       }
                     },
                     {
-                      "id": "node-page-96938-image-8",
+                      "id": "node-page-96938-p-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/17/17fdf894e1953b32bf9743f0faf60916/image011.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: 0.42;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>Two people are selected simultaneously and at random from all people in the United States. What is the probability that both have blood type O? </p>",
                       "placement": {
                         "region": "document",
                         "order": 8
@@ -2089,7 +2181,7 @@
                       "id": "node-page-96938-p-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Two people are selected simultaneously and at random from all people in the United States. What is the probability that both have blood type O? </p>",
+                      "value": "<p>Let O1= &quot;person 1 has blood type O&quot; and</p>",
                       "placement": {
                         "region": "document",
                         "order": 9
@@ -2099,7 +2191,7 @@
                       "id": "node-page-96938-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let O1= &quot;person 1 has blood type O&quot; and</p>",
+                      "value": "<p>O2= &quot;person 2 has blood type O&quot;</p>",
                       "placement": {
                         "region": "document",
                         "order": 10
@@ -2109,7 +2201,7 @@
                       "id": "node-page-96938-p-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>O2= &quot;person 2 has blood type O&quot;</p>",
+                      "value": "<p>We need to find P(O1 and O2)</p>",
                       "placement": {
                         "region": "document",
                         "order": 11
@@ -2119,7 +2211,7 @@
                       "id": "node-page-96938-p-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>We need to find P(O1 and O2)</p>",
+                      "value": "<p>Since they were chosen simultaneously and at random, the blood type of one has no effect on the blood type of the other. Therefore, O1 and O2 are independent, and we may apply Rule 5:</p>",
                       "placement": {
                         "region": "document",
                         "order": 12
@@ -2129,20 +2221,10 @@
                       "id": "node-page-96938-p-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Since they were chosen simultaneously and at random, the blood type of one has no effect on the blood type of the other. Therefore, O1 and O2 are independent, and we may apply Rule 5:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-96938-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>P(O1 and O2) = P(O1) * P(O2) = .44 * .44 = .1936.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 14
+                        "order": 13
                       }
                     }
                   ],
@@ -2152,7 +2234,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96938-group-15",
+                  "id": "node-page-96938-group-14",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -2163,7 +2245,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 15
+                    "order": 14
                   },
                   "children": [
                     {
@@ -2173,7 +2255,7 @@
                       "label": "A 2011 poll by the Pew Research Center for People and the Press estimated that 62% of U.S. adults favor the death penalty for persons convicted of murder, 31% oppose it, with the remaining 7% undecided.What is the probability that two randomly chosen U.S. adults support the death penalty for persons convicted of murder?",
                       "placement": {
                         "region": "document",
-                        "order": 16
+                        "order": 15
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -2225,7 +2307,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96938-group-17",
+                  "id": "node-page-96938-group-16",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -2236,7 +2318,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 17
+                    "order": 16
                   },
                   "children": [
                     {
@@ -2246,7 +2328,7 @@
                       "label": "In the 2000 presidential election, George Bush won 48% of the popular vote. In the 2004 presidential election, he won 51% of the popular vote. What is the probability that a randomly chosen voter voted for Bush in both elections?",
                       "placement": {
                         "region": "document",
-                        "order": 18
+                        "order": 17
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -2298,7 +2380,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96938-group-19",
+                  "id": "node-page-96938-group-18",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -2309,7 +2391,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 19
+                    "order": 18
                   },
                   "children": [
                     {
@@ -2319,7 +2401,7 @@
                       "label": "Recall the estimate by the Pew Research Center that 62% of U.S. adults favor the death penalty for murder. The same report gave a much lower estimate for the percentage of U.S. college graduates supporting the death penalty in cases of murder. According to census data from 2000, roughly 28% of U.S. adults have a college degree. What is the probability that a randomly selected U.S. adult has a college degree and favors the death penalty?Let A be the event that a U.S. adult has a college degree. Let B be the event that this person supports the death penalty. We want to find P(A and B). Which answer is correct, Answer 1 or 2?",
                       "placement": {
                         "region": "document",
-                        "order": 20
+                        "order": 19
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -2330,6 +2412,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96438-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Recall the estimate by the Pew Research Center that 62% of U.S. adults favor the death penalty for murder. The same report gave a much lower estimate for the percentage of U.S. college graduates supporting the death penalty in cases of murder. According to census data from 2000, roughly 28% of U.S. adults have a college degree. </p><p><strong>What is the probability that a randomly selected U.S. adult has a college degree and favors the death penalty?</strong></p><p>Let A be the event that a U.S. adult has a college degree. Let B be the event that this person supports the death penalty. We want to find P(A and B). </p><p>Which answer is correct, Answer 1 or 2?</p>"
+                        },
                         {
                           "id": "node-96438-answers",
                           "nodeType": "group",
@@ -2375,10 +2463,20 @@
                   }
                 },
                 {
-                  "id": "node-page-96938-h1-21",
+                  "id": "node-page-96938-h1-20",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h1>Comment</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 20
+                  }
+                },
+                {
+                  "id": "node-page-96938-p-21",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>The purpose of this comment is to point out the magnitude of P(A or B) and of P(A and B) relative to either one of the individual probabilities. Since probabilities are never negative, the probability of one event <strong>or</strong> another is always at least as large as either of the individual probabilities. Since probabilities are never more than 1, the probability of one event <strong>and</strong> another generally involves multiplying numbers that are less than 1, therefore can never be more than either of the individual probabilities.</p>",
                   "placement": {
                     "region": "document",
                     "order": 21
@@ -2388,24 +2486,14 @@
                   "id": "node-page-96938-p-22",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>The purpose of this comment is to point out the magnitude of P(A or B) and of P(A and B) relative to either one of the individual probabilities. Since probabilities are never negative, the probability of one event <strong>or</strong> another is always at least as large as either of the individual probabilities. Since probabilities are never more than 1, the probability of one event <strong>and</strong> another generally involves multiplying numbers that are less than 1, therefore can never be more than either of the individual probabilities.</p>",
+                  "value": "<p>Here is an example:</p>",
                   "placement": {
                     "region": "document",
                     "order": 22
                   }
                 },
                 {
-                  "id": "node-page-96938-p-23",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>Here is an example:</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 23
-                  }
-                },
-                {
-                  "id": "node-page-96938-group-24",
+                  "id": "node-page-96938-group-23",
                   "nodeType": "group",
                   "groupType": "oli-example",
                   "layout": {
@@ -2416,27 +2504,17 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 24
+                    "order": 23
                   },
                   "children": [
                     {
-                      "id": "node-page-96938-p-25",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Title</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 25
-                      }
-                    },
-                    {
-                      "id": "node-page-96938-p-26",
+                      "id": "node-page-96938-p-24",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>Consider the event A that a randomly chosen person has blood type A. Modify it to a more general event—that a randomly chosen person has blood type A or B—and the probability increases. Modify it to a more specific (or restrictive) event—that not just one randomly chosen person has blood type A, but that out of two simultaneously randomly chosen people, person 1 will have type A and person 2 will have type B—and the probability decreases.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 26
+                        "order": 24
                       }
                     }
                   ],
@@ -2446,27 +2524,27 @@
                   }
                 },
                 {
-                  "id": "node-page-96938-p-27",
+                  "id": "node-page-96938-p-25",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>It is important to mention this in order to root out a common misconception. The word &quot;and&quot; is associated in our minds with &quot;adding more stuff.&quot; Therefore, some students <strong>incorrectly</strong> think that P(A and B) should be larger than either one of the individual probabilities, while it is actually smaller, since it is a more specific (restrictive) event. Also, the word &quot;or&quot; is associated in our minds with &quot;having to choose between&quot; or &quot;losing something,&quot; and therefore some students incorrectly think that P(A or B) should be smaller than either one of the individual probabilities, while it is actually larger, since it is a more general event.</p>",
                   "placement": {
                     "region": "document",
-                    "order": 27
+                    "order": 25
                   }
                 },
                 {
-                  "id": "node-page-96938-p-28",
+                  "id": "node-page-96938-p-26",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>Practically, you can use this comment to check yourself when solving problems. For example, if you solve a problem that involves &quot;or,&quot; and the resulting probability is smaller than either one of the individual probabilities, then you know you have made a mistake somewhere.</p>",
                   "placement": {
                     "region": "document",
-                    "order": 28
+                    "order": 26
                   }
                 },
                 {
-                  "id": "node-page-96938-group-29",
+                  "id": "node-page-96938-group-27",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -2477,17 +2555,17 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 29
+                    "order": 27
                   },
                   "children": [
                     {
-                      "id": "node-page-96938-p-30",
+                      "id": "node-page-96938-p-28",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>Pick a student at random. Let B denote the event that the student ate breakfast this morning; let M denote the event that the student is male. </p>",
                       "placement": {
                         "region": "document",
-                        "order": 30
+                        "order": 28
                       }
                     },
                     {
@@ -2497,7 +2575,7 @@
                       "label": "One of the following choices is larger than the other two. Which is it?",
                       "placement": {
                         "region": "document",
-                        "order": 31
+                        "order": 29
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -2508,6 +2586,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-95776-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>One of the following choices is larger than the other two. Which is it?</p>"
+                        },
                         {
                           "id": "node-95776-answers",
                           "nodeType": "group",
@@ -2562,7 +2646,7 @@
                       "label": "One of the following choices is smaller than the other two. Which is it?",
                       "placement": {
                         "region": "document",
-                        "order": 32
+                        "order": 30
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -2573,6 +2657,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96117-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>One of the following choices is smaller than the other two. Which is it?</p>"
+                        },
                         {
                           "id": "node-96117-answers",
                           "nodeType": "group",
@@ -2705,24 +2795,14 @@
                       "id": "node-page-96716-p-6",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Three people are chosen at random from a large population. What is the probability that all three have blood type B? We&#39;ll use the usual notation of B1, B2 and B3 for the events that persons 1, 2 and 3 have blood type B, respectively. We need to find P(B1 and B2 and B3). Let&#39;s solve this one together:</p>",
                       "placement": {
                         "region": "document",
                         "order": 6
                       }
                     },
                     {
-                      "id": "node-page-96716-p-7",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>Three people are chosen at random from a large population. What is the probability that all three have blood type B? We&#39;ll use the usual notation of B1, B2 and B3 for the events that persons 1, 2 and 3 have blood type B, respectively. We need to find P(B1 and B2 and B3). Let&#39;s solve this one together:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 7
-                      }
-                    },
-                    {
-                      "id": "node-page-96716-group-8",
+                      "id": "node-page-96716-group-7",
                       "nodeType": "group",
                       "groupType": "oli-learnbydoing",
                       "layout": {
@@ -2733,7 +2813,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 8
+                        "order": 7
                       },
                       "children": [
                         {
@@ -2743,7 +2823,7 @@
                           "label": "The events B1, B2, and B3 are  since the three people  and therefore using the extended  P(B1 and B2 and B3) =",
                           "placement": {
                             "region": "document",
-                            "order": 9
+                            "order": 8
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -2768,7 +2848,7 @@
                                   "id": "node-95520-label-A",
                                   "nodeType": "atomic",
                                   "atomType": "html-block",
-                                  "value": ""
+                                  "value": "<p>The events B1, B2, and B3 are  since the three people  and therefore using the extended  P(B1 and B2 and B3) = </p>"
                                 },
                                 {
                                   "id": "node-95520-input-A",
@@ -2786,6 +2866,12 @@
                               ]
                             },
                             {
+                              "id": "node-95520-feedback-A",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95520-row-B",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -2795,12 +2881,6 @@
                                 }
                               },
                               "children": [
-                                {
-                                  "id": "node-95520-label-B",
-                                  "nodeType": "atomic",
-                                  "atomType": "html-block",
-                                  "value": ""
-                                },
                                 {
                                   "id": "node-95520-input-B",
                                   "nodeType": "atomic",
@@ -2818,6 +2898,12 @@
                               ]
                             },
                             {
+                              "id": "node-95520-feedback-B",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95520-row-C",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -2827,12 +2913,6 @@
                                 }
                               },
                               "children": [
-                                {
-                                  "id": "node-95520-label-C",
-                                  "nodeType": "atomic",
-                                  "atomType": "html-block",
-                                  "value": ""
-                                },
                                 {
                                   "id": "node-95520-input-C",
                                   "nodeType": "atomic",
@@ -2849,6 +2929,12 @@
                               ]
                             },
                             {
+                              "id": "node-95520-feedback-C",
+                              "nodeType": "atomic",
+                              "atomType": "message-box",
+                              "value": ""
+                            },
+                            {
                               "id": "node-95520-row-D",
                               "nodeType": "group",
                               "groupType": "dropdown-row",
@@ -2858,12 +2944,6 @@
                                 }
                               },
                               "children": [
-                                {
-                                  "id": "node-95520-label-D",
-                                  "nodeType": "atomic",
-                                  "atomType": "html-block",
-                                  "value": ""
-                                },
                                 {
                                   "id": "node-95520-input-D",
                                   "nodeType": "atomic",
@@ -2880,7 +2960,7 @@
                               ]
                             },
                             {
-                              "id": "node-95520-feedback",
+                              "id": "node-95520-feedback-D",
                               "nodeType": "atomic",
                               "atomType": "message-box",
                               "value": ""
@@ -2905,17 +2985,17 @@
                   }
                 },
                 {
-                  "id": "node-page-96716-p-10",
+                  "id": "node-page-96716-p-9",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>Here is another example that might be quite surprising.</p>",
                   "placement": {
                     "region": "document",
-                    "order": 10
+                    "order": 9
                   }
                 },
                 {
-                  "id": "node-page-96716-group-11",
+                  "id": "node-page-96716-group-10",
                   "nodeType": "group",
                   "groupType": "oli-example",
                   "layout": {
@@ -2926,14 +3006,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 11
+                    "order": 10
                   },
                   "children": [
+                    {
+                      "id": "node-page-96716-p-11",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>A fair coin is tossed 10 times. Which of the following two outcomes is more likely? </p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 11
+                      }
+                    },
                     {
                       "id": "node-page-96716-p-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>(a) HHHHHHHHHH </p>",
                       "placement": {
                         "region": "document",
                         "order": 12
@@ -2943,34 +3033,14 @@
                       "id": "node-page-96716-p-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A fair coin is tossed 10 times. Which of the following two outcomes is more likely? </p>",
+                      "value": "<p>(b) HTTHHTHTTH</p>",
                       "placement": {
                         "region": "document",
                         "order": 13
                       }
                     },
                     {
-                      "id": "node-page-96716-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>(a) HHHHHHHHHH </p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-96716-p-15",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>(b) HTTHHTHTTH</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 15
-                      }
-                    },
-                    {
-                      "id": "node-page-96716-group-16",
+                      "id": "node-page-96716-group-14",
                       "nodeType": "group",
                       "groupType": "oli-learnbydoing",
                       "layout": {
@@ -2981,7 +3051,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 16
+                        "order": 14
                       },
                       "children": [
                         {
@@ -2991,7 +3061,7 @@
                           "label": "Before we solve this, what does your intuition tell you?",
                           "placement": {
                             "region": "document",
-                            "order": 17
+                            "order": 15
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -3002,6 +3072,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96286-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>Before we solve this, what does your intuition tell you?</p>"
+                            },
                             {
                               "id": "node-96286-answers",
                               "nodeType": "group",
@@ -3056,10 +3132,30 @@
                       }
                     },
                     {
-                      "id": "node-page-96716-p-18",
+                      "id": "node-page-96716-p-16",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<p>In fact, they are equally likely. The 10 tosses are independent, so we&#39;ll use the Multiplication Rule for Independent Events:</p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 16
+                      }
+                    },
+                    {
+                      "id": "node-page-96716-p-17",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>P(HHHHHHHHHH) = P(H) * P(H) * ... *P(H) = 1/2 * 1/2 *... * 1/2 = (1/2)<sup>10</sup></p>",
+                      "placement": {
+                        "region": "document",
+                        "order": 17
+                      }
+                    },
+                    {
+                      "id": "node-page-96716-p-18",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>P(HTTHHTHTTH) = P(H) * P(T) * ... * P(H) = 1/2 * 1/2 *... * 1/2 = (1/2)<sup>10</sup></p>",
                       "placement": {
                         "region": "document",
                         "order": 18
@@ -3069,7 +3165,7 @@
                       "id": "node-page-96716-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(HHHHHHHHHH) = P(H) * P(H) * ... *P(H) = 1/2 * 1/2 *... * 1/2 = (1/2)<sup>10</sup></p>",
+                      "value": "<p>Here is the idea:</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -3079,7 +3175,7 @@
                       "id": "node-page-96716-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(HTTHHTHTTH) = P(H) * P(T) * ... * P(H) = 1/2 * 1/2 *... * 1/2 = (1/2)<sup>10</sup></p>",
+                      "value": "<p>My random experiment here is tossing a coin 10 times. You can imagine how huge the sample space is.</p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -3089,30 +3185,10 @@
                       "id": "node-page-96716-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Here is the idea:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-96716-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>My random experiment here is tossing a coin 10 times. You can imagine how huge the sample space is.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 22
-                      }
-                    },
-                    {
-                      "id": "node-page-96716-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>There are actually 1,024 possible outcomes to this experiment, all of which are equally likely. Therefore, while it is true that it is more likely to get an outcome that has 5 heads and 5 tails than an outcome that has only heads (since there is only one possible outcome of the latter kind, and many possible outcomes of the former), if I am comparing 2 <strong>specific outcomes</strong> as I do here, they are equally likely.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 23
+                        "order": 21
                       }
                     }
                   ],
@@ -3122,7 +3198,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96716-group-24",
+                  "id": "node-page-96716-group-22",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -3133,7 +3209,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 24
+                    "order": 22
                   },
                   "children": [
                     {
@@ -3143,7 +3219,7 @@
                       "label": "Recall: Three people are chosen at random. (Assume the choices are independent events). What is the probability that they all have the same blood type?",
                       "placement": {
                         "region": "document",
-                        "order": 25
+                        "order": 23
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -3394,7 +3470,7 @@
                       "id": "node-page-96734-p-17",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>A patient with blood type O desperately needs a blood transfusion. Since a person with blood type O can receive blood only from another person who has blood type O, the blood bank decides to choose 10 donors at random and hope that at least one of them has blood type O. Find P(at least one of the 10 donors has blood type O). To make things simpler, let&#39;s denote the event &quot;at least one has blood type O&quot; by L (for at <strong>L</strong>east).</p>",
                       "placement": {
                         "region": "document",
                         "order": 17
@@ -3404,7 +3480,7 @@
                       "id": "node-page-96734-p-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A patient with blood type O desperately needs a blood transfusion. Since a person with blood type O can receive blood only from another person who has blood type O, the blood bank decides to choose 10 donors at random and hope that at least one of them has blood type O. Find P(at least one of the 10 donors has blood type O). To make things simpler, let&#39;s denote the event &quot;at least one has blood type O&quot; by L (for at <strong>L</strong>east).</p>",
+                      "value": "<p>Solving this using the brute force method would require a prohibitive amount of work. As before, we would need to list all the possible outcomes of blood types of 10 people (using either &quot;O&quot; or &quot;not O&quot;), but this time there are 1,024 of them! We would then need to identify those outcomes that L consists of (i.e., the outcomes in which at least one of the 10 people has blood type O). Next, we would need to find the probability of each of those outcomes and add those probabilities up. <strong>W</strong> There must be a better way.</p>",
                       "placement": {
                         "region": "document",
                         "order": 18
@@ -3414,7 +3490,7 @@
                       "id": "node-page-96734-p-19",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Solving this using the brute force method would require a prohibitive amount of work. As before, we would need to list all the possible outcomes of blood types of 10 people (using either &quot;O&quot; or &quot;not O&quot;), but this time there are 1,024 of them! We would then need to identify those outcomes that L consists of (i.e., the outcomes in which at least one of the 10 people has blood type O). Next, we would need to find the probability of each of those outcomes and add those probabilities up. <strong>W</strong> There must be a better way.</p>",
+                      "value": "<p>Instead of doing all the work listed above, we can use the Complement Rule, which says P(L) = 1 - P(not L). As we explained before, in this case &quot;not L&quot; is the event &quot;none of the 10 have blood type O,&quot; or in other words that all 10 have a blood type other than O. So we can simply solve (using our regular notation from this module):</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -3424,7 +3500,7 @@
                       "id": "node-page-96734-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Instead of doing all the work listed above, we can use the Complement Rule, which says P(L) = 1 - P(not L). As we explained before, in this case &quot;not L&quot; is the event &quot;none of the 10 have blood type O,&quot; or in other words that all 10 have a blood type other than O. So we can simply solve (using our regular notation from this module):</p>",
+                      "value": "<p>P(L) = 1 - P(not L) = 1 - P(not O1 <strong>and</strong> not O2 <strong>and</strong> not O3 <strong>and</strong> not O4 <strong>and</strong> not O5 <strong>and</strong> not O6 <strong>and</strong> not O7 <strong>and</strong> not O8 <strong>and</strong> not O9 <strong>and </strong>not O10). Now, using the multiplication rule, = 1 - (.56*.56*.56*.56*.56*.56*.56*.56*.56*.56) = 1 - .003 = .997.</p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -3434,20 +3510,10 @@
                       "id": "node-page-96734-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>P(L) = 1 - P(not L) = 1 - P(not O1 <strong>and</strong> not O2 <strong>and</strong> not O3 <strong>and</strong> not O4 <strong>and</strong> not O5 <strong>and</strong> not O6 <strong>and</strong> not O7 <strong>and</strong> not O8 <strong>and</strong> not O9 <strong>and </strong>not O10). Now, using the multiplication rule, = 1 - (.56*.56*.56*.56*.56*.56*.56*.56*.56*.56) = 1 - .003 = .997.</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 21
-                      }
-                    },
-                    {
-                      "id": "node-page-96734-p-22",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
                       "value": "<p>Therefore, it is almost certain that if we choose 10 people at random, we&#39;ll find that at least one of them has blood type O. This result makes sense, since 44% have blood type O, and so out of 10 people it is almost certain that at least one will have blood type O.</p>",
                       "placement": {
                         "region": "document",
-                        "order": 22
+                        "order": 21
                       }
                     }
                   ],
@@ -3457,17 +3523,17 @@
                   }
                 },
                 {
-                  "id": "node-page-96734-p-23",
+                  "id": "node-page-96734-p-22",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>The purpose of thefollowing activity is to guide you through another problem that involves finding P(at least one of...).</p>",
                   "placement": {
                     "region": "document",
-                    "order": 23
+                    "order": 22
                   }
                 },
                 {
-                  "id": "node-page-96734-group-24",
+                  "id": "node-page-96734-group-23",
                   "nodeType": "group",
                   "groupType": "oli-learnbydoing",
                   "layout": {
@@ -3478,14 +3544,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 24
+                    "order": 23
                   },
                   "children": [
                     {
-                      "id": "node-page-96734-h1-25",
+                      "id": "node-page-96734-h1-24",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Learn By Doing</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 24
+                      }
+                    },
+                    {
+                      "id": "node-page-96734-p-25",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>A quiz consists of 10 multiple-choice questions, each with 4 possible answers, only one of which is correct. A student who does not attend lectures on a regular basis has no clue what the answers are, and therefore uses an independent random guess to answer each of the 10 questions. What is the probability that the student gets at least one question right?</p>",
                       "placement": {
                         "region": "document",
                         "order": 25
@@ -3495,7 +3571,7 @@
                       "id": "node-page-96734-p-26",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>A quiz consists of 10 multiple-choice questions, each with 4 possible answers, only one of which is correct. A student who does not attend lectures on a regular basis has no clue what the answers are, and therefore uses an independent random guess to answer each of the 10 questions. What is the probability that the student gets at least one question right?</p>",
+                      "value": "<p>Let&#39;s decide on some notations.</p>",
                       "placement": {
                         "region": "document",
                         "order": 26
@@ -3505,7 +3581,7 @@
                       "id": "node-page-96734-p-27",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let&#39;s decide on some notations.</p>",
+                      "value": "<p>Let L be the event that the student gets at least one of the questions right.</p>",
                       "placement": {
                         "region": "document",
                         "order": 27
@@ -3515,24 +3591,14 @@
                       "id": "node-page-96734-p-28",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Let L be the event that the student gets at least one of the questions right.</p>",
+                      "value": "<p>We&#39;ll use R for getting a question right and W for getting it wrong (W is essentially &quot;not R&quot;).</p>",
                       "placement": {
                         "region": "document",
                         "order": 28
                       }
                     },
                     {
-                      "id": "node-page-96734-p-29",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>We&#39;ll use R for getting a question right and W for getting it wrong (W is essentially &quot;not R&quot;).</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 29
-                      }
-                    },
-                    {
-                      "id": "node-page-96734-group-30",
+                      "id": "node-page-96734-group-29",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -3543,7 +3609,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 30
+                        "order": 29
                       },
                       "children": [
                         {
@@ -3553,7 +3619,7 @@
                           "label": "Given the \"tactic\" of the student, what is P(R) and P(W)?",
                           "placement": {
                             "region": "document",
-                            "order": 31
+                            "order": 30
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -3605,7 +3671,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96734-group-32",
+                      "id": "node-page-96734-group-31",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -3616,7 +3682,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 32
+                        "order": 31
                       },
                       "children": [
                         {
@@ -3626,7 +3692,7 @@
                           "label": "Since L is an event of the type \"at least one of ... ,\" it is much easier to find P(not L) and then use the Complement Rule.P(L) = 1 - P(not L).Write in words what the event \"not L\" is, and then find P(not L) using the Multiplication Rule.",
                           "placement": {
                             "region": "document",
-                            "order": 33
+                            "order": 32
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -3678,7 +3744,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96734-group-34",
+                      "id": "node-page-96734-group-33",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -3689,7 +3755,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 34
+                        "order": 33
                       },
                       "children": [
                         {
@@ -3699,7 +3765,7 @@
                           "label": "Now, complete the problem by finding P(L)",
                           "placement": {
                             "region": "document",
-                            "order": 35
+                            "order": 34
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -3757,7 +3823,7 @@
                   }
                 },
                 {
-                  "id": "node-page-96734-group-36",
+                  "id": "node-page-96734-group-35",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -3768,7 +3834,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 36
+                    "order": 35
                   },
                   "children": [
                     {
@@ -3778,7 +3844,7 @@
                       "label": "According to a study published by the National Institute of Health, during intercourse condom breakage rates fall between 0.4% and 2.3%. Suppose that the breakage rate of Brand X is 2%. A Brand X Pleasure Pack contains 12 condoms. What is the probability that at least one of the condoms in the pack will break during intercourse?",
                       "placement": {
                         "region": "document",
-                        "order": 37
+                        "order": 36
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -3789,6 +3855,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96243-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>According to a study published by the National Institute of Health, during intercourse condom breakage rates fall between 0.4% and 2.3%. Suppose that the breakage rate of Brand X is 2%. A Brand X Pleasure Pack contains 12 condoms. What is the probability that at least one of the condoms in the pack will break during intercourse?</p>"
+                        },
                         {
                           "id": "node-96243-answers",
                           "nodeType": "group",
@@ -5142,7 +5214,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96078-feedback"
+                      "value": "node-96078-feedback-A"
                     }
                   }
                 },
@@ -5238,7 +5310,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96078-feedback"
+                      "value": "node-96078-feedback-A"
                     }
                   }
                 },
@@ -5334,7 +5406,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96078-feedback"
+                      "value": "node-96078-feedback-B"
                     }
                   }
                 },
@@ -5430,7 +5502,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96078-feedback"
+                      "value": "node-96078-feedback-B"
                     }
                   }
                 },
@@ -5526,7 +5598,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95525-feedback"
+                      "value": "node-95525-feedback-A"
                     }
                   }
                 },
@@ -5622,7 +5694,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95525-feedback"
+                      "value": "node-95525-feedback-A"
                     }
                   }
                 },
@@ -5718,7 +5790,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95525-feedback"
+                      "value": "node-95525-feedback-B"
                     }
                   }
                 },
@@ -5814,7 +5886,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95525-feedback"
+                      "value": "node-95525-feedback-B"
                     }
                   }
                 },
@@ -5910,7 +5982,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96579-feedback"
+                      "value": "node-96579-feedback-A"
                     }
                   }
                 },
@@ -6006,7 +6078,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96579-feedback"
+                      "value": "node-96579-feedback-A"
                     }
                   }
                 },
@@ -6102,7 +6174,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96579-feedback"
+                      "value": "node-96579-feedback-B"
                     }
                   }
                 },
@@ -6198,7 +6270,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96579-feedback"
+                      "value": "node-96579-feedback-B"
                     }
                   }
                 },
@@ -6294,7 +6366,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96453-feedback"
+                      "value": "node-96453-feedback-A"
                     }
                   }
                 },
@@ -6390,7 +6462,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96453-feedback"
+                      "value": "node-96453-feedback-A"
                     }
                   }
                 },
@@ -6486,7 +6558,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96045-feedback"
+                      "value": "node-96045-feedback-B"
                     }
                   }
                 },
@@ -6582,7 +6654,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96045-feedback"
+                      "value": "node-96045-feedback-B"
                     }
                   }
                 },
@@ -6678,7 +6750,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95815-feedback"
+                      "value": "node-95815-feedback-C"
                     }
                   }
                 },
@@ -6774,7 +6846,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95815-feedback"
+                      "value": "node-95815-feedback-C"
                     }
                   }
                 },
@@ -6870,7 +6942,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95959-feedback"
+                      "value": "node-95959-feedback-D"
                     }
                   }
                 },
@@ -6966,7 +7038,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95959-feedback"
+                      "value": "node-95959-feedback-D"
                     }
                   }
                 },
@@ -6983,6 +7055,41 @@
                     "type": "variable",
                     "name": "input"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96338.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96338:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -7007,8 +7114,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96338-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -7065,8 +7193,43 @@
                   "nodeId": "node-96338-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.95421.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "95421:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -7091,8 +7254,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-95421-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -7149,7 +7333,7 @@
                   "nodeId": "node-95421-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]
@@ -7998,7 +8182,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-A"
                     }
                   }
                 },
@@ -8094,7 +8278,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-A"
                     }
                   }
                 },
@@ -8190,7 +8374,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-B"
                     }
                   }
                 },
@@ -8286,7 +8470,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-B"
                     }
                   }
                 },
@@ -8382,7 +8566,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-B"
                     }
                   }
                 },
@@ -8478,7 +8662,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-C"
                     }
                   }
                 },
@@ -8574,7 +8758,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-C"
                     }
                   }
                 },
@@ -8670,7 +8854,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-D"
                     }
                   }
                 },
@@ -8766,7 +8950,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-95520-feedback"
+                      "value": "node-95520-feedback-D"
                     }
                   }
                 },
@@ -9075,6 +9259,41 @@
               ]
             },
             {
+              "id": "sparc-intro-stats.96072.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96072:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
               "id": "sparc-intro-stats.96072.short-answer-submit",
               "module": "chance-of-a-and-b",
               "salience": 30,
@@ -9095,8 +9314,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96072-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -9153,8 +9393,43 @@
                   "nodeId": "node-96072-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96259.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96259:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -9179,8 +9454,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96259-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -9237,8 +9533,43 @@
                   "nodeId": "node-96259-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96470.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96470:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -9263,8 +9594,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96470-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -9321,8 +9673,43 @@
                   "nodeId": "node-96470-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
+                }
+              ]
+            },
+            {
+              "id": "sparc-intro-stats.96574.short-answer-input",
+              "module": "chance-of-a-and-b",
+              "salience": 30,
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bind",
+                      "variable": "pageKey"
+                    },
+                    "selection": {
+                      "type": "literal",
+                      "value": "96574:input"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "UpdateTextField"
+                    },
+                    "input": {
+                      "type": "bind",
+                      "variable": "learnerInput"
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
                 }
               ]
             },
@@ -9347,8 +9734,29 @@
                       "value": "ButtonPressed"
                     },
                     "input": {
+                      "type": "literal",
+                      "value": "submit"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "pageKey": {
+                      "type": "bound",
+                      "variable": "pageKey"
+                    },
+                    "node": {
+                      "type": "literal",
+                      "value": "node-96574-input"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "value"
+                    },
+                    "value": {
                       "type": "bind",
-                      "variable": "input"
+                      "variable": "learnerInput"
                     }
                   }
                 }
@@ -9405,7 +9813,7 @@
                   "nodeId": "node-96574-input",
                   "responseValue": {
                     "type": "variable",
-                    "name": "input"
+                    "name": "learnerInput"
                   }
                 }
               ]

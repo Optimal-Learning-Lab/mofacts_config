@@ -448,6 +448,12 @@
                       },
                       "children": [
                         {
+                          "id": "node-96371-context-1",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Probability is a measure of how likely an event is to occur. Choose the probability that best matches each of the following statements:</p>"
+                        },
+                        {
                           "id": "node-96371-row-A",
                           "nodeType": "group",
                           "groupType": "dropdown-row",
@@ -481,6 +487,12 @@
                               "expected": "0"
                             }
                           ]
+                        },
+                        {
+                          "id": "node-96371-feedback-A",
+                          "nodeType": "atomic",
+                          "atomType": "message-box",
+                          "value": ""
                         },
                         {
                           "id": "node-96371-row-B",
@@ -518,6 +530,12 @@
                           ]
                         },
                         {
+                          "id": "node-96371-feedback-B",
+                          "nodeType": "atomic",
+                          "atomType": "message-box",
+                          "value": ""
+                        },
+                        {
                           "id": "node-96371-row-C",
                           "nodeType": "group",
                           "groupType": "dropdown-row",
@@ -551,6 +569,12 @@
                               "expected": "0.01"
                             }
                           ]
+                        },
+                        {
+                          "id": "node-96371-feedback-C",
+                          "nodeType": "atomic",
+                          "atomType": "message-box",
+                          "value": ""
                         },
                         {
                           "id": "node-96371-row-D",
@@ -588,7 +612,7 @@
                           ]
                         },
                         {
-                          "id": "node-96371-feedback",
+                          "id": "node-96371-feedback-D",
                           "nodeType": "atomic",
                           "atomType": "message-box",
                           "value": ""
@@ -1329,27 +1353,27 @@
                       "id": "node-page-96980-p-8",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>As previously discussed, all human blood can be typed as O, A, Bor AB. In addition, the frequency of the occurrence of these blood types varies by ethnic and racial groups. According to Stanford University&#39;s Blood Center (<a href=\"http://bloodcenter.stanford.edu\" target=\"_blank\" rel=\"noopener noreferrer\">bloodcenter.stanford.edu</a>), these are the probabilities of human blood types in the United States (the probability for type A has been omitted on purpose):</p>",
                       "placement": {
                         "region": "document",
                         "order": 8
                       }
                     },
                     {
-                      "id": "node-page-96980-p-9",
+                      "id": "node-page-96980-image-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>As previously discussed, all human blood can be typed as O, A, Bor AB. In addition, the frequency of the occurrence of these blood types varies by ethnic and racial groups. According to Stanford University&#39;s Blood Center (<a href=\"http://bloodcenter.stanford.edu\" target=\"_blank\" rel=\"noopener noreferrer\">bloodcenter.stanford.edu</a>), these are the probabilities of human blood types in the United States (the probability for type A has been omitted on purpose):</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/b4/b4cc9ba62dbbf80abfb9fdef4deadce1/image010.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: ?;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 9
                       }
                     },
                     {
-                      "id": "node-page-96980-image-10",
+                      "id": "node-page-96980-p-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/b4/b4cc9ba62dbbf80abfb9fdef4deadce1/image010.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: ?;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>.</p>",
                       "placement": {
                         "region": "document",
                         "order": 10
@@ -1359,7 +1383,7 @@
                       "id": "node-page-96980-p-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>.</p>",
+                      "value": "<p><strong>Motivating question for rule 2:</strong> A person in the United States is chosen at random. What is the probability of the person having blood type A?</p>",
                       "placement": {
                         "region": "document",
                         "order": 11
@@ -1369,30 +1393,20 @@
                       "id": "node-page-96980-p-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p><strong>Motivating question for rule 2:</strong> A person in the United States is chosen at random. What is the probability of the person having blood type A?</p>",
+                      "value": "<p><strong>Answer:</strong> Our intuition tells us that since the four blood types O, A, B, and AB exhaust all the possibilities, their probabilities together must sum to 1, which is the probability of a &quot;certain&quot; event (a person has one of these 4 blood types for certain). Since the probabilities of O, B, and AB together sum to .44 + .1 + .04 = .58, the probability of type A must be the remaining .42 (1 - .58 = .42):</p>",
                       "placement": {
                         "region": "document",
                         "order": 12
                       }
                     },
                     {
-                      "id": "node-page-96980-p-13",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p><strong>Answer:</strong> Our intuition tells us that since the four blood types O, A, B, and AB exhaust all the possibilities, their probabilities together must sum to 1, which is the probability of a &quot;certain&quot; event (a person has one of these 4 blood types for certain). Since the probabilities of O, B, and AB together sum to .44 + .1 + .04 = .58, the probability of type A must be the remaining .42 (1 - .58 = .42):</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 13
-                      }
-                    },
-                    {
-                      "id": "node-page-96980-image-14",
+                      "id": "node-page-96980-image-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/17/17fdf894e1953b32bf9743f0faf60916/image011.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: 0.42;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
-                        "order": 14
+                        "order": 13
                       }
                     }
                   ],
@@ -1402,77 +1416,77 @@
                   }
                 },
                 {
-                  "id": "node-page-96980-p-15",
+                  "id": "node-page-96980-p-14",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<p>This example illustrates our second rule, which tells us that the probability of all outcomes in the sample space together must be 1.</p>",
+                  "placement": {
+                    "region": "document",
+                    "order": 14
+                  }
+                },
+                {
+                  "id": "node-page-96980-h4-15",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<h4>Rule 2</h4>",
                   "placement": {
                     "region": "document",
                     "order": 15
                   }
                 },
                 {
-                  "id": "node-page-96980-h4-16",
+                  "id": "node-page-96980-p-16",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<h4>Rule 2</h4>",
+                  "value": "<p><strong>P(any outcome in sample space) = 1; that is, the sum of the probabilities of all possible outcomes is 1.</strong></p>",
                   "placement": {
                     "region": "document",
                     "order": 16
                   }
                 },
                 {
-                  "id": "node-page-96980-p-17",
+                  "id": "node-page-96980-h1-17",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p><strong>P(any outcome in sample space) = 1; that is, the sum of the probabilities of all possible outcomes is 1.</strong></p>",
+                  "value": "<h1>Comment</h1>",
                   "placement": {
                     "region": "document",
                     "order": 17
                   }
                 },
                 {
-                  "id": "node-page-96980-h1-18",
+                  "id": "node-page-96980-p-18",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<h1>Comment</h1>",
+                  "value": "<p>This is a good place to compare and contrast what we&#39;re doing here with what we learned in the Exploratory Data Analysis (EDA) section. Notice that in this problem we are essentially focusing on a single categorical variable: blood type. We summarized this variable above, as we summarized single categorical variables in the EDA section, by listing what values the variable takes and how often it takes them. In EDA we used percentages, and here we&#39;re using probabilities, but the two convey the same information. In the EDA section, we learned that a piechart provides an appropriate display when a single categorical variable is involved, and similarly we can use it here (using percentages instead of probabilities):</p>",
                   "placement": {
                     "region": "document",
                     "order": 18
                   }
                 },
                 {
-                  "id": "node-page-96980-p-19",
+                  "id": "node-page-96980-image-19",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<p>This is a good place to compare and contrast what we&#39;re doing here with what we learned in the Exploratory Data Analysis (EDA) section. Notice that in this problem we are essentially focusing on a single categorical variable: blood type. We summarized this variable above, as we summarized single categorical variables in the EDA section, by listing what values the variable takes and how often it takes them. In EDA we used percentages, and here we&#39;re using probabilities, but the two convey the same information. In the EDA section, we learned that a piechart provides an appropriate display when a single categorical variable is involved, and similarly we can use it here (using percentages instead of probabilities):</p>",
+                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f5/f5d2133b7e5fbc82d190711eedb240e6/image012.gif\" alt=\"A pie chart, titled &quot;Blood Types.&quot; Type O takes up 44% of the pie chart, A uses 42%, AB represents 4%, and B represents the rest, 10%.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                   "placement": {
                     "region": "document",
                     "order": 19
                   }
                 },
                 {
-                  "id": "node-page-96980-image-20",
+                  "id": "node-page-96980-p-20",
                   "nodeType": "atomic",
                   "atomType": "html-block",
-                  "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/f5/f5d2133b7e5fbc82d190711eedb240e6/image012.gif\" alt=\"A pie chart, titled &quot;Blood Types.&quot; Type O takes up 44% of the pie chart, A uses 42%, AB represents 4%, and B represents the rest, 10%.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                  "value": "<p>Even though what we&#39;re doing here is indeed similar to what we&#39;ve done in the EDA section, there is a subtle but important difference between the underlying situations in this section and the ones in the Exploratory Data Analysis section. In EDA, we summarized data that were obtained from a <strong>sample</strong> of individuals for whom values of the variable of interest were recorded. Here, when we present the frequency, or probability, of each blood type, we have in mind the entire <strong>population</strong> of people in the United States, for which we are presuming to know the overall frequency of values taken by the variable of interest.</p>",
                   "placement": {
                     "region": "document",
                     "order": 20
                   }
                 },
                 {
-                  "id": "node-page-96980-p-21",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>Even though what we&#39;re doing here is indeed similar to what we&#39;ve done in the EDA section, there is a subtle but important difference between the underlying situations in this section and the ones in the Exploratory Data Analysis section. In EDA, we summarized data that were obtained from a <strong>sample</strong> of individuals for whom values of the variable of interest were recorded. Here, when we present the frequency, or probability, of each blood type, we have in mind the entire <strong>population</strong> of people in the United States, for which we are presuming to know the overall frequency of values taken by the variable of interest.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 21
-                  }
-                },
-                {
-                  "id": "node-page-96980-group-22",
+                  "id": "node-page-96980-group-21",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -1483,7 +1497,7 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 22
+                    "order": 21
                   },
                   "children": [
                     {
@@ -1493,7 +1507,7 @@
                       "label": "Marital status can be categorized into: never married, married, widowedor divorced.According to Infoplease.com, the following are the probabilities of those marital status categories for adults in the United States (data from 2000): According to the information that is provided, the probability of a randomly chosen U.S. adult being divorced is:",
                       "placement": {
                         "region": "document",
-                        "order": 23
+                        "order": 22
                       },
                       "layout": {
                         "visualPreset": "practice-panel",
@@ -1504,6 +1518,12 @@
                         }
                       },
                       "children": [
+                        {
+                          "id": "node-96395-prompt",
+                          "nodeType": "atomic",
+                          "atomType": "html-block",
+                          "value": "<p>Marital status can be categorized into: never married, married, widowedor divorced.</p><p>According to Infoplease.com, the following are the probabilities of those marital status categories for adults in the United States (data from 2000):</p><figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/a8/a84703f9ea3087b6c29bf918bb26e0c8/dig012.gif\" alt=\"\" loading=\"lazy\"></figure><p>According to the information that is provided, the probability of a randomly chosen U.S. adult being divorced is:</p>"
+                        },
                         {
                           "id": "node-96395-answers",
                           "nodeType": "group",
@@ -1675,70 +1695,60 @@
                       "id": "node-page-96904-p-9",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Title</p>",
+                      "value": "<p>Back to the blood type example:</p>",
                       "placement": {
                         "region": "document",
                         "order": 9
                       }
                     },
                     {
-                      "id": "node-page-96904-p-10",
+                      "id": "node-page-96904-image-10",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Back to the blood type example:</p>",
+                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/17/17fdf894e1953b32bf9743f0faf60916/image011.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: 0.42;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
                         "order": 10
                       }
                     },
                     {
-                      "id": "node-page-96904-image-11",
+                      "id": "node-page-96904-p-11",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/17/17fdf894e1953b32bf9743f0faf60916/image011.gif\" alt=\"Data given in &quot;Blood Type: Probability&quot; Format:      O: 0.44;     A: 0.42;     B: 0.10;     AB: 0.04;\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
+                      "value": "<p>Here is some additional information:</p>",
                       "placement": {
                         "region": "document",
                         "order": 11
                       }
                     },
                     {
-                      "id": "node-page-96904-p-12",
+                      "id": "node-page-96904-ul-12",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>Here is some additional information:</p>",
+                      "value": "<ul><li><p>A person with type <strong>A</strong> can donate blood to a person with type <strong>A</strong> or <strong>AB</strong>.</p></li><li><p>A person with type <strong>B</strong> can donate blood to a person with type <strong>B</strong> or <strong>AB</strong>.</p></li><li><p>A person with type <strong>AB</strong> can donate blood to a person with type <strong>AB</strong> only.</p></li><li><p>A person with type <strong>O</strong> blood can donate to anyone.</p></li></ul>",
                       "placement": {
                         "region": "document",
                         "order": 12
                       }
                     },
                     {
-                      "id": "node-page-96904-ul-13",
+                      "id": "node-page-96904-p-13",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<ul><li><p>A person with type <strong>A</strong> can donate blood to a person with type <strong>A</strong> or <strong>AB</strong>.</p></li><li><p>A person with type <strong>B</strong> can donate blood to a person with type <strong>B</strong> or <strong>AB</strong>.</p></li><li><p>A person with type <strong>AB</strong> can donate blood to a person with type <strong>AB</strong> only.</p></li><li><p>A person with type <strong>O</strong> blood can donate to anyone.</p></li></ul>",
+                      "value": "<p>What is the probability that a randomly chosen person cannot donate blood to everyone? In other words, what is the probability that a randomly chosen person does not have blood type O? We need to find P(not O). Using the Complement Rule, P(not O)=1-P(O)=1-.44=.56. In other words, 56% of the U.S. population does not have blood type O:</p>",
                       "placement": {
                         "region": "document",
                         "order": 13
                       }
                     },
                     {
-                      "id": "node-page-96904-p-14",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>What is the probability that a randomly chosen person cannot donate blood to everyone? In other words, what is the probability that a randomly chosen person does not have blood type O? We need to find P(not O). Using the Complement Rule, P(not O)=1-P(O)=1-.44=.56. In other words, 56% of the U.S. population does not have blood type O:</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 14
-                      }
-                    },
-                    {
-                      "id": "node-page-96904-image-15",
+                      "id": "node-page-96904-image-14",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<figure><img src=\"https://d2xvti2irp4c7t.cloudfront.net/media/73/73cbd9a0237df0578c2e629a8f7c2d0f/image014.gif\" alt=\"A pie chart, titled &quot;Blood Types.&quot; Type O takes up 44% of the pie chart, A uses 42%, AB represents 4%, and B represents the rest, 10%. Note that the types of blood which are &quot;not O&quot; take up 56% of the pie chart.\" loading=\"lazy\"><figcaption><p> </p></figcaption></figure>",
                       "placement": {
                         "region": "document",
-                        "order": 15
+                        "order": 14
                       }
                     }
                   ],
@@ -1748,27 +1758,27 @@
                   }
                 },
                 {
-                  "id": "node-page-96904-h1-16",
+                  "id": "node-page-96904-h1-15",
                   "nodeType": "atomic",
                   "atomType": "html-block",
                   "value": "<h1>Comment</h1>",
+                  "placement": {
+                    "region": "document",
+                    "order": 15
+                  }
+                },
+                {
+                  "id": "node-page-96904-p-16",
+                  "nodeType": "atomic",
+                  "atomType": "html-block",
+                  "value": "<p>Note that the Complement Rule, <strong>P(not A)</strong>can be re-formulated as <strong>P(A)</strong>This seemingly trivial algebraic manipulation has an important application, and actually captures the strength of the complement rule. In some cases, when finding P(A) directly is very complicated, it might be much easier to find P(not A) and then just subtract it from 1 to get the desired P(A). We will come back to this comment and see examples later in this module.</p>",
                   "placement": {
                     "region": "document",
                     "order": 16
                   }
                 },
                 {
-                  "id": "node-page-96904-p-17",
-                  "nodeType": "atomic",
-                  "atomType": "html-block",
-                  "value": "<p>Note that the Complement Rule, <strong>P(not A)</strong>can be re-formulated as <strong>P(A)</strong>This seemingly trivial algebraic manipulation has an important application, and actually captures the strength of the complement rule. In some cases, when finding P(A) directly is very complicated, it might be much easier to find P(not A) and then just subtract it from 1 to get the desired P(A). We will come back to this comment and see examples later in this module.</p>",
-                  "placement": {
-                    "region": "document",
-                    "order": 17
-                  }
-                },
-                {
-                  "id": "node-page-96904-group-18",
+                  "id": "node-page-96904-group-17",
                   "nodeType": "group",
                   "groupType": "oli-didigetthis",
                   "layout": {
@@ -1779,14 +1789,24 @@
                   },
                   "placement": {
                     "region": "document",
-                    "order": 18
+                    "order": 17
                   },
                   "children": [
                     {
-                      "id": "node-page-96904-h1-19",
+                      "id": "node-page-96904-h1-18",
                       "nodeType": "atomic",
                       "atomType": "html-block",
                       "value": "<h1>Did I Get This?</h1>",
+                      "placement": {
+                        "region": "document",
+                        "order": 18
+                      }
+                    },
+                    {
+                      "id": "node-page-96904-p-19",
+                      "nodeType": "atomic",
+                      "atomType": "html-block",
+                      "value": "<p>On the &quot;Information for the Patient&quot; label of a certain antidepressant it is claimed that based on some clinical trials, when taking this medication</p>",
                       "placement": {
                         "region": "document",
                         "order": 19
@@ -1796,7 +1816,7 @@
                       "id": "node-page-96904-p-20",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>On the &quot;Information for the Patient&quot; label of a certain antidepressant it is claimed that based on some clinical trials, when taking this medication</p>",
+                      "value": "<p>- there is a 14% chance of experiencing sleeping problems,or insomnia (denote this event by I)</p>",
                       "placement": {
                         "region": "document",
                         "order": 20
@@ -1806,7 +1826,7 @@
                       "id": "node-page-96904-p-21",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>- there is a 14% chance of experiencing sleeping problems,or insomnia (denote this event by I)</p>",
+                      "value": "<p>- there is a 26% chance of experiencing headaches (denote this event by H), and</p>",
                       "placement": {
                         "region": "document",
                         "order": 21
@@ -1816,24 +1836,14 @@
                       "id": "node-page-96904-p-22",
                       "nodeType": "atomic",
                       "atomType": "html-block",
-                      "value": "<p>- there is a 26% chance of experiencing headaches (denote this event by H), and</p>",
+                      "value": "<p>- there is a 35% chance of experiencing at least one of these two side effects (denote this event by L)</p>",
                       "placement": {
                         "region": "document",
                         "order": 22
                       }
                     },
                     {
-                      "id": "node-page-96904-p-23",
-                      "nodeType": "atomic",
-                      "atomType": "html-block",
-                      "value": "<p>- there is a 35% chance of experiencing at least one of these two side effects (denote this event by L)</p>",
-                      "placement": {
-                        "region": "document",
-                        "order": 23
-                      }
-                    },
-                    {
-                      "id": "node-page-96904-group-24",
+                      "id": "node-page-96904-group-23",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1844,7 +1854,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 24
+                        "order": 23
                       },
                       "children": [
                         {
@@ -1854,7 +1864,7 @@
                           "label": "What is the probability that a patient taking this drug will not experience insomnia?",
                           "placement": {
                             "region": "document",
-                            "order": 25
+                            "order": 24
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1865,6 +1875,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96678-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>What is the probability that a patient taking this drug will not experience insomnia?</p>"
+                            },
                             {
                               "id": "node-96678-answers",
                               "nodeType": "group",
@@ -1928,7 +1944,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96904-group-26",
+                      "id": "node-page-96904-group-25",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -1939,7 +1955,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 26
+                        "order": 25
                       },
                       "children": [
                         {
@@ -1949,7 +1965,7 @@
                           "label": "In this context, the complement of event L, \"not L,\" is the event that:",
                           "placement": {
                             "region": "document",
-                            "order": 27
+                            "order": 26
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -1960,6 +1976,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-96416-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>In this context, the complement of event L, &quot;not L,&quot; is the event that:</p>"
+                            },
                             {
                               "id": "node-96416-answers",
                               "nodeType": "group",
@@ -2023,7 +2045,7 @@
                       }
                     },
                     {
-                      "id": "node-page-96904-group-28",
+                      "id": "node-page-96904-group-27",
                       "nodeType": "group",
                       "groupType": "oli-none",
                       "layout": {
@@ -2034,7 +2056,7 @@
                       },
                       "placement": {
                         "region": "document",
-                        "order": 28
+                        "order": 27
                       },
                       "children": [
                         {
@@ -2044,7 +2066,7 @@
                           "label": "The probability of \"not L\" is:",
                           "placement": {
                             "region": "document",
-                            "order": 29
+                            "order": 28
                           },
                           "layout": {
                             "visualPreset": "practice-panel",
@@ -2055,6 +2077,12 @@
                             }
                           },
                           "children": [
+                            {
+                              "id": "node-95603-prompt",
+                              "nodeType": "atomic",
+                              "atomType": "html-block",
+                              "value": "<p>The probability of &quot;not L&quot; is:</p>"
+                            },
                             {
                               "id": "node-95603-answers",
                               "nodeType": "group",
@@ -2732,7 +2760,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -2828,7 +2856,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -2924,7 +2952,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -3020,7 +3048,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -3116,7 +3144,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -3212,7 +3240,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-A"
                     }
                   }
                 },
@@ -3308,7 +3336,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3404,7 +3432,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3500,7 +3528,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3596,7 +3624,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3692,7 +3720,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3788,7 +3816,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-B"
                     }
                   }
                 },
@@ -3884,7 +3912,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -3980,7 +4008,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -4076,7 +4104,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -4172,7 +4200,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -4268,7 +4296,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -4364,7 +4392,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-C"
                     }
                   }
                 },
@@ -4460,7 +4488,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
@@ -4556,7 +4584,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
@@ -4652,7 +4680,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
@@ -4748,7 +4776,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
@@ -4844,7 +4872,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
@@ -4940,7 +4968,7 @@
                     },
                     "nodeId": {
                       "type": "literal",
-                      "value": "node-96371-feedback"
+                      "value": "node-96371-feedback-D"
                     }
                   }
                 },
