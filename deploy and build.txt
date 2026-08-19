@@ -27,6 +27,9 @@ $ProdEnvPath = Join-Path $OperatorRoot ".env.production"
 $ProdSettingsPath = Join-Path $OperatorRoot "settings.json"
 $ProdReleaseRecordPath = Join-Path $OperatorRoot "mofacts-production-release.json"
 $ProdMcpEnvPath = Join-Path $OperatorRoot "mofacts-mcp-production.env"
+# Before deployment, add MOFACTS_SECURITY_AUDIT_INGEST_SECRET to
+# .env.production and copy the same value to the protected GitHub environment
+# as AUDIT_REPORT_INGEST_SECRET. Never paste the value into this file.
 $StageKey = Join-Path $OperatorRoot "mykey.pem"
 $ProdKey = Join-Path $OperatorRoot "prodkey.pem"
 $StageReplicaKey = Join-Path $OperatorRoot "staging-mongodb-keyfile"
@@ -97,10 +100,14 @@ $RequiredStagingEnv = @(
   "MOFACTS_MONGO_REPLICA_SET_MEMBER",
   "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
   "REDIS_URL"
+  "MOFACTS_SECURITY_AUDIT_INGEST_SECRET"
 )
 $StagingEnvKeys = Select-String -Path $StageEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
 $MissingStagingEnv = $RequiredStagingEnv | Where-Object { $StagingEnvKeys -notcontains $_ }
 if ($MissingStagingEnv) { throw "Missing staging env keys: $($MissingStagingEnv -join ', ')" }
+$StagingAuditSecretLine = Get-Content $StageEnvPath | Where-Object { $_ -match '^MOFACTS_SECURITY_AUDIT_INGEST_SECRET=' } | Select-Object -Last 1
+$StagingAuditSecret = ($StagingAuditSecretLine -split '=', 2)[1]
+if ([string]::IsNullOrWhiteSpace($StagingAuditSecret) -or $StagingAuditSecret.Length -lt 32) { throw "Staging security audit ingestion secret must contain at least 32 characters" }
 
 # Validate the exact staging definition, then build and push that app image.
 docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml config --quiet
@@ -197,6 +204,7 @@ $RequiredProductionEnv = @(
   "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
   "MOFACTS_BACKUP_HOST_PATH",
   "REDIS_URL",
+  "MOFACTS_SECURITY_AUDIT_INGEST_SECRET",
   "DOCKER_REGISTRY",
   "IMAGE_NAME",
   "IMAGE_TAG"
@@ -211,6 +219,7 @@ Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" }
 }
 if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
 if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams') { throw "Production reactivity order must be changeStreams" }
+if ([string]::IsNullOrWhiteSpace($ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET']) -or $ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET'].Length -lt 32) { throw "Production security audit ingestion secret must contain at least 32 characters" }
 # The app's MongoDB driver validates the opaque URI, selected database,
 # authentication, and topology during startup. Do not parse or print the URI.
 # Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
