@@ -35,7 +35,7 @@ $ProdKey = Join-Path $OperatorRoot "prodkey.pem"
 $StageReplicaKey = Join-Path $OperatorRoot "staging-mongodb-keyfile"
 $ProdReplicaKey = Join-Path $OperatorRoot "production-mongodb-keyfile"
 $StageHost = "ubuntu@44.253.109.187"
-$ProdHost = "ubuntu@52.89.109.53"
+$ProdHost = "ubuntu@mofacts-production.tailb207d2.ts.net"
 $SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
 
 
