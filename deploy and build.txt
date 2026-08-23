@@ -167,6 +167,7 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 # ---------------------------------------------------------------------------
 
 $ProdImageRepository = "ppavlikmemphis/mofacts-mini"
+$ProdApacheTlsSitePath = Join-Path $ConfigRoot "production\apache\000-default-le-ssl.conf"
 
 cd $DeployDir
 
@@ -176,9 +177,14 @@ if (!(Test-Path .\docker-compose.yml)) { throw "Missing production compose file"
 if (!(Test-Path $ProdChangeStreamsComposePath)) { throw "Missing production Change Streams compose overlay: $ProdChangeStreamsComposePath" }
 if (!(Test-Path $ProdEnvPath)) { throw "Missing production env file: $ProdEnvPath" }
 if (!(Test-Path $ProdSettingsPath)) { throw "Missing production settings file: $ProdSettingsPath" }
+if (!(Test-Path $ProdApacheTlsSitePath)) { throw "Missing production Apache TLS site: $ProdApacheTlsSitePath" }
 if (!(Test-Path .\mongo-init\01-create-mofacts-app-user.js)) { throw "Missing Mongo app-user init script" }
 if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
 if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
+$ProdChangeStreamsComposeText = Get-Content -LiteralPath $ProdChangeStreamsComposePath -Raw
+if ([regex]::Matches($ProdChangeStreamsComposeText, '(?m)^[ \t]*HTTP_FORWARDED_COUNT:[ \t]*''1''[ \t]*$').Count -ne 1) {
+  throw "Production Compose overlay must set HTTP_FORWARDED_COUNT to exactly one trusted proxy"
+}
 $ProdReleaseCommit = (git -C $MofactsRoot rev-parse HEAD).Trim()
 $ProdReleaseShortCommit = (git -C $MofactsRoot rev-parse --short=12 HEAD).Trim()
 $ProdWorkingTreeDirty = [bool](git -C $MofactsRoot status --porcelain)
@@ -186,6 +192,7 @@ $ProdBuildStamp = [DateTime]::UtcNow.ToString('yyyyMMddHHmmssZ')
 $ProdImageTag = if ($ProdWorkingTreeDirty) { "prod-local-$ProdBuildStamp-$ProdReleaseShortCommit" } else { "prod-$ProdReleaseShortCommit" }
 if ($ProdReleaseCommit -notmatch '^[0-9a-f]{40}$') { throw "Could not identify the exact local MoFaCTS release commit" }
 $env:IMAGE_TAG = $ProdImageTag
+$env:MOFACTS_SOURCE_REVISION = $ProdReleaseCommit
 
 $RequiredProductionEnv = @(
   "METEOR_SETTINGS_HOST_PATH",
@@ -220,6 +227,10 @@ Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" }
 if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
 if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams') { throw "Production reactivity order must be changeStreams" }
 if ([string]::IsNullOrWhiteSpace($ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET']) -or $ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET'].Length -lt 32) { throw "Production security audit ingestion secret must contain at least 32 characters" }
+$ProdApacheTlsSiteText = Get-Content -LiteralPath $ProdApacheTlsSitePath -Raw
+$ProdCspHeaderMatches = [regex]::Matches($ProdApacheTlsSiteText, '(?m)^[ \t]*Header always set Content-Security-Policy "([^"]+)"[ \t]*$')
+if ($ProdCspHeaderMatches.Count -ne 1) { throw "Production Apache TLS site must define exactly one enforced CSP header" }
+$ExpectedProductionCsp = $ProdCspHeaderMatches[0].Groups[1].Value
 # The app's MongoDB driver validates the opaque URI, selected database,
 # authentication, and topology during startup. Do not parse or print the URI.
 # Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
@@ -232,7 +243,7 @@ docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache 
 docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
 $PublishedImageManifest = docker buildx imagetools inspect "$($ProdImageRepository):$ProdImageTag" --format '{{json .Manifest}}' | ConvertFrom-Json
 $ProdImageDigest = $PublishedImageManifest.digest
-if ($ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$') { throw "Registry did not return an immutable production image digest" }
+if ([string]::IsNullOrWhiteSpace($ProdImageDigest) -or $ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$') { throw "Registry did not return an immutable production image digest" }
 
 # Only after the push succeeds, keep the authoritative production environment
 # pointed at the published image. This changes IMAGE_TAG and preserves all
@@ -254,6 +265,7 @@ scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts/docker-compos
 scp -i $ProdKey $ProdChangeStreamsComposePath "${ProdHost}:/var/www/mofacts/docker-compose.change-streams.yaml"
 scp -i $ProdKey $ProdEnvPath "${ProdHost}:/var/www/mofacts/.env"
 scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
+scp -i $ProdKey $ProdApacheTlsSitePath "${ProdHost}:/tmp/000-default-le-ssl.conf"
 scp -i $ProdKey .\mongo-init\01-create-mofacts-app-user.js "${ProdHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
 scp -i $ProdKey .\mongodb\* "${ProdHost}:/var/www/mofacts/mongodb/"
 scp -i $ProdKey .\backup-self-hosted.sh "${ProdHost}:/var/www/mofacts/backup-self-hosted.sh"
@@ -267,23 +279,48 @@ scp -i $ProdKey "$SamlDir\memphis-saml-private-key.pem" "${ProdHost}:/tmp/memphi
 ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
 
 # Preflight the complete production configuration without starting or replacing services.
-ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /tmp/000-default-le-ssl.conf && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
 
 # Deploy this source-built image with the existing production replica set and
 # the production Change Streams overlay. This is the ordinary app deployment;
 # it does not repeat the completed database-topology conversion.
 ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+$RunningProductionImage = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{.Config.Image}}'").Trim()
+if ($RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag") { throw "Production container is not running the published image: $RunningProductionImage" }
+$RunningProductionLabelsJson = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{json .Config.Labels}}'").Trim()
+$RunningProductionLabels = $RunningProductionLabelsJson | ConvertFrom-Json -AsHashtable
+$RunningProductionRevision = $RunningProductionLabels['org.opencontainers.image.revision']
+if ($RunningProductionRevision -ne $ProdReleaseCommit) { throw "Production image source-revision label does not match the deployed release" }
+
+# Install the tracked production TLS virtual host. Preserve the active file and
+# restore it automatically if Apache validation or reload fails.
+ssh -i $ProdKey $ProdHost "set -eu; sudo cp /etc/apache2/sites-available/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; sudo install -o root -g root -m 644 /tmp/000-default-le-ssl.conf /etc/apache2/sites-available/000-default-le-ssl.conf; if sudo apache2ctl configtest && sudo systemctl reload apache2; then sudo rm -f /tmp/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; else sudo install -o root -g root -m 644 /tmp/000-default-le-ssl.conf.rollback /etc/apache2/sites-available/000-default-le-ssl.conf; sudo apache2ctl configtest; sudo systemctl reload apache2; sudo rm -f /tmp/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; exit 1; fi"
+$ProductionHeadResponse = Invoke-WebRequest -Uri "https://mofacts.optimallearning.org/admin/security-audits" -Method Head
+$LiveProductionCsp = [string]$ProductionHeadResponse.Headers['Content-Security-Policy']
+if ($LiveProductionCsp -ne $ExpectedProductionCsp) { throw "Production CSP header does not match the tracked Apache TLS site" }
 
 # Automatically record the successfully deployed immutable release beside the
-# authoritative Desktop inputs. No commit, tag, or digest needs manual entry.
-[ordered]@{
-  deployedAtUtc = [DateTime]::UtcNow.ToString('o')
-  baseCommit = $ProdReleaseCommit
-  includedUncommittedLocalChanges = $ProdWorkingTreeDirty
-  image = "$($ProdImageRepository):$ProdImageTag"
-  tag = $ProdImageTag
-  digest = $ProdImageDigest
-} | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
+# authoritative Desktop inputs. Keep verification and recording in one
+# statement so a failed deployment cannot be recorded by continuing below an
+# earlier exception.
+if (
+  [string]::IsNullOrWhiteSpace($ProdImageDigest) -or
+  $ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$' -or
+  $RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag" -or
+  $RunningProductionRevision -ne $ProdReleaseCommit -or
+  $LiveProductionCsp -ne $ExpectedProductionCsp
+) {
+  throw "Production deployment is not verified; release record was not written"
+} else {
+  [ordered]@{
+    deployedAtUtc = [DateTime]::UtcNow.ToString('o')
+    baseCommit = $ProdReleaseCommit
+    includedUncommittedLocalChanges = $ProdWorkingTreeDirty
+    image = "$($ProdImageRepository):$ProdImageTag"
+    tag = $ProdImageTag
+    digest = $ProdImageDigest
+  } | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
+}
 
 # Production Change Streams are owned by the private production overlay and
 # authoritative Desktop environment. Keep the test-only qualification flag

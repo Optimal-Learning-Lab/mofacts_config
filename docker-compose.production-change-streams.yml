@@ -1,5 +1,6 @@
 services:
   mofacts:
     environment:
+      HTTP_FORWARDED_COUNT: '1'
       MOFACTS_CHANGE_STREAMS_QUALIFICATION: 'false'
       METEOR_REACTIVITY_ORDER: ${METEOR_REACTIVITY_ORDER:?METEOR_REACTIVITY_ORDER is required}
