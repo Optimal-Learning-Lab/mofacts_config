@@ -2071,7 +2071,7 @@ function parseArgs(argv: string[]): CliOptions {
     } else if (arg === '--calculate-probability') {
       options.calculateProbability = argv[++index] || '';
       if (!options.calculateProbability.trim()) {
-        throw new Error('--calculate-probability requires a non-empty JavaScript function body');
+        throw new Error('--calculate-probability requires a non-empty safe mathematical body ending in return p');
       }
     } else if (arg === '--no-zip') {
       options.zip = false;
@@ -2096,7 +2096,7 @@ Options:
   --output-root <path>   Upload package folder.
   --lesson-prefix <name> Lesson name prefix for generated all-module outputs.
   --calculate-probability <source>
-                         SPARC adaptive probability function body.
+                         Safe SPARC mathematical body using approved p, Math, and pFunc members; must end in return p.
   --no-zip              Write package folders without creating zip files.
 `);
 }
