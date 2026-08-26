@@ -1,0 +1,253 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e1",
+        "stims": [
+          {
+            "clusterKC": "autotutor.natural-selection-001.kc.e1",
+            "text": "Individuals in the population already vary in the trait before selection acts."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e2",
+        "stims": [
+          {
+            "clusterKC": "autotutor.natural-selection-001.kc.e2",
+            "text": "The relevant variation must be heritable for trait frequencies to change across generations."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e3",
+        "stims": [
+          {
+            "clusterKC": "autotutor.natural-selection-001.kc.e3",
+            "text": "Individuals with traits better suited to the environment leave more surviving offspring."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e4",
+        "stims": [
+          {
+            "clusterKC": "autotutor.natural-selection-001.kc.e4",
+            "text": "Over generations, the advantageous heritable trait or allele becomes more common in the population."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.natural-selection-001.kc.e5",
+        "stims": [
+          {
+            "clusterKC": "autotutor.natural-selection-001.kc.e5",
+            "text": "Natural selection is not intentional and does not make individuals change because they need to."
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-session-natural-selection",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A population varies in a trait before selection begins. Individuals with that trait are more likely to survive and leave offspring under current conditions. How would natural selection explain how that trait's frequency changes across generations?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "clusterKC": "autotutor.natural-selection-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "clusterKC": "autotutor.natural-selection-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "clusterKC": "autotutor.natural-selection-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "clusterKC": "autotutor.natural-selection-001.kc.e4"
+            },
+            {
+              "clusterIndex": 4,
+              "clusterKC": "autotutor.natural-selection-001.kc.e5"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-sparc-package",
+                "sourceScriptId": "natural_selection_001",
+                "topic": "Natural selection",
+                "sourceLessonName": "AutoTutor Natural Selection",
+                "sourceUnitName": "Natural Selection AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8,
+                "misconceptionThreshold": 0.2
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 4,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "description": "Individuals in the population already vary in the trait before selection acts.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "description": "The relevant variation must be heritable for trait frequencies to change across generations.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "description": "Individuals with traits better suited to the environment leave more surviving offspring.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "description": "Over generations, the advantageous heritable trait or allele becomes more common in the population.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "description": "Natural selection is not intentional and does not make individuals change because they need to.",
+                "centrality": 0
+              }
+            }
+          ],
+          "instructionalController": {
+            "adapterId": "sparc-autotutor-v1",
+            "policyId": "progressive-scaffolding-v1",
+            "policyVersion": 1,
+            "parameters": {
+              "minimumProgress": 0.3,
+              "progressResponse": "deescalate",
+              "nonAddressingResponse": "hold"
+            }
+          },
+          "autoTutorTargets": {
+            "expectations": [
+              {
+                "clusterKC": "autotutor.natural-selection-001.kc.e1",
+                "text": "Individuals in the population already vary in the trait before selection acts."
+              },
+              {
+                "clusterKC": "autotutor.natural-selection-001.kc.e2",
+                "text": "The relevant variation must be heritable for trait frequencies to change across generations."
+              },
+              {
+                "clusterKC": "autotutor.natural-selection-001.kc.e3",
+                "text": "Individuals with traits better suited to the environment leave more surviving offspring."
+              },
+              {
+                "clusterKC": "autotutor.natural-selection-001.kc.e4",
+                "text": "Over generations, the advantageous heritable trait or allele becomes more common in the population."
+              },
+              {
+                "clusterKC": "autotutor.natural-selection-001.kc.e5",
+                "text": "Natural selection is not intentional and does not make individuals change because they need to."
+              }
+            ],
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "Natural selection changes trait frequencies across generations, not within an individual."
+              },
+              {
+                "id": "M2",
+                "text": "Natural selection is only about which individuals survive, not whether they reproduce."
+              },
+              {
+                "id": "M3",
+                "text": "Natural selection always makes organisms more advanced, perfect, or complex."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

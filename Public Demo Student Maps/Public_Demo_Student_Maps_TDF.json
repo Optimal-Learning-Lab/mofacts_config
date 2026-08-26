@@ -1,0 +1,40 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Public Demo: Wiki World Maps",
+      "stimulusfile": "Public_Demo_Student_Maps_stims.json",
+      "experimentTarget": "public-demo-student-maps",
+      "userselect": "false"
+    },
+    "unit": [
+      {
+        "unitname": "Overview",
+        "unitinstructions": "<h2>World map practice</h2><p>This short demonstration uses 12 geographically varied country maps. Type each country name from memory and review the immediate feedback.</p><p><strong>Time:</strong> The activity ends after 12 scored responses or four minutes, after the current response is complete.</p><p><strong>Language:</strong> Authored lesson content is in English.</p>"
+      },
+      {
+        "unitname": "Adaptive map practice",
+        "learningsession": {
+          "clusterlist": "0-11",
+          "unitMode": "distance",
+          "maxTrials": 12,
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0), p.overallOutcomeHistory.length), .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443); p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
+        },
+        "deliverySettings": {
+          "purestudy": 8000,
+          "drill": 15000,
+          "skipstudy": "false",
+          "reviewstudy": 4000,
+          "correctprompt": 600,
+          "fontsize": 30,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 240,
+          "practicetimer": "clock-based"
+        }
+      },
+      {
+        "unitname": "Complete",
+        "unitinstructions": "<h2>Demonstration complete</h2><p>You experienced typed recall, immediate feedback, and adaptive scheduling using real MoFaCTS lesson behavior.</p><p><a href=\"/\">Return to overview</a> or <a href=\"/auth/login\">sign in to continue</a>.</p>"
+      }
+    ]
+  }
+}

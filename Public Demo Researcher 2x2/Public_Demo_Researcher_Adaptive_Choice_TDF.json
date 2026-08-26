@@ -1,0 +1,10 @@
+{
+  "tutor": {
+    "setspec": {"lessonname":"Research Demo: Adaptive + Multiple Choice","stimulusfile":"Public_Demo_Researcher_2x2_stims.json","userselect":"false"},
+    "unit": [
+      {"unitname":"Assigned condition","unitinstructions":"<h2>Your assigned cell</h2><p><strong>Adaptive scheduling + multiple choice.</strong> Choose the psychology term that matches each definition. The standard distance scheduler selects each next item.</p>"},
+      {"unitname":"Practice","buttonorder":"random","buttontrial":"true","learningsession":{"clusterlist":"0-11","unitMode":"distance","maxTrials":12,"calculateProbability":"p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0), p.overallOutcomeHistory.length), .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443); p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"},"deliverySettings":{"purestudy":7000,"drill":15000,"skipstudy":"false","reviewstudy":4000,"correctprompt":600,"fontsize":26,"optimalThreshold":0.8,"practiceseconds":240,"practicetimer":"clock-based"}},
+      {"unitname":"Results explanation","unitinstructions":"<h2>Assigned cell: Adaptive + multiple choice</h2><p>The manipulated factors were scheduling and response format. MoFaCTS recorded responses, correctness, and response time.</p><table><caption><strong>Illustrative mock data—not results from public visitors</strong></caption><thead><tr><th>Scheduling</th><th>Typed recall</th><th>Multiple choice</th></tr></thead><tbody><tr><th>Adaptive</th><td>78%</td><td>86%</td></tr><tr><th>Fixed</th><td>71%</td><td>81%</td></tr></tbody></table><p><a href=\"/\">Return to overview</a> or <a href=\"/auth/login\">sign in to continue</a>.</p>"}
+    ]
+  }
+}

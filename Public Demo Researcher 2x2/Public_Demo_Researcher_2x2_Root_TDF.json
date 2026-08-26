@@ -1,0 +1,18 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Public Demo: 2x2 Learning Study",
+      "stimulusfile": "Public_Demo_Researcher_2x2_stims.json",
+      "experimentTarget": "public-demo-researcher-2x2",
+      "userselect": "false",
+      "condition": [
+        "Public_Demo_Researcher_Adaptive_Typed_TDF.json",
+        "Public_Demo_Researcher_Adaptive_Choice_TDF.json",
+        "Public_Demo_Researcher_Fixed_Typed_TDF.json",
+        "Public_Demo_Researcher_Fixed_Choice_TDF.json"
+      ],
+      "loadbalancing": "min",
+      "countcompletion": "beginning"
+    }
+  }
+}
