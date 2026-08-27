@@ -66,12 +66,13 @@ Before writing files, decide:
 - System name shown to learners, for example `A&P Openstax Chapter 1 Terms`.
 - Folder name, usually the same as the system name.
 - TDF filename, usually `{System Name}_TDF.json`.
+- Stable top-level `tdfId`. Use the reviewed value in `tdf-identity-manifest.json`; for a genuinely new ID-less package, let its first MoFaCTS import assign the ID and replace the source ZIP with the downloaded canonical package.
 - Stimulus filename, usually a safe filename with spaces replaced by underscores.
 - Source type, such as textbook terms, map images, vocabulary rows, or figures.
 - Learner task, such as "identify the term from the definition" or "name the highlighted country".
 - Attribution and licensing text.
 
-Keep names exact. The `stimulusfile` value inside the TDF must match the stimulus JSON filename.
+Keep names exact. The `stimulusfile` value inside the TDF must resolve to the stimulus JSON filename within the same package. Filenames are not global identities: separate lesson folders and ZIPs may reuse them safely.
 
 ## Step 2: Gather Source Data
 
@@ -286,6 +287,14 @@ $stimFile = $tdf.tutor.setspec.stimulusfile
 Test-Path (Join-Path (Split-Path $tdfPath) $stimFile)
 ```
 
+Check portable identity:
+
+```powershell
+$tdf.tdfId -match '^[A-Za-z0-9_-]+$'
+```
+
+For a condition root, `condition` and `conditionTdfIds` must have the same order and length. Every condition filename and every child ID must identify a child TDF in that ZIP. Never invent a replacement ID for deployed content; reconcile it against a reviewed production package export first.
+
 Check cluster counts:
 
 ```powershell
@@ -330,6 +339,8 @@ Compress-Archive `
 
 Do not zip before checking JSON parsing, BOMs, stimulus filename references, and source text encoding.
 
+Upload normally to create or update by `tdfId`. Select **Import as copy** only when a new lesson family is intended; MoFaCTS rekeys every packaged TDF and remaps condition IDs. A copied package cannot retain an `experimentTarget` that would duplicate another available root.
+
 ## Step 9: Preserve The Recipe
 
 For every new system, leave behind enough information to regenerate or audit it.
@@ -349,9 +360,11 @@ Before calling a new system complete:
 
 - The lesson has its own folder.
 - The TDF file parses as JSON.
+- Every supported TDF has the reviewed top-level `tdfId` recorded in `tdf-identity-manifest.json`.
 - The stimulus file parses as JSON.
 - Both JSON files are UTF-8 without BOM.
 - The TDF `stimulusfile` matches the real stimulus filename.
+- Condition roots have aligned `condition` and `conditionTdfIds` arrays.
 - Provider API-key fields are omitted unless the TDF intentionally supplies valid lesson-specific keys.
 - Cluster ids are contiguous and included in the TDF cluster list.
 - The instructions explain the task clearly.
