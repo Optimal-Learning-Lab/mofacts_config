@@ -1,0 +1,40 @@
+{
+  "tdfId": "tdf_8daa48f83323621b0009534f",
+    "tutor": {
+        "setspec": {
+            "lessonname": "Wiki World Maps",
+            "stimulusfile": "Wiki_World_Maps_top200_2025.json",
+            "experimentTarget": "public-demo-student-maps",
+            "shuffleclusters": "0-199",
+            "userselect": "true",
+            "lfparameter": "0.85",
+            "audioInputEnabled": "true",
+            "audioPromptMode": "feedback",
+            "speechIgnoreOutOfGrammarResponses": "true"
+        },
+        "unit": [
+            {
+                "unitname": "Instructions",
+                "unitinstructions": "<h2>&#127760; Wiki World Maps</h2><p>Practice 200 country locator maps sourced from Wikimedia Commons regional locator-map files.</p><ul><li><strong>What you will do:</strong> Each card shows a locator map and you type the country name from memory.</li><li><strong>Image source:</strong> Maps use bundled 1280-pixel WebP renderings sourced from Wikimedia Commons.</li><li><strong>Attribution:</strong> Each map includes a small linked caption with creator, source, and license information.</li><li><strong>How it works:</strong> Feedback appears immediately after each response so you can connect the visual cue to the correct country name.</li><li><strong>Why it helps:</strong> Adaptive scheduling returns uncertain countries sooner and spaces familiar ones farther apart.</li></ul><p>Use the highlighted region, surrounding geography, and overall placement as clues, then begin when you are ready.</p>"
+            },
+            {
+                "unitname": "Practice",
+                "learningsession": {
+                    "clusterlist": "0-199",
+                    "unitMode": "distance",
+                    "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+                },
+                "deliverySettings": {
+                    "purestudy": 10000,
+                    "drill": 10000,
+                    "skipstudy": "false",
+                    "reviewstudy": 5000,
+                    "correctprompt": 500,
+                    "fontsize": 30,
+                    "optimalThreshold": 0.8,
+                    "practiceseconds": 1000000
+                }
+            }
+        ]
+    }
+}
