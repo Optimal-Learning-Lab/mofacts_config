@@ -1,0 +1,71 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u16-d4a1370e0ba42ec3",
+        "stims": [
+          {
+            "display": {
+              "text": "The quantity representing probability in a continuous density model. The area between a and b equals P(a ≤ X ≤ b), and the total area is 1."
+            },
+            "response": {
+              "correctResponse": "area under the curve"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u16-cef470615c1aa725",
+        "stims": [
+          {
+            "display": {
+              "text": "The function F(x) = P(X ≤ x), giving probability accumulated up to x. For a continuous distribution, P(a ≤ X ≤ b) = F(b) − F(a). Abbreviated CDF."
+            },
+            "response": {
+              "correctResponse": "cumulative distribution function"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u16-924895d14b8a43a7",
+        "stims": [
+          {
+            "display": {
+              "text": "A continuous distribution with a symmetric, bell-shaped density, specified by its mean μ and standard deviation σ."
+            },
+            "response": {
+              "correctResponse": "normal distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u16-24e0f67df5ac270b",
+        "stims": [
+          {
+            "display": {
+              "text": "Probability per unit of the measurement scale. A density histogram's bar height is the interval probability divided by its width, so the bar's area equals that probability."
+            },
+            "response": {
+              "correctResponse": "probability density"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u16-0123973b7219c7d0",
+        "stims": [
+          {
+            "display": {
+              "text": "A nonnegative function f(x) representing a continuous distribution, with total area 1. Probability over an interval is the area under the curve there, rather than its height at a point. Abbreviated PDF; also called a probability density curve."
+            },
+            "response": {
+              "correctResponse": "probability density function"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Kennesaw Sociology and Criminal Justice People",
+      "stimulusfile": "Kennesaw Sociology and Criminal Justice People_stims.json",
+      "shuffleclusters": "0-50",
+      "userselect": "false",
+      "lfparameter": "0.85",
+      "audioInputEnabled": "true",
+      "audioPromptMode": "feedback",
+      "speechIgnoreOutOfGrammarResponses": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "<h2>Kennesaw Sociology and Criminal Justice People</h2><p>Each card shows a portrait, followed by the person’s role title and research interests. Research interests are blank when none were listed.</p><p>Type or say the person’s first and last name, without a middle initial. Include compound names in full.</p><p>Practice uses adaptive scheduling and immediate feedback: 10-second study and drill periods, 5-second reviews, and a brief correct-answer confirmation.</p><p>Portraits and department information: <a href=\"https://campus.kennesaw.edu/colleges-departments/radow/academics/sociology-criminal-justice/about/\" target=\"_blank\" rel=\"noopener noreferrer\">Kennesaw State University</a>, collected September 6, 2026. This lesson includes the 51 faculty and staff members with available portraits.</p>"
+      },
+      {
+        "unitname": "Practice",
+        "learningsession": {
+          "clusterlist": "0-50",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "purestudy": 10000,
+          "drill": 10000,
+          "skipstudy": "false",
+          "reviewstudy": 5000,
+          "correctprompt": 500,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 1000000,
+          "stimuliPosition": "left"
+        }
+      }
+    ]
+  }
+}

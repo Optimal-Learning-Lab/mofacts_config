@@ -1,0 +1,201 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u26-314e9ab9b2c0e812",
+        "stims": [
+          {
+            "display": {
+              "text": "The overall test of H₀: μ₁ = μ₂ = … = μ_k against the alternative that not all population means are equal. Rejection establishes at least one difference without identifying which pairs differ."
+            },
+            "response": {
+              "correctResponse": "ANOVA F-test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-bd0a514f1dbf693d",
+        "stims": [
+          {
+            "display": {
+              "text": "Assuming equal population means and the model conditions, the probability of an F statistic at least as large as the observed one."
+            },
+            "response": {
+              "correctResponse": "ANOVA p-value"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-6eab89260202ac41",
+        "stims": [
+          {
+            "display": {
+              "text": "Variation among group sample means, assessed relative to within-group variation to determine whether observed mean differences exceed those expected from sampling alone."
+            },
+            "response": {
+              "correctResponse": "between-group variation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-e6fc8866ea670f9a",
+        "stims": [
+          {
+            "display": {
+              "text": "The classical ANOVA assumption that response variability is the same across populations. The text checks whether the largest sample SD is less than twice the smallest as a rough diagnostic. Also called homogeneity of variance."
+            },
+            "response": {
+              "correctResponse": "equal-variance assumption"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-b0adc0904fdfb30a",
+        "stims": [
+          {
+            "display": {
+              "text": "An ANOVA effect-size measure giving the share of total response variation associated with the group factor: between-group SS divided by total SS in one-way ANOVA. Notation: η²."
+            },
+            "response": {
+              "correctResponse": "eta squared"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-c34d6e1fb794e5cf",
+        "stims": [
+          {
+            "display": {
+              "text": "A nonnegative reference distribution indexed by numerator and denominator degrees of freedom; ANOVA uses its right tail to assess the observed F statistic under equal population means."
+            },
+            "response": {
+              "correctResponse": "F distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-0ba0771ca7150a28",
+        "stims": [
+          {
+            "display": {
+              "text": "In one-way ANOVA, the ratio of between-group mean square to within-group mean square. Large values indicate greater separation among group means relative to within-group variability."
+            },
+            "response": {
+              "correctResponse": "F statistic"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-74dc218c42d0aaa0",
+        "stims": [
+          {
+            "display": {
+              "text": "An interval estimating one group's population mean. Comparing such intervals can aid exploration, but their overlap is not a formal test of the difference between two means."
+            },
+            "response": {
+              "correctResponse": "group confidence interval"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-8e5d5915a64fdf4b",
+        "stims": [
+          {
+            "display": {
+              "text": "An ANOVA sum of squares divided by its associated degrees of freedom; the between-group and error mean squares form the F ratio. Abbreviated MS."
+            },
+            "response": {
+              "correctResponse": "mean square"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-a6047e673adc5d0d",
+        "stims": [
+          {
+            "display": {
+              "text": "Follow-up comparisons used to identify particular group mean differences after an overall ANOVA, with procedures that account for testing multiple comparisons. Also called post hoc comparisons."
+            },
+            "response": {
+              "correctResponse": "multiple comparisons"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-29497c1fa298806b",
+        "stims": [
+          {
+            "display": {
+              "text": "A method comparing population means of a quantitative response across independent groups defined by one categorical explanatory variable, by comparing variation between and within groups. Abbreviated ANOVA."
+            },
+            "response": {
+              "correctResponse": "one-way analysis of variance"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-5bce13331b8d6ef4",
+        "stims": [
+          {
+            "display": {
+              "text": "A design with more than two linked measurements or conditions on the same subjects; introduced as the dependent-samples extension beyond the independent-groups ANOVA taught here."
+            },
+            "response": {
+              "correctResponse": "repeated measures"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-8eb82a8b2f4f9c96",
+        "stims": [
+          {
+            "display": {
+              "text": "A measure of variation formed by adding squared deviations. The ANOVA output partitions total SS into between-group SS and within-group (error) SS."
+            },
+            "response": {
+              "correctResponse": "sum of squares"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-31f7b1646a026cfc",
+        "stims": [
+          {
+            "display": {
+              "text": "Tukey's honestly significant difference procedure for comparing pairs of group means while controlling the family of pairwise comparisons."
+            },
+            "response": {
+              "correctResponse": "Tukey HSD test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u26-2664e544dc2a7863",
+        "stims": [
+          {
+            "display": {
+              "text": "Variation of individual responses around their own group means, providing the background variability against which between-group differences are assessed."
+            },
+            "response": {
+              "correctResponse": "within-group variation"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

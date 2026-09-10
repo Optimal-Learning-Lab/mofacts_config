@@ -1,0 +1,214 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u15-8925d52a5c166651",
+        "stims": [
+          {
+            "display": {
+              "text": "The textbook's rule for treating random sampling without replacement as approximately independent: the sample size n should be no more than 10% of population size N."
+            },
+            "response": {
+              "correctResponse": "10% condition"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-5f88ad647230fd37",
+        "stims": [
+          {
+            "display": {
+              "text": "The distribution of a variable equal to 1 for success and 0 for failure, with probabilities p and 1 − p. It is a binomial distribution with one trial."
+            },
+            "response": {
+              "correctResponse": "Bernoulli distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-c661916de27d5263",
+        "stims": [
+          {
+            "display": {
+              "text": "A random experiment with two outcomes, designated success and failure."
+            },
+            "response": {
+              "correctResponse": "Bernoulli trial"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-9cb63cb779e8c571",
+        "stims": [
+          {
+            "display": {
+              "text": "Observations with two possible outcomes, often coded 1 and 0 so their mean represents the proportion of successes."
+            },
+            "response": {
+              "correctResponse": "binary data"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-e182778f535a5395",
+        "stims": [
+          {
+            "display": {
+              "text": "The probability distribution of the number of successes in n independent trials with constant success probability p: P(X = k) = [n!/(k!(n − k)!)]p^k(1 − p)^(n − k)."
+            },
+            "response": {
+              "correctResponse": "binomial distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-2f83f95b8290f93c",
+        "stims": [
+          {
+            "display": {
+              "text": "A fixed number n of independent trials, each classified as success or failure, with the same success probability p on every trial."
+            },
+            "response": {
+              "correctResponse": "binomial experiment"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-2dbc847b07405c4a",
+        "stims": [
+          {
+            "display": {
+              "text": "The number X of successes in a binomial experiment. Its possible values are the integers 0 through n."
+            },
+            "response": {
+              "correctResponse": "binomial random variable"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-5f3258eaa1979a8b",
+        "stims": [
+          {
+            "display": {
+              "text": "The number of ways to choose k positions for successes among n trials, disregarding selection order: n!/[k!(n − k)!]. Read the notation as n choose k."
+            },
+            "response": {
+              "correctResponse": "combination"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-1212953af776c3fd",
+        "stims": [
+          {
+            "display": {
+              "text": "Trials for which knowing outcomes of other trials does not change a trial's outcome probabilities; required by the binomial model."
+            },
+            "response": {
+              "correctResponse": "independent trials"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-723c371b8ac259ff",
+        "stims": [
+          {
+            "display": {
+              "text": "The expected value of a 0–1 Bernoulli variable; μ = p, the probability of success."
+            },
+            "response": {
+              "correctResponse": "mean of a Bernoulli distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-119726e43e6c6260",
+        "stims": [
+          {
+            "display": {
+              "text": "The expected number of successes in n independent trials with success probability p: μ = np."
+            },
+            "response": {
+              "correctResponse": "mean of a binomial distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-e2e03700c2475ffb",
+        "stims": [
+          {
+            "display": {
+              "text": "Using a normal distribution to approximate binomial probabilities when the number of trials makes expected counts of both successes and failures sufficiently large."
+            },
+            "response": {
+              "correctResponse": "normal approximation to the binomial distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-2e8e7a347ee495d0",
+        "stims": [
+          {
+            "display": {
+              "text": "The spread of a binomial success count in count units: σ = √[np(1 − p)]."
+            },
+            "response": {
+              "correctResponse": "standard deviation of a binomial distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-5cd4efb07b263e8c",
+        "stims": [
+          {
+            "display": {
+              "text": "Labels for the outcome of interest and its complement in a Bernoulli or binomial trial. Success need not be desirable; its probability is p and failure's is 1 − p."
+            },
+            "response": {
+              "correctResponse": "success and failure"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-f2256c4e346f154f",
+        "stims": [
+          {
+            "display": {
+              "text": "The spread in squared units of a Bernoulli variable: σ² = p(1 − p), largest at p = 0.5."
+            },
+            "response": {
+              "correctResponse": "variance of a Bernoulli distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u15-fb17e1f9ef50fb8e",
+        "stims": [
+          {
+            "display": {
+              "text": "The expected squared deviation of a binomial success count from its mean: σ² = np(1 − p)."
+            },
+            "response": {
+              "correctResponse": "variance of a binomial distribution"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u28-a5e0f42e609b2076",
+        "stims": [
+          {
+            "display": {
+              "text": "A single cell's value of (observed − expected)²/expected in the overall χ² statistic; large contributions identify cells with substantial discrepancies."
+            },
+            "response": {
+              "correctResponse": "chi-square contribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-08c7f48fa71ba704",
+        "stims": [
+          {
+            "display": {
+              "text": "Family of nonnegative distributions indexed by degrees of freedom, used to approximate the null distribution of the independence-test statistic when conditions hold."
+            },
+            "response": {
+              "correctResponse": "chi-square distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-abbc11a119246b01",
+        "stims": [
+          {
+            "display": {
+              "text": "Sum over cells of (observed − expected)²/expected; larger values indicate greater disagreement with independence. Notation: χ²."
+            },
+            "response": {
+              "correctResponse": "chi-square statistic"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-144034bab1d7221b",
+        "stims": [
+          {
+            "display": {
+              "text": "Test of whether two categorical variables are associated in a population, comparing observed cell counts with counts expected under independence. Also called χ² test."
+            },
+            "response": {
+              "correctResponse": "chi-square test for independence"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-cfedfc104cfe7187",
+        "stims": [
+          {
+            "display": {
+              "text": "Number (r − 1)(c − 1) used for the chi-square reference distribution of a table with r rows and c columns, excluding totals."
+            },
+            "response": {
+              "correctResponse": "degrees of freedom for a contingency table"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-cf1f7b15065440ec",
+        "stims": [
+          {
+            "display": {
+              "text": "Count predicted for a cell under independence, calculated as its row total times its column total divided by the table total. Also called expected frequency."
+            },
+            "response": {
+              "correctResponse": "expected count"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-fe395c9d88e0f79c",
+        "stims": [
+          {
+            "display": {
+              "text": "Requirement for adequate cell sizes in the chi-square approximation. The text gives all expected counts above 1 with at least 80% above 5, or the more conservative rule that all exceed 5."
+            },
+            "response": {
+              "correctResponse": "expected-count condition"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-7289165c90ae1df8",
+        "stims": [
+          {
+            "display": {
+              "text": "Absence of association: the distribution of one variable is the same across categories of the other; this is the chi-square test's null hypothesis."
+            },
+            "response": {
+              "correctResponse": "independence of categorical variables"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-9f2f4f91cc9d05b2",
+        "stims": [
+          {
+            "display": {
+              "text": "Number of sampled observations actually falling in a particular cell of a contingency table. Also called observed frequency."
+            },
+            "response": {
+              "correctResponse": "observed count"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u28-be5b5610925383ee",
+        "stims": [
+          {
+            "display": {
+              "text": "Probability under independence of obtaining a χ² statistic at least as large as the observed value; it is an upper-tail probability."
+            },
+            "response": {
+              "correctResponse": "p-value for a chi-square test"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

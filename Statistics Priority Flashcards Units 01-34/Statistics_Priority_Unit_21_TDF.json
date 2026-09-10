@@ -1,0 +1,43 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Statistics Priority Flashcards - Unit 21 - Z-test One Sample",
+      "stimulusfile": "Statistics_Priority_Unit_21_stims.json",
+      "shuffleclusters": "0-13",
+      "userselect": "false",
+      "lfparameter": "0.85",
+      "audioInputEnabled": "false",
+      "audioPromptMode": "silent",
+      "speechIgnoreOutOfGrammarResponses": "true",
+      "hintsEnabled": false
+    },
+    "unit": [
+      {
+        "unitname": "Instructions",
+        "unitinstructions": "Read the definition. Type the matching term."
+      },
+      {
+        "unitname": "Unit 21 Practice",
+        "learningsession": {
+          "clusterlist": "0-13",
+          "unitMode": "distance",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60,  0),   p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown,  .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y));  return p"
+        },
+        "deliverySettings": {
+          "displayTimeoutBar": false,
+          "displayTimeoutCountdown": false,
+          "displayPerformance": true,
+          "feedbackLayout": "inline",
+          "purestudy": 10000,
+          "drill": 10000,
+          "skipstudy": "false",
+          "reviewstudy": 5000,
+          "correctprompt": 500,
+          "fontsize": 24,
+          "optimalThreshold": 0.8,
+          "practiceseconds": 0
+        }
+      }
+    ]
+  }
+}

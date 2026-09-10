@@ -1,0 +1,97 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u08-70c298bda6c5daea",
+        "stims": [
+          {
+            "display": {
+              "text": "The occurrence of one or more successes across trials; its complement is no successes. For n independent trials with success probability p, its probability is 1 − (1 − p)ⁿ."
+            },
+            "response": {
+              "correctResponse": "at least one event"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-99d25d5460a55627",
+        "stims": [
+          {
+            "display": {
+              "text": "Events for which knowing whether one occurred changes the probability of the other."
+            },
+            "response": {
+              "correctResponse": "dependent events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-6edbfbee54028978",
+        "stims": [
+          {
+            "display": {
+              "text": "Events that cannot occur together, so P(A and B) = 0. Two disjoint events with positive probabilities are dependent. Also called mutually exclusive events."
+            },
+            "response": {
+              "correctResponse": "disjoint events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-9472cd3cc1d61a11",
+        "stims": [
+          {
+            "display": {
+              "text": "Events for which learning that one occurred does not change the probability of the other; equivalently, P(A and B) = P(A)P(B)."
+            },
+            "response": {
+              "correctResponse": "independent events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-6fda7451bc6b4a59",
+        "stims": [
+          {
+            "display": {
+              "text": "The event containing outcomes in both A and B; P(A and B) is the probability that both events occur."
+            },
+            "response": {
+              "correctResponse": "intersection"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-c206190af2a1eb8f",
+        "stims": [
+          {
+            "display": {
+              "text": "For independent events, the probability that all occur is the product of their probabilities; for two, P(A and B) = P(A)P(B)."
+            },
+            "response": {
+              "correctResponse": "multiplication rule for independent events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u08-514a94adeee72324",
+        "stims": [
+          {
+            "display": {
+              "text": "Returning a selected item before the next random draw, restoring the original composition and probabilities of the sampling pool."
+            },
+            "response": {
+              "correctResponse": "sampling with replacement"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

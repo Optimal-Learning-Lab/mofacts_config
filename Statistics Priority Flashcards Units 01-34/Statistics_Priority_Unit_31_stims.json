@@ -1,0 +1,253 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u31-56d4d94c4bb516a3",
+        "stims": [
+          {
+            "display": {
+              "text": "Summary of a model's ability to discriminate positive from negative cases across classification thresholds; larger values indicate better discrimination. Abbreviated AUC."
+            },
+            "response": {
+              "correctResponse": "area under the ROC curve"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-b459c95b588e9b21",
+        "stims": [
+          {
+            "display": {
+              "text": "Model for a two-category response that expresses the log odds of the outcome coded 1 as a linear combination of predictors."
+            },
+            "response": {
+              "correctResponse": "binary logistic regression"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-207d1baefb2ffeb6",
+        "stims": [
+          {
+            "display": {
+              "text": "Proportion of observations whose predicted category agrees with the observed category at the chosen classification rule."
+            },
+            "response": {
+              "correctResponse": "classification accuracy"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-5279a9ff3f761324",
+        "stims": [
+          {
+            "display": {
+              "text": "Table cross-classifying observed and predicted categories, showing correct and incorrect classifications."
+            },
+            "response": {
+              "correctResponse": "confusion matrix"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-47881a7384f0f23d",
+        "stims": [
+          {
+            "display": {
+              "text": "Requirement that observations provide independent information in the standard logistic model; untreated repeated measurements can violate it."
+            },
+            "response": {
+              "correctResponse": "independence of observations"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-13f1058c027f8093",
+        "stims": [
+          {
+            "display": {
+              "text": "Observation with a disproportionate impact on fitted model coefficients; influence and being unusual are related but distinct properties."
+            },
+            "response": {
+              "correctResponse": "influential observation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-cebc2df93ca4e86b",
+        "stims": [
+          {
+            "display": {
+              "text": "Test comparing the fit of a fuller logistic model with a nested simpler model; the example compares all predictors against an intercept-only model."
+            },
+            "response": {
+              "correctResponse": "likelihood ratio test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-2c0a9bfb020a5484",
+        "stims": [
+          {
+            "display": {
+              "text": "Weighted sum z = β₀ + β₁X₁ + … + βₖXₖ; in logistic regression it represents the modeled log odds."
+            },
+            "response": {
+              "correctResponse": "linear predictor"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-44a76682790a61fe",
+        "stims": [
+          {
+            "display": {
+              "text": "Requirement that the specified predictor terms combine linearly to describe log odds, rather than requiring probability itself to change linearly."
+            },
+            "response": {
+              "correctResponse": "linearity in the logit"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-b1b4db2574349d4d",
+        "stims": [
+          {
+            "display": {
+              "text": "Average negative log probability assigned to the observed binary outcomes: −Σ[y ln(p) + (1 − y)ln(1 − p)]/N. Confident incorrect predictions receive large penalties. Also called binary cross-entropy."
+            },
+            "response": {
+              "correctResponse": "log loss"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-923cf253c6f03516",
+        "stims": [
+          {
+            "display": {
+              "text": "Change in the log odds of the modeled event for a one-unit predictor increase, holding other predictors fixed."
+            },
+            "response": {
+              "correctResponse": "logistic regression coefficient"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-76eee315ea014059",
+        "stims": [
+          {
+            "display": {
+              "text": "Natural logarithm of the event odds, ln[p/(1 − p)], modeled as a linear predictor in logistic regression. Also called log odds."
+            },
+            "response": {
+              "correctResponse": "logit"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-3f61101eccd256a5",
+        "stims": [
+          {
+            "display": {
+              "text": "Logistic regression containing more than one predictor, with each coefficient interpreted conditional on the other predictors."
+            },
+            "response": {
+              "correctResponse": "multiple logistic regression"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-7c24ee6afbcbc687",
+        "stims": [
+          {
+            "display": {
+              "text": "Baseline model with an intercept and no predictors, used for assessing improvement from a fuller logistic model."
+            },
+            "response": {
+              "correctResponse": "null model"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-1fd5faa9b5cf91c2",
+        "stims": [
+          {
+            "display": {
+              "text": "Probability of an event divided by the probability of its absence: p/(1 − p). Odds are not the same as probability."
+            },
+            "response": {
+              "correctResponse": "odds"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-9a5b7b5c9e814335",
+        "stims": [
+          {
+            "display": {
+              "text": "Multiplicative change in event odds for a one-unit predictor increase, holding other predictors fixed; OR = exp(β). Values above 1 increase odds, below 1 decrease them, and 1 leaves them unchanged."
+            },
+            "response": {
+              "correctResponse": "odds ratio"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-98692323eac2a462",
+        "stims": [
+          {
+            "display": {
+              "text": "Model-fit summaries for logistic regression, defined differently from ordinary least-squares R²; they should not be interpreted as ordinary proportions of outcome variance explained. Nagelkerke and McFadden are distinct versions of this measure."
+            },
+            "response": {
+              "correctResponse": "pseudo R-squared"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-db298dbe4d6ec10b",
+        "stims": [
+          {
+            "display": {
+              "text": "Curve showing classification sensitivity against the false-positive rate as the decision threshold varies. Abbreviated ROC."
+            },
+            "response": {
+              "correctResponse": "receiver operating characteristic curve"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u31-c6b0f792b8169308",
+        "stims": [
+          {
+            "display": {
+              "text": "S-shaped function p = 1/(1 + e^(−z)) that converts a linear predictor z into a probability between 0 and 1. Also called the logistic function."
+            },
+            "response": {
+              "correctResponse": "sigmoid function"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

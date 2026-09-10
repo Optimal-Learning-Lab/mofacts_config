@@ -1,0 +1,188 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u21-0fc80e641815894e",
+        "stims": [
+          {
+            "display": {
+              "text": "A standardized mean difference. This unit defines the one-sample version as d = (x̄ − μ₀)/s; benchmarks of about 0.2, 0.5, and 0.8 describe small, medium, and large magnitudes, subject to context."
+            },
+            "response": {
+              "correctResponse": "Cohen's d"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-159e70c5f38c15ba",
+        "stims": [
+          {
+            "display": {
+              "text": "A numerical measure of the magnitude of a difference or relationship, complementing a p-value by describing how large the observed effect is."
+            },
+            "response": {
+              "correctResponse": "effect size"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-fb9a6635a43dd4f5",
+        "stims": [
+          {
+            "display": {
+              "text": "A test with a less-than alternative, whose z-test p-value is P(Z ≤ z_observed) under the standard normal null distribution."
+            },
+            "response": {
+              "correctResponse": "left-tailed test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-729e69c97caaa723",
+        "stims": [
+          {
+            "display": {
+              "text": "The sampling distribution of a test statistic assuming H₀ is true. It supplies the reference probabilities used to calculate the p-value."
+            },
+            "response": {
+              "correctResponse": "null distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-48301d51b33e2672",
+        "stims": [
+          {
+            "display": {
+              "text": "The specified population parameter value in H₀, written μ₀ for a mean or p₀ for a proportion; it is distinct from the observed sample statistic."
+            },
+            "response": {
+              "correctResponse": "null value"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-b8ffa49ca965bbc2",
+        "stims": [
+          {
+            "display": {
+              "text": "A large-sample test of H₀: p = p₀ using z = (p̂ − p₀)/√[p₀(1 − p₀)/n], with appropriate random sampling and at least ten expected successes and failures under H₀."
+            },
+            "response": {
+              "correctResponse": "one-proportion z-test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-3eb286538057ef52",
+        "stims": [
+          {
+            "display": {
+              "text": "A test of H₀: μ = μ₀ using z = (x̄ − μ₀)/(σ/√n), with known population SD σ, suitable random sampling, and a normal or adequately approximated normal sampling distribution of x̄."
+            },
+            "response": {
+              "correctResponse": "one-sample z-test for a population mean"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-2c0c61526b1b9afe",
+        "stims": [
+          {
+            "display": {
+              "text": "An alternative hypothesis specifying a departure in one direction, such as μ &gt; μ₀ or p &lt; p₀. Its direction is determined by the research question before inspecting the result. Also called one-tailed alternative."
+            },
+            "response": {
+              "correctResponse": "one-sided alternative"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-cdf1e73264d5fec3",
+        "stims": [
+          {
+            "display": {
+              "text": "The substantive importance of an effect in its research context, considered using its size and plausible values rather than statistical significance alone."
+            },
+            "response": {
+              "correctResponse": "practical significance"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-5dc16b7afd5d8d7a",
+        "stims": [
+          {
+            "display": {
+              "text": "A test with a greater-than alternative, whose z-test p-value is P(Z ≥ z_observed) under the standard normal null distribution."
+            },
+            "response": {
+              "correctResponse": "right-tailed test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-3ca9999430b239d0",
+        "stims": [
+          {
+            "display": {
+              "text": "The sampling spread calculated assuming H₀. For a proportion test it is √[p₀(1 − p₀)/n], using p₀ rather than p̂; for a mean with known σ it is σ/√n."
+            },
+            "response": {
+              "correctResponse": "standard error under the null hypothesis"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-b804d94c983b4bab",
+        "stims": [
+          {
+            "display": {
+              "text": "An alternative hypothesis allowing departure on either side of the null value, such as μ ≠ μ₀ or p ≠ p₀. Also called two-tailed alternative."
+            },
+            "response": {
+              "correctResponse": "two-sided alternative"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-8fb34b715652f976",
+        "stims": [
+          {
+            "display": {
+              "text": "A test assessing departures in either direction. For a symmetric standard normal null distribution, its p-value is P(Z ≤ −|z|) + P(Z ≥ |z|)."
+            },
+            "response": {
+              "correctResponse": "two-tailed test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u21-b58ef35e10817952",
+        "stims": [
+          {
+            "display": {
+              "text": "The difference between a sample estimate and the null value divided by its standard error under H₀. Its sign indicates direction and its magnitude measures distance in standard-error units."
+            },
+            "response": {
+              "correctResponse": "z test statistic"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

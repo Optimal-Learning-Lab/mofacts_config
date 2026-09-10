@@ -1,0 +1,201 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u19-f3279006c3e0b146",
+        "stims": [
+          {
+            "display": {
+              "text": "An interval computed from sample data by a method designed to contain the fixed population parameter in a stated proportion of repeated samples. It gives plausible parameter values, not a range containing that proportion of individuals. Abbreviated CI."
+            },
+            "response": {
+              "correctResponse": "confidence interval"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-56c56a3e1ee98596",
+        "stims": [
+          {
+            "display": {
+              "text": "The large-sample interval p̂ ± z*√[p̂(1 − p̂)/n]. The course checks at least ten observed successes and ten failures, along with appropriate random sampling."
+            },
+            "response": {
+              "correctResponse": "confidence interval for a population proportion"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-38b00f31b388014d",
+        "stims": [
+          {
+            "display": {
+              "text": "The long-run proportion of intervals constructed by a method that contain the true parameter when its assumptions hold. It does not assign that probability to a fixed parameter after observing an interval."
+            },
+            "response": {
+              "correctResponse": "confidence level"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-acae5c7bac10ae5e",
+        "stims": [
+          {
+            "display": {
+              "text": "Using sample data to assess evidence against a specified claim about a population."
+            },
+            "response": {
+              "correctResponse": "hypothesis testing"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-14fca2af32d8861e",
+        "stims": [
+          {
+            "display": {
+              "text": "The distance m from a point estimate to either endpoint of the symmetric confidence intervals taught here: confidence multiplier × standard error. It quantifies sampling uncertainty at the chosen confidence level, not all possible bias."
+            },
+            "response": {
+              "correctResponse": "margin of error"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-9f6374e3a23e9072",
+        "stims": [
+          {
+            "display": {
+              "text": "The interval x̄ ± t*s/√n for population mean μ when σ is estimated by s. It uses a t multiplier to account for that estimation, with suitable random sampling and normality or a sufficiently large sample."
+            },
+            "response": {
+              "correctResponse": "one-sample t confidence interval"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-e1ab423687e534f8",
+        "stims": [
+          {
+            "display": {
+              "text": "The particular numerical value an estimator takes in an observed sample."
+            },
+            "response": {
+              "correctResponse": "point estimate"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-679c97469368801b",
+        "stims": [
+          {
+            "display": {
+              "text": "A statistic used as a rule for estimating a population parameter, such as x̄ for μ or p̂ for p."
+            },
+            "response": {
+              "correctResponse": "point estimator"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-edc03473911ab099",
+        "stims": [
+          {
+            "display": {
+              "text": "How narrowly an interval identifies plausible parameter values. A smaller margin of error gives greater precision; with other factors fixed, larger samples increase precision and higher confidence reduces it."
+            },
+            "response": {
+              "correctResponse": "precision of an interval estimate"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-7f3e0a791a871446",
+        "stims": [
+          {
+            "display": {
+              "text": "The measure s² = Σ(x_i − x̄)²/(n − 1), an unbiased estimator of population variance σ² under independent random sampling."
+            },
+            "response": {
+              "correctResponse": "sample variance"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-a6c9df3e9f739815",
+        "stims": [
+          {
+            "display": {
+              "text": "Determining in advance how many observations are needed for a target margin of error and confidence level. For a mean with planning SD σ, n = (z*σ/m)², rounded up."
+            },
+            "response": {
+              "correctResponse": "sample-size calculation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-a38aee27d12d7447",
+        "stims": [
+          {
+            "display": {
+              "text": "The estimated spread of p̂ across samples: √[p̂(1 − p̂)/n], obtained by replacing unknown p in the sampling-distribution formula with p̂. Abbreviated SEP."
+            },
+            "response": {
+              "correctResponse": "standard error of the proportion"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-edae01a3297d0dfe",
+        "stims": [
+          {
+            "display": {
+              "text": "The reference distribution used for mean inference when population SD is replaced by sample SD. Its confidence multipliers depend on sample size as well as confidence level and approach normal multipliers for large samples."
+            },
+            "response": {
+              "correctResponse": "t distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-d8bbbfc5661bd9a4",
+        "stims": [
+          {
+            "display": {
+              "text": "An estimator whose sampling distribution is centered at the true parameter: its expected value equals that parameter. Individual estimates can still be too high or too low."
+            },
+            "response": {
+              "correctResponse": "unbiased estimator"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u19-72dc43b628fd7880",
+        "stims": [
+          {
+            "display": {
+              "text": "The interval x̄ ± z*σ/√n, using known population standard deviation and a normal or adequately approximated normal sampling distribution with suitable random sampling."
+            },
+            "response": {
+              "correctResponse": "z confidence interval for a population mean"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

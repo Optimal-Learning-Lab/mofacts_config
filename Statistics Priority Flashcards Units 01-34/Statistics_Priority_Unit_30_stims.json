@@ -1,0 +1,331 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u30-eee908646a12f289",
+        "stims": [
+          {
+            "display": {
+              "text": "Model property in which predictor contributions add together and a predictor's slope does not depend on other predictors' values."
+            },
+            "response": {
+              "correctResponse": "additivity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-864ffc275f9eeef5",
+        "stims": [
+          {
+            "display": {
+              "text": "Version of R² that accounts for the number of predictors relative to sample size, aiding comparisons of models with differing complexity."
+            },
+            "response": {
+              "correctResponse": "adjusted R-squared"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-3d550b8f21b4682d",
+        "stims": [
+          {
+            "display": {
+              "text": "Correlation between errors from observations ordered in time or another sequence. Also called serial correlation."
+            },
+            "response": {
+              "correctResponse": "autocorrelation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-3615825fbdf87441",
+        "stims": [
+          {
+            "display": {
+              "text": "Representation of a k-category predictor with k − 1 binary indicators and a reference category in a model with an intercept. Also called indicator coding."
+            },
+            "response": {
+              "correctResponse": "dummy coding"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-d12e3f4e68f12fc3",
+        "stims": [
+          {
+            "display": {
+              "text": "Unobserved difference between a response and its population model mean, representing variation unexplained by the predictors. Notation: ε."
+            },
+            "response": {
+              "correctResponse": "error term"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-a285fcfb71e5da69",
+        "stims": [
+          {
+            "display": {
+              "text": "Error variance that changes across predictor values, often suggested by widening or narrowing residual spread."
+            },
+            "response": {
+              "correctResponse": "heteroscedasticity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-bf5d68beb85d647b",
+        "stims": [
+          {
+            "display": {
+              "text": "Constant error variance across predictor values; residual plots assess whether the spread is roughly stable."
+            },
+            "response": {
+              "correctResponse": "homoscedasticity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-7f39e6e390d84f93",
+        "stims": [
+          {
+            "display": {
+              "text": "Assumption that errors from different observations are independent; serially related errors violate it."
+            },
+            "response": {
+              "correctResponse": "independence of errors"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-6c67d05feb90bbe5",
+        "stims": [
+          {
+            "display": {
+              "text": "Assumption that the conditional mean response is represented by the specified linear combination of predictors."
+            },
+            "response": {
+              "correctResponse": "linearity assumption"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-7b7696c56a046de1",
+        "stims": [
+          {
+            "display": {
+              "text": "Inaccuracy in recorded predictor values that can bias estimated regression relationships."
+            },
+            "response": {
+              "correctResponse": "measurement error"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-bd035d5e693a776e",
+        "stims": [
+          {
+            "display": {
+              "text": "Strong linear relationships among predictors that make separate coefficient effects difficult to estimate precisely."
+            },
+            "response": {
+              "correctResponse": "multicollinearity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-febd42f85a22dc1d",
+        "stims": [
+          {
+            "display": {
+              "text": "Model for a quantitative response using two or more predictors: Y = β₀ + β₁X₁ + … + βₖXₖ + ε."
+            },
+            "response": {
+              "correctResponse": "multiple linear regression"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-78e45a583e629d47",
+        "stims": [
+          {
+            "display": {
+              "text": "Display comparing a residual distribution with a normal reference; points near a reference diagonal support approximate normality. The text discusses P-P and Q-Q versions."
+            },
+            "response": {
+              "correctResponse": "normal probability plot"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-697647d2bd536cc1",
+        "stims": [
+          {
+            "display": {
+              "text": "Assumption of normally distributed model errors used for conventional small-sample inference; assessed approximately through residual distributions."
+            },
+            "response": {
+              "correctResponse": "normality of errors"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-f9f5469667b4e6c2",
+        "stims": [
+          {
+            "display": {
+              "text": "Test of whether the predictors collectively add linear explanatory information beyond an intercept-only model; its null sets all predictor slopes to zero."
+            },
+            "response": {
+              "correctResponse": "overall regression F-test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-80807f205350f123",
+        "stims": [
+          {
+            "display": {
+              "text": "Exact linear dependence among predictors that prevents unique estimation of all coefficients."
+            },
+            "response": {
+              "correctResponse": "perfect multicollinearity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-082c4e55d1aae4de",
+        "stims": [
+          {
+            "display": {
+              "text": "Proportion of response variation explained by a fitted least-squares model with an intercept; higher values indicate closer fit to the observed data. Notation: R²."
+            },
+            "response": {
+              "correctResponse": "R-squared"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-c9cbe378028ecb86",
+        "stims": [
+          {
+            "display": {
+              "text": "Category represented by zeros on all dummy variables, against which the other category coefficients are interpreted."
+            },
+            "response": {
+              "correctResponse": "reference group"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-365a7a1fdf0e4ffb",
+        "stims": [
+          {
+            "display": {
+              "text": "Expected change in the response per one-unit increase in a predictor, holding the other predictors fixed in an additive linear model."
+            },
+            "response": {
+              "correctResponse": "regression coefficient"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-864ab12b1858361a",
+        "stims": [
+          {
+            "display": {
+              "text": "Observed response minus its fitted value; residuals are used to diagnose the model's error assumptions."
+            },
+            "response": {
+              "correctResponse": "residual"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-d34ba18e0120840f",
+        "stims": [
+          {
+            "display": {
+              "text": "Graph of residuals against fitted values or predictors used to examine patterns and changing spread that may indicate model problems."
+            },
+            "response": {
+              "correctResponse": "residual plot"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-0343eff5d28324bf",
+        "stims": [
+          {
+            "display": {
+              "text": "Regression slope expressed on standardized variable scales rather than original measurement units. Notation: β."
+            },
+            "response": {
+              "correctResponse": "standardized coefficient"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-50dcc38d77fc5d7f",
+        "stims": [
+          {
+            "display": {
+              "text": "Regression slope expressed in the original response and predictor units. Also called B."
+            },
+            "response": {
+              "correctResponse": "unstandardized coefficient"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-0840878182b4ea2f",
+        "stims": [
+          {
+            "display": {
+              "text": "Applying a function, such as a logarithm or square root, to a variable to improve the suitability of a model's form or error assumptions."
+            },
+            "response": {
+              "correctResponse": "variable transformation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u30-76bf9d7b141a5803",
+        "stims": [
+          {
+            "display": {
+              "text": "Measure of how much a coefficient estimate's variance is increased by linear dependence of its predictor on the other predictors. Abbreviated VIF."
+            },
+            "response": {
+              "correctResponse": "variance inflation factor"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

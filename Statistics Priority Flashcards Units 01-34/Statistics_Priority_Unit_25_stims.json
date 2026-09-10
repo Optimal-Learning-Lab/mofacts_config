@@ -1,0 +1,123 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u25-fb3bc42ebcc053da",
+        "stims": [
+          {
+            "display": {
+              "text": "Using observed patterns to choose a hypothesis or test direction and then treating that choice as if it had been specified beforehand."
+            },
+            "response": {
+              "correctResponse": "data snooping"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-ef9cbd84c33b8801",
+        "stims": [
+          {
+            "display": {
+              "text": "Samples linked across conditions so their observations cannot be treated as independent between groups; matched pairs are a common example."
+            },
+            "response": {
+              "correctResponse": "dependent samples"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-771c155a867967e4",
+        "stims": [
+          {
+            "display": {
+              "text": "The result of subtracting one measurement from its matched measurement in a specified order, yielding one numerical observation per pair."
+            },
+            "response": {
+              "correctResponse": "difference score"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-b656e5a519898da2",
+        "stims": [
+          {
+            "display": {
+              "text": "The population parameter μ_d, the average paired difference, equal to μ₁ − μ₂ for differences defined as measurement 1 minus measurement 2. The sample mean difference estimates it."
+            },
+            "response": {
+              "correctResponse": "mean of the differences"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-2b94764cddf31c7c",
+        "stims": [
+          {
+            "display": {
+              "text": "An interval of plausible values for μ_d, the population mean paired difference. Its sign must be interpreted using the stated subtraction order; a matching two-sided test rejects zero when zero lies outside it."
+            },
+            "response": {
+              "correctResponse": "paired t confidence interval"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-0501be6cec4a7a76",
+        "stims": [
+          {
+            "display": {
+              "text": "The sample mean difference minus the null mean difference, divided by s_d/√n. With the usual zero null, t = d̄/(s_d/√n)."
+            },
+            "response": {
+              "correctResponse": "paired t statistic"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-41a9627b844d4b7a",
+        "stims": [
+          {
+            "display": {
+              "text": "A one-sample t-test applied to paired difference scores, usually testing H₀: μ_d = 0. Different pairs must be independent; small-sample exact inference assumes normal differences. Also called matched-pairs t-test."
+            },
+            "response": {
+              "correctResponse": "paired t-test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-be266e03cd35286f",
+        "stims": [
+          {
+            "display": {
+              "text": "The sample spread s_d of paired difference scores around their own mean; it is not the difference between the two conditions' standard deviations."
+            },
+            "response": {
+              "correctResponse": "standard deviation of the differences"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u25-241a99c94b36e188",
+        "stims": [
+          {
+            "display": {
+              "text": "For n independent pairs, the estimated sampling spread of their mean difference: s_d/√n, where s_d is the SD of within-pair differences."
+            },
+            "response": {
+              "correctResponse": "standard error of the mean difference"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

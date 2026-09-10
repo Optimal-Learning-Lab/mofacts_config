@@ -1,0 +1,58 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u09-c6bfedbb3d812150",
+        "stims": [
+          {
+            "display": {
+              "text": "For events that are mutually exclusive, the probability that any occurs is the sum of their individual probabilities."
+            },
+            "response": {
+              "correctResponse": "addition rule for disjoint events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u09-9ae0018cc7f5ab01",
+        "stims": [
+          {
+            "display": {
+              "text": "For any two events, P(A or B) = P(A) + P(B) − P(A and B). Subtracting the intersection prevents counting shared outcomes twice."
+            },
+            "response": {
+              "correctResponse": "general addition rule"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u09-b6e5181adcd45167",
+        "stims": [
+          {
+            "display": {
+              "text": "Events with at least one outcome in common, making their simultaneous occurrence possible."
+            },
+            "response": {
+              "correctResponse": "overlapping events"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u09-ef3ff703d7565ab5",
+        "stims": [
+          {
+            "display": {
+              "text": "The event that A occurs, B occurs, or both occur. Probability uses this inclusive meaning of OR. Notation: A or B."
+            },
+            "response": {
+              "correctResponse": "union"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

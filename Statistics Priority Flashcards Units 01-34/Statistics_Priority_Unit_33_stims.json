@@ -1,0 +1,227 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u33-bb81f3b834f14046",
+        "stims": [
+          {
+            "display": {
+              "text": "Limiting reference distribution approached as sample size increases; the regular LRT uses an asymptotic chi-square distribution."
+            },
+            "response": {
+              "correctResponse": "asymptotic distribution"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-300c696d4728bf1a",
+        "stims": [
+          {
+            "display": {
+              "text": "Difference in the numbers of freely estimated parameters between the full and restricted models, used for the regular asymptotic chi-square reference."
+            },
+            "response": {
+              "correctResponse": "degrees of freedom for an LRT"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-f7d11e18f3d131a5",
+        "stims": [
+          {
+            "display": {
+              "text": "Function of model parameters that evaluates how well those parameter values support the observed data under the model."
+            },
+            "response": {
+              "correctResponse": "likelihood"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-95f7d4861a9aec06",
+        "stims": [
+          {
+            "display": {
+              "text": "Natural logarithm of the likelihood, used to compare model fits and calculate likelihood ratio statistics."
+            },
+            "response": {
+              "correctResponse": "log-likelihood"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-2f0b4053abf14cdb",
+        "stims": [
+          {
+            "display": {
+              "text": "Numerical criterion measuring prediction error that a fitting algorithm seeks to reduce, such as squared error or cross-entropy."
+            },
+            "response": {
+              "correctResponse": "loss function"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-f69f75721093e239",
+        "stims": [
+          {
+            "display": {
+              "text": "Parameter estimation that selects values making the observed data most likely under the specified statistical model."
+            },
+            "response": {
+              "correctResponse": "maximum likelihood estimation"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-d8a681bcc005abd1",
+        "stims": [
+          {
+            "display": {
+              "text": "Average squared prediction error, Σ(Yᵢ − Ŷᵢ)²/n, in squared response units. This prediction metric uses n, unlike residual mean squares in inferential ANOVA tables. Abbreviated MSE."
+            },
+            "response": {
+              "correctResponse": "mean squared error"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-39ecc0fcedb9c92c",
+        "stims": [
+          {
+            "display": {
+              "text": "Degree to which a model's predictions agree with observed data and capture relevant patterns."
+            },
+            "response": {
+              "correctResponse": "model fit"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-b670114f440a52ea",
+        "stims": [
+          {
+            "display": {
+              "text": "Choice of variables, functional form, and distributional structure defining a statistical model."
+            },
+            "response": {
+              "correctResponse": "model specification"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-480afc8b7453de38",
+        "stims": [
+          {
+            "display": {
+              "text": "Models in which the simpler model is obtained by imposing restrictions on parameters of the more general model."
+            },
+            "response": {
+              "correctResponse": "nested models"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-545e2d2c1b25c575",
+        "stims": [
+          {
+            "display": {
+              "text": "Coefficient-fitting method that minimizes the sum of squared residuals."
+            },
+            "response": {
+              "correctResponse": "ordinary least squares"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-2696fbf2de496321",
+        "stims": [
+          {
+            "display": {
+              "text": "Addition of a model-complexity penalty to a fitting objective to restrain overfitting, as in ridge and lasso regression."
+            },
+            "response": {
+              "correctResponse": "regularization"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-5609ad1a1c8c3992",
+        "stims": [
+          {
+            "display": {
+              "text": "Sum of squared differences between observed responses and their fitted values, measuring variation left unexplained by a model. Notation: SSres."
+            },
+            "response": {
+              "correctResponse": "residual sum of squares"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-f61ea6965d55b00e",
+        "stims": [
+          {
+            "display": {
+              "text": "Square root of prediction MSE, expressing squared-error performance in the response's original units; smaller values indicate better predictions on comparable data. Abbreviated RMSE."
+            },
+            "response": {
+              "correctResponse": "root mean squared error"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-ae99ccc7f0778303",
+        "stims": [
+          {
+            "display": {
+              "text": "Mathematical representation of patterns in data used to explain, predict, or make inferences about outcomes."
+            },
+            "response": {
+              "correctResponse": "statistical model"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-9edf02b2a6e09cfc",
+        "stims": [
+          {
+            "display": {
+              "text": "Sum of squared deviations of observed responses from their mean, measuring total response variation. Notation: SStot."
+            },
+            "response": {
+              "correctResponse": "total sum of squares"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u33-5a43f1e23e0f76ff",
+        "stims": [
+          {
+            "display": {
+              "text": "Failure of an overly simple model to capture important patterns in the data."
+            },
+            "response": {
+              "correctResponse": "underfitting"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

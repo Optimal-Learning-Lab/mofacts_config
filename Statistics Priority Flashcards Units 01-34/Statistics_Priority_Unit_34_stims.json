@@ -1,0 +1,240 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u34-f123776bccbe6de8",
+        "stims": [
+          {
+            "display": {
+              "text": "Stage assigning each observation to the cluster whose current centroid is nearest."
+            },
+            "response": {
+              "correctResponse": "assignment step"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-b66699647634c139",
+        "stims": [
+          {
+            "display": {
+              "text": "Vector of coordinate-wise means of the observations assigned to a cluster. Also called cluster center."
+            },
+            "response": {
+              "correctResponse": "centroid"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-acff5d2686d587d1",
+        "stims": [
+          {
+            "display": {
+              "text": "Choice of starting cluster centers before the assignment and update iterations; different starts may produce different solutions."
+            },
+            "response": {
+              "correctResponse": "centroid initialization"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-51f39e4016ea79d6",
+        "stims": [
+          {
+            "display": {
+              "text": "Grouping observations so that members of a group are similar according to selected features and a chosen similarity measure. Also called cluster analysis."
+            },
+            "response": {
+              "correctResponse": "clustering"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-e8c3f3d87ee23e76",
+        "stims": [
+          {
+            "display": {
+              "text": "Stabilization of assignments or centroids, or negligible further improvement in the objective; it does not ensure the best possible clustering."
+            },
+            "response": {
+              "correctResponse": "convergence"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-7408d9184f4753c2",
+        "stims": [
+          {
+            "display": {
+              "text": "Rule for quantifying how far apart observations are; standard k-means uses Euclidean distance for assignment."
+            },
+            "response": {
+              "correctResponse": "distance metric"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-29a0f378aeec5fd7",
+        "stims": [
+          {
+            "display": {
+              "text": "Heuristic choosing k near a bend in the plot of WCSS against cluster number, after which additional clusters yield smaller improvements."
+            },
+            "response": {
+              "correctResponse": "elbow method"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-c63d22cf284b428f",
+        "stims": [
+          {
+            "display": {
+              "text": "Straight-line distance between vectors, calculated as the square root of the sum of squared differences in their coordinates."
+            },
+            "response": {
+              "correctResponse": "Euclidean distance"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-dbb17215b92f4a6f",
+        "stims": [
+          {
+            "display": {
+              "text": "Solution with the smallest objective value among all possible clusterings for the specified k and criterion."
+            },
+            "response": {
+              "correctResponse": "global optimum"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-a611f4a6074b27a5",
+        "stims": [
+          {
+            "display": {
+              "text": "Method partitioning observations into k groups by alternating assignment to the nearest centroid and recomputation of cluster means, seeking to minimize within-cluster squared distances."
+            },
+            "response": {
+              "correctResponse": "k-means clustering"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-7b0813e2482f037e",
+        "stims": [
+          {
+            "display": {
+              "text": "Solution that cannot be improved by the algorithm's nearby updates but may have a worse objective value than another solution."
+            },
+            "response": {
+              "correctResponse": "local optimum"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-ea0f25977d94eee1",
+        "stims": [
+          {
+            "display": {
+              "text": "Repeated k-means fits from different initial centers, retaining a good solution to reduce dependence on a single initialization. In the R example, nstart specifies the number of starts."
+            },
+            "response": {
+              "correctResponse": "multiple starts"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-043fbb66a8d1c76e",
+        "stims": [
+          {
+            "display": {
+              "text": "Numerical criterion optimized by an algorithm; for k-means it is the total within-cluster sum of squares."
+            },
+            "response": {
+              "correctResponse": "objective function"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-ad9f518673d7c5fd",
+        "stims": [
+          {
+            "display": {
+              "text": "Dependence of clustering results on feature measurement scales because large-scale coordinates can dominate distance calculations."
+            },
+            "response": {
+              "correctResponse": "scale sensitivity"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-b037444339723191",
+        "stims": [
+          {
+            "display": {
+              "text": "Evaluation of how well observations fit their own clusters relative to other clusters; larger silhouette scores suggest better-separated groups."
+            },
+            "response": {
+              "correctResponse": "silhouette analysis"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-13a47eae1a99741e",
+        "stims": [
+          {
+            "display": {
+              "text": "Learning patterns or groups from features without fitting to a supplied target outcome or class label."
+            },
+            "response": {
+              "correctResponse": "unsupervised learning"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-664ad0dd943c0217",
+        "stims": [
+          {
+            "display": {
+              "text": "Stage recomputing each centroid as the mean of observations currently assigned to that cluster."
+            },
+            "response": {
+              "correctResponse": "update step"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u34-222b3a05b6ceb881",
+        "stims": [
+          {
+            "display": {
+              "text": "Total squared Euclidean distance from each observation to its assigned centroid; the objective minimized by standard k-means. Also called inertia and abbreviated WCSS or WSS."
+            },
+            "response": {
+              "correctResponse": "within-cluster sum of squares"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

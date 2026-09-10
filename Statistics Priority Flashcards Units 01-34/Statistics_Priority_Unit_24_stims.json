@@ -1,0 +1,110 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "stats-priority-u24-e01a86245f624a34",
+        "stims": [
+          {
+            "display": {
+              "text": "The parameter μ₁ − μ₂ comparing two groups' average responses. A negative value means population 1 has a lower mean; reversing group order reverses the sign."
+            },
+            "response": {
+              "correctResponse": "difference between population means"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-e84c0a335b7bcce3",
+        "stims": [
+          {
+            "display": {
+              "text": "The statistic ȳ₁ − ȳ₂, used to estimate μ₁ − μ₂ from two groups' observed responses."
+            },
+            "response": {
+              "correctResponse": "difference between sample means"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-1c22d8c8d02364c8",
+        "stims": [
+          {
+            "display": {
+              "text": "A test comparing population means of a quantitative response in two independent groups, usually testing H₀: μ₁ − μ₂ = 0. Also called two-sample t-test."
+            },
+            "response": {
+              "correctResponse": "independent-samples t-test"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-6948fb818e5f81d6",
+        "stims": [
+          {
+            "display": {
+              "text": "For small independent samples, the quantitative response should be reasonably normal within each population; strong skewness or outliers can undermine the t approximation. Larger samples can support approximate inference."
+            },
+            "response": {
+              "correctResponse": "normality condition"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-c94d983b669a4117",
+        "stims": [
+          {
+            "display": {
+              "text": "The estimated sampling spread of the difference between independent sample means. In Welch's procedure it is √(s₁²/n₁ + s₂²/n₂)."
+            },
+            "response": {
+              "correctResponse": "standard error of the difference in means"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-0cfab45da86fc989",
+        "stims": [
+          {
+            "display": {
+              "text": "An interval estimating μ₁ − μ₂ and showing the direction, size, and precision of a mean difference. Exclusion of zero corresponds to rejection by a matching two-sided t test at the corresponding significance level."
+            },
+            "response": {
+              "correctResponse": "two-sample t confidence interval"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-e715961bb4088e03",
+        "stims": [
+          {
+            "display": {
+              "text": "The observed difference between sample means minus the hypothesized difference, divided by its standard error. For the usual null, the hypothesized difference is zero."
+            },
+            "response": {
+              "correctResponse": "two-sample t statistic"
+            }
+          }
+        ]
+      },
+      {
+        "clusterKC": "stats-priority-u24-ed13a47262a345db",
+        "stims": [
+          {
+            "display": {
+              "text": "An independent-samples t-test that does not assume equal population variances. It uses SE = √(s₁²/n₁ + s₂²/n₂) and an approximate t distribution with adjusted degrees of freedom."
+            },
+            "response": {
+              "correctResponse": "Welch's t-test"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
