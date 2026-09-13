@@ -71,7 +71,7 @@ This table lists all configured AutoTutor expectation and misconception knowledg
 | Expectation | autotutor.natural-selection-001.kc.e3 | Individuals with traits better suited to the environment leave more surviving offspring. |
 | Expectation | autotutor.natural-selection-001.kc.e4 | Over generations, the advantageous heritable trait or allele becomes more common in the population. |
 | Expectation | autotutor.natural-selection-001.kc.e5 | Natural selection is not intentional and does not make individuals change because they need to. |
-| Misconception | M1 | Natural selection changes trait frequencies across generations, not within an individual. |
+| Misconception | M1 | Natural selection changes an individual's inherited traits during its lifetime. |
 | Misconception | M2 | Natural selection is only about which individuals survive, not whether they reproduce. |
 | Misconception | M3 | Natural selection always makes organisms more advanced, perfect, or complex. |
 
