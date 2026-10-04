@@ -6,7 +6,7 @@
         "stims": [
           {
             "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
-            "text": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time."
+            "text": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions."
           }
         ]
       },
@@ -15,7 +15,7 @@
         "stims": [
           {
             "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
-            "text": "About 95% of the intervals produced by that repeated procedure would contain the true population mean."
+            "text": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean."
           }
         ]
       },
@@ -24,7 +24,7 @@
         "stims": [
           {
             "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
-            "text": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not."
+            "text": "A computed confidence interval either contains the fixed true population mean or it does not."
           }
         ]
       }
@@ -133,7 +133,7 @@
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
-                "description": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time.",
+                "description": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions.",
                 "centrality": 0
               }
             },
@@ -141,7 +141,7 @@
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
-                "description": "About 95% of the intervals produced by that repeated procedure would contain the true population mean.",
+                "description": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean.",
                 "centrality": 0
               }
             },
@@ -149,7 +149,7 @@
               "factType": "kcGraph.node",
               "slots": {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
-                "description": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not.",
+                "description": "A computed confidence interval either contains the fixed true population mean or it does not.",
                 "centrality": 0
               }
             }
@@ -168,15 +168,15 @@
             "expectations": [
               {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e1",
-                "text": "Interpreting the 95% requires imagining repeated random samples and rebuilding the interval the same way each time."
+                "text": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions."
               },
               {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e2",
-                "text": "About 95% of the intervals produced by that repeated procedure would contain the true population mean."
+                "text": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean."
               },
               {
                 "clusterKC": "autotutor.stats-confidence-interval-001.kc.e3",
-                "text": "For the already-computed interval [42, 50], the population mean is fixed, so the interval either contains it or it does not."
+                "text": "A computed confidence interval either contains the fixed true population mean or it does not."
               }
             ],
             "misconceptions": [
