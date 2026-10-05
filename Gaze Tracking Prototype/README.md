@@ -1,0 +1,1 @@
+Load both JSON files through the normal MoFaCTS content workflow. This example contains original synthetic questions and adds no gaze recording. See the Gaze Tracking Prototype wiki page for calibration and evaluation.

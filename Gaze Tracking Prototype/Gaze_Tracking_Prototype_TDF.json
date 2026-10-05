@@ -1,0 +1,107 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Gaze Tracking Prototype",
+      "stimulusfile": "Gaze_Tracking_Prototype_stims.json",
+      "userselect": "true"
+    },
+    "unit": [
+      {
+        "unitname": "Calibrate gaze",
+        "gazecalibrationsession": {}
+      },
+      {
+        "unitname": "Tracked study",
+        "gazeTracking": true,
+        "assessmentsession": {
+          "clusterlist": "0-2",
+          "randomizegroups": "false",
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,t,s,0 0,t,s,0 0,t,s,0"
+          },
+          "initialpositions": "A_1 A_2 A_3",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 30000,
+          "purestudy": 10000,
+          "reviewstudy": 10000,
+          "correctprompt": 1000,
+          "skipstudy": "false"
+        }
+      },
+      {
+        "unitname": "Tracked drill",
+        "gazeTracking": true,
+        "assessmentsession": {
+          "clusterlist": "0-2",
+          "randomizegroups": "false",
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,t,d,0 0,t,d,0 0,t,d,0"
+          },
+          "initialpositions": "A_1 A_2 A_3",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 30000,
+          "purestudy": 10000,
+          "reviewstudy": 10000,
+          "correctprompt": 1000,
+          "skipstudy": "false"
+        }
+      },
+      {
+        "unitname": "Untracked test",
+        "gazeTracking": false,
+        "assessmentsession": {
+          "clusterlist": "0-2",
+          "randomizegroups": "false",
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,t,t,0 0,t,t,0 0,t,t,0"
+          },
+          "initialpositions": "A_1 A_2 A_3",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 30000,
+          "purestudy": 10000,
+          "reviewstudy": 10000,
+          "correctprompt": 1000,
+          "skipstudy": "false"
+        }
+      },
+      {
+        "unitname": "Tracked test",
+        "gazeTracking": true,
+        "assessmentsession": {
+          "clusterlist": "0-2",
+          "randomizegroups": "false",
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "1",
+            "templatesrepeated": "3",
+            "group": "0,t,t,0 0,t,t,0 0,t,t,0"
+          },
+          "initialpositions": "A_1 A_2 A_3",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 30000,
+          "purestudy": 10000,
+          "reviewstudy": 10000,
+          "correctprompt": 1000,
+          "skipstudy": "false"
+        }
+      }
+    ]
+  }
+}
