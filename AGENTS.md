@@ -3,6 +3,9 @@
 ## Purpose
 - Repository: `C:\dev\mofacts_config`
 - Holds MoFaCTS configuration and content definitions, including TDF-related structures consumed by application code.
+- This repository is passive storage. It has no active role in the application and requires no manifest, repository-wide content validation, or pre-commit/pre-push content checks.
+- MoFaCTS owns content validation when files are uploaded into the application. Run local content validators, audits, or review utilities only when the user explicitly requests those checks; storing, converting, committing, or pushing files does not authorize them.
+- Stored generators and other utilities are invoked only for explicitly requested work. Do not add automatic validation calls, hooks, watchers, or CI jobs to this repository.
 
 ## Repo Selection Rule
 - Do not assume the current working directory is the correct repo for the task.

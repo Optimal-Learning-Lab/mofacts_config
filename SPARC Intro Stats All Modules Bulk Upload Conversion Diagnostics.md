@@ -33,7 +33,9 @@ This catalog lists the expected conversion diagnostics in the generated 43-modul
 | --- | --- |
 | Build missing-activity diagnostic node | `scripts/convert_oli_flat_module_to_sparc.ts`, `buildMissingActivityDiagnostic` |
 | Build empty-module diagnostic node | `scripts/convert_oli_flat_module_to_sparc.ts`, `emptyModuleNode` |
-| Verify generated package structure | `scripts/verify_oli_sparc_conversion_output.ts` |
+| Manually inspect generated package structure, only when explicitly requested | `scripts/verify_oli_sparc_conversion_output.ts` |
+
+The converter does not automatically invoke the separate verifier. The config repository is passive storage; MoFaCTS owns upload-time validation.
 
 ## Current Verification Snapshot
 

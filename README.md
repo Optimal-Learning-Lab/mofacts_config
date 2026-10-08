@@ -2,6 +2,8 @@
 
 This repository contains example MOFaCTS stimulus and TDF files used for internal testing.
 
+It is a passive storage area for content, drafts, media, and supporting files. It has no active role in MoFaCTS, no required manifest, and no automatic repository validation. MoFaCTS validates content when it is uploaded into the application. Local checks or stored utilities run only when explicitly requested; they are not prerequisites for storing, committing, or pushing files.
+
 ## Workspace Repos
 
 - `C:\dev\mofacts_config`

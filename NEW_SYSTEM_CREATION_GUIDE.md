@@ -4,6 +4,8 @@ This guide describes the workflow used to create new content systems such as `wi
 
 Use it when starting a new tutor from web content, image assets, textbook terms, CSV data, or another structured source.
 
+This repository is passive storage, including for incomplete drafts. The guidance below applies to requested authoring work; it is not a repository acceptance checklist. MoFaCTS validates packages on upload. Do not run local content checks or audits unless explicitly requested, and do not require them before storing, converting, committing, or pushing files.
+
 ## Goal
 
 A new MOFaCTS content system usually needs:
@@ -25,10 +27,10 @@ C:\dev\mofacts_config
 Use the app repo only when the runtime behavior needs to change:
 
 ```powershell
-C:\dev\mofacts\svelte-app\mofacts
+C:\dev\MoFaCTS\mofacts
 ```
 
-Examples of app behavior changes include image sizing, answer matching, speech recognition behavior, TDF parsing, or UI rendering. If TypeScript app code changes, run the full app typecheck from `C:\dev\mofacts\svelte-app\mofacts`:
+Examples of app behavior changes include image sizing, answer matching, speech recognition behavior, TDF parsing, or UI rendering. If TypeScript app code changes, run the full app typecheck from `C:\dev\MoFaCTS\mofacts`:
 
 ```powershell
 npm run typecheck
@@ -66,7 +68,7 @@ Before writing files, decide:
 - System name shown to learners, for example `A&P Openstax Chapter 1 Terms`.
 - Folder name, usually the same as the system name.
 - TDF filename, usually `{System Name}_TDF.json`.
-- Stable top-level `tdfId`. Use the reviewed value in `tdf-identity-manifest.json`; for a genuinely new ID-less package, let its first MoFaCTS import assign the ID and replace the source ZIP with the downloaded canonical package.
+- Preserve a downloaded package's existing top-level `tdfId` when preparing an update. A genuinely new ID-less package receives its identity on first MoFaCTS import; no separate repository inventory is required.
 - Stimulus filename, usually a safe filename with spaces replaced by underscores.
 - Source type, such as textbook terms, map images, vocabulary rows, or figures.
 - Learner task, such as "identify the term from the definition" or "name the highlighted country".
@@ -230,91 +232,17 @@ MOFaCTS upload can fail if JSON files start with a UTF-8 byte order mark. The up
 Unexpected token '﻿', "﻿{ "t"... is not valid JSON
 ```
 
-Write files as UTF-8 without BOM. In PowerShell 7+, this is the default for `Set-Content -Encoding utf8`. When in doubt, explicitly validate the first bytes.
+Write files as UTF-8 without BOM. In PowerShell 7+, this is the default for `Set-Content -Encoding utf8`. Diagnose encoding problems when an upload reports an error or when the user requests a check.
 
-Check first bytes:
+## Step 6: Validation Belongs To Upload
 
-```powershell
-$path = ".\A&P Openstax Chapter 1 Terms\A&P Openstax Chapter 1 Terms_TDF.json"
-[System.BitConverter]::ToString([System.IO.File]::ReadAllBytes($path)[0..2])
-```
+MoFaCTS validates the files and their package references when they are uploaded. The config repository does not run a parallel validator or maintain a lesson-ID manifest. A local content audit is separate work and requires an explicit request.
 
-Good starts usually look like:
-
-```text
-7B-0D-0A
-7B-0A-20
-```
-
-Bad BOM start:
-
-```text
-EF-BB-BF
-```
-
-Remove a BOM if needed:
-
-```powershell
-$path = ".\A&P Openstax Chapter 1 Terms\A&P Openstax Chapter 1 Terms_TDF.json"
-$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-$text = [System.IO.File]::ReadAllText($path)
-[System.IO.File]::WriteAllText($path, $text, $utf8NoBom)
-```
-
-## Step 6: Validate The Files
-
-Run these checks before uploading or zipping.
-
-Parse JSON:
-
-```powershell
-Get-Content ".\A&P Openstax Chapter 1 Terms\A&P Openstax Chapter 1 Terms_TDF.json" -Raw | ConvertFrom-Json | Out-Null
-Get-Content ".\A&P Openstax Chapter 1 Terms\A&P_Openstax_Chapter_1_Terms_stims.json" -Raw | ConvertFrom-Json | Out-Null
-```
-
-Check for mojibake or replacement characters:
-
-```powershell
-Select-String -Path ".\A&P Openstax Chapter 1 Terms\*.json" -Pattern "â|Ã|�|﻿"
-```
-
-Check the stimulus filename referenced by the TDF:
-
-```powershell
-$tdfPath = ".\A&P Openstax Chapter 1 Terms\A&P Openstax Chapter 1 Terms_TDF.json"
-$tdf = Get-Content $tdfPath -Raw | ConvertFrom-Json
-$stimFile = $tdf.tutor.setspec.stimulusfile
-Test-Path (Join-Path (Split-Path $tdfPath) $stimFile)
-```
-
-Check portable identity:
-
-```powershell
-$tdf.tdfId -match '^[A-Za-z0-9_-]+$'
-```
-
-For a condition root, `condition` and `conditionTdfIds` must have the same order and length. Every condition filename and every child ID must identify a child TDF in that ZIP. Never invent a replacement ID for deployed content; reconcile it against a reviewed production package export first.
-
-Check cluster counts:
-
-```powershell
-$stimPath = ".\A&P Openstax Chapter 1 Terms\A&P_Openstax_Chapter_1_Terms_stims.json"
-$stim = Get-Content $stimPath -Raw | ConvertFrom-Json
-$clusters = @($stim.setspec.clusters)
-$clusters.Count
-$clusters.clusterid | Sort-Object | Select-Object -First 5
-$clusters.clusterid | Sort-Object | Select-Object -Last 5
-```
-
-For URL-based image systems, sample several URLs in a browser or with PowerShell:
-
-```powershell
-Invoke-WebRequest "https://commons.wikimedia.org/wiki/Special:Redirect/file/Afghanistan_in_its_region.svg" -Method Head
-```
+Existing package IDs remain in the TDF files themselves. Preserve them when preparing an update; do not invent replacement IDs for deployed lessons.
 
 ## Step 7: Review A Few Cards Manually
 
-Always inspect samples before considering the system done.
+When the user requests a content or delivery review, inspect representative samples. This is not a requirement for storing or committing files.
 
 Review:
 
@@ -328,7 +256,7 @@ For speech or typed answers, pay attention to short words and terms with sounds 
 
 ## Step 8: Package If Needed
 
-If the workflow needs a zip file, zip the lesson folder after validation:
+When the user requests a ZIP, package the lesson folder:
 
 ```powershell
 Compress-Archive `
@@ -337,7 +265,7 @@ Compress-Archive `
   -Force
 ```
 
-Do not zip before checking JSON parsing, BOMs, stimulus filename references, and source text encoding.
+Packaging does not require a separate local validation pass. Upload-time validation remains owned by MoFaCTS.
 
 Upload normally to create or update by `tdfId`. Select **Import as copy** only when a new lesson family is intended; MoFaCTS rekeys every packaged TDF and remaps condition IDs. A copied package cannot retain an `experimentTarget` that would duplicate another available root.
 
@@ -354,21 +282,6 @@ Good artifacts:
 
 This is especially important when the source contains 50+ items or when matching requires country names, aliases, title-case fixes, punctuation handling, or external URLs.
 
-## Quick Checklist
+## Storage And Delivery Status
 
-Before calling a new system complete:
-
-- The lesson has its own folder.
-- The TDF file parses as JSON.
-- Every supported TDF has the reviewed top-level `tdfId` recorded in `tdf-identity-manifest.json`.
-- The stimulus file parses as JSON.
-- Both JSON files are UTF-8 without BOM.
-- The TDF `stimulusfile` matches the real stimulus filename.
-- Condition roots have aligned `condition` and `conditionTdfIds` arrays.
-- Provider API-key fields are omitted unless the TDF intentionally supplies valid lesson-specific keys.
-- Cluster ids are contiguous and included in the TDF cluster list.
-- The instructions explain the task clearly.
-- The instructions credit the source and license.
-- A few representative cards have been manually checked.
-- Source CSV, script, or audit artifacts are saved when useful.
-- If app code changed, `npm run typecheck` passed in the app repo.
+Stored or committed files may be drafts. Storage, successful upload, and verified learner delivery are separate claims. Record only the checks or delivery actions that were explicitly requested and actually completed. Application-code changes remain subject to the app repository's own verification rules.

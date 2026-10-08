@@ -2142,18 +2142,6 @@ function writeConversionResult(context: ConversionContext, result: ConversionRes
   writeJson(path.join(context.auditRoot, `${notesStem}_conversion-notes.json`), result.conversionNotes);
 }
 
-function verifyConversionOutput(outputRoot: string): void {
-  const scriptDir = path.dirname(path.resolve(process.argv[1] || ''));
-  execFileSync(process.execPath, [
-    '--experimental-strip-types',
-    path.join(scriptDir, 'verify_oli_sparc_conversion_output.ts'),
-    '--package-root',
-    outputRoot,
-  ], {
-    stdio: 'inherit',
-  });
-}
-
 function zipConversionOutput(context: ConversionContext): void {
   const zipPath = `${context.outputRoot}.zip`;
   execFileSync('powershell', [
@@ -2180,15 +2168,9 @@ function main(): void {
     lastContext = context;
     const result = convertModule(context);
     writeConversionResult(context, result);
-    if (!options.allModules) {
-      verifyConversionOutput(context.outputRoot);
-    }
     if (options.zip && !options.allModules) {
       zipConversionOutput(context);
     }
-  }
-  if (options.allModules && lastContext) {
-    verifyConversionOutput(lastContext.outputRoot);
   }
   if (options.zip && options.allModules && lastContext) {
     zipConversionOutput(lastContext);
