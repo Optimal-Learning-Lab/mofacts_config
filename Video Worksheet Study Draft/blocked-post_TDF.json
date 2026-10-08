@@ -1,0 +1,38 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Video Worksheet Study DRAFT - blocked-post",
+      "stimulusfile": "Video_Worksheet_Study_stims.json",
+      "userselect": false,
+      "shuffleclusters": "0"
+    },
+    "deliverySettings": {
+      "experimentLoginText": "Prolific ID"
+    },
+    "unit": [
+      {
+        "unitname": "Lecture and worksheets - blocked-post",
+        "videosession": {
+          "videosource": "mock-lecture.mp4",
+          "checkpointBehavior": "worksheet",
+          "questiontimes": [
+            20
+          ],
+          "preventPause": true,
+          "preventRewind": true,
+          "preventScrubbing": true,
+          "rewindOnIncorrect": false,
+          "worksheet": {
+            "pageIds": [
+              "all-concepts"
+            ]
+          }
+        }
+      },
+      {
+        "unitname": "Return instructions",
+        "unitinstructions": "<p>Please come back in 2 days using this same study link and the same Prolific ID.</p>"
+      }
+    ]
+  }
+}

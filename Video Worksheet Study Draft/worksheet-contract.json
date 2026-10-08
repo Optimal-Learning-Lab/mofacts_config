@@ -1,0 +1,48 @@
+{
+  "status": "implemented-locally-placeholder-media-present-integration-verification-pending",
+  "labels": {
+    "submit": "Submit and Continue",
+    "reviewContinue": "Continue"
+  },
+  "transitions": [
+    "video checkpoint pauses lecture and opens an editable TutorScript worksheet",
+    "each answer or changed answer produces normal answer history during work; visible correctness feedback is withheld",
+    "manual Submit and Continue or work timeout ends work and opens feedback after pending answer writes complete; no batch grading, additional answer records or final-answer snapshot",
+    "reconstruct a read-only worksheet from this attempt history, overlay the correct-answer template, and start the separate review countdown",
+    "record each actual appearance of feedback as a non-answer exposure, including a new appearance after reload; redraws and retries of the same write add no exposures",
+    "review timeout or participant Continue closes feedback and resumes lecture"
+  ],
+  "resume": {
+    "workDeadline": "persist when the worksheet becomes usable; reloading does not extend the maximum work interval",
+    "reviewDeadline": "persist when work ends and review begins; reloading does not restart the maximum review interval",
+    "randomOrder": "persist realized question node order within the worksheet attempt and preserve it in feedback",
+    "answers": "load the latest recorded selection per question from normal history in the relevant learner/lesson/worksheet attempt; earlier changes remain in history; no separate answer snapshot",
+    "phase": "retain worksheet attempt identity and work/review phase so reload reconstructs the same attempt"
+  },
+  "unanswered": "show a blank learner response, the correct-answer overlay and an incorrect visual indication in feedback; no answer means no answer record and no fabricated model evidence",
+  "media": {
+    "file": "mock-lecture.mp4",
+    "durationSeconds": 20.0333,
+    "conceptBoundariesSeconds": [
+      0,
+      5,
+      10,
+      15,
+      20
+    ],
+    "status": "Generated synthetic test-only MP4: four labeled concept cards and quiet boundary tones; rounded playback length 20 seconds.",
+    "provenance": "Original title cards and synthesized audio created for local testing; no external footage or learner data."
+  },
+  "assignment": {
+    "draftMode": "not-max",
+    "status": "root uses the implemented server-owned shuffled-block allocator; returning participants retain their assignment"
+  },
+  "purpose": "Explanatory design record only, not runtime configuration or another question authoring system. TutorScript questions and normal stimulus/model references own answer behavior.",
+  "feedbackExposure": "non-answer history on each actual feedback-page appearance, including reload; retries share the identity of that appearance, ordinary redraws are not appearances; unlike the existing instruction event recorded on Continue",
+  "remainingCapabilityWork": [
+    "Replace synthetic test media with actual lecture media and matching checkpoint times before study delivery",
+    "Verify saved-history integration, retries and authorization in the supported Meteor test environment",
+    "Verify HTML5/YouTube browser delivery, keyboard/mouse, fullscreen transitions, timed and early completion, and reloads"
+  ],
+  "answerModelPolicy": "Save normal model-eligible answers on each selection/change; do not apply live adaptive model updates during the worksheet."
+}
