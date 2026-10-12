@@ -1,0 +1,30 @@
+{
+  "tdfId": "tdf_1486f5dafaf2149e1335a929",
+  "tutor": {
+    "setspec": {
+      "lessonname": "SPARC Compound Interest - Student Selected",
+      "name": "sparc-compound-interest-student",
+      "stimulusfile": "SPARC_Compound_Interest_student_stims.json",
+      "userselect": "false",
+      "openRouterModel": "openai/gpt-5.4-nano",
+      "tags": [
+        "autotutor",
+        "finance",
+        "compound-interest",
+        "sparc-session",
+        "autotutor-converted"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Compound Interest - Student Selected",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-compound-interest-student",
+          "clusterlist": "0-3",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
+        }
+      }
+    ]
+  }
+}

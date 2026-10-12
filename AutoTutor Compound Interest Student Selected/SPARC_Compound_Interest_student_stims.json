@@ -1,0 +1,201 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+        "stims": [
+          {
+            "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+            "text": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+        "stims": [
+          {
+            "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+            "text": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed."
+          }
+        ]
+      },
+      {
+        "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+        "stims": [
+          {
+            "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+            "text": "More frequent compounding produces a higher ending balance because interest is added sooner and therefore begins compounding sooner."
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-compound-interest-student",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "Suppose $1,000 earns 5% interest each year and the interest is left in the account. In your own words, explain how compound interest makes the balance grow over time and how splitting that same 5% annual rate across more frequent compounding periods would affect the ending balance.",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism"
+            },
+            {
+              "clusterIndex": 1,
+              "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence"
+            },
+            {
+              "clusterIndex": 2,
+              "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-sparc-package",
+                "sourceScriptId": "compound_interest_001",
+                "topic": "Compound interest",
+                "sourceLessonName": "AutoTutor Compound Interest",
+                "sourceUnitName": "Compound Interest AutoTutor"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8,
+                "misconceptionThreshold": 0.2
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 3,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+                "description": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+                "description": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed.",
+                "centrality": 0
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+                "description": "More frequent compounding produces a higher ending balance because interest is added sooner and therefore begins compounding sooner.",
+                "centrality": 0
+              }
+            }
+          ],
+          "instructionalController": {
+            "adapterId": "sparc-autotutor-v1",
+            "policyId": "student-selected-v2",
+            "policyVersion": 1,
+            "parameters": {
+              "minimumProgress": 0.2,
+              "progressResponse": "deescalate",
+              "nonAddressingResponse": "hold"
+            }
+          },
+          "autoTutorTargets": {
+            "expectations": [
+              {
+                "clusterKC": "autotutor.compound-interest-001.kc.compounding-mechanism",
+                "text": "Earned interest remains in the account and becomes part of the balance used to calculate the next period's interest."
+              },
+              {
+                "clusterKC": "autotutor.compound-interest-001.kc.growth-consequence",
+                "text": "Because the same percentage is applied to an increasing balance, the dollar amount of interest increases over time rather than remaining fixed."
+              },
+              {
+                "clusterKC": "autotutor.compound-interest-001.kc.frequency-effect",
+                "text": "More frequent compounding produces a higher ending balance because interest is added sooner and therefore begins compounding sooner."
+              }
+            ],
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "A fixed annual rate means the same dollar amount is added every year."
+              },
+              {
+                "id": "M2",
+                "text": "Later interest is calculated only on the original principal, even when earned interest remains in the account."
+              },
+              {
+                "id": "M3",
+                "text": "When the same nominal annual rate is divided across compounding periods over the same length of time, compounding frequency makes no difference to the ending balance."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

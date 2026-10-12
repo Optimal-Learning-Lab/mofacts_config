@@ -1,0 +1,30 @@
+{
+  "tdfId": "tdf_972ba85fcd0c1fbc25e909a1",
+  "tutor": {
+    "setspec": {
+      "lessonname": "SPARC Natural Selection - Student Selected",
+      "name": "sparc-natural-selection-student",
+      "stimulusfile": "SPARC_Natural_Selection_student_stims.json",
+      "userselect": "false",
+      "openRouterModel": "openai/gpt-5.4-nano",
+      "tags": [
+        "autotutor",
+        "biology",
+        "evolution",
+        "sparc-session",
+        "autotutor-converted"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Natural Selection - Student Selected",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-natural-selection-student",
+          "clusterlist": "0-4",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
+        }
+      }
+    ]
+  }
+}
