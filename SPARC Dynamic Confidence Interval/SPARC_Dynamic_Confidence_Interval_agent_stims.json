@@ -1,0 +1,635 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+            "text": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+            "text": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+            "text": "A computed confidence interval either contains the fixed true population mean or it does not."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+            "text": "Construct a confidence interval by extending critical value × standard error on each side of the parameter estimate."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+            "text": "With confidence level and population variability held fixed, margin of error decreases in proportion to 1/√n."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+            "text": "When population standard deviation is unknown and estimated from the sample, a mean interval uses a t multiplier with n − 1 degrees of freedom rather than the known-σ normal multiplier."
+          }
+        ]
+      },
+      {
+        "clusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+        "stims": [
+          {
+            "clusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+            "text": "The normal-approximation proportion interval requires sufficiently many observations in both outcome categories. A large total sample alone is insufficient."
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "sparc-dynamic-confidence-interval-agent",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": [
+                {
+                  "id": "opening-tutor-message",
+                  "nodeType": "atomic",
+                  "atomType": "dialogue-utterance",
+                  "speaker": "tutor",
+                  "value": "A researcher reports a 95% confidence interval of [42, 50] for a population mean. What does the 95% mean?",
+                  "clusterIndices": [
+                    0,
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response"
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit"
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.e1"
+            },
+            {
+              "clusterIndex": 1,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.e2"
+            },
+            {
+              "clusterIndex": 2,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.e3"
+            },
+            {
+              "clusterIndex": 3,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.a"
+            },
+            {
+              "clusterIndex": 4,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.b"
+            },
+            {
+              "clusterIndex": 5,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.c"
+            },
+            {
+              "clusterIndex": 6,
+              "clusterKC": "dynamic.stats-confidence-interval-001.kc.d"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "autotutor-sparc-package",
+                "sourceScriptId": "dynamic_stats_confidence_interval_001",
+                "topic": "Confidence intervals",
+                "sourceLessonName": "SPARC Dynamic Confidence Interval",
+                "sourceUnitName": "Dynamic Confidence Interval (agent)"
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8,
+                "misconceptionThreshold": 0.2
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-graph-priority",
+                "coverageThreshold": 0.8,
+                "frontierWeight": 0.5,
+                "coherenceWeight": 0.3,
+                "centralityWeight": 0.2
+              }
+            },
+            {
+              "factType": "dialogue.graduation",
+              "slots": {
+                "requiredTargetCount": 7,
+                "maxActiveMisconceptions": 0,
+                "maxTurns": 25
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "description": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions.",
+                "centrality": 0.466667
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "description": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean.",
+                "centrality": 0.616667
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "description": "A computed confidence interval either contains the fixed true population mean or it does not.",
+                "centrality": 0.433333
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "description": "Construct a confidence interval by extending critical value × standard error on each side of the parameter estimate.",
+                "centrality": 0.616667
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "description": "With confidence level and population variability held fixed, margin of error decreases in proportion to 1/√n.",
+                "centrality": 0.516667
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "description": "When population standard deviation is unknown and estimated from the sample, a mean interval uses a t multiplier with n − 1 degrees of freedom rather than the known-σ normal multiplier.",
+                "centrality": 0.45
+              }
+            },
+            {
+              "factType": "kcGraph.node",
+              "slots": {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "description": "The normal-approximation proportion interval requires sufficiently many observations in both outcome categories. A large total sample alone is insufficient.",
+                "centrality": 0.433333
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.8
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.3
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.6
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.8
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.3
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.3
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.3
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.8
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.6
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.9
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "strength": 0.4
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "strength": 0.2
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "strength": 0.8
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "strength": 0.5
+              }
+            },
+            {
+              "factType": "kcGraph.relationship",
+              "slots": {
+                "sourceClusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "targetClusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "strength": 0.5
+              }
+            }
+          ],
+          "instructionalController": {
+            "adapterId": "sparc-autotutor-v1",
+            "policyId": "dynamic-instruction-agent-v1",
+            "policyVersion": 1,
+            "parameters": {
+              "minimumProgress": 0.3
+            }
+          },
+          "autoTutorTargets": {
+            "expectations": [
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e1",
+                "text": "Repeated-sampling interpretation assumes random samples and the same interval-construction method across repetitions."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e2",
+                "text": "The confidence level describes the long-run proportion of constructed intervals that contain the true population mean."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.e3",
+                "text": "A computed confidence interval either contains the fixed true population mean or it does not."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.a",
+                "text": "Construct a confidence interval by extending critical value × standard error on each side of the parameter estimate."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.b",
+                "text": "With confidence level and population variability held fixed, margin of error decreases in proportion to 1/√n."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.c",
+                "text": "When population standard deviation is unknown and estimated from the sample, a mean interval uses a t multiplier with n − 1 degrees of freedom rather than the known-σ normal multiplier."
+              },
+              {
+                "clusterKC": "dynamic.stats-confidence-interval-001.kc.d",
+                "text": "The normal-approximation proportion interval requires sufficiently many observations in both outcome categories. A large total sample alone is insufficient."
+              }
+            ],
+            "misconceptions": [
+              {
+                "id": "M1",
+                "text": "There is a 95% probability that the true mean lies inside this specific interval."
+              },
+              {
+                "id": "M2",
+                "text": "The interval means 95% of individual observations fall between 42 and 50."
+              },
+              {
+                "id": "M3",
+                "text": "The interval means 95% of sample means, future sample means, or future confidence intervals will fall between 42 and 50."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
