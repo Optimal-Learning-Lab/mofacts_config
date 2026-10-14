@@ -1,0 +1,31 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "SPARC Categorized Species and Speciation (student-selected)",
+      "name": "sparc-categorized-species-speciation-student",
+      "stimulusfile": "SPARC_Categorized_Species_and_Speciation_student_stims.json",
+      "userselect": "false",
+      "openRouterModel": "openai/gpt-5.4-nano",
+      "tags": [
+        "biology",
+        "species-and-speciation",
+        "hlw4e-chapter-21",
+        "sparc-session",
+        "dynamic-instruction",
+        "student-selected",
+        "category-aware-instruction"
+      ]
+    },
+    "unit": [
+      {
+        "unitname": "Species and Speciation - Chapter 21 (student-selected)",
+        "sparcsession": {
+          "unitMode": "distance",
+          "pageId": "sparc-categorized-species-speciation-student",
+          "clusterlist": "0-23",
+          "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p"
+        }
+      }
+    ]
+  }
+}
