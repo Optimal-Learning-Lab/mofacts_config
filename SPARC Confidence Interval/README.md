@@ -1,4 +1,4 @@
-# SPARC Categorized Confidence Interval
+# SPARC Confidence Interval
 
 New test packages for dynamic-instruction-agent-v2 and dynamic-instruction-student-v2. Both require admin access. Each extends the seven-expectation/three-misconception Dynamic Confidence Interval content with authored categories and six instructional choices: three compositions in text and MC formats. Student navigation to the next KC remains separate.
 
@@ -6,7 +6,7 @@ The two new TDF/page identities retain the existing target meanings; the source 
 
 ## Starting instruction
 
-Categorized units have no fixed opening scenario or focal question. The authored `dialogue.source.topic` supplies lesson context. Both units set `sparcsession.startingKC` to `dynamic.stats-confidence-interval-001.kc.a`: constructing an interval as estimate ± critical value × standard error.
+These units have no fixed opening scenario or focal question. The authored `dialogue.source.topic` supplies lesson context. Both units set `sparcsession.startingKC` to `dynamic.stats-confidence-interval-001.kc.a`: constructing an interval as estimate ± critical value × standard error.
 
 Canonical upload generates the complete relationship graph from expectation-text embeddings and saves an exact maximum-weight Hamiltonian path with a fixed as the starting endpoint. The resulting order is **a → d → e1 → e3 → e2 → b → c**, with total relationship strength **4.355836** on the current generated graph. Graph values and the path are server-generated, not supplied by these packages. The former supplied graph and ranking weights have been removed.
 

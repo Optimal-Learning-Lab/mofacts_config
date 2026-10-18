@@ -1,4 +1,4 @@
-# SPARC Categorized Species and Speciation
+# SPARC Species and Speciation
 
 ## Current revision: October 16, 2026
 
@@ -6,8 +6,8 @@ The approved KC cleansing revision replaces the original 24 bundled targets and 
 
 ## Files and use
 
-- Agent: `SPARC_Categorized_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`; current archive `SPARC_Categorized_Species_and_Speciation_agent_kc2.zip`.
-- Student: `SPARC_Categorized_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`; current archive `SPARC_Categorized_Species_and_Speciation_student_kc2.zip`.
+- Agent: `SPARC_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`; current archive `SPARC_Species_and_Speciation_agent_kc2.zip`.
+- Student: `SPARC_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`; current archive `SPARC_Species_and_Speciation_student_kc2.zip`.
 - [Complete English lesson review](Lesson%20review.html), including the complete KC and misconception inventory, original-to-revised mapping, and example content map.
 - [KC cleansing review](KC%20cleansing%20review.html) records the same approved content revision.
 

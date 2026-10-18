@@ -40,6 +40,30 @@ $SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
 
 
 # ---------------------------------------------------------------------------
+# Prepare production video-catalog keys before deployment
+# ---------------------------------------------------------------------------
+
+# Copy only the YouTube and Supadata keys from the private localhost settings
+# into the authoritative private production settings. Preserve all other settings.
+# This block is also the first step for a settings-only update below.
+# Never paste key values into this file or print either settings object.
+$LocalVideoKeys = (Get-Content -LiteralPath $LocalSettingsPath -Raw | ConvertFrom-Json -AsHashtable)['private']['sparcVideoCatalog']
+if ($LocalVideoKeys -isnot [System.Collections.IDictionary]) { throw "Local settings have no private.sparcVideoCatalog configuration" }
+$VideoKeyNames = @('youtubeApiKey', 'supadataApiKey')
+foreach ($VideoKeyName in $VideoKeyNames) {
+  if ($LocalVideoKeys[$VideoKeyName] -isnot [string] -or [string]::IsNullOrWhiteSpace($LocalVideoKeys[$VideoKeyName])) { throw "Missing local video-catalog key: $VideoKeyName" }
+}
+$ProdSettingsJson = Get-Content -LiteralPath $ProdSettingsPath -Raw | ConvertFrom-Json -AsHashtable
+if (!$ProdSettingsJson.Contains('private')) { $ProdSettingsJson['private'] = @{} }
+if ($ProdSettingsJson['private'] -isnot [System.Collections.IDictionary]) { throw "Production private settings must be an object" }
+if (!$ProdSettingsJson['private'].Contains('sparcVideoCatalog')) { $ProdSettingsJson['private']['sparcVideoCatalog'] = @{} }
+if ($ProdSettingsJson['private']['sparcVideoCatalog'] -isnot [System.Collections.IDictionary]) { throw "Production video-catalog settings must be an object" }
+foreach ($VideoKeyName in $VideoKeyNames) { $ProdSettingsJson['private']['sparcVideoCatalog'][$VideoKeyName] = $LocalVideoKeys[$VideoKeyName] }
+[IO.File]::WriteAllText($ProdSettingsPath, ($ProdSettingsJson | ConvertTo-Json -Depth 100), [Text.UTF8Encoding]::new($false))
+Remove-Variable LocalVideoKeys, ProdSettingsJson
+
+
+# ---------------------------------------------------------------------------
 # Production app deploy
 # ---------------------------------------------------------------------------
 
@@ -204,6 +228,20 @@ if (
 # false. Change Streams are the only supported reactive driver. If startup or
 # qualification fails, stop and repair the owning incompatibility; do not
 # switch the application to polling. Keep the replica set authoritative.
+
+# ---------------------------------------------------------------------------
+# Video-key settings-only update AFTER an in-progress deployment finishes
+# ---------------------------------------------------------------------------
+
+# Use this section only when updating keys without deploying a new image.
+# Run the "Prepare production video-catalog keys" block above first.
+# A normal app deployment already copies settings and starts the new app;
+# it does not need this extra restart. An already-running app reads changed
+# settings at its next startup. No image build, push, or database restart is needed.
+scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
+if ($LASTEXITCODE -ne 0) { throw "Production video-catalog settings upload failed; app was not restarted" }
+ssh -i $ProdKey $ProdHost "chmod 600 /var/www/mofacts/settings.json && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml restart --no-deps mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+if ($LASTEXITCODE -ne 0) { throw "Production settings reload failed; inspect the application status" }
 
 # ---------------------------------------------------------------------------
 # Production MCP sidecar deploy

@@ -1,10 +1,10 @@
 {
-  "tdfId": "tdf_5670a03d0e0d46f5a5413c29",
+  "tdfId": "tdf_0a52d0bdf6684d4b994aa4e0",
   "tutor": {
     "setspec": {
-      "lessonname": "SPARC Categorized Confidence Interval (student-selected)",
-      "name": "sparc-categorized-confidence-interval-student",
-      "stimulusfile": "SPARC_Categorized_Confidence_Interval_student_stims.json",
+      "lessonname": "SPARC Confidence Interval (agent-selected)",
+      "name": "sparc-categorized-confidence-interval-agent",
+      "stimulusfile": "SPARC_Confidence_Interval_agent_stims.json",
       "userselect": "false",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
@@ -12,16 +12,16 @@
         "confidence-intervals",
         "sparc-session",
         "dynamic-instruction",
-        "student-selected",
+        "agent-selected",
         "category-aware-instruction"
       ]
     },
     "unit": [
       {
-        "unitname": "Categorized Confidence Interval (student-selected)",
+        "unitname": "Confidence Interval (agent-selected)",
         "sparcsession": {
           "unitMode": "distance",
-          "pageId": "sparc-categorized-confidence-interval-student",
+          "pageId": "sparc-categorized-confidence-interval-agent",
           "clusterlist": "0-6",
           "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p",
           "startingKC": "dynamic.stats-confidence-interval-001.kc.a"

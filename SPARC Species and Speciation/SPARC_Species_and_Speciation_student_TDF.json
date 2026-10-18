@@ -1,9 +1,9 @@
 {
   "tutor": {
     "setspec": {
-      "lessonname": "SPARC Categorized Species and Speciation (agent-selected)",
-      "name": "sparc-categorized-species-speciation-agent",
-      "stimulusfile": "SPARC_Categorized_Species_and_Speciation_agent_stims.json",
+      "lessonname": "SPARC Species and Speciation (student-selected)",
+      "name": "sparc-categorized-species-speciation-student",
+      "stimulusfile": "SPARC_Species_and_Speciation_student_stims.json",
       "userselect": "false",
       "openRouterModel": "openai/gpt-5.4-nano",
       "tags": [
@@ -12,16 +12,16 @@
         "hlw4e-chapter-21",
         "sparc-session",
         "dynamic-instruction",
-        "agent-selected",
+        "student-selected",
         "category-aware-instruction"
       ]
     },
     "unit": [
       {
-        "unitname": "Species and Speciation - Chapter 21 (agent-selected)",
+        "unitname": "Species and Speciation - Chapter 21 (student-selected)",
         "sparcsession": {
           "unitMode": "distance",
-          "pageId": "sparc-categorized-species-speciation-agent-kc2",
+          "pageId": "sparc-categorized-species-speciation-student-kc2",
           "clusterlist": "0-39",
           "calculateProbability": "p.y = -0.77 + .665 * pFunc.logitdec( p.overallOutcomeHistory.slice( Math.max(p.overallOutcomeHistory.length-60, 0),  p.overallOutcomeHistory.length),  .966)+ .51* (p.stimSuccessCount) + 11.1 * pFunc.recency(p.stimSecsSinceLastShown, .443) ; p.probability = 1.0 / (1.0 + Math.exp(-p.y)); return p",
           "startingKC": "dynamic.biology-species-speciation-hlw4e-ch21-002.kc.s06"
@@ -29,5 +29,5 @@
       }
     ]
   },
-  "tdfId": "tdf_223b83f348f89c17a1fd6ab3"
+  "tdfId": "tdf_71bd43429a10533500454c5e"
 }
