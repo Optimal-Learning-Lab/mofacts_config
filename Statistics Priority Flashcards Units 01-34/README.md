@@ -1,6 +1,6 @@
 # Statistics Priority Flashcards: upload and progressive setup
 
-Prepared September 8, 2026. The upload file is `Statistics Priority Flashcards Units 01-34.zip` in this folder. It contains 34 independent TDF lessons and 34 matching stimulus JSON files, all at the ZIP root, covering 421 cards. Upload the ZIP intact; it is not a ZIP of smaller ZIPs.
+Prepared September 8, 2026. The [upload file](../Statistics%20Priority%20Flashcards%20Units%2001-34.zip) is directly in `C:\dev\mofacts_config`; this folder holds the editable source files. It contains 34 independent TDF lessons and 34 matching stimulus JSON files, all at the ZIP root, covering 421 cards. Upload the ZIP intact; it is not a ZIP of smaller ZIPs.
 
 ## Upload
 

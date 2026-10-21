@@ -1,5 +1,7 @@
 # SPARC Confidence Interval
 
+The editable TDF and stimulus JSON files are in this folder. The [agent upload ZIP](../SPARC_Confidence_Interval_agent.zip) and [student upload ZIP](../SPARC_Confidence_Interval_student.zip) are directly in `C:\dev\mofacts_config`, alongside the other upload packages.
+
 New test packages for dynamic-instruction-agent-v2 and dynamic-instruction-student-v2. Both require admin access. Each extends the seven-expectation/three-misconception Dynamic Confidence Interval content with authored categories and six instructional choices: three compositions in text and MC formats. Student navigation to the next KC remains separate.
 
 The two new TDF/page identities retain the existing target meanings; the source packages are unchanged. Misconception wording refers to the computed interval without depending on endpoints from the removed opening scenario. Upload requires the matching category-aware application runtime. The ZIPs contain exactly their corresponding TDF and stimulus files. ZIPs are generated locally and ignored by this repository; the JSON files are the committed sources. To make an upload archive, zip the matching condition's TDF and stimulus JSON files together at the archive root, retaining their filenames. Saved packages and archive/source comparison do not establish application upload, generation, or learner delivery.

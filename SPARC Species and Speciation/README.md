@@ -6,12 +6,12 @@ The approved KC cleansing revision replaces the original 24 bundled targets and 
 
 ## Files and use
 
-- Agent: `SPARC_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`; current archive `SPARC_Species_and_Speciation_agent_kc2.zip`.
-- Student: `SPARC_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`; current archive `SPARC_Species_and_Speciation_student_kc2.zip`.
+- Agent sources are in this folder: `SPARC_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`. The current [agent upload ZIP](../SPARC_Species_and_Speciation_agent_kc2.zip) is at the repository root.
+- Student sources are in this folder: `SPARC_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`. The current [student upload ZIP](../SPARC_Species_and_Speciation_student_kc2.zip) is at the repository root.
 - [Complete English lesson review](Lesson%20review.html), including the complete KC and misconception inventory, original-to-revised mapping, and example content map.
 - [KC cleansing review](KC%20cleansing%20review.html) records the same approved content revision.
 
-The older ZIPs without `_kc2` are retained as historical 24-target packages. They are not the current revision. Current JSON and `_kc2.zip` archives contain the existing localhost TDF identities for intentional replacement, not duplication. No grant or proposal files were changed.
+The older ZIPs without `_kc2` are retained at the repository root as historical 24-target packages. They are not the current revision. Current JSON and `_kc2.zip` archives contain the existing localhost TDF identities for intentional replacement, not duplication. No grant or proposal files were changed.
 
 ## Learner experience and completion
 

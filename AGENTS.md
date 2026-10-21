@@ -3,6 +3,7 @@
 ## Purpose
 - Repository: `C:\dev\mofacts_config`
 - Holds MoFaCTS configuration and content definitions, including TDF-related structures consumed by application code.
+- Store all TDF lesson packages in this canonical repository. Keep editable TDF/stimulus JSON and supporting source files in lesson folders, and put upload ZIP files directly at `C:\dev\mofacts_config`, not inside the lesson folders. Authoring work directories are not the canonical package store.
 - This repository is passive storage. It has no active role in the application and requires no manifest, repository-wide content validation, or pre-commit/pre-push content checks.
 - MoFaCTS owns content validation when files are uploaded into the application. Run local content validators, audits, or review utilities only when the user explicitly requests those checks; storing, converting, committing, or pushing files does not authorize them.
 - Stored generators and other utilities are invoked only for explicitly requested work. Do not add automatic validation calls, hooks, watchers, or CI jobs to this repository.
