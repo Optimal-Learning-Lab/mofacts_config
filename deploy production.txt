@@ -1,0 +1,420 @@
+MoFaCTS deploy/build cheat sheet
+
+# Paste these commands in PowerShell.
+# PowerShell comments start with #, so comment lines are safe to paste.
+# Lines inside ssh "..." run on Linux. Keep those as plain commands.
+#
+# This is the private operator cheat sheet for the current hosted MoFaCTS
+# deployment. Public/open-core deploy docs live in:
+#   C:\dev\MoFaCTS\docs\deployment
+#
+# Architecture reminders:
+# - App deploy and MCP sidecar deploy are separate tasks.
+
+# Operator-local inputs. Keep these in the private config repo, not the public
+# app repo. These paths are intentionally convenient for this workstation.
+$MofactsRoot = "C:\dev\MoFaCTS"
+$ConfigRoot = "C:\dev\mofacts_config"
+$DeployDir = Join-Path $MofactsRoot "deploy"
+$SidecarDir = Join-Path $MofactsRoot "mofacts-mcp-sidecar"
+$ProdChangeStreamsComposePath = Join-Path $ConfigRoot "docker-compose.production-change-streams.yml"
+$OperatorRoot = Join-Path $env:USERPROFILE "OneDrive\Desktop"
+$ActiveProjectsRoot = Join-Path $env:USERPROFILE "OneDrive\Active projects"
+$LocalSettingsPath = Join-Path $OperatorRoot "settings.local.json"
+$StageEnvPath = Join-Path $OperatorRoot ".env.staging"
+$StageSettingsPath = Join-Path $OperatorRoot "settingsstaging.json"
+$ProdEnvPath = Join-Path $OperatorRoot ".env.production"
+$ProdSettingsPath = Join-Path $OperatorRoot "settings.json"
+$ProdReleaseRecordPath = Join-Path $OperatorRoot "mofacts-production-release.json"
+$ProdMcpEnvPath = Join-Path $OperatorRoot "mofacts-mcp-production.env"
+# Before deployment, add MOFACTS_SECURITY_AUDIT_INGEST_SECRET to
+# .env.production and copy the same value to the protected GitHub environment
+# as AUDIT_REPORT_INGEST_SECRET. Never paste the value into this file.
+$StageKey = Join-Path $OperatorRoot "mykey.pem"
+$ProdKey = Join-Path $OperatorRoot "prodkey.pem"
+$StageReplicaKey = Join-Path $OperatorRoot "staging-mongodb-keyfile"
+$ProdReplicaKey = Join-Path $OperatorRoot "production-mongodb-keyfile"
+$StageHost = "ubuntu@44.253.109.187"
+$ProdHost = "ubuntu@mofacts-production.tailb207d2.ts.net"
+$SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
+
+
+# ---------------------------------------------------------------------------
+# Prepare production video-catalog keys before deployment
+# ---------------------------------------------------------------------------
+
+# Copy only the YouTube and Supadata keys from the private localhost settings
+# into the authoritative private production settings. Preserve all other settings.
+# This block is also the first step for a settings-only update below.
+# Never paste key values into this file or print either settings object.
+$LocalVideoKeys = (Get-Content -LiteralPath $LocalSettingsPath -Raw | ConvertFrom-Json -AsHashtable)['private']['sparcVideoCatalog']
+if ($LocalVideoKeys -isnot [System.Collections.IDictionary]) { throw "Local settings have no private.sparcVideoCatalog configuration" }
+$VideoKeyNames = @('youtubeApiKey', 'supadataApiKey')
+foreach ($VideoKeyName in $VideoKeyNames) {
+  if ($LocalVideoKeys[$VideoKeyName] -isnot [string] -or [string]::IsNullOrWhiteSpace($LocalVideoKeys[$VideoKeyName])) { throw "Missing local video-catalog key: $VideoKeyName" }
+}
+$ProdSettingsJson = Get-Content -LiteralPath $ProdSettingsPath -Raw | ConvertFrom-Json -AsHashtable
+if (!$ProdSettingsJson.Contains('private')) { $ProdSettingsJson['private'] = @{} }
+if ($ProdSettingsJson['private'] -isnot [System.Collections.IDictionary]) { throw "Production private settings must be an object" }
+if (!$ProdSettingsJson['private'].Contains('sparcVideoCatalog')) { $ProdSettingsJson['private']['sparcVideoCatalog'] = @{} }
+if ($ProdSettingsJson['private']['sparcVideoCatalog'] -isnot [System.Collections.IDictionary]) { throw "Production video-catalog settings must be an object" }
+foreach ($VideoKeyName in $VideoKeyNames) { $ProdSettingsJson['private']['sparcVideoCatalog'][$VideoKeyName] = $LocalVideoKeys[$VideoKeyName] }
+[IO.File]::WriteAllText($ProdSettingsPath, ($ProdSettingsJson | ConvertTo-Json -Depth 100), [Text.UTF8Encoding]::new($false))
+Remove-Variable LocalVideoKeys, ProdSettingsJson
+
+
+# ---------------------------------------------------------------------------
+# Production app deploy
+# ---------------------------------------------------------------------------
+
+$ProdImageRepository = "ppavlikmemphis/mofacts-mini"
+$ProdApacheTlsSitePath = Join-Path $ConfigRoot "production\apache\000-default-le-ssl.conf"
+
+cd $DeployDir
+
+if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
+if (!(Test-Path $ProdReplicaKey)) { throw "Missing production MongoDB replica-set keyfile: $ProdReplicaKey" }
+if (!(Test-Path .\docker-compose.yml)) { throw "Missing production compose file" }
+if (!(Test-Path $ProdChangeStreamsComposePath)) { throw "Missing production Change Streams compose overlay: $ProdChangeStreamsComposePath" }
+if (!(Test-Path $ProdEnvPath)) { throw "Missing production env file: $ProdEnvPath" }
+if (!(Test-Path $ProdSettingsPath)) { throw "Missing production settings file: $ProdSettingsPath" }
+if (!(Test-Path $ProdApacheTlsSitePath)) { throw "Missing production Apache TLS site: $ProdApacheTlsSitePath" }
+if (!(Test-Path .\mongo-init\01-create-mofacts-app-user.js)) { throw "Missing Mongo app-user init script" }
+if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
+if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
+$ProdChangeStreamsComposeText = Get-Content -LiteralPath $ProdChangeStreamsComposePath -Raw
+if ([regex]::Matches($ProdChangeStreamsComposeText, '(?m)^[ \t]*HTTP_FORWARDED_COUNT:[ \t]*''1''[ \t]*$').Count -ne 1) {
+  throw "Production Compose overlay must set HTTP_FORWARDED_COUNT to exactly one trusted proxy"
+}
+$ProdReleaseCommit = (git -C $MofactsRoot rev-parse HEAD).Trim()
+$ProdReleaseShortCommit = (git -C $MofactsRoot rev-parse --short=12 HEAD).Trim()
+$ProdWorkingTreeDirty = [bool](git -C $MofactsRoot status --porcelain)
+$ProdBuildStamp = [DateTime]::UtcNow.ToString('yyyyMMddHHmmssZ')
+$ProdImageTag = if ($ProdWorkingTreeDirty) { "prod-local-$ProdBuildStamp-$ProdReleaseShortCommit" } else { "prod-$ProdReleaseShortCommit" }
+if ($ProdReleaseCommit -notmatch '^[0-9a-f]{40}$') { throw "Could not identify the exact local MoFaCTS release commit" }
+$env:IMAGE_TAG = $ProdImageTag
+$env:MOFACTS_SOURCE_REVISION = $ProdReleaseCommit
+
+$RequiredProductionEnv = @(
+  "METEOR_SETTINGS_HOST_PATH",
+  "MOFACTS_ENV_FILE_HOST_PATH",
+  "ROOT_URL",
+  "MONGO_URL",
+  "EXPECTED_MONGO_DB_NAME",
+  "METEOR_REACTIVITY_ORDER",
+  "DDP_TRANSPORT",
+  "MONGO_INITDB_ROOT_USERNAME",
+  "MONGO_INITDB_ROOT_PASSWORD",
+  "MOFACTS_MONGO_APP_USERNAME",
+  "MOFACTS_MONGO_APP_PASSWORD",
+  "MOFACTS_MONGO_REPLICA_SET_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_MEMBER",
+  "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
+  "MOFACTS_BACKUP_HOST_PATH",
+  "MOFACTS_REDIS_PASSWORD",
+  "MOFACTS_SECURITY_AUDIT_INGEST_SECRET",
+  "DOCKER_REGISTRY",
+  "IMAGE_NAME",
+  "IMAGE_TAG"
+)
+$ProductionEnvKeys = Select-String -Path $ProdEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$MissingProductionEnv = $RequiredProductionEnv | Where-Object { $ProductionEnvKeys -notcontains $_ }
+if ($MissingProductionEnv) { throw "Missing production env keys: $($MissingProductionEnv -join ', ')" }
+$ProductionEnvValues = @{}
+Get-Content $ProdEnvPath | Where-Object { $_ -match "^[A-Za-z_][A-Za-z0-9_]*=" } | ForEach-Object {
+  $Name, $Value = $_ -split "=", 2
+  $ProductionEnvValues[$Name] = $Value
+}
+if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NAME'])" -ne $ProdImageRepository) { throw "Production image repository does not match the recorded release" }
+if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams') { throw "Production reactivity order must be changeStreams" }
+if ([string]::IsNullOrWhiteSpace($ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET']) -or $ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET'].Length -lt 32) { throw "Production security audit ingestion secret must contain at least 32 characters" }
+$ProdApacheTlsSiteText = Get-Content -LiteralPath $ProdApacheTlsSitePath -Raw
+$ProdCspHeaderMatches = [regex]::Matches($ProdApacheTlsSiteText, '(?m)^[ \t]*Header always set Content-Security-Policy "([^"]+)"[ \t]*$')
+if ($ProdCspHeaderMatches.Count -ne 1) { throw "Production Apache TLS site must define exactly one enforced CSP header" }
+$ExpectedProductionCsp = $ProdCspHeaderMatches[0].Groups[1].Value
+# The app's MongoDB driver validates the opaque URI, selected database,
+# authentication, and topology during startup. Do not parse or print the URI.
+# Before this procedure, set MONGO_REPLICA_SET_KEYFILE_HOST_PATH to the remote
+# installed path /etc/mofacts/mongodb-keyfile, choose the immutable replica-set
+# name/member, and update MONGO_URL to the same set identity and authSource.
+
+# Validate the exact production definition, then build and push that app image.
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml -f $ProdChangeStreamsComposePath config --quiet
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml build --no-cache mofacts
+docker compose --env-file $ProdEnvPath -f .\docker-compose.yml push mofacts
+$PublishedImageManifest = docker buildx imagetools inspect "$($ProdImageRepository):$ProdImageTag" --format '{{json .Manifest}}' | ConvertFrom-Json
+$ProdImageDigest = $PublishedImageManifest.digest
+if ([string]::IsNullOrWhiteSpace($ProdImageDigest) -or $ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$') { throw "Registry did not return an immutable production image digest" }
+
+# Only after the push succeeds, keep the authoritative production environment
+# pointed at the published image. This changes IMAGE_TAG and preserves all
+# secret values in the Desktop file.
+$ProdEnvText = Get-Content -LiteralPath $ProdEnvPath -Raw
+if ($ProdEnvText -notmatch '(?m)^IMAGE_TAG=') { throw "Production env file has no IMAGE_TAG entry" }
+$ProdEnvText = [regex]::Replace($ProdEnvText, '(?m)^IMAGE_TAG=.*$', "IMAGE_TAG=$ProdImageTag")
+Set-Content -LiteralPath $ProdEnvPath -Value $ProdEnvText -NoNewline
+Write-Host "Published release commit: $ProdReleaseCommit"
+Write-Host "Included uncommitted local changes: $ProdWorkingTreeDirty"
+Write-Host "Published image: $($ProdImageRepository):$ProdImageTag"
+Write-Host "Published digest: $ProdImageDigest"
+
+# Create the runtime filesystem required by the compose mounts.
+ssh -i $ProdKey $ProdHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
+
+# Copy app runtime inputs.
+scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts/docker-compose.yaml"
+scp -i $ProdKey $ProdChangeStreamsComposePath "${ProdHost}:/var/www/mofacts/docker-compose.change-streams.yaml"
+scp -i $ProdKey $ProdEnvPath "${ProdHost}:/var/www/mofacts/.env"
+scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
+scp -i $ProdKey $ProdApacheTlsSitePath "${ProdHost}:/tmp/000-default-le-ssl.conf"
+scp -i $ProdKey .\mongo-init\01-create-mofacts-app-user.js "${ProdHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
+scp -i $ProdKey .\mongodb\* "${ProdHost}:/var/www/mofacts/mongodb/"
+scp -i $ProdKey .\backup-self-hosted.sh "${ProdHost}:/var/www/mofacts/backup-self-hosted.sh"
+scp -i $ProdKey .\restore-self-hosted.sh "${ProdHost}:/var/www/mofacts/restore-self-hosted.sh"
+scp -i $ProdKey $ProdReplicaKey "${ProdHost}:/tmp/production-mongodb-keyfile"
+ssh -i $ProdKey $ProdHost "sudo install -o root -g root -m 600 /tmp/production-mongodb-keyfile /etc/mofacts/mongodb-keyfile && rm -f /tmp/production-mongodb-keyfile && chmod 600 /var/www/mofacts/settings.json && chmod 755 /var/www/mofacts/mongodb/*.sh /var/www/mofacts/backup-self-hosted.sh /var/www/mofacts/restore-self-hosted.sh"
+
+# Install Memphis SAML cert/key.
+scp -i $ProdKey "$SamlDir\memphis-saml-public-cert.pem" "${ProdHost}:/tmp/memphis-saml-public-cert.pem"
+scp -i $ProdKey "$SamlDir\memphis-saml-private-key.pem" "${ProdHost}:/tmp/memphis-saml-private-key.pem"
+ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
+
+# Preflight the complete production configuration without starting or replacing services.
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /tmp/000-default-le-ssl.conf && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
+
+# Deploy this source-built image with the existing production replica set and
+# the production Change Streams overlay. This is the ordinary app deployment;
+# it does not repeat the completed database-topology conversion.
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+$RunningProductionImage = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{.Config.Image}}'").Trim()
+if ($RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag") { throw "Production container is not running the published image: $RunningProductionImage" }
+$RunningProductionLabelsJson = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{json .Config.Labels}}'").Trim()
+$RunningProductionLabels = $RunningProductionLabelsJson | ConvertFrom-Json -AsHashtable
+$RunningProductionRevision = $RunningProductionLabels['org.opencontainers.image.revision']
+if ($RunningProductionRevision -ne $ProdReleaseCommit) { throw "Production image source-revision label does not match the deployed release" }
+
+# Install the tracked production TLS virtual host. Preserve the active file and
+# restore it automatically if Apache validation or reload fails.
+ssh -i $ProdKey $ProdHost "set -eu; sudo cp /etc/apache2/sites-available/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; sudo install -o root -g root -m 644 /tmp/000-default-le-ssl.conf /etc/apache2/sites-available/000-default-le-ssl.conf; if sudo apache2ctl configtest && sudo systemctl reload apache2; then sudo rm -f /tmp/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; else sudo install -o root -g root -m 644 /tmp/000-default-le-ssl.conf.rollback /etc/apache2/sites-available/000-default-le-ssl.conf; sudo apache2ctl configtest; sudo systemctl reload apache2; sudo rm -f /tmp/000-default-le-ssl.conf /tmp/000-default-le-ssl.conf.rollback; exit 1; fi"
+$ProductionHeadResponse = Invoke-WebRequest -Uri "https://mofacts.optimallearning.org/admin/security-audits" -Method Head
+$LiveProductionCsp = [string]$ProductionHeadResponse.Headers['Content-Security-Policy']
+if ($LiveProductionCsp -ne $ExpectedProductionCsp) { throw "Production CSP header does not match the tracked Apache TLS site" }
+
+# Automatically record the successfully deployed immutable release beside the
+# authoritative Desktop inputs. Keep verification and recording in one
+# statement so a failed deployment cannot be recorded by continuing below an
+# earlier exception.
+if (
+  [string]::IsNullOrWhiteSpace($ProdImageDigest) -or
+  $ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$' -or
+  $RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag" -or
+  $RunningProductionRevision -ne $ProdReleaseCommit -or
+  $LiveProductionCsp -ne $ExpectedProductionCsp
+) {
+  throw "Production deployment is not verified; release record was not written"
+} else {
+  [ordered]@{
+    deployedAtUtc = [DateTime]::UtcNow.ToString('o')
+    baseCommit = $ProdReleaseCommit
+    includedUncommittedLocalChanges = $ProdWorkingTreeDirty
+    image = "$($ProdImageRepository):$ProdImageTag"
+    tag = $ProdImageTag
+    digest = $ProdImageDigest
+  } | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
+}
+
+# Production Change Streams are owned by the private production overlay and
+# authoritative Desktop environment. Keep the test-only qualification flag
+# false. Change Streams are the only supported reactive driver. If startup or
+# qualification fails, stop and repair the owning incompatibility; do not
+# switch the application to polling. Keep the replica set authoritative.
+
+# ---------------------------------------------------------------------------
+# Video-key settings-only update AFTER an in-progress deployment finishes
+# ---------------------------------------------------------------------------
+
+# Use this section only when updating keys without deploying a new image.
+# Run the "Prepare production video-catalog keys" block above first.
+# A normal app deployment already copies settings and starts the new app;
+# it does not need this extra restart. An already-running app reads changed
+# settings at its next startup. No image build, push, or database restart is needed.
+scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
+if ($LASTEXITCODE -ne 0) { throw "Production video-catalog settings upload failed; app was not restarted" }
+ssh -i $ProdKey $ProdHost "chmod 600 /var/www/mofacts/settings.json && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml restart --no-deps mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+if ($LASTEXITCODE -ne 0) { throw "Production settings reload failed; inspect the application status" }
+
+# ---------------------------------------------------------------------------
+# Production MCP sidecar deploy
+# ---------------------------------------------------------------------------
+
+cd $SidecarDir
+
+if (!(Test-Path $ProdKey)) { throw "Missing production SSH key: $ProdKey" }
+if (!(Test-Path $ProdMcpEnvPath)) { throw "Missing production MCP environment file: $ProdMcpEnvPath" }
+$RequiredProductionMcpEnv = @(
+  "BASE_URL",
+  "MONGO_URI",
+  "DB_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_NAME"
+)
+$ProductionMcpEnvKeys = Select-String -Path $ProdMcpEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$MissingProductionMcpEnv = $RequiredProductionMcpEnv | Where-Object { $ProductionMcpEnvKeys -notcontains $_ }
+if ($MissingProductionMcpEnv) { throw "Missing production MCP env keys: $($MissingProductionMcpEnv -join ', ')" }
+ssh -i $ProdKey $ProdHost "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
+
+scp -i $ProdKey .\docker-compose.yml "${ProdHost}:/var/www/mofacts-mcp-sidecar/docker-compose.yml"
+scp -i $ProdKey .\docker-compose.remote-server.yml "${ProdHost}:/var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml"
+scp -i $ProdKey $ProdMcpEnvPath "${ProdHost}:/tmp/mofacts-mcp-production.env"
+ssh -i $ProdKey $ProdHost "sudo install -o root -g root -m 600 /tmp/mofacts-mcp-production.env /var/www/mofacts-mcp-sidecar/.env && rm -f /tmp/mofacts-mcp-production.env"
+ssh -i $ProdKey $ProdHost "rm -rf /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp && mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src"
+
+scp -i $ProdKey .\services\playwright-mcp\Dockerfile "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile"
+scp -i $ProdKey .\services\playwright-mcp\mofacts-entrypoint.cjs "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs"
+scp -i $ProdKey .\services\mongo-mcp\.dockerignore "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/.dockerignore"
+scp -i $ProdKey .\services\mongo-mcp\Dockerfile "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/Dockerfile"
+scp -i $ProdKey .\services\mongo-mcp\package.json "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package.json"
+scp -i $ProdKey .\services\mongo-mcp\package-lock.json "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package-lock.json"
+scp -i $ProdKey -r .\services\mongo-mcp\src\* "${ProdHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/src/"
+
+ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.remote-server.yml && sudo test -f /var/www/mofacts-mcp-sidecar/.env && sudo stat -c '%U:%G:%a' /var/www/mofacts-mcp-sidecar/.env | grep -qx 'root:root:600' && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp && cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml config --quiet"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml up -d --build"
+
+
+# ---------------------------------------------------------------------------
+# Local app loops
+# ---------------------------------------------------------------------------
+
+# The only local app loop, at http://localhost:3200. This command starts the
+# source-watching Meteor/Rspack hotfix server; edits rebuild and reload automatically.
+cd $DeployDir
+if (!(Test-Path $LocalSettingsPath)) { throw "Missing local settings file: $LocalSettingsPath" }
+if (!(Test-Path .\local-secrets\mongodb-keyfile)) { .\New-MongoReplicaSetKeyfile.ps1 }
+.\hotfix-local.ps1
+.\hotfix-local.ps1 status
+
+# Optional release-image build check. This does not start a second local server.
+# Use it only when a full Docker image build has been explicitly authorized.
+cd $DeployDir
+docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml config --quiet
+docker compose --env-file .env.local -f docker-compose.yml -f docker-compose.local.yml build mofacts
+
+
+# ---------------------------------------------------------------------------
+# Local MCP sidecar
+# ---------------------------------------------------------------------------
+
+# MCP sidecar pointed at the canonical localhost app on http://localhost:3200.
+cd $SidecarDir
+docker compose -f docker-compose.yml -f docker-compose.local-server.yml down --remove-orphans
+docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --build
+
+
+# ---------------------------------------------------------------------------
+# Staging app deploy
+# ---------------------------------------------------------------------------
+
+# FROZEN ENVIRONMENT: do not run this staging section during the Meteor 3.5
+# production upgrade. This server is in active graduate-student use and remains
+# unchanged until the owner explicitly unfreezes it.
+
+cd $DeployDir
+
+if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
+if (!(Test-Path $StageReplicaKey)) { throw "Missing staging MongoDB replica-set keyfile: $StageReplicaKey" }
+if (!(Test-Path .\docker-compose-staging.yml)) { throw "Missing staging compose file" }
+if (!(Test-Path $StageEnvPath)) { throw "Missing staging env file: $StageEnvPath" }
+if (!(Test-Path $StageSettingsPath)) { throw "Missing staging settings file: $StageSettingsPath" }
+if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
+if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
+
+$RequiredStagingEnv = @(
+  "METEOR_SETTINGS_HOST_PATH",
+  "MOFACTS_ENV_FILE_HOST_PATH",
+  "ROOT_URL",
+  "MONGO_URL",
+  "EXPECTED_MONGO_DB_NAME",
+  "MONGO_INITDB_ROOT_USERNAME",
+  "MONGO_INITDB_ROOT_PASSWORD",
+  "MOFACTS_MONGO_APP_USERNAME",
+  "MOFACTS_MONGO_APP_PASSWORD",
+  "MOFACTS_MONGO_REPLICA_SET_NAME",
+  "MOFACTS_MONGO_REPLICA_SET_MEMBER",
+  "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
+  "MOFACTS_REDIS_PASSWORD"
+  "MOFACTS_SECURITY_AUDIT_INGEST_SECRET"
+)
+$StagingEnvKeys = Select-String -Path $StageEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
+$MissingStagingEnv = $RequiredStagingEnv | Where-Object { $StagingEnvKeys -notcontains $_ }
+if ($MissingStagingEnv) { throw "Missing staging env keys: $($MissingStagingEnv -join ', ')" }
+$StagingAuditSecretLine = Get-Content $StageEnvPath | Where-Object { $_ -match '^MOFACTS_SECURITY_AUDIT_INGEST_SECRET=' } | Select-Object -Last 1
+$StagingAuditSecret = ($StagingAuditSecretLine -split '=', 2)[1]
+if ([string]::IsNullOrWhiteSpace($StagingAuditSecret) -or $StagingAuditSecret.Length -lt 32) { throw "Staging security audit ingestion secret must contain at least 32 characters" }
+
+# Validate the exact staging definition, then build and push that app image.
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml config --quiet
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml build --no-cache mofacts
+docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml push mofacts
+
+# Create the runtime filesystem required by the compose mounts.
+ssh -i $StageKey $StageHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
+
+# Copy app runtime inputs.
+scp -i $StageKey .\docker-compose-staging.yml "${StageHost}:/var/www/mofacts/docker-compose.yaml"
+scp -i $StageKey $StageEnvPath "${StageHost}:/var/www/mofacts/.env"
+scp -i $StageKey $StageSettingsPath "${StageHost}:/var/www/mofacts/settingsstaging.json"
+scp -i $StageKey .\mongo-init\01-create-mofacts-app-user.js "${StageHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
+scp -i $StageKey .\mongodb\* "${StageHost}:/var/www/mofacts/mongodb/"
+scp -i $StageKey $StageReplicaKey "${StageHost}:/tmp/staging-mongodb-keyfile"
+ssh -i $StageKey $StageHost "sudo install -o root -g root -m 600 /tmp/staging-mongodb-keyfile /etc/mofacts/mongodb-keyfile && rm -f /tmp/staging-mongodb-keyfile && chmod 600 /var/www/mofacts/settingsstaging.json && chmod 755 /var/www/mofacts/mongodb/*.sh"
+
+# Install Memphis SAML cert/key.
+scp -i $StageKey "$SamlDir\memphis-saml-public-cert.pem" "${StageHost}:/tmp/memphis-saml-public-cert.pem"
+scp -i $StageKey "$SamlDir\memphis-saml-private-key.pem" "${StageHost}:/tmp/memphis-saml-private-key.pem"
+ssh -i $StageKey $StageHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
+
+# Preflight and start the app stack.
+ssh -i $StageKey $StageHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settingsstaging.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml config --quiet"
+if ((Read-Host "Confirm staging is already a replica set or its conversion is approved; type STAGING-TOPOLOGY-READY") -cne "STAGING-TOPOLOGY-READY") { throw "Staging topology not confirmed" }
+ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build"
+
+
+# ---------------------------------------------------------------------------
+# Staging MCP sidecar deploy
+# ---------------------------------------------------------------------------
+
+cd $SidecarDir
+
+if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
+ssh -i $StageKey $StageHost "sudo mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src && sudo chown -R ubuntu:ubuntu /var/www/mofacts-mcp-sidecar"
+
+scp -i $StageKey .\docker-compose.yml "${StageHost}:/var/www/mofacts-mcp-sidecar/docker-compose.yml"
+scp -i $StageKey .\docker-compose.staging-server.yml "${StageHost}:/var/www/mofacts-mcp-sidecar/docker-compose.staging-server.yml"
+ssh -i $StageKey $StageHost "rm -rf /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp && mkdir -p /var/www/mofacts-mcp-sidecar/services/playwright-mcp /var/www/mofacts-mcp-sidecar/services/mongo-mcp/src"
+
+scp -i $StageKey .\services\playwright-mcp\Dockerfile "${StageHost}:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile"
+scp -i $StageKey .\services\playwright-mcp\mofacts-entrypoint.cjs "${StageHost}:/var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs"
+scp -i $StageKey .\services\mongo-mcp\.dockerignore "${StageHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/.dockerignore"
+scp -i $StageKey .\services\mongo-mcp\Dockerfile "${StageHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/Dockerfile"
+scp -i $StageKey .\services\mongo-mcp\package.json "${StageHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package.json"
+scp -i $StageKey .\services\mongo-mcp\package-lock.json "${StageHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/package-lock.json"
+scp -i $StageKey -r .\services\mongo-mcp\src\* "${StageHost}:/var/www/mofacts-mcp-sidecar/services/mongo-mcp/src/"
+
+ssh -i $StageKey $StageHost "test -f /var/www/mofacts-mcp-sidecar/docker-compose.yml && test -f /var/www/mofacts-mcp-sidecar/docker-compose.staging-server.yml && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/Dockerfile && test -f /var/www/mofacts-mcp-sidecar/services/playwright-mcp/mofacts-entrypoint.cjs && test -d /var/www/mofacts-mcp-sidecar/services/mongo-mcp"
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml up -d --build"
+
+
+# ---------------------------------------------------------------------------
+# Remote checks and stop commands
+# ---------------------------------------------------------------------------
+
+# App checks.
+ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+
+# MCP checks.
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml ps"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml ps"
+
+# Stop MCP sidecars.
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-staging -f docker-compose.yml -f docker-compose.staging-server.yml down"
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts-mcp-sidecar && sudo docker compose -p mofacts-mcp-prod --env-file .env -f docker-compose.yml -f docker-compose.remote-server.yml down"
