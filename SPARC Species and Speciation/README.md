@@ -6,12 +6,12 @@ The approved KC cleansing revision replaces the original 24 bundled targets and 
 
 ## Files and use
 
-- Agent sources are in this folder: `SPARC_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`. The current [agent upload ZIP](../SPARC_Species_and_Speciation_agent_kc2.zip) is at the repository root.
-- Student sources are in this folder: `SPARC_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`. The current [student upload ZIP](../SPARC_Species_and_Speciation_student_kc2.zip) is at the repository root.
+- Agent sources are in this folder: `SPARC_Species_and_Speciation_agent_TDF.json` and matching `_agent_stims.json`. The current [agent upload ZIP](../SPARC_Species_and_Speciation_agent.zip) is at the repository root.
+- Student sources are in this folder: `SPARC_Species_and_Speciation_student_TDF.json` and matching `_student_stims.json`. The current [student upload ZIP](../SPARC_Species_and_Speciation_student.zip) is at the repository root.
 - [Complete English lesson review](Lesson%20review.html), including the complete KC and misconception inventory, original-to-revised mapping, and example content map.
 - [KC cleansing review](KC%20cleansing%20review.html) records the same approved content revision.
 
-The older ZIPs without `_kc2` are retained at the repository root as historical 24-target packages. They are not the current revision. Current JSON and `_kc2.zip` archives contain the existing localhost TDF identities for intentional replacement, not duplication. No grant or proposal files were changed.
+The current JSON and the two root-level upload ZIPs are the canonical lesson packages, with agent-selected and student-selected controllers. Redundant archives have been removed. Current JSON and ZIP archives contain the existing localhost TDF identities for intentional replacement, not duplication. No grant or proposal files were changed.
 
 ## Learner experience and completion
 
@@ -21,13 +21,13 @@ All 40 KCs must meet the inherited coverage threshold 0.8, with no active author
 
 ## Identity, library, and existing state
 
-Both existing TDF IDs are retained. Revised pages use `-kc2`, and KC identities use `dynamic.biology-species-speciation-hlw4e-ch21-002.kc.*`. On October 16 the old localhost package and its two lessons were deleted through the normal application method, as requested. That deletion also removed their 80 history rows. After the user extended the OpenRouter key limit, the cleaned package uploaded successfully. Both versions are now installed at revision 1 following deletion and fresh creation. No old scores are converted into revised KC scores.
+Existing TDF and page IDs are retained. KC identities use `dynamic.biology-species-speciation-hlw4e-ch21-002.kc.*`. On October 16 the old localhost package and its two lessons were deleted through the normal application method, as requested. That deletion also removed their 80 history rows. After the user extended the OpenRouter key limit, the cleaned package uploaded successfully. Both versions are now installed at revision 1 following deletion and fresh creation. No old scores are converted into revised KC scores.
 
 The 112-entry shared instructional library, its content, embeddings, assets, exclusions, and references are preserved. Retrieval does not filter by KC or lesson identity. Component-type and question-response-format restrictions, cosine reuse cutoff 0.992, and question-repetition cutoff 0.88 are unchanged. Generation model and reasoning configuration are unchanged. The package's existing model field is retained; runtime provider settings remain owned by the application.
 
 ## Embedding-generated graph
 
-Portable lesson JSON and current `_kc2.zip` files contain no KC graph values. Upload generates the graph by embedding the 40 expectation statements with `google/gemini-embedding-001` and computing normalized cosine similarity with the existing shared implementation. The runtime graph contains 40 x 39 = 1560 directed non-self relationships; centrality is their mean outgoing strength. Package input cannot supply graph facts or an expectation relationship matrix, and downloads omit generated graph values. An embedding failure stops upload. The earlier parent-copy and fixed 0.1/0.6/0.9 graph was unauthorized and has been removed; plots and starting-target conclusions based on it are invalid.
+Portable lesson JSON and current upload ZIPs contain no KC graph values. Upload generates the graph by embedding the 40 expectation statements with `google/gemini-embedding-001` and computing normalized cosine similarity with the existing shared implementation. The runtime graph contains 40 x 39 = 1560 directed non-self relationships; centrality is their mean outgoing strength. Package input cannot supply graph facts or an expectation relationship matrix, and downloads omit generated graph values. An embedding failure stops upload. The earlier parent-copy and fixed 0.1/0.6/0.9 graph was unauthorized and has been removed; plots and starting-target conclusions based on it are invalid.
 
 Both uploaded conditions have identical generated graphs. There are 780 distinct pairs, 778 distinct similarities, and an observed range of 0.510327–0.838635. The highest display cutoff that leaves every node with at least one link is **0.714963**, retaining equality. It leaves 105 pairs and one connected component. Any higher cutoff isolates S15C, Subspecies, whose strongest link is to S02 at 0.714963. At 0.9 no links remain. This display cutoff changes no stored graph or selection parameter.
 
