@@ -1,0 +1,197 @@
+{
+  "setspec": {
+    "clusters": [
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.01",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.01",
+            "text": "Cognitive offloading means using an external aid to reduce the mental processing a task requires. AI can perform cognitive work that the student would otherwise perform."
+          }
+        ]
+      },
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.02",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.02",
+            "text": "Performance with AI assistance and learning are different outcomes. A successful AI-assisted product reflects the combined contribution of the student and the tool, so its quality alone does not establish what the student has learned."
+          }
+        ]
+      },
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.03",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.03",
+            "text": "In Bastani and colleagues' 2025 high-school math experiment, nearly 1,000 students in Turkey practiced with a general GPT-4 assistant, a hint-focused AI tutor, or no AI. Students using the general assistant did better during practice but worse on a later exam without help. The hint-focused tutor avoided that exam disadvantage. This is evidence that better performance with AI can coexist with less independent learning."
+          }
+        ]
+      },
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.04",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.04",
+            "text": "When AI performs the cognitive operations a student is supposed to learn, accepting its output without sufficiently processing it can reduce opportunities to practice and encode that knowledge. This provides a possible explanation for better immediate output accompanied by weaker learning."
+          }
+        ]
+      },
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.05",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.05",
+            "text": "AI assistance can support the student's cognitive work or substitute for it. Hints, feedback, and structured interaction can leave meaningful reasoning with the learner; supplying answers that the learner simply adopts can bypass that activity. Consequently, learning outcomes depend on how assistance is designed and used."
+          }
+        ]
+      },
+      {
+        "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.06",
+        "stims": [
+          {
+            "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.06",
+            "text": "When the goal is learning, choose AI assistance that preserves opportunities to practice the target thinking, and judge learning by what the student can subsequently do independently, not solely by the quality or speed of the assisted work."
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "ai-learning-cognitive-offloading-20261028-agent",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "unitType": "sparc-autotutor-dialogue",
+          "layout": {
+            "layoutMode": "document",
+            "scrollAxis": "vertical",
+            "visualPreset": "practice-panel",
+            "density": "comfortable"
+          },
+          "nodes": [
+            {
+              "id": "dialogue-thread",
+              "nodeType": "group",
+              "groupType": "dialogue-thread",
+              "children": []
+            },
+            {
+              "id": "learner-response-input",
+              "nodeType": "atomic",
+              "atomType": "text-input",
+              "label": "Response",
+              "readOnly": true
+            },
+            {
+              "id": "learner-response-submit",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "label": "Submit",
+              "value": "submit",
+              "readOnly": true
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.01"
+            },
+            {
+              "clusterIndex": 1,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.02"
+            },
+            {
+              "clusterIndex": 2,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.03"
+            },
+            {
+              "clusterIndex": 3,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.04"
+            },
+            {
+              "clusterIndex": 4,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.05"
+            },
+            {
+              "clusterIndex": 5,
+              "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.06"
+            }
+          ],
+          "workingMemoryFacts": [
+            {
+              "factType": "dialogue.source",
+              "slots": {
+                "sourceKind": "peer-reviewed-research-synthesis",
+                "sourceScriptId": "ai-learning-cognitive-offloading-20261028",
+                "sourceLessonName": "AI, Cognitive Offloading, and Learning",
+                "sourceUnitName": "AI, Cognitive Offloading, and Learning",
+                "topic": "How AI use can affect learning: cognitive offloading, the difference between assisted task performance and independent learning, the evidence for a performance-learning gap, a possible practice-and-encoding mechanism, assistance that supports versus replaces learner thinking, and the principle of preserving practice when learning is the goal.\n\nThe six authored expectations are the only learning targets. Their complete qualifications matter. Explain cognitive offloading and other necessary terms in plain language. The practice-and-encoding account is a possible mechanism, and the learning-oriented-use principle is an instructional inference rather than a directly tested universal law about a performance mindset.\n\nEvidence supporting these targets: Bastani et al. (2025), PNAS, doi:10.1073/pnas.2422633122, randomized nearly 1,000 high-school math students; general AI improved assisted practice performance but reduced immediate unaided exam performance, while a hint-oriented tutor avoided that exam penalty without a significant exam benefit over control.\n\nStadler, Bannert, and Sailer (2024), Computers in Human Behavior, doi:10.1016/j.chb.2024.108386, found that university students using ChatGPT for research reported less cognitive load but included fewer relevant considerations in a subsequent unaided recommendation than students using Google.\n\nFan et al. (2025 issue; online 2024), British Journal of Educational Technology, doi:10.1111/bjet.13544, found greater essay improvement with ChatGPT but no statistically significant advantage in knowledge gain or transfer. A lack of a detected difference does not prove exact equivalence.\n\nGrinschgl, Papenmeier, and Meyerhoff (2021), Quarterly Journal of Experimental Psychology, doi:10.1177/17470218211008060, found performance benefits and memory costs in non-AI offloading tasks; applying this mechanism to AI-assisted studying is an inference.\n\nKestin et al. (2025), Scientific Reports, doi:10.1038/s41598-025-97652-6, found better immediate postlesson scores with a carefully structured AI tutor than classroom active learning; this does not establish long-term retention or unrestricted-chatbot benefits.\n\nKC03 specifically teaches the Bastani et al. (2025) study, its high-school mathematics comparison, and its main findings. Other studies are supporting examples, not additional recall targets. Exact percentages are not required. Preserve distinctions between improved output, learning, and independently demonstrated knowledge. The lesson does not assert that all AI use is harmful, that less effort always reduces learning, or that a fixed amount of use causes lasting cognitive decline."
+              }
+            },
+            {
+              "factType": "dialogue.thresholds",
+              "slots": {
+                "lowCoverageMax": 0.33,
+                "mediumCoverageMax": 0.67,
+                "highCoverageMin": 0.67,
+                "coverageThreshold": 0.8,
+                "misconceptionThreshold": 0.2
+              }
+            },
+            {
+              "factType": "controller.targetSelectionPolicy",
+              "slots": {
+                "policy": "kc-chain",
+                "coverageThreshold": 0.8
+              }
+            }
+          ],
+          "instructionalController": {
+            "adapterId": "sparc-autotutor-v1",
+            "policyId": "dynamic-instruction-agent-v2",
+            "policyVersion": 1,
+            "parameters": {
+              "minimumProgress": 0.3
+            }
+          },
+          "autoTutorTargets": {
+            "expectations": [
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.01",
+                "text": "Cognitive offloading means using an external aid to reduce the mental processing a task requires. AI can perform cognitive work that the student would otherwise perform.",
+                "category": "fact"
+              },
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.02",
+                "text": "Performance with AI assistance and learning are different outcomes. A successful AI-assisted product reflects the combined contribution of the student and the tool, so its quality alone does not establish what the student has learned.",
+                "category": "model"
+              },
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.03",
+                "text": "In Bastani and colleagues' 2025 high-school math experiment, nearly 1,000 students in Turkey practiced with a general GPT-4 assistant, a hint-focused AI tutor, or no AI. Students using the general assistant did better during practice but worse on a later exam without help. The hint-focused tutor avoided that exam disadvantage. This is evidence that better performance with AI can coexist with less independent learning.",
+                "category": "fact"
+              },
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.04",
+                "text": "When AI performs the cognitive operations a student is supposed to learn, accepting its output without sufficiently processing it can reduce opportunities to practice and encode that knowledge. This provides a possible explanation for better immediate output accompanied by weaker learning.",
+                "category": "model"
+              },
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.05",
+                "text": "AI assistance can support the student's cognitive work or substitute for it. Hints, feedback, and structured interaction can leave meaningful reasoning with the learner; supplying answers that the learner simply adopts can bypass that activity. Consequently, learning outcomes depend on how assistance is designed and used.",
+                "category": "model"
+              },
+              {
+                "clusterKC": "ai-learning-cognitive-offloading-20261028.kc.06",
+                "text": "When the goal is learning, choose AI assistance that preserves opportunities to practice the target thinking, and judge learning by what the student can subsequently do independently, not solely by the quality or speed of the assisted work.",
+                "category": "model-rule"
+              }
+            ],
+            "misconceptions": []
+          }
+        }
+      }
+    ]
+  }
+}
