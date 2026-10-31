@@ -1,6 +1,9 @@
-MoFaCTS deploy/build cheat sheet
+# MoFaCTS deploy/build cheat sheet
 
-# Paste these commands in PowerShell.
+# Use PowerShell 7.4 or newer. Paste only the section for the intended operation.
+# Set the operator-local inputs and define Update-ProductionVideoCatalogKeys,
+# then paste the complete
+# production app & { ... } block. Do not execute the whole cheat sheet.
 # PowerShell comments start with #, so comment lines are safe to paste.
 # Lines inside ssh "..." run on Linux. Keep those as plain commands.
 #
@@ -43,9 +46,11 @@ $SamlDir = Join-Path $ActiveProjectsRoot "mofacts-saml"
 # Prepare production video-catalog keys before deployment
 # ---------------------------------------------------------------------------
 
+function Update-ProductionVideoCatalogKeys {
+$ErrorActionPreference = 'Stop'
 # Copy only the YouTube and Supadata keys from the private localhost settings
 # into the authoritative private production settings. Preserve all other settings.
-# This block is also the first step for a settings-only update below.
+# Both the app deployment and settings-only update call this same preparation.
 # Never paste key values into this file or print either settings object.
 $LocalVideoKeys = (Get-Content -LiteralPath $LocalSettingsPath -Raw | ConvertFrom-Json -AsHashtable)['private']['sparcVideoCatalog']
 if ($LocalVideoKeys -isnot [System.Collections.IDictionary]) { throw "Local settings have no private.sparcVideoCatalog configuration" }
@@ -61,11 +66,22 @@ if ($ProdSettingsJson['private']['sparcVideoCatalog'] -isnot [System.Collections
 foreach ($VideoKeyName in $VideoKeyNames) { $ProdSettingsJson['private']['sparcVideoCatalog'][$VideoKeyName] = $LocalVideoKeys[$VideoKeyName] }
 [IO.File]::WriteAllText($ProdSettingsPath, ($ProdSettingsJson | ConvertTo-Json -Depth 100), [Text.UTF8Encoding]::new($false))
 Remove-Variable LocalVideoKeys, ProdSettingsJson
+}
 
 
 # ---------------------------------------------------------------------------
 # Production app deploy
 # ---------------------------------------------------------------------------
+
+& {
+# Keep failures inside one operation scope so no failed native command can
+# continue to publication, startup, or release recording. Preferences are local
+# to this block and do not change the operator's session.
+if ($PSVersionTable.PSVersion -lt [version]'7.4') { throw 'Production deployment requires PowerShell 7.4 or newer' }
+$ErrorActionPreference = 'Stop'
+$PSNativeCommandUseErrorActionPreference = $true
+$ProductionParticipantChecksPassed = $false
+Update-ProductionVideoCatalogKeys
 
 $ProdImageRepository = "ppavlikmemphis/mofacts-mini"
 $ProdApacheTlsSitePath = Join-Path $ConfigRoot "production\apache\000-default-le-ssl.conf"
@@ -182,10 +198,15 @@ ssh -i $ProdKey $ProdHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAss
 # Preflight the complete production configuration without starting or replacing services.
 ssh -i $ProdKey $ProdHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/docker-compose.change-streams.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settings.json && test -f /tmp/000-default-le-ssl.conf && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && test -f /var/www/mofacts/mongodb/init-replica-set.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -x /var/www/mofacts/backup-self-hosted.sh && test -x /var/www/mofacts/restore-self-hosted.sh && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml config --quiet"
 
-# Deploy this source-built image with the existing production replica set and
-# the production Change Streams overlay. This is the ordinary app deployment;
-# it does not repeat the completed database-topology conversion.
-ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+# Pull the immutable published digest, then give those exact bytes the Compose
+# release tag. Prevent Compose from resolving a mutable registry tag again.
+# Keep the existing production replica set and Change Streams overlay.
+ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker pull '$($ProdImageRepository)@$ProdImageDigest' && sudo docker tag '$($ProdImageRepository)@$ProdImageDigest' '$($ProdImageRepository):$ProdImageTag' && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml up -d --no-build --pull never --wait mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
+$PublishedProductionImageId = (ssh -i $ProdKey $ProdHost "sudo docker image inspect '$($ProdImageRepository)@$ProdImageDigest' --format '{{.Id}}'").Trim()
+$RunningProductionImageId = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{.Image}}'").Trim()
+if ($PublishedProductionImageId -notmatch '^sha256:[0-9a-f]{64}$' -or $RunningProductionImageId -ne $PublishedProductionImageId) {
+  throw 'Production container image does not match the immutable published digest'
+}
 $RunningProductionImage = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{.Config.Image}}'").Trim()
 if ($RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag") { throw "Production container is not running the published image: $RunningProductionImage" }
 $RunningProductionLabelsJson = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{json .Config.Labels}}'").Trim()
@@ -200,6 +221,18 @@ $ProductionHeadResponse = Invoke-WebRequest -Uri "https://mofacts.optimallearnin
 $LiveProductionCsp = [string]$ProductionHeadResponse.Headers['Content-Security-Policy']
 if ($LiveProductionCsp -ne $ExpectedProductionCsp) { throw "Production CSP header does not match the tracked Apache TLS site" }
 
+# /health is process liveness, not application acceptance. Use the existing
+# authenticated admin check; never bypass its authorization from SSH.
+# This is an operator attestation, not an automated readiness result.
+Write-Host 'Before recording this release, sign in to https://mofacts.optimallearning.org/admin/tests as an administrator and run Deployment Readiness.'
+Write-Host 'Require every readiness check to pass, including MongoDB/Change Streams, Redis, storage, backup configuration, and TDF expressions.'
+Write-Host 'Verify login, content listing, a representative practice response and reload/resume, data export, and dynamic media. For SPARC/speech changes, verify the intended provider and recognizer in production; localhost keys are not transferred.'
+$ProductionAcceptance = Read-Host "Only after all checks pass, enter VERIFIED $ProdImageTag (anything else stops without writing the release record)"
+if ($ProductionAcceptance -cne "VERIFIED $ProdImageTag") { throw 'Production acceptance was not confirmed; release record was not written' }
+$ProductionParticipantChecksPassed = $true
+# Recheck the running image after interactive checks before recording success.
+$RunningProductionImageId = (ssh -i $ProdKey $ProdHost "sudo docker inspect mofacts --format '{{.Image}}'").Trim()
+
 # Automatically record the successfully deployed immutable release beside the
 # authoritative Desktop inputs. Keep verification and recording in one
 # statement so a failed deployment cannot be recorded by continuing below an
@@ -207,9 +240,12 @@ if ($LiveProductionCsp -ne $ExpectedProductionCsp) { throw "Production CSP heade
 if (
   [string]::IsNullOrWhiteSpace($ProdImageDigest) -or
   $ProdImageDigest -notmatch '^sha256:[0-9a-f]{64}$' -or
+  $PublishedProductionImageId -notmatch '^sha256:[0-9a-f]{64}$' -or
+  $RunningProductionImageId -ne $PublishedProductionImageId -or
   $RunningProductionImage -ne "$($ProdImageRepository):$ProdImageTag" -or
   $RunningProductionRevision -ne $ProdReleaseCommit -or
-  $LiveProductionCsp -ne $ExpectedProductionCsp
+  $LiveProductionCsp -ne $ExpectedProductionCsp -or
+  !$ProductionParticipantChecksPassed
 ) {
   throw "Production deployment is not verified; release record was not written"
 } else {
@@ -220,6 +256,8 @@ if (
     image = "$($ProdImageRepository):$ProdImageTag"
     tag = $ProdImageTag
     digest = $ProdImageDigest
+    imageId = $RunningProductionImageId
+    acceptance = 'operator-confirmed readiness and participant smoke checks'
   } | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
 }
 
@@ -228,20 +266,27 @@ if (
 # false. Change Streams are the only supported reactive driver. If startup or
 # qualification fails, stop and repair the owning incompatibility; do not
 # switch the application to polling. Keep the replica set authoritative.
+} # End production app deployment. Failed checks do not write a new release record.
 
 # ---------------------------------------------------------------------------
 # Video-key settings-only update AFTER an in-progress deployment finishes
 # ---------------------------------------------------------------------------
 
 # Use this section only when updating keys without deploying a new image.
-# Run the "Prepare production video-catalog keys" block above first.
+# Define Update-ProductionVideoCatalogKeys above first; this block calls it.
 # A normal app deployment already copies settings and starts the new app;
 # it does not need this extra restart. An already-running app reads changed
 # settings at its next startup. No image build, push, or database restart is needed.
+& {
+if ($PSVersionTable.PSVersion -lt [version]'7.4') { throw 'Production settings update requires PowerShell 7.4 or newer' }
+$ErrorActionPreference = 'Stop'
+$PSNativeCommandUseErrorActionPreference = $true
+Update-ProductionVideoCatalogKeys
 scp -i $ProdKey $ProdSettingsPath "${ProdHost}:/var/www/mofacts/settings.json"
 if ($LASTEXITCODE -ne 0) { throw "Production video-catalog settings upload failed; app was not restarted" }
 ssh -i $ProdKey $ProdHost "chmod 600 /var/www/mofacts/settings.json && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml restart --no-deps mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
 if ($LASTEXITCODE -ne 0) { throw "Production settings reload failed; inspect the application status" }
+}
 
 # ---------------------------------------------------------------------------
 # Production MCP sidecar deploy

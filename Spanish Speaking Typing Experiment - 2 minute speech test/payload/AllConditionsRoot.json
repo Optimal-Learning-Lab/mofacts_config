@@ -1,0 +1,42 @@
+{
+  "tutor": {
+    "setspec": {
+      "lessonname": "Spanish-to-English Word Learning Study — 2-minute speech recognition test",
+      "stimulusfile": "SpanishEnglishStimuli.json",
+      "experimentTarget": "localhost-spanish-speech-two-minute-20261030",
+      "experimentPasswordRequired": "false",
+      "userselect": "false",
+      "loadbalancing": "min",
+      "countcompletion": "beginning",
+      "tags": [
+        "Experiment",
+        "Spanish",
+        "Speaking versus Typing",
+        "TTS Factor",
+        "Post-test Order Factor",
+        "2x2x2x2"
+      ],
+      "condition": [
+        "SpeakFirst_SpokenA_TypedB_PostSpeakFirst.json",
+        "SpeakFirst_SpokenA_TypedB_PostTypeFirst.json",
+        "SpeakFirst_SpokenA_TypedB_TTSOn_PostSpeakFirst.json",
+        "SpeakFirst_SpokenA_TypedB_TTSOn_PostTypeFirst.json",
+        "SpeakFirst_SpokenB_TypedA_PostSpeakFirst.json",
+        "SpeakFirst_SpokenB_TypedA_PostTypeFirst.json",
+        "SpeakFirst_SpokenB_TypedA_TTSOn_PostSpeakFirst.json",
+        "SpeakFirst_SpokenB_TypedA_TTSOn_PostTypeFirst.json",
+        "TypeFirst_TypedB_SpokenA_PostSpeakFirst.json",
+        "TypeFirst_TypedB_SpokenA_PostTypeFirst.json",
+        "TypeFirst_TypedB_SpokenA_TTSOn_PostSpeakFirst.json",
+        "TypeFirst_TypedB_SpokenA_TTSOn_PostTypeFirst.json",
+        "TypeFirst_TypedA_SpokenB_PostSpeakFirst.json",
+        "TypeFirst_TypedA_SpokenB_PostTypeFirst.json",
+        "TypeFirst_TypedA_SpokenB_TTSOn_PostSpeakFirst.json",
+        "TypeFirst_TypedA_SpokenB_TTSOn_PostTypeFirst.json"
+      ]
+    },
+    "deliverySettings": {
+      "experimentLoginText": "Prolific ID"
+    }
+  }
+}

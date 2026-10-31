@@ -1,0 +1,144 @@
+{
+  "tutor": {
+    "setspec": {
+      "name": "es_en_tf_typed_a_spoken_b_tts_on_post_speak_first",
+      "lessonname": "Spanish-to-English Word Learning Study — 2-minute retention test (schedule corrected)",
+      "stimulusfile": "SpanishEnglishStimuli.json",
+      "userselect": "false",
+      "lfparameter": "0.85",
+      "hintsEnabled": false,
+      "tags": [
+        "Experiment",
+        "Spanish",
+        "Cell 4",
+        "TTS On",
+        "Post-test Speak First"
+      ],
+      "audioInputEnabled": "true",
+      "speechRecognitionLanguage": "en-US",
+      "speechIgnoreOutOfGrammarResponses": "true",
+      "speechOutOfGrammarFeedback": "Please say the expected English word.",
+      "audioPromptMode": "all",
+      "textToSpeechLanguage": "es-ES"
+    },
+    "unit": [
+      {
+        "unitname": "Typing Practice",
+        "unitinstructions": "<p>Translate each Spanish word into English by <strong>typing one English word</strong> and pressing Enter. Your microphone is disabled for these 20 trials. The ten words appear twice in two independently randomized sets of ten, and MoFaCTS shows feedback after every response.</p>",
+        "audioInputEnabled": "false",
+        "audioPromptMode": "all",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "2",
+            "templatesrepeated": "10",
+            "group": "0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10"
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10",
+          "randomizegroups": "false",
+          "clusterlist": "0-9",
+          "permutefinalresult": "0-9 10-19",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 15000,
+          "reviewstudy": 3000,
+          "correctprompt": 1000,
+          "skipstudy": "false",
+          "caseSensitive": false,
+          "accentSensitive": false
+        }
+      },
+      {
+        "unitname": "Speaking Practice",
+        "unitinstructions": "<p>Translate each Spanish word into English by <strong>saying one English word</strong>. Your microphone is used for these 20 trials. Allow microphone access if prompted. After speaking, wait for MoFaCTS to recognize your response and show feedback. The ten words appear twice in two independently randomized sets of ten.</p>",
+        "audioInputEnabled": "true",
+        "audioPromptMode": "all",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A",
+            "clustersrepeated": "2",
+            "templatesrepeated": "10",
+            "group": "0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10 0,t,d,0 0,t,d,10"
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10 A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 A_9 A_10",
+          "randomizegroups": "false",
+          "clusterlist": "10-19",
+          "permutefinalresult": "0-9 10-19",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 15000,
+          "reviewstudy": 3000,
+          "correctprompt": 1000,
+          "skipstudy": "false",
+          "caseSensitive": false,
+          "accentSensitive": false,
+          "autostopTranscriptionAttemptLimit": 3
+        }
+      },
+      {
+        "unitname": "Retention Interval",
+        "unitinstructions": "<p>You have completed the practice session. The retention post-test becomes available after a two-minute interval for this localhost test. Return after the countdown ends to complete the 20-item post-test.</p>",
+        "deliverySettings": {
+          "lockoutminutes": 2
+        }
+      },
+      {
+        "unitname": "Speaking Post-test",
+        "unitinstructions": "<p>Post-test: translate each Spanish word into English by <strong>saying one English word</strong>. This unit contains ten Spanish words in randomized order. Your microphone is used for these 10 trials. Text-to-speech and answer feedback are disabled.</p>",
+        "audioInputEnabled": "true",
+        "audioPromptMode": "silent",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A B",
+            "clustersrepeated": "1 1",
+            "templatesrepeated": "5 5",
+            "group": [
+              "0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0",
+              "0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0"
+            ]
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5 B_1 B_2 B_3 B_4 B_5",
+          "randomizegroups": "false",
+          "clusterlist": "5-9 15-19",
+          "permutefinalresult": "0-9",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 15000,
+          "caseSensitive": false,
+          "accentSensitive": false,
+          "autostopTranscriptionAttemptLimit": 3
+        }
+      },
+      {
+        "unitname": "Typing Post-test",
+        "unitinstructions": "<p>Post-test: translate each Spanish word into English by <strong>typing one English word</strong> and pressing Enter. This unit contains ten Spanish words in randomized order. Your microphone is disabled for these 10 trials. Text-to-speech and answer feedback are disabled.</p>",
+        "audioInputEnabled": "false",
+        "audioPromptMode": "silent",
+        "assessmentsession": {
+          "conditiontemplatesbygroup": {
+            "groupnames": "A B",
+            "clustersrepeated": "1 1",
+            "templatesrepeated": "5 5",
+            "group": [
+              "0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0",
+              "0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0 0,t,t,0"
+            ]
+          },
+          "initialpositions": "A_1 A_2 A_3 A_4 A_5 B_1 B_2 B_3 B_4 B_5",
+          "randomizegroups": "false",
+          "clusterlist": "0-4 10-14",
+          "permutefinalresult": "0-9",
+          "assignrandomclusters": "false"
+        },
+        "deliverySettings": {
+          "drill": 15000,
+          "caseSensitive": false,
+          "accentSensitive": false
+        }
+      }
+    ]
+  }
+}
