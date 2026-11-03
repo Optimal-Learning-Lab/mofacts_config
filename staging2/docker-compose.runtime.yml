@@ -1,0 +1,5 @@
+services:
+  mofacts:
+    environment:
+      # Exactly one trusted same-host HTTPS proxy precedes the loopback listener.
+      HTTP_FORWARDED_COUNT: '1'
