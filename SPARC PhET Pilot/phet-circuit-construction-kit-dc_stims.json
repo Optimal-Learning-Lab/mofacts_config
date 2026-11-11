@@ -1,0 +1,460 @@
+{
+  "setspec": {
+    "lessonname": "Circuit: components and conduction",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "phet-circuit-construction-kit-dc",
+        "clusterKC": "phet-circuit-construction-kit-dc",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "phet-circuit-construction-kit-dc",
+            "clusterKC": "phet-circuit-construction-kit-dc",
+            "textStimulus": "Circuit: components and conduction",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "phet-circuit-construction-kit-dc",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "nodes": [
+            {
+              "id": "instructions",
+              "nodeType": "atomic",
+              "atomType": "text-block",
+              "value": "Open Intro. Add a wire, then reset or remove it. Next build a closed circuit using a battery, wires, and a resistor or bulb. The activity checks creation, removal, and nonzero simulated current."
+            },
+            {
+              "id": "simulation",
+              "nodeType": "atomic",
+              "atomType": "simulation",
+              "label": "Circuit: components and conduction",
+              "simulation": {
+                "buildId": "circuit-construction-kit-dc-1.5.1-7ce2d235b9634f6e",
+                "bindings": [
+                  {
+                    "name": "componentCount",
+                    "address": {
+                      "path": "screens.1.model.circuit.circuitElements"
+                    },
+                    "projection": "count"
+                  },
+                  {
+                    "name": "conducting",
+                    "address": {
+                      "path": "screens.1.model.circuit.circuitElements"
+                    },
+                    "projection": "any-nonzero",
+                    "memberProperty": "currentProperty"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "feedback",
+              "nodeType": "atomic",
+              "atomType": "message-box",
+              "value": "Start a fresh simulation attempt when ready."
+            },
+            {
+              "id": "hint",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Hint",
+              "label": "Hint"
+            },
+            {
+              "id": "done",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Done",
+              "label": "Done"
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "phet-circuit-construction-kit-dc.created",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "componentCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "created"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "gt",
+                  "left": {
+                    "type": "variable",
+                    "name": "count"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": 0
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-circuit-construction-kit-dc",
+                      "nodeId": "simulation"
+                    },
+                    "key": "created",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Component creation observed. Remove it or reset before building the conducting circuit.",
+                  "target": {
+                    "pageKey": "phet-circuit-construction-kit-dc",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.removed",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "componentCount": {
+                      "type": "literal",
+                      "value": 0
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "created"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "removed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-circuit-construction-kit-dc",
+                      "nodeId": "simulation"
+                    },
+                    "key": "removed",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Component removal observed. Now connect a battery and a resistor or bulb in a closed circuit.",
+                  "target": {
+                    "pageKey": "phet-circuit-construction-kit-dc",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.circuit",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "conducting": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "removed"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-circuit-construction-kit-dc",
+                      "nodeId": "simulation"
+                    },
+                    "key": "completed",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "success",
+                  "template": "Task complete: components were created and removed, and the circuit now carries nonzero simulated current.",
+                  "target": {
+                    "pageKey": "phet-circuit-construction-kit-dc",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.hint",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "hint"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Open Intro. Add a wire, then reset or remove it. Next build a closed circuit using a battery, wires, and a resistor or bulb. The activity checks creation, removal, and nonzero simulated current.",
+                  "target": {
+                    "pageKey": "phet-circuit-construction-kit-dc",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "completed"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.not-done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Complete the simulation task before selecting Done.",
+                  "target": {
+                    "pageKey": "phet-circuit-construction-kit-dc",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Circuit: components and conduction",
+              "stimulusKC": "phet-circuit-construction-kit-dc",
+              "clusterKC": "phet-circuit-construction-kit-dc"
+            }
+          ],
+          "response": {
+            "completion": {
+              "type": "path-complete",
+              "doneSelection": "done",
+              "doneAction": "ButtonPressed"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

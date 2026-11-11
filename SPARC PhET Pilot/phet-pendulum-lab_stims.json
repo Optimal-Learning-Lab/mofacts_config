@@ -1,0 +1,576 @@
+{
+  "setspec": {
+    "lessonname": "Pendulum: length and oscillation",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "phet-pendulum-lab",
+        "clusterKC": "phet-pendulum-lab",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "phet-pendulum-lab",
+            "clusterKC": "phet-pendulum-lab",
+            "textStimulus": "Pendulum: length and oscillation",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "phet-pendulum-lab",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "nodes": [
+            {
+              "id": "instructions",
+              "nodeType": "atomic",
+              "atomType": "text-block",
+              "value": "Open Intro. Increase the first pendulum length to at least 0.75 m, then drag and release its bob. We will detect the length change and a subsequent left–right–left oscillation. This is a sampled oscillation check, not an exact period estimate."
+            },
+            {
+              "id": "simulation",
+              "nodeType": "atomic",
+              "atomType": "simulation",
+              "label": "Pendulum: length and oscillation",
+              "simulation": {
+                "buildId": "pendulum-lab-1.0.34-2cd09dca424384e4",
+                "bindings": [
+                  {
+                    "name": "length",
+                    "address": {
+                      "path": "screens.1.model.pendula.0.lengthProperty"
+                    },
+                    "projection": "value"
+                  },
+                  {
+                    "name": "angle",
+                    "address": {
+                      "path": "screens.1.model.pendula.0.angleProperty"
+                    },
+                    "projection": "value"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "feedback",
+              "nodeType": "atomic",
+              "atomType": "message-box",
+              "value": "Start a fresh simulation attempt when ready."
+            },
+            {
+              "id": "hint",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Hint",
+              "label": "Hint"
+            },
+            {
+              "id": "done",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Done",
+              "label": "Done"
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "phet-pendulum-lab.lengthChanged",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "length": {
+                      "type": "bind",
+                      "variable": "length"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "lengthChanged"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "gte",
+                  "left": {
+                    "type": "variable",
+                    "name": "length"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": 0.75
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-pendulum-lab",
+                      "nodeId": "simulation"
+                    },
+                    "key": "lengthChanged",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Length change observed. Release the bob and let it swing across the center.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.leftSeen",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "angle": {
+                      "type": "bind",
+                      "variable": "angle"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "lengthChanged"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "leftSeen"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "lt",
+                  "left": {
+                    "type": "variable",
+                    "name": "angle"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": -0.05
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-pendulum-lab",
+                      "nodeId": "simulation"
+                    },
+                    "key": "leftSeen",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "First side observed. Keep the pendulum moving.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.rightSeen",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "angle": {
+                      "type": "bind",
+                      "variable": "angle"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "leftSeen"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "rightSeen"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "gt",
+                  "left": {
+                    "type": "variable",
+                    "name": "angle"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": 0.05
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-pendulum-lab",
+                      "nodeId": "simulation"
+                    },
+                    "key": "rightSeen",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Opposite side observed. One more crossing completes the oscillation check.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.oscillation",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "angle": {
+                      "type": "bind",
+                      "variable": "angle"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "rightSeen"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "lt",
+                  "left": {
+                    "type": "variable",
+                    "name": "angle"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": -0.05
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-pendulum-lab",
+                      "nodeId": "simulation"
+                    },
+                    "key": "completed",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "success",
+                  "template": "Task complete: the length changed and the bob subsequently crossed to both sides and returned.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.hint",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "hint"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Open Intro. Increase the first pendulum length to at least 0.75 m, then drag and release its bob. We will detect the length change and a subsequent left–right–left oscillation. This is a sampled oscillation check, not an exact period estimate.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "completed"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
+              "id": "phet-pendulum-lab.not-done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Complete the simulation task before selecting Done.",
+                  "target": {
+                    "pageKey": "phet-pendulum-lab",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Pendulum: length and oscillation",
+              "stimulusKC": "phet-pendulum-lab",
+              "clusterKC": "phet-pendulum-lab"
+            }
+          ],
+          "response": {
+            "completion": {
+              "type": "path-complete",
+              "doneSelection": "done",
+              "doneAction": "ButtonPressed"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

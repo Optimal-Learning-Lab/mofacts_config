@@ -1,0 +1,363 @@
+{
+  "setspec": {
+    "lessonname": "Density: mass and volume",
+    "clusters": [
+      {
+        "clusterid": 0,
+        "clustername": "phet-density",
+        "clusterKC": "phet-density",
+        "stims": [
+          {
+            "stimulusid": 0,
+            "stimulusKC": "phet-density",
+            "clusterKC": "phet-density",
+            "textStimulus": "Density: mass and volume",
+            "response": {
+              "correctResponse": "__SPARC_COMPLETED__"
+            }
+          }
+        ]
+      }
+    ],
+    "sparcPages": [
+      {
+        "pageId": "phet-density",
+        "display": {
+          "type": "sparc",
+          "schema": "tutorscript-sparc/2.0",
+          "nodes": [
+            {
+              "id": "instructions",
+              "nodeType": "atomic",
+              "atomType": "text-block",
+              "value": "Open Intro. Keep the wood material and increase the block volume above 5 liters. Observe how mass changes while density remains 400 kg per cubic meter."
+            },
+            {
+              "id": "simulation",
+              "nodeType": "atomic",
+              "atomType": "simulation",
+              "label": "Density: mass and volume",
+              "simulation": {
+                "buildId": "density-1.2.9-ec1882d2af797b83",
+                "bindings": [
+                  {
+                    "name": "mass",
+                    "address": {
+                      "path": "screens.1.model.blockA.massProperty"
+                    },
+                    "projection": "value"
+                  },
+                  {
+                    "name": "volume",
+                    "address": {
+                      "path": "screens.1.model.blockA.volumeProperty"
+                    },
+                    "projection": "value"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "feedback",
+              "nodeType": "atomic",
+              "atomType": "message-box",
+              "value": "Start a fresh simulation attempt when ready."
+            },
+            {
+              "id": "hint",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Hint",
+              "label": "Hint"
+            },
+            {
+              "id": "done",
+              "nodeType": "atomic",
+              "atomType": "button",
+              "value": "Done",
+              "label": "Done"
+            }
+          ],
+          "productionRules": [
+            {
+              "id": "phet-density.relationship",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "mass": {
+                      "type": "bind",
+                      "variable": "mass"
+                    },
+                    "volume": {
+                      "type": "bind",
+                      "variable": "volume"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "gt",
+                  "left": {
+                    "type": "variable",
+                    "name": "volume"
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": 0.0055
+                  }
+                },
+                {
+                  "op": "gt",
+                  "left": {
+                    "type": "function",
+                    "name": "subtract",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "mass"
+                      },
+                      {
+                        "type": "function",
+                        "name": "multiply",
+                        "args": [
+                          {
+                            "type": "literal",
+                            "value": 400
+                          },
+                          {
+                            "type": "variable",
+                            "name": "volume"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": -0.001
+                  }
+                },
+                {
+                  "op": "lt",
+                  "left": {
+                    "type": "function",
+                    "name": "subtract",
+                    "args": [
+                      {
+                        "type": "variable",
+                        "name": "mass"
+                      },
+                      {
+                        "type": "function",
+                        "name": "multiply",
+                        "args": [
+                          {
+                            "type": "literal",
+                            "value": 400
+                          },
+                          {
+                            "type": "variable",
+                            "name": "volume"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "literal",
+                    "value": 0.001
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-density",
+                      "nodeId": "simulation"
+                    },
+                    "key": "completed",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "message",
+                  "messageType": "success",
+                  "template": "Task complete: mass increased with volume, and mass / volume is still 400 kg/m³.",
+                  "target": {
+                    "pageKey": "phet-density",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.hint",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "hint"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Open Intro. Keep the wood material and increase the block volume above 5 liters. Observe how mass changes while density remains 400 kg per cubic meter.",
+                  "target": {
+                    "pageKey": "phet-density",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "completed"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "classify",
+                  "outcome": "correct"
+                }
+              ]
+            },
+            {
+              "id": "phet-density.not-done",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "selection": {
+                      "type": "literal",
+                      "value": "done"
+                    },
+                    "action": {
+                      "type": "literal",
+                      "value": "ButtonPressed"
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "completed"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "message",
+                  "messageType": "hint",
+                  "template": "Complete the simulation task before selecting Done.",
+                  "target": {
+                    "pageKey": "phet-density",
+                    "nodeId": "feedback"
+                  }
+                }
+              ]
+            }
+          ],
+          "clusterTargets": [
+            {
+              "clusterIndex": 0,
+              "label": "Density: mass and volume",
+              "stimulusKC": "phet-density",
+              "clusterKC": "phet-density"
+            }
+          ],
+          "response": {
+            "completion": {
+              "type": "path-complete",
+              "doneSelection": "done",
+              "doneAction": "ButtonPressed"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
