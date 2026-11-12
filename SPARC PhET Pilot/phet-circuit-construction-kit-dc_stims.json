@@ -38,10 +38,12 @@
               "atomType": "simulation",
               "label": "Circuit: components and conduction",
               "simulation": {
-                "buildId": "circuit-construction-kit-dc-1.5.1-7ce2d235b9634f6e",
+                "buildId": "circuit-construction-kit-dc-1.5.1-4345ad43e84da17e",
                 "bindings": [
                   {
                     "name": "componentCount",
+                    "label": "Component count",
+                    "unit": "count",
                     "address": {
                       "path": "screens.1.model.circuit.circuitElements"
                     },
@@ -49,6 +51,8 @@
                   },
                   {
                     "name": "conducting",
+                    "label": "Conducting circuit",
+                    "unit": "boolean",
                     "address": {
                       "path": "screens.1.model.circuit.circuitElements"
                     },
@@ -153,6 +157,22 @@
                     "pageKey": "phet-circuit-construction-kit-dc",
                     "nodeId": "feedback"
                   }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Observe task condition"
+                  },
+                  "input": "Component creation observed. Remove it or reset before building the conducting circuit.",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
                 }
               ]
             },
@@ -233,6 +253,22 @@
                   "target": {
                     "pageKey": "phet-circuit-construction-kit-dc",
                     "nodeId": "feedback"
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Observe task condition"
+                  },
+                  "input": "Component removal observed. Now connect a battery and a resistor or bulb in a closed circuit.",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
                   }
                 }
               ]
@@ -315,6 +351,22 @@
                     "pageKey": "phet-circuit-construction-kit-dc",
                     "nodeId": "feedback"
                   }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Check"
+                  },
+                  "input": "Task complete: components were created and removed, and the circuit now carries nonzero simulated current.",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "correct"
+                  }
                 }
               ]
             },
@@ -343,6 +395,22 @@
                   "target": {
                     "pageKey": "phet-circuit-construction-kit-dc",
                     "nodeId": "feedback"
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Hint button"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Request hint"
+                  },
+                  "input": "hint",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
                   }
                 }
               ]
@@ -385,6 +453,23 @@
                 {
                   "type": "classify",
                   "outcome": "correct"
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Complete"
+                  },
+                  "input": "Authored task complete",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  },
+                  "endsAttempt": true
                 }
               ]
             },
@@ -433,6 +518,327 @@
                   "target": {
                     "pageKey": "phet-circuit-construction-kit-dc",
                     "nodeId": "feedback"
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Check"
+                  },
+                  "input": "Task conditions not satisfied",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "incorrect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.activity.interaction-cancelled",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "interaction-cancelled"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Cancel adjustment"
+                  },
+                  "input": "Cancel adjustment",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.activity.reset",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "reset"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Reset"
+                  },
+                  "input": "Reset",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.activity.collection-added",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "collection-added"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Component added"
+                  },
+                  "input": "{count} component(s)",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.activity.collection-removed",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "collection-removed"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Component removed"
+                  },
+                  "input": "{count} component(s)",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.conducting.start",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "observation"
+                    },
+                    "conducting": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "not",
+                  "pattern": {
+                    "factType": "interface-state",
+                    "slots": {
+                      "node": {
+                        "type": "literal",
+                        "value": "simulation"
+                      },
+                      "key": {
+                        "type": "literal",
+                        "value": "conductingRecorded"
+                      },
+                      "value": {
+                        "type": "literal",
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-circuit-construction-kit-dc",
+                      "nodeId": "simulation"
+                    },
+                    "key": "conductingRecorded",
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Conducting circuit established"
+                  },
+                  "input": "Nonzero simulated current",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-circuit-construction-kit-dc.conducting.stop",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "observation"
+                    },
+                    "conducting": {
+                      "type": "literal",
+                      "value": false
+                    }
+                  }
+                },
+                {
+                  "factType": "interface-state",
+                  "slots": {
+                    "node": {
+                      "type": "literal",
+                      "value": "simulation"
+                    },
+                    "key": {
+                      "type": "literal",
+                      "value": "conductingRecorded"
+                    },
+                    "value": {
+                      "type": "literal",
+                      "value": true
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "write-state",
+                  "write": {
+                    "target": {
+                      "pageKey": "phet-circuit-construction-kit-dc",
+                      "nodeId": "simulation"
+                    },
+                    "key": "conductingRecorded",
+                    "value": {
+                      "type": "literal",
+                      "value": false
+                    }
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Circuit: components and conduction"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Circuit stopped conducting"
+                  },
+                  "input": "No conducting path",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
                   }
                 }
               ]

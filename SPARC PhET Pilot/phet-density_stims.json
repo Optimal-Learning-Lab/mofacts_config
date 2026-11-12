@@ -38,10 +38,12 @@
               "atomType": "simulation",
               "label": "Density: mass and volume",
               "simulation": {
-                "buildId": "density-1.2.9-ec1882d2af797b83",
+                "buildId": "density-1.2.9-cce0fa6475e2474e",
                 "bindings": [
                   {
                     "name": "mass",
+                    "label": "Block mass",
+                    "unit": "kg",
                     "address": {
                       "path": "screens.1.model.blockA.massProperty"
                     },
@@ -49,6 +51,8 @@
                   },
                   {
                     "name": "volume",
+                    "label": "Block volume",
+                    "unit": "m³",
                     "address": {
                       "path": "screens.1.model.blockA.volumeProperty"
                     },
@@ -218,6 +222,22 @@
                     "pageKey": "phet-density",
                     "nodeId": "feedback"
                   }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Check"
+                  },
+                  "input": "Task complete: mass increased with volume, and mass / volume is still 400 kg/m³.",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "correct"
+                  }
                 }
               ]
             },
@@ -246,6 +266,22 @@
                   "target": {
                     "pageKey": "phet-density",
                     "nodeId": "feedback"
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Hint button"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Request hint"
+                  },
+                  "input": "hint",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
                   }
                 }
               ]
@@ -288,6 +324,23 @@
                 {
                   "type": "classify",
                   "outcome": "correct"
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Complete"
+                  },
+                  "input": "Authored task complete",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  },
+                  "endsAttempt": true
                 }
               ]
             },
@@ -336,6 +389,304 @@
                   "target": {
                     "pageKey": "phet-density",
                     "nodeId": "feedback"
+                  }
+                },
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Check"
+                  },
+                  "input": "Task conditions not satisfied",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "incorrect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.interaction.mass",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "interaction-completed"
+                    },
+                    "interactionBinding": {
+                      "type": "literal",
+                      "value": "mass"
+                    },
+                    "mass": {
+                      "type": "bind",
+                      "variable": "mass"
+                    },
+                    "previous_mass": {
+                      "type": "bind",
+                      "variable": "previous_mass"
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "variable",
+                    "name": "mass"
+                  },
+                  "right": {
+                    "type": "variable",
+                    "name": "previous_mass"
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Block mass"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Adjust mass"
+                  },
+                  "input": "Block mass {previous_mass} → {mass} kg",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.interaction.volume",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "interaction-completed"
+                    },
+                    "interactionBinding": {
+                      "type": "literal",
+                      "value": "volume"
+                    },
+                    "volume": {
+                      "type": "bind",
+                      "variable": "volume"
+                    },
+                    "previous_volume": {
+                      "type": "bind",
+                      "variable": "previous_volume"
+                    }
+                  }
+                }
+              ],
+              "tests": [
+                {
+                  "op": "neq",
+                  "left": {
+                    "type": "variable",
+                    "name": "volume"
+                  },
+                  "right": {
+                    "type": "variable",
+                    "name": "previous_volume"
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Block volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Adjust volume"
+                  },
+                  "input": "Block volume {previous_volume} → {volume} m³",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.activity.interaction-cancelled",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "interaction-cancelled"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Cancel adjustment"
+                  },
+                  "input": "Cancel adjustment",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.activity.reset",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "reset"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Reset"
+                  },
+                  "input": "Reset",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.activity.collection-added",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "collection-added"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Component added"
+                  },
+                  "input": "{count} component(s)",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "phet-density.activity.collection-removed",
+              "when": [
+                {
+                  "factType": "interface-event",
+                  "slots": {
+                    "eventType": {
+                      "type": "literal",
+                      "value": "simulation-observation"
+                    },
+                    "simulationEvent": {
+                      "type": "literal",
+                      "value": "collection-removed"
+                    },
+                    "changeCount": {
+                      "type": "bind",
+                      "variable": "count"
+                    }
+                  }
+                }
+              ],
+              "then": [
+                {
+                  "type": "history-event",
+                  "selection": {
+                    "type": "literal",
+                    "value": "Density: mass and volume"
+                  },
+                  "action": {
+                    "type": "literal",
+                    "value": "Component removed"
+                  },
+                  "input": "{count} component(s)",
+                  "outcome": {
+                    "type": "literal",
+                    "value": "unknown"
                   }
                 }
               ]
