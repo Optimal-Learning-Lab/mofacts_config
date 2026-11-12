@@ -80,6 +80,13 @@ Remove-Variable LocalVideoKeys, ProdSettingsJson
 if ($PSVersionTable.PSVersion -lt [version]'7.4') { throw 'Production deployment requires PowerShell 7.4 or newer' }
 $ErrorActionPreference = 'Stop'
 $PSNativeCommandUseErrorActionPreference = $true
+# Verify the standard recording prerequisite before any deployment/config update.
+$ExpectedProductionNodeVersion = (Get-Content -LiteralPath (Join-Path $MofactsRoot 'mofacts\package.json') -Raw | ConvertFrom-Json).engines.node
+$ProductionNodeExecutable = & (Join-Path $DeployDir 'resolve-node-runtime.ps1') -NodeExecutable (Join-Path $env:LOCALAPPDATA "MoFaCTS\tools\node-v$ExpectedProductionNodeVersion-win-x64\node.exe")
+$ProductionRecordingTool = Join-Path $DeployDir 'record-deployment-release.ps1'
+$ProductionKnownHostsPath = Join-Path $env:USERPROFILE '.ssh\known_hosts'
+if (!(Test-Path -LiteralPath $ProductionRecordingTool -PathType Leaf)) { throw 'Missing standard verified release-recording helper' }
+if (!(Test-Path -LiteralPath $ProductionKnownHostsPath -PathType Leaf)) { throw 'Establish and verify production SSH host trust before deployment' }
 $ProductionParticipantChecksPassed = $false
 Update-ProductionVideoCatalogKeys
 
@@ -249,6 +256,13 @@ if (
 ) {
   throw "Production deployment is not verified; release record was not written"
 } else {
+  # Use one verified record/history owner after the existing acceptance checks.
+  # The candidate carries no claimed configuration ID; the observer resolves it.
+  $ProductionEvidenceRoot = Join-Path $OperatorRoot 'mofacts-release-evidence'
+  New-Item -ItemType Directory -Path $ProductionEvidenceRoot -Force | Out-Null
+  $ProductionEvidenceDirectory = Join-Path $ProductionEvidenceRoot ("$ProdImageTag-" + [guid]::NewGuid().ToString('N'))
+  New-Item -ItemType Directory -Path $ProductionEvidenceDirectory | Out-Null
+  $ProductionCandidatePath = Join-Path $ProductionEvidenceDirectory 'accepted-candidate.json'
   [ordered]@{
     deployedAtUtc = [DateTime]::UtcNow.ToString('o')
     baseCommit = $ProdReleaseCommit
@@ -256,9 +270,11 @@ if (
     image = "$($ProdImageRepository):$ProdImageTag"
     tag = $ProdImageTag
     digest = $ProdImageDigest
-    imageId = $RunningProductionImageId
-    acceptance = 'operator-confirmed readiness and participant smoke checks'
-  } | ConvertTo-Json | Set-Content -LiteralPath $ProdReleaseRecordPath
+  } | ConvertTo-Json | Set-Content -LiteralPath $ProductionCandidatePath -Encoding utf8NoBOM
+  & $ProductionRecordingTool -NodeExecutable $ProductionNodeExecutable -RecordPath $ProdReleaseRecordPath `
+    -CandidatePath $ProductionCandidatePath -SshHost $ProdHost -SshKey $ProdKey `
+    -KnownHosts $ProductionKnownHostsPath -EvidenceDirectory $ProductionEvidenceDirectory `
+    -ParticipantChecksPassed:$ProductionParticipantChecksPassed
 }
 
 # Production Change Streams are owned by the private production overlay and
