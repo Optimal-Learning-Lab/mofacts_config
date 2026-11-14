@@ -1,0 +1,7 @@
+SPARC[[:space:]]PhET*.zip filter=lfs diff=lfs merge=lfs -text
+SPARC[[:space:]]PhET[[:space:]]Pilot/*-source.zip filter=lfs diff=lfs merge=lfs -text
+
+# Simulation references authenticate these exact artifact bytes.
+SPARC[[:space:]]PhET[[:space:]]Pilot/*.html -text -diff
+SPARC[[:space:]]PhET[[:space:]]Pilot/*.catalog.json -text
+SPARC[[:space:]]PhET[[:space:]]Pilot/*-NOTICES.txt -text

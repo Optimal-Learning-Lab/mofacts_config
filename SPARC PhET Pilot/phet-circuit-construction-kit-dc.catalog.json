@@ -1,0 +1,1456 @@
+{
+  "version": 1,
+  "buildId": "circuit-construction-kit-dc-1.5.1-3d62e5ab33ecc244",
+  "artifactSha256": "5b4baeeebfeffbec921c4d164f4cee54bf48776ede0c87c1dddd9f29123cca1c",
+  "protocolVersion": 3,
+  "registrationVersion": 1,
+  "addresses": [
+    {
+      "path": "screens.0.model.screenProperty",
+      "tandem": "circuitConstructionKitDc.general.model.screens.selectedScreenProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.0.model.activeSimScreensProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.0.model.selectedScreenProperty",
+      "tandem": "circuitConstructionKitDc.homeScreen.model.selectedScreenProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.viewTypeProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.viewTypeProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.addRealBulbsProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.isValueDepictionEnabledProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.showLabelsProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.showLabelsProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.showValuesProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.showValuesProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.zoomLevelProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.zoomLevelProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.zoomScaleProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.zoomScaleProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.animatedZoomScaleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.isPlayingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.modeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.revealingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stepEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexConnectedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexDisconnectedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitContextAnnouncementEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.descriptionChangeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.wireResistivityProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.wireResistivityProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.sourceResistanceProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.sourceResistanceProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitElements",
+      "tandem": null,
+      "kind": "collection",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.charges",
+      "tandem": null,
+      "kind": "collection",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.currentTypeProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.currentTypeProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.showCurrentProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.showCurrentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.timeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.hasCurrentFlowingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitChangedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexDroppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.componentEditedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.selectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.selectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stopwatch._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stopwatch.positionProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stopwatch.isVisibleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stopwatch.isRunningProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.stopwatch.timeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitElements.lengthProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.circuitElements.lengthProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitElements.elementAddedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.circuitElements.elementAddedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.circuitElements.elementRemovedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.circuitElements.elementRemovedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.charges.lengthProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.charges.elementAddedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.charges.elementRemovedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.chargeAnimator.timeScaleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.vertexGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.vertexGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.vertexGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.vertexGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.wireGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.wireGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.wireGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.wireGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.wireGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.wireGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.wireGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.batteryGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.batteryGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.batteryGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.batteryGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.batteryGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.batteryGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.batteryGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.resistorGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.resistorGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.resistorGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.resistorGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.resistorGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.resistorGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.resistorGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.householdObjectGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.householdObjectGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.householdObjectGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.householdObjectGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.householdObjectGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.householdObjectGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.householdObjectGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.fuseGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.fuseGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.fuseGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.fuseGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.fuseGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.fuseGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.fuseGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.switchGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.switchGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.switchGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.switchGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.switchGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.switchGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.switchGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.lightBulbGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.lightBulbGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.lightBulbGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.lightBulbGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.lightBulbGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.circuit.lightBulbGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.circuit.lightBulbGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.voltageProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.voltageProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.redProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.redProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.blackProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.blackProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.blackProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.blackProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.0.redProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter1.redProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.voltageProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.voltageProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.redProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.redProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.blackProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.blackProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.blackProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.blackProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.voltmeters.1.redProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.voltmeter2.redProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.currentProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.currentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.probePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.probePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.0.probeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter1.probeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.currentProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.currentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.probePositionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.probePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.1.model.ammeters.1.probeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.introScreen.model.meters.ammeter2.probeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.viewTypeProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.viewTypeProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.addRealBulbsProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.addRealBulbsProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.isValueDepictionEnabledProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.showLabelsProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.showLabelsProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.showValuesProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.showValuesProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.zoomLevelProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.zoomLevelProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.zoomScaleProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.zoomScaleProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.animatedZoomScaleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.isPlayingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.modeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.revealingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stepEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexConnectedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexDisconnectedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitContextAnnouncementEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.descriptionChangeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.wireResistivityProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.wireResistivityProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.sourceResistanceProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.sourceResistanceProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitElements",
+      "tandem": null,
+      "kind": "collection",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.charges",
+      "tandem": null,
+      "kind": "collection",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.currentTypeProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.currentTypeProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.showCurrentProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.showCurrentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.timeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.hasCurrentFlowingProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitChangedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexDroppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.componentEditedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.selectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.selectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stopwatch._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stopwatch.positionProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stopwatch.isVisibleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stopwatch.isRunningProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.stopwatch.timeProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitElements.lengthProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.circuitElements.lengthProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitElements.elementAddedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.circuitElements.elementAddedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.circuitElements.elementRemovedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.circuitElements.elementRemovedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.charges.lengthProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.charges.elementAddedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.charges.elementRemovedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.chargeAnimator.timeScaleProperty",
+      "tandem": null,
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.vertexGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.vertexGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.vertexGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.vertexGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.wireGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.wireGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.wireGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.wireGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.wireGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.wireGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.wireGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.batteryGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.batteryGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.batteryGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.batteryGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.batteryGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.batteryGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.batteryGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeBatteryGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeBatteryGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeBatteryGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeBatteryGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeBatteryGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeBatteryGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeBatteryGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.resistorGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.resistorGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.resistorGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.resistorGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.resistorGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.resistorGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.resistorGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeResistorGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeResistorGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeResistorGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeResistorGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeResistorGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeResistorGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeResistorGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.householdObjectGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.householdObjectGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.householdObjectGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.householdObjectGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.householdObjectGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.householdObjectGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.householdObjectGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.fuseGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.fuseGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.fuseGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.fuseGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.fuseGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.fuseGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.fuseGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.seriesAmmeterGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.seriesAmmeterGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.seriesAmmeterGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.seriesAmmeterGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.seriesAmmeterGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.seriesAmmeterGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.seriesAmmeterGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeLightBulbGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeLightBulbGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeLightBulbGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeLightBulbGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeLightBulbGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.extremeLightBulbGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.extremeLightBulbGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.switchGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.switchGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.switchGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.switchGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.switchGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.switchGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.switchGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.lightBulbGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.lightBulbGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.lightBulbGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.lightBulbGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.lightBulbGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.lightBulbGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.lightBulbGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.realLightBulbGroup._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.realLightBulbGroup.elementCreatedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.realLightBulbGroup.elementCreatedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.realLightBulbGroup.elementDisposedEmitter",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.realLightBulbGroup.elementDisposedEmitter",
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.circuit.realLightBulbGroup.countProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.circuit.realLightBulbGroup.countProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.voltageProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.voltageProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.redProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.redProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.blackProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.blackProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.blackProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.blackProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.0.redProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter1.redProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.voltageProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.voltageProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.redProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.redProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.blackProbePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.blackProbePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.blackProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.blackProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.voltmeters.1.redProbeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.voltmeter2.redProbeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.currentProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.currentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.probePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.probePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.0.probeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter1.probeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1._disposeEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.isActiveProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.isActiveProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.bodyPositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.bodyPositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.isDraggingProbesWithBodyProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.isDraggingProbesWithBodyProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.droppedEmitter",
+      "tandem": null,
+      "kind": "emitter",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.currentProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.currentProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.probePositionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.probePositionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    },
+    {
+      "path": "screens.2.model.ammeters.1.probeConnectionProperty",
+      "tandem": "circuitConstructionKitDc.labScreen.model.meters.ammeter2.probeConnectionProperty",
+      "kind": "property",
+      "coverage": "observed"
+    }
+  ],
+  "limitation": "Descriptive build addresses. Runtime identity and required coverage are validated separately in each attempt."
+}
