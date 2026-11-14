@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "SPARC_GRU_stims.json: categorized policies currently require a MoFaCTS administrator account for delivery; authoring a ZIP does not grant access.",
+    "SPARC_GRU_stims.json: MoFaCTS upload must generate the KC relationship graph using its configured embedding service and prove the requested KC path with its solver. No graph, provider, upload, dialogue scoring, or live delivery was tested here."
+  ],
+  "files": [
+    {
+      "path": "SPARC_GRU_stims.json",
+      "sha256": "df0283c786285fa2f25556f94aa695d702dba446830d77c9e30b58a79d58147a",
+      "bytes": 20051
+    },
+    {
+      "path": "SPARC_GRU_TDF.json",
+      "sha256": "2067456dc5d9bd9d78e4315f6748776355252b1b7cb07c042b636b7feb0892d8",
+      "bytes": 1612
+    }
+  ],
+  "payloadHash": "f76ade3f87c026d00d4324799dd5f0b16fdb4d4548b1d321bf01fc3a33c2262a",
+  "reviewSha256": "a67b528727acd2524c55ae7754dde82ceefc54e4864abd476beed7d703174785"
+}

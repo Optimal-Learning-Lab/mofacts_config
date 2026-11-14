@@ -1,0 +1,199 @@
+{
+  "sourcePage": "https://chatgpt.com/space/page_241a10eab42881918a76334ab4321095",
+  "kcs": [
+    {
+      "localId": "P1",
+      "category": "fact-model",
+      "text": "Interpret input and hidden-state vectors and their minibatch matrices. Connect examples, input features, and hidden components to n × d input shapes and n × h state shapes, where n counts examples, d counts input features, and h counts hidden components.",
+      "clusterKC": "gru-foundations-20261102.kc.p1"
+    },
+    {
+      "localId": "P2",
+      "category": "fact-rule",
+      "text": "Retrieve and use XW + b: weights combine input features, bias shifts output-unit values, and compatible dimensions map n × d inputs through d × h weights to n × h outputs.",
+      "clusterKC": "gru-foundations-20261102.kc.p2"
+    },
+    {
+      "localId": "P3",
+      "category": "model-rule",
+      "text": "Use elementwise multiplication to control each state component’s contribution. Explain suppression near zero, preservation near one, and intermediate scaling, distinguishing this operation from matrix multiplication’s weighted combinations.",
+      "clusterKC": "gru-foundations-20261102.kc.p3"
+    },
+    {
+      "localId": "P4",
+      "category": "fact-model",
+      "text": "Know sigmoid’s and tanh’s ranges, zero-input values, and saturation behavior. Connect sigmoid’s values in (0, 1) to soft gating, and tanh’s values in (−1, 1) to bounded, signed candidate-state representations.",
+      "clusterKC": "gru-foundations-20261102.kc.p4"
+    },
+    {
+      "localId": "P5",
+      "category": "model",
+      "text": "Explain how training changes parameters to reduce prediction loss. Distinguish trained weights and biases, chosen hyperparameters, and temporary activations or hidden states.",
+      "clusterKC": "gru-foundations-20261102.kc.p5"
+    },
+    {
+      "localId": "P6",
+      "category": "model",
+      "text": "Explain recurrence: the current input and previous hidden state determine the new hidden state, while the same model parameters are reused across sequence steps.",
+      "clusterKC": "gru-foundations-20261102.kc.p6"
+    },
+    {
+      "localId": "P7",
+      "category": "model-rule",
+      "text": "Align inputs with following-token targets and explain how recurrent hidden states support those predictions, distinguishing internal state from predicted output.",
+      "clusterKC": "gru-foundations-20261102.kc.p7"
+    },
+    {
+      "localId": "P8",
+      "category": "model",
+      "text": "Explain qualitatively how prediction-loss gradients pass backward through recurrent computations, and how repeated transformations can shrink or amplify gradients and complicate learning distant dependencies.",
+      "clusterKC": "gru-foundations-20261102.kc.p8"
+    },
+    {
+      "localId": "G1",
+      "category": "fact-rule",
+      "text": "Retrieve and use the reset- and update-gate equations: separate affine combinations of current input and previous state, followed by sigmoid, produce input-dependent gate values.",
+      "clusterKC": "gru-foundations-20261102.kc.g1"
+    },
+    {
+      "localId": "G2",
+      "category": "model-rule",
+      "text": "Construct the candidate by reset-scaling the previous state before recurrent weighting, combining it with weighted current input and bias, and applying tanh. Explain how reset values control prior-state contributions to the candidate.",
+      "clusterKC": "gru-foundations-20261102.kc.g2"
+    },
+    {
+      "localId": "G3",
+      "category": "fact-rule",
+      "text": "Retrieve and use H_new = Z ⊙ H_old + (1 − Z) ⊙ H_candidate, where Z is the update gate. Interpret the relationship’s limiting and intermediate cases.",
+      "clusterKC": "gru-foundations-20261102.kc.g3"
+    },
+    {
+      "localId": "G4",
+      "category": "model-rule",
+      "text": "Coordinate reset and update gates across steps to capture, preserve, and replace information. Connect candidate construction to how much old state persists through intervening inputs.",
+      "clusterKC": "gru-foundations-20261102.kc.g4"
+    },
+    {
+      "localId": "G5",
+      "category": "fact-rule",
+      "text": "Specify input weights, recurrent weights, and bias values for the reset gate, update gate, and candidate. Derive their dimensions from input and hidden widths, distinguishing these parameters from computed gate and candidate values.",
+      "clusterKC": "gru-foundations-20261102.kc.g5"
+    },
+    {
+      "localId": "G6",
+      "category": "rule",
+      "text": "Execute or trace the GRU forward procedure across a sequence: initialize missing state, compute both gates from the previous state, form the candidate, update state, and retain the required outputs.",
+      "clusterKC": "gru-foundations-20261102.kc.g6"
+    },
+    {
+      "localId": "G7",
+      "category": "model-rule",
+      "text": "Use a high-level GRU layer as a language model’s recurrent component. Connect its hidden-state outputs to next-token predictions and explain which recurrent computations its interface encapsulates.",
+      "clusterKC": "gru-foundations-20261102.kc.g7"
+    }
+  ],
+  "items": [
+    {
+      "localId": "P1",
+      "question": "At one sequence step, a minibatch has 8 examples, each with 3 input features; the recurrent layer has 5 hidden units. What are the input and hidden-state matrix shapes?",
+      "answer": "The input matrix is 8 by 3 and the hidden-state matrix is 8 by 5."
+    },
+    {
+      "localId": "P2",
+      "question": "For X with shape 8 by 3 and an affine output XW+b with shape 8 by 5, what are the shape of W and the number of output bias values?",
+      "answer": "W has shape 3 by 5, and there are 5 output bias values broadcast across the 8 examples."
+    },
+    {
+      "localId": "P3",
+      "question": "Apply elementwise gate values [0.25, 0.5] to state components [4, -3]. What scaled state contributions result?",
+      "answer": "[1, -1.5]"
+    },
+    {
+      "localId": "P4",
+      "question": "What are sigmoid(0) and tanh(0), and which function can produce negative output values?",
+      "answer": "sigmoid(0) is 0.5; tanh(0) is 0; tanh can produce negative output values."
+    },
+    {
+      "localId": "P5",
+      "question": "A model has weight matrices, a chosen learning rate, and a hidden state computed during a forward step. Which of these are trained parameters, a hyperparameter, and a temporary state?",
+      "answer": "The weight matrices are trained parameters, the learning rate is a hyperparameter, and the hidden state is a temporary state computed during the forward step."
+    },
+    {
+      "localId": "P6",
+      "question": "In a basic RNN, what information determines the new hidden state, and are different parameter matrices required for each time step?",
+      "answer": "The current input and previous hidden state determine the new hidden state. The same parameter matrices are reused across time steps."
+    },
+    {
+      "localId": "P7",
+      "question": "For next-character prediction using the sequence fish, what are the three-character input sequence and its aligned three-character target sequence?",
+      "answer": "Input: fis. Target: ish."
+    },
+    {
+      "localId": "P8",
+      "question": "Why can a loss at a later recurrent step provide a weak training signal for an event many steps earlier?",
+      "answer": "Backpropagation passes gradients through repeated recurrent transformations, and the resulting gradients can shrink across steps, weakening the signal for the earlier event."
+    },
+    {
+      "localId": "G1",
+      "question": "A reset gate has total affine preactivation 0. Which activation is applied, and what reset-gate value results?",
+      "answer": "Sigmoid is applied, producing a reset-gate value of 0.5."
+    },
+    {
+      "localId": "G2",
+      "question": "In the D2L scratch GRU, all reset entries approach zero. What happens to previous-state contributions in the candidate calculation, and which activation produces the candidate?",
+      "answer": "The reset-scaled previous-state contributions approach zero before recurrent weighting; the weighted current input and bias remain, and tanh produces the candidate."
+    },
+    {
+      "localId": "G3",
+      "question": "For one state component, the old value is 0.6, the candidate is -0.4, and the update gate Z is 0.25. Calculate the new value using Z times old plus (1-Z) times candidate.",
+      "answer": "-0.15"
+    },
+    {
+      "localId": "G4",
+      "question": "After a relevant cue has been encoded into a hidden-state component, which update-gate regime preserves that component across intervening distractor inputs under the D2L convention?",
+      "answer": "Keep the update-gate value near one so the old state receives most of the weight during the intervening steps."
+    },
+    {
+      "localId": "G5",
+      "question": "For input width 3 and hidden width 5, give the input-weight shape, recurrent-weight shape, and bias width for each of the reset, update, and candidate parameter groups.",
+      "answer": "Each group has input weights of shape 3 by 5, recurrent weights of shape 5 by 5, and 5 bias values."
+    },
+    {
+      "localId": "G6",
+      "question": "A GRU loop overwrites H with the new state before computing both reset and update gates. What must be preserved to compute the step correctly?",
+      "answer": "Preserve the previous hidden state until both gates and the candidate have been computed from it, then form and store the new hidden state."
+    },
+    {
+      "localId": "G7",
+      "question": "A high-level GRU returns hidden-state outputs. What additional mapping is needed to produce next-token predictions?",
+      "answer": "Map hidden-state outputs through an output layer to vocabulary scores and a token probability distribution; hidden-state components are not themselves token probabilities."
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "gru-foundations-20261102.m01",
+      "text": "Setting the reset gate to zero necessarily erases the final hidden state.",
+      "category": "model-rule"
+    },
+    {
+      "id": "gru-foundations-20261102.m02",
+      "text": "An update gate near one replaces the old hidden state with the candidate.",
+      "category": "fact-rule"
+    },
+    {
+      "id": "gru-foundations-20261102.m03",
+      "text": "Reset- and update-gate values are fixed parameter arrays learned during training.",
+      "category": "model"
+    },
+    {
+      "id": "gru-foundations-20261102.m04",
+      "text": "Matrix multiplication and elementwise multiplication perform the same operation on state components.",
+      "category": "model-rule"
+    },
+    {
+      "id": "gru-foundations-20261102.m05",
+      "text": "A GRU gate must be either zero or one; intermediate values are invalid.",
+      "category": "fact-model"
+    }
+  ]
+}

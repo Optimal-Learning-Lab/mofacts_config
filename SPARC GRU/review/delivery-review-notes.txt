@@ -1,0 +1,43 @@
+SPARC GRU delivery review notes
+
+Candidate payload fingerprint: f76ade3f87c026d00d4324799dd5f0b16fdb4d4548b1d321bf01fc3a33c2262a
+
+Complete activity sequence
+1. Introduction: read the English lesson purpose, prerequisite assumptions, response-format guidance, source attribution, and license.
+2. GRU SPARC tutoring: one categorized activity with 15 accepted knowledge components and 5 diagnostic misconceptions. No separate adaptive-practice, quiz, assessment, or video unit is included.
+
+Authored choices and review status
+- The agent selects moves (dynamic-instruction-agent-v2).
+- P3, elementwise scaling, is the author-selected starting KC.
+- Fresh embeddings of the accepted revised statements were computed on 2026-11-02. The maximum-weight path with the weakest closing relationship excluded has endpoints P3 and G6. The author selected the P3-to-G6 direction. Its retained raw-cosine total is 10.544050; the excluded P3-G6 connection is 0.637421. No additional model calls were needed to apply this starting-KC edit.
+- Source-order cluster indices are mappings, not the conversational sequence. On upload, MoFaCTS embeds the target statements and computes a maximum-weight path with this start. Covered KCs can be skipped; unfinished cycles and misconception repair retain their runtime priority.
+
+Current move contract
+The current source defines four compositions crossed with four response formats, for 16 alternatives in every category:
+- Question: text 0.50; cloze 0.75; multiple choice 1.00; true/false 1.25.
+- Explanation and question: text 1.50; cloze 1.75; multiple choice 2.00; true/false 2.25.
+- Explanation, written support, and question: text 2.50; cloze 2.75; multiple choice 3.00; true/false 3.25.
+- Explanation, visual support, and question: text 2.50; cloze 2.75; multiple choice 3.00; true/false 3.25.
+These are runtime choices. The lesson does not impose category-by-format exclusions or encode a category-specific learning-benefit coefficient. Candidate pilot treatments remain outside the payload.
+
+Completion
+Expectation coverage threshold: 0.8. Misconception trigger/support threshold: 0.2. Under the agent policy, triggered misconceptions remain eligible while their corrective score (1 minus support) is below 0.8. Completion requires no eligible expectation or misconception. There is no authored turn cap. These are model-assessed criteria, not independent probabilities of mastery or delayed-learning evidence.
+
+Portable reviewer version boundary
+The installed builder snapshot is dated 2026-10-19. Its generated lesson-review.md describes three component patterns, grouping rich support together; current code separates written and visual rich support into the four compositions above. Its general administrator-only delivery warning is outdated for currently supported categorized policies: current source preserves the authored policy and authorizes model calls through lesson access. Actual account/lesson access at a destination still requires verification.
+The generated review and its validation report are retained unmodified. This companion explains those snapshot differences; it does not change or substitute runtime behavior. Current source file hashes and composition values are recorded in current-runtime-contract.json.
+
+Verification
+- Builder schema and implemented content/reference checks passed with zero errors and two reported warnings.
+- Both payload files also passed the current application's public JSON schemas.
+- All 15 expectation texts and categories match the accepted GRU Lesson Draft, with one-to-one cluster and cluster-target mappings.
+- The five diagnostic targets express the accepted distinctions as positive false claims; their categories describe corrective understanding. No claim is made that a learner holds them.
+- The payload contains only SPARC_GRU_TDF.json and SPARC_GRU_stims.json; no server tdfId, credentials, generated graph, learner records, or authoring notes are included.
+- SPARC_GRU.zip was exported and verified byte-for-byte against the reviewed payload. Upload and learner-preview verification remain pending.
+
+Review inputs
+lesson-review.md contains every authored target, misconception, model-linked stimulus question/answer, unit setting, and resolved snapshot delivery default. The intro is shown as exact source HTML. Ordinary trial feedback/timer defaults listed by the converter do not establish SPARC dialogue behavior.
+Accepted source Page: https://chatgpt.com/space/page_241a10eab42881918a76334ab4321095
+
+Archive naming
+The current lesson archive is C:\dev\mofacts_config\SPARC_GRU.zip. Keep this stable filename and replace it with the current reviewed payload whenever the lesson is repackaged. Do not retain numbered ZIP revisions or versioned lesson folders here. The ZIP contains only files from SPARC GRU\payload.

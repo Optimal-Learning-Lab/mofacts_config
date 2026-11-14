@@ -1,0 +1,56 @@
+{
+  "compositions": [
+    {
+      "moveId": "instruction.dynamic.question",
+      "assistance": {
+        "text": 0.5,
+        "cloze": 0.75,
+        "multiple-choice": 1.0,
+        "true-false": 1.25
+      }
+    },
+    {
+      "moveId": "instruction.dynamic.explanation-question",
+      "assistance": {
+        "text": 1.5,
+        "cloze": 1.75,
+        "multiple-choice": 2.0,
+        "true-false": 2.25
+      }
+    },
+    {
+      "moveId": "instruction.dynamic.explanation-rich-question",
+      "assistance": {
+        "text": 2.5,
+        "cloze": 2.75,
+        "multiple-choice": 3.0,
+        "true-false": 3.25
+      }
+    },
+    {
+      "moveId": "instruction.dynamic.explanation-visual-question",
+      "assistance": {
+        "text": 2.5,
+        "cloze": 2.75,
+        "multiple-choice": 3.0,
+        "true-false": 3.25
+      }
+    }
+  ],
+  "responseFormats": [
+    "text",
+    "cloze",
+    "multiple-choice",
+    "true-false"
+  ],
+  "variantsPerCategory": 16,
+  "deliveryAuthorization": "Current categorized-policy calls use requireSparcLessonAccess; authored policy is preserved. The older portable reviewer warning that all categorized delivery requires an administrator is not a current general delivery rule.",
+  "snapshotReviewLimit": "The installed 0.2.1 reviewer describes three component patterns and, for student policy, twelve options. Current source separates written and visual rich-support moves into four compositions and sixteen variants. Preserve this limitation explicitly when presenting the generated review.",
+  "kcProgression": "The package may author a startingKC, not precomputed graph facts. Upload generates the embedding graph and solves the maximum-weight path with that fixed start.",
+  "sourceHashes": {
+    "learning-components\\units\\sparcsession\\sparcMoveDefinitions.ts": "baeefd9760ff08956925a4dc1b21c528eb585b6b469a83aebd2ac6b7d8d58161",
+    "learning-components\\units\\sparcsession\\sparcCategoryInstructions.ts": "b0d9a15499c1018ea01d8b059007ba49c22a80b5d3628680f6a224472d3b69fb",
+    "learning-components\\runtime\\sparcInstructionalPolicies.ts": "269356bcb5df545adefaf1cca517d6f7b2bca8a929d752689e95a7a491d8a677",
+    "mofacts\\server\\methods\\openRouterMethods.ts": "b40cc8fd3a57aea8e6a281cf342489825aa4c4ff2f98d7f90c7f597143379d05"
+  }
+}
