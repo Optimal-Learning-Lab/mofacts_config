@@ -152,7 +152,7 @@ if ("$($ProductionEnvValues['DOCKER_REGISTRY'])/$($ProductionEnvValues['IMAGE_NA
 if ($ProductionEnvValues['METEOR_REACTIVITY_ORDER'] -ne 'changeStreams') { throw "Production reactivity order must be changeStreams" }
 if ([string]::IsNullOrWhiteSpace($ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET']) -or $ProductionEnvValues['MOFACTS_SECURITY_AUDIT_INGEST_SECRET'].Length -lt 32) { throw "Production security audit ingestion secret must contain at least 32 characters" }
 $ProdApacheTlsSiteText = Get-Content -LiteralPath $ProdApacheTlsSitePath -Raw
-$ProdCspHeaderMatches = [regex]::Matches($ProdApacheTlsSiteText, '(?m)^[ \t]*Header always set Content-Security-Policy "([^"]+)"[ \t]*$')
+$ProdCspHeaderMatches = [regex]::Matches($ProdApacheTlsSiteText, '(?m)^[ \t]*Header always set Content-Security-Policy "([^"]+)"(?:[ \t]+"expr=-z resp\(''Content-Security-Policy''\)")?[ \t]*$')
 if ($ProdCspHeaderMatches.Count -ne 1) { throw "Production Apache TLS site must define exactly one enforced CSP header" }
 $ExpectedProductionCsp = $ProdCspHeaderMatches[0].Groups[1].Value
 # The app's MongoDB driver validates the opaque URI, selected database,
