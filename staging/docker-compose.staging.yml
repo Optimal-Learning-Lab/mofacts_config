@@ -1,0 +1,18 @@
+# Merge with the canonical MoFaCTS deploy/docker-compose.yml. This overlay
+# changes staging identity and storage, not the application runtime contract.
+services:
+  mofacts:
+    container_name: mofacts-staging
+    environment:
+      HTTP_FORWARDED_COUNT: '1'
+    volumes:
+      - type: bind
+        source: /srv/mofacts-staging/overrides
+        target: /mofactsAssets_override
+        bind:
+          create_host_path: false
+      - type: bind
+        source: /srv/mofacts-staging/dynamic-assets
+        target: /root/dynamic-assets
+        bind:
+          create_host_path: false

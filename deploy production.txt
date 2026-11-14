@@ -371,72 +371,11 @@ docker compose -f docker-compose.yml -f docker-compose.local-server.yml up --bui
 
 
 # ---------------------------------------------------------------------------
-# Staging app deploy
-# ---------------------------------------------------------------------------
-
-# FROZEN ENVIRONMENT: do not run this staging section during the Meteor 3.5
-# production upgrade. This server is in active graduate-student use and remains
-# unchanged until the owner explicitly unfreezes it.
-
-cd $DeployDir
-
-if (!(Test-Path $StageKey)) { throw "Missing staging SSH key: $StageKey" }
-if (!(Test-Path $StageReplicaKey)) { throw "Missing staging MongoDB replica-set keyfile: $StageReplicaKey" }
-if (!(Test-Path .\docker-compose-staging.yml)) { throw "Missing staging compose file" }
-if (!(Test-Path $StageEnvPath)) { throw "Missing staging env file: $StageEnvPath" }
-if (!(Test-Path $StageSettingsPath)) { throw "Missing staging settings file: $StageSettingsPath" }
-if (!(Test-Path "$SamlDir\memphis-saml-public-cert.pem")) { throw "Missing Memphis SAML public cert" }
-if (!(Test-Path "$SamlDir\memphis-saml-private-key.pem")) { throw "Missing Memphis SAML private key" }
-
-$RequiredStagingEnv = @(
-  "METEOR_SETTINGS_HOST_PATH",
-  "MOFACTS_ENV_FILE_HOST_PATH",
-  "ROOT_URL",
-  "MONGO_URL",
-  "EXPECTED_MONGO_DB_NAME",
-  "MONGO_INITDB_ROOT_USERNAME",
-  "MONGO_INITDB_ROOT_PASSWORD",
-  "MOFACTS_MONGO_APP_USERNAME",
-  "MOFACTS_MONGO_APP_PASSWORD",
-  "MOFACTS_MONGO_REPLICA_SET_NAME",
-  "MOFACTS_MONGO_REPLICA_SET_MEMBER",
-  "MONGO_REPLICA_SET_KEYFILE_HOST_PATH",
-  "MOFACTS_REDIS_PASSWORD"
-  "MOFACTS_SECURITY_AUDIT_INGEST_SECRET"
-)
-$StagingEnvKeys = Select-String -Path $StageEnvPath -Pattern "^[A-Za-z_][A-Za-z0-9_]*=" | ForEach-Object { ($_.Line -split "=", 2)[0] }
-$MissingStagingEnv = $RequiredStagingEnv | Where-Object { $StagingEnvKeys -notcontains $_ }
-if ($MissingStagingEnv) { throw "Missing staging env keys: $($MissingStagingEnv -join ', ')" }
-$StagingAuditSecretLine = Get-Content $StageEnvPath | Where-Object { $_ -match '^MOFACTS_SECURITY_AUDIT_INGEST_SECRET=' } | Select-Object -Last 1
-$StagingAuditSecret = ($StagingAuditSecretLine -split '=', 2)[1]
-if ([string]::IsNullOrWhiteSpace($StagingAuditSecret) -or $StagingAuditSecret.Length -lt 32) { throw "Staging security audit ingestion secret must contain at least 32 characters" }
-
-# Validate the exact staging definition, then build and push that app image.
-docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml config --quiet
-docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml build --no-cache mofacts
-docker compose --env-file $StageEnvPath -f .\docker-compose-staging.yml push mofacts
-
-# Create the runtime filesystem required by the compose mounts.
-ssh -i $StageKey $StageHost "command -v docker >/dev/null && docker compose version >/dev/null && sudo mkdir -p /var/www/mofacts/mongo-init /var/www/mofacts/mongodb /etc/mofacts /backups/mofacts /mofactsAssets_override /dynamic-assets && sudo chown -R ubuntu:ubuntu /var/www/mofacts /backups/mofacts"
-
-# Copy app runtime inputs.
-scp -i $StageKey .\docker-compose-staging.yml "${StageHost}:/var/www/mofacts/docker-compose.yaml"
-scp -i $StageKey $StageEnvPath "${StageHost}:/var/www/mofacts/.env"
-scp -i $StageKey $StageSettingsPath "${StageHost}:/var/www/mofacts/settingsstaging.json"
-scp -i $StageKey .\mongo-init\01-create-mofacts-app-user.js "${StageHost}:/var/www/mofacts/mongo-init/01-create-mofacts-app-user.js"
-scp -i $StageKey .\mongodb\* "${StageHost}:/var/www/mofacts/mongodb/"
-scp -i $StageKey $StageReplicaKey "${StageHost}:/tmp/staging-mongodb-keyfile"
-ssh -i $StageKey $StageHost "sudo install -o root -g root -m 600 /tmp/staging-mongodb-keyfile /etc/mofacts/mongodb-keyfile && rm -f /tmp/staging-mongodb-keyfile && chmod 600 /var/www/mofacts/settingsstaging.json && chmod 755 /var/www/mofacts/mongodb/*.sh"
-
-# Install Memphis SAML cert/key.
-scp -i $StageKey "$SamlDir\memphis-saml-public-cert.pem" "${StageHost}:/tmp/memphis-saml-public-cert.pem"
-scp -i $StageKey "$SamlDir\memphis-saml-private-key.pem" "${StageHost}:/tmp/memphis-saml-private-key.pem"
-ssh -i $StageKey $StageHost "sudo mv /tmp/memphis-saml-public-cert.pem /mofactsAssets_override/memphis-saml-public-cert.pem && sudo mv /tmp/memphis-saml-private-key.pem /mofactsAssets_override/memphis-saml-private-key.pem && sudo chown root:root /mofactsAssets_override/memphis-saml-*.pem && sudo chmod 644 /mofactsAssets_override/memphis-saml-public-cert.pem && sudo chmod 600 /mofactsAssets_override/memphis-saml-private-key.pem"
-
-# Preflight and start the app stack.
-ssh -i $StageKey $StageHost "test -f /var/www/mofacts/docker-compose.yaml && test -f /var/www/mofacts/.env && test -f /var/www/mofacts/settingsstaging.json && test -f /var/www/mofacts/mongo-init/01-create-mofacts-app-user.js && test -f /var/www/mofacts/mongodb/entrypoint.sh && sudo test -s /etc/mofacts/mongodb-keyfile && test -f /mofactsAssets_override/memphis-saml-public-cert.pem && test -f /mofactsAssets_override/memphis-saml-private-key.pem && test -d /dynamic-assets && cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml config --quiet"
-if ((Read-Host "Confirm staging is already a replica set or its conversion is approved; type STAGING-TOPOLOGY-READY") -cne "STAGING-TOPOLOGY-READY") { throw "Staging topology not confirmed" }
-ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml pull mofacts && sudo docker compose --env-file .env -f docker-compose.yaml up -d --no-build"
+# Staging app deployment has a separate owner:
+#   C:\dev\mofacts_config\deploy staging.txt
+#   C:\dev\mofacts_config\deploy staging.ps1
+# The retired standalone site is archived. Do not reuse its old Compose file,
+# runtime directory or volumes for a current staging deployment.
 
 
 # ---------------------------------------------------------------------------
@@ -469,7 +408,7 @@ ssh -i $StageKey $StageHost "cd /var/www/mofacts-mcp-sidecar && sudo docker comp
 # ---------------------------------------------------------------------------
 
 # App checks.
-ssh -i $StageKey $StageHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml ps"
+ssh -i $StageKey $StageHost "cd /var/www/mofacts-staging && sudo docker compose -p mofacts-staging --env-file .env -f docker-compose.yaml -f docker-compose.staging.yaml ps"
 ssh -i $ProdKey $ProdHost "cd /var/www/mofacts && sudo docker compose --env-file .env -f docker-compose.yaml -f docker-compose.change-streams.yaml ps"
 
 # MCP checks.

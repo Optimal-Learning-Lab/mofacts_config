@@ -1,0 +1,17 @@
+# Staging only. Run in PowerShell 7.4 or newer.
+# Uses the current local MoFaCTS checkout, including uncommitted source changes.
+# Builds/pushes a unique staging tag, pulls its immutable digest, installs private
+# staging inputs, and verifies image identity, HTTPS, CSP, and SockJS transport.
+# Never executes the production cheat sheet or deploys an MCP sidecar.
+& 'C:\dev\mofacts_config\deploy staging.ps1'
+
+# If functional acceptance must happen later, this publishes a deployment record
+# explicitly marked awaiting-acceptance, never an accepted release record:
+# & 'C:\dev\mofacts_config\deploy staging.ps1' -DeferAcceptance
+# After signing in as the configured administrator and completing all checks:
+# & 'C:\dev\mofacts_config\deploy staging.ps1' -AcceptExisting
+
+# Explicitly install the staging image already published in .env.staging after
+# fixing an interrupted installation. Requires its local image/source label;
+# rechecks the registry digest. Does not rebuild or choose another image:
+# & 'C:\dev\mofacts_config\deploy staging.ps1' -DeployPublished
